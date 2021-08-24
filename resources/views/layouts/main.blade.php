@@ -10,14 +10,11 @@
         <title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>
 
 
-        <link rel="stylesheet" href="{{ asset('assets/front/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/front/css/bootstrap-icons.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
-        <link rel="stylesheet" href="{{asset('asset/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('asset/css/bootstrap-icons.css')}}">
-        <link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
-        <link rel="stylesheet" href="{{asset('asset/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css')}}">
-        <link rel="stylesheet" href="{{asset('asset/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/bootstrap-icons.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css')}}">
         @if (Session::has('showlogin'))
             <script>
                 // alert('Show Login Form');
@@ -236,12 +233,70 @@
         @endguest
 
         <!-- jQuery -->
-        <script src="{{ asset('assets/front/js/jquery.js') }}"></script>
-        <script src="{{ asset('assets/front/js/bootstrap.bundle.js') }}"></script>
-        <script src="{{asset('asset/OwlCarousel2-2.3.4/dist/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('assets/front/js/jquery.js') }}"></script>
+        <script src="{{asset('assets/front/js/bootstrap.bundle.js') }}"></script>
+        <script src="{{asset('assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('assets/front/js/main.js') }}"></script>
+        <script>
+            $(document).ready(function () {
+                $(".owl-carousel").owlCarousel({
+                    loop: true,
+                    nav: true,
+                    items: 3,
+                    dots: false
+                });
+                $(".nav-link").click(function () {
+                    $('.nav-link').removeClass('active');
+                    $(this).addClass('active');
+                });
 
-        <script src="{{ asset('assets/front/js/main.js') }}"></script>
+            });
+        </script>
 
+
+        <script>
+            const program = document.querySelector("#program")
+            const jadual = document.querySelector("#jadual")
+            const programContent = document.querySelector("#program_content")
+            const jadualContent = document.querySelector("#jadual_content")
+            const programModal = document.querySelector("#program-modal")
+            const programImgs = document.querySelectorAll("#program_content img")
+            const programModalContent = document.querySelector(".program-modal-content")
+            const programCloseBtn = document.querySelector("#close-btn")
+
+
+
+            program.addEventListener("click", () => {
+                programContent.style.display = "flex"
+                jadualContent.style.display = "none"
+                program.classList.add("active_tab")
+                jadual.classList.remove("active_tab")
+            })
+            jadual.addEventListener("click", () => {
+                programContent.style.display = "none"
+                jadualContent.style.display = "flex"
+                program.classList.remove("active_tab")
+                jadual.classList.add("active_tab")
+            })
+            programImgs.forEach(img => {
+                img.addEventListener("click", () => {
+                    programModal.style.bottom = "0px"
+                    // overlay.style.display = "block"
+                    programModalContent.style.bottom = "55%"
+                    setTimeout(() => {
+
+                        programModalContent.style.bottom = "50%"
+                    }, 300);
+
+                })
+            });
+            programCloseBtn.addEventListener("click", () => {
+                programModalContent.style.bottom = "-155%"
+                programModal.style.bottom = "-1000px"
+            })
+
+
+        </script>
         <script>
             $('.home .main-img .desktopImage').attr('src' , "{{ asset('uploads') }}/{{ $themeSettings['desktopImage'] }}");
             $('.home .main-img .mobileImage').attr('src' , "{{ asset('uploads') }}/{{ $themeSettings['mobileImage'] }}");
