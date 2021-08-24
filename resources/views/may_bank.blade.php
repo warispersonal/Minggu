@@ -58,7 +58,7 @@
                                         </button>
                                     </div>
                                     <div class="bg-white text-center mt-4 p-4">
-                                        <img src="img/maybank-3.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/img/maybank-3.png')}}" class="img-fluid" alt="">
                                     </div>
                                     <div class="my-4">
                                         <p class="justify text-dark">
