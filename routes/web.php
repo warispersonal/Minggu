@@ -27,6 +27,7 @@ Route::prefix('/')->group(function () {
     Route::get('/khidmat', [HomeController::class, 'khidmat'])->name('khidmat');
     Route::get('/promotion', [HomeController::class, 'promotion'])->name('promotion');
     Route::get('/jom-kira', [HomeController::class, 'jom_kira'])->name('jom.kira');
+    Route::get('/may-bank', [HomeController::class, 'may_bank'])->name('may.bank');
     Route::get('/sertai-sekarang', [HomeController::class, 'sertai_sekarang'])->name('sertai.sekarang');
 });
 

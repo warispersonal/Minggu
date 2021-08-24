@@ -40,4 +40,8 @@ class HomeController extends Controller
     public function sertai_sekarang(){
         return view('sertai_sekarang');
     }
+
+    public function may_bank(){
+        return view('may_bank');
+    }
 }

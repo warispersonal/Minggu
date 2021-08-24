@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
         <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer">
         @if (Session::has('showlogin'))
             <script>
                 // alert('Show Login Form');
@@ -237,8 +238,16 @@
         <script src="{{asset('assets/front/js/bootstrap.bundle.js') }}"></script>
         <script src="{{asset('assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js')}}"></script>
         <script src="{{asset('assets/front/js/main.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
             $(document).ready(function () {
+                $('#datepicker').datepicker();
+                $('#datepicker').on('changeDate', function () {
+                    $('#my_hidden_input').val(
+                        $('#datepicker').datepicker('getFormattedDate')
+                    );
+                });
+
                 $(".owl-carousel").owlCarousel({
                     loop: true,
                     nav: true,
@@ -252,8 +261,22 @@
 
             });
         </script>
+        <script>
 
+            const khidmat_nasihat_section = document.querySelector("#khidmat_nasihat_section")
+            const tetapkan_section = document.querySelector("#tetapkan_section")
+            const tetapkan_btn = document.querySelector("#tetapkan_btn")
+            const back_btn = document.querySelector("#back_btn")
 
+            tetapkan_btn.addEventListener("click", () => {
+                khidmat_nasihat_section.style.display = "none"
+                tetapkan_section.style.display = "block"
+            })
+            back_btn.addEventListener("click", () => {
+                khidmat_nasihat_section.style.display = "block"
+                tetapkan_section.style.display = "none"
+            })
+        </script>
         <script>
             const program = document.querySelector("#program")
             const jadual = document.querySelector("#jadual")
