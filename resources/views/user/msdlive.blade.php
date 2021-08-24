@@ -1,7 +1,11 @@
 @extends('layouts.main')
 
 @push('style')
-
+    <style>
+        .main-bg {
+            background-color: #0057B7 !important;
+        }
+    </style>
 @endpush
 
 @section('content')
