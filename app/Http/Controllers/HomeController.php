@@ -32,4 +32,12 @@ class HomeController extends Controller
     public function promotion(){
         return view("promotion");
     }
+
+    public function jom_kira(){
+        return view('jom_kira');
+    }
+
+    public function sertai_sekarang(){
+        return view('sertai_sekarang');
+    }
 }

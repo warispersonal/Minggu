@@ -26,6 +26,8 @@ Route::prefix('/')->group(function () {
     Route::get('/pertandingan', [HomeController::class, 'pertandingan'])->name('pertandingan');
     Route::get('/khidmat', [HomeController::class, 'khidmat'])->name('khidmat');
     Route::get('/promotion', [HomeController::class, 'promotion'])->name('promotion');
+    Route::get('/jom-kira', [HomeController::class, 'jom_kira'])->name('jom.kira');
+    Route::get('/sertai-sekarang', [HomeController::class, 'sertai_sekarang'])->name('sertai.sekarang');
 });
 
 // Routes For Users
