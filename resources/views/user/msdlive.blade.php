@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@push('stlye')
+@push('style')
 
 @endpush
 

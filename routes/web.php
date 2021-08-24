@@ -22,6 +22,10 @@ use App\Http\Controllers\HomeController;
 Route::prefix('/')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
     Route::get('/msd-live', [HomeController::class, 'msdLive'])->name('user.msdLive');
+    Route::get('/program', [HomeController::class, 'program'])->name('program');
+    Route::get('/pertandingan', [HomeController::class, 'pertandingan'])->name('pertandingan');
+    Route::get('/khidmat', [HomeController::class, 'khidmat'])->name('khidmat');
+    Route::get('/promotion', [HomeController::class, 'promotion'])->name('promotion');
 });
 
 // Routes For Users

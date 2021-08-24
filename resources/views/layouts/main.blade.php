@@ -8,12 +8,16 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>
-        
+
 
         <link rel="stylesheet" href="{{ asset('assets/front/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/front/css/bootstrap-icons.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
-
+        <link rel="stylesheet" href="{{asset('asset/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('asset/css/bootstrap-icons.css')}}">
+        <link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('asset/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css')}}">
+        <link rel="stylesheet" href="{{asset('asset/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css')}}">
         @if (Session::has('showlogin'))
             <script>
                 // alert('Show Login Form');
@@ -92,9 +96,9 @@
                     <li><a href="{{ route('localization' , 'bm') }}"><small>BM</small></a> | <a href="{{ route('localization' , 'en') }}"><small> EN </small></a></li>
                 </ul>
             </nav><!-- /. Desktop Navbar -->
-            
+
             <img id="hamburger_btn" src="{{ asset('assets/front/img/menu.svg') }} " alt="">
-            
+
             <nav class="mobile_nav">
                 <div class="text-end">
                     <i id="close_btn" class="bi bi-x"></i>
@@ -144,7 +148,7 @@
         <!-- Login and Register Modals -->
         @guest
             <div class="overlay"></div>
-            
+
             <div id="login_modal" class="my_modal">
                 <div class="d-flex justify-content-between">
                     <h1 class="modal_heading">{{ __('auth.login') }}</h1>
@@ -181,7 +185,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div id="register_modal" class="my_modal">
                 <div class="d-flex justify-content-between">
                     <h1 class="modal_heading">{{ __('auth.register') }}</h1>
@@ -230,10 +234,12 @@
                 </div>
             </div>
         @endguest
-        
+
         <!-- jQuery -->
         <script src="{{ asset('assets/front/js/jquery.js') }}"></script>
         <script src="{{ asset('assets/front/js/bootstrap.bundle.js') }}"></script>
+        <script src="{{asset('asset/OwlCarousel2-2.3.4/dist/owl.carousel.min.js')}}"></script>
+
         <script src="{{ asset('assets/front/js/main.js') }}"></script>
 
         <script>
@@ -259,6 +265,7 @@
                 }, 300);
             }
         </script>
+
         @if ($errors->has('email') || $errors->has('password'))
             <script>
                 var loginModal = document.querySelector("#login_modal");
@@ -273,8 +280,8 @@
         @if (Session::get('error'))
             {{ Session::first() }}
         @endif
-        
+
         @stack('js')
-    
+
     </body>
 </html>
