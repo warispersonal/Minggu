@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Settings;
+use App\Program;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -18,7 +19,8 @@ class HomeController extends Controller
     }
 
     public function program(){
-        return view("program");
+        $programs = Program::all();
+        return view("program",compact('programs'));
     }
 
     public function pertandingan(){
