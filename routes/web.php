@@ -75,8 +75,12 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
 
     });
 
+    Route::get('program', 'UsersController@index')->name('star.programs');
 
-    Route::get('programs', 'UsersController@index')->name('star.programs');
+
+    Route::get('programs', [\App\Http\Controllers\SuperAdmin\ProgramController::class, 'index'])->name('programs.index');
+    Route::get('program/add', [\App\Http\Controllers\SuperAdmin\ProgramController::class, 'create'])->name('programs.add');
+    Route::post('program/add', [\App\Http\Controllers\SuperAdmin\ProgramController::class, 'store'])->name('programs.add.post');
 
     Route::prefix('content')->group(function () {
         Route::get('menu', 'ContentController@menu')->name('star.content.menu');

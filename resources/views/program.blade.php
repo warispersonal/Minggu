@@ -28,7 +28,7 @@
                                 <h1 id="program" class="active_tab">Program</h1>
                                 <h1 id="jadual">Jadual</h1>
                             </div>
-                            <a href="watch-live.html" class="tonton-btn m-0">Tonton semu episod lalo &gt;</a>
+                            <a href="{{route("user.msdLive")}}" class="tonton-btn m-0">Tonton semu episod lalo &gt;</a>
                         </div>
                     </div>
                     <div class="col-md-8">

@@ -102,7 +102,7 @@
                             <i class="ni ni-spaceship text-primary"></i> {{ __('Registrations') }}
                         </a>
                     </li>
-                
+
                     <li class="nav-item">
                         <a class="nav-link" href="#page-content" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
                             <i class="fab fa-laravel text-primary"></i>
@@ -126,7 +126,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="{{route('programs.index')}}">
                                         <i class="ni ni-ui-04 text-primary"></i> {{ __('Program & Jadual') }}
                                     </a>
                                 </li>
@@ -197,7 +197,7 @@
 
                 @auth('admin')
                     <h6 class="container navbar-heading text-muted">Page Content Settings</h6>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link active" href="#">
                             <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
