@@ -30,6 +30,7 @@ Route::prefix('/')->group(function () {
     Route::get('/may-bank', [HomeController::class, 'may_bank'])->name('may.bank');
     Route::get('/sertai-sekarang', [HomeController::class, 'sertai_sekarang'])->name('sertai.sekarang');
     Route::get('/rakan-korporat', [HomeController::class, 'partner'])->name('partner');
+    Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 });
 
 // Routes For Users
