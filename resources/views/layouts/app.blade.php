@@ -25,6 +25,7 @@
         <!-- Argon CSS -->
         <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet">
         <!-- Styles CSS -->
+        <link type="text/css" href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
         <link type="text/css" href="{{ asset('assets') }}/css/styles.css" rel="stylesheet">
     </head>
     <body class="{{ $class ?? '' }}">

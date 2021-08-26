@@ -5,7 +5,6 @@
 }
 
 .main-img{
-    /* background: url(../img/main-bg.png); */
     background-size: cover;
     background-position: top;
 }
@@ -216,7 +215,7 @@
 .social_address p{
     color: white;
     font-size: 20px;
-    
+
 }
 .msd_title{
     font-size: 4rem;
@@ -270,7 +269,7 @@
     border-radius: 10px;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.17);
 }
-.tab-content p{ 
+.tab-content p{
     color: white;
     font-size: 20px;
     margin-bottom: 10px;
@@ -349,7 +348,7 @@
 }
 #promotion_tabs_content::-webkit-scrollbar-thumb{
     width: 10px;
-    background-color: #212B80; 
+    background-color: #212B80;
 } */
 
 #tabss_popup_btn{
@@ -650,7 +649,7 @@
     color: #0057B7;
     transition: all .3s;
     z-index: 55555;
-    
+
 }
 #program-modal .owl-carousel{
     background-color: #F26353;
@@ -768,7 +767,7 @@
     right: 11%;
 }
 @media(max-width:991px){
-    
+
     #promotion_tabs{
         background-color: white;
         padding: 15px;
@@ -975,7 +974,7 @@
     .owl-nav span{
         line-height: 30px;
     }
-  
+
     .time{
         font-size: 12px;
     }

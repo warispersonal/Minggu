@@ -71,4 +71,16 @@ closeBtn2.forEach(closeBtn => {
     
 });
 
+$(document).ready(function () {
+    $(".drop_down").click(function () {
+        if ($(this).children().css("top") == "70px") {
+            $(this).children().css("top", "-200px")
+        }
+        else{
+            $(this).children().css("top", "70px")
+
+        }
+    })
+})
+
 

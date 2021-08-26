@@ -40,7 +40,7 @@
                 <div class="form-group mb-3">
                     <label>Sponsor Image</label>
                     <div class="input-group input-group-alternative">
-                        <input class="form-control"  name="sponser_image" type="file" required="">
+                        <input class="form-control"  name="sponser_image" type="file" >
                     </div>
                 </div>
 
