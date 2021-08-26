@@ -29,6 +29,7 @@ Route::prefix('/')->group(function () {
     Route::get('/jom-kira', [HomeController::class, 'jom_kira'])->name('jom.kira');
     Route::get('/may-bank', [HomeController::class, 'may_bank'])->name('may.bank');
     Route::get('/sertai-sekarang', [HomeController::class, 'sertai_sekarang'])->name('sertai.sekarang');
+    Route::get('/rakan-korporat', [HomeController::class, 'partner'])->name('partner');
 });
 
 // Routes For Users

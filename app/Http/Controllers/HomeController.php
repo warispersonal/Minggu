@@ -46,4 +46,8 @@ class HomeController extends Controller
     public function may_bank(){
         return view('may_bank');
     }
+
+    public function partner(){
+        return view('partner');
+    }
 }
