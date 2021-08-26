@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jadual;
 use App\Models\Settings;
 use App\Program;
 use Illuminate\Http\Request;
@@ -19,8 +20,9 @@ class HomeController extends Controller
     }
 
     public function program(){
+        $jaduals = Jadual::all();
         $programs = Program::all();
-        return view("program",compact('programs'));
+        return view("program",compact('programs','jaduals'));
     }
 
     public function pertandingan(){

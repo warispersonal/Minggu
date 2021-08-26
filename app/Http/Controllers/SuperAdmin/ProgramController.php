@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\SuperAdmin;
 
 use App\Http\Controllers\Controller;
+use App\Jadual;
 use App\Models\Program;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,8 @@ class ProgramController extends Controller
     public function index()
     {
         $programs = Program::all();
-        return  view('superadmin.program.index',compact('programs'));
+        $jaduals = Jadual::all();
+        return  view('superadmin.program.index',compact('programs','jaduals'));
     }
 
     /**

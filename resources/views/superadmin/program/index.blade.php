@@ -39,7 +39,7 @@
                 <div class="card">
                     <!-- Card header -->
                     <div class="card-header border-0">
-                        <h3 class="mb-0">Partners</h3>
+                        <h3 class="mb-0">Program</h3>
                     </div>
                     <!-- Light table -->
                     <div class="table-responsive">
@@ -78,6 +78,122 @@
                                                    href="http://minguudeliver.test/star/partner/delete/3">Delete</a>
                                             </div>
                                         </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Card footer -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Models Start -->
+
+        <!-- Add Admin Modal -->
+        <div class="modal fade" id="modal-store-partner" tabindex="-1" role="dialog" aria-labelledby="modal-form"
+             aria-hidden="true">
+            <div class="modal-dialog modal- modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-body p-0">
+                        <div class="card bg-secondary shadow border-0">
+                            <div class="card-header bg-transparent">
+                                <div class="text-muted text-center mt-2 mb-2">Add New Partner</div>
+                            </div>
+                            <div class="card-body px-lg-4 py-lg-4">
+                                <form role="form" id="store-partner">
+                                    <div class="form-group mb-3">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                                            </div>
+                                            <input class="form-control" id="partner-name" name="name"
+                                                   placeholder="Full Name" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            </div>
+                                            <input class="form-control" id="partner-email" name="email"
+                                                   placeholder="Email" type="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                                            </div>
+                                            <select name="type" id="partner-type" class="form-control">
+                                                <option value="">Select Partner Type</option>
+                                                <option value="premier">Premier</option>
+                                                <option value="utama">Utama</option>
+                                                <option value="rakan">Rakan</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i
+                                                        class="ni ni-lock-circle-open"></i></span>
+                                            </div>
+                                            <input class="form-control" id="partner-password" name="password"
+                                                   placeholder="Password" type="password" required>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <ul class="text-danger" id="store-partner-errors">
+
+                                        </ul>
+                                    </div>
+                                    <div class="text-right">
+                                        <button type="submit" id="partner-store" class="btn btn-primary my-2">Create
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Models End -->
+        @include('layouts.footers.auth')
+    </div>
+
+
+    <!-- Page content -->
+    <div class="container-fluid mt--7">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header border-0">
+                        <h3 class="mb-0">Jadual</h3>
+                    </div>
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush w-100" id="adminTable">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col" class="sort" data-sort="name">ID</th>
+                                <th scope="col" class="sort" data-sort="budget">Date</th>
+                                <th scope="col" class="sort" data-sort="budget">Info</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($jaduals as $jadual)
+                                <tr class="odd">
+                                    <td class="sorting_1">{{$jadual->id}}</td>
+                                    <td>{{$program->date}}</td>
+                                    <td>
+                                        @foreach($jadual->jadual_info as $info)
+                                            <p>{{$info->time}} - {{$info->name}} - {{$info->description}}</p>
+                                        @endforeach
                                     </td>
                                 </tr>
                             @endforeach
