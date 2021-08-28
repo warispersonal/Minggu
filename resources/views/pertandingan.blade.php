@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-lg-6  order-lg-2 order-4  d-flex align-items-center">
                         <div class="match_links ">
-                            <a href="jom-kira.html">Jom... Kira Duit</a>
+                            <a href="{{route('jom.kira')}}">Jom... Kira Duit</a>
                             <a href="">Quiz Trivia</a>
                             <a href="">Draw 118</a>
                         </div>
