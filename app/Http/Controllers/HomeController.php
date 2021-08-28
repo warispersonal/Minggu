@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\FAQ;
 use App\Jadual;
 use App\Models\Program;
 use App\Models\Settings;
@@ -25,6 +26,12 @@ class HomeController extends Controller
         $partners = Partner::all();
         $sliders = PartnerSlider::all();
         return view("home.promotion",compact('partners','sliders'));
+    }
+    /* FAQ Page*/
+    public function faq(){
+        $faq = FAQ::all();
+        $faq = $faq[0];
+        return view('faq',compact('faq'));
     }
 
     public function partner(){
@@ -64,7 +71,4 @@ class HomeController extends Controller
 
 
 
-    public function faq(){
-        return view('faq');
-    }
 }

@@ -15,7 +15,7 @@
     </main>
 @endsection
 
-
 @push('js')
+
 
 @endpush
