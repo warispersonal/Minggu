@@ -77,7 +77,11 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::get('/show/{id}', [HomePagePartnerController::class,'show'])->name('stars.homepage.show');
         Route::get('/edit/{id}', [HomePagePartnerController::class,'edit'])->name('stars.homepage.edit');
         Route::post('/edit/{id}', [HomePagePartnerController::class,'update'])->name('stars.homepage.edit');
-        Route::get('/delete/{id}', [HomePagePartnerController::class,'delete'])->name('stars.homepage.delete');
+        Route::get('/delete/{id}', [HomePagePartnerController::class,'destroy'])->name('stars.homepage.delete');
+        Route::get('/slider/delete/{id}', [HomePagePartnerController::class,'slider_delete'])->name('stars.homepage.slide.delete');
+        Route::get('/link/delete/{id}', [HomePagePartnerController::class,'link_delete'])->name('stars.homepage.link.delete');
+        Route::post('/slider/create', [HomePagePartnerController::class,'slider_store'])->name('stars.slide.store');
+        Route::post('/link/create', [HomePagePartnerController::class,'link_store'])->name('stars.link.store');
 
     });
 

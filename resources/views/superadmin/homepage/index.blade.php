@@ -60,7 +60,6 @@
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                                 <a class="dropdown-item" href="{{route('stars.homepage.show',$partner->id)}}">View</a>
                                                 <a class="dropdown-item" href="{{route('stars.homepage.edit',$partner->id)}}">Edit</a>
-                                                <a class="dropdown-item" href="{{route('stars.homepage.delete',$partner->id)}}">Delete</a>
                                             </div>
                                         </div>
                                     </td>
