@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SuperAdmin\MainProgramController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +70,17 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::post('update/{id}', 'PartnersController@update')->name('star.updatePartner');
         Route::get('delete/{id}', 'PartnersController@destroy')->name('star.destroyPartner');
     });
+
+
+    Route::prefix('main-program')->group(function () {
+        Route::get('/', [MainProgramController::class,'index'])->name('star.MainDetail');
+        Route::get('get-main-program', [MainProgramController::class, 'getMainProgram'])->name('star.getMainDetailAJAX');
+        Route::post('store-main-program',[MainProgramController::class, 'store'])->name('star.storeMainDetail');
+        Route::get('detail/{id}', [MainProgramController::class, 'show'])->name('star.detailMainDetail');
+        Route::post('update/{id}', [MainProgramController::class, 'update'])->name('star.updateMainDetail');
+        Route::get('delete/{id}', [MainProgramController::class, 'destroy'])->name('star.destroyMainDetail');
+    });
+
 
     Route::prefix('user')->group(function () {
         Route::get('/', 'UsersController@index')->name('star.users');

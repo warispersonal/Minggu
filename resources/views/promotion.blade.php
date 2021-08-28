@@ -232,5 +232,26 @@
 
 
 @push('js')
+    <script>
+        const tabss_popup_btn = document.querySelector("#tabss_popup_btn")
+        const promotion_tabs = document.querySelector("#promotion_tabs")
+        const promotion_tab = document.querySelectorAll("#promotion_tabs .nav-link")
 
+        tabss_popup_btn.addEventListener("click",()=>{
+            if (promotion_tabs.style.display == "flex") {
+                promotion_tabs.style.display = "none"
+            }
+            else{
+                promotion_tabs.style.display = "flex"
+            }
+        })
+        let windowSizee = window.matchMedia("(max-width: 991px)")
+        if (windowSizee.matches) {
+            promotion_tab.forEach(tab =>{
+                tab.addEventListener("click",()=>{
+                    promotion_tabs.style.display = "none"
+                })
+            })
+        }
+    </script>
 @endpush
