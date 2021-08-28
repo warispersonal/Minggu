@@ -4,7 +4,6 @@
 @endpush
 
 @section('content')
-
     <main>
         <div class="main-bg position-relative">
             <div class="container-fluid px-md-5 pt-4 position-absolute top-0">

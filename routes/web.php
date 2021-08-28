@@ -21,6 +21,7 @@ use App\Http\Controllers\SuperAdmin\MainProgramController;
 */
 
 Route::prefix('/')->group(function () {
+    Route::get('/info/{id}', [HomeController::class, 'may_bank'])->name('may.bank');
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
     Route::get('/msd-live', [HomeController::class, 'msdLive'])->name('user.msdLive');
     Route::get('/program', [HomeController::class, 'program'])->name('program');
@@ -28,7 +29,6 @@ Route::prefix('/')->group(function () {
     Route::get('/khidmat', [HomeController::class, 'khidmat'])->name('khidmat');
     Route::get('/promotion', [HomeController::class, 'promotion'])->name('promotion');
     Route::get('/jom-kira', [HomeController::class, 'jom_kira'])->name('jom.kira');
-    Route::get('/{id}', [HomeController::class, 'may_bank'])->name('may.bank');
     Route::get('/sertai-sekarang', [HomeController::class, 'sertai_sekarang'])->name('sertai.sekarang');
     Route::get('/rakan-korporat', [HomeController::class, 'partner'])->name('partner');
     Route::get('/faq', [HomeController::class, 'faq'])->name('faq');

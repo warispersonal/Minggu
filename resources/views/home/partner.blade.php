@@ -90,7 +90,7 @@
                                     </div>
                                     <div class="custom-links">
                                         @foreach($partner->links as $link)
-                                            <a href="{{$link->link}}">{{$link->title}}</a>
+                                            <a target="_blank"  href="{{$link->link}}">{{$link->title}}</a>
                                         @endforeach
                                     </div>
                                 </div>

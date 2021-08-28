@@ -26,7 +26,7 @@
                                             role="tab"
                                             aria-controls="pills-all"
                                             aria-selected="true">
-                                        <img src="{{asset('assets/img/pnb-2.png')}}" alt="">
+                                        <img src="{{asset(\App\Constant\FileConstant::PARTNER_LOGO.'/all.png')}}" alt="">
                                     </button>
                                 </li>
                                 @foreach($partners as $partner)

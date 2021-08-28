@@ -27,6 +27,10 @@ class HomeController extends Controller
         return view("home.promotion",compact('partners','sliders'));
     }
 
+    public function partner(){
+        return view('partner');
+    }
+
     public function msdLive(){
         $data = [];
         $data['link'] = Settings::where('key','msd-live-video')->first('value');
@@ -59,9 +63,6 @@ class HomeController extends Controller
 
 
 
-    public function partner(){
-        return view('partner');
-    }
 
     public function faq(){
         return view('faq');
