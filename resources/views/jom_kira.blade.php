@@ -5,15 +5,11 @@
 @endpush
 
 @section('content')
+
     <main>
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
-                <div class="d-flex justify-content-md-between align-items-center">
-                    <h1 class="text-white mb-0">PNB &nbsp; ASNB</h1>
-                    <div class="text-white ms-3">
-                        <small>EM | EN</small>
-                    </div>
-                </div>
+                <h1 class="text-white mb-0 d-lg-block d-none">PNB &nbsp; ASNB</h1>
             </div>
             <div class="container mt-5">
                 <div class="row gy-4">
@@ -48,7 +44,7 @@
                                         <p>1.5 G (AT)</p>
                                     </div>
                                 </div>
-                                <div class="info_iconn">
+                                <div class="info_iconn info_iconn_1">
                                     <span class="bi bi-info"></span>
                                 </div>
                             </div>
@@ -56,7 +52,7 @@
                         <div class="cars-row">
                             <div class="d-flex align-items-center justify-content-around p-md-3 p-2">
                                 <div>
-                                    <img src="{{asset('assets/img/raiz-logo.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('assets/img/raiz-logo')}}.png" class="img-fluid" alt="">
 
                                 </div>
                                 <div>
@@ -66,7 +62,7 @@
                                         <h1>RM180,000</h1>
                                     </div>
                                 </div>
-                                <div class="info_iconn">
+                                <div class="info_iconn info_iconn_2">
                                     <span class="bi bi-info"></span>
                                 </div>
                             </div>
@@ -78,32 +74,32 @@
                                 <div>
                                     <img src="{{asset('assets/img/bike.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>HONDA Dash</h4>
-                                        <p>125 S (5 unit)</p>
+                                        <h4>HONDA Dash 125 S</h4>
+
                                     </div>
                                 </div>
                                 <div>
                                     <img src="{{asset('assets/img/bike.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>HONDA Dash</h4>
-                                        <p>125 S (5 unit)</p>
+                                        <h4>HONDA Dash 125 S</h4>
+
                                     </div>
                                 </div>
                                 <div>
                                     <img src="{{asset('assets/img/bike.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>HONDA Dash</h4>
-                                        <p>125 S (5 unit)</p>
+                                        <h4>HONDA Dash 125 S</h4>
+
                                     </div>
                                 </div>
                                 <div>
                                     <img src="{{asset('assets/img/bike.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>HONDA Dash</h4>
-                                        <p>125 S (5 unit)</p>
+                                        <h4>HONDA Dash 125 S</h4>
+
                                     </div>
                                 </div>
-                                <div class="info_iconn">
+                                <div class="info_iconn info_iconn_3">
                                     <span class="bi bi-info"></span>
                                 </div>
                             </div>
@@ -114,6 +110,9 @@
             </div>
         </div>
     </main>
+
+
+
 @endsection
 
 

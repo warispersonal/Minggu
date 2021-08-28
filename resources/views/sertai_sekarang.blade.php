@@ -9,29 +9,32 @@
 @endpush
 
 @section('content')
+
     <main>
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
-                <div class="d-flex justify-content-md-between align-items-center">
-                    <h1 class="text-white mb-0">PNB &nbsp; ASNB</h1>
-                    <div class="text-white ms-3">
-                        <small>EM | EN</small>
-                    </div>
-                </div>
+                <h1 class="text-white mb-0 d-lg-block d-none">PNB &nbsp; ASNB</h1>
             </div>
             <div class="container mt-5">
                 <div id="jom_kira_tabs">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Pra-MSD</button>
-                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Rakan
+                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                    aria-selected="true">Pra-MSD</button>
+                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false">Rakan
                                 Korporat</button>
-                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">MSD Live
+                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                    aria-selected="false">MSD Live
                             </button>
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active pt-5" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="tab-pane fade show active pt-5" id="nav-home" role="tabpanel"
+                             aria-labelledby="nav-home-tab">
                             <div class="row gy-4">
                                 <div class="col-lg-5 pe-lg-5">
                                     <div class="d-flex flex-column">
@@ -40,10 +43,8 @@
                                         </div>
                                         <div class="order-3 order-lg-2 ">
                                             <h1 class="text-white text-center mt-5">Pra-MSD</h1>
-                                        </div>
-                                        <div class="order-1 order-lg-3 mb-5 d-flex d-lg-block">
-                                            <button class="jom_kira-btns">Cara Penyertaan</button>
-                                            <button class="jom_kira-btns">Hadiah Untuk Dimenangi</button>
+                                            <h4 class="text-white text-center mb-3">22 Okt - 16 Nov 2021</h4>
+                                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -51,101 +52,140 @@
                                     <form action="" class="rm-form">
                                         <div class="row ps-lg-5">
                                             <div class="col-6">
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>22 Okt</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>23 Okt</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>24 Okt</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>25 Okt</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>26 Okt</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>27 Okt</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>28 Okt</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>29 Okt</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>30 Okt</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>31 Okt</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>1 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>2 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
+                                                </div>
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>3 Nov</span>
+                                                    <label for="">RM</label>
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
 
                                             </div>
                                             <div class="col-6">
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>4 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>5 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>6 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>7 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>8 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>9 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>10 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>11 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>12 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>13 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
-                                                <div class="mb-3 d-flex">
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>14 Nov</span>
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>15 Nov</span>
+                                                    <label for="">RM</label>
+                                                    <input class="rm-imputs" type="text" name="" id="">
+                                                </div>
+                                                <div class="mb-3 d-flex align-items-center">
+                                                    <span>16 Nov</span>
+                                                    <label for="">RM</label>
+                                                    <input class="rm-imputs" type="text" name="" id="">
+                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="row mt-3">
@@ -155,10 +195,10 @@
                                             <div class="col-6">
                                                 <div class="d-flex justify-content-end flex-md-nowrap flex-wrap">
                                                     <h2 class="text-white mb-0">RM</h2>
-                                                    <input type="text" name="" class="border-0 border-bottom" id="">
-                                                    <div class="text-end mt-3 mt-md-0">
-                                                        <input type="submit" value="Hantar">
-                                                    </div>
+                                                    <input type="text" name="" class="rm-imputs-2" id="">
+                                                </div>
+                                                <div class="text-end mt-3 ms-auto ">
+                                                    <input type="submit" value="Hantar">
                                                 </div>
                                             </div>
                                         </div>
@@ -166,19 +206,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade pt-5" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="tab-pane fade pt-5" id="nav-profile" role="tabpanel"
+                             aria-labelledby="nav-profile-tab">
                             <div class="row gy-4">
                                 <div class="col-lg-5 pe-lg-5">
                                     <div class="d-flex flex-column">
                                         <div class="order-2 order-lg-1">
-                                            <img src="img/jom-kira.png" class="img-fluid" alt="">
+                                            <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="order-3 order-lg-2 ">
-                                            <h1 class="text-white text-center mt-5">Rakan Korporat</h1>
-                                        </div>
-                                        <div class="order-1 order-lg-3 mb-5 d-flex d-lg-block">
-                                            <button class="jom_kira-btns">Cara Penyertaan</button>
-                                            <button class="jom_kira-btns">Hadiah Untuk Dimenangi</button>
+                                            <h1 class="text-white text-center mt-5">Pra-MSD</h1>
+                                            <h4 class="text-white text-center mb-3">22 Okt - 16 Nov 2021</h4>
+                                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -235,63 +274,63 @@
                                             <div class="col-6">
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                                 <div class="mb-3 d-flex">
                                                     <label for="">RM</label>
-                                                    <input type="text" name="" id="">
+                                                    <input class="rm-imputs" type="text" name="" id="">
                                                 </div>
                                             </div>
                                         </div>
@@ -302,7 +341,7 @@
                                             <div class="col-6">
                                                 <div class="d-flex justify-content-end flex-md-nowrap flex-wrap">
                                                     <h2 class="text-white mb-0">RM</h2>
-                                                    <input type="text" name="" class="border-0 border-bottom" id="">
+                                                    <input type="text" name="" class="rm-imputs-2" id="">
                                                     <div class="text-end mt-3 mt-md-0">
                                                         <input type="submit" value="Hantar">
                                                     </div>
@@ -313,65 +352,75 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade pt-5" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="tab-pane fade pt-5" id="nav-contact" role="tabpanel"
+                             aria-labelledby="nav-contact-tab">
                             <div class="row gy-4">
                                 <div class="col-lg-5 pe-lg-5">
                                     <div class="d-flex flex-column">
                                         <div class="order-2 order-lg-1">
-                                            <img src="img/jom-kira.png" class="img-fluid" alt="">
+                                            <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="order-3 order-lg-2 ">
-                                            <h1 class="text-white text-center mt-5">MSD Live</h1>
-                                        </div>
-                                        <div class="order-1 order-lg-3 mb-5 d-flex d-lg-block">
-                                            <button class="jom_kira-btns">Cara Penyertaan</button>
-                                            <button class="jom_kira-btns">Hadiah Untuk Dimenangi</button>
+                                            <h1 class="text-white text-center mt-5">Pra-MSD</h1>
+                                            <h4 class="text-white text-center mb-3">22 Okt - 16 Nov 2021</h4>
+                                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-7">
                                     <form action="" class="side-tabs rm-form">
-                                        <div class="d-flex  align-items-start flex-column flex-lg-row ">
-                                            <div id="owlCarousel" class="nav flex-column nav-pills me-5 mb-3 mb-lg-0" role="tablist" aria-orientation="vertical">
-                                                <button class="nav-link active" id="v-pills-rabu-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rabu" type="button" role="tab" aria-controls="v-pills-rabu" aria-selected="true">Rabu, 1 Sep 2021</button>
-                                                <button class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill" data-bs-target="#v-pills-khamis" type="button" role="tab" aria-controls="v-pills-khamis" aria-selected="false">Khamis, 2 Sep 2021</button>
-                                                <button class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill" data-bs-target="#v-pills-jumaat" type="button" role="tab" aria-controls="v-pills-jumaat" aria-selected="false">Jumaat, 3 Sep 2021</button>
-                                                <button class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sabtu" type="button" role="tab" aria-controls="v-pills-sabtu" aria-selected="false">Sabtu, 4 Sep 2021</button>
-                                                <button class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ahad" type="button" role="tab" aria-controls="v-pills-ahad" aria-selected="false">Ahad, 5 Sep 2021</button>
-                                                <button class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill" data-bs-target="#v-pills-isinin" type="button" role="tab" aria-controls="v-pills-isinin" aria-selected="false">Isinin, 6 Sep 2021</button>
-                                                <button class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill" data-bs-target="#v-pills-selasa" type="button" role="tab" aria-controls="v-pills-selasa" aria-selected="false">Selasa, 7 Sep 2021</button>
+                                        <div  class="d-flex  align-items-start flex-column flex-lg-row ">
+                                            <div id="owlCarousel" class="nav flex-column nav-pills me-5 mb-3 mb-lg-0" id="v-pills-tab" role="tablist"
+                                                 aria-orientation="vertical">
+                                                <button class="nav-link active" id="v-pills-rabu-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#v-pills-rabu" type="button" role="tab"
+                                                        aria-controls="v-pills-rabu" aria-selected="true">Rabu, 17 Nov 2021</button>
+                                                <button class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#v-pills-khamis" type="button" role="tab"
+                                                        aria-controls="v-pills-khamis" aria-selected="false">Khamis, 18 nov  2021</button>
+                                                <button class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#v-pills-jumaat" type="button" role="tab"
+                                                        aria-controls="v-pills-jumaat" aria-selected="false">Jumaat, 19 Nov  2021</button>
+                                                <button class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#v-pills-sabtu" type="button" role="tab"
+                                                        aria-controls="v-pills-sabtu" aria-selected="false">Sabtu, 20 Nov  2021</button>
+                                                <button class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#v-pills-ahad" type="button" role="tab"
+                                                        aria-controls="v-pills-ahad" aria-selected="false">Ahad, 21 Nov 2021</button>
+                                                <button class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#v-pills-isinin" type="button" role="tab"
+                                                        aria-controls="v-pills-isinin" aria-selected="false">Isinin, 22 Nov 2021</button>
+                                                <button class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#v-pills-selasa" type="button" role="tab"
+                                                        aria-controls="v-pills-selasa" aria-selected="false">Selasa, 23 Nov 2021</button>
                                             </div>
-                                            <div class="tab-content" id="v-pills-tabContent">
-                                                <div class="tab-pane fade show active" id="v-pills-rabu" role="tabpanel" aria-labelledby="v-pills-rabu-tab">
+                                            <div class="tab-content" id="msd-live-section">
+                                                <div class="tab-pane fade show active" id="v-pills-rabu" role="tabpanel"
+                                                     aria-labelledby="v-pills-rabu-tab">
                                                     <div class="row">
                                                         <div class="col-7">
                                                             <p>
                                                                 Sembang-Sembang ASNB
                                                             </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 ASNB SALES
                                                             </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                ASB-Iclif MBA MasterClass
-                                                            </p>
-                                                            <p>
-                                                                Attana
-                                                            </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                Pedestrian Question
-                                                            </p>
-                                                            <p>
-                                                                ASNB Casual Talkshow
-                                                            </p>
-                                                            <p>
-                                                                Lepak Je!
-                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 Lets Get Quizzical
                                                             </p>
@@ -379,77 +428,114 @@
                                                         <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASB-Iclif MBA MasterClass
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Attana
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Pedestrian Question
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASNB Casual Talkshow
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lepak Je!
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="v-pills-khamis" role="tabpanel" aria-labelledby="v-pills-khamis-tab">
+                                                <div class="tab-pane fade" id="v-pills-khamis" role="tabpanel"
+                                                     aria-labelledby="v-pills-khamis-tab">
                                                     <div class="row">
                                                         <div class="col-7">
                                                             <p>
                                                                 Sembang-Sembang ASNB
                                                             </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 ASNB SALES
                                                             </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                ASB-Iclif MBA MasterClass
-                                                            </p>
-                                                            <p>
-                                                                Attana
-                                                            </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                Pedestrian Question
-                                                            </p>
-                                                            <p>
-                                                                ASNB Casual Talkshow
-                                                            </p>
-                                                            <p>
-                                                                Lepak Je!
-                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 Lets Get Quizzical
                                                             </p>
@@ -457,77 +543,114 @@
                                                         <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASB-Iclif MBA MasterClass
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Attana
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Pedestrian Question
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASNB Casual Talkshow
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lepak Je!
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="v-pills-jumaat" role="tabpanel" aria-labelledby="v-pills-jumaat-tab">
+                                                <div class="tab-pane fade" id="v-pills-jumaat" role="tabpanel"
+                                                     aria-labelledby="v-pills-jumaat-tab">
                                                     <div class="row">
                                                         <div class="col-7">
                                                             <p>
                                                                 Sembang-Sembang ASNB
                                                             </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 ASNB SALES
                                                             </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                ASB-Iclif MBA MasterClass
-                                                            </p>
-                                                            <p>
-                                                                Attana
-                                                            </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                Pedestrian Question
-                                                            </p>
-                                                            <p>
-                                                                ASNB Casual Talkshow
-                                                            </p>
-                                                            <p>
-                                                                Lepak Je!
-                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 Lets Get Quizzical
                                                             </p>
@@ -535,77 +658,114 @@
                                                         <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASB-Iclif MBA MasterClass
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Attana
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Pedestrian Question
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASNB Casual Talkshow
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lepak Je!
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="v-pills-sabtu" role="tabpanel" aria-labelledby="v-pills-sabtu-tab">
+                                                <div class="tab-pane fade" id="v-pills-sabtu" role="tabpanel"
+                                                     aria-labelledby="v-pills-sabtu-tab">
                                                     <div class="row">
                                                         <div class="col-7">
                                                             <p>
                                                                 Sembang-Sembang ASNB
                                                             </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 ASNB SALES
                                                             </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                ASB-Iclif MBA MasterClass
-                                                            </p>
-                                                            <p>
-                                                                Attana
-                                                            </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                Pedestrian Question
-                                                            </p>
-                                                            <p>
-                                                                ASNB Casual Talkshow
-                                                            </p>
-                                                            <p>
-                                                                Lepak Je!
-                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 Lets Get Quizzical
                                                             </p>
@@ -613,77 +773,114 @@
                                                         <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASB-Iclif MBA MasterClass
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Attana
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Pedestrian Question
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASNB Casual Talkshow
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lepak Je!
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="v-pills-ahad" role="tabpanel" aria-labelledby="v-pills-ahad-tab">
+                                                <div class="tab-pane fade" id="v-pills-ahad" role="tabpanel"
+                                                     aria-labelledby="v-pills-ahad-tab">
                                                     <div class="row">
                                                         <div class="col-7">
                                                             <p>
                                                                 Sembang-Sembang ASNB
                                                             </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 ASNB SALES
                                                             </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                ASB-Iclif MBA MasterClass
-                                                            </p>
-                                                            <p>
-                                                                Attana
-                                                            </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                Pedestrian Question
-                                                            </p>
-                                                            <p>
-                                                                ASNB Casual Talkshow
-                                                            </p>
-                                                            <p>
-                                                                Lepak Je!
-                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 Lets Get Quizzical
                                                             </p>
@@ -691,77 +888,114 @@
                                                         <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASB-Iclif MBA MasterClass
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Attana
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Pedestrian Question
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASNB Casual Talkshow
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lepak Je!
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="v-pills-isinin" role="tabpanel" aria-labelledby="v-pills-isinin-tab">
+                                                <div class="tab-pane fade" id="v-pills-isinin" role="tabpanel"
+                                                     aria-labelledby="v-pills-isinin-tab">
                                                     <div class="row">
                                                         <div class="col-7">
                                                             <p>
                                                                 Sembang-Sembang ASNB
                                                             </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 ASNB SALES
                                                             </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                ASB-Iclif MBA MasterClass
-                                                            </p>
-                                                            <p>
-                                                                Attana
-                                                            </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                Pedestrian Question
-                                                            </p>
-                                                            <p>
-                                                                ASNB Casual Talkshow
-                                                            </p>
-                                                            <p>
-                                                                Lepak Je!
-                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 Lets Get Quizzical
                                                             </p>
@@ -769,77 +1003,114 @@
                                                         <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASB-Iclif MBA MasterClass
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Attana
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Pedestrian Question
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASNB Casual Talkshow
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lepak Je!
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="v-pills-selasa" role="tabpanel" aria-labelledby="v-pills-selasa-tab">
+                                                <div class="tab-pane fade" id="v-pills-selasa" role="tabpanel"
+                                                     aria-labelledby="v-pills-selasa-tab">
                                                     <div class="row">
                                                         <div class="col-7">
                                                             <p>
                                                                 Sembang-Sembang ASNB
                                                             </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 ASNB SALES
                                                             </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                ASB-Iclif MBA MasterClass
-                                                            </p>
-                                                            <p>
-                                                                Attana
-                                                            </p>
-                                                            <p>
-                                                                Lets Get Quizzical
-                                                            </p>
-                                                            <p>
-                                                                Pedestrian Question
-                                                            </p>
-                                                            <p>
-                                                                ASNB Casual Talkshow
-                                                            </p>
-                                                            <p>
-                                                                Lepak Je!
-                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <div class="mb-3 d-flex">
+                                                                <label for="">RM</label>
+                                                                <input class="rm-imputs" type="text" name="" id="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
                                                             <p>
                                                                 Lets Get Quizzical
                                                             </p>
@@ -847,801 +1118,104 @@
                                                         <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASB-Iclif MBA MasterClass
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Attana
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Pedestrian Question
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                ASNB Casual Talkshow
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lepak Je!
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <p>
+                                                                Lets Get Quizzical
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-5">
                                                             <div class="mb-3 d-flex">
                                                                 <label for="">RM</label>
-                                                                <input type="text" name="" id="">
+                                                                <input class="rm-imputs" type="text" name="" id="">
                                                             </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
-                                                            <div class="mb-3 d-flex">
-                                                                <label for="">RM</label>
-                                                                <input type="text" name="" id="">
-                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-6">
+                                                        <h4 class="text-white">Jumlah Simpanan</h4>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="d-flex justify-content-end flex-md-nowrap flex-wrap">
+                                                            <h4 class="text-white mb-0">RM</h4>
+                                                            <input type="text" name="" class="rm-imputs-2" id="">
+                                                        </div>
+                                                        <div class="text-end ms-auto mt-3">
+                                                            <input type="submit" value="Hantar">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <ul class="owl-carousel d-lg-none nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                            <div>
-                                                <li class="nav-item active" role="presentation">
-                                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-                                                        data-bs-target="#pills-home" type="button" role="tab"
-                                                        aria-controls="pills-home" aria-selected="true">Rabu, 1 Sep 2021</button>
-                                                </li>
-                                            </div>
-
-                                            <div>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
-                                                        data-bs-target="#pills-profile" type="button" role="tab"
-                                                        aria-controls="pills-profile" aria-selected="false">Khamis, 2 Sep 2021</button>
-                                                </li>
-                                            </div>
-
-                                            <div>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
-                                                        data-bs-target="#pills-contact" type="button" role="tab"
-                                                        aria-controls="pills-contact" aria-selected="false">Jumaat, 3 Sep 2021</button>
-                                                </li>
-                                            </div>
-
-                                            <div>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="pills-contact2-tab" data-bs-toggle="pill"
-                                                        data-bs-target="#pills-contact2" type="button" role="tab"
-                                                        aria-controls="pills-contact2" aria-selected="false">Sabtu, 4 Sep 2021</button>
-                                                </li>
-                                            </div>
-
-                                            <div>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="pills-contact3-tab" data-bs-toggle="pill"
-                                                        data-bs-target="#pills-contact3" type="button" role="tab"
-                                                        aria-controls="pills-contact3" aria-selected="false">Ahad, 5 Sep 2021</button>
-                                                </li>
-                                            </div>
-
-                                            <div>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="pills-contact4-tab" data-bs-toggle="pill"
-                                                        data-bs-target="#pills-contact4" type="button" role="tab"
-                                                        aria-controls="pills-contact4" aria-selected="false">Isinin, 6 Sep 2021</button>
-                                                </li>
-                                            </div>
-                                            <div>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="pills-contact5-tab" data-bs-toggle="pill"
-                                                        data-bs-target="#pills-contact5" type="button" role="tab"
-                                                        aria-controls="pills-contact5" aria-selected="false">Selasa, 7 Sep 2021</button>
-                                                </li>
-                                            </div>
-
-                                        </ul>
-                                        <div class="tab-content d-lg-none" >
-                                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                                                aria-labelledby="pills-home-tab">
-                                                <div class="row">
-                                                    <div class="col-7">
-                                                        <p>
-                                                            Sembang-Sembang ASNB
-                                                        </p>
-                                                        <p>
-                                                            ASNB SALES
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            ASB-Iclif MBA MasterClass
-                                                        </p>
-                                                        <p>
-                                                            Attana
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            Pedestrian Question
-                                                        </p>
-                                                        <p>
-                                                            ASNB Casual Talkshow
-                                                        </p>
-                                                        <p>
-                                                            Lepak Je!
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-5">
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
-                                                aria-labelledby="pills-profile-tab">
-                                                <div class="row">
-                                                    <div class="col-7">
-                                                        <p>
-                                                            Sembang-Sembang ASNB
-                                                        </p>
-                                                        <p>
-                                                            ASNB SALES
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            ASB-Iclif MBA MasterClass
-                                                        </p>
-                                                        <p>
-                                                            Attana
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            Pedestrian Question
-                                                        </p>
-                                                        <p>
-                                                            ASNB Casual Talkshow
-                                                        </p>
-                                                        <p>
-                                                            Lepak Je!
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-5">
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade show active" id="pills-contact" role="tabpanel"
-                                                aria-labelledby="pills-contact-tab">
-                                                <div class="row">
-                                                    <div class="col-7">
-                                                        <p>
-                                                            Sembang-Sembang ASNB
-                                                        </p>
-                                                        <p>
-                                                            ASNB SALES
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            ASB-Iclif MBA MasterClass
-                                                        </p>
-                                                        <p>
-                                                            Attana
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            Pedestrian Question
-                                                        </p>
-                                                        <p>
-                                                            ASNB Casual Talkshow
-                                                        </p>
-                                                        <p>
-                                                            Lepak Je!
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-5">
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade show active" id="pills-contact2" role="tabpanel"
-                                                aria-labelledby="pills-contact2-tab">
-                                                <div class="row">
-                                                    <div class="col-7">
-                                                        <p>
-                                                            Sembang-Sembang ASNB
-                                                        </p>
-                                                        <p>
-                                                            ASNB SALES
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            ASB-Iclif MBA MasterClass
-                                                        </p>
-                                                        <p>
-                                                            Attana
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            Pedestrian Question
-                                                        </p>
-                                                        <p>
-                                                            ASNB Casual Talkshow
-                                                        </p>
-                                                        <p>
-                                                            Lepak Je!
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-5">
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade show active" id="pills-contact3" role="tabpanel"
-                                                aria-labelledby="pills-contact3-tab">
-                                                <div class="row">
-                                                    <div class="col-7">
-                                                        <p>
-                                                            Sembang-Sembang ASNB
-                                                        </p>
-                                                        <p>
-                                                            ASNB SALES
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            ASB-Iclif MBA MasterClass
-                                                        </p>
-                                                        <p>
-                                                            Attana
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            Pedestrian Question
-                                                        </p>
-                                                        <p>
-                                                            ASNB Casual Talkshow
-                                                        </p>
-                                                        <p>
-                                                            Lepak Je!
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-5">
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade show active" id="pills-contact4" role="tabpanel"
-                                                aria-labelledby="pills-contact4-tab">
-                                                <div class="row">
-                                                    <div class="col-7">
-                                                        <p>
-                                                            Sembang-Sembang ASNB
-                                                        </p>
-                                                        <p>
-                                                            ASNB SALES
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            ASB-Iclif MBA MasterClass
-                                                        </p>
-                                                        <p>
-                                                            Attana
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            Pedestrian Question
-                                                        </p>
-                                                        <p>
-                                                            ASNB Casual Talkshow
-                                                        </p>
-                                                        <p>
-                                                            Lepak Je!
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-5">
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade show active" id="pills-contact5" role="tabpanel"
-                                                aria-labelledby="pills-contact5-tab">
-                                                <div class="row">
-                                                    <div class="col-7">
-                                                        <p>
-                                                            Sembang-Sembang ASNB
-                                                        </p>
-                                                        <p>
-                                                            ASNB SALES
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            ASB-Iclif MBA MasterClass
-                                                        </p>
-                                                        <p>
-                                                            Attana
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                        <p>
-                                                            Pedestrian Question
-                                                        </p>
-                                                        <p>
-                                                            ASNB Casual Talkshow
-                                                        </p>
-                                                        <p>
-                                                            Lepak Je!
-                                                        </p>
-                                                        <p>
-                                                            Lets Get Quizzical
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-5">
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input type="text" name="" id="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
                                     </form>
                                 </div>
                             </div>
@@ -1651,6 +1225,7 @@
             </div>
         </div>
     </main>
+
 @endsection
 
 
