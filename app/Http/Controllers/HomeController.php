@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Jadual;
+use App\Models\Program;
 use App\Models\Settings;
 use App\Partner;
-use App\Program;
-use Illuminate\Http\Request;
+use App\PartnerSlider;
 
 class HomeController extends Controller
 {
@@ -15,13 +15,17 @@ class HomeController extends Controller
         $partners = Partner::all();
         return view("home.home", compact('partners'));
     }
-
     /* Partner Page*/
     public function may_bank($slug){
         $partner = Partner::where('slug', $slug)->get()->first();
         return view('home.partner', compact('partner'));
     }
-
+    /* Promotion Page*/
+    public function promotion(){
+        $partners = Partner::all();
+        $sliders = PartnerSlider::all();
+        return view("home.promotion",compact('partners','sliders'));
+    }
 
     public function msdLive(){
         $data = [];
@@ -43,9 +47,7 @@ class HomeController extends Controller
         return view("khidmat");
     }
 
-    public function promotion(){
-        return view("promotion");
-    }
+
 
     public function jom_kira(){
         return view('jom_kira');
