@@ -4,14 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Jadual;
 use App\Models\Settings;
+use App\Partner;
 use App\Program;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    /* Home Page */
     public function index(){
-        return view("home");
+        $partners = Partner::all();
+        return view("home.home", compact('partners'));
     }
+
+    /* Partner Page*/
+    public function may_bank($slug){
+        $partner = Partner::where('slug', $slug)->get()->first();
+        return view('home.partner', compact('partner'));
+    }
+
 
     public function msdLive(){
         $data = [];
@@ -45,9 +55,7 @@ class HomeController extends Controller
         return view('sertai_sekarang');
     }
 
-    public function may_bank(){
-        return view('may_bank');
-    }
+
 
     public function partner(){
         return view('partner');
