@@ -46,7 +46,6 @@ class ProgramController extends Controller
         $request->validate([
             'date' => 'required',
             'description' => 'required',
-            'description' => 'required',
             'main_program' => 'required',
         ]);
         $program = new Program();

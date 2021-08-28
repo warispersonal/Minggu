@@ -55,17 +55,17 @@
             @auth
                 @include('layouts.navbars.navs.auth')
             @endauth
-                @if(Session::has('success_message'))
-                    <div class="MainFlip-Container">
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>{{ Session::get('success_message') }}</strong>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
+{{--                @if(Session::has('success_message'))--}}
+{{--                    <div class="MainFlip-Container mt-5">--}}
+{{--                        <div class="alert alert-success alert-dismissible fade show" role="alert">--}}
+{{--                            <strong>{{ Session::get('success_message') }}</strong>--}}
+{{--                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
+{{--                                <span aria-hidden="true">&times;</span>--}}
+{{--                            </button>--}}
+{{--                        </div>--}}
 
-                    </div>
-                @endif
+{{--                    </div>--}}
+{{--                @endif--}}
             @yield('content')
         </div>
 

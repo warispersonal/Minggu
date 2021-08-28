@@ -121,6 +121,11 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('stars.homepage.index') }}">
+                                        <i class="ni ni-palette text-primary"></i>  {{ __('Partners') }}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{ route('star.content.tonton') }}">
                                         <i class="ni ni-ui-04 text-primary"></i> {{ __('Tonton MSD Live') }}
                                     </a>

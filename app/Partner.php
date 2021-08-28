@@ -4,6 +4,7 @@ namespace App;
 
 use App\Constant\FileConstant;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Partner extends Model
 {
@@ -31,4 +32,7 @@ class Partner extends Model
         return asset(FileConstant::DETAIL_LOGO . '/' . $this->details_logo);
     }
 
+    public function setSlugAttribute(){
+        $this->attributes['slug'] = Str::slug($this->name , "-");
+    }
 }

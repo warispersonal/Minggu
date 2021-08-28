@@ -1406,4 +1406,5 @@
 .promosi-image-details{
     width: 110px !important;
     height: 81px !important;
+    object-fit: contain;
 }

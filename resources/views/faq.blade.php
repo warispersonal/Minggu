@@ -27,7 +27,7 @@
                                     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-profile" type="button" role="tab"
                                             aria-controls="nav-profile"
-                                            aria-selected="false">pertandingan
+                                            aria-selected="false">Pertandingan
                                     </button>
 
                                 </div>

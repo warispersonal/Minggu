@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SuperAdmin\HomePagePartnerController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
@@ -69,6 +70,15 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::get('detail/{id}', 'PartnersController@show')->name('star.detailPartner');
         Route::post('update/{id}', 'PartnersController@update')->name('star.updatePartner');
         Route::get('delete/{id}', 'PartnersController@destroy')->name('star.destroyPartner');
+    });
+
+    Route::prefix('home-page-partner')->group(function () {
+        Route::get('/', [HomePagePartnerController::class,'index'])->name('stars.homepage.index');
+        Route::get('/show/{id}', [HomePagePartnerController::class,'show'])->name('stars.homepage.show');
+        Route::get('/edit/{id}', [HomePagePartnerController::class,'edit'])->name('stars.homepage.edit');
+        Route::post('/edit/{id}', [HomePagePartnerController::class,'update'])->name('stars.homepage.edit');
+        Route::get('/delete/{id}', [HomePagePartnerController::class,'delete'])->name('stars.homepage.delete');
+
     });
 
 
