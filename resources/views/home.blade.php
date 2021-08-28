@@ -2,26 +2,19 @@
 
 @push('style')
     <style>
-        .desktop_nav {
-            background-color: #0057B7;
-        }
-
-        .desktop_nav li {
-            color: white;
-        }
-
-        .desktop_nav li a {
-            color: white;
-        }
-
-        .mobile-header {
-            background: transparent;
-            color: #0057B7;
-        }
-
-        .main-img {
-            background: url({{asset('assets/img/home-bg.png')}});
-        }
+        .desktop_nav{
+        background-color: #0057B7;
+    }
+    .desktop_nav li{
+        color: white;
+    }
+    .desktop_nav li a{
+        color: white;
+    }
+    .mobile-header{
+        background: transparent;
+        color: #0057B7;
+    }
     </style>
 @endpush
 

@@ -15,7 +15,7 @@
         "harimayco/laravel-menu": "^1.4",
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^2.4",
+        "laravel/ui": "^2.0",
         "league/csv": "^9.0",
         "yajra/laravel-datatables-oracle": "~9.0"
     },

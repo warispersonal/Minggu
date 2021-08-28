@@ -2,8 +2,11 @@
 
 @push('style')
     <style>
-        .main-bg {
-            background-color: #0057B7 !important;
+        .main-bg{
+            background-color: #FFC600;
+        }
+        .mobile-header{
+            background-color: #FFC600;
         }
     </style>
 @endpush
@@ -57,7 +60,7 @@
                                             <span class="visually-hidden">Next</span>
                                         </button>
                                     </div>
-                                    <div class="bg-white text-center mt-4 p-4">
+                                    <div class="text-center mt-4 p-4">
                                         <img src="{{asset('assets/img/maybank-3.png')}}" class="img-fluid" alt="">
                                     </div>
                                     <div class="my-4">

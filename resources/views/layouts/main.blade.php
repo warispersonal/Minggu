@@ -75,7 +75,19 @@
         </ul>
     </nav><!-- /. Desktop Navbar -->
 
-    <img id="hamburger_btn" src="{{ asset('assets/front/img/menu.svg') }} " style="display: none;" alt="">
+    <div class="mobile-header d-lg-none px-3 py-2">
+            <div>
+                <h3 class="m-0">PNB ASNB</h3>
+                <small>BM | EN</small>
+            </div>
+            
+            
+            <?php if($_SERVER['REQUEST_URI'] == "/" || $_SERVER['REQUEST_URI'] == "/index.php"){ ?>
+                <img id="hamburger_btn" src="{{asset('assets/img/menu.svg')}}" alt="">
+            <?php } else{ ?>
+                <img id="hamburger_btn" src="{{asset('assets/img/menu-white.svg')}}" alt="">
+            <?php } ?>
+    </div>
 
     <nav class="mobile_nav">
         <div class="text-end">
