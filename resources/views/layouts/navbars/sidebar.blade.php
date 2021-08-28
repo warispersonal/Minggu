@@ -145,16 +145,22 @@
                                         <i class="ni ni-ui-04 text-primary"></i> {{ __('Khidmat Nasihat 1-1') }}
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">
-                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('Promosi') }}
-                                    </a>
-                                </li>
+{{--                                <li class="nav-item">--}}
+{{--                                    <a class="nav-link" href="#">--}}
+{{--                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('Promosi') }}--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('star.MainDetail')}}">
                                         <i class="ni ni-ui-04 text-primary"></i> {{ __('Main Program') }}
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('star.faq')}}">
+                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('FAQ') }}
+                                    </a>
+                                </li>
+
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">
                                         <i class="ni ni-ui-04 text-primary"></i> {{ __('Soalan Lazim') }}

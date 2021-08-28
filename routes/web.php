@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SuperAdmin\FAQController;
 use App\Http\Controllers\SuperAdmin\HomePagePartnerController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
@@ -73,23 +74,29 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
     });
 
     Route::prefix('home-page-partner')->group(function () {
-        Route::get('/', [HomePagePartnerController::class,'index'])->name('stars.homepage.index');
-        Route::get('/show/{id}', [HomePagePartnerController::class,'show'])->name('stars.homepage.show');
-        Route::get('/edit/{id}', [HomePagePartnerController::class,'edit'])->name('stars.homepage.edit');
-        Route::post('/edit/{id}', [HomePagePartnerController::class,'update'])->name('stars.homepage.edit');
-        Route::get('/delete/{id}', [HomePagePartnerController::class,'destroy'])->name('stars.homepage.delete');
-        Route::get('/slider/delete/{id}', [HomePagePartnerController::class,'slider_delete'])->name('stars.homepage.slide.delete');
-        Route::get('/link/delete/{id}', [HomePagePartnerController::class,'link_delete'])->name('stars.homepage.link.delete');
-        Route::post('/slider/create', [HomePagePartnerController::class,'slider_store'])->name('stars.slide.store');
-        Route::post('/link/create', [HomePagePartnerController::class,'link_store'])->name('stars.link.store');
+        Route::get('/', [HomePagePartnerController::class, 'index'])->name('stars.homepage.index');
+        Route::get('/show/{id}', [HomePagePartnerController::class, 'show'])->name('stars.homepage.show');
+        Route::get('/edit/{id}', [HomePagePartnerController::class, 'edit'])->name('stars.homepage.edit');
+        Route::post('/edit/{id}', [HomePagePartnerController::class, 'update'])->name('stars.homepage.edit');
+        Route::get('/delete/{id}', [HomePagePartnerController::class, 'destroy'])->name('stars.homepage.delete');
+        Route::get('/slider/delete/{id}', [HomePagePartnerController::class, 'slider_delete'])->name('stars.homepage.slide.delete');
+        Route::get('/link/delete/{id}', [HomePagePartnerController::class, 'link_delete'])->name('stars.homepage.link.delete');
+        Route::post('/slider/create', [HomePagePartnerController::class, 'slider_store'])->name('stars.slide.store');
+        Route::post('/link/create', [HomePagePartnerController::class, 'link_store'])->name('stars.link.store');
 
     });
 
 
+    Route::prefix('/faq/page')->group(function () {
+        Route::get('/', [FAQController::class,'index'])->name('star.faq');
+        Route::post('/', [FAQController::class,'store'])->name('star.faq');
+    });
+
+
     Route::prefix('main-program')->group(function () {
-        Route::get('/', [MainProgramController::class,'index'])->name('star.MainDetail');
+        Route::get('/', [MainProgramController::class, 'index'])->name('star.MainDetail');
         Route::get('get-main-program', [MainProgramController::class, 'getMainProgram'])->name('star.getMainDetailAJAX');
-        Route::post('store-main-program',[MainProgramController::class, 'store'])->name('star.storeMainDetail');
+        Route::post('store-main-program', [MainProgramController::class, 'store'])->name('star.storeMainDetail');
         Route::get('detail/{id}', [MainProgramController::class, 'show'])->name('star.detailMainDetail');
         Route::post('update/{id}', [MainProgramController::class, 'update'])->name('star.updateMainDetail');
         Route::get('delete/{id}', [MainProgramController::class, 'destroy'])->name('star.destroyMainDetail');
