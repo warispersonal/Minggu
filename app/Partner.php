@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Constant\FileConstant;
+use App\Models\Program;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
@@ -15,7 +16,7 @@ class Partner extends Model
     }
 
     public function programs(){
-        return $this->hasMany(PartnerProgram::class);
+        return $this->hasMany(Program::class);
     }
 
     public function links(){
