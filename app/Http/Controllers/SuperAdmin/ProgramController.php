@@ -33,7 +33,7 @@ class ProgramController extends Controller
     {
         $main_programs = MainProgram::all();
         $partners = Partner::all();
-        return view('superadmin.program.create', compact("main_programs",'partners'));
+        return view('superadmin.program.create', compact("main_programs", 'partners'));
     }
 
     /**
@@ -84,7 +84,10 @@ class ProgramController extends Controller
      */
     public function edit($id)
     {
-        //
+        $program = Program::find($id);
+        $main_programs = MainProgram::all();
+        $partners = Partner::all();
+        return view('superadmin.program.edit', compact("program", "main_programs", 'partners'));
     }
 
     /**
@@ -96,7 +99,26 @@ class ProgramController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'date' => 'required',
+            'time' => 'required',
+            'description' => 'required',
+            'main_program' => 'required',
+        ]);
+        $program = Program::find($id);
+        if ($request->thumbnail_image) {
+            $thumbnail_image = $this->uploadMediaFile($request, 'thumbnail_image', FileConstant::PROGRAM_THUMBNAIL);
+            $program->thumbnail_image = $thumbnail_image;
+        }
+        $program->name = $request->name;
+        $program->date = $request->date;
+        $program->time = $request->time;
+        $program->description = $request->description;
+        $program->video_link = $request->video_link;
+        $program->main_program_id = $request->main_program;
+        $program->partner_id = $request->partner_id;
+        $program->save();
+        return redirect()->route('programs.index');
     }
 
     /**

@@ -67,8 +67,8 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-{{--                                                <a class="dropdown-item"--}}
-{{--                                                   href="http://minguudeliver.test/star/partner/detail/3">Edit</a>--}}
+                                                <a class="dropdown-item"
+                                                   href="{{route('programs.edit', $program->id)}}">Edit</a>
                                                 <a class="dropdown-item"
                                                    href="{{route('programs.add.delete', $program->id)}}">Delete</a>
                                             </div>

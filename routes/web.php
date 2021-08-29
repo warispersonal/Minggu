@@ -121,6 +121,8 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
     Route::get('programs', [ProgramController::class, 'index'])->name('programs.index');
     Route::get('program/add', [ProgramController::class, 'create'])->name('programs.add');
     Route::post('program/add', [ProgramController::class, 'store'])->name('programs.add.post');
+    Route::get('program/{id}/edit', [ProgramController::class, 'edit'])->name('programs.edit');
+    Route::post('program/{id}/update', [ProgramController::class, 'update'])->name('programs.update');
     Route::get('program/{id}/delete', [ProgramController::class, 'destroy'])->name('programs.add.delete');
 
     Route::prefix('content')->group(function () {
