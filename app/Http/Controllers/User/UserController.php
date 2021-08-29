@@ -23,6 +23,9 @@ class UserController extends Controller
 
     public function step1(Request $request)
     {
+        if(!Auth::guard('user')){
+            return  redirect()->back();
+        }
         $validator = Validator::make($request->all(), []);
         $userLottery = [];
         $id = Auth::guard('user')->id();
