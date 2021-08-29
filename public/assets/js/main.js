@@ -12,14 +12,30 @@ const hamburgerBtn = document.querySelector("#hamburger_btn")
 const mobileNav = document.querySelector(".mobile_nav")
 const closeBtn2 = document.querySelectorAll(".close_btn")
 
+if(document.getElementById("login") !== null)
+{
+    login.addEventListener("click",()=>{
+        overlay.style.display = "block"
+        loginModal.style.bottom = "55%"
+        setTimeout(() => {
+            loginModal.style.bottom = "50%"
+        }, 300);
+    });
+}
 
-login.addEventListener("click",()=>{
-    overlay.style.display = "block"
-    loginModal.style.bottom = "55%"
-    setTimeout(() => {
-        loginModal.style.bottom = "50%"
-    }, 300);
-})
+if(document.getElementById("register") !== null)
+{
+    register.addEventListener("click",()=>{
+        overlay.style.display = "block"
+        registerModal.style.bottom = "55%"
+        setTimeout(() => {
+            registerModal.style.bottom = "50%"
+        }, 300);
+    })
+}
+
+
+
 mobilelogin.addEventListener("click",()=>{
     overlay.style.display = "block"
     overlay.style.zIndex = "55"
@@ -28,13 +44,7 @@ mobilelogin.addEventListener("click",()=>{
         loginModal.style.bottom = "50%"
     }, 300);
 })
-register.addEventListener("click",()=>{
-    overlay.style.display = "block"
-    registerModal.style.bottom = "55%"
-    setTimeout(() => {
-        registerModal.style.bottom = "50%"
-    }, 300);
-})
+
 mobileRegister.addEventListener("click",()=>{
     overlay.style.display = "block"
     registerModal.style.bottom = "55%"
@@ -58,7 +68,7 @@ hamburgerBtn.addEventListener("click", ()=> {
 closeBtn.addEventListener("click",()=>{
     overlay.style.display = "none"
     mobileNav.style.right = "-250px"
-    
+
 })
 
 closeBtn2.forEach(closeBtn => {
@@ -68,7 +78,7 @@ closeBtn2.forEach(closeBtn => {
         overlay.style.display = "none"
         overlay.style.zIndex = "1"
     })
-    
+
 });
 
 $(document).ready(function () {

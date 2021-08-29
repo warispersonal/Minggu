@@ -9,6 +9,7 @@ use App\Models\Program;
 use App\Models\Settings;
 use App\Partner;
 use App\PartnerSlider;
+use App\User;
 use App\UserLottery;
 use Illuminate\Support\Facades\Auth;
 
