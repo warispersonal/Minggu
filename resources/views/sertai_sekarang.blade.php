@@ -251,7 +251,7 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="1"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
                                                                     @if ($errors->has('step_3_'.$item->id))
@@ -309,7 +309,8 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="1"
+                                                                                                                                                       value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
+
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
                                                                     @if ($errors->has('step_3_'.$item->id))
@@ -338,7 +339,8 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="1"
+                                                                                                                                                       value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
+
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
                                                                     @if ($errors->has('step_3_'.$item->id))
@@ -367,7 +369,8 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="1"
+                                                                                                                                                       value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
+
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
                                                                     @if ($errors->has('step_3_'.$item->id))
@@ -396,7 +399,8 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="1"
+                                                                                                                                                       value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
+
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
                                                                     @if ($errors->has('step_3_'.$item->id))
@@ -425,7 +429,8 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="1"
+                                                                                                                                                       value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
+
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
                                                                     @if ($errors->has('step_3_'.$item->id))
