@@ -485,9 +485,6 @@
                 }
             }).trigger('input'); // Initialise the `prevValue` data properties
         });
-        export default {
-            components: {Scripts}
-        }
     </script>
     <script>
         $(document).ready(function () {
