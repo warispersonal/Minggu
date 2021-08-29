@@ -474,8 +474,6 @@
 
 @push('js')
     <script>
-        import Scripts from "../../public/vendor/harimayco-menu/scripts";
-
         $(function () {
             $('.only-decimal-integer-number').on('input', function (e) {
                 if (/^(\d+(\.\d{0,2})?)?$/.test($(this).val())) {
