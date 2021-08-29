@@ -83,7 +83,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -98,7 +99,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -114,7 +116,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -130,7 +133,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -146,7 +150,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -161,7 +166,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -176,7 +182,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -1086,7 +1093,7 @@
                     <div class="tab-pane fade show description-field" id="date-{{$program->id}}" role="tabpanel"
                          aria-labelledby="date-{{$program->id}}-tab">
                         <p>
-                            {{$program->description}}
+                            {{$program->description}} <a href="{{route('may.bank', $program->partner->slug ?? '')}}"><img id="store_logo_image" src="{{$program->partner->main_logo ?? ''}}" /></a>
                         </p>
                     </div>
                 @endforeach
@@ -1174,6 +1181,7 @@
             $(".date-button").removeClass("active")
             $("#date-" + program.id).addClass('active')
             $("#date-" + program.id + "-tab").addClass('active')
+
         }
     </script>
 @endpush
