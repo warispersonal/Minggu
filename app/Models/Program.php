@@ -15,7 +15,7 @@ class Program extends Model
     }
 
     public function getRelatedDatesAttribute(){
-        $programs = Program::where("main_program_id", $this->main_program_id)->get();
+        $programs = Program::where("partner_id", $this->partner_id)->get();
         return $programs;
     }
 }
