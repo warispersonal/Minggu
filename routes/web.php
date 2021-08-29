@@ -41,6 +41,7 @@ Route::prefix('/')->group(function () {
 // Routes For Users
 Auth::routes();
 Route::middleware('auth:user')->namespace('User')->group(function () {
+    Route::post('step-1-from',[UserController::class, 'step1'])->name('step1.form');
 
 });
 

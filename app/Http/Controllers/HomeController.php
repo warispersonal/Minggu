@@ -9,6 +9,7 @@ use App\Models\Program;
 use App\Models\Settings;
 use App\Partner;
 use App\PartnerSlider;
+use App\UserLottery;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -86,9 +87,22 @@ class HomeController extends Controller
 
     public function sertai_sekarang()
     {
+
+        $id = Auth::guard('user')->id() ?? 0;
         $seciton1 = Lottery::where('section', 1)->get();
         $seciton2 = Lottery::where('section', 2)->get();
         $seciton3 = Lottery::where('section', 3)->get();
+        foreach ($seciton1 as $section) {
+           $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
+            if(count($user_lottery) == 0){
+                $section['status'] = 0;
+                $section['correct_value'] = '';
+            }
+            else{
+                $section['status'] = 1;
+                $section['correct_value'] = $section['correct_value'];
+            }
+        }
         return view('sertai_sekarang', compact('seciton1', 'seciton2', 'seciton3'));
     }
 

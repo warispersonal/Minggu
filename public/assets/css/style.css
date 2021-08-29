@@ -1417,3 +1417,7 @@
 .hidden-div{
     display: none !important;
 }
+.invalid-feedback-option{
+    font-size: 14px !important;
+    text-align: center !important;
+}

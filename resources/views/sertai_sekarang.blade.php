@@ -9,12 +9,19 @@
 @endpush
 
 @section('content')
-
     <main>
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
                 <h1 class="text-white mb-0 d-lg-block d-none">PNB &nbsp; ASNB</h1>
+                <h3 class="text-white mb-0 d-lg-block d-none">
+                    @guest('user')
+                        <div class="alert alert-danger text-center" role="alert">
+                            Please Login to Continue Otherwise Your Data Will Lost
+                        </div>
+                    @endguest
+                </h3>
             </div>
+
             <div class="container mt-5">
                 <div id="jom_kira_tabs">
                     <nav>
@@ -54,16 +61,24 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-7 ">
-                                    <form action="" class="rm-form">
+                                    <form method="post" action="{{route('step1.form')}}" class="rm-form">
+                                        @csrf
                                         <div class="row ps-lg-5">
                                             @foreach($seciton1 as $item)
                                                 <div class="col-6">
                                                     <div class="mb-3 d-flex align-items-center">
                                                         <span>{{$item->title}}</span>
                                                         <label for="">RM</label>
-                                                        <input class="rm-imputs" type="text" name="" id="">
+                                                        <input {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs only-decimal-integer-number" type="text" value="{{$item->status == 1 ? $item->correct_value : old('step_1_'.$item->id)}}" name="step_1_{{$item->id}}">
+
                                                     </div>
+                                                    @if ($errors->has('step_1_'.$item->id))
+                                                        <p class="invalid-feedback-option text-danger">
+                                                          {{ $errors->first('step_1_'.$item->id)}}
+                                                        </p>
+                                                    @endif
                                                 </div>
+
                                             @endforeach
                                         </div>
                                         <div class="row mt-3">
@@ -115,7 +130,8 @@
                                                     <div class="col-6">
                                                         <div class="mb-3 d-flex">
                                                             <label for="">RM</label>
-                                                            <input class="rm-imputs" type="text" name="" id="">
+                                                            <input class="rm-imputs only-decimal-integer-number"
+                                                                   type="text" name="" id="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -215,8 +231,10 @@
                                                                 <div class="col-5">
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
-                                                                        <input class="rm-imputs" type="text" name=""
-                                                                               id="">
+                                                                        <input
+                                                                            class="rm-imputs only-decimal-integer-number"
+                                                                            type="text" name=""
+                                                                            id="">
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -236,8 +254,10 @@
                                                                 <div class="col-5">
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
-                                                                        <input class="rm-imputs" type="text" name=""
-                                                                               id="">
+                                                                        <input
+                                                                            class="rm-imputs only-decimal-integer-number"
+                                                                            type="text" name=""
+                                                                            id="">
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -257,8 +277,10 @@
                                                                 <div class="col-5">
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
-                                                                        <input class="rm-imputs" type="text" name=""
-                                                                               id="">
+                                                                        <input
+                                                                            class="rm-imputs only-decimal-integer-number"
+                                                                            type="text" name=""
+                                                                            id="">
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -278,8 +300,10 @@
                                                                 <div class="col-5">
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
-                                                                        <input class="rm-imputs" type="text" name=""
-                                                                               id="">
+                                                                        <input
+                                                                            class="rm-imputs only-decimal-integer-number"
+                                                                            type="text" name=""
+                                                                            id="">
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -299,8 +323,10 @@
                                                                 <div class="col-5">
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
-                                                                        <input class="rm-imputs" type="text" name=""
-                                                                               id="">
+                                                                        <input
+                                                                            class="rm-imputs only-decimal-integer-number"
+                                                                            type="text" name=""
+                                                                            id="">
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -320,8 +346,10 @@
                                                                 <div class="col-5">
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
-                                                                        <input class="rm-imputs" type="text" name=""
-                                                                               id="">
+                                                                        <input
+                                                                            class="rm-imputs only-decimal-integer-number"
+                                                                            type="text" name=""
+                                                                            id="">
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -341,8 +369,10 @@
                                                                 <div class="col-5">
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
-                                                                        <input class="rm-imputs" type="text" name=""
-                                                                               id="">
+                                                                        <input
+                                                                            class="rm-imputs only-decimal-integer-number"
+                                                                            type="text" name=""
+                                                                            id="">
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -376,10 +406,21 @@
             </div>
         </div>
     </main>
-
 @endsection
 
-
 @push('js')
+    <script>
 
+        $(function () {
+            $('.only-decimal-integer-number').on('input', function (e) {
+                if (/^(\d+(\.\d{0,2})?)?$/.test($(this).val())) {
+                    // Input is OK. Remember this value
+                    $(this).data('prevValue', $(this).val());
+                } else {
+                    // Input is not OK. Restore previous value
+                    $(this).val($(this).data('prevValue') || '');
+                }
+            }).trigger('input'); // Initialise the `prevValue` data properties
+        });
+    </script>
 @endpush
