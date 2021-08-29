@@ -160,7 +160,7 @@
                                             <div class="col-6">
                                                 <div class="d-flex justify-content-end flex-md-nowrap flex-wrap">
                                                     <h2 class="text-white mb-0">RM</h2>
-                                                    <input type="text" name="" id="final_result_2" class="rm-imputs-2">
+                                                    <input type="text" id="final_result_2" class="rm-imputs-2" readonly>
                                                     <div class="text-end mt-3 mt-md-0">
                                                         <input type="submit" value="Hantar">
                                                     </div>
@@ -190,7 +190,8 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-7">
-                                    <form action="" class="side-tabs rm-form">
+                                    <form method="post" action="{{route('step3.form')}}" class="rm-form">
+                                        @csrf
                                         <div class="d-flex  align-items-start flex-column flex-lg-row ">
                                             <div id="owlCarousel" class="nav flex-column nav-pills me-5 mb-3 mb-lg-0"
                                                  id="v-pills-tab" role="tablist"
@@ -248,10 +249,16 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            class="rm-imputs only-decimal-integer-number"
-                                                                            type="text" name=""
-                                                                        >
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            type="text"
+                                                                            value="1"
+                                                                            name="step_3_{{$item->id}}">
                                                                     </div>
+                                                                    @if ($errors->has('step_3_'.$item->id))
+                                                                        <p class="invalid-feedback-option text-danger">
+                                                                            {{ $errors->first('step_3_'.$item->id)}}
+                                                                        </p>
+                                                                    @endif
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -271,10 +278,16 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            class="rm-imputs only-decimal-integer-number"
-                                                                            type="text" name=""
-                                                                        >
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            type="text"
+                                                                            value="1"
+                                                                            name="step_3_{{$item->id}}">
                                                                     </div>
+                                                                    @if ($errors->has('step_3_'.$item->id))
+                                                                        <p class="invalid-feedback-option text-danger">
+                                                                            {{ $errors->first('step_3_'.$item->id)}}
+                                                                        </p>
+                                                                    @endif
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -294,10 +307,16 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            class="rm-imputs only-decimal-integer-number"
-                                                                            type="text" name=""
-                                                                        >
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            type="text"
+                                                                            value="1"
+                                                                            name="step_3_{{$item->id}}">
                                                                     </div>
+                                                                    @if ($errors->has('step_3_'.$item->id))
+                                                                        <p class="invalid-feedback-option text-danger">
+                                                                            {{ $errors->first('step_3_'.$item->id)}}
+                                                                        </p>
+                                                                    @endif
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -317,10 +336,16 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            class="rm-imputs only-decimal-integer-number"
-                                                                            type="text" name=""
-                                                                        >
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            type="text"
+                                                                            value="1"
+                                                                            name="step_3_{{$item->id}}">
                                                                     </div>
+                                                                    @if ($errors->has('step_3_'.$item->id))
+                                                                        <p class="invalid-feedback-option text-danger">
+                                                                            {{ $errors->first('step_3_'.$item->id)}}
+                                                                        </p>
+                                                                    @endif
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -340,10 +365,16 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            class="rm-imputs only-decimal-integer-number"
-                                                                            type="text" name=""
-                                                                        >
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            type="text"
+                                                                            value="1"
+                                                                            name="step_3_{{$item->id}}">
                                                                     </div>
+                                                                    @if ($errors->has('step_3_'.$item->id))
+                                                                        <p class="invalid-feedback-option text-danger">
+                                                                            {{ $errors->first('step_3_'.$item->id)}}
+                                                                        </p>
+                                                                    @endif
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -363,10 +394,16 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            class="rm-imputs only-decimal-integer-number"
-                                                                            type="text" name=""
-                                                                        >
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            type="text"
+                                                                            value="1"
+                                                                            name="step_3_{{$item->id}}">
                                                                     </div>
+                                                                    @if ($errors->has('step_3_'.$item->id))
+                                                                        <p class="invalid-feedback-option text-danger">
+                                                                            {{ $errors->first('step_3_'.$item->id)}}
+                                                                        </p>
+                                                                    @endif
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -386,10 +423,16 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            class="rm-imputs only-decimal-integer-number"
-                                                                            type="text" name=""
-                                                                        >
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            type="text"
+                                                                            value="1"
+                                                                            name="step_3_{{$item->id}}">
                                                                     </div>
+                                                                    @if ($errors->has('step_3_'.$item->id))
+                                                                        <p class="invalid-feedback-option text-danger">
+                                                                            {{ $errors->first('step_3_'.$item->id)}}
+                                                                        </p>
+                                                                    @endif
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -404,7 +447,7 @@
                                                         <div
                                                             class="d-flex justify-content-end flex-md-nowrap flex-wrap">
                                                             <h4 class="text-white mb-0">RM</h4>
-                                                            <input type="text" name="" class="rm-imputs-2">
+                                                            <input type="text" id="final_result_3"  class="rm-imputs-2" readonly>
                                                         </div>
                                                         <div class="text-end ms-auto mt-3">
                                                             <input type="submit" value="Hantar">
@@ -451,8 +494,12 @@
             $(".step2-fields").on('input', function () {
                 calculateSum2();
             });
+            $(".step3-fields").on('input', function () {
+                calculateSum3();
+            });
             calculateSum1()
             calculateSum2()
+            calculateSum3()
         });
 
         function calculateSum1() {
@@ -466,7 +513,6 @@
             $("#final_result").val(calculated_total_sum);
         }
 
-
         function calculateSum2() {
             var calculated_total_sum = 0;
             $(".step2-fields").each(function () {
@@ -478,6 +524,17 @@
             $("#final_result_2").val(calculated_total_sum);
         }
 
+        function calculateSum3() {
+            var calculated_total_sum = 0;
+            $(".step3-fields").each(function () {
+                var get_textbox_value = $(this).val();
+                if (get_textbox_value != "") {
+                    calculated_total_sum += parseFloat(get_textbox_value);
+                }
+            });
+            $("#final_result_3").val(calculated_total_sum);
+        }
+
     </script>
     <script>
         @if(session()->has('from_section'))
@@ -486,6 +543,15 @@
                 $("#nav-profile").addClass("active")
                 $("#nav-home").removeClass("show")
                 $("#nav-profile").addClass("show")
+            @endif
+        @endif
+
+        @if(session()->has('from_section'))
+            @if(session()->get('from_section') == 3)
+                $("#nav-home").removeClass("active")
+                $("#nav-contact").addClass("active")
+                $("#nav-home").removeClass("show")
+                $("#nav-contact").addClass("show")
             @endif
         @endif
     </script>

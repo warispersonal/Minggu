@@ -43,6 +43,7 @@ Auth::routes();
 Route::middleware('auth:user')->namespace('User')->group(function () {
     Route::post('step-1-from',[UserController::class, 'step1'])->name('step1.form');
     Route::post('step-2-from',[UserController::class, 'step2'])->name('step2.form');
+    Route::post('step-3-from',[UserController::class, 'step3'])->name('step3.form');
 
 });
 

@@ -9,4 +9,5 @@ use Illuminate\Support\Facades\Validator;
 
 class FAQ extends Model
 {
+
 }
