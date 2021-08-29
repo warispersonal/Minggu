@@ -34,7 +34,7 @@
                         <div id="program_content">
                             @foreach($programs as $program)
                                 <img onclick="openModal({{$program}})"
-                                     src="{{asset('thumbnail_image/'.$program->thumbnail_image)}}"
+                                     src="{{$program->program_image}}"
                                      alt="">
                             @endforeach
                         </div>

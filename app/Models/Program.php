@@ -13,4 +13,9 @@ class Program extends Model
     {
         return asset(FileConstant::PROGRAM_THUMBNAIL . '/' . $this->thumbnail_image);
     }
+
+    public function getRelatedDatesAttribute(){
+        $programs = Program::where("main_program_id", $this->main_program_id)->get();
+        return $programs;
+    }
 }
