@@ -38,115 +38,252 @@
                                      alt="">
                             @endforeach
                         </div>
-                        <div id="jadual_content">
+
+
+                        <div id="jadual_content" style="display: none;">
                             <div class="d-lg-flex d-none align-items-start  jadual-desktop">
                                 <div class="nav flex-column nav-pills me-5" id="v-pills-tab" role="tablist"
                                      aria-orientation="vertical">
-                                    @foreach($jaduals as $jadual)
-                                        <button class="nav-link {{$loop->index == 0 ? "active" : ""}}"
-                                                id="v-pills-rabu-tab-{{$jadual->id}}" data-bs-toggle="pill"
-                                                data-bs-target="#v-pills-rabu{{$jadual->id}}" type="button" role="tab"
-                                                aria-controls="v-pills-rabu{{$jadual->id}}" aria-selected="true">Rabu, 1
-                                            Sep 2021
-                                        </button>
-                                    @endforeach
+                                    <button class="nav-link active" id="v-pills-rabu-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-rabu" type="button" role="tab"
+                                            aria-controls="v-pills-rabu" aria-selected="true">Rabu, 1 Sep 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-khamis" type="button" role="tab"
+                                            aria-controls="v-pills-khamis" aria-selected="false">Khamis, 2 Sep 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-jumaat" type="button" role="tab"
+                                            aria-controls="v-pills-jumaat" aria-selected="false">Jumaat, 3 Sep 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-sabtu" type="button" role="tab"
+                                            aria-controls="v-pills-sabtu" aria-selected="false">Sabtu, 4 Sep 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-ahad" type="button" role="tab"
+                                            aria-controls="v-pills-ahad" aria-selected="false">Ahad, 5 Sep 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-isinin" type="button" role="tab"
+                                            aria-controls="v-pills-isinin" aria-selected="false">Isinin, 6 Sep 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-selasa" type="button" role="tab"
+                                            aria-controls="v-pills-selasa" aria-selected="false">Selasa, 4 Sep 2021
+                                    </button>
                                 </div>
                                 <div class="tab-content" id="jadual_tabs_content">
-                                    <?php $count = 0; ?>
-                                    @foreach($jaduals as $jadual)
-                                        <div class="tab-pane fade show {{$count ==0 ? "active" : ""}}"
-                                             id="v-pills-rabu{{$jadual->id}}" role="tabpanel"
-                                             aria-labelledby="v-pills-rabu-tab-{{$jadual->id}}">
-                                            @foreach($jadual->jadual_info as $info)
-                                                <div class="row">
-                                                    <div class="col-3">
-                                                        <span class="time">{{$info->time}}</span>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p>
-                                                            {{$info->name}}<small> {{$info->description}}</small>
-                                                        </p>
-                                                    </div>
+                                    <div class="tab-pane fade show active" id="v-pills-rabu" role="tabpanel"
+                                         aria-labelledby="v-pills-rabu-tab">
+                                        <div class="row">
+                                            @foreach($first_september as $item)
+                                                <div class="col-3">
+                                                    <span class="time">{{$item->time}}</span>
+                                                </div>
+                                                <div class="col-9">
+                                                    <p>
+                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                    </p>
                                                 </div>
                                             @endforeach
-
                                         </div>
-                                        <?php $count++; ?>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-khamis" role="tabpanel"
+                                         aria-labelledby="v-pills-khamis-tab">
+                                        <div class="row">
+                                            @foreach($second_september as $item)
+                                                <div class="col-3">
+                                                    <span class="time">{{$item->time}}</span>
+                                                </div>
+                                                <div class="col-9">
+                                                    <p>
+                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                    </p>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-jumaat" role="tabpanel"
+                                         aria-labelledby="v-pills-jumaat-tab">
 
-                                    @endforeach
+                                        <div class="row">
+                                            @foreach($third_september as $item)
+                                                <div class="col-3">
+                                                    <span class="time">{{$item->time}}</span>
+                                                </div>
+                                                <div class="col-9">
+                                                    <p>
+                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                    </p>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-sabtu" role="tabpanel"
+                                         aria-labelledby="v-pills-sabtu-tab">
+
+                                        <div class="row">
+                                            @foreach($fourth_september as $item)
+                                                <div class="col-3">
+                                                    <span class="time">{{$item->time}}</span>
+                                                </div>
+                                                <div class="col-9">
+                                                    <p>
+                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                    </p>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-ahad" role="tabpanel"
+                                         aria-labelledby="v-pills-ahad-tab">
+
+                                        <div class="row">
+                                            @foreach($five_september as $item)
+                                                <div class="col-3">
+                                                    <span class="time">{{$item->time}}</span>
+                                                </div>
+                                                <div class="col-9">
+                                                    <p>
+                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                    </p>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-isinin" role="tabpanel"
+                                         aria-labelledby="v-pills-isinin-tab">
+                                        <div class="row">
+                                            @foreach($six_september as $item)
+                                                <div class="col-3">
+                                                    <span class="time">{{$item->time}}</span>
+                                                </div>
+                                                <div class="col-9">
+                                                    <p>
+                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                    </p>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-selasa" role="tabpanel"
+                                         aria-labelledby="v-pills-selasa-tab">
+                                        <div class="row">
+                                            @foreach($seven_september as $item)
+                                                <div class="col-3">
+                                                    <span class="time">{{$item->time}}</span>
+                                                </div>
+                                                <div class="col-9">
+                                                    <p>
+                                                        {{$item->name}} <small>{{$item->partner->name ?? ""}}</small>
+                                                    </p>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <ul class="owl-carousel d-lg-none nav nav-pills mb-3 jadual-mobile" id="pills-tab"
-                                role="tablist">
-                                <div>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-home" type="button" role="tab"
-                                                aria-controls="pills-home" aria-selected="true">Rabu, 1 Sep 2021
-                                        </button>
-                                    </li>
-                                </div>
+                            <ul class="owl-carousel d-lg-none nav nav-pills mb-3 jadual-mobile owl-loaded owl-drag"
+                                id="pills-tab" role="tablist" style="">
 
-                                <div>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile" type="button" role="tab"
-                                                aria-controls="pills-profile" aria-selected="false">Khamis, 2 Sep
-                                            2021
-                                        </button>
-                                    </li>
-                                </div>
 
-                                <div>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-contact" type="button" role="tab"
-                                                aria-controls="pills-contact" aria-selected="false">Jumaat, 3 Sep
-                                            2021
-                                        </button>
-                                    </li>
+                                <div class="owl-stage-outer">
+                                    <div class="owl-stage"
+                                         style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;">
+                                        <div class="owl-item">
+                                            <div>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="pills-home-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#pills-home"
+                                                            type="button" role="tab" aria-controls="pills-home"
+                                                            aria-selected="true">Rabu, 1 Sep 2021
+                                                    </button>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item">
+                                            <div>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-profile-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#pills-profile"
+                                                            type="button" role="tab" aria-controls="pills-profile"
+                                                            aria-selected="false">Khamis, 2 Sep
+                                                        2021
+                                                    </button>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item">
+                                            <div>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-contact-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#pills-contact"
+                                                            type="button" role="tab" aria-controls="pills-contact"
+                                                            aria-selected="false">Jumaat, 3 Sep
+                                                        2021
+                                                    </button>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item">
+                                            <div>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-contact2-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#pills-contact2"
+                                                            type="button" role="tab" aria-controls="pills-contact2"
+                                                            aria-selected="false">Sabtu, 4 Sep
+                                                        2021
+                                                    </button>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item">
+                                            <div>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-contact3-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#pills-contact3"
+                                                            type="button" role="tab" aria-controls="pills-contact3"
+                                                            aria-selected="false">Ahad, 5 Sep
+                                                        2021
+                                                    </button>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item">
+                                            <div>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-contact4-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#pills-contact4"
+                                                            type="button" role="tab" aria-controls="pills-contact4"
+                                                            aria-selected="false">Isinin, 6 Sep
+                                                        2021
+                                                    </button>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item">
+                                            <div>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-contact5-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#pills-contact5"
+                                                            type="button" role="tab" aria-controls="pills-contact5"
+                                                            aria-selected="false">Selasa, 7 Sep
+                                                        2021
+                                                    </button>
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-contact2-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-contact2" type="button" role="tab"
-                                                aria-controls="pills-contact2" aria-selected="false">Sabtu, 4 Sep
-                                            2021
-                                        </button>
-                                    </li>
+                                <div class="owl-nav">
+                                    <button type="button" role="presentation" class="owl-prev"><span
+                                            aria-label="Previous">‹</span></button>
+                                    <button type="button" role="presentation" class="owl-next"><span
+                                            aria-label="Next">›</span></button>
                                 </div>
-
-                                <div>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-contact3-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-contact3" type="button" role="tab"
-                                                aria-controls="pills-contact3" aria-selected="false">Ahad, 5 Sep
-                                            2021
-                                        </button>
-                                    </li>
-                                </div>
-
-                                <div>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-contact4-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-contact4" type="button" role="tab"
-                                                aria-controls="pills-contact4" aria-selected="false">Isinin, 6 Sep
-                                            2021
-                                        </button>
-                                    </li>
-                                </div>
-                                <div>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-contact5-tab" data-bs-toggle="pill"
-                                                data-bs-target="#pills-contact5" type="button" role="tab"
-                                                aria-controls="pills-contact5" aria-selected="false">Selasa, 7 Sep
-                                            2021
-                                        </button>
-                                    </li>
-                                </div>
-
+                                <div class="owl-dots disabled"></div>
                             </ul>
                             <div class="tab-content d-lg-none" id="pills-tabContent">
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
@@ -928,7 +1065,8 @@
             </div>
             <h2 class="my-3" id="program_title"></h2>
             @foreach($programs as $program)
-                <ul id="date-owl-program-{{$program->id}}"  class="owl-carousel nav nav-pills mb-3 hidden-div date-owl-program" id="pills-tab-2" role="tablist">
+                <ul id="date-owl-program-{{$program->id}}"
+                    class="owl-carousel nav nav-pills mb-3 hidden-div date-owl-program" id="pills-tab-2" role="tablist">
                     @foreach($program->related_dates as $date)
                         <div id="program-data-dates-{{$date->id}}">
                             <li class="nav-item" role="presentation">
@@ -1016,7 +1154,7 @@
         function openModal(program) {
             changeModalView(program)
             $(".date-owl-program").addClass("hidden-div")
-            $("#date-owl-program-"+program.id).removeClass("hidden-div")
+            $("#date-owl-program-" + program.id).removeClass("hidden-div")
             programModal.style.top = "45%"
             overlay.style.display = "block"
             setTimeout(() => {

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Constant\FileConstant;
+use App\Partner;
 use Illuminate\Database\Eloquent\Model;
 
 class Program extends Model
@@ -17,5 +18,9 @@ class Program extends Model
     public function getRelatedDatesAttribute(){
         $programs = Program::where("partner_id", $this->partner_id)->get();
         return $programs;
+    }
+
+    public function partner(){
+        return $this->belongsTo(Partner::class);
     }
 }

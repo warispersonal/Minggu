@@ -45,15 +45,20 @@ class HomeController extends Controller
     }
 
     public function program(){
-        $jaduals = Jadual::all();
         $programs = Program::all();
-        return view("program",compact('programs','jaduals'));
+        $first_september = Program::where('date','2021-09-01')->get();
+        $second_september = Program::where('date','2021-09-02')->get();
+        $third_september = Program::where('date','2021-09-03')->get();
+        $fourth_september = Program::where('date','2021-09-04')->get();
+        $five_september = Program::where('date','2021-09-05')->get();
+        $six_september = Program::where('date','2021-09-06')->get();
+        $seven_september = Program::where('date','2021-09-07')->get();
+        return view("program",compact('programs','first_september','second_september','third_september','fourth_september','five_september','six_september','seven_september'));
     }
 
     public function pertandingan(){
         return view("pertandingan");
     }
-
     public function khidmat(){
         return view("khidmat");
     }
