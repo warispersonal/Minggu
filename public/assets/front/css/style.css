@@ -627,7 +627,7 @@
     font-weight: bold;
     margin-right: 10px;
 }
-#program-modal{
+.program-modal{
     position: fixed;
     bottom: -1000px;
     left: 0px;
@@ -637,7 +637,7 @@
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.2);
 }
-#program-modal .program-modal-content{
+.program-modal .program-modal-content{
     position: fixed;
     bottom: -150%;
     left: 50%;
@@ -651,28 +651,28 @@
     z-index: 55555;
 
 }
-#program-modal .owl-carousel{
+.program-modal .owl-carousel{
     background-color: #F26353;
     padding: 10px 0px;
     border-radius: 10px;
 }
-#program-modal .owl-carousel .owl-next{
+.program-modal .owl-carousel .owl-next{
     position: absolute;
     top: 50%;
     right: 5px;
     transform: translateY(-55%);
 }
-#program-modal .owl-carousel span{
+.program-modal .owl-carousel span{
     font-size: 25px;
     color: white;
 }
-#program-modal .owl-carousel .owl-prev{
+.program-modal .owl-carousel .owl-prev{
     position: absolute;
     top: 50%;
     left: 5px;
     transform: translateY(-55%);
 }
-#program-modal .owl-carousel .nav-link{
+.program-modal .owl-carousel .nav-link{
     margin: 0px;
     padding: 0px;
     text-align: center;
@@ -682,12 +682,12 @@
     width: max-content;
     margin: auto;
 }
-#program-modal .owl-carousel .nav-link.active{
+.program-modal .owl-carousel .nav-link.active{
     background: transparent;
     transform: scale(1.2);
     border: none;
 }
-#program-modal .tab-content p{
+.program-modal .tab-content p{
     color: #0057B7;
 }
 #close-btn{
@@ -879,7 +879,7 @@
         width: 45%;
         padding: 8px;
     }
-    #program-modal .program-modal-content{
+    .program-modal .program-modal-content{
         width: 75%;
     }
 }
@@ -927,7 +927,7 @@
     #tetapkan_section input{
         font-size: 16px;
     }
-    #program-modal .owl-carousel .nav-link{
+    .program-modal .owl-carousel .nav-link{
         font-size: 14px;
     }
 }
@@ -1041,10 +1041,10 @@
     .custom-links a{
         font-size: 14px;
     }
-    #program-modal .program-modal-content{
+    .program-modal .program-modal-content{
         width: 95%;
     }
-    #program-modal .owl-carousel .nav-link{
+    .program-modal .owl-carousel .nav-link{
         font-size: 10px;
     }
     #close-btn{

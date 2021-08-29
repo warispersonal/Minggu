@@ -919,30 +919,30 @@
             </div>
         </div>
     </main>
-
     <span id="close-btn" class="bi bi-x"></span>
     <div id="program-modal">
         <div class="program-modal-content">
-
             <div class="ratio ratio-16x9">
                 <iframe id="program_frame" frameborder="0"
                         allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
             <h2 class="my-3" id="program_title"></h2>
-            <ul class="owl-carousel  nav nav-pills mb-3" id="pills-tab-2" role="tablist">
-                @foreach($programs as $program)
-                    <div>
-                        <li class="nav-item" role="presentation">
-                            <button onclick="onDateChange({{$program}})" class="nav-link date-button"
-                                    id="date-{{$program->id}}-tab" data-bs-toggle="pill"
-                                    data-bs-target="#date-{{$program->id}}"
-                                    type="button" role="tab" aria-controls="date-{{$program->id}}"
-                                    aria-selected="true">{{$program->date}}
-                            </button>
-                        </li>
-                    </div>
-                @endforeach
-            </ul>
+            @foreach($programs as $program)
+                <ul id="date-owl-program-{{$program->id}}"  class="owl-carousel nav nav-pills mb-3 hidden-div date-owl-program" id="pills-tab-2" role="tablist">
+                    @foreach($program->related_dates as $date)
+                        <div id="program-data-dates-{{$date->id}}">
+                            <li class="nav-item" role="presentation">
+                                <button onclick="onDateChange({{$date}})" class="nav-link date-button"
+                                        id="date-{{$date->id}}-tab" data-bs-toggle="pill"
+                                        data-bs-target="#date-{{$date->id}}"
+                                        type="button" role="tab" aria-controls="date-{{$date->id}}"
+                                        aria-selected="true">{{$date->date}}
+                                </button>
+                            </li>
+                        </div>
+                    @endforeach
+                </ul>
+            @endforeach
             <div class="tab-content" id="pills-tabContent-2">
                 @foreach($programs as $program)
                     <div class="tab-pane fade show description-field" id="date-{{$program->id}}" role="tabpanel"
@@ -1015,6 +1015,8 @@
 
         function openModal(program) {
             changeModalView(program)
+            $(".date-owl-program").addClass("hidden-div")
+            $("#date-owl-program-"+program.id).removeClass("hidden-div")
             programModal.style.top = "45%"
             overlay.style.display = "block"
             setTimeout(() => {
@@ -1034,7 +1036,6 @@
             $(".date-button").removeClass("active")
             $("#date-" + program.id).addClass('active')
             $("#date-" + program.id + "-tab").addClass('active')
-
         }
     </script>
 @endpush

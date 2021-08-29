@@ -1414,3 +1414,6 @@
     height: 81px !important;
 }
 
+.hidden-div{
+    display: none !important;
+}
