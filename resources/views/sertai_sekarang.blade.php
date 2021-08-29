@@ -69,12 +69,15 @@
                                                     <div class="mb-3 d-flex align-items-center">
                                                         <span>{{$item->title}}</span>
                                                         <label for="">RM</label>
-                                                        <input {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs only-decimal-integer-number" type="text" value="{{$item->status == 1 ? $item->correct_value : old('step_1_'.$item->id)}}" name="step_1_{{$item->id}}">
-
+                                                        <input
+                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step1-fields only-decimal-integer-number"
+                                                            type="text"
+                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_1_'.$item->id)}}"
+                                                            name="step_1_{{$item->id}}">
                                                     </div>
                                                     @if ($errors->has('step_1_'.$item->id))
                                                         <p class="invalid-feedback-option text-danger">
-                                                          {{ $errors->first('step_1_'.$item->id)}}
+                                                            {{ $errors->first('step_1_'.$item->id)}}
                                                         </p>
                                                     @endif
                                                 </div>
@@ -88,7 +91,8 @@
                                             <div class="col-6">
                                                 <div class="d-flex justify-content-end flex-md-nowrap flex-wrap">
                                                     <h2 class="text-white mb-0">RM</h2>
-                                                    <input type="text" name="" class="rm-imputs-2" id="">
+                                                    <input type="text" name="final_result" id="final_result"
+                                                           class="rm-imputs-2" readonly>
                                                 </div>
                                                 <div class="text-end mt-3 ms-auto ">
                                                     <input type="submit" value="Hantar">
@@ -131,7 +135,7 @@
                                                         <div class="mb-3 d-flex">
                                                             <label for="">RM</label>
                                                             <input class="rm-imputs only-decimal-integer-number"
-                                                                   type="text" name="" id="">
+                                                                   type="text" name="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -144,7 +148,7 @@
                                             <div class="col-6">
                                                 <div class="d-flex justify-content-end flex-md-nowrap flex-wrap">
                                                     <h2 class="text-white mb-0">RM</h2>
-                                                    <input type="text" name="" class="rm-imputs-2" id="">
+                                                    <input type="text" name="" class="rm-imputs-2">
                                                     <div class="text-end mt-3 mt-md-0">
                                                         <input type="submit" value="Hantar">
                                                     </div>
@@ -234,7 +238,7 @@
                                                                         <input
                                                                             class="rm-imputs only-decimal-integer-number"
                                                                             type="text" name=""
-                                                                            id="">
+                                                                        >
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -257,7 +261,7 @@
                                                                         <input
                                                                             class="rm-imputs only-decimal-integer-number"
                                                                             type="text" name=""
-                                                                            id="">
+                                                                        >
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -280,7 +284,7 @@
                                                                         <input
                                                                             class="rm-imputs only-decimal-integer-number"
                                                                             type="text" name=""
-                                                                            id="">
+                                                                        >
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -303,7 +307,7 @@
                                                                         <input
                                                                             class="rm-imputs only-decimal-integer-number"
                                                                             type="text" name=""
-                                                                            id="">
+                                                                        >
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -326,7 +330,7 @@
                                                                         <input
                                                                             class="rm-imputs only-decimal-integer-number"
                                                                             type="text" name=""
-                                                                            id="">
+                                                                        >
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -349,7 +353,7 @@
                                                                         <input
                                                                             class="rm-imputs only-decimal-integer-number"
                                                                             type="text" name=""
-                                                                            id="">
+                                                                        >
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -372,7 +376,7 @@
                                                                         <input
                                                                             class="rm-imputs only-decimal-integer-number"
                                                                             type="text" name=""
-                                                                            id="">
+                                                                        >
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -388,7 +392,7 @@
                                                         <div
                                                             class="d-flex justify-content-end flex-md-nowrap flex-wrap">
                                                             <h4 class="text-white mb-0">RM</h4>
-                                                            <input type="text" name="" class="rm-imputs-2" id="">
+                                                            <input type="text" name="" class="rm-imputs-2">
                                                         </div>
                                                         <div class="text-end ms-auto mt-3">
                                                             <input type="submit" value="Hantar">
@@ -410,7 +414,6 @@
 
 @push('js')
     <script>
-
         $(function () {
             $('.only-decimal-integer-number').on('input', function (e) {
                 if (/^(\d+(\.\d{0,2})?)?$/.test($(this).val())) {
@@ -422,5 +425,26 @@
                 }
             }).trigger('input'); // Initialise the `prevValue` data properties
         });
+
     </script>
+    <script>
+        $(document).ready(function () {
+            $(".step1-fields").on('input', function () {
+                calculateSum();
+            });
+            calculateSum()
+        });
+
+        function calculateSum() {
+            var calculated_total_sum = 0;
+            $(".step1-fields").each(function () {
+                var get_textbox_value = $(this).val();
+                if (get_textbox_value != "") {
+                    calculated_total_sum += parseFloat(get_textbox_value);
+                }
+            });
+            $("#final_result").val(calculated_total_sum);
+        }
+    </script>
+
 @endpush
