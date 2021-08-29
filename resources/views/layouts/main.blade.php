@@ -23,22 +23,21 @@
         <ul>
             @foreach($headerMenu as $menu)
                 @if( $menu['child'] )
-                    <li class="drop_down">
-                        {{ $menu['label_en'] }}
-                        <i class="bi bi-chevron-down"></i>
-                        <div class="dropdown_content">
-                            <ul>
-                                @foreach( $menu['child'] as $child )
-                                    <li class="">
-                                        @if(Config::get('app.locale') == 'en')
-                                            <a href="{{ $child['link'] }}" title="">{{ $child['label_en'] }}</a>
-                                        @elseif (Config::get('app.locale') == 'bm')
-                                            <a href="{{ $child['link'] }}" title="">{{ $child['label_bm'] }}</a>
-                                        @endif
-                                    </li>
-                                @endforeach
-                            </ul><!-- /.sub-menu -->
-                        </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink{{$loop->index}}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ $menu['label_en'] }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink{{$loop->index}}">
+                            @foreach( $menu['child'] as $child )
+                                <li>
+                                    @if(Config::get('app.locale') == 'en')
+                                        <a  class="dropdown-item"href="{{ $child['link'] }}"  style="color: blue !important;" title="">{{ $child['label_en'] }}</a>
+                                    @elseif (Config::get('app.locale') == 'bm')
+                                        <a class="dropdown-item" href="{{ $child['link'] }}"  style="color: blue !important;" title="">{{ $child['label_bm'] }}</a>
+                                    @endif
+                                </li>
+                            @endforeach
+                        </ul>
                     </li>
                 @else
                     <li>
@@ -57,17 +56,14 @@
                 <li><a id="login" class="pop-btns">{{ __('auth.login') }}</a></li>
             @endguest
             @auth('user')
-                <li class="drop_down">
-                    User
-                    <i class="bi bi-chevron-down"></i>
-                    <div class="dropdown_content">
-                        <ul>
-                            <li><a id="logoutUser">{{ __('auth.logout') }}</a></li>
-                            <form id="logoutForm" action="{{ route('logout') }}" method="POST">
-                                @csrf
-                            </form>
-                        </ul><!-- /.sub-menu -->
-                    </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        {{Auth::guard('user')->user()->name}}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a href="{{route('user.logout')}}" style="color: blue !important;" class="dropdown-item" >{{ __('auth.logout') }}</a></li>
+                    </ul>
                 </li>
             @endauth
             <li><a href="{{ route('localization' , 'bm') }}"><small>BM</small></a> | <a
@@ -76,17 +72,17 @@
     </nav><!-- /. Desktop Navbar -->
 
     <div class="mobile-header d-lg-none px-3 py-2">
-            <div>
-                <h3 class="m-0">PNB ASNB</h3>
-                <small>BM | EN</small>
-            </div>
-            
-            
-            <?php if($_SERVER['REQUEST_URI'] == "/" || $_SERVER['REQUEST_URI'] == "/index.php"){ ?>
-                <img id="hamburger_btn" src="{{asset('assets/img/menu.svg')}}" alt="">
-            <?php } else{ ?>
-                <img id="hamburger_btn" src="{{asset('assets/img/menu-white.svg')}}" alt="">
-            <?php } ?>
+        <div>
+            <h3 class="m-0">PNB ASNB</h3>
+            <small>BM | EN</small>
+        </div>
+
+
+        <?php if($_SERVER['REQUEST_URI'] == "/" || $_SERVER['REQUEST_URI'] == "/index.php"){ ?>
+        <img id="hamburger_btn" src="{{asset('assets/img/menu.svg')}}" alt="">
+        <?php } else{ ?>
+        <img id="hamburger_btn" src="{{asset('assets/img/menu-white.svg')}}" alt="">
+        <?php } ?>
     </div>
 
     <nav class="mobile_nav">

@@ -14,7 +14,7 @@ class AddDateToPrograms extends Migration
     public function up()
     {
         Schema::table('programs', function (Blueprint $table) {
-            $table->date('date')->default(now());
+//            $table->date('date')->default(now());
         });
     }
 

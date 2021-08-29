@@ -22,6 +22,7 @@ use App\Http\Controllers\SuperAdmin\MainProgramController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/logout', [HomeController::class, 'logout'])->name('user.logout');
 
 Route::prefix('/')->group(function () {
     Route::get('/info/{id}', [HomeController::class, 'may_bank'])->name('may.bank');
