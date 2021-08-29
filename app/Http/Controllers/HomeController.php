@@ -103,6 +103,28 @@ class HomeController extends Controller
                 $section['correct_value'] = $section['correct_value'];
             }
         }
+        foreach ($seciton2 as $section) {
+            $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
+            if(count($user_lottery) == 0){
+                $section['status'] = 0;
+                $section['correct_value'] = '';
+            }
+            else{
+                $section['status'] = 1;
+                $section['correct_value'] = $section['correct_value'];
+            }
+        }
+        foreach ($seciton3 as $section) {
+            $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
+            if(count($user_lottery) == 0){
+                $section['status'] = 0;
+                $section['correct_value'] = '';
+            }
+            else{
+                $section['status'] = 1;
+                $section['correct_value'] = $section['correct_value'];
+            }
+        }
         return view('sertai_sekarang', compact('seciton1', 'seciton2', 'seciton3'));
     }
 

@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @push('style')
+
     <style>
         .main-bg {
             background-color: #0057B7 !important;
@@ -9,6 +10,7 @@
 @endpush
 
 @section('content')
+
     <main>
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
@@ -122,7 +124,8 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-7 ">
-                                    <form action="" class="rm-form">
+                                    <form method="post" action="{{route('step2.form')}}" class="rm-form">
+                                        @csrf
                                         <div class="row ps-lg-5">
                                             @foreach($seciton2 as $item)
                                                 <div class="row ps-lg-5">
@@ -134,10 +137,19 @@
                                                     <div class="col-6">
                                                         <div class="mb-3 d-flex">
                                                             <label for="">RM</label>
-                                                            <input class="rm-imputs only-decimal-integer-number"
-                                                                   type="text" name="">
+                                                            <input
+                                                                {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step2-fields only-decimal-integer-number"
+                                                                type="text"
+                                                                value="{{$item->status == 1 ? $item->correct_value : old('step_2_'.$item->id)}}"
+                                                                name="step_2_{{$item->id}}">
                                                         </div>
+
                                                     </div>
+                                                    @if ($errors->has('step_2_'.$item->id))
+                                                        <p class="invalid-feedback-option text-danger">
+                                                            {{ $errors->first('step_2_'.$item->id)}}
+                                                        </p>
+                                                    @endif
                                                 </div>
                                             @endforeach
                                         </div>
@@ -148,7 +160,7 @@
                                             <div class="col-6">
                                                 <div class="d-flex justify-content-end flex-md-nowrap flex-wrap">
                                                     <h2 class="text-white mb-0">RM</h2>
-                                                    <input type="text" name="" class="rm-imputs-2">
+                                                    <input type="text" name="" id="final_result_2" class="rm-imputs-2">
                                                     <div class="text-end mt-3 mt-md-0">
                                                         <input type="submit" value="Hantar">
                                                     </div>
@@ -414,6 +426,8 @@
 
 @push('js')
     <script>
+        import Scripts from "../../public/vendor/harimayco-menu/scripts";
+
         $(function () {
             $('.only-decimal-integer-number').on('input', function (e) {
                 if (/^(\d+(\.\d{0,2})?)?$/.test($(this).val())) {
@@ -425,17 +439,23 @@
                 }
             }).trigger('input'); // Initialise the `prevValue` data properties
         });
-
+        export default {
+            components: {Scripts}
+        }
     </script>
     <script>
         $(document).ready(function () {
             $(".step1-fields").on('input', function () {
-                calculateSum();
+                calculateSum1();
             });
-            calculateSum()
+            $(".step2-fields").on('input', function () {
+                calculateSum2();
+            });
+            calculateSum1()
+            calculateSum2()
         });
 
-        function calculateSum() {
+        function calculateSum1() {
             var calculated_total_sum = 0;
             $(".step1-fields").each(function () {
                 var get_textbox_value = $(this).val();
@@ -445,6 +465,28 @@
             });
             $("#final_result").val(calculated_total_sum);
         }
-    </script>
 
+
+        function calculateSum2() {
+            var calculated_total_sum = 0;
+            $(".step2-fields").each(function () {
+                var get_textbox_value = $(this).val();
+                if (get_textbox_value != "") {
+                    calculated_total_sum += parseFloat(get_textbox_value);
+                }
+            });
+            $("#final_result_2").val(calculated_total_sum);
+        }
+
+    </script>
+    <script>
+        @if(session()->has('from_section'))
+            @if(session()->get('from_section') == 2)
+                $("#nav-home").removeClass("active")
+                $("#nav-profile").addClass("active")
+                $("#nav-home").removeClass("show")
+                $("#nav-profile").addClass("show")
+            @endif
+        @endif
+    </script>
 @endpush

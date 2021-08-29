@@ -454,4 +454,252 @@ class UserController extends Controller
         }
 
     }
+    public function step2(Request $request)
+    {
+        if(!Auth::guard('user')){
+            return  redirect()->back();
+        }
+        $validator = Validator::make($request->all(), []);
+        $userLottery = [];
+        $id = Auth::guard('user')->id();
+        $input1 = $request->step_2_27;
+        $field1 = 'step_2_27';
+        $counter = 27;
+        if (!empty($input1)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input1)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field1, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input1];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input2 = $request->step_2_28;
+        $field2 = 'step_2_28';
+        $counter = 28;
+        if (!empty($input2)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input2)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field2, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input2];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input3 = $request->step_2_29;
+        $field3 = 'step_2_29';
+        $counter = 29;
+        if (!empty($input3)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input3)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field3, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input3];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input4 = $request->step_2_30;
+        $field4 = 'step_2_30';
+        $counter = 30;
+        if (!empty($input4)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input4)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field4, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input4];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input5 = $request->step_2_31;
+        $field5 = 'step_2_31';
+        $counter = 31;
+        if (!empty($input5)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input5)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field5, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input5];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input6 = $request->step_2_32;
+        $field6 = 'step_2_32';
+        $counter = 32;
+        if (!empty($input6)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input6)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field6, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input6];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input6 = $request->step_2_33;
+        $field6 = 'step_2_33';
+        $counter = 33;
+        if (!empty($input6)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input6)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field6, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input6];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input7 = $request->step_2_34;
+        $field7 = 'step_2_34';
+        $counter = 34;
+        if (!empty($input7)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input7)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field7, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input7];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input8 = $request->step_2_35;
+        $field8 = 'step_2_35';
+        $counter = 35;
+        if (!empty($input8)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input8)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field8, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input8];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input9 = $request->step_2_36;
+        $field9 = 'step_2_36';
+        $counter = 36;
+        if (!empty($input9)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input9)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field9, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input9];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input10 = $request->step_2_37;
+        $field10 = 'step_2_37';
+        $counter = 37;
+        if (!empty($input10)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input10)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field10, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input10];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input11 = $request->step_2_38;
+        $field11 = 'step_2_38';
+        $counter = 38;
+        if (!empty($input11)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input11)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field11, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input11];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input12 = $request->step_2_39;
+        $field12 = 'step_2_39';
+        $counter = 39;
+        if (!empty($input12)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input12)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field12, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input12];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input13 = $request->step_2_40;
+        $field13 = 'step_2_40';
+        $counter = 40;
+        if (!empty($input13)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input13)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field13, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input13];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+        $input14 = $request->step_2_41;
+        $field14 = 'step_2_41';
+        $counter = 41;
+        if (!empty($input14)) {
+            $count = Lottery::where('id', $id)->where('correct_value', $input14)->count();
+            if ($count == 0) {
+                $validator->getMessageBag()->add($field14, 'Invalid Code');
+            } else {
+                $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $counter)->count();
+                if ($user_lottery == 0) {
+                    $array = ['user_id' => $id, 'lottery_id' => $counter, 'code' => $input14];
+                    $userLottery[] = $array;
+                }
+            }
+        }
+
+        if (count($validator->errors()) > 0) {
+            return redirect()
+                ->back()
+                ->withErrors($validator)
+                ->with('from_section',2)
+                ->withInput();
+        } else {
+            UserLottery::insert($userLottery);
+            return redirect()->back();
+        }
+
+    }
+
+
 }
