@@ -24,9 +24,6 @@
                         <a class="btn btn-sm btn-neutral" href="{{route('programs.add')}}">
                             Add New Program
                         </a>
-                        <button class="btn btn-sm btn-neutral" data-toggle="modal" data-target="#modal-store-partner">
-                            Add New Jadual
-                        </button>
                     </div>
                 </div>
             </div>
@@ -49,9 +46,8 @@
                                 <th scope="col" class="sort" data-sort="name">ID</th>
                                 <th scope="col" class="sort" data-sort="budget">Program Name</th>
                                 <th scope="col" class="sort" data-sort="status">Thumbnail</th>
-                                <th scope="col">Date</th>
+                                <th scope="col">Date Time</th>
                                 <th scope="col">Description</th>
-                                <th scope="col">Sponsor Image</th>
                                 <th scope="col">Actions</th>
                             </tr>
                             </thead>
@@ -61,10 +57,9 @@
                                 <tr class="odd">
                                     <td class="sorting_1">{{$program->id}}</td>
                                     <td>{{$program->name}}</td>
-                                    <td><img style="width: 50px;height: 50px;" src="{{asset('thumbnail_image/'.$program->thumbnail_image)}}" /></td>
-                                    <td>{{$program->date}}</td>
+                                    <td><img style="width: 50px;height: 50px;" src="{{$program->program_image}}" /></td>
+                                    <td>{{$program->date . ' ' . $program->time }} </td>
                                     <td>{{ Str::limit($program->description, 30) }}</td>
-                                    <td><img style="width: 50px;height: 50px;" src="{{asset('sponser_image/'.$program->sponser_image)}}" /></td>
                                     <td>
                                         <div class="dropdown">
                                             <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
@@ -75,7 +70,7 @@
                                                 <a class="dropdown-item"
                                                    href="http://minguudeliver.test/star/partner/detail/3">Edit</a>
                                                 <a class="dropdown-item"
-                                                   href="http://minguudeliver.test/star/partner/delete/3">Delete</a>
+                                                   href="{{route('programs.add.delete', $program->id)}}">Delete</a>
                                             </div>
                                         </div>
                                     </td>

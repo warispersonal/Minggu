@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\SuperAdmin;
 
+use App\Constant\FileConstant;
 use App\Http\Controllers\Controller;
 use App\Jadual;
 use App\Models\Program;
 use App\Models\MainProgram;
+use App\Partner;
 use Illuminate\Http\Request;
 
 class ProgramController extends Controller
@@ -30,7 +32,8 @@ class ProgramController extends Controller
     public function create()
     {
         $main_programs = MainProgram::all();
-        return view('superadmin.program.create', compact("main_programs"));
+        $partners = Partner::all();
+        return view('superadmin.program.create', compact("main_programs",'partners'));
     }
 
     /**
@@ -41,22 +44,22 @@ class ProgramController extends Controller
      */
     public function store(Request $request)
     {
-        $thumbnail_image = $this->uploadMediaFile($request, 'thumbnail_image', 'thumbnail_image');
-        $sponser_image = $this->uploadMediaFile($request, 'sponser_image', 'sponser_image');
+        $thumbnail_image = $this->uploadMediaFile($request, 'thumbnail_image', FileConstant::PROGRAM_THUMBNAIL);
         $request->validate([
             'date' => 'required',
+            'time' => 'required',
             'description' => 'required',
             'main_program' => 'required',
         ]);
         $program = new Program();
         $program->name = $request->name;
-        $program->sponser_image = $sponser_image;
         $program->thumbnail_image = $thumbnail_image;
         $program->date = $request->date;
+        $program->time = $request->time;
         $program->description = $request->description;
         $program->video_link = $request->video_link;
-        $program->partner = 1;
         $program->main_program_id = $request->main_program;
+        $program->partner_id = $request->partner_id;
         $program->save();
         return redirect()->route('programs.index');
 
@@ -104,6 +107,8 @@ class ProgramController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $program = Program::find($id);
+        $program->delete();
+        return redirect()->back();
     }
 }

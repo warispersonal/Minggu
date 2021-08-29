@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SuperAdmin\FAQController;
 use App\Http\Controllers\SuperAdmin\HomePagePartnerController;
+use App\Http\Controllers\SuperAdmin\ProgramController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
@@ -113,9 +114,10 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
     Route::get('program', 'UsersController@index')->name('star.programs');
 
 
-    Route::get('programs', [\App\Http\Controllers\SuperAdmin\ProgramController::class, 'index'])->name('programs.index');
-    Route::get('program/add', [\App\Http\Controllers\SuperAdmin\ProgramController::class, 'create'])->name('programs.add');
-    Route::post('program/add', [\App\Http\Controllers\SuperAdmin\ProgramController::class, 'store'])->name('programs.add.post');
+    Route::get('programs', [ProgramController::class, 'index'])->name('programs.index');
+    Route::get('program/add', [ProgramController::class, 'create'])->name('programs.add');
+    Route::post('program/add', [ProgramController::class, 'store'])->name('programs.add.post');
+    Route::get('program/{id}/delete', [ProgramController::class, 'destroy'])->name('programs.add.delete');
 
     Route::prefix('content')->group(function () {
         Route::get('menu', 'ContentController@menu')->name('star.content.menu');

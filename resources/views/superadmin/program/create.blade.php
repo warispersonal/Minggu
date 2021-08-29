@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="form-group mb-3">
-                    <label>Main Program</label>
+                    <label>Select Main Program</label>
                     <div class="input-group input-group-alternative">
                         <select class="form-control" name="main_program">
                             @foreach($main_programs as $main_program)
@@ -41,23 +41,30 @@
                         <input class="form-control" name="date" placeholder="Program Date" type="date" required="">
                     </div>
                 </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                        <input class="form-control" name="time" placeholder="Program Date" type="time" required="">
+                    </div>
+                </div>
                 <div class="form-group mb-3">
                     <div class="input-group input-group-alternative">
                         <textarea class="form-control" name="description" required placeholder="Description"></textarea>
                     </div>
                 </div>
-
-                <div class="form-group mb-3">
-                    <label>Sponsor Image</label>
-                    <div class="input-group input-group-alternative">
-                        <input class="form-control" name="sponser_image" type="file">
-                    </div>
-                </div>
-
-
                 <div class="form-group mb-3">
                     <div class="input-group input-group-alternative">
                         <textarea class="form-control" name="video_link" required placeholder="Video Link"></textarea>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Select Partner</label>
+                    <div class="input-group input-group-alternative">
+                        <select class="form-control" name="partner_id">
+                            @foreach($partners as $partner)
+                                <option value="{{$partner->id}}">{{$partner->name}}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="text-right">
