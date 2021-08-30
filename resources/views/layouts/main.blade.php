@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap-icons.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-   
+
     <title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>
     @if (Session::has('showlogin'))
         <script>
@@ -25,16 +25,19 @@
             @foreach($headerMenu as $menu)
                 @if( $menu['child'] )
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink{{$loop->index}}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink{{$loop->index}}"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ $menu['label_en'] }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink{{$loop->index}}">
                             @foreach( $menu['child'] as $child )
                                 <li>
                                     @if(Config::get('app.locale') == 'en')
-                                        <a  class="dropdown-item"href="{{ $child['link'] }}"  style="color: blue !important;" title="">{{ $child['label_en'] }}</a>
+                                        <a class="dropdown-item" href="{{ $child['link'] }}"
+                                           style="color: blue !important;" title="">{{ $child['label_en'] }}</a>
                                     @elseif (Config::get('app.locale') == 'bm')
-                                        <a class="dropdown-item" href="{{ $child['link'] }}"  style="color: blue !important;" title="">{{ $child['label_bm'] }}</a>
+                                        <a class="dropdown-item" href="{{ $child['link'] }}"
+                                           style="color: blue !important;" title="">{{ $child['label_bm'] }}</a>
                                     @endif
                                 </li>
                             @endforeach
@@ -63,7 +66,8 @@
                         {{Auth::guard('user')->user()->name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a href="{{route('user.logout')}}" style="color: blue !important;" class="dropdown-item" >{{ __('auth.logout') }}</a></li>
+                        <li><a href="{{route('user.logout')}}" style="color: blue !important;"
+                               class="dropdown-item">{{ __('auth.logout') }}</a></li>
                     </ul>
                 </li>
             @endauth
@@ -113,7 +117,8 @@
                                         <li class=""><a href="{{ $child['link'] }}"
                                                         title="">{{ $child['label_en'] }}</a></li>
                                     @elseif (Config::get('app.locale') == 'bm')
-                                        <li class=""><a href="{{ $child['link'] }}" title="">{{ $child['label_bm'] }}</a></li>
+                                        <li class=""><a href="{{ $child['link'] }}"
+                                                        title="">{{ $child['label_bm'] }}</a></li>
                                     @endif
                                 @endforeach
                             </ul><!-- /.sub-menu -->

@@ -153,10 +153,21 @@ Route::prefix('admin')->namespace('Auth\Admin')->group(function () {
     Route::post('login', 'LoginController@login');
     Route::post('logout', 'LoginController@logout')->name('admin.logout');
 
+
+
 });
 
 Route::prefix('admin')->middleware('auth:admin')->namespace('Admin')->group(function () {
     Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
+    Route::get('programs', [ProgramController::class, 'adminIndex'])->name('admin.programs.index');
+    Route::get('edit/{id}/program', [ProgramController::class, 'adminEdit'])->name('admin.programs.edit');
+    Route::post('update/{id}/program', [ProgramController::class, 'adminUpdate'])->name('admin.programs.update');
+
+    Route::prefix('/faq/page')->group(function () {
+        Route::get('/', [FAQController::class,'adminIndex'])->name('admin.faq');
+        Route::post('/', [FAQController::class,'adminStore'])->name('admin.faq');
+    });
+
 });
 
 // Routes For Partners

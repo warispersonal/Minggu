@@ -22,4 +22,19 @@ class FAQController extends Controller
         $faq->save();
         return redirect()->back();
     }
+
+    public function adminIndex()
+    {
+        $faq = FAQ::all()->first();
+        return view('admin.faq.index', compact('faq'));
+    }
+
+    public function adminStore(Request $request)
+    {
+        $faq = FAQ::all()->first();
+        $faq['minggu_saham_digital'] = $request->minggu_saham_digital;
+        $faq['pertandingan'] = $request->pertandingan;
+        $faq->save();
+        return redirect()->back();
+    }
 }

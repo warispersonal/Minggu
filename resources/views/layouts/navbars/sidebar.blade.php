@@ -1,17 +1,32 @@
 <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
     <div class="container-fluid">
         <!-- Toggler -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main"
+                aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="#">
+        <?php
+        use Illuminate\Support\Facades\Auth;
+        $route = 'star.dashboard';
+        if(Auth::guard('admin')->check()){
+            $route = 'admin.dashboard';
+        }
+        if(Auth::guard('partner')->check()){
+            $route = 'partner.dashboard';
+        }
+        if(Auth::guard('superAdmin')->check()){
+            $route = 'star.dashboard';
+        }
+        ?>
+        <a class="navbar-brand pt-0" href="{{route($route)}}">
             <img src="{{ asset('argon') }}/img/brand/logo.png" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
             <li class="nav-item dropdown">
-                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
                     <div class="media align-items-center">
                         <span class="avatar avatar-sm rounded-circle">
                         <img alt="Image placeholder" src="{{ asset('argon') }}/img/theme/team-1-800x800.jpg">
@@ -58,7 +73,9 @@
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false"
+                                aria-label="Toggle sidenav">
                             <span></span>
                             <span></span>
                         </button>
@@ -68,7 +85,8 @@
             <!-- Form -->
             <form class="mt-4 mb-3 d-md-none">
                 <div class="input-group input-group-rounded input-group-merge">
-                    <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="{{ __('Search') }}" aria-label="Search">
+                    <input type="search" class="form-control form-control-rounded form-control-prepended"
+                           placeholder="{{ __('Search') }}" aria-label="Search">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
                             <span class="fa fa-search"></span>
@@ -83,28 +101,33 @@
                 <!-- Menu SideBar For Super Admin -->
                 @auth('superAdmin')
                     <li class="nav-item">
-                        <a class="nav-link {{ Route::is('star.dashboard') ? 'active' : '' }}" href="{{ route('star.dashboard') }}">
+                        <a class="nav-link {{ Route::is('star.dashboard') ? 'active' : '' }}"
+                           href="{{ route('star.dashboard') }}">
                             <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Route::is('star.admins') ? 'active' : '' }}" href="{{ route('star.admins') }}">
+                        <a class="nav-link {{ Route::is('star.admins') ? 'active' : '' }}"
+                           href="{{ route('star.admins') }}">
                             <i class="fa fa-users text-primary"></i> {{ __('Manage Admins') }}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Route::is('star.partners') ? 'active' : '' }}" href="{{ route('star.partners') }}">
+                        <a class="nav-link {{ Route::is('star.partners') ? 'active' : '' }}"
+                           href="{{ route('star.partners') }}">
                             <i class="fa fa-users text-primary"></i> {{ __('Manage Partners') }}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Route::is('star.users') ? 'active' : '' }}" href="{{ route('star.users') }}">
+                        <a class="nav-link {{ Route::is('star.users') ? 'active' : '' }}"
+                           href="{{ route('star.users') }}">
                             <i class="ni ni-spaceship text-primary"></i> {{ __('Registrations') }}
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#page-content" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
+                        <a class="nav-link" href="#page-content" data-toggle="collapse" role="button"
+                           aria-expanded="false" aria-controls="navbar-examples">
                             <i class="fab fa-laravel text-primary"></i>
                             <span class="nav-link-text">{{ __('Page Content') }}</span>
                         </a>
@@ -117,12 +140,12 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('star.content.theme') }}">
-                                        <i class="ni ni-palette text-primary"></i>  {{ __('Homepage & Theme Color') }}
+                                        <i class="ni ni-palette text-primary"></i> {{ __('Homepage & Theme Color') }}
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('stars.homepage.index') }}">
-                                        <i class="ni ni-palette text-primary"></i>  {{ __('Partners') }}
+                                        <i class="ni ni-palette text-primary"></i> {{ __('Partners') }}
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -135,21 +158,21 @@
                                         <i class="ni ni-ui-04 text-primary"></i> {{ __('Program & Jadual') }}
                                     </a>
                                 </li>
-{{--                                <li class="nav-item">--}}
-{{--                                    <a class="nav-link" href="#">--}}
-{{--                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('Pertandingan') }}--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
-{{--                                <li class="nav-item">--}}
-{{--                                    <a class="nav-link" href="#">--}}
-{{--                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('Khidmat Nasihat 1-1') }}--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
-{{--                                <li class="nav-item">--}}
-{{--                                    <a class="nav-link" href="#">--}}
-{{--                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('Promosi') }}--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
+                                {{--                                <li class="nav-item">--}}
+                                {{--                                    <a class="nav-link" href="#">--}}
+                                {{--                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('Pertandingan') }}--}}
+                                {{--                                    </a>--}}
+                                {{--                                </li>--}}
+                                {{--                                <li class="nav-item">--}}
+                                {{--                                    <a class="nav-link" href="#">--}}
+                                {{--                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('Khidmat Nasihat 1-1') }}--}}
+                                {{--                                    </a>--}}
+                                {{--                                </li>--}}
+                                {{--                                <li class="nav-item">--}}
+                                {{--                                    <a class="nav-link" href="#">--}}
+                                {{--                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('Promosi') }}--}}
+                                {{--                                    </a>--}}
+                                {{--                                </li>--}}
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('star.MainDetail')}}">
                                         <i class="ni ni-ui-04 text-primary"></i> {{ __('Main Program') }}
@@ -161,16 +184,17 @@
                                         <i class="ni ni-ui-04 text-primary"></i> {{ __('Soalan Lazim') }}
                                     </a>
                                 </li>
-{{--                                <li class="nav-item">--}}
-{{--                                    <a class="nav-link" href="#">--}}
-{{--                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('Terma & Syarat') }}--}}
-{{--                                    </a>--}}
-{{--                                </li>--}}
+                                {{--                                <li class="nav-item">--}}
+                                {{--                                    <a class="nav-link" href="#">--}}
+                                {{--                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('Terma & Syarat') }}--}}
+                                {{--                                    </a>--}}
+                                {{--                                </li>--}}
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#comp-system" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
+                        <a class="nav-link" href="#comp-system" data-toggle="collapse" role="button"
+                           aria-expanded="false" aria-controls="navbar-examples">
                             <i class="fab fa-laravel text-primary"></i>
                             <span class="nav-link-text">{{ __('Competition System') }}</span>
                         </a>
@@ -210,47 +234,47 @@
                     <h6 class="container navbar-heading text-muted">Page Content Settings</h6>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link active" href="{{route('admin.dashboard')}}">
                             <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('admin.programs.index')}}">
                             <i class="ni ni-spaceship text-primary"></i> {{ __('Program & Jadual') }}
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Pertandingan') }}
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Khidmat Nasihat 1-1') }}
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Promosi') }}
-                        </a>
-                    </li>
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link" href="#">--}}
+                    {{--                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Pertandingan') }}--}}
+                    {{--                        </a>--}}
+                    {{--                    </li>--}}
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link" href="#">--}}
+                    {{--                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Khidmat Nasihat 1-1') }}--}}
+                    {{--                        </a>--}}
+                    {{--                    </li>--}}
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link" href="#">--}}
+                    {{--                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Promosi') }}--}}
+                    {{--                        </a>--}}
+                    {{--                    </li>--}}
+
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link" href="#">--}}
+                    {{--                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Main Program') }}--}}
+                    {{--                        </a>--}}
+                    {{--                    </li>--}}
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Main Program') }}
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('admin.faq')}}">
                             <i class="ni ni-ui-04 text-primary"></i> {{ __('Soalan Lazim') }}
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Terma & Syarat') }}
-                        </a>
-                    </li>
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link" href="#">--}}
+                    {{--                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Terma & Syarat') }}--}}
+                    {{--                        </a>--}}
+                    {{--                    </li>--}}
                 @endauth
 
                 @auth('partner')

@@ -24,6 +24,13 @@ class ProgramController extends Controller
         return view('superadmin.program.index', compact('programs', 'jaduals'));
     }
 
+    public function adminIndex()
+    {
+        $programs = Program::all();
+        $jaduals = Jadual::all();
+        return view('admin.program.index', compact('programs', 'jaduals'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -89,6 +96,14 @@ class ProgramController extends Controller
         $partners = Partner::all();
         return view('superadmin.program.edit', compact("program", "main_programs", 'partners'));
     }
+    public function adminEdit($id)
+    {
+        $program = Program::find($id);
+        $main_programs = MainProgram::all();
+        $partners = Partner::all();
+        return view('admin.program.edit', compact("program", "main_programs", 'partners'));
+    }
+
 
     /**
      * Update the specified resource in storage.
@@ -119,6 +134,30 @@ class ProgramController extends Controller
         $program->partner_id = $request->partner_id;
         $program->save();
         return redirect()->route('programs.index');
+    }
+
+    public function adminUpdate(Request $request, $id)
+    {
+        $request->validate([
+            'date' => 'required',
+            'time' => 'required',
+            'description' => 'required',
+            'main_program' => 'required',
+        ]);
+        $program = Program::find($id);
+        if ($request->thumbnail_image) {
+            $thumbnail_image = $this->uploadMediaFile($request, 'thumbnail_image', FileConstant::PROGRAM_THUMBNAIL);
+            $program->thumbnail_image = $thumbnail_image;
+        }
+        $program->name = $request->name;
+        $program->date = $request->date;
+        $program->time = $request->time;
+        $program->description = $request->description;
+        $program->video_link = $request->video_link;
+        $program->main_program_id = $request->main_program;
+        $program->partner_id = $request->partner_id;
+        $program->save();
+        return redirect()->route('admin.programs.index');
     }
 
     /**
