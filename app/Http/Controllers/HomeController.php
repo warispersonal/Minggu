@@ -90,10 +90,10 @@ class HomeController extends Controller
     {
 
         $id = Auth::guard('user')->id() ?? 0;
-        $seciton1 = Lottery::where('section', 1)->get();
-        $seciton2 = Lottery::where('section', 2)->get();
-        $seciton3 = Lottery::where('section', 3)->get();
-        foreach ($seciton1 as $section) {
+        $section1 = Lottery::where('section', 1)->get();
+        $section2 = Lottery::where('section', 2)->get();
+        $section3 = Lottery::where('section', 3)->get();
+        foreach ($section1 as $section) {
            $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
             if(count($user_lottery) == 0){
                 $section['status'] = 0;
@@ -101,10 +101,10 @@ class HomeController extends Controller
             }
             else{
                 $section['status'] = 1;
-                $section['correct_value'] = $section['correct_value'];
+                $section['correct_value'] = $user_lottery[0]['code'];
             }
         }
-        foreach ($seciton2 as $section) {
+        foreach ($section2 as $section) {
             $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
             if(count($user_lottery) == 0){
                 $section['status'] = 0;
@@ -112,10 +112,10 @@ class HomeController extends Controller
             }
             else{
                 $section['status'] = 1;
-                $section['correct_value'] = $section['correct_value'];
+                $section['correct_value'] =$user_lottery[0]['code'];
             }
         }
-        foreach ($seciton3 as $section) {
+        foreach ($section3 as $section) {
             $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
             if(count($user_lottery) == 0){
                 $section['status'] = 0;
@@ -123,10 +123,10 @@ class HomeController extends Controller
             }
             else{
                 $section['status'] = 1;
-                $section['correct_value'] = $section['correct_value'];
+                $section['correct_value'] = $user_lottery[0]['code'];
             }
         }
-        return view('sertai_sekarang', compact('seciton1', 'seciton2', 'seciton3'));
+        return view('sertai_sekarang', compact('section1', 'section2', 'section3'));
     }
 
     public function logout()

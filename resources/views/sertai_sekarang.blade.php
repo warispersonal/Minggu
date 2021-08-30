@@ -1,14 +1,14 @@
 @extends('layouts.main')
 
 @push('style')
-     <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css')}}">
     <style>
         .main-bg {
             background-color: #0057B7 !important;
         }
     </style>
-    
+
 @endpush
 
 @section('content')
@@ -71,7 +71,7 @@
                                     <form method="post" action="{{route('step1.form')}}" class="rm-form">
                                         @csrf
                                         <div class="row ps-lg-5">
-                                            @foreach($seciton1 as $item)
+                                            @foreach($section1 as $item)
                                                 <div class="col-6">
                                                     <div class="mb-3 d-flex align-items-center">
                                                         <span>{{$item->title}}</span>
@@ -82,11 +82,6 @@
                                                             value="{{$item->status == 1 ? $item->correct_value : old('step_1_'.$item->id)}}"
                                                             name="step_1_{{$item->id}}">
                                                     </div>
-                                                    @if ($errors->has('step_1_'.$item->id))
-                                                        <p class="invalid-feedback-option text-danger">
-                                                            {{ $errors->first('step_1_'.$item->id)}}
-                                                        </p>
-                                                    @endif
                                                 </div>
 
                                             @endforeach
@@ -132,7 +127,7 @@
                                     <form method="post" action="{{route('step2.form')}}" class="rm-form">
                                         @csrf
                                         <div class="row ps-lg-5">
-                                            @foreach($seciton2 as $item)
+                                            @foreach($section2 as $item)
                                                 <div class="row ps-lg-5">
                                                     <div class="col-6">
                                                         <p>
@@ -150,11 +145,7 @@
                                                         </div>
 
                                                     </div>
-                                                    @if ($errors->has('step_2_'.$item->id))
-                                                        <p class="invalid-feedback-option text-danger">
-                                                            {{ $errors->first('step_2_'.$item->id)}}
-                                                        </p>
-                                                    @endif
+
                                                 </div>
                                             @endforeach
                                         </div>
@@ -243,7 +234,7 @@
                                                 <div class="tab-pane fade show active" id="v-pills-rabu" role="tabpanel"
                                                      aria-labelledby="v-pills-rabu-tab">
                                                     <div class="row">
-                                                        @foreach($seciton3 as $item)
+                                                        @foreach($section3 as $item)
                                                             @if($item->button_text == "Rabu, 17 Nov 2021")
                                                                 <div class="col-7">
                                                                     <p>
@@ -259,11 +250,7 @@
                                                                             value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
-                                                                    @if ($errors->has('step_3_'.$item->id))
-                                                                        <p class="invalid-feedback-option text-danger">
-                                                                            {{ $errors->first('step_3_'.$item->id)}}
-                                                                        </p>
-                                                                    @endif
+
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -272,7 +259,7 @@
                                                 <div class="tab-pane fade" id="v-pills-khamis" role="tabpanel"
                                                      aria-labelledby="v-pills-khamis-tab">
                                                     <div class="row">
-                                                        @foreach($seciton3 as $item)
+                                                        @foreach($section3 as $item)
                                                             @if($item->button_text == "Khamis, 18 nov 2021")
                                                                 <div class="col-7">
                                                                     <p>
@@ -288,11 +275,7 @@
                                                                             value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
-                                                                    @if ($errors->has('step_3_'.$item->id))
-                                                                        <p class="invalid-feedback-option text-danger">
-                                                                            {{ $errors->first('step_3_'.$item->id)}}
-                                                                        </p>
-                                                                    @endif
+
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -301,7 +284,7 @@
                                                 <div class="tab-pane fade" id="v-pills-jumaat" role="tabpanel"
                                                      aria-labelledby="v-pills-jumaat-tab">
                                                     <div class="row">
-                                                        @foreach($seciton3 as $item)
+                                                        @foreach($section3 as $item)
                                                             @if($item->button_text == "Jumaat, 19 Nov 2021")
                                                                 <div class="col-7">
                                                                     <p>
@@ -314,15 +297,11 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                                                                                                       value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
 
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
-                                                                    @if ($errors->has('step_3_'.$item->id))
-                                                                        <p class="invalid-feedback-option text-danger">
-                                                                            {{ $errors->first('step_3_'.$item->id)}}
-                                                                        </p>
-                                                                    @endif
+
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -331,7 +310,7 @@
                                                 <div class="tab-pane fade" id="v-pills-sabtu" role="tabpanel"
                                                      aria-labelledby="v-pills-sabtu-tab">
                                                     <div class="row">
-                                                        @foreach($seciton3 as $item)
+                                                        @foreach($section3 as $item)
                                                             @if($item->button_text == "Sabtu, 20 Nov 2021")
                                                                 <div class="col-7">
                                                                     <p>
@@ -344,15 +323,11 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                                                                                                       value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
 
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
-                                                                    @if ($errors->has('step_3_'.$item->id))
-                                                                        <p class="invalid-feedback-option text-danger">
-                                                                            {{ $errors->first('step_3_'.$item->id)}}
-                                                                        </p>
-                                                                    @endif
+
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -361,7 +336,7 @@
                                                 <div class="tab-pane fade" id="v-pills-ahad" role="tabpanel"
                                                      aria-labelledby="v-pills-ahad-tab">
                                                     <div class="row">
-                                                        @foreach($seciton3 as $item)
+                                                        @foreach($section3 as $item)
                                                             @if($item->button_text == "Ahad, 21 Nov 2021")
                                                                 <div class="col-7">
                                                                     <p>
@@ -374,15 +349,11 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                                                                                                       value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
 
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
-                                                                    @if ($errors->has('step_3_'.$item->id))
-                                                                        <p class="invalid-feedback-option text-danger">
-                                                                            {{ $errors->first('step_3_'.$item->id)}}
-                                                                        </p>
-                                                                    @endif
+
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -391,7 +362,7 @@
                                                 <div class="tab-pane fade" id="v-pills-isinin" role="tabpanel"
                                                      aria-labelledby="v-pills-isinin-tab">
                                                     <div class="row">
-                                                        @foreach($seciton3 as $item)
+                                                        @foreach($section3 as $item)
                                                             @if($item->button_text == "Isinin, 22 Nov 2021")
                                                                 <div class="col-7">
                                                                     <p>
@@ -404,15 +375,11 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                                                                                                       value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
 
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
-                                                                    @if ($errors->has('step_3_'.$item->id))
-                                                                        <p class="invalid-feedback-option text-danger">
-                                                                            {{ $errors->first('step_3_'.$item->id)}}
-                                                                        </p>
-                                                                    @endif
+
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -421,7 +388,7 @@
                                                 <div class="tab-pane fade" id="v-pills-selasa" role="tabpanel"
                                                      aria-labelledby="v-pills-selasa-tab">
                                                     <div class="row">
-                                                        @foreach($seciton3 as $item)
+                                                        @foreach($section3 as $item)
                                                             @if($item->button_text == "Selasa, 23 Nov 2021")
                                                                 <div class="col-7">
                                                                     <p>
@@ -434,15 +401,8 @@
                                                                         <input
                                                                             {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                                                                                                       value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
-
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
-                                                                    @if ($errors->has('step_3_'.$item->id))
-                                                                        <p class="invalid-feedback-option text-danger">
-                                                                            {{ $errors->first('step_3_'.$item->id)}}
-                                                                        </p>
-                                                                    @endif
                                                                 </div>
                                                             @endif
                                                         @endforeach
@@ -457,7 +417,8 @@
                                                         <div
                                                             class="d-flex justify-content-end flex-md-nowrap flex-wrap">
                                                             <h4 class="text-white mb-0">RM</h4>
-                                                            <input type="text" id="final_result_3"  class="rm-imputs-2" readonly>
+                                                            <input type="text" id="final_result_3" class="rm-imputs-2"
+                                                                   readonly>
                                                         </div>
                                                         <div class="text-end ms-auto mt-3">
                                                             <input type="submit" value="Hantar">
@@ -475,8 +436,8 @@
             </div>
         </div>
     </main>
-    
-    
+
+
 @endsection
 
 @push('js')
@@ -489,8 +450,8 @@
         }
         $(document).ready(function () {
             $(".owl-carousel").owlCarousel({
-                loop:true,
-                nav:true,
+                loop: true,
+                nav: true,
                 items: 3,
 
             });
@@ -498,9 +459,9 @@
                 $('.nav-link').removeClass('active');
                 $(this).addClass('active');
             });
-            
+
         });
-        
+
     </script>
     <script>
         $(function () {
@@ -567,21 +528,21 @@
     </script>
     <script>
         @if(session()->has('from_section'))
-            @if(session()->get('from_section') == 2)
-                $("#nav-home").removeClass("active")
-                $("#nav-profile").addClass("active")
-                $("#nav-home").removeClass("show")
-                $("#nav-profile").addClass("show")
-            @endif
+        @if(session()->get('from_section') == 2)
+        $("#nav-home").removeClass("active")
+        $("#nav-profile").addClass("active")
+        $("#nav-home").removeClass("show")
+        $("#nav-profile").addClass("show")
+        @endif
         @endif
 
         @if(session()->has('from_section'))
-            @if(session()->get('from_section') == 3)
-                $("#nav-home").removeClass("active")
-                $("#nav-contact").addClass("active")
-                $("#nav-home").removeClass("show")
-                $("#nav-contact").addClass("show")
-            @endif
+        @if(session()->get('from_section') == 3)
+        $("#nav-home").removeClass("active")
+        $("#nav-contact").addClass("active")
+        $("#nav-home").removeClass("show")
+        $("#nav-contact").addClass("show")
+        @endif
         @endif
     </script>
 @endpush
