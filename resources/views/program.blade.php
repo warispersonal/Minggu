@@ -16,11 +16,14 @@
     <main>
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
-                <h1 class="text-white mb-0 d-lg-block d-none">PNB &nbsp; ASNB</h1>
+                <div class="d-lg-block d-none">
+                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+                </div>
             </div>
             <div class="container mt-5">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="d-flex flex-column justify-content-between h-100">
                             <div class="tabs">
                                 <h1 id="program" class="active_tab">Program</h1>
@@ -30,7 +33,7 @@
                                 episod lalo </a>
                         </div>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-8">
                         <div id="program_content">
                             @foreach($programs as $program)
                                 <img onclick="openModal({{$program}})"

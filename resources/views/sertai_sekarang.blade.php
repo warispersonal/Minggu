@@ -1,12 +1,14 @@
 @extends('layouts.main')
 
 @push('style')
-
+     <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css')}}">
     <style>
         .main-bg {
             background-color: #0057B7 !important;
         }
     </style>
+    
 @endpush
 
 @section('content')
@@ -14,7 +16,10 @@
     <main>
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
-                <h1 class="text-white mb-0 d-lg-block d-none">PNB &nbsp; ASNB</h1>
+                <div class="d-lg-block d-none">
+                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+                </div>
                 <h3 class="text-white mb-0 d-lg-block d-none">
                     @guest('user')
                         <div class="alert alert-danger text-center" role="alert">
@@ -114,8 +119,8 @@
                                             <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="order-3 order-lg-2 ">
-                                            <h1 class="text-white text-center mt-5">Pra-MSD</h1>
-                                            <h4 class="text-white text-center mb-3">22 Okt - 16 Nov 2021</h4>
+                                            <h1 class="text-white text-center mt-5">Rakan Korporat</h1>
+                                            <h4 class="text-white text-center mb-3">22 Okt - 23 Nov 2021</h4>
                                             <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur
                                                 adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta
                                                 possimus illum necessitatibus fuga voluptatum? Quia similique eum unde
@@ -180,8 +185,8 @@
                                             <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="order-3 order-lg-2 ">
-                                            <h1 class="text-white text-center mt-5">Pra-MSD</h1>
-                                            <h4 class="text-white text-center mb-3">22 Okt - 16 Nov 2021</h4>
+                                            <h1 class="text-white text-center mt-5">MSD Live</h1>
+                                            <h4 class="text-white text-center mb-3">17 - 23 November 2021</h4>
                                             <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur
                                                 adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta
                                                 possimus illum necessitatibus fuga voluptatum? Quia similique eum unde
@@ -190,7 +195,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-7">
-                                    <form method="post" action="{{route('step3.form')}}" class="rm-form">
+                                    <form method="post" action="{{route('step3.form')}}" class="rm-form side-tabs">
                                         @csrf
                                         <div class="d-flex  align-items-start flex-column flex-lg-row ">
                                             <div id="owlCarousel" class="nav flex-column nav-pills me-5 mb-3 mb-lg-0"
@@ -470,9 +475,33 @@
             </div>
         </div>
     </main>
+    
+    
 @endsection
 
 @push('js')
+    <script src="{{asset('assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js')}}"></script>
+
+    <script>
+        let windowSize = window.matchMedia("(max-width: 991px)")
+        if (windowSize.matches) {
+            document.getElementById("owlCarousel").classList.add("owl-carousel")
+        }
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                nav:true,
+                items: 3,
+
+            });
+            $(".nav-link").click(function () {
+                $('.nav-link').removeClass('active');
+                $(this).addClass('active');
+            });
+            
+        });
+        
+    </script>
     <script>
         $(function () {
             $('.only-decimal-integer-number').on('input', function (e) {

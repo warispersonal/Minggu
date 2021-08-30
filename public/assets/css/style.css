@@ -5,7 +5,7 @@
 }
 
 .main-img{
-    background: url(../../assets/img/home-bg-2.png);
+    background: url(../img/home-bg-2.png);
     background-size: cover;
     background-position: top;
 }
@@ -118,7 +118,7 @@
     transform: translate(-50%,50%);
     z-index: 555;
     transition: all .3s;
-    max-height: 100vh;
+    max-height: 90vh;
     padding-right: 0px;
     padding-bottom: 0px;
 
@@ -196,6 +196,7 @@
 }
 .drone2{
     width: 100%;
+    transform: translate(-30%, 25%);
 }
 .form-check-input{
 
@@ -222,7 +223,7 @@
 .social_address p{
     color: white;
     font-size: 20px;
-
+    
 }
 .msd_title{
     font-size: 4rem;
@@ -284,7 +285,7 @@
     border-radius: 10px;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.17);
 }
-.tab-content p{
+.tab-content p{ 
     color: white;
     font-size: 16px;
     margin-bottom: 10px;
@@ -365,7 +366,7 @@
 }
 #promotion_tabs_content::-webkit-scrollbar-thumb{
     width: 10px;
-    background-color: #212B80;
+    background-color: #212B80; 
 } */
 
 #tabss_popup_btn{
@@ -460,16 +461,17 @@
     font-size: 20px;
 }
 #may_bank_tabs .nav-link.active{
-    border-bottom: 1px solid black !important;
+    border-bottom: 2px solid black !important;
+    font-weight:bold;
+}
+#may_bank_tabs .nav-link:nth-child(1){
+    padding-left:0px;
 }
 #may_bank_tabs .nav-link{
     color: white;
     background: transparent;
     border: none;
     font-size: 20px;
-}
-#may_bank_tabs .nav-link.active{
-    border-bottom: 1px solid white;
 }
 .jom_kira-btns{
     width: 80%;
@@ -720,8 +722,8 @@
     padding: 25px;
     border-radius: 10px;
     color: #0057B7;
-
-
+    
+    
 }
 #program-modal .owl-carousel{
     background-color: #F5841F;
@@ -833,12 +835,16 @@
     right: 8%;
 }
 .link-13{
-    top: 43%;
-    right: 10%;
+    top: 53%;
+    right: 8%;
 }
 .link-14{
     bottom: 18%;
-    right: 11%;
+    right: 13%;
+}
+.link-15{
+    top: 40%;
+    right: 5%;
 }
 .info_iconn{
     position: absolute;
@@ -900,7 +906,7 @@
     padding: 25px;
     border-radius: 10px;
     color: #0057B7;
-
+    
 }
 .khidmat_images img{
     width: 140px;
@@ -914,9 +920,12 @@
     font-size: 5rem;
     line-height: 5rem;
 }
+#register_modal .form-check{
+    margin-left:10px;
+}
 
 @media(max-width:991px){
-
+    
     .faq-heading{
         font-size: 3rem;
     }
@@ -1042,7 +1051,7 @@
         width: 45%;
         padding: 8px;
     }
-
+  
     #terkini-btn{
         position: static;
         width: 100%;
@@ -1050,7 +1059,7 @@
         margin-top: 20px;
     }
     .main-img{
-        background:url(../../assets/img/home-bg-mobile.png);
+        background:url(../img/home-bg-mobile.png);
         background-size: cover;
         min-height: 100vh;
     }
@@ -1105,7 +1114,7 @@
         left: 45%;
     }
     .link-8{
-
+        
         bottom: -4%;
         right: 0%;
         top: inherit;
@@ -1149,11 +1158,11 @@
         font-size: 30px;
         color: #212B80;
     }
-
+    
     .jadual-mobile .owl-next span{
         font-size: 30px;
         color: #212B80;
-
+    
     }
     .jadual-mobile .owl-next{
         position: absolute;
@@ -1191,7 +1200,7 @@
     .rm-form span{
         font-size: 18px;
     }
-
+    
 }
 @media(max-width:768px){
     #program-modal{
@@ -1200,7 +1209,7 @@
     #program_content img{
         width: 150px;
     }
-
+    
     .mobile_nav{
         display: block;
     }
@@ -1249,14 +1258,14 @@
     }
 }
 @media(max-width:576px){
-
+   
     #program-modal{
         width: 90%;
     }
     #program-modal .program-modal-content{
         padding: 15px;
     }
-
+    
     .heading{
         font-size: 3rem;
     }
@@ -1296,7 +1305,7 @@
     .owl-nav span{
         line-height: 30px;
     }
-
+  
     .time{
         font-size: 12px;
     }
@@ -1395,29 +1404,4 @@
         margin-left: 8px;
         width: 90%;
     }
-}
-/* Custom Style*/
-
-.offer-by{
-    width: 116px !important;
-    height: 34px !important;
-}
-
-.promosi-image-details{
-    width: 110px !important;
-    height: 81px !important;
-    object-fit: contain;
-}
-
-.promosi-image-details-page{
-    width: 110px !important;
-    height: 81px !important;
-}
-
-.hidden-div{
-    display: none !important;
-}
-.invalid-feedback-option{
-    font-size: 14px !important;
-    text-align: center !important;
 }

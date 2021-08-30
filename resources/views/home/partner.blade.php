@@ -15,15 +15,13 @@
 @section('content')
     <main>
         <div class="main-bg">
-            <div class="container-fluid px-md-5 pt-4">
-                <div class="d-flex justify-content-md-between align-items-center">
-                    <h1 class="text-white mb-0">PNB &nbsp; ASNB</h1>
-                    <div class="text-white ms-3">
-                        <small>EM | EN</small>
-                    </div>
+           <div class="container-fluid px-md-5 pt-4">
+                <div class="d-lg-block d-none">
+                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
                 </div>
             </div>
-            <div class="container mt-5 pb-5">
+            <div class="container mt-5 pb-5 px-md-0">
                 <div id="may_bank_tabs">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -37,11 +35,11 @@
                             </button>
                         </div>
                     </nav>
-                    <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-content " id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-maklumat" role="tabpanel"
                              aria-labelledby="nav-maklumat-tab">
                             <div class="row mt-4">
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 pe-md-4">
                                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-indicators">
                                             @foreach($partner->sliders as $slider)
@@ -82,7 +80,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-8">
+                                <div class="col-lg-8 ps-md-4">
                                     <div class="ratio ratio-16x9">
                                         <iframe src="{{$partner->video_link}}" frameborder="0"
                                                 allow="autoplay; fullscreen; picture-in-picture"
@@ -110,7 +108,7 @@
                                             <h3 class="my-3">{{$program->title}}</h3>
                                             <span><strong>{{$program->date}}</strong></span>
                                             <p>{{$program->description}}</p>
-                                            <p>Dibawakan Khas Oleh <img class="offer-by" src="{{$partner->store_logo}}" alt=""></p>
+                                            <p>Dibawakan Khas Oleh <img class="offer-by w-25" src="{{$partner->store_logo}}" alt=""></p>
                                         </div>
                                     </div>
                                 @endforeach

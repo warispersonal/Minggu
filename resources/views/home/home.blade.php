@@ -24,7 +24,13 @@
 @section('content')
 
     <main>
-        <div class="main-img">
+        <div class="main-img position-relative">
+            <div class="container-fluid px-md-5 pt-4 position-absolute top-0">
+                <div class="d-lg-block d-none">
+                    <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
+                </div>
+            </div>
             <div class="home-links position-relative">
                 @foreach($partners as $partner)
                     <a href="{{route('may.bank', $partner->slug)}}" class="link-{{$partner->id}}">

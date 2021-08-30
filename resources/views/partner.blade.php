@@ -7,7 +7,10 @@
     <main>
         <div class="main-bg position-relative">
             <div class="container-fluid px-md-5 pt-4 position-absolute top-0">
-                <h1 class="text-white mb-0 d-lg-block d-none">PNB &nbsp; ASNB</h1>
+                <div class="d-lg-block d-none">
+                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+                </div>
             </div>
             <img src="{{asset('assets/img/rakan 2.png')}}" class="img-fluid rakan-img d-none d-lg-block" alt="">
             <img src="{{asset('assets/img/rakan mboile 1.png')}}" class="img-fluid rakan-img d-lg-none " alt="">

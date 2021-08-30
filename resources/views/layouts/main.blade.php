@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap-icons.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+   
     <title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>
     @if (Session::has('showlogin'))
         <script>
@@ -99,7 +100,11 @@
             @foreach($headerMenu as $menu)
                 @if( $menu['child'] )
                     <li class="drop_down">
-                        {{ $menu['label_en'] }}
+                        @if(Config::get('app.locale') == 'en')
+                            {{ $menu['label_en'] }}
+                        @else
+                            {{ $menu['label_bm'] }}
+                        @endif
                         <i class="bi bi-chevron-down"></i>
                         <div class="dropdown_content">
                             <ul>
@@ -108,7 +113,7 @@
                                         <li class=""><a href="{{ $child['link'] }}"
                                                         title="">{{ $child['label_en'] }}</a></li>
                                     @elseif (Config::get('app.locale') == 'bm')
-                                        <a href="{{ $menu['link'] }}" title="">{{ $menu['label_bm'] }}</a>
+                                        <li class=""><a href="{{ $child['link'] }}" title="">{{ $child['label_bm'] }}</a></li>
                                     @endif
                                 @endforeach
                             </ul><!-- /.sub-menu -->
@@ -117,13 +122,12 @@
                 @else
                     <li>
                     @if(Config::get('app.locale') == 'en')
-                        <li class=""><a href="{{ $child['link'] }}" title="">{{ $child['label_en'] }}</a></li>
+                        <li class=""><a href="{{ $menu['link'] }}" title="">{{ $menu['label_en'] }}</a></li>
                     @elseif (Config::get('app.locale') == 'bm')
-                        <a href="{{ $menu['link'] }}" title="">{{ $menu['label_bm'] }}</a>
-                        @endif
-                        </li>
+                        <li><a href="{{ $menu['link'] }}" title="">{{ $menu['label_bm'] }}</a></li>
                     @endif
-                    @endforeach
+                @endif
+            @endforeach
         </ul>
     </nav><!-- /. Mobile Nav -->
 </header>
@@ -230,6 +234,7 @@
 <script src="{{asset('assets/js/jquery.js')}}"></script>
 <script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
 <script src="{{asset('assets/js/main.js')}}"></script>
+
 @if ($errors->has('email') || $errors->has('password'))
     <script>
         var loginModal = document.querySelector("#login_modal");

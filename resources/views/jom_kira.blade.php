@@ -9,20 +9,23 @@
     <main>
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
-                <h1 class="text-white mb-0 d-lg-block d-none">PNB &nbsp; ASNB</h1>
+                <div class="d-lg-block d-none">
+                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+                </div>
             </div>
             <div class="container mt-5">
                 <div class="row gy-4">
-                    <div class="col-lg-5 pt-4">
+                    <div class="col-lg-5 pt-4 pe-lg-5">
                         <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
-                        <p class="text-white mt-3 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        <p class="text-white mt-4 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                             Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo
                             dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor
                             sit amet consectetur adipisicing elit. Quisquam molestiae deserunt atque dolore optio eos
                             assumenda rerum voluptates commodi impedit dicta officia dignissimos dolorum exercitationem
                             voluptatibus, asperiores quas similique vel!</p>
                         <div class="mt-4 text-center">
-                            <a href="{{route('sertai.sekarang')}}" class="sertai-btn">Sertai Sekarang!</a>
+                            <a href="{{route('sertai.sekarang')}}" class="sertai-btn d-inline-block">Sertai Sekarang!</a>
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -116,33 +119,49 @@
         </div>
     </main>
     <div class="jomkira-modal jomkira-modal-1" style="top: 150%;">
+        
         <div class="jomkira-modal-content">
-            <h3>Cara Penyertaan</h3>
+            <div class="d-flex justify-content-between">
+                <h3>Cara Penyertaan</h3>
+                <i class="bi bi-x close_btn"></i>
+            </div>
             <h3 class="fw-bolder">Jom... Kira Duit</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam
                 corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste
                 porro recusandae optio.</p>
-            <a href="sertai-sekarang.html" class="sertai-btn">Sertai sekarang!</a>
+                <div class="mt-4">
+                    <a href="{{route('sertai.sekarang')}}" class="sertai-btn d-inline-block">Sertai sekarang!</a>
+                </div>
         </div>
     </div>
     <div class="jomkira-modal jomkira-modal-2" style="top: 150%;">
         <div class="jomkira-modal-content">
-            <h3>Cara Penyertaan</h3>
+            <div class="d-flex justify-content-between">
+                <h3>Cara Penyertaan</h3>
+                <i class="bi bi-x close_btn"></i>
+            </div>
             <h3 class="fw-bolder">Jom... Kira Duit</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam
                 corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste
                 porro recusandae optio.</p>
-            <a href="sertai-sekarang.html" class="sertai-btn">Sertai sekarang!</a>
+            <div class="mt-4">
+                    <a href="{{route('sertai.sekarang')}}" class="sertai-btn d-inline-block">Sertai sekarang!</a>
+            </div>
         </div>
     </div>
     <div class="jomkira-modal jomkira-modal-3" style="top: 150%;">
         <div class="jomkira-modal-content">
-            <h3>Cara Penyertaan</h3>
+            <div class="d-flex justify-content-between">
+                <h3>Cara Penyertaan</h3>
+                <i class="bi bi-x close_btn"></i>
+            </div>
             <h3 class="fw-bolder">Jom... Kira Duit</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam
                 corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste
                 porro recusandae optio.</p>
-            <a href="sertai-sekarang.html" class="sertai-btn">Sertai sekarang!</a>
+            <div class="mt-4">
+                    <a href="{{route('sertai.sekarang')}}" class="sertai-btn d-inline-block">Sertai sekarang!</a>
+                </div>
         </div>
     </div>
 
@@ -174,6 +193,10 @@
             $(".overlay").show()
         })
         $(".overlay").click(function () {
+            $(".overlay").hide()
+            $(".jomkira-modal").css("top", "150%")
+        })
+        $(".close_btn").click(function () {
             $(".overlay").hide()
             $(".jomkira-modal").css("top", "150%")
         })

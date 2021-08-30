@@ -13,17 +13,20 @@
     <main>
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
-                <h1 class="text-white mb-0 d-lg-block d-none">PNB &nbsp; ASNB</h1>
+                <div class="d-lg-block d-none">
+                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+                </div>
             </div>
             <div class="container mt-5 text-white">
                 <div class="row gy-3">
                     <div class="col-md-4">
 
-                        <img src="{{asset('assets/img/msd-logo.png')}}" class="img-fluid" alt="">
+                        <img src="{{asset('assets/img/msd-logo.png')}}" class="img-fluid w-75" alt="">
                         <h4 class="my-4">Boleh juga ditonton menerusi:</h4>
                         <div class="social_address">
                             <p>
-                                <img src="{{asset('assets/img/facbook.png')}}" class="img-fluid" alt=""> &nbsp;
+                                <img src="{{asset('assets/img/facbook.png')}}" class="img-fluid " alt=""> &nbsp;
                                 / MingguSahamDigital
                             </p>
                             <p>
