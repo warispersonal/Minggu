@@ -286,28 +286,33 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('partner.show.promotion')}}">
                             <i class="ni ni-ui-04 text-primary"></i> {{ __('Upload Promotions') }}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Upload Logo') }}
+                        <a class="nav-link" href="{{route('partner.unique.info')}}">
+                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Update Logo') }}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Add Description') }}
+                        <a class="nav-link" href="{{route('partner.unique.info')}}">
+                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Update Description') }}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Add Video Link') }}
+                        <a class="nav-link" href="{{route('partner.unique.info')}}">
+                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Update Video Link') }}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('partner.show.button')}}">
                             <i class="ni ni-ui-04 text-primary"></i> {{ __('Add Buttons') }}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Add Slider') }}
                         </a>
                     </li>
                     <li class="nav-item">

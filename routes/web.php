@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Partner\PartnerController;
 use App\Http\Controllers\SuperAdmin\FAQController;
 use App\Http\Controllers\SuperAdmin\HomePagePartnerController;
 use App\Http\Controllers\SuperAdmin\ProgramController;
@@ -179,10 +180,22 @@ Route::prefix('partner')->namespace('Auth\Partner')->group(function () {
     Route::post('login', 'LoginController@login');
     Route::post('logout', 'LoginController@logout')->name('partner.logout');
 
+
 });
 
 Route::prefix('partner')->middleware('auth:partner')->namespace('Partner')->group(function () {
     Route::get('dashboard', 'PartnerController@index')->name('partner.dashboard');
+    Route::get('/promotion', [PartnerController::class, 'showPromotions'])->name('partner.show.promotion');
+    Route::post('/promotion/create', [PartnerController::class, 'promotion_store'])->name('partner.promotion.store');
+    Route::get('/promotion/delete/{id}', [PartnerController::class, 'promotion_delete'])->name('partner.promotion.delete');
+    Route::get('/info', [PartnerController::class, 'editUniqueInfo'])->name('partner.unique.info');
+    Route::post('/info', [PartnerController::class, 'updateUniqueInfo'])->name('partner.unique.info');
+
+    Route::get('/button', [PartnerController::class, 'showButtons'])->name('partner.show.button');
+    Route::post('/button/create', [PartnerController::class, 'button_store'])->name('partner.button.store');
+    Route::get('/button/delete/{id}', [PartnerController::class, 'button_delete'])->name('partner.button.delete');
+
+
 });
 
 // Route For Setting Language
