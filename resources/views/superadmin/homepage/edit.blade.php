@@ -33,9 +33,9 @@
                                 <form role="form" id="store-admin" method="POST" action="{{ route('stars.homepage.edit' , $partner) }}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group mb-3">
-                                        <label>Name</label>
+                                        <label>Name (EN)</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control"  name="name" placeholder="Name" value="{{ $partner->name }}" type="text" required="">
+                                            <input class="form-control"  name="name" placeholder="Name (EN)" value="{{ $partner->name }}" type="text" required="">
                                         </div>
                                         @if ($errors->has('name'))
                                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -44,13 +44,35 @@
                                         @endif
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label>Description</label>
+                                        <label>Name (BM)</label>
                                         <div class="input-group input-group-alternative">
-                                            <textarea class="form-control" rows="5" name="description" placeholder="Description" type="text" >{{ $partner->description }}</textarea>
+                                            <input class="form-control"  name="name_bm" placeholder="Name (BM)" value="{{ $partner->name_bm }}" type="text" required="">
+                                        </div>
+                                        @if ($errors->has('name_bm'))
+                                            <span class="invalid-feedback" style="display: block;" role="alert">
+                                                <strong>{{ $errors->first('name_bm') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label>Description (EN)</label>
+                                        <div class="input-group input-group-alternative">
+                                            <textarea class="form-control" rows="5" name="description" placeholder="Description (EN)" type="text" >{{ $partner->description }}</textarea>
                                         </div>
                                         @if ($errors->has('description'))
                                             <span class="invalid-feedback" style="display: block;" role="alert">
-                                                <strong>{{ $errors->first('name') }}</strong>
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label>Description (BM)</label>
+                                        <div class="input-group input-group-alternative">
+                                            <textarea class="form-control" rows="5" name="description_bm" placeholder="Description (BM)" type="text" >{{ $partner->description_bm }}</textarea>
+                                        </div>
+                                        @if ($errors->has('description_bm'))
+                                            <span class="invalid-feedback" style="display: block;" role="alert">
+                                                <strong>{{ $errors->first('description_bm') }}</strong>
                                             </span>
                                         @endif
                                     </div>

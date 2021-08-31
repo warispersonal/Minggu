@@ -20,11 +20,16 @@
             </div>
             <div class="container mt-5 text-white">
                 <div class="row gy-3">
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
 
-                        <img src="{{asset('assets/img/msd-logo.png')}}" class="img-fluid w-75" alt="">
-                        <h4 class="my-4">Boleh juga ditonton menerusi:</h4>
-                        <div class="social_address">
+                        <img src="{{asset('assets/img/msd-logo.png')}}" class="img-fluid w-75 m-auto d-block" alt="">
+                        <div class="social_address d-none d-lg-block">
+                            @if(Config::get('app.locale') == 'en')
+                                <h4 class="my-4">{{ __('general.social_heading') }}</h4>
+                            @endif
+                            @if(Config::get('app.locale') == 'bm')
+                                <h4 class="my-4">{{ __('general.social_heading') }}</h4>
+                            @endif
                             <p>
                                 <img src="{{asset('assets/img/facbook.png')}}" class="img-fluid " alt=""> &nbsp;
                                 / MingguSahamDigital
@@ -39,11 +44,31 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-lg-8 px-lg-2 px-0 ">
                         <div class="ratio ratio-16x9">
-                            <iframe src="https://player.vimeo.com/video/6268154"
-                                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                                    allowfullscreen></iframe>
+                            <iframe src="https://player.vimeo.com/video/19198496" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                    <div class="col-12 d-lg-none">
+                         <div class="social_address">
+                             @if(Config::get('app.locale') == 'en')
+                                <h4 class="my-4">{{ __('general.social_heading') }}</h4>
+                            @endif
+                             @if(Config::get('app.locale') == 'bm')
+                                <h4 class="my-4">{{ __('general.social_heading') }}</h4>
+                            @endif
+                            <p>
+                                <img src="{{asset('assets/img/facbook.png')}}" class="img-fluid " alt=""> Facebook &nbsp;
+                                / MingguSahamDigital
+                            </p>
+                            <p>
+                                <img src="{{asset('assets/img/insta.png')}}" alt=""> Instagram  &nbsp;
+                                @MingguSahamDigital
+                            </p>
+                            <p>
+                                <img src="{{asset('assets/img/youtube.png')}}" alt=""> Youtube &nbsp;
+                                Minggu Saham Digital
+                            </p>
                         </div>
                     </div>
                 </div>

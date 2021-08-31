@@ -26,11 +26,22 @@
                     <div class="col-lg-4">
                         <div class="d-flex flex-column justify-content-between h-100">
                             <div class="tabs">
-                                <h1 id="program" class="active_tab">Program</h1>
-                                <h1 id="jadual">Jadual</h1>
+                                @if(Config::get('app.locale') == 'en')
+                                    <h1 id="program" class="active_tab">{{ __('general.program') }}</h1>
+                                    <h1 id="jadual">{{ __('general.schedule') }}</h1>
+                                @endif
+                                @if(Config::get('app.locale') == 'bm')
+                                    <h1 id="program" class="active_tab">{{ __('general.program') }}</h1>
+                                    <h1 id="jadual">{{ __('general.schedule') }}</h1>
+                                @endif
+                                
                             </div>
-                            <a href="{{route('user.msdLive')}}" class="tonton-btn m-0 d-none d-lg-block">Tonton semu
-                                episod lalo </a>
+                            @if(Config::get('app.locale') == 'en')
+                                <a href="{{route('user.msdLive')}}" class="tonton-btn m-0 d-none d-lg-block">{{ __('general.msd_btn_text') }}</a>
+                            @endif
+                            @if(Config::get('app.locale') == 'bm')
+                                <a href="{{route('user.msdLive')}}" class="tonton-btn m-0 d-none d-lg-block">{{ __('general.msd_btn_text') }}</a>
+                            @endif
                         </div>
                     </div>
                     <div class="col-lg-8">
@@ -47,34 +58,67 @@
                             <div class="d-lg-flex d-none align-items-start  jadual-desktop">
                                 <div class="nav flex-column nav-pills me-5" id="v-pills-tab" role="tablist"
                                      aria-orientation="vertical">
-                                    <button class="nav-link active" id="v-pills-rabu-tab" data-bs-toggle="pill"
+                                    @if(Config::get('app.locale') == 'en')
+                                        <button class="nav-link active" id="v-pills-rabu-tab" data-bs-toggle="pill"
                                             data-bs-target="#v-pills-rabu" type="button" role="tab"
-                                            aria-controls="v-pills-rabu" aria-selected="true">Rabu, 1 Sep 2021
-                                    </button>
-                                    <button class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-khamis" type="button" role="tab"
-                                            aria-controls="v-pills-khamis" aria-selected="false">Khamis, 2 Sep 2021
-                                    </button>
-                                    <button class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-jumaat" type="button" role="tab"
-                                            aria-controls="v-pills-jumaat" aria-selected="false">Jumaat, 3 Sep 2021
-                                    </button>
-                                    <button class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-sabtu" type="button" role="tab"
-                                            aria-controls="v-pills-sabtu" aria-selected="false">Sabtu, 4 Sep 2021
-                                    </button>
-                                    <button class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-ahad" type="button" role="tab"
-                                            aria-controls="v-pills-ahad" aria-selected="false">Ahad, 5 Sep 2021
-                                    </button>
-                                    <button class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-isinin" type="button" role="tab"
-                                            aria-controls="v-pills-isinin" aria-selected="false">Isinin, 6 Sep 2021
-                                    </button>
-                                    <button class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-selasa" type="button" role="tab"
-                                            aria-controls="v-pills-selasa" aria-selected="false">Selasa, 4 Sep 2021
-                                    </button>
+                                            aria-controls="v-pills-rabu" aria-selected="true">{{ __('general.wednesday') }}, 1 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-khamis" type="button" role="tab"
+                                                aria-controls="v-pills-khamis" aria-selected="false">{{ __('general.thursday') }}, 2 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-jumaat" type="button" role="tab"
+                                                aria-controls="v-pills-jumaat" aria-selected="false">{{ __('general.friday') }}, 3 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-sabtu" type="button" role="tab"
+                                                aria-controls="v-pills-sabtu" aria-selected="false">{{ __('general.saturday') }}, 4 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-ahad" type="button" role="tab"
+                                                aria-controls="v-pills-ahad" aria-selected="false">{{ __('general.sunday') }}, 5 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-isinin" type="button" role="tab"
+                                                aria-controls="v-pills-isinin" aria-selected="false">{{ __('general.monday') }}, 6 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-selasa" type="button" role="tab"
+                                                aria-controls="v-pills-selasa" aria-selected="false">{{ __('general.tuesday') }}, 4 Sep 2021
+                                        </button>
+                                    @endif
+                                    @if(Config::get('app.locale') == 'bm')
+                                        <button class="nav-link active" id="v-pills-rabu-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-rabu" type="button" role="tab"
+                                            aria-controls="v-pills-rabu" aria-selected="true">{{ __('general.wednesday') }}, 1 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-khamis" type="button" role="tab"
+                                                aria-controls="v-pills-khamis" aria-selected="false">{{ __('general.thursday') }}, 2 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-jumaat" type="button" role="tab"
+                                                aria-controls="v-pills-jumaat" aria-selected="false">{{ __('general.friday') }}, 3 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-sabtu" type="button" role="tab"
+                                                aria-controls="v-pills-sabtu" aria-selected="false">{{ __('general.saturday') }}, 4 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-ahad" type="button" role="tab"
+                                                aria-controls="v-pills-ahad" aria-selected="false">{{ __('general.sunday') }}, 5 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-isinin" type="button" role="tab"
+                                                aria-controls="v-pills-isinin" aria-selected="false">{{ __('general.monday') }}, 6 Sep 2021
+                                        </button>
+                                        <button class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-selasa" type="button" role="tab"
+                                                aria-controls="v-pills-selasa" aria-selected="false">{{ __('general.tuesday') }}, 4 Sep 2021
+                                        </button>
+                                    @endif
+                                    
                                 </div>
                                 <div class="tab-content" id="jadual_tabs_content">
                                     <div class="tab-pane fade show active" id="v-pills-rabu" role="tabpanel"

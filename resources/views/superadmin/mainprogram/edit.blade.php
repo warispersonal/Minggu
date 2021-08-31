@@ -33,18 +33,37 @@
                                 <form role="form" id="store-admin" method="POST" action="{{ route('star.updateMainDetail' , $program->id) }}">
                                     @csrf
                                     <div class="form-group mb-3">
+                                        <label>Title (EN)</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control" id="admin-name" name="title" placeholder="Title" value="{{  $program->title }}" type="text" required="">
+                                            <input class="form-control" id="admin-name" name="title" placeholder="Title (EN)" value="{{  $program->title }}" type="text" required="">
                                         </div>
-                                        @if ($errors->has('name'))
+                                        @if ($errors->has('title'))
                                             <span class="invalid-feedback" style="display: block;" role="alert">
                                                 <strong>{{ $errors->first('title') }}</strong>
                                             </span>
                                         @endif
                                     </div>
                                     <div class="form-group mb-3">
+                                        <label>Title (BM)</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control" id="admin-name" name="title_bm" placeholder="Title (BM)" value="{{  $program->title_bm }}" type="text" required="">
+                                        </div>
+                                        @if ($errors->has('title_bm'))
+                                            <span class="invalid-feedback" style="display: block;" role="alert">
+                                                <strong>{{ $errors->first('title_bm') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label>Description (EN)</label>
                                         <div class="input-group input-group-alternative">
                                             <textarea class="form-control" name="description" id="admin-email" >{{$program->description}}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label>Description (BM)</label>
+                                        <div class="input-group input-group-alternative">
+                                            <textarea class="form-control" name="description_bm" id="admin-email_bm" >{{$program->description_bm}}</textarea>
                                         </div>
                                     </div>
 

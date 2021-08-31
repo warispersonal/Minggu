@@ -33,7 +33,7 @@
                 <div id="jom_kira_tabs">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            <button class="nav-link active ps-0" id="nav-home-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
                                     aria-selected="true">Pra-MSD
                             </button>
@@ -70,10 +70,10 @@
                                 <div class="col-lg-7 ">
                                     <form method="post" action="{{route('step1.form')}}" class="rm-form">
                                         @csrf
-                                        <div class="row ps-lg-5">
+                                        <div class="row ">
                                             @foreach($section1 as $item)
                                                 <div class="col-6">
-                                                    <div class="mb-3 d-flex align-items-center">
+                                                    <div class="mb-3 d-flex align-items-center justify-content-end">
                                                         <span>{{$item->title}}</span>
                                                         <label for="">RM</label>
                                                         <input
@@ -88,7 +88,7 @@
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col-6">
-                                                <h2 class="text-white">Jumlah Simpanan</h2>
+                                                <h3 class="text-white text-end">Jumlah Simpanan</h3>
                                             </div>
                                             <div class="col-6">
                                                 <div class="d-flex justify-content-end flex-md-nowrap flex-wrap">
@@ -96,7 +96,7 @@
                                                     <input type="text" name="final_result" id="final_result"
                                                            class="rm-imputs-2" readonly>
                                                 </div>
-                                                <div class="text-end mt-3 ms-auto ">
+                                                <div class="text-end my-3 ms-auto ">
                                                     <input type="submit" value="Hantar">
                                                 </div>
                                             </div>
@@ -126,9 +126,9 @@
                                 <div class="col-lg-7 ">
                                     <form method="post" action="{{route('step2.form')}}" class="rm-form">
                                         @csrf
-                                        <div class="row ps-lg-5">
+                                        <div class="row">
                                             @foreach($section2 as $item)
-                                                <div class="row ps-lg-5">
+                                               
                                                     <div class="col-6">
                                                         <p>
                                                             {{$item->title}}
@@ -146,18 +146,17 @@
 
                                                     </div>
 
-                                                </div>
                                             @endforeach
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col-6">
-                                                <h2 class="text-white">Jumlah Simpanan</h2>
+                                                <h3 class="text-white">Jumlah Simpanan</h3>
                                             </div>
                                             <div class="col-6">
-                                                <div class="d-flex justify-content-end flex-md-nowrap flex-wrap">
+                                                <div class="d-flex justify-content-end flex-md-nowrap flex-wrap mb-3">
                                                     <h2 class="text-white mb-0">RM</h2>
                                                     <input type="text" id="final_result_2" class="rm-imputs-2" readonly>
-                                                    <div class="text-end mt-3 mt-md-0">
+                                                    <div class="text-end mt-3 ms-3 mt-md-0">
                                                         <input type="submit" value="Hantar">
                                                     </div>
                                                 </div>
@@ -420,7 +419,7 @@
                                                             <input type="text" id="final_result_3" class="rm-imputs-2"
                                                                    readonly>
                                                         </div>
-                                                        <div class="text-end ms-auto mt-3">
+                                                        <div class="text-end ms-auto my-3">
                                                             <input type="submit" value="Hantar">
                                                         </div>
                                                     </div>
@@ -447,6 +446,11 @@
         let windowSize = window.matchMedia("(max-width: 991px)")
         if (windowSize.matches) {
             document.getElementById("owlCarousel").classList.add("owl-carousel")
+            $(".nav-link").click(function () {
+                $('.nav-link').removeClass('active');
+                $(this).addClass('active');
+            });
+
         }
         $(document).ready(function () {
             $(".owl-carousel").owlCarousel({
@@ -455,11 +459,7 @@
                 items: 3,
 
             });
-            $(".nav-link").click(function () {
-                $('.nav-link').removeClass('active');
-                $(this).addClass('active');
-            });
-
+            
         });
 
     </script>

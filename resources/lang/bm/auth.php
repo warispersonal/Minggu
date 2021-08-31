@@ -27,5 +27,5 @@ return [
     'registerStatement' => '*Dengan menyerahkan borang pendaftaran ini, peserta dengan ini setuju untuk mengizinkan PNB, dan PNB berhak mengumpulkan dan memproses data peribadi peserta, jika ada, untuk tujuan periklanan, publisiti atau penyelidikan, sesuai dengan kehendak undang-undang yang relevan, tanpa sebarang biaya atau pampasan.',
     'terms' => 'Saya bersetuju untuk menerima promosi e-mel',
     'send' => 'Hantar',
-    'forgotPassword' => 'Terlupa Kata Laluan',
+    'forgotPassword' => 'Terlupa Kata Laluan', 
 ];

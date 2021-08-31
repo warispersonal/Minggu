@@ -18,7 +18,9 @@ class FAQController extends Controller
     {
         $faq = FAQ::all()->first();
         $faq['minggu_saham_digital'] = $request->minggu_saham_digital;
+        $faq['minggu_saham_digital_bm'] = $request->minggu_saham_digital_bm;
         $faq['pertandingan'] = $request->pertandingan;
+        $faq['pertandingan_bm'] = $request->pertandingan_bm;
         $faq->save();
         return redirect()->back();
     }
@@ -33,7 +35,9 @@ class FAQController extends Controller
     {
         $faq = FAQ::all()->first();
         $faq['minggu_saham_digital'] = $request->minggu_saham_digital;
+        $faq['minggu_saham_digital_bm'] = $request->minggu_saham_digital_bm;
         $faq['pertandingan'] = $request->pertandingan;
+        $faq['pertandingan_bm'] = $request->pertandingan_bm;
         $faq->save();
         return redirect()->back();
     }

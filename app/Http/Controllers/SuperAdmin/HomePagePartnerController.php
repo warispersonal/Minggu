@@ -34,7 +34,9 @@ class HomePagePartnerController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'name_bm' => 'required',
             'description' => 'required',
+            'description_bm' => 'required',
             'video_link' => 'required',
             'home_logo' => 'mimes:jpg,bmp,png',
             'details_logo' => 'mimes:jpg,bmp,png',
@@ -49,7 +51,9 @@ class HomePagePartnerController extends Controller
             $partner['details_logo'] = $details_logo;
         }
         $partner['name'] = $request->name;
+        $partner['name_bm'] = $request->name_bm;
         $partner['description'] = $request->description;
+        $partner['description_bm'] = $request->description_bm;
         $partner['video_link'] = $request->video_link;
         $partner['slug'] = Str::slug($request->name, "-");
         $partner->save();

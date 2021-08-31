@@ -118,6 +118,7 @@ class ProgramController extends Controller
             'date' => 'required',
             'time' => 'required',
             'description' => 'required',
+            'description_bm' => 'required',
             'main_program' => 'required',
         ]);
         $program = Program::find($id);
@@ -126,9 +127,11 @@ class ProgramController extends Controller
             $program->thumbnail_image = $thumbnail_image;
         }
         $program->name = $request->name;
+        $program->name_bm = $request->name_bm;
         $program->date = $request->date;
         $program->time = $request->time;
         $program->description = $request->description;
+        $program->description_bm = $request->description_bm;
         $program->video_link = $request->video_link;
         $program->main_program_id = $request->main_program;
         $program->partner_id = $request->partner_id;
@@ -142,6 +145,7 @@ class ProgramController extends Controller
             'date' => 'required',
             'time' => 'required',
             'description' => 'required',
+            'description_bm' => 'required',
             'main_program' => 'required',
         ]);
         $program = Program::find($id);
@@ -150,9 +154,11 @@ class ProgramController extends Controller
             $program->thumbnail_image = $thumbnail_image;
         }
         $program->name = $request->name;
+        $program->name_bm = $request->name_bm;
         $program->date = $request->date;
         $program->time = $request->time;
         $program->description = $request->description;
+        $program->description_bm = $request->description_bm;
         $program->video_link = $request->video_link;
         $program->main_program_id = $request->main_program;
         $program->partner_id = $request->partner_id;

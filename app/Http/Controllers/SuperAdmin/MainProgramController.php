@@ -68,12 +68,15 @@ class MainProgramController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'title' => 'required',
+            'title_bm' => 'required',
        ]);
         if($validator->passes()){
             MainProgram::find($id)
                 ->update([
                     'title' => $request->title,
+                    'title_bm' => $request->title_bm,
                     'description' => $request->description,
+                    'description_bm' => $request->description_bm,
                 ]);
             return redirect()->route('star.MainDetail')->with(['msg'=>'Main program has been updated']);
         }else{

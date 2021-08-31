@@ -16,8 +16,16 @@
             <form method="post" action="{{route('admin.programs.update', $program->id)}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group mb-3">
+                    <label>Program Name (EN)</label>
                     <div class="input-group input-group-alternative">
-                        <input class="form-control" name="name" value="{{$program->name}}" placeholder="Program Name"
+                        <input class="form-control" name="name" value="{{$program->name}}" placeholder="Program Name (EN)"
+                               type="text" required="">
+                    </div>
+                </div> 
+                <div class="form-group mb-3">
+                    <label>Program Name (BM)</label>
+                    <div class="input-group input-group-alternative">
+                        <input class="form-control" name="name_bm" value="{{$program->name_bm}}" placeholder="Program Name (BM)"
                                type="text" required="">
                     </div>
                 </div>
@@ -51,8 +59,15 @@
                     </div>
                 </div>
                 <div class="form-group mb-3">
+                    <label>Description (EN)</label>
                     <div class="input-group input-group-alternative">
-                        <textarea class="form-control" name="description" required placeholder="Description">{{$program->description}}</textarea>
+                        <textarea class="form-control" name="description" required placeholder="Description (EN)">{{$program->description}}</textarea>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label>Description (BM)</label>
+                    <div class="input-group input-group-alternative">
+                        <textarea class="form-control" name="description_bm" required placeholder="Description (BM)">{{$program->description_bm}}</textarea>
                     </div>
                 </div>
                 <div class="form-group mb-3">

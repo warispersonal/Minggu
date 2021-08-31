@@ -30,7 +30,7 @@
                             Anda boleh mendapatkan khidmat nasihat dan rundingan peribadi selama 30 minit dengan
                             penasihat-penasihat dari ASNB, AmBank, Bank Islam, CIMB & RHB. Tetapkan awal sesi anda!
                         </p>
-                        <div class="khidmat_images">
+                        <div class="khidmat_images mb-3">
                             <img src="{{asset('assets/img/ambank.png')}}" class="img-fluid" alt="">
                             <img src="{{asset('assets/img/bankislam.png')}}" class="img-fluid" alt="">
                             <img src="{{asset('assets/img/climb.png')}}" class="img-fluid" alt="">
@@ -42,7 +42,7 @@
                         <p>Penasihat akan berkongsi tentang faedah pembiayaan ASB dan cara memohonnya</p>
                         <h2>Unit Amanah ASNB</h2>
                         <p>Khidmat nasihat peribadi mengenai perancangan kewangan melalui Unit Amanah ASNB</p>
-                        <button id="tetapkan_btn"  onclick="showForm()" class="theme-btn">Tetapkan Temujanji Anda Sekarang ></button>
+                        <button id="tetapkan_btn"  onclick="showForm()" class="theme-btn mt-3">Tetapkan Temujanji Anda Sekarang ></button>
                     </div>
                     <div class="col-lg-8 text-white" id="tetapkan_section">
                         <form action="">
@@ -50,25 +50,33 @@
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Tetapkan temujanji 1-1 anda</h3>
                                     <div class="mb-3">
-                                        <input type="text" name="" id="" placeholder="Nama">
+                                        <input type="text" class="custom-input" name="" id="" placeholder="Nama">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="email" name="" id="" placeholder="E-mel">
+                                        <input type="email" class="custom-input" name="" id="" placeholder="E-mel">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" name="" id="" placeholder="Nombor Telefon">
+                                        <input type="text" class="custom-input" name="" id="" placeholder="Nombor Telefon">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" name="" id="" placeholder="Agensi yang anda ingin menempah">
+                                        <input type="text" class="custom-input" name="" id="" placeholder="Bank">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" name="" id="" placeholder="Topik yang diminati">
+                                        <input type="text" class="custom-input" name="" id="" placeholder="Ejen">
+                                    </div>
+                                    <div class="mb-5">
+                                        <input type="text" class="custom-input" name="" id="" placeholder="Topik yang diminati">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" name="" id="" placeholder="Ejen">
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                          <label class="form-check-label" for="flexCheckDefault">
+                                            Saya bersetuju dengan terma dan syarat khidmat
+                                          </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 px-5">
+                                <div class="col-md-6 px-md-5">
                                     <h5 class="mb-3">Tarikh</h5>
                                     <div id="datepicker" data-date="12/03/2012"></div>
                                     <input type="hidden" id="my_hidden_input">

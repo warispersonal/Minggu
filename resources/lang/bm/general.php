@@ -13,6 +13,18 @@ return [
     |
     */
 
+    // MSD - live Text 
+    'social_heading' => 'Boleh juga ditonton menerusi:',
     
-
+    // Program Page Text
+    'msd_btn_text' => 'Tonton semu episod lalo',
+    'program' => 'Program',
+    'schedule' => 'Jadual',
+    'wednesday' => 'Rabu',
+    'thursday' => 'Khamis',
+    'friday' => 'Jumaat',
+    'saturday' => 'Sabtu',
+    'sunday' => 'Ahad',
+    'monday' => 'Isnin',
+    'tuesday' => 'Selasa',
 ];

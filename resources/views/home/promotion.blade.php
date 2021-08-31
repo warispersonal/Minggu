@@ -41,7 +41,7 @@
                                                 type="button" role="tab"
                                                 aria-controls="pills-{{$partner->id}}"
                                                 aria-selected="false">
-                                            <img class="promosi-image-details-page" src="{{$partner->store_logo}}" alt="">
+                                            <img class="promosi-image-details-page promosi-img-logo" src="{{$partner->store_logo}}" alt="">
                                         </button>
                                     </li>
                                 @endforeach
