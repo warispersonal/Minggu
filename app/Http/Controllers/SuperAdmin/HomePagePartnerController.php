@@ -40,6 +40,7 @@ class HomePagePartnerController extends Controller
             'video_link' => 'required',
             'home_logo' => 'mimes:jpg,bmp,png',
             'details_logo' => 'mimes:jpg,bmp,png',
+            'promosi_image' => 'mimes:jpg,bmp,png',
         ]);
         $partner = Partner::find($id);
         if ($request->home_logo) {
@@ -49,6 +50,10 @@ class HomePagePartnerController extends Controller
         if ($request->details_logo) {
             $details_logo = $this->uploadMediaFile($request, 'details_logo', FileConstant::DETAIL_LOGO);
             $partner['details_logo'] = $details_logo;
+        }
+        if ($request->promosi_image) {
+            $promosi_image = $this->uploadMediaFile($request, 'promosi_image', FileConstant::PROMOSI_IMAGE);
+            $partner['promosi_image'] = $promosi_image;
         }
         $partner['name'] = $request->name;
         $partner['name_bm'] = $request->name_bm;

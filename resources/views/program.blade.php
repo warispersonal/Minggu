@@ -34,7 +34,7 @@
                                     <h1 id="program" class="active_tab">{{ __('general.program') }}</h1>
                                     <h1 id="jadual">{{ __('general.schedule') }}</h1>
                                 @endif
-                                
+
                             </div>
                             @if(Config::get('app.locale') == 'en')
                                 <a href="{{route('user.msdLive')}}" class="tonton-btn m-0 d-none d-lg-block">{{ __('general.msd_btn_text') }}</a>
@@ -118,7 +118,7 @@
                                                 aria-controls="v-pills-selasa" aria-selected="false">{{ __('general.tuesday') }}, 4 Sep 2021
                                         </button>
                                     @endif
-                                    
+
                                 </div>
                                 <div class="tab-content" id="jadual_tabs_content">
                                     <div class="tab-pane fade show active" id="v-pills-rabu" role="tabpanel"

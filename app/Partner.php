@@ -33,6 +33,11 @@ class Partner extends Model
         return asset(FileConstant::DETAIL_LOGO . '/' . $this->details_logo);
     }
 
+    public function getPromosiLogoAttribute()
+    {
+        return asset(FileConstant::PROMOSI_IMAGE . '/' . $this->promosi_image);
+    }
+
     public function setSlugAttribute(){
         $this->attributes['slug'] = Str::slug($this->name , "-");
     }

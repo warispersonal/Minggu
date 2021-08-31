@@ -104,6 +104,20 @@
 
 
                                     <div class="form-group mb-3">
+                                        <label>Promosi Page Logo</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control"  name="promosi_image" type="file">
+                                        </div>
+                                        @if ($errors->has('promosi_image'))
+                                            <span class="invalid-feedback" style="display: block;" role="alert">
+                                                <strong>{{ $errors->first('promosi_image') }}</strong>
+                                            </span>
+                                        @endif
+                                        <img src="{{$partner->promosi_logo}}" />
+                                    </div>
+
+
+                                    <div class="form-group mb-3">
                                         <label>Details Page Logo</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control"  name="details_logo" type="file">
