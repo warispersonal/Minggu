@@ -264,6 +264,13 @@
                                                required>
                                     </div>
                                 </div>
+
+                                <div class="form-group mb-3">
+                                    <div class="input-group input-group-alternative">
+                                        <input class="form-control" name="title_bm" placeholder="Link URL (BM)" type="text"
+                                               required>
+                                    </div>
+                                </div>
                                 <div class="text-right">
                                     <button type="submit" id="admin-store" class="btn btn-primary my-2">Create</button>
                                 </div>

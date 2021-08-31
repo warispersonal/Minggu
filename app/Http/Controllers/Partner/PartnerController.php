@@ -35,6 +35,7 @@ class PartnerController extends Controller
         $linkItem = new PartnerLink();
         $linkItem->partner_id = Auth::guard('partner')->id();
         $linkItem->title = $request->title;
+        $linkItem->title_bm = $request->title_bm;
         $linkItem->link = $request->link;
         $linkItem->save();
         return redirect()->back();

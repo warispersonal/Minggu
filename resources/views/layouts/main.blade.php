@@ -95,10 +95,15 @@
             <i id="close_btn" class="bi bi-x"></i>
         </div>
         <ul class="mb-3">
-            @guest
+            @guest('user')
                 <li><a id="mobile_register" class="pop-btns">{{ __('auth.register') }}</a></li>
                 <li><a id="mobile_login" class="pop-btns">{{ __('auth.login') }}</a></li>
             @endguest
+            @if(\Illuminate\Support\Facades\Auth::guard('user')->check())
+                <li> {{Auth::guard('user')->user()->name}} </li>
+                <li><a href="{{route('user.logout')}}" style="color: blue !important;"
+                       class="dropdown-item">{{ __('auth.logout') }}</a></li>
+            @endif
         </ul>
         <ul>
             @foreach($headerMenu as $menu)

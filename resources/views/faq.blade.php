@@ -38,11 +38,11 @@
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active pt-5" id="nav-home" role="tabpanel"
                                      aria-labelledby="nav-home-tab">
-                                    {!! $faq['minggu_saham_digital'] !!}
+                                    {!! Config::get('app.locale') == 'en' ? $faq['minggu_saham_digital'] : $faq['minggu_saham_digital_bm'] !!}
                                 </div>
                                 <div class="tab-pane fade pt-5" id="nav-profile" role="tabpanel"
                                      aria-labelledby="nav-profile-tab">
-                                    {!! $faq['pertandingan'] !!}
+                                    {!! Config::get('app.locale') == 'en' ? $faq['pertandingan'] : $faq['pertandingan_bm'] !!}
                                 </div>
 
                             </div>

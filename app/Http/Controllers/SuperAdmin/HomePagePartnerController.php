@@ -124,6 +124,7 @@ class HomePagePartnerController extends Controller
         $linkItem = new PartnerLink();
         $linkItem->partner_id = $request->partner;
         $linkItem->title = $request->title;
+        $linkItem->title_bm = $request->title_bm;
         $linkItem->link = $request->link;
         $linkItem->save();
         return redirect()->back();

@@ -78,7 +78,7 @@
                                     </div>
                                     <div class="my-4">
                                         <p class="justify text-dark">
-                                            {{$partner->description}}
+                                            {{Config::get('app.locale') == 'en' ? $partner->description:$partner->description_bm }}
                                         </p>
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@
                                     </div>
                                     <div class="custom-links">
                                         @foreach($partner->links as $link)
-                                            <a target="_blank"  href="{{$link->link}}">{{$link->title}}</a>
+                                            <a target="_blank"  href="{{$link->link}}">{{Config::get('app.locale') == 'en' ? $link->title : $link->title_bm}}</a>
                                         @endforeach
                                     </div>
                                 </div>
