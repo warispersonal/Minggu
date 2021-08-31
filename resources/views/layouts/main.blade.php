@@ -200,20 +200,45 @@
                     @csrf
                     <div class="mb-3">
                         <input class="custom_inputs" type="text" name="full_name" placeholder="{{ __('auth.name') }}">
+                        @if ($errors->has('full_name'))
+                            <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('full_name') }}</strong>
+                                    </span>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <input class="custom_inputs" type="email" name="email" placeholder="{{ __('auth.email') }}">
+                        @if ($errors->has('email'))
+                            <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <input class="custom_inputs" type="text" name="phone"
                                placeholder="{{ __('auth.phoneNumber') }}">
+                        @if ($errors->has('phone'))
+                            <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <input class="custom_inputs" type="text" name="ic_number" placeholder="{{ __('auth.icn') }}">
+                        @if ($errors->has('ic_number'))
+                            <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('ic_number') }}</strong>
+                                    </span>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <input class="custom_inputs" type="password" name="password"
                                placeholder="{{ __('auth.password') }}">
+                        @if ($errors->has('password'))
+                            <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <div class="form-check">
@@ -261,6 +286,7 @@
 @endif
 
 @stack('js')
+
 
 </body>
 </html>
