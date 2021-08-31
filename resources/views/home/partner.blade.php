@@ -3,13 +3,15 @@
 @push('style')
     <style>
         .main-bg {
-            background-color: #FFC600;
+            background-color: {{$partner->bg_color ?? "blue"}} !important;
         }
 
         .mobile-header {
             background-color: #FFC600;
         }
+
     </style>
+
 @endpush
 
 @section('content')

@@ -25,10 +25,9 @@
                         <img src="{{asset('assets/img/nasihat.png')}}" class="img-fluid mt-5 d-none d-lg-inline-block" alt="">
                     </div>
                     <div class="col-lg-8 text-white" id="khidmat_nasihat_section">
-                        <h2>Apa itu Khidmat Nasihat 1-1?</h2>
+                        <h2>{{ __('general.khidmat1') }}</h2>
                         <p>
-                            Anda boleh mendapatkan khidmat nasihat dan rundingan peribadi selama 30 minit dengan
-                            penasihat-penasihat dari ASNB, AmBank, Bank Islam, CIMB & RHB. Tetapkan awal sesi anda!
+                            {{ __('general.khidmat2') }}
                         </p>
                         <div class="khidmat_images mb-3">
                             <img src="{{asset('assets/img/ambank.png')}}" class="img-fluid" alt="">
@@ -36,51 +35,50 @@
                             <img src="{{asset('assets/img/climb.png')}}" class="img-fluid" alt="">
                             <img src="{{asset('assets/img/rhb.png')}}" class="img-fluid" alt="">
                         </div>
-                        <p>Penasihat daripada Ejen Bank kami yang pakar sedia membantu anda mengenai perkara-perkara
-                            berikut:</p>
-                        <h2>Pembiayaan ASB</h2>
-                        <p>Penasihat akan berkongsi tentang faedah pembiayaan ASB dan cara memohonnya</p>
-                        <h2>Unit Amanah ASNB</h2>
-                        <p>Khidmat nasihat peribadi mengenai perancangan kewangan melalui Unit Amanah ASNB</p>
-                        <button id="tetapkan_btn"  onclick="showForm()" class="theme-btn mt-3">Tetapkan Temujanji Anda Sekarang ></button>
+                        <p>{{ __('general.khidmat3') }}</p>
+                        <h2>{{ __('general.khidmat4') }}</h2>
+                        <p>{{ __('general.khidmat5') }}</p>
+                        <h2>{{ __('general.khidmat6') }}</h2>
+                        <p>{{ __('general.khidmat7') }}</p>
+                        <button id="tetapkan_btn"  onclick="showForm()" class="theme-btn mt-3">{{ __('general.khidmat8') }} ></button>
                     </div>
                     <div class="col-lg-8 text-white" id="tetapkan_section">
                         <form action="">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">Tetapkan temujanji 1-1 anda</h3>
+                                    <h3 class="mb-3">{{ __('general.khidmat9') }}</h3>
                                     <div class="mb-3">
-                                        <input type="text" class="custom-input" name="" id="" placeholder="Nama">
+                                        <input type="text" class="custom-input" name="" id="" placeholder="{{ __('general.khidmat13') }}">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="email" class="custom-input" name="" id="" placeholder="E-mel">
+                                        <input type="email" class="custom-input" name="" id="" placeholder="{{ __('general.khidmat14') }}">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" class="custom-input" name="" id="" placeholder="Nombor Telefon">
+                                        <input type="text" class="custom-input" name="" id="" placeholder="{{ __('general.khidmat15') }}">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" class="custom-input" name="" id="" placeholder="Bank">
+                                        <input type="text" class="custom-input" name="" id="" placeholder="{{ __('general.khidmat16') }}">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" class="custom-input" name="" id="" placeholder="Ejen">
+                                        <input type="text" class="custom-input" name="" id="" placeholder="{{ __('general.khidmat17') }}">
                                     </div>
                                     <div class="mb-5">
-                                        <input type="text" class="custom-input" name="" id="" placeholder="Topik yang diminati">
+                                        <input type="text" class="custom-input" name="" id="" placeholder="{{ __('general.khidmat18') }}">
                                     </div>
                                     <div class="mb-3">
                                         <div class="form-check">
                                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                           <label class="form-check-label" for="flexCheckDefault">
-                                            Saya bersetuju dengan terma dan syarat khidmat
+                                              {{ __('general.khidmat10') }}
                                           </label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 px-md-5">
-                                    <h5 class="mb-3">Tarikh</h5>
+                                    <h5 class="mb-3">{{ __('general.khidmat12') }}</h5>
                                     <div id="datepicker" data-date="12/03/2012"></div>
                                     <input type="hidden" id="my_hidden_input">
-                                    <h5 class="mt-3">Masa</h5>
+                                    <h5 class="mt-3">{{ __('general.khidmat19') }}</h5>
                                     <div class="d-flex">
                                         <div class="owl-carousel time-piker">
                                             <div>12.00 AM</div>
@@ -108,12 +106,12 @@
                                             <div>10.00 PM</div>
                                             <div>11.00 PM</div>
                                         </div>
-                                        <input class="submit-btn ms-2" type="submit" value="Hantar">
+                                        <input class="submit-btn ms-2" type="submit" value="{{ __('general.khidmat20') }}">
                                     </div>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <button id="back_btn" onclick="backButton()"><i class="bi bi-chevron-left"></i>Kembali</button>
+                                <button id="back_btn" onclick="backButton()"><i class="bi bi-chevron-left"></i>{{ __('general.khidmat11') }}</button>
                             </div>
                         </form>
                     </div>

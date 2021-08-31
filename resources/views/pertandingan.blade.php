@@ -37,12 +37,7 @@
                     </div>
                     <div class="col-lg-5  order-2 order-lg-4">
                         <div class="side-text">
-                            <h1>Hadiah-hadiah
-                                Bernilai Lebih
-                                Daripada
-                                <span class="oyen">RM500,000</span>
-                                Untuk
-                                Dimenangi</h1>
+                            <h1>{!! __('general.pertandingan') !!}</h1>
                         </div>
                     </div>
 

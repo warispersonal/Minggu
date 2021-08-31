@@ -60,10 +60,7 @@
                                         <div class="order-3 order-lg-2 ">
                                             <h1 class="text-white text-center mt-5">Pra-MSD</h1>
                                             <h4 class="text-white text-center mb-3">22 Okt - 16 Nov 2021</h4>
-                                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta
-                                                possimus illum necessitatibus fuga voluptatum? Quia similique eum unde
-                                                commodi, aliquam adipisci magnam excepturi!</p>
+                                            <p class="text-white text-center">{{ __('general.jom-kira-doit') }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -116,10 +113,7 @@
                                         <div class="order-3 order-lg-2 ">
                                             <h1 class="text-white text-center mt-5">Rakan Korporat</h1>
                                             <h4 class="text-white text-center mb-3">22 Okt - 23 Nov 2021</h4>
-                                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta
-                                                possimus illum necessitatibus fuga voluptatum? Quia similique eum unde
-                                                commodi, aliquam adipisci magnam excepturi!</p>
+                                            <p class="text-white text-center">{{ __('general.jom-kira-doit') }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -128,23 +122,23 @@
                                         @csrf
                                         <div class="row">
                                             @foreach($section2 as $item)
-                                               
-                                                    <div class="col-6">
-                                                        <p>
-                                                            {{$item->title}}
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div class="mb-3 d-flex">
-                                                            <label for="">RM</label>
-                                                            <input
-                                                                {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step2-fields only-decimal-integer-number"
-                                                                type="text"
-                                                                value="{{$item->status == 1 ? $item->correct_value : old('step_2_'.$item->id)}}"
-                                                                name="step_2_{{$item->id}}">
-                                                        </div>
 
+                                                <div class="col-6">
+                                                    <p>
+                                                        {{$item->title}}
+                                                    </p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="mb-3 d-flex">
+                                                        <label for="">RM</label>
+                                                        <input
+                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step2-fields only-decimal-integer-number"
+                                                            type="text"
+                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_2_'.$item->id)}}"
+                                                            name="step_2_{{$item->id}}">
                                                     </div>
+
+                                                </div>
 
                                             @endforeach
                                         </div>
@@ -177,10 +171,7 @@
                                         <div class="order-3 order-lg-2 ">
                                             <h1 class="text-white text-center mt-5">MSD Live</h1>
                                             <h4 class="text-white text-center mb-3">17 - 23 November 2021</h4>
-                                            <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta
-                                                possimus illum necessitatibus fuga voluptatum? Quia similique eum unde
-                                                commodi, aliquam adipisci magnam excepturi!</p>
+                                            <p class="text-white text-center">{{ __('general.jom-kira-doit') }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -194,37 +185,37 @@
                                                 <button class="nav-link active" id="v-pills-rabu-tab"
                                                         data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-rabu" type="button" role="tab"
-                                                        aria-controls="v-pills-rabu" aria-selected="true">Rabu, 17 Nov
+                                                        aria-controls="v-pills-rabu" aria-selected="true">{{ __('general.wednesday') }}, 17 Nov
                                                     2021
                                                 </button>
                                                 <button class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-khamis" type="button" role="tab"
-                                                        aria-controls="v-pills-khamis" aria-selected="false">Khamis, 18
+                                                        aria-controls="v-pills-khamis" aria-selected="false">{{ __('general.thursday') }}, 18
                                                     nov 2021
                                                 </button>
                                                 <button class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-jumaat" type="button" role="tab"
-                                                        aria-controls="v-pills-jumaat" aria-selected="false">Jumaat, 19
+                                                        aria-controls="v-pills-jumaat" aria-selected="false">{{ __('general.friday') }}, 19
                                                     Nov 2021
                                                 </button>
                                                 <button class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-sabtu" type="button" role="tab"
-                                                        aria-controls="v-pills-sabtu" aria-selected="false">Sabtu, 20
+                                                        aria-controls="v-pills-sabtu" aria-selected="false">{{ __('general.saturday') }}, 20
                                                     Nov 2021
                                                 </button>
                                                 <button class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-ahad" type="button" role="tab"
-                                                        aria-controls="v-pills-ahad" aria-selected="false">Ahad, 21 Nov
+                                                        aria-controls="v-pills-ahad" aria-selected="false">{{ __('general.sunday') }}, 21 Nov
                                                     2021
                                                 </button>
                                                 <button class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-isinin" type="button" role="tab"
-                                                        aria-controls="v-pills-isinin" aria-selected="false">Isinin, 22
+                                                        aria-controls="v-pills-isinin" aria-selected="false">{{ __('general.monday') }}, 22
                                                     Nov 2021
                                                 </button>
                                                 <button class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-selasa" type="button" role="tab"
-                                                        aria-controls="v-pills-selasa" aria-selected="false">Selasa, 23
+                                                        aria-controls="v-pills-selasa" aria-selected="false">{{ __('general.tuesday') }}, 23
                                                     Nov 2021
                                                 </button>
                                             </div>
@@ -459,7 +450,7 @@
                 items: 3,
 
             });
-            
+
         });
 
     </script>
