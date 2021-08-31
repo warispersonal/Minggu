@@ -9,5 +9,6 @@ class FileConstant
     const DETAIL_LOGO = 'images/detail_logo';
     const PROGRAM_THUMBNAIL = 'images/program_thumbnail';
     const PROMOSI_IMAGE = 'images/promosi_image';
+    const PARTNER_PROMOTION = 'images/partner_promotion';
 }
 

@@ -15,6 +15,10 @@ class Partner extends Model
         return $this->hasMany(PartnerSlider::class);
     }
 
+    public function promotions(){
+        return $this->hasMany(PartnerPromotion::class);
+    }
+
     public function programs(){
         return $this->hasMany(Program::class);
     }

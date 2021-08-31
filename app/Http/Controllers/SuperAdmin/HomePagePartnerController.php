@@ -6,6 +6,7 @@ use App\Constant\FileConstant;
 use App\Http\Controllers\Controller;
 use App\Partner;
 use App\PartnerLink;
+use App\PartnerPromotion;
 use App\PartnerSlider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -89,12 +90,30 @@ class HomePagePartnerController extends Controller
     }
 
 
+    public function promotion_delete($id)
+    {
+        $link = PartnerPromotion::find($id);
+        $link->delete();
+        return redirect()->back();
+    }
+
+
     public function slider_store(Request $request)
     {
         $sliderImage = $this->uploadMediaFile($request, 'slider', FileConstant::PARTNER_SLIDER);
         $slider = new PartnerSlider();
         $slider->partner_id = $request->partner;
         $slider->slider = $sliderImage;
+        $slider->save();
+        return redirect()->back();
+    }
+
+    public function promotion_store(Request $request)
+    {
+        $sliderImage = $this->uploadMediaFile($request, 'slider', FileConstant::PARTNER_PROMOTION);
+        $slider = new PartnerPromotion();
+        $slider->partner_id = $request->partner;
+        $slider->promotion_image = $sliderImage;
         $slider->save();
         return redirect()->back();
     }

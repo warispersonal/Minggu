@@ -8,6 +8,7 @@ use App\Lottery;
 use App\Models\Program;
 use App\Models\Settings;
 use App\Partner;
+use App\PartnerPromotion;
 use App\PartnerSlider;
 use App\User;
 use App\UserLottery;
@@ -33,7 +34,7 @@ class HomeController extends Controller
     public function promotion()
     {
         $partners = Partner::all();
-        $sliders = PartnerSlider::all();
+        $sliders = PartnerPromotion::all();
         return view("home.promotion", compact('partners', 'sliders'));
     }
 
