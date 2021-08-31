@@ -55,6 +55,10 @@
                                         @endif
                                     </div>
                                     <div class="form-group mb-3">
+                                        <label for="theme-color">BG Color</label>
+                                        <input type="color" class="form-control theme-edit" name="bg_color" id="theme-menu-bg" value="{{ $partner->bg_color }}">
+                                    </div>
+                                    <div class="form-group mb-3">
                                         <label>Description (EN)</label>
                                         <div class="input-group input-group-alternative">
                                             <textarea class="form-control" rows="5" name="description" placeholder="Description (EN)" type="text" >{{ $partner->description }}</textarea>

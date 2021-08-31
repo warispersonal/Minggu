@@ -311,12 +311,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('partner.show.slider')}}">
                             <i class="ni ni-ui-04 text-primary"></i> {{ __('Add Slider') }}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('partner.unique.info')}}">
                             <i class="ni ni-palette text-primary"></i> {{ __('Edit (BG Color)') }}
                         </a>
                     </li>

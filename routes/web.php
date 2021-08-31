@@ -195,6 +195,10 @@ Route::prefix('partner')->middleware('auth:partner')->namespace('Partner')->grou
     Route::post('/button/create', [PartnerController::class, 'button_store'])->name('partner.button.store');
     Route::get('/button/delete/{id}', [PartnerController::class, 'button_delete'])->name('partner.button.delete');
 
+    Route::get('/slider', [PartnerController::class, 'showSliders'])->name('partner.show.slider');
+    Route::post('/slider/create', [PartnerController::class, 'slider_store'])->name('partner.slider.store');
+    Route::get('/slider/delete/{id}', [PartnerController::class, 'slider_delete'])->name('partner.slider.delete');
+
 
 });
 

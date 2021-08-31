@@ -62,6 +62,7 @@ class HomePagePartnerController extends Controller
         $partner['description_bm'] = $request->description_bm;
         $partner['video_link'] = $request->video_link;
         $partner['slug'] = Str::slug($request->name, "-");
+        $partner['bg_color'] = $request->bg_color;
         $partner->save();
         return redirect()->route('stars.homepage.index')->with('success_message', 'Partner Details Update');
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Partner;
 use App\PartnerLink;
 use App\PartnerPromotion;
+use App\PartnerSlider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -39,13 +40,38 @@ class PartnerController extends Controller
         return redirect()->back();
     }
 
-
     public function button_delete($id)
     {
         $link = PartnerLink::find($id);
         $link->delete();
         return redirect()->back();
     }
+
+    public function showSliders()
+    {
+        $sliders = PartnerSlider::where('partner_id' , Auth::guard('partner')->id())->get();
+        return view('partner.single.slider', compact('sliders'));
+    }
+
+    public function slider_store(Request $request)
+    {
+        $sliderImage = $this->uploadMediaFile($request, 'slider', FileConstant::PARTNER_SLIDER);
+        $slider = new PartnerSlider();
+        $slider->partner_id = Auth::guard('partner')->id();
+        $slider->slider = $sliderImage;
+        $slider->save();
+        return redirect()->back();
+
+    }
+
+    public function slider_delete($id)
+    {
+        $link = PartnerSlider::find($id);
+        $link->delete();
+        return redirect()->back();
+    }
+
+
 
     public function promotion_store(Request $request)
     {
@@ -100,6 +126,7 @@ class PartnerController extends Controller
         $partner['name_bm'] = $request->name_bm;
         $partner['description'] = $request->description;
         $partner['description_bm'] = $request->description_bm;
+        $partner['bg_color'] = $request->bg_color;
         $partner['video_link'] = $request->video_link;
         $partner['slug'] = Str::slug($request->name, "-");
         $partner->save();
