@@ -61,7 +61,16 @@
         <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
         <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="{{ asset('assets') }}/vendor/jquery-toast/toast.js"></script>
-
+        <script>
+            function clearFormInputField(){
+                $('#store-admin input[type="text"]').val('');
+                $('#store-admin input[type="email"]').val('');
+                $('#store-admin input[type="password"]').val('');
+                $('#store-admin input[type="number"]').val('');
+                $('#store-admin textarea').val('');
+                $('#store-admin select').val('');
+            }
+        </script>
         @stack('js')
 
         <!-- Argon JS -->
@@ -86,6 +95,7 @@
                 });
             </script>
         @endif
+
 
     </body>
 </html>

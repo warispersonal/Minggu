@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ asset('argon') }}/vendor/data-table/datatables.min.css">
 @endpush
 
-@section('content')    
+@section('content')
     <div class="header bg-gradient-primary pb-6 pt-4 pt-md-6">
         <div class="container-fluid">
             <div class="header-body">
@@ -47,7 +47,7 @@
                             </tr>
                         </thead>
                             <tbody>
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -57,7 +57,7 @@
         </div>
 
         <!-- Models Start -->
-        
+
         <!-- Add Admin Modal -->
         <div class="modal fade" id="modal-store-partner" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
             <div class="modal-dialog modal- modal-dialog-centered modal-md" role="document">
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-            </div>   
+            </div>
         </div>
 
         <!-- Models End -->
@@ -131,9 +131,9 @@
     <script src="{{ asset('argon') }}/vendor/js-cookie/js.cookie.js"></script>
     <script src="{{ asset('argon') }}/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
     <script src="{{ asset('argon') }}/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-    
+
     <script src="{{ asset('argon') }}/vendor/data-table/datatables.min.js"></script>
-    
+
     <script type="text/javascript">
         $(document).ready(function() {
             // Show Admins DataTable
@@ -167,7 +167,7 @@
                 $.ajax({
                     url : "{{ route('star.storePartner') }}",
                     method : 'POST',
-                    data : { 
+                    data : {
                         '_token' : '{{ csrf_token() }}',
                         name : $name,
                         email : $email,
@@ -180,7 +180,7 @@
                     },
                     success : function(response){
                         $('#partner-store').prop('disabled' , false)
-                        
+                        clearFormInputField()
                         if($.isEmptyObject(response.error)){
                             $('#store-partner')[0].reset();
                             $('#modal-store-partner').modal('toggle');

@@ -62,7 +62,7 @@
                                         </div>
                                     </div>
                                     <div class="text-right">
-                                        <button type="submit" id="admin-store" class="btn btn-primary my-2">Create</button>
+                                        <button type="submit" id="admin-store" class="btn btn-primary my-2">Update</button>
                                     </div>
                                 </form>
                             </div>
