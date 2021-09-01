@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth\SuperAdmin;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesSuperAdmin;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -36,5 +37,11 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest:superAdmin')->except('logout');
+    }
+
+
+    public function logout(){
+        Auth::guard("superAdmin")->logout();
+        return redirect()->route('star.login');
     }
 }
