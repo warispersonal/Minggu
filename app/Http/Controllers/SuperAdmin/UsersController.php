@@ -29,7 +29,7 @@ class UsersController extends Controller
 
     // Get Partners for DataTable AJAX
     public function getUsers(Request $request){
-    
+
         $partners = User::where('role_id' , 4)->get();
         return Datatables::of($partners)
             ->addColumn('action', function($data){
@@ -38,7 +38,7 @@ class UsersController extends Controller
                     <i class="fas fa-ellipsis-v"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a class="dropdown-item" href="'. route('star.destroyPartner' , $data->id) .'">Delete</a>
+                    <a onclick="return confirm(\'Are you sure you want to delete?\')" class="dropdown-item" href="'. route('star.destroyPartner' , $data->id) .'">Delete</a>
                     </div>
                 </div>';
                 return $dropdown;

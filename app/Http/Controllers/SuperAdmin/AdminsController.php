@@ -89,7 +89,7 @@ class AdminsController extends Controller
             }
             return redirect()->route('star.admins')->with(['msg'=>'Admin details has been updated']);
         }else{
-         return redirect()->route('star.detailAdmin', $id)->withErrors($validator)->withInput();   
+         return redirect()->route('star.detailAdmin', $id)->withErrors($validator)->withInput();
         }
     }
 
@@ -109,7 +109,7 @@ class AdminsController extends Controller
 
     // Get Admins for DataTable AJAX
     public function getAdmins(Request $request){
-    
+
         $admins = User::where('role_id' , 2)->get();
         return Datatables::of($admins)
             ->addColumn('action', function($data){
@@ -119,7 +119,7 @@ class AdminsController extends Controller
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                     <a class="dropdown-item" href="' .route('star.detailAdmin' , $data->id). '">Edit</a>
-                    <a class="dropdown-item" href="'. route('star.destroyAdmin' , $data->id) .'">Delete</a>
+                    <a  onclick="return confirm(\'Are you sure you want to delete?\')" class="dropdown-item" href="'. route('star.destroyAdmin' , $data->id) .'">Delete</a>
                     </div>
                 </div>';
                 return $dropdown;

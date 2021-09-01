@@ -69,6 +69,7 @@
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                         <a class="dropdown-item"
+                                           onclick="return confirm('Are you sure you want to delete?')"
                                            href="{{route('partner.button.delete',$link->id)}}">Delete</a>
                                     </div>
                                 </div>

@@ -33,10 +33,10 @@ class CompititionController extends Controller
             $file = public_path($destinationPath . '/' . $name);
 
             $csv = Reader::createFromPath($destinationPath . '/' . $name, 'r');
-            $csv->setHeaderOffset(0); //set the CSV header offset   
+            $csv->setHeaderOffset(0); //set the CSV header offset
 
             $stmt = Statement::create();
-            
+
             $records = $stmt->process($csv);
 
             foreach ($records as $record) {
@@ -57,7 +57,7 @@ class CompititionController extends Controller
         $user = LotteryFilters::findOrFail($id);
         $user->destroy($id);
         return redirect()->back()->with('msg' , 'Deleted successfully.');
-    
+
     }
 
     // Get Partners for DataTable AJAX
@@ -70,7 +70,7 @@ class CompititionController extends Controller
                     <i class="fas fa-ellipsis-v"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                        <a class="dropdown-item" href="'. route('star.compitition.destroyFilter' , $data->id) .'">Delete</a>
+                        <a onclick="return confirm(\'Are you sure you want to delete?\')" class="dropdown-item" href="'. route('star.compitition.destroyFilter' , $data->id) .'">Delete</a>
                     </div>
                 </div>';
                 return $dropdown;
@@ -96,10 +96,10 @@ class CompititionController extends Controller
 
         $data['winner'] = $user;
         $data['status'] = 'success';
-        
+
         // TODO: Getting Daily Winner Add this Winner into Winners Table
 
         return response()->json($data, 200);
     }
 
-}   
+}

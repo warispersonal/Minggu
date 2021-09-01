@@ -69,6 +69,7 @@
                 $('#store-admin input[type="number"]').val('');
                 $('#store-admin textarea').val('');
                 $('#store-admin select').val('');
+
             }
         </script>
         @stack('js')

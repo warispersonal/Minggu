@@ -189,6 +189,9 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
+            function deleteUser(id){
+                alert(id)
+            }
             // Show Admins DataTable
             $('#adminTable').DataTable({
                 "processing": true,
@@ -259,6 +262,7 @@
                     list.append('<li>' + value + '</li>');
                 });
             }
+
 
         });
     </script>

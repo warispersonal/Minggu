@@ -21,7 +21,7 @@ class PartnersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         return view('superadmin/partners/list');
     }
 
@@ -72,7 +72,7 @@ class PartnersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {   
+    {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'type' => 'required',
@@ -95,7 +95,7 @@ class PartnersController extends Controller
             }
             return redirect()->route('star.partners')->with(['msg'=>'Partner details has been updated']);
         }else{
-         return redirect()->route('star.detailPartner', $id)->withErrors($validator)->withInput();   
+         return redirect()->route('star.detailPartner', $id)->withErrors($validator)->withInput();
         }
     }
 
@@ -115,7 +115,7 @@ class PartnersController extends Controller
 
     // Get Partners for DataTable AJAX
     public function getPartners(Request $request){
-    
+
         $partners = User::where('role_id' , 3)->get();
         return Datatables::of($partners)
             ->addColumn('action', function($data){
@@ -125,7 +125,7 @@ class PartnersController extends Controller
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                     <a class="dropdown-item" href="' .route('star.detailPartner' , $data->id). '">Edit</a>
-                    <a class="dropdown-item" href="'. route('star.destroyPartner' , $data->id) .'">Delete</a>
+                    <a onclick="return confirm(\'Are you sure you want to delete?\')" class="dropdown-item" href="'. route('star.destroyPartner' , $data->id) .'">Delete</a>
                     </div>
                 </div>';
                 return $dropdown;

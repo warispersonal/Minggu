@@ -61,8 +61,7 @@
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                             class="fas fa-ellipsis-v"></i></a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a class="dropdown-item"
-                                           href="{{route('stars.homepage.slide.delete',$slider->id)}}">Delete</a>
+                                        <a onclick="return confirm('Are you sure you want to delete?')" class="dropdown-item" href="{{route('stars.homepage.slide.delete',$slider->id)}}">Delete</a>
                                     </div>
                                 </div>
                             </td>
@@ -109,8 +108,7 @@
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                             class="fas fa-ellipsis-v"></i></a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a class="dropdown-item"
-                                           href="{{route('stars.promotion.delete',$slider->id)}}">Delete</a>
+                                        <a onclick="return confirm('Are you sure you want to delete?')" class="dropdown-item" href="{{route('stars.promotion.delete',$slider->id)}}">Delete</a>
                                     </div>
                                 </div>
                             </td>
@@ -164,8 +162,7 @@
                                         <i class="fas fa-ellipsis-v"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a class="dropdown-item"
-                                           href="{{route('stars.homepage.link.delete',$link->id)}}">Delete</a>
+                                        <a onclick="return confirm('Are you sure you want to delete?')" class="dropdown-item" href="{{route('stars.homepage.link.delete',$link->id)}}">Delete</a>
                                     </div>
                                 </div>
                             </td>

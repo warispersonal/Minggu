@@ -40,6 +40,8 @@ class MainProgramController extends Controller
             MainProgram::create([
                 'title' => $request->title,
                 'description' => $request->description,
+                'title_bm' => $request->title_bm,
+                'description_bm' => $request->description_bm,
             ]);
 			return response()->json(['success'=>'Added New Main Program.']);
         }else{
@@ -110,7 +112,7 @@ class MainProgramController extends Controller
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                     <a class="dropdown-item" href="' .route('star.detailMainDetail' , $data->id). '">Edit</a>
-                    <a class="dropdown-item" href="'. route('star.destroyMainDetail' , $data->id) .'">Delete</a>
+                    <a onclick="return confirm(\'Are you sure you want to delete?\')" class="dropdown-item" href="'. route('star.destroyMainDetail' , $data->id) .'">Delete</a>
                     </div>
                 </div>';
                 return $dropdown;

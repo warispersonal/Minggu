@@ -73,9 +73,20 @@
                                             <input class="form-control" id="title" name="title" placeholder="Title" type="text" required>
                                         </div>
                                     </div>
+                                    <div class="form-group mb-3">
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control" id="title_bm" name="title_bm" placeholder="Title (BM)" type="text" required>
+                                        </div>
+                                    </div>
+
                                     <div  class="form-group mb-3">
                                         <div class="input-group input-group-alternative">
                                             <textarea class="form-control" id="description" name="description" placeholder="Description"></textarea>
+                                        </div>
+                                    </div>
+                                    <div  class="form-group mb-3">
+                                        <div class="input-group input-group-alternative">
+                                            <textarea class="form-control" id="description_bm" name="description_bm" placeholder="Description (BM)"></textarea>
                                         </div>
                                     </div>
                                     <div>
@@ -132,6 +143,8 @@
                 e.preventDefault();
                 var $title = $('#title').val();
                 var $description = $('#description').val();
+                var $title_bm = $('#title_bm').val();
+                var $description_bm = $('#description_bm').val();
                 $.ajax({
                     url : "{{ route('star.storeMainDetail') }}",
                     method : 'POST',
@@ -139,6 +152,9 @@
                         '_token' : '{{ csrf_token() }}',
                         title : $title,
                         description : $description,
+                        title_bm : $title_bm,
+                        description_bm : $description_bm,
+
                     },
                     beforeSend : function(){
                         $('#partner-store').prop('disabled' , true);
