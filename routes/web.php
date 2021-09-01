@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\User\LoginController;
 use App\Http\Controllers\Partner\PartnerController;
 use App\Http\Controllers\SuperAdmin\FAQController;
 use App\Http\Controllers\SuperAdmin\HomePagePartnerController;
@@ -47,6 +48,8 @@ Route::middleware('auth:user')->namespace('User')->group(function () {
     Route::post('step-3-from',[UserController::class, 'step3'])->name('step3.form');
 
 });
+Route::post('/user-login', [LoginController::class, 'user_login'])->name("user_login");
+Route::post('/user-register', [\App\Http\Controllers\Auth\User\RegisterController::class, 'user_register'])->name("user_register");
 
 
 // Routes For Super Admin

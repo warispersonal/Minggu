@@ -12,7 +12,9 @@ use App\PartnerPromotion;
 use App\PartnerSlider;
 use App\User;
 use App\UserLottery;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {

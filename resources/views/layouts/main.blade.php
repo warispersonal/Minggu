@@ -157,15 +157,15 @@
         </div>
         <div class="row">
             <div class="col-8">
-                <form action="{{ url('login') }}" method="POST">
+                <form action="{{route('user_login')}}" method="post">
                     @csrf
                     <div class="mb-3">
                         <input class="custom_inputs" type="email" name="email" placeholder="{{ __('auth.email') }}"
                                value="{{ old('email') }}">
                         @if ($errors->has('email'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
                         @endif
                     </div>
                     <div class="mb-md-5 mb-3">
@@ -196,39 +196,39 @@
         </div>
         <div class="row">
             <div class="col-9">
-                <form action="{{ url('register') }}" method="POST" class="scrol">
+                <form action="{{ route('user_register') }}" method="POST" class="scrol">
                     @csrf
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" name="full_name" placeholder="{{ __('auth.name') }}">
+                        <input class="custom_inputs" type="text" value="{{old('full_name')}}" name="full_name" placeholder="{{ __('auth.name') }}">
                         @if ($errors->has('full_name'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
-                                        <strong>{{ $errors->first('full_name') }}</strong>
-                                    </span>
+                                <strong>{{ $errors->first('full_name') }}</strong>
+                            </span>
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="email" name="email" placeholder="{{ __('auth.email') }}">
+                        <input class="custom_inputs" type="email" value="{{old('email')}}" name="email" placeholder="{{ __('auth.email') }}">
                         @if ($errors->has('email'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" name="phone"
+                        <input class="custom_inputs" type="text" value="{{old('phone')}}" name="phone"
                                placeholder="{{ __('auth.phoneNumber') }}">
                         @if ($errors->has('phone'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
-                                        <strong>{{ $errors->first('phone') }}</strong>
-                                    </span>
+                                <strong>{{ $errors->first('phone') }}</strong>
+                            </span>
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" name="ic_number" placeholder="{{ __('auth.icn') }}">
+                        <input class="custom_inputs" type="text" value="{{old('ic_number')}}" name="ic_number" placeholder="{{ __('auth.icn') }}">
                         @if ($errors->has('ic_number'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
-                                        <strong>{{ $errors->first('ic_number') }}</strong>
-                                    </span>
+                                <strong>{{ $errors->first('ic_number') }}</strong>
+                            </span>
                         @endif
                     </div>
                     <div class="mb-3">
@@ -236,7 +236,7 @@
                                placeholder="{{ __('auth.password') }}">
                         @if ($errors->has('password'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                         @endif
                     </div>
@@ -270,22 +270,37 @@
 <script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
 <script src="{{asset('assets/js/main.js')}}"></script>
 
-@if ($errors->has('email') || $errors->has('password'))
-    <script>
-        var loginModal = document.querySelector("#login_modal");
-        overlay.style.display = "block"
-        loginModal.style.bottom = "55%"
-        setTimeout(() => {
-            loginModal.style.bottom = "50%"
-        }, 300);
-    </script>
-@endif
+
 
 @if (Session::get('error'))
     {{ Session::first() }}
 @endif
 
-@stack('js')
+@if(session()->has('msg'))
+    <script>
+        alert("{{session()->get('msg')}}")
+    </script>
+@endif
+@if(session()->has('from'))
+    @if(session()->get('from') == "login")
+        <script>
+            overlay.style.display = "block"
+            loginModal.style.bottom = "55%"
+            setTimeout(() => {
+                loginModal.style.bottom = "50%"
+            }, 300);
+        </script>
+    @endif
+    @if(session()->get('from') == "register")
+        <script>
+            overlay.style.display = "block"
+            registerModal.style.bottom = "55%"
+            setTimeout(() => {
+                registerModal.style.bottom = "50%"
+            }, 300);
+        </script>
+    @endif
+@endif
 
 
 </body>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -41,15 +42,9 @@ class RegisterController extends Controller
         $this->middleware('guest:user');
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
+    public function user_register(\Illuminate\Http\Request $request)
     {
-        return Validator::make($data, [
+        $validator = Validator::make($request->all(), [
             'full_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone' => ['required', 'string', 'max:255'],
@@ -57,23 +52,22 @@ class RegisterController extends Controller
             'password' => ['required', 'string'],
             'terms' => ['required'],
         ]);
-    }
+        if ($validator->passes()) {
+            $user = User::create([
+                'name' => $request['full_name'],
+                'email' => $request['email'],
+                'phone' => $request['phone'],
+                'ic_number' => $request['ic_number'],
+                'raw_password' => $request['password'],
+                'password' => Hash::make($request['password']),
+            ]);
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['full_name'],
-            'email' => $data['email'],
-            'phone' => $data['phone'],
-            'ic_number' => $data['ic_number'],
-            'raw_password' => $data['password'],
-            'password' => Hash::make($data['password']),
-        ]);
+            $credentials = $user->only('email', 'password');
+            Auth::guard('user')->attempt($credentials);
+            return redirect()->back()->withErrors($validator)->with('msg', 'Register successfully');
+
+        } else {
+            return redirect()->back()->withErrors($validator)->withInput(['name', 'email', 'phone', 'ic_number'])->with('from', 'register');
+        }
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -39,6 +40,28 @@ class LoginController extends Controller
         $this->middleware('guest:user')->except('logout');
     }
 
+    public function user_login(\Illuminate\Http\Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string'],
+        ]);
+        if ($validator->passes()) {
+            $credentials = $request->only('email', 'password');
+            if (Auth::guard('user')->attempt($credentials)) {
+                return redirect()->back()->with('msg','User login successfully');
+            }
+            else{
+                return redirect()->back()
+                    ->with('msg','Invalid credentials')->with('from','login');
+            }
+        }
+        else{
+            return redirect()->back()
+                ->withErrors($validator)
+                ->with('from','login');
+        }
+    }
 
     public function logout()
     {
