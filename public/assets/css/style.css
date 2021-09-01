@@ -3,6 +3,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+.hidden-div{
+    display: none !important;
+}
 
 .main-img{
     background: url(../img/home-bg-2.png);
@@ -1436,3 +1439,4 @@
         width: 90%;
     }
 }
+
