@@ -38,14 +38,14 @@ class PartnerController extends Controller
         $linkItem->title_bm = $request->title_bm;
         $linkItem->link = $request->link;
         $linkItem->save();
-        return redirect()->back();
+        return redirect()->back()->with(['msg'=>'Link added successfully']);;
     }
 
     public function button_delete($id)
     {
         $link = PartnerLink::find($id);
         $link->delete();
-        return redirect()->back();
+        return redirect()->back()->with(['msg'=>'Link deleted successfully']);;
     }
 
     public function showSliders()
@@ -61,7 +61,7 @@ class PartnerController extends Controller
         $slider->partner_id = Auth::guard('partner')->id();
         $slider->slider = $sliderImage;
         $slider->save();
-        return redirect()->back();
+        return redirect()->back()->with(['msg'=>'Slider added successfully']);;
 
     }
 
@@ -69,7 +69,7 @@ class PartnerController extends Controller
     {
         $link = PartnerSlider::find($id);
         $link->delete();
-        return redirect()->back();
+        return redirect()->back()->with(['msg'=>'Slider deleted successfully']);;
     }
 
 
@@ -81,20 +81,20 @@ class PartnerController extends Controller
         $slider->partner_id =Auth::guard('partner')->id();
         $slider->promotion_image = $sliderImage;
         $slider->save();
-        return redirect()->back();
+        return redirect()->back()->with(['msg'=>'Promotion added successfully']);;
     }
 
     public function promotion_delete($id)
     {
         $link = PartnerPromotion::find($id);
         $link->delete();
-        return redirect()->back();
+        return redirect()->back()->with(['msg'=>'Promotion delete successfully']);;
     }
 
 
     public function editUniqueInfo()
     {
-        $partner = Partner::find(Auth::guard('partner')->id());
+        $partner = Partner::where("user_id",Auth::guard('partner')->id())->get()->first();
         return view('partner.single.edit', compact('partner'));
     }
 
@@ -131,7 +131,7 @@ class PartnerController extends Controller
         $partner['video_link'] = $request->video_link;
         $partner['slug'] = Str::slug($request->name, "-");
         $partner->save();
-        return redirect()->back();
+        return redirect()->back()->with(['msg'=>'Partner updated successfully']);;
 
     }
 }

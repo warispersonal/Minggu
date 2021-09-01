@@ -28,7 +28,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header border-0">
-                        <h3 class="mb-0">Upload Compitition Filters</h3>
+                        <h3 class="mb-0">Upload Competition Filters</h3>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('star.compitition.uploadFilter') }}" id="filterForm" enctype="multipart/form-data" method="POST">

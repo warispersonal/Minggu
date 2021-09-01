@@ -60,15 +60,17 @@ class ProgramController extends Controller
         ]);
         $program = new Program();
         $program->name = $request->name;
+        $program->name_bm = $request->name_bm;
         $program->thumbnail_image = $thumbnail_image;
         $program->date = $request->date;
         $program->time = $request->time;
         $program->description = $request->description;
+        $program->description_bm = $request->description_bm;
         $program->video_link = $request->video_link;
         $program->main_program_id = $request->main_program;
         $program->partner_id = $request->partner_id;
         $program->save();
-        return redirect()->route('programs.index');
+        return redirect()->route('programs.index')->with(['msg'=>'Program added successfully']);
 
     }
 
@@ -136,7 +138,7 @@ class ProgramController extends Controller
         $program->main_program_id = $request->main_program;
         $program->partner_id = $request->partner_id;
         $program->save();
-        return redirect()->route('programs.index');
+        return redirect()->route('programs.index')->with(['msg'=>'Program update successfully']);;
     }
 
     public function adminUpdate(Request $request, $id)

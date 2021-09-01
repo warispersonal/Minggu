@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\SuperAdmin;
 
 use App\Http\Controllers\Controller;
+use App\Partner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Validator;
 
 use App\User;
@@ -40,7 +42,7 @@ class PartnersController extends Controller
             'type' => 'required',
         ]);
         if ($validator->passes()) {
-            User::create([
+            $user = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'raw_password' => $request->password,
@@ -48,6 +50,18 @@ class PartnersController extends Controller
                 'password' => Hash::make($request->password),
                 'role_id' => '3'
             ]);
+            $partner = new Partner();
+            $partner['name'] = Str::random(15);
+            $partner['name_bm'] = Str::random(15);
+            $partner['description'] = Str::random(35);
+            $partner['description_bm'] = Str::random(35);
+            $partner['video_link'] = Str::random(15);
+            $partner['slug'] = Str::random(15);
+            $partner['home_logo'] = "home_logo.png";
+            $partner['details_logo'] = "details_logo.png";
+            $partner['promosi_image'] = "promosi.png";
+            $partner['user_id'] = $user->id;
+            $partner->save();
 			return response()->json(['success'=>'Added New Partner.']);
         }else{
             return response()->json(['error'=>$validator->errors()->all()]);

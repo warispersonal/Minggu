@@ -136,7 +136,7 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::post('tonton-msd-live-save', 'ContentController@tonTonVideoSave')->name('star.content.tontonlink');
     });
 
-    Route::prefix('compitition')->name('star.compitition.')->group(function () {
+    Route::prefix('competition')->name('star.compitition.')->group(function () {
         Route::get('filter', 'CompititionController@filter')->name('filter');
         Route::post('upload-filter', 'CompititionController@uploadFilter')->name('uploadFilter');
         Route::get('getFilters', 'CompititionController@getFilters')->name('getfiltersAJAX');

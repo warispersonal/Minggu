@@ -21,6 +21,11 @@
                     </div>
                 </div>
                 <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                        <input class="form-control" name="name_bm" placeholder="Program Name (BM)" type="text" required="">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
                     <label>Select Main Program</label>
                     <div class="input-group input-group-alternative">
                         <select class="form-control" name="main_program">
@@ -50,6 +55,11 @@
                 <div class="form-group mb-3">
                     <div class="input-group input-group-alternative">
                         <textarea class="form-control" name="description" required placeholder="Description"></textarea>
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                        <textarea class="form-control" name="description_bm" required placeholder="Description (BM)"></textarea>
                     </div>
                 </div>
                 <div class="form-group mb-3">

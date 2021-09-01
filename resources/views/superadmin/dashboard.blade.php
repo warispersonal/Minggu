@@ -2,7 +2,7 @@
 
 @section('content')
     @include('layouts.headers.cards')
-    
+
     <div class="container-fluid mt--7">
         <div class="row mt-5">
             <div class="col-lg-6 mb-12 mb-xl-0">
@@ -43,7 +43,7 @@
                                             <td>
                                                 {{ $admin->email }}
                                             </td>
-                                        </tr>    
+                                        </tr>
                                     @endforeach
                                 @else
                                         <tr><td>No Admin Found</td></tr>
@@ -91,7 +91,7 @@
                                             <td>
                                                 {{ $partner->email }}
                                             </td>
-                                        </tr>    
+                                        </tr>
                                     @endforeach
                                 @else
                                         <tr><td>No Partner Found</td></tr>
@@ -107,12 +107,12 @@
                         <div class="row align-items-center">
                             <div class="col">
                                 <h3 class="mb-0">
-                                    Programms
+                                    Programs
                                     <span class="badge badge-success">Recent</span>
                                 </h3>
                             </div>
                             <div class="col text-right">
-                                <a href="{{ route('star.programs') }}" class="btn btn-sm btn-primary">See all</a>
+                                <a href="{{ route('star.MainDetail') }}" class="btn btn-sm btn-primary">See all</a>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                                             <td>
                                                 {{ $program->date }}
                                             </td>
-                                        </tr>    
+                                        </tr>
                                     @endforeach
                                 @else
                                         <tr>
@@ -189,7 +189,7 @@
                                             <td>
                                                 {{ $user->email }}
                                             </td>
-                                        </tr>    
+                                        </tr>
                                     @endforeach
                                 @else
                                         <tr>

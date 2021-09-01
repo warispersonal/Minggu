@@ -25,7 +25,7 @@
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
             <li class="nav-item dropdown">
-                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                <a class="nav-link" href="{{route($route)}}" role="button" data-toggle="dropdown" aria-haspopup="true"
                    aria-expanded="false">
                     <div class="media align-items-center">
                         <span class="avatar avatar-sm rounded-circle">
@@ -68,7 +68,7 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="#">
+                        <a href="{{route($route)}}">
                             <img src="{{ asset('argon') }}/img/brand/logo.png">
                         </a>
                     </div>
@@ -281,7 +281,7 @@
                     <h6 class="container navbar-heading text-muted">Edit Partner Page</h6>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link active" href="{{route($route)}}">
                             <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                         </a>
                     </li>

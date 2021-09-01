@@ -22,7 +22,7 @@ class FAQController extends Controller
         $faq['pertandingan'] = $request->pertandingan;
         $faq['pertandingan_bm'] = $request->pertandingan_bm;
         $faq->save();
-        return redirect()->back();
+        return redirect()->back()->with(['msg'=>'FAQ updated successfully']);;
     }
 
     public function adminIndex()
@@ -39,6 +39,6 @@ class FAQController extends Controller
         $faq['pertandingan'] = $request->pertandingan;
         $faq['pertandingan_bm'] = $request->pertandingan_bm;
         $faq->save();
-        return redirect()->back();
+        return redirect()->back()->with(['msg'=>'FAQ updated successfully']);;
     }
 }
