@@ -301,6 +301,7 @@
         </script>
     @endif
 @endif
+@stack('js')
 
 
 </body>

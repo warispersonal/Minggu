@@ -112,7 +112,7 @@
                                 </h3>
                             </div>
                             <div class="col text-right">
-                                <a href="{{ route('star.MainDetail') }}" class="btn btn-sm btn-primary">See all</a>
+                                <a href="{{ route('programs.index') }}" class="btn btn-sm btn-primary">See all</a>
                             </div>
                         </div>
                     </div>
