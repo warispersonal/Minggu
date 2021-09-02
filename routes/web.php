@@ -118,6 +118,7 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::get('/', 'UsersController@index')->name('star.users');
         Route::get('getUsers', 'UsersController@getUsers')->name('star.getusersAJAX');
         Route::get('delete/{id}', 'UsersController@destroy')->name('star.destroyUser');
+        Route::get('get-Daily-Winner-ajax', 'CompititionController@getDailyWinnerAJAX')->name('star.getDailyWinnerAJAX');
 
     });
 
@@ -147,6 +148,8 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
 
         Route::get('daily-winner', 'CompititionController@dailyWinner')->name('dailywinner');
         Route::get('get-daily-winner', 'CompititionController@getDailyWinner')->name('getDailyWinner');
+        Route::post('generate-daily-winner-list', 'CompititionController@generateDailyWinnerList')->name('generate.daily.winner.list');
+        Route::get('winner-list', 'CompititionController@todayWinnerList')->name('today.winner.list');
 
     });
 });

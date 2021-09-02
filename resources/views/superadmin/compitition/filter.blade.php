@@ -8,17 +8,23 @@
     <div class="header bg-gradient-primary pb-6 pt-4 pt-md-6">
         <div class="container-fluid">
             <div class="header-body">
-                <div class="row align-items-center py-4">
-                    <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">Filters</h6>
-                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                            <li class="breadcrumb-item"><a href="{{ route('star.dashboard') }}"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">Filters Settings</a></li>
-                        </ol>
-                        </nav>
+                <form method="post" action="{{route('star.compitition.generate.daily.winner.list')}}">
+                    @csrf
+                    <div class="row align-items-center py-4">
+                        <div class="col-lg-9 col-7">
+                            <h6 class="h2 text-white d-inline-block mb-0">No of Daily Winner</h6>
+                            <div class="form-group mb-3">
+                                <div class="input-group input-group-alternative">
+                                    <input class="form-control" id="admin-name" name="daily_winner"
+                                           placeholder="No of Daily Winner" type="number" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-5 text-right">
+                            <button class="btn btn-sm btn-neutral" type="submit">Get Winner</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

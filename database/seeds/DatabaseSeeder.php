@@ -2,6 +2,7 @@
 
 use App\Lottery;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -142,7 +143,15 @@ class DatabaseSeeder extends Seeder
 
         ];
         // $this->call(UserSeeder::class);
-        Lottery::insert($data);
+//        Lottery::insert($data);
+//        factory(App\User::class, 10000)->create();
+
+
+        for ($i = 0; $i < 20; $i++) {
+            DB::table('daily_winners')->insert([
+                'user_id' => $i,
+            ]);
+        }
 
     }
 }
