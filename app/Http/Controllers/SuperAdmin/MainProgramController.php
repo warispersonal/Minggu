@@ -5,6 +5,7 @@ namespace App\Http\Controllers\SuperAdmin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Validator;
 
 use App\Models\MainProgram;
@@ -105,6 +106,9 @@ class MainProgramController extends Controller
 
         $partners = MainProgram::all();
         return Datatables::of($partners)
+            ->addColumn('description', function ($partner) {
+                return  Str::limit($partner->description, 30);
+            })
             ->addColumn('action', function($data){
                 $dropdown = '<div class="dropdown">
                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -115,9 +119,10 @@ class MainProgramController extends Controller
                     <a onclick="return confirm(\'Are you sure you want to delete?\')" class="dropdown-item" href="'. route('star.destroyMainDetail' , $data->id) .'">Delete</a>
                     </div>
                 </div>';
+
                 return $dropdown;
             })
-            ->rawColumns(['action'])
+            ->rawColumns(['action','description'])
             ->make(true);
     }
 

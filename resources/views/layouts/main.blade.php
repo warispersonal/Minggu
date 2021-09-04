@@ -27,7 +27,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink{{$loop->index}}"
                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ $menu['label_en'] }}
+                            {{ Config::get('app.locale') == 'en' ? $menu['label_en'] : $menu['label_bm'] }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink{{$loop->index}}">
                             @foreach( $menu['child'] as $child )

@@ -17,7 +17,7 @@ return [
     'social_heading' => 'Boleh juga ditonton menerusi:',
 
     // Program Page Text
-    'msd_btn_text' => 'Tonton semu episod lalo',
+    'msd_btn_text' => 'Tonton semu episod lalu',
     'program' => 'Program',
     'schedule' => 'Jadual',
     'wednesday' => 'Rabu',
@@ -57,7 +57,7 @@ return [
     'khidmat5' => 'Penasihat akan berkongsi tentang faedah pembiayaan ASB dan cara memohonnya',
     'khidmat6' => 'Unit Amanah ASNB',
     'khidmat7' => 'Khidmat nasihat peribadi mengenai perancangan kewangan melalui Unit Amanah ASNB',
-    'khidmat8' => 'Tetapkan Temujanji Anda Sekarang >',
+    'khidmat8' => 'Tetapkan Temujanji Anda Sekarang',
     'khidmat9' => 'Tetapkan temujanji 1-1 anda',
     'khidmat10' => 'Saya bersetuju dengan terma dan syarat khidmat',
     'khidmat11' => 'Kembali',
