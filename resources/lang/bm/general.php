@@ -55,6 +55,7 @@ return [
 
     'jom-kira-doit'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
 
+    'khidmat0' => 'Khidmat Nasihat',
     'khidmat1' => 'Apa itu Khidmat Nasihat 1-1?',
     'khidmat2' => 'Anda boleh mendapatkan khidmat nasihat dan rundingan peribadi selama 30 minit dengan penasihat-penasihat dari ASNB, AmBank, Bank Islam, CIMB & RHB. Tetapkan awal sesi anda!',
     'khidmat3' => 'Penasihat daripada Ejen Bank kami yang pakar sedia membantu anda mengenai perkara-perkara berikut:',
@@ -94,5 +95,12 @@ return [
     'livetrivia_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
     'livetrivia_worth' => 'E-Baucar Lazada Bernilai Lebih Daripada',
     'livetrivia_text' => 'Kembali ke Pertandingan',
+
+    'qa_1' => 'Soalan',
+    'qa_2' => 'Lazim',
+    'pertandingan_title' => 'Pertandingan',
+
+    'promosi_title' => 'Promosi',
+
 
 ];

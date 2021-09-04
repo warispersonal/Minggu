@@ -63,6 +63,7 @@ return [
     'evouchers'=> 'Lazada E-Vouchers Are Worth More Than',
     'jom-kira-doit'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
 
+    'khidmat0' => 'Service Advisor',
     'khidmat1' => 'What is 1-1 Advisory Services?',
     'khidmat2' => 'You can get 30 minutes of personal advice and consultation with advisors from ASNB, AmBank, Bank Islam, CIMB & RHB. Set the beginning of your session!',
     'khidmat3' => 'Advisors from our expert Bank Agents are available to assist you on the following matters:',
@@ -103,4 +104,9 @@ return [
     'livetrivia_worth' => 'Lazada E-Vouchers Are Worth More Than',
     'livetrivia_text' => 'Return to Match',
 
+    'qa_1' => 'Frequently',
+    'qa_2' => 'Asked Questions',
+
+    'pertandingan_title' => 'The Match',
+    'promosi_title' => 'Promotion',
 ];

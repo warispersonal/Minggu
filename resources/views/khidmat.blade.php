@@ -19,7 +19,7 @@
                 <div class="row gy-3">
                     <div class="col-lg-4 pe-lg-5">
                         <div class="d-flex w-100">
-                            <h2 class="heading2">Khidmat Nasihat <br> 1-1</h2>
+                            <h2 class="heading2">{{ __('general.khidmat0') }} <br> 1-1</h2>
                             <img src="{{asset('assets/img/nasihat2.png')}}" class="img-fluid w-50 d-lg-none" alt="">
                         </div>
                         <img src="{{asset('assets/img/nasihat.png')}}" class="img-fluid mt-5 d-none d-lg-inline-block" alt="">

@@ -11,7 +11,7 @@
                 <form method="post" action="{{route('star.compitition.generate.daily.winner.list')}}">
                     @csrf
                     <div class="row align-items-center py-4">
-                        <div class="col-lg-9 col-7">
+                        <div class="col-lg-4 col-7">
                             <h6 class="h2 text-white d-inline-block mb-0">No of Daily Winner</h6>
                             <div class="form-group mb-3">
                                 <div class="input-group input-group-alternative">
@@ -20,7 +20,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-5 text-right">
+                        <div class="col-lg-4 col-7">
+                            <h6 class="h2 text-white d-inline-block mb-0">Date</h6>
+                            <div class="form-group mb-3">
+                                <div class="input-group input-group-alternative">
+                                    <input class="form-control" id="date_field"  name="date" type="date" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-5 text-right">
                             <button class="btn btn-sm btn-neutral" type="submit">Get Winner</button>
                         </div>
                     </div>
@@ -94,6 +102,7 @@
     <script src="{{ asset('argon') }}/vendor/data-table/datatables.min.js"></script>
 
     <script type="text/javascript">
+        document.getElementById('date_field').valueAsDate = new Date();
         $(document).ready(function () {
             // Show Admins DataTable
             $('#adminTable').DataTable({

@@ -114,7 +114,6 @@ class CompititionController extends Controller
     // Get Partners for DataTable AJAX
     public function getDailyWinnerAJAX(Request $request)
     {
-
         $dailyWinner = DailyWinner::all();
         return Datatables::of($dailyWinner)
             ->addColumn('name', function ($data) {
@@ -145,7 +144,8 @@ class CompititionController extends Controller
             ->get();
         foreach ($users as $user){
             DailyWinner::create([
-               'user_id' => $user->id
+               'user_id' => $user->id,
+               'date' => $request->date,
             ]);
         }
         return redirect()->route('star.compitition.today.winner.list')->with('users', $users);

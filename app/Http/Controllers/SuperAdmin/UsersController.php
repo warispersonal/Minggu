@@ -38,7 +38,7 @@ class UsersController extends Controller
                     <i class="fas fa-ellipsis-v"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a onclick="return confirm(\'Are you sure you want to delete?\')" class="dropdown-item" href="'. route('star.destroyPartner' , $data->id) .'">Delete</a>
+                    <a onclick="return confirm(\'Are you sure you want to delete?\')" class="dropdown-item" href="'. route('star.destroyUser' , $data->id) .'">Delete</a>
                     </div>
                 </div>';
                 return $dropdown;

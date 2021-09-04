@@ -21,7 +21,7 @@
             <div class="container mt-5 pb-5">
                 <div class="row gy-4">
                     <div class="col-lg-5">
-                        <h1 class="heading">Pertandingan</h1>
+                        <h1 class="heading">{{__('general.pertandingan_title')}}</h1>
                     </div>
                     <div class="col-lg-7  order-lg-2 order-4  d-flex align-items-center">
                         <div class="match_links ">

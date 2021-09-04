@@ -17,7 +17,7 @@
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-lg-4">
-                        <h1 class="faq-heading mt-3">Soalan <br class="d-none d-lg-block">Lazim</h1>
+                        <h1 class="faq-heading mt-3">{{ __('general.qa_1') }} <br class="d-none d-lg-block">{{ __('general.qa_2') }}</h1>
                     </div>
                     <div class="col-lg-8">
                         <div id="jom_kira_tabs">
