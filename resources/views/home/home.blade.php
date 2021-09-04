@@ -32,7 +32,7 @@
                 </div>
             </div>
             
-            <img src="{{asset('assets/img/home-bg-mobile.png')}}" class="d-lg-none w-100 position-absolute top-0">
+            <!--<img src="{{asset('assets/img/mobile-home-bg.png')}}" class="d-lg-none w-100 position-absolute top-0">-->
             <div class="home-links position-relative">
                 @foreach($partners as $partner)
                     <a href="{{route('may.bank', $partner->slug)}}" class="link-{{$partner->id}}">

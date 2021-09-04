@@ -9,7 +9,7 @@
 
 
 .main-img{
-    background: url(../img/home-bg-2.png);
+    background: url(../img/desktop-home-bg.png);
     background-size: cover;
     background-position: top;
 }
@@ -51,7 +51,7 @@
     height: 100vh;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.17);
     transition: all .3s;
-    z-index: 55;
+    z-index: 555;
 }
 .mobile_nav ul{
     list-style: none;
@@ -305,6 +305,7 @@
     border-radius: 10px;
     text-decoration: none;
     display: inline-block;
+    margin-top:10px;
 }
 .theme-btn{
     color: white !important;
@@ -940,8 +941,8 @@
 
 .faq-heading{
     color: white;
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 4rem;
+    line-height: 4rem;
 }
 #register_modal .form-check{
     margin-left:10px;
@@ -1164,77 +1165,92 @@
         margin-top: 20px;
     }
     .main-img{
-        /*background:url(../img/home-bg-mobile.png);*/
+        background:url(../img/mobile-home-bg.png);
         background-size: cover;
-        min-height: 100vh;
+        min-height: 180vh;
     }
     .home-links{
-        height: 100vh;
+        height: 180vh;
     }
     .home-links a{
-        transform: scale(.5);
+        transform: scale(.7);
     }
     .link-6{
-        top: 29%;
-        right: 15%;
+        top: 20%;
+        right: 5%;
         left: inherit;
     }
     .link-5{
-        top: 20%;
-        right: 15%;
+        top: 22%;
+        right: 28%;
         left: inherit;
     }
     .link-4{
-        top: 30%;
-        left: 0%;
+        top: 32%;
+        left: 4%;
     }
     .link-7{
-        bottom: 45%;
-        left: 57%;
+        top: 35%;
+        bottom: inherit;
+        left: 60%;
     }
     .link-9{
-        top: 50%;
-        left: 25%;
+        top: 48%;
+        left: 14%;
     }
     .link-14{
-        bottom: 30%;
-        right: 0%;
+        bottom: inherit;
+        right: 5%;
+        top: 44%;
+    }
+    .link-15{
+        top: inherit;
+        right: 35%;
+        bottom: 0%;
     }
     .link-10{
-        bottom: 20%;
-        left: 20%;
+        bottom: 36%;
+        left: 40%;
         right: inherit;
         top: inherit;
     }
     .link-2{
-        bottom: 10%;
-        left: 0%;
+        bottom: 36%;
+        left: 17%;
         top: inherit;
     }
     .link-12{
-        display: none;
+        top: inherit;
+        bottom: 5%;
+        right: inherit;
+        left: 5%;
     }
     .link-3{
-        bottom: 13%;
-        left: 45%;
+        bottom: 37%;
+        left: inherit;
+        right: 8%;
     }
     .link-8{
-        
-        bottom: -4%;
-        right: 0%;
+        bottom: 20%;
+        right: 30%;
         top: inherit;
+        left: inherit;
     }
     .link-1{
-        display: none;
+        top: inherit;
+        left: 30%;
+        bottom: 15%;
     }
     .link-11{
-        bottom: 0%;
-        left: 20%;
+        bottom: 28%;
+        left: 30%;
         right: inherit;
         top: inherit;
     }
     .link-13{
-        display: none;
+        top: inherit;
+        right: 8%;
+        bottom: 15%;
     }
     #program-modal{
         width: 75%;
@@ -1304,6 +1320,11 @@
     }
     .rm-form span{
         font-size: 18px;
+    }
+    .info-btn{
+        left: inherit;
+        top: 10%;
+        right: 30%;
     }
     
 }
@@ -1532,13 +1553,103 @@
         width: 90%;
     }
     .info-btn{
-        left: 65%;
-        top: 12%;
+        left: inherit;
+        top: 9%;
+        right: 17%;
     }
     .about-us-box{
         left:-150%;
         width:90%;
         font-size:14px;
+    }
+    .main-img{
+        background:url(../img/mobile-home-bg.png);
+        background-size: cover;
+        background-position:left;
+        min-height: 140vh;
+    }
+    .home-links{
+        height: 140vh;
+    }
+    .home-links a{
+        transform: scale(.5);
+    }
+    .link-6{
+        top: 19%;
+        right: -5%;
+        left: inherit;
+    }
+    .link-5{
+        top: 20%;
+        right: 15%;
+        left: inherit;
+    }
+    .link-4{
+        top: 27%;
+        left: -12%;
+    }
+    .link-7{
+        top: 30%;
+        bottom: inherit;
+        left: 54%;
+    }
+    .link-9{
+        top: 43%;
+        left: 5%;
+    }
+    .link-14{
+        bottom: inherit;
+        right: 0%;
+        top: 38%;
+    }
+    .link-15{
+        top: inherit;
+        right: 27%;
+        bottom: 0%;
+    }
+    .link-10{
+        bottom: 38%;
+        left: 30%;
+        right: inherit;
+        top: inherit;
+    }
+    .link-2{
+        bottom: 35%;
+        left: 5%;
+        top: inherit;
+    }
+    .link-12{
+        top: inherit;
+        bottom: 5%;
+        right: inherit;
+        left: 0%;
+    }
+    .link-3{
+        bottom: 40%;
+        left: inherit;
+        right: 0%;
+    }
+    .link-8{
+        bottom: 20%;
+        right: 20%;
+        top: inherit;
+        left: inherit;
+    }
+    .link-1{
+        top: inherit;
+        left: 20%;
+        bottom: 15%;
+    }
+    .link-11{
+        bottom: 28%;
+        left: 23%;
+        right: inherit;
+        top: inherit;
+    }
+    .link-13{
+        top: inherit;
+        right: 8%;
+        bottom: 15%;
     }
 }
 
