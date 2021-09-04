@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ asset('argon') }}/vendor/data-table/datatables.min.css">
 @endpush
 
-@section('content')    
+@section('content')
     <div class="header bg-gradient-primary pb-6 pt-4 pt-md-6">
         <div class="container-fluid">
             <div class="header-body">
@@ -44,7 +44,7 @@
                             </tr>
                         </thead>
                             <tbody>
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -60,14 +60,15 @@
     <script src="{{ asset('argon') }}/vendor/js-cookie/js.cookie.js"></script>
     <script src="{{ asset('argon') }}/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
     <script src="{{ asset('argon') }}/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-    
+
     <script src="{{ asset('argon') }}/vendor/data-table/datatables.min.js"></script>
-    
+
     <script type="text/javascript">
         $(document).ready(function() {
             // Show Admins DataTable
             $('#adminTable').DataTable({
                 "processing": true,
+                "order": [],
                 "serverSide": true,
                 "ajax": "{{ route('star.getusersAJAX') }}",
                 "columns":[

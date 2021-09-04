@@ -123,6 +123,7 @@
             $('#adminTable').DataTable({
                 "processing": true,
                 "serverSide": true,
+                "order": [],
                 "ajax": "{{ route('star.getMainDetailAJAX') }}",
                 "columns":[
                     { "data": "id" },

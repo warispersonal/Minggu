@@ -110,7 +110,7 @@ class AdminsController extends Controller
     // Get Admins for DataTable AJAX
     public function getAdmins(Request $request){
 
-        $admins = User::where('role_id' , 2)->get();
+        $admins = User::where('role_id' , 2)->orderBy('created_at','desc')->get();
         return Datatables::of($admins)
             ->addColumn('action', function($data){
                 $dropdown = '<div class="dropdown">

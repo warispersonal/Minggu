@@ -83,6 +83,7 @@
             $('#filterTable').DataTable({
                 "processing": true,
                 "serverSide": true,
+                "order": [],
                 "ajax": "{{ route('star.compitition.getfiltersAJAX') }}",
                 "columns":[
                     { "data": "id" },

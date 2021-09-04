@@ -68,6 +68,7 @@
                 buttons: [
                     'copy', 'csv', 'excel', 'pdf'
                 ],
+                "order": [],
                 "processing": true,
                 "serverSide": true,
                 "ajax": "{{ route('star.compitition.getRinggitEmasWinnerAJAX') }}",

@@ -102,6 +102,7 @@
                 ],
                 "processing": true,
                 "serverSide": true,
+                "order": [],
                 "ajax": "{{ route('star.compitition.getLuckyDrawWinnerListAJAX') }}",
                 "columns": [
                     {"data": "id"},
