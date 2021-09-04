@@ -75,4 +75,24 @@ return [
     'khidmat18' => 'Topik yang diminati',
     'khidmat19' => 'Masa',
     'khidmat20' => 'Hantar',
+
+    'cabutanbertuah_mainheading' => 'Cabutan Bertuah',
+    'cabutanbertuah_title' => 'Cara Penyertaan',
+    'cabutanbertuah_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
+    'cabutanbertuah_worth' => 'E-Baucar Lazada Bernilai Lebih Daripada',
+    'cabutanbertuah_text' => ' Kembali ke Pertandingan',
+
+    'draw_mainheading' => 'Draw 118',
+    'draw_title' => 'Cara Penyertaan',
+    'draw_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
+    'draw_worth' => 'E-Baucar Lazada Bernilai Lebih Daripada',
+    'draw_text' => 'Kembali ke Pertandingan',
+
+
+    'livetrivia_mainheading' => 'Live Trivia',
+    'livetrivia_title' => 'Cara Penyertaan',
+    'livetrivia_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
+    'livetrivia_worth' => 'E-Baucar Lazada Bernilai Lebih Daripada',
+    'livetrivia_text' => 'Kembali ke Pertandingan',
+
 ];

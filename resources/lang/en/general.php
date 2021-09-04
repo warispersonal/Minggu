@@ -83,4 +83,24 @@ return [
     'khidmat18' => 'Topics of interest',
     'khidmat19' => 'Time',
     'khidmat20' => 'Send',
+
+    'cabutanbertuah_mainheading' => 'Lucky draw',
+    'cabutanbertuah_title' => 'How to Participate',
+    'cabutanbertuah_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
+    'cabutanbertuah_worth' => 'Lazada E-Vouchers Are Worth More Than',
+    'cabutanbertuah_text' => 'Return to Match',
+
+
+    'draw_mainheading' => 'Draw 118',
+    'draw_title' => 'How to Participate',
+    'draw_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
+    'draw_worth' => 'Lazada E-Vouchers Are Worth More Than',
+    'draw_text' => 'Return to Match',
+
+    'livetrivia_mainheading' => 'Live Trivia',
+    'livetrivia_title' => 'How to Participate',
+    'livetrivia_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
+    'livetrivia_worth' => 'Lazada E-Vouchers Are Worth More Than',
+    'livetrivia_text' => 'Return to Match',
+
 ];

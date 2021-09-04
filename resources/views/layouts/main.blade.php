@@ -79,7 +79,7 @@
     <div class="mobile-header d-lg-none px-3 py-2">
         <div>
             <h3 class="m-0">PNB ASNB</h3>
-            <small>BM | EN</small>
+            <small><a href="{{ route('localization' , 'bm') }}">BM</a> | <a href="{{ route('localization' , 'en') }}">EN</a> </small>
         </div>
 
 
@@ -114,7 +114,7 @@
                         @else
                             {{ $menu['label_bm'] }}
                         @endif
-                        
+
                         <div class="dropdown_content">
                             <ul>
                                 @foreach( $menu['child'] as $child )
