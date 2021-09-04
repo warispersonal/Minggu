@@ -114,15 +114,15 @@
                         @else
                             {{ $menu['label_bm'] }}
                         @endif
-                        <i class="bi bi-chevron-down"></i>
+                        
                         <div class="dropdown_content">
                             <ul>
                                 @foreach( $menu['child'] as $child )
                                     @if(Config::get('app.locale') == 'en')
-                                        <li class=""><a href="{{ $child['link'] }}"
+                                        <li class=""> <i class="bi bi-chevron-right"></i>  <a href="{{ $child['link'] }}"
                                                         title="">{{ $child['label_en'] }}</a></li>
                                     @elseif (Config::get('app.locale') == 'bm')
-                                        <li class=""><a href="{{ $child['link'] }}"
+                                        <li class=""><i class="bi bi-chevron-right"></i>  <a href="{{ $child['link'] }}"
                                                         title="">{{ $child['label_bm'] }}</a></li>
                                     @endif
                                 @endforeach
