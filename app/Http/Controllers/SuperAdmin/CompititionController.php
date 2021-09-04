@@ -120,7 +120,13 @@ class CompititionController extends Controller
             ->addColumn('name', function ($data) {
                 return $data->user->name ?? "";
             })
-            ->rawColumns(['name'])
+            ->addColumn('email', function ($data) {
+                return $data->user->email ?? "";
+            })
+            ->addColumn('ic', function ($data) {
+                return $data->user->ic_number ?? "";
+            })
+            ->rawColumns(['name', 'email', 'ic'])
             ->make(true);
     }
 

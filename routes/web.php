@@ -4,7 +4,9 @@ use App\Http\Controllers\Auth\User\LoginController;
 use App\Http\Controllers\Partner\PartnerController;
 use App\Http\Controllers\SuperAdmin\FAQController;
 use App\Http\Controllers\SuperAdmin\HomePagePartnerController;
+use App\Http\Controllers\SuperAdmin\LuckyDrawController;
 use App\Http\Controllers\SuperAdmin\ProgramController;
+use App\Http\Controllers\SuperAdmin\RinggitEmasController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
@@ -150,6 +152,17 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::get('get-daily-winner', 'CompititionController@getDailyWinner')->name('getDailyWinner');
         Route::post('generate-daily-winner-list', 'CompititionController@generateDailyWinnerList')->name('generate.daily.winner.list');
         Route::get('winner-list', 'CompititionController@todayWinnerList')->name('today.winner.list');
+
+        Route::get('generate-ringgit-emas', [RinggitEmasController::class, 'generateRinggitEmasWinnerList'])->name('generateRinggitEmas');
+        Route::get('ringgit-emas', [RinggitEmasController::class, 'ringgitEmas'])->name('ringgitEmasWinner');
+        Route::get('get-ringgit-emas-ajax', [RinggitEmasController::class, 'getRinggitEmasWinnerAJAX'])->name('getRinggitEmasWinnerAJAX');
+
+
+        Route::get('generate-lucky', [LuckyDrawController::class, 'generateLuckyDraw'])->name('getLuckyDrawWinnerList');
+        Route::get('get-generate-lucky-ajax', [LuckyDrawController::class, 'generateLuckyDrawAJAX'])->name('getLuckyDrawWinnerListAJAX');
+        Route::get('generate-lucky-draw', [LuckyDrawController::class, 'generateLuckyDrawWinnerList'])->name('generateLuckyDrawWinnerList');
+
+
 
     });
 });

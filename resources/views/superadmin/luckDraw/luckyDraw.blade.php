@@ -8,15 +8,14 @@
     <div class="header bg-gradient-primary pb-6 pt-4 pt-md-6">
         <div class="container-fluid">
             <div class="header-body">
-                <form method="post" action="{{route('star.compitition.generate.daily.winner.list')}}">
-                    @csrf
+                <form method="get" action="{{route('star.compitition.generateLuckyDrawWinnerList')}}">
                     <div class="row align-items-center py-4">
                         <div class="col-lg-9 col-7">
-                            <h6 class="h2 text-white d-inline-block mb-0">No of Daily Winner</h6>
+                            <h6 class="h2 text-white d-inline-block mb-0">No of Winner</h6>
                             <div class="form-group mb-3">
                                 <div class="input-group input-group-alternative">
                                     <input class="form-control" id="admin-name" name="daily_winner"
-                                           placeholder="No of Daily Winner" type="number" required>
+                                           placeholder="No of Winner" type="number" required>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +98,7 @@
             $('#adminTable').DataTable({
                 "processing": true,
                 "serverSide": true,
-                "ajax": "{{ route('star.getDailyWinnerAJAX') }}",
+                "ajax": "{{ route('star.compitition.getLuckyDrawWinnerListAJAX') }}",
                 "columns": [
                     {"data": "id"},
                     {"data": "name"},
