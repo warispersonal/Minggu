@@ -13,6 +13,13 @@ return [
     |
     */
 
+
+    'the_match_button_1' => 'Come on ... Calculate Money',
+    'the_match_button_2' => 'Live Trivia',
+    'the_match_button_3' => 'Draw 118',
+    'the_match_button_4' => 'Lucky Draw',
+
+
     'terms&condition' => 'Terms & Conditions',
     'registerStatement' => '*By submitting this registration form, participants hereby agree to authorizes PNB, and PNB reserves the right to collect and process participants\' personal data, if any, for advertising, publicity or research purposes, in accordance with legal requirements relevant, without any cost or compensation.',
 
@@ -39,6 +46,7 @@ return [
     'car1_main_title' => 'Come on ... Kira Duit',
     'car1_text' => 'How to Participate',
     'car1_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste porro recusandae optio.',
+
 
 
     'car2_main_title' => 'Come on ... Kira Duit',

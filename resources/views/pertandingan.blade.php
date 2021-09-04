@@ -25,10 +25,10 @@
                     </div>
                     <div class="col-lg-7  order-lg-2 order-4  d-flex align-items-center">
                         <div class="match_links ">
-                            <a href="{{route('jom.kira')}}">Jom... Kira Duit</a>
-                            <a href="">Quiz Trivia</a>
-                            <a href="">Draw 118</a>
-                            <a href="">Cabutan Bertuah</a>
+                            <a href="{{route('jom.kira')}}">{{ __('general.the_match_button_1') }}</a>
+                            <a href="{{route('liveTrivia')}}">{{ __('general.the_match_button_2') }}</a>
+                            <a href="{{route('draw')}}">{{ __('general.the_match_button_3') }}</a>
+                            <a href="{{route('cabutanBertuah')}}">{{ __('general.the_match_button_4') }}</a>
                         </div>
                     </div>
                     <div class="col-lg-7 order-3 px-0 px-lg-3">

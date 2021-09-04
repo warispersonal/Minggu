@@ -40,6 +40,10 @@ Route::prefix('/')->group(function () {
     Route::get('/sertai-sekarang', [HomeController::class, 'sertai_sekarang'])->name('sertai.sekarang');
     Route::get('/rakan-korporat', [HomeController::class, 'partner'])->name('partner');
     Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+    Route::get('/live-trivia', [HomeController::class, 'liveTrivia'])->name('liveTrivia');
+    Route::get('/cabutan-bertuah', [HomeController::class, 'cabutanBertuah'])->name('cabutanBertuah');
+    Route::get('/draw-118', [HomeController::class, 'draw'])->name('draw');
+
 });
 
 // Routes For Users

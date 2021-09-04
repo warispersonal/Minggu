@@ -138,4 +138,13 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
+    public function liveTrivia(){
+        return view('liveTrivia');
+    }
+    public function cabutanBertuah(){
+        return view('cabutanBertuah');
+    }
+    public function draw(){
+        return view('draw');
+    }
 }

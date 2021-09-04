@@ -33,6 +33,11 @@ return [
     'jom_kira' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam molestiae deserunt atque dolore optio eos assumenda rerum voluptates commodi impedit dicta officia dignissimos dolorum exercitationem voluptatibus, asperiores quas similique vel!',
     'join_now' => 'Sertai Sekarang!',
 
+    'the_match_button_1' => 'Jom... Kira Duit',
+    'the_match_button_2' => 'Live Trivia',
+    'the_match_button_3' => 'Draw 118',
+    'the_match_button_4' => 'Cabutan Bertuah',
+
     'car1_main_title' => 'Jom... Kira Duit',
     'car1_text' => 'Cara Penyertaan',
     'car1_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste porro recusandae optio.',
