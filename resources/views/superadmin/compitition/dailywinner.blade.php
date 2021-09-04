@@ -97,6 +97,10 @@
         $(document).ready(function () {
             // Show Admins DataTable
             $('#adminTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf'
+                ],
                 "processing": true,
                 "serverSide": true,
                 "ajax": "{{ route('star.getDailyWinnerAJAX') }}",

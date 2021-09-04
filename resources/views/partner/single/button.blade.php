@@ -109,7 +109,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="title_bm" placeholder="Link URL (BM)" type="text"
+                                        <input class="form-control" name="title_bm" placeholder="Link Title (BM)" type="text"
                                                required>
                                     </div>
                                 </div>
