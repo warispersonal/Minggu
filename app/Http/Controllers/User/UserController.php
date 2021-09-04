@@ -43,6 +43,7 @@ class UserController extends Controller
         }
         $userLottery = [];
         $id = Auth::guard('user')->id();
+        $ic_number = Auth::guard('user')->user()->ic_number;
         for ($i = $initial; $i <= $last; $i++) {
             $inputfield = 'step_' . $step . '_' . $i;
             if ($request->has($inputfield)) {
@@ -54,7 +55,10 @@ class UserController extends Controller
                             'user_id' => $id,
                             'lottery_id' => $i,
                             'code' => $input,
-                            'isCorrect' => 0
+                            'isCorrect' => 0,
+                            'created_at' => now(),
+                            'updated_at' => now(),
+                            'ic_number' => $ic_number
                         ];
                         $userLottery[] = $array;
                     } else {
@@ -64,7 +68,10 @@ class UserController extends Controller
                                 'user_id' => $id,
                                 'lottery_id' => $i,
                                 'code' => $input,
-                                'isCorrect' => 1
+                                'isCorrect' => 1,
+                                'created_at' => now(),
+                                'updated_at' => now(),
+                                'ic_number' => $ic_number
                             ];
                             $userLottery[] = $array;
                         }

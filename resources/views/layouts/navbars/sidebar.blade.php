@@ -216,7 +216,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="{{route('star.compitition.ringgitEmasWinner')}}">
                                         <i class="ni ni-ui-04 text-primary"></i> {{ __('Generate “Ringgit Emas” Winner') }}
                                     </a>
                                 </li>

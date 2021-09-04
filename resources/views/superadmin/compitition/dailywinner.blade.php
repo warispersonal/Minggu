@@ -42,8 +42,10 @@
                         <table class="table align-items-center table-flush w-100" id="adminTable">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col" class="sort" data-sort="name">ID</th>
-                                <th scope="col" class="sort" data-sort="budget">Name</th>
+                                <th scope="col" class="sort" data-sort="id">ID</th>
+                                <th scope="col" class="sort" data-sort="name">Name</th>
+                                <th scope="col" class="sort" data-sort="email">Email</th>
+                                <th scope="col" class="sort" data-sort="ic">IC Number</th>
                                 <th scope="col">Date</th>
                             </tr>
                             </thead>
@@ -101,6 +103,8 @@
                 "columns": [
                     {"data": "id"},
                     {"data": "name"},
+                    {"data": "email"},
+                    {"data": "ic"},
                     {"data": "date"},
                 ],
                 "language": {

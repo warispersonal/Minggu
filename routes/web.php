@@ -5,6 +5,7 @@ use App\Http\Controllers\Partner\PartnerController;
 use App\Http\Controllers\SuperAdmin\FAQController;
 use App\Http\Controllers\SuperAdmin\HomePagePartnerController;
 use App\Http\Controllers\SuperAdmin\ProgramController;
+use App\Http\Controllers\SuperAdmin\RinggitEmasController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
@@ -150,6 +151,11 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::get('get-daily-winner', 'CompititionController@getDailyWinner')->name('getDailyWinner');
         Route::post('generate-daily-winner-list', 'CompititionController@generateDailyWinnerList')->name('generate.daily.winner.list');
         Route::get('winner-list', 'CompititionController@todayWinnerList')->name('today.winner.list');
+
+        Route::get('genrate-ringgit-emas', [RinggitEmasController::class, 'generateRinggitEmasWinnerList'])->name('generateRinggitEmas');
+        Route::get('ringgit-emas', [RinggitEmasController::class, 'ringgitEmas'])->name('ringgitEmasWinner');
+        Route::get('get-ringgit-emas-ajax', [RinggitEmasController::class, 'getRinggitEmasWinnerAJAX'])->name('getRinggitEmasWinnerAJAX');
+
 
     });
 });
