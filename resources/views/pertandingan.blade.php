@@ -28,6 +28,7 @@
                             <a href="{{route('jom.kira')}}">Jom... Kira Duit</a>
                             <a href="">Quiz Trivia</a>
                             <a href="">Draw 118</a>
+                            <a href="">Cabutan Bertuah</a>
                         </div>
                     </div>
                     <div class="col-lg-7 order-3 px-0 px-lg-3">

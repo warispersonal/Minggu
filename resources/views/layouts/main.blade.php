@@ -231,7 +231,7 @@
                             </span>
                         @endif
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <input class="custom_inputs" type="password" name="password"
                                placeholder="{{ __('auth.password') }}">
                         @if ($errors->has('password'))
@@ -249,8 +249,8 @@
                             </label>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <p class="mb-0">{{ __('auth.registerStatement') }}</p>
+                    <div class="mb-4">
+                        <p class="mb-2">{{ __('auth.registerStatement') }}</p>
                         <a href="">{{ __('auth.terms&condition') }}</a>
                     </div>
                     <div class="mb-3">

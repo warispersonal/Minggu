@@ -52,24 +52,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cars-row">
-                            <div class="d-flex align-items-center justify-content-around p-md-3 p-2">
-                                <div>
-                                    <img src="{{asset('assets/img/raiz-logo')}}.png" class="img-fluid" alt="">
+                        <!--<div class="cars-row">-->
+                        <!--    <div class="d-flex align-items-center justify-content-around p-md-3 p-2">-->
+                        <!--        <div>-->
+                        <!--            <img src="{{asset('assets/img/raiz-logo')}}.png" class="img-fluid" alt="">-->
 
-                                </div>
-                                <div>
-                                    <div class="car-details">
-                                        <h5>{{ __('general.evouchers') }}</h5>
-                                        <h1>RM180,000</h1>
-                                    </div>
-                                </div>
-                                <div class="info_iconn info_iconn_2">
-                                    <span class="bi bi-info"></span>
-                                </div>
-                            </div>
+                        <!--        </div>-->
+                        <!--        <div>-->
+                        <!--            <div class="car-details">-->
+                        <!--                <h5>{{ __('general.evouchers') }}</h5>-->
+                        <!--                <h1>RM180,000</h1>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--        <div class="info_iconn info_iconn_2">-->
+                        <!--            <span class="bi bi-info"></span>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
 
-                        </div>
+                        <!--</div>-->
                         <div class="cars-row">
                             <a href="" class="ringgit-btn">{{ __('general.ringgit_emas') }}</a>
                             <div class="d-flex align-items-end p-md-3 p-2">

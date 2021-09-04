@@ -31,6 +31,7 @@
                     <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
                 </div>
             </div>
+            
             <img src="{{asset('assets/img/home-bg-mobile.png')}}" class="d-lg-none w-100 position-absolute top-0">
             <div class="home-links position-relative">
                 @foreach($partners as $partner)
@@ -38,6 +39,10 @@
                         <img src="{{$partner->main_logo}}" alt="">
                     </a>
                 @endforeach
+            </div>
+            <div class="info-btn"><i class="bi bi-info"></i></div>
+            <div class="about-us-box">
+                Minggu Saham Digital adalah sebuah acara mesra keluarga yang dipenuhi dengan program pendidikan dan literasi kewangan. MSD bersiaran langsung selama 7 hari melalui laman Facebook dan YouTube.
             </div>
         </div>
     </main>

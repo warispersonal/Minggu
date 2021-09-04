@@ -41,8 +41,6 @@
                                      alt="">
                             @endforeach
                         </div>
-
-
                         <div id="jadual_content" style="display: none;">
                             <div class="d-lg-flex d-none align-items-start  jadual-desktop">
                                 <div class="nav flex-column nav-pills me-5" id="v-pills-tab" role="tablist"

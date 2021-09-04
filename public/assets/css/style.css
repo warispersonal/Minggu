@@ -7,6 +7,7 @@
     display: none !important;
 }
 
+
 .main-img{
     background: url(../img/home-bg-2.png);
     background-size: cover;
@@ -214,7 +215,7 @@
 }
 .my_modal p{
     color: #0057B7;
-    font-weight: bold;
+    font-size:14px;
 }
 .my_modal a{
     color: #0057B7;
@@ -421,6 +422,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%,-50%);
+    text-transform:uppercase;
 }
 .cars-row{
     display: flex;
@@ -944,6 +946,45 @@
 #register_modal .form-check{
     margin-left:10px;
 }
+.info-btn{
+    position:absolute;
+    top:30%;
+    left:1%;
+    background: linear-gradient(226.91deg, #0057B7 26.91%, #0039A9 86.1%);
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    color:white;
+    font-size:24px;
+    display:flex;
+    justify-content:center;
+    z-index:55;
+    line-height:30px;
+    cursor:pointer;
+}
+.about-us-box{
+    position:fixed;
+    top:35%;
+    left:-100%;
+    background:white;
+    color:#0057B7;
+    padding:10px 20px;
+    border-radius:10px;
+    width:450px;
+    transition:all .5s;
+}
+.info-btn:hover ~ .about-us-box{
+    left:5%;    
+}
+@media(max-width:1367px){
+    .info-btn{
+        left:2%;
+        top:35%;
+    }
+    .about-us-box{
+        top:40%;
+    }
+}
 
 @media(max-width:991px){
     
@@ -1246,7 +1287,7 @@
         font-size: 14px;
     }
     .my_modal p{
-        font-size: 14px;
+        font-size: 12px;
     }
     .my_modal a{
         font-size: 14px;
@@ -1437,6 +1478,15 @@
     .rm-form .rm-imputs{
         margin-left: 8px;
         width: 90%;
+    }
+    .info-btn{
+        left: 65%;
+        top: 12%;
+    }
+    .about-us-box{
+        left:-150%;
+        width:90%;
+        font-size:14px;
     }
 }
 
