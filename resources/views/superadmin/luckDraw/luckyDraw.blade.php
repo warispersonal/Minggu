@@ -36,6 +36,16 @@
                     <div class="card-header border-0">
                         <h3 class="mb-0">Users</h3>
                     </div>
+                    <div class="card-header border-0">
+                        <div class="row">
+                            <div class="col-lg-2 col-5">
+                                <h3 class="mb-0">Lucky Draw Winner</h3>
+                            </div>
+                            <div class="col-lg-4 col-5">
+                                <input class="form-control" id="date_filter" name="date" type="date">
+                            </div>
+                        </div>
+                    </div>
                     <!-- Light table -->
                     <div class="table-responsive">
                         <table class="table align-items-center table-flush w-100" id="adminTable">
@@ -95,8 +105,9 @@
     <script type="text/javascript">
         $(document).ready(function () {
             // Show Admins DataTable
-            $('#adminTable').DataTable({
-                dom: 'Bfrtip',
+            $datatable = $('#adminTable').DataTable({
+                                dom: 'Bfrtip',
+                "pageLength": 25,
                 buttons: [
                     'copy', 'csv', 'excel', 'pdf'
                 ],
@@ -117,6 +128,11 @@
                         "next": "<i class='fa fa-angle-right'></i>"
                     }
                 }
+            });
+
+
+            $('#date_filter').on('change', function () {
+                $datatable.columns(4).search( this.value ).draw();
             });
 
             $('#getDailyWinner').on('click', function () {

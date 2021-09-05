@@ -24,7 +24,7 @@
                             <h6 class="h2 text-white d-inline-block mb-0">Date</h6>
                             <div class="form-group mb-3">
                                 <div class="input-group input-group-alternative">
-                                    <input class="form-control" id="date_field"  name="date" type="date" required>
+                                    <input class="form-control" id="date_field" name="date" type="date" required>
                                 </div>
                             </div>
                         </div>
@@ -43,8 +43,16 @@
                 <div class="card">
                     <!-- Card header -->
                     <div class="card-header border-0">
-                        <h3 class="mb-0">Users</h3>
+                        <div class="row">
+                            <div class="col-lg-2 col-5">
+                                <h3 class="mb-0">Users</h3>
+                            </div>
+                            <div class="col-lg-4 col-5">
+                                <input class="form-control" id="date_filter" name="date" type="date" >
+                            </div>
+                        </div>
                     </div>
+
                     <!-- Light table -->
                     <div class="table-responsive">
                         <table class="table align-items-center table-flush w-100" id="adminTable">
@@ -104,10 +112,10 @@
     <script type="text/javascript">
         document.getElementById('date_field').valueAsDate = new Date();
         $(document).ready(function () {
-            // Show Admins DataTable
-            $('#adminTable').DataTable({
+           $datatable =  $('#adminTable').DataTable({
                 dom: 'Bfrtip',
-                buttons: [
+               "pageLength": 25,
+               buttons: [
                     'copy', 'csv', 'excel', 'pdf'
                 ],
                 "order": [],
@@ -128,7 +136,9 @@
                     }
                 }
             });
-
+            $('#date_filter').on('change', function () {
+                $datatable.columns(4).search( this.value ).draw();
+            });
             $('#getDailyWinner').on('click', function () {
                 $.ajax({
                     method: 'GET',

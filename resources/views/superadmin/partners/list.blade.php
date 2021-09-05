@@ -140,6 +140,7 @@
             $('#adminTable').DataTable({
                 "processing": true,
                 "serverSide": true,
+                "pageLength": 25,
                 "order": [],
                 "ajax": "{{ route('star.getpartnersAJAX') }}",
                 "columns":[

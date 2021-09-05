@@ -122,6 +122,7 @@
             // Show Admins DataTable
             $('#adminTable').DataTable({
                 "processing": true,
+                "pageLength": 25,
                 "serverSide": true,
                 "order": [],
                 "ajax": "{{ route('star.getMainDetailAJAX') }}",
