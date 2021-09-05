@@ -106,7 +106,7 @@
         $(document).ready(function () {
             // Show Admins DataTable
             $datatable = $('#adminTable').DataTable({
-                                dom: 'Bfrtip',
+                dom: 'Bfrtip',
                 "pageLength": 25,
                 buttons: [
                     'copy', 'csv', 'excel', 'pdf'

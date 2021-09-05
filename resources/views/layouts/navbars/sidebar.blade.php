@@ -180,11 +180,11 @@
                         </a>
                         <div class="collapse" id="comp-system">
                             <ul class="nav nav-sm flex-column">
-                                {{--                                <li class="nav-item">--}}
-                                {{--                                    <a class="nav-link" href="#">--}}
-                                {{--                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('View Submissions') }}--}}
-                                {{--                                    </a>--}}
-                                {{--                                </li>--}}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('star.viewSubmission')}}">
+                                        <i class="ni ni-ui-04 text-primary"></i> {{ __('View Submissions') }}
+                                    </a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('star.compitition.filter') }}">
                                         <i class="ni ni-ui-04 text-primary"></i> {{ __('Upload Filter') }}

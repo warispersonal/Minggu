@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\SuperAdmin;
 
 use App\Http\Controllers\Controller;
+use App\UserLottery;
 use Illuminate\Http\Request;
 
 use App\User;
 use App\Models\Program;
+use Yajra\DataTables\DataTables;
 
 class SuperAdminController extends Controller
 {
@@ -16,9 +18,9 @@ class SuperAdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         $cards=[];$data=[];
-        
+
         $data['admins'] = User::where('role_id' , 2)->limit(5)->get();
         $data['partners'] = User::where('role_id' , 3)->limit(5)->get();
         $data['users'] = User::where('role_id' , 4)->limit(5)->get();
@@ -97,4 +99,35 @@ class SuperAdminController extends Controller
     {
         //
     }
+
+    public function viewSubmission(){
+        return view('superadmin.viewSubmission');
+    }
+
+    public function viewSubmissionAJAX(Request $request){
+
+        $userLottery = UserLottery::all();
+        return Datatables::of($userLottery)
+            ->addColumn('name', function ($data) {
+                return $data->user->name ?? "";
+            })
+            ->addColumn('email', function ($data) {
+                return $data->user->email ?? "";
+            })
+            ->addColumn('ic_number', function ($data) {
+                return $data->user->ic_number ?? "";
+            })
+            ->addColumn('title', function ($data) {
+                return $data->lottery->title ?? "";
+            })
+            ->addColumn('section_no', function ($data) {
+                return $data->lottery->section ?? "";
+            })
+            ->addColumn('correct_value', function ($data) {
+                return $data->lottery->correct_value ?? "";
+            })
+            ->rawColumns(['id','name','email','ic_number','section_no','title','correct_value'])
+            ->make(true);
+    }
+
 }

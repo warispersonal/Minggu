@@ -7,6 +7,7 @@ use App\Http\Controllers\SuperAdmin\HomePagePartnerController;
 use App\Http\Controllers\SuperAdmin\LuckyDrawController;
 use App\Http\Controllers\SuperAdmin\ProgramController;
 use App\Http\Controllers\SuperAdmin\RinggitEmasController;
+use App\Http\Controllers\SuperAdmin\SuperAdminController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
@@ -130,6 +131,10 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
 
     Route::get('program', 'UsersController@index')->name('star.programs');
 
+    Route::get('view-submission', [SuperAdminController::class, 'viewSubmission'])->name('star.viewSubmission');
+    Route::get('view-submission-ajax',[SuperAdminController::class, 'viewSubmissionAJAX'])->name('star.viewSubmissionAJAX');
+
+
 
     Route::get('programs', [ProgramController::class, 'index'])->name('programs.index');
     Route::get('program/add', [ProgramController::class, 'create'])->name('programs.add');
@@ -160,7 +165,6 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::get('generate-ringgit-emas', [RinggitEmasController::class, 'generateRinggitEmasWinnerList'])->name('generateRinggitEmas');
         Route::get('ringgit-emas', [RinggitEmasController::class, 'ringgitEmas'])->name('ringgitEmasWinner');
         Route::get('get-ringgit-emas-ajax', [RinggitEmasController::class, 'getRinggitEmasWinnerAJAX'])->name('getRinggitEmasWinnerAJAX');
-
 
         Route::get('generate-lucky', [LuckyDrawController::class, 'generateLuckyDraw'])->name('getLuckyDrawWinnerList');
         Route::get('get-generate-lucky-ajax', [LuckyDrawController::class, 'generateLuckyDrawAJAX'])->name('getLuckyDrawWinnerListAJAX');
