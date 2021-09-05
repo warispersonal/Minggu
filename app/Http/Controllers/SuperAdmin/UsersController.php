@@ -30,7 +30,8 @@ class UsersController extends Controller
     // Get Partners for DataTable AJAX
     public function getUsers(Request $request){
 
-        $partners = User::where('role_id' , 4)->orderBy('created_at','desc')->get();
+//        $partners = User::where('role_id' , 4)->orderBy('created_at','desc')->get();
+        $partners = User::select('*')->where('role_id' , 4)->orderBy('created_at','desc');
         return Datatables::of($partners)
             ->addColumn('action', function($data){
                 $dropdown = '<div class="dropdown">

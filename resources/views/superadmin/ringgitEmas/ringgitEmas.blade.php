@@ -44,6 +44,7 @@
                                 <th scope="col" class="sort" data-sort="name">Name</th>
                                 <th scope="col" class="sort" data-sort="email">Email</th>
                                 <th scope="col" class="sort" data-sort="ic">IC Number</th>
+                                <th scope="col" class="sort" data-sort="ic">Lottery Title</th>
                                 <th scope="col">Date</th>
                             </tr>
                             </thead>
@@ -84,6 +85,7 @@
                     {"data": "name"},
                     {"data": "email"},
                     {"data": "ic"},
+                    {"data": "title"},
                     {"data": "date"},
                 ],
                 "language": {

@@ -37,7 +37,10 @@ class LuckyDrawController extends Controller
             ->addColumn('ic', function ($data) {
                 return $data->user->ic_number ?? "";
             })
-            ->rawColumns(['name', 'email', 'ic'])
+            ->addColumn('title', function ($data) {
+                return $data->lottery->title ?? "";
+            })
+            ->rawColumns(['name', 'email', 'ic' , 'title'])
             ->make(true);
     }
 

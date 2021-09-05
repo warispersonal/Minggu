@@ -106,7 +106,7 @@ class SuperAdminController extends Controller
 
     public function viewSubmissionAJAX(Request $request){
 
-        $userLottery = UserLottery::all();
+        $userLottery = UserLottery::select('*');
         return Datatables::of($userLottery)
             ->addColumn('name', function ($data) {
                 return $data->user->name ?? "";
