@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+//        $this->call([
+//            UserLotterySeeder::class
+//        ]);
         $data = [
             ['title' => '22 Okt', 'correct_value' => '123', 'button_text' => '', 'section' => '1'],
             ['title' => '4 Nov', 'correct_value' => '123', 'button_text' => '', 'section' => '1'],
@@ -144,12 +147,20 @@ class DatabaseSeeder extends Seeder
         ];
         // $this->call(UserSeeder::class);
 //        Lottery::insert($data);
-//        factory(App\User::class, 10000)->create();
+//        factory(App\User::class, 50000)->create();
 
+//        factory(App\User::class, 1)->create();
+        $faker = Faker\Factory::create();
 
-        for ($i = 0; $i < 20; $i++) {
-            DB::table('daily_winners')->insert([
-                'user_id' => $i,
+        for ($i = 0; $i < 800000; $i++) {
+            DB::table('user_lotteries')->insert([
+                'lottery_id' => rand(1,111),
+                'user_id' => rand(1,50000),
+                'code' => 123,
+                'created_at' =>  now()->addMinute(rand(1,59)),
+                'updated_at' => now()->addMonth(rand(1,59)),
+                'isCorrect' => rand(0,1),
+                'ic_number' => rand(10000,50000),
             ]);
         }
 

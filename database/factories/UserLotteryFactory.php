@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\User;
+use App\UserLottery;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -17,14 +17,14 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(\App\UserLottery::class, function (Faker $faker) {
+$factory->define(UserLottery::class, function (Faker $faker) {
     return [
-        'lottery_id' => rand(1, 111),
-        'user_id' => rand(1, 50000),
+        'lottery_id' => rand(1,111),
+        'user_id' => rand(1,50000),
         'code' => 123,
         'created_at' =>  $faker->dateTimeBetween(-1, now()),
         'updated_at' => $faker->dateTimeBetween(-1, now()),
-        'isCorrect' => rand(0, 1),
-        'ic_number' => rand(10000, 50000)
+        'isCorrect' => rand(0,1),
+        'ic_number' => rand(10000,50000),
     ];
 });
