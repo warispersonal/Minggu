@@ -17,7 +17,7 @@ return [
     'social_heading' => 'Boleh juga ditonton menerusi:',
 
     // Program Page Text
-    'msd_btn_text' => 'Tonton semu episod lalu',
+    'msd_btn_text' => 'Tonton semua episod lalu',
     'program' => 'Program',
     'schedule' => 'Jadual',
     'wednesday' => 'Rabu',
@@ -55,7 +55,7 @@ return [
 
     'jom-kira-doit'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
 
-    'khidmat0' => 'Khidmat Nasihat',
+    'khidmat0' => 'Khidmat Nasihat  1-1',
     'khidmat1' => 'Apa itu Khidmat Nasihat 1-1?',
     'khidmat2' => 'Anda boleh mendapatkan khidmat nasihat dan rundingan peribadi selama 30 minit dengan penasihat-penasihat dari ASNB, AmBank, Bank Islam, CIMB & RHB. Tetapkan awal sesi anda!',
     'khidmat3' => 'Penasihat daripada Ejen Bank kami yang pakar sedia membantu anda mengenai perkara-perkara berikut:',
@@ -101,6 +101,5 @@ return [
     'pertandingan_title' => 'Pertandingan',
 
     'promosi_title' => 'Promosi',
-
-
+    'back_button_age' => 'Kembali ke Pertandingan',
 ];

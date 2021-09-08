@@ -19,13 +19,13 @@
                 <div class="row gy-3">
                     <div class="col-lg-4 pe-lg-5">
                         <div class="d-flex w-100">
-                            <h2 class="heading2">{{ __('general.khidmat0') }} <br> 1-1</h2>
+                            <h2 class="heading2">{{ __('general.khidmat0') }}</h2>
                             <img src="{{asset('assets/img/nasihat2.png')}}" class="img-fluid w-50 d-lg-none" alt="">
                         </div>
                         <img src="{{asset('assets/img/nasihat.png')}}" class="img-fluid mt-5 d-none d-lg-inline-block" alt="">
                     </div>
                     <div class="col-lg-8 text-white" id="khidmat_nasihat_section">
-                        <h2>{{ __('general.khidmat1') }}</h2>
+                        <h2>{{ __('general.khidmat1')}}</h2>
                         <p>
                             {{ __('general.khidmat2') }}
                         </p>

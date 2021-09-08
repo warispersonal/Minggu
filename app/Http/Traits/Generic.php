@@ -25,7 +25,8 @@ trait Generic
         if ($file->hasFile($input_name)) {
             ini_set('memory_limit', '-1');
             $file = $file->file($input_name);
-            $file_name = time() . '.' . $file->getClientOriginalName();
+            $new_str = str_replace(' ', '', $file->getClientOriginalName());
+            $file_name = time() . '.' . $new_str;
             $file->move($location, $file_name);
             return $file_name;
         }

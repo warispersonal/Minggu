@@ -42,6 +42,7 @@
                                 <th scope="col" class="sort" data-sort="name">ID</th>
                                 <th scope="col" class="sort" data-sort="budget">Title</th>
                                 <th scope="col" class="sort" data-sort="status">Description</th>
+                                <th scope="col" class="sort" data-sort="status">Loog</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -89,6 +90,14 @@
                                             <textarea class="form-control" id="description_bm" name="description_bm" placeholder="Description (BM)"></textarea>
                                         </div>
                                     </div>
+
+                                    <div class="form-group mb-3">
+                                        <label>Logo</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input id="logo" name="logo" type="hidden">
+                                            <input class="form-control"  onchange="encodeImageFileAsURL(this)"  type="file" required>
+                                        </div>
+                                    </div>
                                     <div>
                                         <ul class="text-danger" id="store-partner-errors">
 
@@ -130,6 +139,7 @@
                     { "data": "id" },
                     { "data": "title" },
                     { "data": "description" },
+                    { "data": "logo" },
                     { "data": "action",'name':'action' },
                 ],
                 "language": {
@@ -147,6 +157,7 @@
                 var $description = $('#description').val();
                 var $title_bm = $('#title_bm').val();
                 var $description_bm = $('#description_bm').val();
+                var $logo = $('#logo').val();
                 $.ajax({
                     url : "{{ route('star.storeMainDetail') }}",
                     method : 'POST',
@@ -155,8 +166,8 @@
                         title : $title,
                         description : $description,
                         title_bm : $title_bm,
+                        logo : $logo,
                         description_bm : $description_bm,
-
                     },
                     beforeSend : function(){
                         $('#partner-store').prop('disabled' , true);
@@ -193,6 +204,16 @@
             }
 
         });
+    </script>
+    <script>
+        function encodeImageFileAsURL(element) {
+            var file = element.files[0];
+            var reader = new FileReader();
+            reader.onloadend = function() {
+                $("#logo").val(reader.result);
+            }
+            reader.readAsDataURL(file);
+        }
     </script>
 @endpush
 

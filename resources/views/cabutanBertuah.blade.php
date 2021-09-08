@@ -43,8 +43,8 @@
                     </div>
                 </div>
                 <div class="mt-5 pt-5">
-                    <a href="{{route('sertai.sekarang')}}" class="tonton-btn"> <i class="bi bi-chevron-left"></i>
-                        {{ __('general.cabutanbertuah_text') }}
+                    <a href="{{route('pertandingan')}}" class="tonton-btn"> <i class="bi bi-chevron-left"></i>
+                        {{ __('general.back_button_age') }}
                     </a>
                 </div>
             </div>

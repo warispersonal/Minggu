@@ -14,9 +14,9 @@ return [
     */
 
     'pertandingan_title' => 'The Match',
-    
+
     'the_match_button_1' => 'Come on ... Calculate Money',
-    'the_match_button_2' => 'Live Trivia22',
+    'the_match_button_2' => 'Live Trivia',
     'the_match_button_3' => 'Draw 118',
     'the_match_button_4' => 'Lucky Draw',
 
@@ -28,7 +28,7 @@ return [
     'social_heading' => 'Can also be watched through:',
 
     // Program Page Text
-    'msd_btn_text' => 'Watch all episodes lalu',
+    'msd_btn_text' => 'Watch all past episodes',
     'program' => 'Program',
     'schedule' => 'Schedule',
     'wednesday' => 'Wednesday',
@@ -64,8 +64,8 @@ return [
     'evouchers'=> 'Lazada E-Vouchers Are Worth More Than',
     'jom-kira-doit'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
 
-    'khidmat0' => 'Service Advisor',
-    'khidmat1' => 'What is 1-1 Advisory Services?',
+    'khidmat0' => '1-on-1 Advisors',
+    'khidmat1' => 'What is 1-on-1 Advisors?',
     'khidmat2' => 'You can get 30 minutes of personal advice and consultation with advisors from ASNB, AmBank, Bank Islam, CIMB & RHB. Set the beginning of your session!',
     'khidmat3' => 'Advisors from our expert Bank Agents are available to assist you on the following matters:',
     'khidmat4' => 'ASB financing',
@@ -110,4 +110,5 @@ return [
 
 
     'promosi_title' => 'Promotion',
+    'back_button_age' => 'Return to Match',
 ];

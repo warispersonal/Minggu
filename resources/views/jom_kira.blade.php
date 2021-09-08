@@ -20,8 +20,8 @@
                         <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
                         <p class="text-white mt-4 text-center">{{ __('general.jom_kira') }}</p>
                         <div class="mt-4 d-flex justify-content-between align-items-center">
-                            <a href="" class="tonton-btn mt-0"> <i class="bi bi-chevron-left"></i>
-                                 Kembali ke Pertandingan
+                            <a href="{{route('pertandingan')}}" class="tonton-btn mt-0"> <i class="bi bi-chevron-left"></i>
+                                {{ __('general.back_button_age') }}
                             </a>
                             <a href="{{route('sertai.sekarang')}}" class="sertai-btn d-inline-block">{{ __('general.join_now') }}</a>
                         </div>
@@ -55,24 +55,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="cars-row">-->
-                        <!--    <div class="d-flex align-items-center justify-content-around p-md-3 p-2">-->
-                        <!--        <div>-->
-                        <!--            <img src="{{asset('assets/img/raiz-logo')}}.png" class="img-fluid" alt="">-->
-
-                        <!--        </div>-->
-                        <!--        <div>-->
-                        <!--            <div class="car-details">-->
-                        <!--                <h5>{{ __('general.evouchers') }}</h5>-->
-                        <!--                <h1>RM180,000</h1>-->
-                        <!--            </div>-->
-                        <!--        </div>-->
-                        <!--        <div class="info_iconn info_iconn_2">-->
-                        <!--            <span class="bi bi-info"></span>-->
-                        <!--        </div>-->
-                        <!--    </div>-->
-
-                        <!--</div>-->
                         <div class="cars-row">
                             <a href="" class="ringgit-btn">{{ __('general.ringgit_emas') }}</a>
                             <div class="d-flex align-items-end p-md-3 p-2">
