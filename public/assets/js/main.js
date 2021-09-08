@@ -36,7 +36,7 @@ if (document.getElementById("mobile_login") != null) {
 
     mobilelogin.addEventListener("click", () => {
         overlay.style.display = "block"
-        overlay.style.zIndex = "55"
+        overlay.style.zIndex = "9"
         loginModal.style.bottom = "55%"
         setTimeout(() => {
             loginModal.style.bottom = "50%"
@@ -47,7 +47,7 @@ if (document.getElementById("mobile_register") != null) {
     mobileRegister.addEventListener("click", () => {
         overlay.style.display = "block"
         registerModal.style.bottom = "55%"
-        overlay.style.zIndex = "55"
+        overlay.style.zIndex = "9"
         setTimeout(() => {
             registerModal.style.bottom = "50%"
         }, 300);

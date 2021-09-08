@@ -78,7 +78,10 @@
 
     <div class="mobile-header d-lg-none px-3 py-2">
         <div>
-            <h3 class="m-0">PNB ASNB</h3>
+            <div class="d-md-none header-imgs">
+                <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">
+                <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
+            </div>
             <small><a href="{{ route('localization' , 'bm') }}">BM</a> | <a href="{{ route('localization' , 'en') }}">EN</a> </small>
         </div>
 
@@ -259,8 +262,8 @@
                 </form>
             </div>
             <div class="col-3 pe-0">
-                <img src="{{ asset('assets/front/img/drone1.png') }}" class="drone1" alt="">
-                <img src="{{ asset('assets/front/img/drone2.png') }}" class="drone2" alt="">
+                <img src="{{ asset('assets/front/img/drone1_1.png') }}" class="drone1" alt="">
+                <img src="{{ asset('assets/front/img/drone2_2.png') }}" class="drone2" alt="">
             </div>
         </div>
     </div>

@@ -162,7 +162,7 @@
 
 
     <!-- Page content -->
-    <div class="container-fluid mt--7">
+    <div class="container-fluid mt--7 " style="display:none;">
         <div class="row">
             <div class="col">
                 <div class="card">

@@ -1,7 +1,13 @@
+@font-face {
+  font-family: "manrope";
+  src: url("../fonts/Manrope-Regular.ttf");
+}
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: "manrope";
 }
 .hidden-div{
     display: none !important;
@@ -9,9 +15,10 @@
 
 
 .main-img{
-    background: url(../img/desktop-home-bg.png);
+    /*background: url(../img/desktop-home-bg.png);*/
     background-size: cover;
-    background-position: top;
+    background-position: left top;
+    
 }
 .desktop_nav{
     background-color: #fff;
@@ -51,7 +58,7 @@
     height: 100vh;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.17);
     transition: all .3s;
-    z-index: 555;
+    z-index: 9;
 }
 .mobile_nav ul{
     list-style: none;
@@ -77,7 +84,7 @@
     width: 100%;
     top: 0px;
     left: 0px;
-    z-index: 5;
+    z-index: 8;
     background-color: #0057B7;
 }
 #hamburger_btn{
@@ -121,7 +128,7 @@
     bottom: -100%;
     left: 50%;
     transform: translate(-50%,50%);
-    z-index: 555;
+    z-index: 9;
     transition: all .3s;
     max-height: 90vh;
     padding-right: 0px;
@@ -130,6 +137,8 @@
 .scrol{
     overflow-y: scroll;
     max-height: 70vh;
+    scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 }
 .scrol::-webkit-scrollbar{
     width: 0px;
@@ -145,7 +154,7 @@
     left: 0px;
     right: 0px;
     background-color: #0058b769;
-    z-index: 2;
+    z-index: 8;
     display: none;
 }
 .modal_heading{
@@ -200,7 +209,7 @@
 }
 .drone2{
     width: 100%;
-    transform: translate(-30%, 25%);
+    transform: translate(-20%, 10%);
 }
 .form-check-input{
 
@@ -215,14 +224,16 @@
 }
 .my_modal p{
     color: #0057B7;
-    font-size:14px;
+    font-size:12px;
+    line-height:14px;
+    text-align:justify;
 }
 .my_modal a{
     color: #0057B7;
 }
 .main-bg{
     background-color: #0057B7;
-    min-height: calc(100vh - 70px);
+    /*min-height: calc(100vh - 70px);*/
 }
 .social_address p{
     color: white;
@@ -419,7 +430,7 @@
     text-decoration: none;
     display: block;
     margin: auto;
-    z-index: 55555;
+    z-index: 5;
     position: absolute;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -519,6 +530,7 @@
     font-weight: bold;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.17);
     text-decoration: none;
+    display:inline-block;
 }
 .rm-form label{
     color: #808AE2;
@@ -725,12 +737,11 @@
     max-height: 90vh;
     overflow-y: scroll;
     overflow-x: visible;
-    z-index: 1;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40%;
     transition: all .3s;
-    z-index: 55555;
+    z-index: 9;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
 }
@@ -794,12 +805,12 @@
     color: white;
     font-size: 24px;
     cursor: pointer;
-    z-index: 55555;
+    z-index: 8;
     top: 150%;
     transition: all .3s;
 }
 .home-links{
-    height: calc(100vh - 70px);
+    /*height: calc(100vh - 70px);*/
 }
 .home-links img{
     height: 100%;
@@ -811,31 +822,31 @@
     transform: scale(.7);
 }
 .link-1{
-    top: 70%;
-    left: 5%;
+    top: 50%;
+    left: 2%;
 }
 .link-2{
-    top: 50%;
+    top: 36%;
     left: 20%;
 }
 .link-3{
-    bottom: 5%;
-    left: 25%;
+    bottom: 23%;
+    left: 18%;
 }
 .link-4{
-    top: 55%;
+    top: 47%;
     left: 33%;
 }
 .link-5{
-    top: 15%;
-    left: 48%;
+    top: 8%;
+    left: 46%;
 }
 .link-6{
-    top: 36%;
+    top: 30%;
     left: 38%;
 }
 .link-7{
-    bottom: 5%;
+    bottom: 30%;
     left: 57%;
 }
 .link-8{
@@ -843,20 +854,20 @@
     left: 60%;
 }
 .link-9{
-    top: 45%;
-    left: 60%;
+    top: 33%;
+    left: 58%;
 }
 .link-10{
-    top: 20%;
-    right: 20%;
+    top: 6%;
+    right: 14%;
 }
 .link-11{
-    top: 50%;
-    right: 22%;
+    top: 35%;
+    right: 15%;
 }
 .link-12{
-    top: 4%;
-    right: 8%;
+    top: 2%;
+    right: 5%;
 }
 .link-13{
     top: 53%;
@@ -867,7 +878,7 @@
     right: 13%;
 }
 .link-15{
-    top: 40%;
+    top: 35%;
     right: 5%;
 }
 .info_iconn{
@@ -909,12 +920,11 @@
     max-height: 90vh;
     overflow-y: scroll;
     overflow-x: visible;
-    z-index: 10;
+    z-index: 9;
     left: 50%;
     transform: translate(-5%, -50%);
     width: 40%;
     transition: all .3s;
-    z-index: 55555;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
 }
@@ -949,8 +959,8 @@
 }
 .info-btn{
     position:absolute;
-    top:30%;
-    left:1%;
+    top: 25%;
+    left: 2%;
     background: linear-gradient(226.91deg, #0057B7 26.91%, #0039A9 86.1%);
     height:30px;
     width:30px;
@@ -959,7 +969,7 @@
     font-size:24px;
     display:flex;
     justify-content:center;
-    z-index:55;
+    z-index:5;
     line-height:30px;
     cursor:pointer;
 }
@@ -1020,18 +1030,40 @@
     z-index: 1;
     margin-top: -200px;
 }
+.header-imgs{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:8;
+}
+.header-imgs img:nth-child(1){
+    width:100px;
+}
+.header-imgs img:nth-child(2){
+    width:140px;
+}
 @media(max-width:1367px){
-    .info-btn{
-        left:2%;
-        top:35%;
-    }
+   
     .about-us-box{
         top:40%;
     }
-}
-
-@media(max-width:991px){
+    .header-imgs img:nth-child(1){
+        width:70px;
+    }
+    .header-imgs img:nth-child(2){
+        width:100px;
+    }
     
+}
+@media(max-width:1280px){
+    .home-links a{
+        transform:scale(.5);
+    }
+}
+@media(max-width:991px){
+    .header-imgs{
+        position:static;
+    }
     .faq-heading{
         font-size: 3rem;
     }
@@ -1165,92 +1197,52 @@
         margin-top: 20px;
     }
     .main-img{
-        background:url(../img/mobile-home-bg.png);
+        /*background:url(../img/mobile-home-bg.png);*/
         background-size: cover;
-        min-height: 180vh;
+        /*min-height: 180vh;*/
     }
     .home-links{
-        height: 180vh;
+        /*height: 180vh;*/
     }
     .home-links a{
-        transform: scale(.7);
-    }
-    .link-6{
-        top: 20%;
-        right: 5%;
-        left: inherit;
-    }
-    .link-5{
-        top: 22%;
-        right: 28%;
-        left: inherit;
-    }
-    .link-4{
-        top: 32%;
-        left: 4%;
-    }
-    .link-7{
-        top: 35%;
-        bottom: inherit;
-        left: 60%;
-    }
-    .link-9{
-        top: 48%;
-        left: 14%;
-    }
-    .link-14{
-        bottom: inherit;
-        right: 5%;
-        top: 44%;
-    }
-    .link-15{
-        top: inherit;
-        right: 35%;
-        bottom: 0%;
-    }
-    .link-10{
-        bottom: 36%;
-        left: 40%;
-        right: inherit;
-        top: inherit;
-    }
-    .link-2{
-        bottom: 36%;
-        left: 17%;
-        top: inherit;
-    }
-    .link-12{
-        top: inherit;
-        bottom: 5%;
-        right: inherit;
-        left: 5%;
-    }
-    .link-3{
-        bottom: 37%;
-        left: inherit;
-        right: 8%;
-    }
-    .link-8{
-        bottom: 20%;
-        right: 30%;
-        top: inherit;
-        left: inherit;
+        transform: scale(.4);
     }
     .link-1{
-        top: inherit;
-        left: 30%;
-        bottom: 15%;
+        transform-origin: top left;
+    }
+    .link-2{
+        transform-origin: top left;
+    }
+    .link-3{
+        transform-origin: left;
+    }
+    .link-4{
+        transform-origin: top left;
+    }
+    .link-5{
+        transform-origin: top left;
+    }
+    .link-6{
+        transform-origin: top left;
+    }
+    .link-7{
+        transform-origin: top left;
+    }
+    .link-8{
+        transform-origin: top left;
+    }
+    .link-9{
+        transform-origin: top left;
+    }
+    .link-10{
+        transform-origin: top right;
     }
     .link-11{
-        bottom: 28%;
-        left: 30%;
-        right: inherit;
-        top: inherit;
+        transform-origin: top ;
     }
-    .link-13{
-        top: inherit;
-        right: 8%;
-        bottom: 15%;
+    .link-12{
+        transform-origin: top right;
+        right:6%;
     }
     #program-modal{
         width: 75%;
@@ -1316,16 +1308,16 @@
         height: auto;
     }
     .main-bg{
-        min-height: 100vh;
+        /*min-height: 100vh;*/
     }
     .rm-form span{
         font-size: 18px;
     }
-    .info-btn{
-        left: inherit;
-        top: 10%;
-        right: 30%;
-    }
+    /*.info-btn{*/
+    /*    left: inherit;*/
+    /*    top: 10%;*/
+    /*    right: 30%;*/
+    /*}*/
     
 }
 @media(max-width:768px){
@@ -1351,7 +1343,7 @@
         font-size: 14px;
     }
     .my_modal p{
-        font-size: 12px;
+        font-size: 10px;
     }
     .my_modal a{
         font-size: 14px;
@@ -1439,7 +1431,7 @@
         font-size: 12px;
     }
     .my_modal p{
-        font-size: 10px;
+        font-size: 8px;
     }
     .my_modal a{
         font-size: 12px;
@@ -1563,13 +1555,13 @@
         font-size:14px;
     }
     .main-img{
-        background:url(../img/mobile-home-bg.png);
+        /*background:url(../img/mobile-home-bg.png);*/
         background-size: cover;
         background-position:left;
-        min-height: 140vh;
+        /*min-height: 140vh;*/
     }
     .home-links{
-        height: 140vh;
+        /*height: 140vh;*/
     }
     .home-links a{
         transform: scale(.5);

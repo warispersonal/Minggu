@@ -19,7 +19,10 @@
                     <div class="col-lg-5 pt-4 pe-lg-5">
                         <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
                         <p class="text-white mt-4 text-center">{{ __('general.jom_kira') }}</p>
-                        <div class="mt-4 text-center">
+                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                            <a href="" class="tonton-btn mt-0"> <i class="bi bi-chevron-left"></i>
+                                 Kembali ke Pertandingan
+                            </a>
                             <a href="{{route('sertai.sekarang')}}" class="sertai-btn d-inline-block">{{ __('general.join_now') }}</a>
                         </div>
                     </div>

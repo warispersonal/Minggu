@@ -13,9 +13,10 @@ return [
     |
     */
 
-
+    'pertandingan_title' => 'The Match',
+    
     'the_match_button_1' => 'Come on ... Calculate Money',
-    'the_match_button_2' => 'Live Trivia',
+    'the_match_button_2' => 'Live Trivia22',
     'the_match_button_3' => 'Draw 118',
     'the_match_button_4' => 'Lucky Draw',
 
@@ -107,6 +108,6 @@ return [
     'qa_1' => 'Frequently',
     'qa_2' => 'Asked Questions',
 
-    'pertandingan_title' => 'The Match',
+
     'promosi_title' => 'Promotion',
 ];
