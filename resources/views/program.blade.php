@@ -26,51 +26,62 @@
                     <div class="col-lg-4">
                         <div class="d-flex flex-column justify-content-between h-100">
                             <div class="tabs">
-                                    <h1 id="program" class="active_tab">{{ __('general.program') }}</h1>
-                                    <h1 id="jadual">{{ __('general.schedule') }}</h1>
+                                <h1 id="program" class="active_tab">{{ __('general.program') }}</h1>
+                                <h1 id="jadual">{{ __('general.schedule') }}</h1>
                             </div>
-                                <a href="{{route('user.msdLive')}}" class="tonton-btn m-0 d-none d-lg-block">{{ __('general.msd_btn_text') }}</a>
+                            <a href="{{route('user.msdLive')}}"
+                               class="tonton-btn m-0 d-none d-lg-block">{{ __('general.msd_btn_text') }}</a>
 
                         </div>
                     </div>
                     <div class="col-lg-8">
                         <div id="program_content">
                             @foreach($main_programs as $main_program)
-                                <img onclick="openModal({{$main_program->first_program}})" src="{{$main_program->main_logo}}" alt="{{$main_program->title}}">
+                                @if(count($main_program->programs) != 0)
+                                    <img onclick="openModal({{$main_program->first_program}})"
+                                         src="{{$main_program->main_logo}}" alt="{{$main_program->title}}">
+                                @endif
                             @endforeach
                         </div>
                         <div id="jadual_content" style="display: none;">
                             <div class="d-lg-flex d-none align-items-start  jadual-desktop">
                                 <div class="nav flex-column nav-pills me-5" id="v-pills-tab" role="tablist"
                                      aria-orientation="vertical">
-                                        <button class="nav-link active" id="v-pills-rabu-tab" data-bs-toggle="pill"
+                                    <button class="nav-link active" id="v-pills-rabu-tab" data-bs-toggle="pill"
                                             data-bs-target="#v-pills-rabu" type="button" role="tab"
-                                            aria-controls="v-pills-rabu" aria-selected="true">{{ __('general.wednesday') }}, 1 Sep 2021
-                                        </button>
-                                        <button class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill"
-                                                data-bs-target="#v-pills-khamis" type="button" role="tab"
-                                                aria-controls="v-pills-khamis" aria-selected="false">{{ __('general.thursday') }}, 2 Sep 2021
-                                        </button>
-                                        <button class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill"
-                                                data-bs-target="#v-pills-jumaat" type="button" role="tab"
-                                                aria-controls="v-pills-jumaat" aria-selected="false">{{ __('general.friday') }}, 3 Sep 2021
-                                        </button>
-                                        <button class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill"
-                                                data-bs-target="#v-pills-sabtu" type="button" role="tab"
-                                                aria-controls="v-pills-sabtu" aria-selected="false">{{ __('general.saturday') }}, 4 Sep 2021
-                                        </button>
-                                        <button class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill"
-                                                data-bs-target="#v-pills-ahad" type="button" role="tab"
-                                                aria-controls="v-pills-ahad" aria-selected="false">{{ __('general.sunday') }}, 5 Sep 2021
-                                        </button>
-                                        <button class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill"
-                                                data-bs-target="#v-pills-isinin" type="button" role="tab"
-                                                aria-controls="v-pills-isinin" aria-selected="false">{{ __('general.monday') }}, 6 Sep 2021
-                                        </button>
-                                        <button class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill"
-                                                data-bs-target="#v-pills-selasa" type="button" role="tab"
-                                                aria-controls="v-pills-selasa" aria-selected="false">{{ __('general.tuesday') }}, 4 Sep 2021
-                                        </button>
+                                            aria-controls="v-pills-rabu"
+                                            aria-selected="true">{{ __('general.wednesday') }}, 17 Nov 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-khamis" type="button" role="tab"
+                                            aria-controls="v-pills-khamis"
+                                            aria-selected="false">{{ __('general.thursday') }}, 18 Nov 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-jumaat" type="button" role="tab"
+                                            aria-controls="v-pills-jumaat"
+                                            aria-selected="false">{{ __('general.friday') }}, 19 Nov 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-sabtu" type="button" role="tab"
+                                            aria-controls="v-pills-sabtu"
+                                            aria-selected="false">{{ __('general.saturday') }}, 20 Nov 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-ahad" type="button" role="tab"
+                                            aria-controls="v-pills-ahad"
+                                            aria-selected="false">{{ __('general.sunday') }}, 21 Nov 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-isinin" type="button" role="tab"
+                                            aria-controls="v-pills-isinin"
+                                            aria-selected="false">{{ __('general.monday') }}, 22 Nov 2021
+                                    </button>
+                                    <button class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-selasa" type="button" role="tab"
+                                            aria-controls="v-pills-selasa"
+                                            aria-selected="false">{{ __('general.tuesday') }}, 23 Nov 2021
+                                    </button>
 
                                 </div>
                                 <div class="tab-content" id="jadual_tabs_content">
@@ -83,7 +94,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+                                                        {{$item->name}} <small><a class="text-white"
+                                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
                                                 </div>
@@ -99,7 +111,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+                                                        {{$item->name}} <small><a class="text-white"
+                                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
                                                 </div>
@@ -116,7 +129,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+                                                        {{$item->name}} <small><a class="text-white"
+                                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
                                                 </div>
@@ -133,7 +147,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+                                                        {{$item->name}} <small><a class="text-white"
+                                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
                                                 </div>
@@ -150,7 +165,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+                                                        {{$item->name}} <small><a class="text-white"
+                                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
                                                 </div>
@@ -166,7 +182,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+                                                        {{$item->name}} <small><a class="text-white"
+                                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
                                                 </div>
@@ -182,7 +199,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}" >{{$item->partner->name ?? ""}}</a></small>
+                                                        {{$item->name}} <small><a class="text-white"
+                                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
                                                 </div>
@@ -1067,7 +1085,8 @@
     <div id="program-modal">
         <div class="program-modal-content">
             <div class="ratio ratio-16x9">
-                <iframe id="program_frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="program_frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen></iframe>
             </div>
             <h2 class="my-3" id="program_title"></h2>
             @foreach($programs as $program)
@@ -1076,7 +1095,13 @@
                     @foreach($program->related_dates as $date)
                         <div id="program-data-dates-{{$date->id}}">
                             <li class="nav-item" role="presentation">
-                                <button onclick="onDateChange({{$date}})" class="nav-link date-button" id="date-{{$date->id}}-tab" data-bs-toggle="pill" data-bs-target="#date-{{$date->id}}" type="button" role="tab" aria-controls="date-{{$date->id}}" aria-selected="true">{{$date->date}}</button>
+                                <button onclick="onDateChange({{$date}})" class="nav-link date-button"
+                                        id="date-{{$date->id}}-tab" data-bs-toggle="pill"
+                                        data-bs-target="#date-{{$date->id}}" type="button" role="tab"
+                                        aria-controls="date-{{$date->id}}" aria-selected="true">
+                                    <p>{{$date->date}} </p>
+                                    <p>{{$date->time}} </p>
+                                </button>
                             </li>
                         </div>
                     @endforeach
@@ -1087,7 +1112,9 @@
                     <div class="tab-pane fade show description-field" id="date-{{$program->id}}" role="tabpanel"
                          aria-labelledby="date-{{$program->id}}-tab">
                         <p>
-                            {{$program->description}} <a href="{{route('may.bank', $program->partner->slug ?? '')}}"><img id="store_logo_image" src="{{$program->partner->main_logo ?? ''}}" /></a>
+                            {{$program->description}} <a
+                                href="{{route('may.bank', $program->partner->slug ?? '')}}"><img id="store_logo_image"
+                                                                                                 src="{{$program->partner->main_logo ?? ''}}"/></a>
                         </p>
                     </div>
                 @endforeach
@@ -1153,7 +1180,7 @@
         })
 
         function openModal(program) {
-            if(changeModalView(program)){
+            if (changeModalView(program)) {
                 $(".date-owl-program").addClass("hidden-div")
                 $("#date-owl-program-" + program.id).removeClass("hidden-div")
                 programModal.style.top = "45%"
@@ -1170,7 +1197,7 @@
         }
 
         function changeModalView(program) {
-            if(!$.isEmptyObject(program)){
+            if (!$.isEmptyObject(program)) {
                 $("#program_title").text(program.name)
                 $('#program_frame').attr('src', program.video_link)
                 $(".description-field").removeClass("active")
@@ -1178,8 +1205,7 @@
                 $("#date-" + program.id).addClass('active')
                 $("#date-" + program.id + "-tab").addClass('active')
                 return true
-            }
-            else{
+            } else {
                 alert("No event link with this program")
                 return false;
             }

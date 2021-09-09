@@ -64,13 +64,13 @@ class HomeController extends Controller
     public function program()
     {
         $programs = Program::all();
-        $first_september = Program::where('date', '2021-09-01')->get();
-        $second_september = Program::where('date', '2021-09-02')->get();
-        $third_september = Program::where('date', '2021-09-03')->get();
-        $fourth_september = Program::where('date', '2021-09-04')->get();
-        $five_september = Program::where('date', '2021-09-05')->get();
-        $six_september = Program::where('date', '2021-09-06')->get();
-        $seven_september = Program::where('date', '2021-09-07')->get();
+        $first_september = Program::where('date', '2021-11-17')->get();
+        $second_september = Program::where('date', '2021-11-18')->get();
+        $third_september = Program::where('date', '2021-11-19')->get();
+        $fourth_september = Program::where('date', '2021-11-20')->get();
+        $five_september = Program::where('date', '2021-11-21')->get();
+        $six_september = Program::where('date', '2021-11-22')->get();
+        $seven_september = Program::where('date', '2021-11-23')->get();
         $main_programs = MainProgram::all();
         return view("program", compact('main_programs', 'programs', 'first_september', 'second_september', 'third_september', 'fourth_september', 'five_september', 'six_september', 'seven_september'));
     }
