@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Constant\FileConstant;
 use App\Partner;
+use Embera\Embera;
 use Illuminate\Database\Eloquent\Model;
 
 class Program extends Model
@@ -35,5 +36,9 @@ class Program extends Model
             return true;
         }
     }
-
+    public function getVideoUrlAttribute()
+    {
+        $embera = new Embera();
+        return $embera->autoEmbed($this->video_link);
+    }
 }

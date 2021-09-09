@@ -1085,8 +1085,8 @@
     <div id="program-modal">
         <div class="program-modal-content">
             <div class="ratio ratio-16x9">
-                <iframe id="program_frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullscreen></iframe>
+              <iframe id="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen></iframe>>
             </div>
             <h2 class="my-3" id="program_title"></h2>
             @foreach($programs as $program)

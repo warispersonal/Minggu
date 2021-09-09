@@ -4,6 +4,7 @@ namespace App;
 
 use App\Constant\FileConstant;
 use App\Models\Program;
+use Embera\Embera;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
@@ -11,19 +12,23 @@ class Partner extends Model
 {
     protected $guarded = [];
 
-    public function sliders(){
+    public function sliders()
+    {
         return $this->hasMany(PartnerSlider::class);
     }
 
-    public function promotions(){
+    public function promotions()
+    {
         return $this->hasMany(PartnerPromotion::class);
     }
 
-    public function programs(){
+    public function programs()
+    {
         return $this->hasMany(Program::class);
     }
 
-    public function links(){
+    public function links()
+    {
         return $this->hasMany(PartnerLink::class);
     }
 
@@ -42,7 +47,14 @@ class Partner extends Model
         return asset(FileConstant::PROMOSI_IMAGE . '/' . $this->promosi_image);
     }
 
-    public function setSlugAttribute(){
-        $this->attributes['slug'] = Str::slug($this->name , "-");
+    public function setSlugAttribute()
+    {
+        $this->attributes['slug'] = Str::slug($this->name, "-");
+    }
+
+    public function getVideoUrlAttribute()
+    {
+        $embera = new Embera();
+        return $embera->autoEmbed($this->video_link);
     }
 }

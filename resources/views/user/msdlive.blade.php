@@ -41,8 +41,11 @@
                     </div>
                     <div class="col-lg-8 px-lg-2 px-0 ">
                         <div class="ratio ratio-16x9">
-                            <iframe src="https://player.vimeo.com/video/19198496" frameborder="0"
-                                    allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+                            <?php
+                            use Embera\Embera;$embera = new Embera();
+                            print_r($embera->autoEmbed($setting->value));
+                            ?>
+
                         </div>
                     </div>
                     <div class="col-12 d-lg-none">

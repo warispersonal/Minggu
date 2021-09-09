@@ -56,9 +56,8 @@ class HomeController extends Controller
 
     public function msdLive()
     {
-        $data = [];
-        $data['link'] = Settings::where('key', 'msd-live-video')->first('value');
-        return view('user.msdlive', compact('data'));
+        $setting = Settings::where('key', 'msd-live-video')->get()->first();
+        return view('user.msdlive', compact('setting'));
     }
 
     public function program()
