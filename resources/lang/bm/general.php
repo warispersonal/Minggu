@@ -107,6 +107,9 @@ return [
     'partner_premier' => 'PREMIER',
     'partner_utama' => 'UTAMA',
     'partner_acara' => 'ACARA',
-
     'partner_ejen' => 'EJEN',
+
+    'website' => 'Laman web',
+    'careers' => 'Kerjaya',
+    'contact_us' => 'Hubungi Kami',
 ];

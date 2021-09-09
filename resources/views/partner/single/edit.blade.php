@@ -92,6 +92,56 @@
                                         @endif
                                     </div>
 
+                                    <div class="form-group mb-3">
+                                        <label>Facebook Link</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control"  name="fb" placeholder="Facebook Link" value="{{ $partner->fb }}" type="text" >
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label>Instagram Link</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control"  name="insta" placeholder="Instagram Link" value="{{ $partner->insta }}" type="text" >
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label>Twitter Link</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control"  name="twitter" placeholder="Twitter Link" value="{{ $partner->twitter }}" type="text" >
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group mb-3">
+                                        <label>Youtube Link</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control"  name="youtube" placeholder="Youtube Link" value="{{ $partner->youtube }}" type="text" >
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label>Website Link</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control"  name="website" placeholder="Website Link" value="{{ $partner->website }}" type="text" >
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label>Careers Link</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control"  name="careers" placeholder="Careers Link" value="{{ $partner->careers }}" type="text" >
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label>Contact Us Link</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control"  name="contact_us" placeholder="Contact Us Link" value="{{ $partner->contact_us }}" type="text" >
+                                        </div>
+                                    </div>
+
 
                                     <div class="form-group mb-3">
                                         <label>Home Logo</label>

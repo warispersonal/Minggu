@@ -131,6 +131,13 @@ class PartnerController extends Controller
         $partner['bg_color'] = $request->bg_color;
         $partner['video_link'] = $request->video_link;
         $partner['slug'] = Str::slug($request->name, "-");
+        $partner['fb'] = $request->fb ?? "";
+        $partner['insta'] = $request->insta ?? "";
+        $partner['twitter'] = $request->twitter ?? "";
+        $partner['youtube'] = $request->youtube ?? "";
+        $partner['website'] = $request->website ?? "";
+        $partner['careers'] = $request->careers ?? "";
+        $partner['contact_us'] = $request->contact_us ?? "";
         $partner->save();
         return redirect()->back()->with(['msg'=>'Partner updated successfully']);;
 

@@ -3,7 +3,7 @@
 @push('style')
     <style>
         .main-bg {
-            background-color: {{$partner->bg_color ?? "blue"}} !important;
+            background-color: {{$partner->bg_color ?? "blue"}}  !important;
         }
 
         .mobile-header {
@@ -18,7 +18,7 @@
 
     <main>
         <div class="main-bg">
-           <div class="container-fluid px-md-5 pt-4">
+            <div class="container-fluid px-md-5 pt-4">
                 <div class="d-lg-block d-none">
                     <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
                     <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
@@ -87,14 +87,30 @@
                                 </div>
                                 <div class="col-lg-8 ps-md-4">
                                     <div class="ratio ratio-16x9">
-                                        <iframe width="420" height="345" src="https://www.youtube.com/watch?v=7xPYirJj9IY&ab_channel=SimeDarbyBerhad">
-                                        </iframe>
-
+                                        <iframe width="420" height="345" src="{{$partner->video_link}}"></iframe>
                                     </div>
                                     <div class="custom-links">
-                                        @foreach($partner->links as $link)
-                                            <a target="_blank"  href="{{$link->link}}">{{Config::get('app.locale') == 'en' ? $link->title : $link->title_bm}}</a>
-                                        @endforeach
+                                        @if($partner->fb != "")
+                                            <a target="_blank" href="{{$partner->fb}}">Fb</a>
+                                        @endif
+                                        @if($partner->insta != "")
+                                            <a target="_blank" href="{{$partner->insta}}">Insta</a>
+                                        @endif
+                                        @if($partner->twitter != "")
+                                            <a target="_blank" href="{{$partner->twitter}}">Twitter</a>
+                                        @endif
+                                        @if($partner->youtube != "")
+                                            <a target="_blank" href="{{$partner->youtube}}">Youtube</a>
+                                        @endif
+                                        @if($partner->website != "")
+                                            <a target="_blank" href="{{$partner->website}}">{{ __('general.website') }}</a>
+                                        @endif
+                                        @if($partner->careers != "")
+                                            <a target="_blank" href="{{$partner->careers}}">{{ __('general.careers') }}</a>
+                                        @endif
+                                        @if($partner->contact_us != "")
+                                            <a target="_blank" href="{{$partner->contact_us}}">{{ __('general.contact_us') }}</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -103,18 +119,22 @@
                         <div class="tab-pane fade " id="nav-program" role="tabpanel" aria-labelledby="nav-program-tab">
                             <div class="row mt-4 gy-4">
 
-                                 @foreach($partner->programs as $program)
+                                @foreach($partner->programs as $program)
                                     <div class="col-lg-6">
                                         <div class="program_video-box ">
                                             <div class="ratio ratio-16x9">
                                                 @if($program->valid_url)
-                                                    <iframe src="{{$program->video_link}}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+                                                    <iframe src="{{$program->video_link}}"
+                                                            allow="autoplay; fullscreen; picture-in-picture"
+                                                            allowfullscreen=""></iframe>
                                                 @endif
                                             </div>
                                             <h3 class="my-3">{{$program->title}}</h3>
                                             <span><strong>{{$program->date}}</strong></span>
                                             <p>{{$program->description}}</p>
-                                            <p>{{$program->main_program->title}} <img class="offer-by w-25" src="{{$partner->store_logo}}" alt=""></p>
+                                            <p>{{$program->main_program->title}}
+                                                <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
+                                            </p>
                                         </div>
                                     </div>
                                 @endforeach

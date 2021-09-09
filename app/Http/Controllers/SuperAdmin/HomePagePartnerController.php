@@ -63,8 +63,15 @@ class HomePagePartnerController extends Controller
         $partner['video_link'] = $request->video_link;
         $partner['slug'] = Str::slug($request->name, "-");
         $partner['bg_color'] = $request->bg_color;
+        $partner['fb'] = $request->fb ?? "";
+        $partner['insta'] = $request->insta ?? "";
+        $partner['twitter'] = $request->twitter ?? "";
+        $partner['youtube'] = $request->youtube ?? "";
+        $partner['website'] = $request->website ?? "";
+        $partner['careers'] = $request->careers ?? "";
+        $partner['contact_us'] = $request->contact_us ?? "";
         $partner->save();
-        return redirect()->route('stars.homepage.index')->with(['msg'=>'Partner info updated successfully']);;
+        return redirect()->route('stars.homepage.index')->with(['msg' => 'Partner info updated successfully']);;
 
     }
 
@@ -72,14 +79,14 @@ class HomePagePartnerController extends Controller
     {
         $partner = Partner::find($id);
         $partner->delete();
-        return redirect()->back()->with(['msg'=>'Partner delete successfully']);;
+        return redirect()->back()->with(['msg' => 'Partner delete successfully']);;
     }
 
     public function slider_delete($id)
     {
         $slider = PartnerSlider::find($id);
         $slider->delete();
-        return redirect()->back()->with(['msg'=>'Slider delete successfully']);;
+        return redirect()->back()->with(['msg' => 'Slider delete successfully']);;
     }
 
 
@@ -87,7 +94,7 @@ class HomePagePartnerController extends Controller
     {
         $link = PartnerLink::find($id);
         $link->delete();
-        return redirect()->back()->with(['msg'=>'Link deleted successfully']);;
+        return redirect()->back()->with(['msg' => 'Link deleted successfully']);;
     }
 
 
@@ -95,7 +102,7 @@ class HomePagePartnerController extends Controller
     {
         $link = PartnerPromotion::find($id);
         $link->delete();
-        return redirect()->back()->with(['msg'=>'Promotion deleted successfully']);;
+        return redirect()->back()->with(['msg' => 'Promotion deleted successfully']);;
     }
 
 
@@ -107,7 +114,7 @@ class HomePagePartnerController extends Controller
         $slider->slider = $sliderImage;
         $slider->slider_link = $request->slider_link;
         $slider->save();
-        return redirect()->back()->with(['msg'=>'Slider added successfully']);;
+        return redirect()->back()->with(['msg' => 'Slider added successfully']);;
     }
 
     public function promotion_store(Request $request)
@@ -117,7 +124,7 @@ class HomePagePartnerController extends Controller
         $slider->partner_id = $request->partner;
         $slider->promotion_image = $sliderImage;
         $slider->save();
-        return redirect()->back()->with(['msg'=>'Promotion added successfully']);;
+        return redirect()->back()->with(['msg' => 'Promotion added successfully']);;
     }
 
     public function link_store(Request $request)
@@ -128,7 +135,7 @@ class HomePagePartnerController extends Controller
         $linkItem->title_bm = $request->title_bm;
         $linkItem->link = $request->link;
         $linkItem->save();
-        return redirect()->back()->with(['msg'=>'Link added successfully']);;
+        return redirect()->back()->with(['msg' => 'Link added successfully']);;
 
     }
 }

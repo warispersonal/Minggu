@@ -49,7 +49,6 @@ return [
     'car1_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste porro recusandae optio.',
 
 
-
     'car2_main_title' => 'Come on ... Kira Duit',
     'car2_text' => 'How to Participate',
     'car2_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste porro recusandae optio.',
@@ -59,10 +58,10 @@ return [
     'car3_text' => 'How to Participate',
     'car3_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste porro recusandae optio.',
 
-    'ringgit_emas'=> 'Gold Ringgit',
+    'ringgit_emas' => 'Gold Ringgit',
 
-    'evouchers'=> 'Lazada E-Vouchers Are Worth More Than',
-    'jom-kira-doit'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
+    'evouchers' => 'Lazada E-Vouchers Are Worth More Than',
+    'jom-kira-doit' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
 
     'khidmat0' => '1-on-1 Advisors',
     'khidmat1' => 'What is 1-on-1 Advisors?',
@@ -117,4 +116,8 @@ return [
     'partner_utama' => 'MAIN',
     'partner_acara' => 'EVENTS',
     'partner_ejen' => 'EJEN',
+
+    'website' => 'Website',
+    'careers' => 'Careers',
+    'contact_us' => 'Contact Us',
 ];
