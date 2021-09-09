@@ -16,7 +16,7 @@ class Localization
      */
     public function handle($request, Closure $next)
     {
-        App::setLocale(session()->get('applang') ?? 'en');
+        App::setLocale(session()->get('applang') ?? 'bm');
         return $next($request);
     }
 }

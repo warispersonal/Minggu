@@ -79,18 +79,19 @@
     <div class="mobile-header d-lg-none px-3 py-2">
         <div>
             <div class="d-md-none header-imgs">
-                <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">
-                <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
+                <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
             </div>
             <small><a href="{{ route('localization' , 'bm') }}">BM</a> | <a href="{{ route('localization' , 'en') }}">EN</a> </small>
         </div>
 
-
-        <?php if($_SERVER['REQUEST_URI'] == "/" || $_SERVER['REQUEST_URI'] == "/index.php"){ ?>
-        <img id="hamburger_btn" src="{{asset('assets/img/menu.svg')}}" alt="">
-        <?php } else{ ?>
         <img id="hamburger_btn" src="{{asset('assets/img/menu-white.svg')}}" alt="">
-        <?php } ?>
+
+        <!--<?php if($_SERVER['REQUEST_URI'] == "/" || $_SERVER['REQUEST_URI'] == "/index.php"){ ?>-->
+        <!--<img id="hamburger_btn" src="{{asset('assets/img/menu.svg')}}" alt="">-->
+        <!--<?php } else{ ?>-->
+        <!--<img id="hamburger_btn" src="{{asset('assets/img/menu-white.svg')}}" alt="">-->
+        <!--<?php } ?>-->
     </div>
 
     <nav class="mobile_nav">

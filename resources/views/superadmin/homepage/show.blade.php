@@ -53,7 +53,7 @@
                     @foreach($partner->sliders as $slider)
                         <tr class="odd">
                             <td>{{$slider->id}}</td>
-                            <td><img src="{{$slider->slider_image}}" class="promosi-image-details"/>
+                            <td><img src="{{$slider->slider_image}}" class="promosi-image-details main-logo-image"/>
                             </td>
                             <td>
                                 <div class="dropdown">
@@ -100,7 +100,7 @@
                     @foreach($partner->promotions as $slider)
                         <tr class="odd">
                             <td>{{$slider->id}}</td>
-                            <td><img src="{{$slider->promotion_logo}}" class="promosi-image-details"/>
+                            <td><img src="{{$slider->promotion_logo}}" class="promosi-image-details main-logo-image"/>
                             </td>
                             <td>
                                 <div class="dropdown">
@@ -287,4 +287,3 @@
 @push('js')
 
 @endpush
-

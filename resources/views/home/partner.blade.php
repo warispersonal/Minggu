@@ -15,6 +15,7 @@
 @endpush
 
 @section('content')
+
     <main>
         <div class="main-bg">
            <div class="container-fluid px-md-5 pt-4">
@@ -56,8 +57,8 @@
                                         <div class="carousel-inner">
                                             @foreach($partner->sliders as $slider)
                                                 <div class="carousel-item {{$loop->index == 0 ? "active" : ""}}">
-                                                    <img src="{{asset('assets/img/slider-img.png')}}"
-                                                         class="d-block w-100"
+                                                    <img src="{{$slider->slider_image}}"
+                                                         class="d-block w-100 partner-slider-images"
                                                          alt="...">
                                                 </div>
                                             @endforeach
@@ -84,9 +85,9 @@
                                 </div>
                                 <div class="col-lg-8 ps-md-4">
                                     <div class="ratio ratio-16x9">
-                                        <iframe src="{{$partner->video_link}}" frameborder="0"
-                                                allow="autoplay; fullscreen; picture-in-picture"
-                                                allowfullscreen=""></iframe>
+                                        <iframe width="420" height="345" src="https://www.youtube.com/watch?v=7xPYirJj9IY&ab_channel=SimeDarbyBerhad">
+                                        </iframe>
+
                                     </div>
                                     <div class="custom-links">
                                         @foreach($partner->links as $link)
@@ -99,18 +100,19 @@
                         </div>
                         <div class="tab-pane fade " id="nav-program" role="tabpanel" aria-labelledby="nav-program-tab">
                             <div class="row mt-4 gy-4">
-                                @foreach($partner->programs as $program)
+                                
+                                 @foreach($partner->programs as $program)
                                     <div class="col-lg-6">
                                         <div class="program_video-box ">
                                             <div class="ratio ratio-16x9">
-                                                <iframe src="{{$program->video_link}}" frameborder="0"
-                                                        allow="autoplay; fullscreen; picture-in-picture"
-                                                        allowfullscreen=""></iframe>
+                                                @if($program->valid_url)
+                                                    <iframe src="{{$program->video_link}}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+                                                @endif
                                             </div>
                                             <h3 class="my-3">{{$program->title}}</h3>
                                             <span><strong>{{$program->date}}</strong></span>
                                             <p>{{$program->description}}</p>
-                                            <p>Dibawakan Khas Oleh <img class="offer-by w-25" src="{{$partner->store_logo}}" alt=""></p>
+                                            <p>{{$program->main_program->title}} <img class="offer-by w-25" src="{{$partner->store_logo}}" alt=""></p>
                                         </div>
                                     </div>
                                 @endforeach

@@ -23,4 +23,16 @@ class Program extends Model
     public function partner(){
         return $this->belongsTo(Partner::class);
     }
+      public function main_program(){
+        return $this->belongsTo(MainProgram::class);
+    }
+    
+    public function getValidURLAttribute(){
+        if (filter_var($this->video_link, FILTER_VALIDATE_URL) === FALSE) {
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 }

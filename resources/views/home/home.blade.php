@@ -15,9 +15,11 @@
         }
 
         .mobile-header {
-            background: transparent;
+            /*background: transparent;*/
+            /*position:static;*/
             color: #0057B7;
         }
+        
     </style>
 @endpush
 
@@ -32,8 +34,9 @@
                 </div>
             </div>
             <!--<img src="{{asset('assets/img/mobile-home-bg.png')}}" class="d-lg-none w-100 position-absolute top-0">-->
-            <div class="home-links position-relative">
+            <div class="home-links position-relative mt-5 mt-md-0" >
                 <img src="{{asset('assets/img/desktop-home-bg.png')}}" class="d-none d-md-block ">
+                <img src="{{asset('assets/img/mobile-home-bg.png')}}" class=" d-md-none ">
                 @foreach($partners as $partner)
                     <a href="{{route('may.bank', $partner->slug)}}" class="link-{{$partner->id}}">
                         <img src="{{$partner->main_logo}}" alt="">
