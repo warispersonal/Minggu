@@ -57,9 +57,11 @@
                                         <div class="carousel-inner">
                                             @foreach($partner->sliders as $slider)
                                                 <div class="carousel-item {{$loop->index == 0 ? "active" : ""}}">
-                                                    <img src="{{$slider->slider_image}}"
-                                                         class="d-block w-100 partner-slider-images"
-                                                         alt="...">
+                                                    <a href="{{$slider->slider_link}}" target="_blank">
+                                                        <img src="{{$slider->slider_image}}"
+                                                             class="d-block w-100 partner-slider-images"
+                                                             alt="...">
+                                                    </a>
                                                 </div>
                                             @endforeach
                                         </div>
@@ -100,7 +102,7 @@
                         </div>
                         <div class="tab-pane fade " id="nav-program" role="tabpanel" aria-labelledby="nav-program-tab">
                             <div class="row mt-4 gy-4">
-                                
+
                                  @foreach($partner->programs as $program)
                                     <div class="col-lg-6">
                                         <div class="program_video-box ">

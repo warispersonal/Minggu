@@ -105,6 +105,7 @@ class HomePagePartnerController extends Controller
         $slider = new PartnerSlider();
         $slider->partner_id = $request->partner;
         $slider->slider = $sliderImage;
+        $slider->slider_link = $request->slider_link;
         $slider->save();
         return redirect()->back()->with(['msg'=>'Slider added successfully']);;
     }

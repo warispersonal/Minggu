@@ -35,10 +35,8 @@
                     </div>
                     <div class="col-lg-8">
                         <div id="program_content">
-                            @foreach($programs as $program)
-                                <img onclick="openModal({{$program}})"
-                                     src="{{$program->program_image}}"
-                                     alt="">
+                            @foreach($main_programs as $main_program)
+                                <img onclick="openModal({{$main_program->first_program}})" src="{{$main_program->main_logo}}" alt="{{$main_program->title}}">
                             @endforeach
                         </div>
                         <div id="jadual_content" style="display: none;">
@@ -1069,8 +1067,7 @@
     <div id="program-modal">
         <div class="program-modal-content">
             <div class="ratio ratio-16x9">
-                <iframe id="program_frame" frameborder="0"
-                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="program_frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
             <h2 class="my-3" id="program_title"></h2>
             @foreach($programs as $program)
@@ -1079,12 +1076,7 @@
                     @foreach($program->related_dates as $date)
                         <div id="program-data-dates-{{$date->id}}">
                             <li class="nav-item" role="presentation">
-                                <button onclick="onDateChange({{$date}})" class="nav-link date-button"
-                                        id="date-{{$date->id}}-tab" data-bs-toggle="pill"
-                                        data-bs-target="#date-{{$date->id}}"
-                                        type="button" role="tab" aria-controls="date-{{$date->id}}"
-                                        aria-selected="true">{{$date->date}}
-                                </button>
+                                <button onclick="onDateChange({{$date}})" class="nav-link date-button" id="date-{{$date->id}}-tab" data-bs-toggle="pill" data-bs-target="#date-{{$date->id}}" type="button" role="tab" aria-controls="date-{{$date->id}}" aria-selected="true">{{$date->date}}</button>
                             </li>
                         </div>
                     @endforeach
@@ -1161,15 +1153,16 @@
         })
 
         function openModal(program) {
-            changeModalView(program)
-            $(".date-owl-program").addClass("hidden-div")
-            $("#date-owl-program-" + program.id).removeClass("hidden-div")
-            programModal.style.top = "45%"
-            overlay.style.display = "block"
-            setTimeout(() => {
-                programModal.style.top = "50%"
-            }, 300);
-            programCloseBtn.style.top = "8%"
+            if(changeModalView(program)){
+                $(".date-owl-program").addClass("hidden-div")
+                $("#date-owl-program-" + program.id).removeClass("hidden-div")
+                programModal.style.top = "45%"
+                overlay.style.display = "block"
+                setTimeout(() => {
+                    programModal.style.top = "50%"
+                }, 300);
+                programCloseBtn.style.top = "8%"
+            }
         }
 
         function onDateChange(program) {
@@ -1177,12 +1170,19 @@
         }
 
         function changeModalView(program) {
-            $("#program_title").text(program.name)
-            $('#program_frame').attr('src', program.video_link)
-            $(".description-field").removeClass("active")
-            $(".date-button").removeClass("active")
-            $("#date-" + program.id).addClass('active')
-            $("#date-" + program.id + "-tab").addClass('active')
+            if(!$.isEmptyObject(program)){
+                $("#program_title").text(program.name)
+                $('#program_frame').attr('src', program.video_link)
+                $(".description-field").removeClass("active")
+                $(".date-button").removeClass("active")
+                $("#date-" + program.id).addClass('active')
+                $("#date-" + program.id + "-tab").addClass('active')
+                return true
+            }
+            else{
+                alert("No event link with this program")
+                return false;
+            }
 
         }
     </script>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\FAQ;
 use App\Jadual;
 use App\Lottery;
+use App\Models\MainProgram;
 use App\Models\Program;
 use App\Models\Settings;
 use App\Partner;
@@ -70,7 +71,8 @@ class HomeController extends Controller
         $five_september = Program::where('date', '2021-09-05')->get();
         $six_september = Program::where('date', '2021-09-06')->get();
         $seven_september = Program::where('date', '2021-09-07')->get();
-        return view("program", compact('programs', 'first_september', 'second_september', 'third_september', 'fourth_september', 'five_september', 'six_september', 'seven_september'));
+        $main_programs = MainProgram::all();
+        return view("program", compact('main_programs', 'programs', 'first_september', 'second_september', 'third_september', 'fourth_september', 'five_september', 'six_september', 'seven_september'));
     }
 
     public function pertandingan()

@@ -46,6 +46,7 @@
                     <tr>
                         <th scope="col" class="sort" data-sort="name">ID</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Image</th>
+                        <th scope="col" class="sort" data-sort="budget">Slider Link</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -55,6 +56,7 @@
                             <td>{{$slider->id}}</td>
                             <td><img src="{{$slider->slider_image}}" class="promosi-image-details main-logo-image"/>
                             </td>
+                            <td>{{$slider->slider_link}}</td>
                             <td>
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
@@ -191,6 +193,11 @@
                                     <label>Select Image</label>
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="slider" type="file" required>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <div class="input-group input-group-alternative">
+                                        <input class="form-control" name="slider_link" placeholder="Slider Link" type="text" required>
                                     </div>
                                 </div>
                                 <div class="text-right">

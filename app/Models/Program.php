@@ -27,7 +27,6 @@ class Program extends Model
         return $this->belongsTo(MainProgram::class);
     }
 
-
     public function getValidURLAttribute(){
         if (filter_var($this->video_link, FILTER_VALIDATE_URL) === FALSE) {
             return false;
@@ -36,4 +35,5 @@ class Program extends Model
             return true;
         }
     }
+
 }
