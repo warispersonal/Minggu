@@ -102,4 +102,11 @@ return [
 
     'promosi_title' => 'Promosi',
     'back_button_age' => 'Kembali ke Pertandingan',
+
+    'partner_rakan' => 'RAKAN',
+    'partner_premier' => 'PREMIER',
+    'partner_utama' => 'UTAMA',
+    'partner_acara' => 'ACARA',
+
+    'partner_ejen' => 'EJEN',
 ];

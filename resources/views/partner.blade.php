@@ -31,7 +31,7 @@
                     </a>
                 </div>
                 <div class="text-center">
-                    <p class="text-white text-uppercase mb-0 mt-3">Rakan <span class="fw-bold">Premier</span></p>
+                    <p class="text-white text-uppercase mb-0 mt-3"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_premier') }} </span></p>
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="">
                         <img src="{{asset('assets/img/partner-logos/plantation-part.png')}}" class="img-fluid partner-logo" alt="">
@@ -62,7 +62,7 @@
                     <a href="">
                         <img src="{{asset('assets/img/partner-logos/setia-part.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
-                    <p class="text-white text-uppercase mb-0">Rakan <span class="fw-bold">Utama</span></p>
+                    <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_utama') }}</span></p>
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
@@ -95,7 +95,7 @@
                     <a href="">
                         <img src="{{asset('assets/img/partner-logos/prolintas-part.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
-                    <p class="text-white text-uppercase mb-0">Rakan</p>
+                    <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }}</p>
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
@@ -128,7 +128,7 @@
                     <a href="">
                         <img src="{{asset('assets/img/partner-logos/jewel-part.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
-                    <p class="text-white text-uppercase mb-0">Rakan <span class="fw-bold">Acara</span> </p>
+                    <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_acara') }}</span> </p>
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
@@ -161,7 +161,7 @@
                     <a href="">
                         <img src="{{asset('assets/img/partner-logos/may-bank-part.png')}}" class="img-fluid partner-logo " alt="">
                     </a>
-                    <p class="text-white text-uppercase mb-0">Ejen</p>
+                    <p class="text-white text-uppercase mb-0">{{ __('general.partner_ejen') }}</p>
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>

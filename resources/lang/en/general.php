@@ -111,4 +111,10 @@ return [
 
     'promosi_title' => 'Promotion',
     'back_button_age' => 'Return to Match',
+
+    'partner_rakan' => 'RAKAN',
+    'partner_premier' => 'PREMIER',
+    'partner_utama' => 'MAIN',
+    'partner_acara' => 'EVENTS',
+    'partner_ejen' => 'EJEN',
 ];
