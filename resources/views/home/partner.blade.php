@@ -22,7 +22,7 @@
             width: 420px;
             height: 345px;
         }
-     
+
         #may_bank_tabs .nav-link {
             color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}     !important;
         }

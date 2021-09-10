@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap-icons.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <!--<title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>-->
-    <?php 
+<!--<title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>-->
+<?php
     $array = explode('/', $_SERVER['REQUEST_URI']);
     $page_path = end($array);
     // echo $page_path;
@@ -30,18 +31,18 @@
         'draw-118' => '10',
         'cabutan-bertuah' => '11',
     );
-    $current_page = $pages[$page_path];
-    
     ?>
-    
-    @if(Config::get('app.locale') == 'en')
-        <title>Minggu Saham Digital 2021 - {{$headerMenu[$current_page]['label_en']}}</title>
-    @elseif (Config::get('app.locale') == 'bm')
-        <title>Minggu Saham Digital 2021 - {{$headerMenu[$current_page]['label_bm']}}</title>
+    @if(array_key_exists($page_path, $pages))
+        <?php $current_page = $pages[$page_path]; ?>
+        @if(Config::get('app.locale') == 'en')
+            <title>Minggu Saham Digital 2021 - {{$headerMenu[$current_page]['label_en']}}</title>
+        @elseif (Config::get('app.locale') == 'bm')
+            <title>Minggu Saham Digital 2021 - {{$headerMenu[$current_page]['label_bm']}}</title>
+        @endif
+    @else
+        <title>Minggu Saham Digital 2021 {{ucwords(str_replace('-', ' ', $page_path))}} </title>
     @endif
-    
-    
-    
+
     @if (Session::has('showlogin'))
         <script>
             // alert('Show Login Form');
@@ -51,13 +52,12 @@
 
 </head>
 <body class="{{ $class ?? '' }}">
-    
-    
-    
+
+
 <header>
     <nav class="desktop_nav container-fluid">
         <ul>
-            
+
             @foreach($headerMenu as $menu)
                 @if( $menu['child'] )
                     <li class="nav-item dropdown">
@@ -118,16 +118,17 @@
                 <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
                 <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
             </div>
-            <small><a href="{{ route('localization' , 'bm') }}">BM</a> | <a href="{{ route('localization' , 'en') }}">EN</a> </small>
+            <small><a href="{{ route('localization' , 'bm') }}">BM</a> | <a
+                    href="{{ route('localization' , 'en') }}">EN</a> </small>
         </div>
 
         <img id="hamburger_btn" src="{{asset('assets/img/menu-white.svg')}}" alt="">
 
-        <!--<?php if($_SERVER['REQUEST_URI'] == "/" || $_SERVER['REQUEST_URI'] == "/index.php"){ ?>-->
-        <!--<img id="hamburger_btn" src="{{asset('assets/img/menu.svg')}}" alt="">-->
-        <!--<?php } else{ ?>-->
-        <!--<img id="hamburger_btn" src="{{asset('assets/img/menu-white.svg')}}" alt="">-->
-        <!--<?php } ?>-->
+    <!--<?php if($_SERVER['REQUEST_URI'] == "/" || $_SERVER['REQUEST_URI'] == "/index.php"){ ?>-->
+    <!--<img id="hamburger_btn" src="{{asset('assets/img/menu.svg')}}" alt="">-->
+    <!--<?php } else{ ?>-->
+    <!--<img id="hamburger_btn" src="{{asset('assets/img/menu-white.svg')}}" alt="">-->
+    <!--<?php } ?>-->
     </div>
 
     <nav class="mobile_nav">
@@ -159,11 +160,13 @@
                             <ul>
                                 @foreach( $menu['child'] as $child )
                                     @if(Config::get('app.locale') == 'en')
-                                        <li class=""> <i class="bi bi-chevron-right"></i>  <a href="{{ $child['link'] }}"
-                                                        title="">{{ $child['label_en'] }}</a></li>
+                                        <li class=""><i class="bi bi-chevron-right"></i> <a href="{{ $child['link'] }}"
+                                                                                            title="">{{ $child['label_en'] }}</a>
+                                        </li>
                                     @elseif (Config::get('app.locale') == 'bm')
-                                        <li class=""><i class="bi bi-chevron-right"></i>  <a href="{{ $child['link'] }}"
-                                                        title="">{{ $child['label_bm'] }}</a></li>
+                                        <li class=""><i class="bi bi-chevron-right"></i> <a href="{{ $child['link'] }}"
+                                                                                            title="">{{ $child['label_bm'] }}</a>
+                                        </li>
                                     @endif
                                 @endforeach
                             </ul><!-- /.sub-menu -->
@@ -220,7 +223,7 @@
                     <div class="mb-md-5 mb-3">
                         <input class="submit-btn" type="submit" value="{{ __('auth.send') }}">
                     </div>
-{{--                    <a class="forget" href="{{ route('password.request') }}">{{ __('auth.forgotPassword') }}?</a>--}}
+                    {{--                    <a class="forget" href="{{ route('password.request') }}">{{ __('auth.forgotPassword') }}?</a>--}}
                 </form>
             </div>
             <div class="col-4">
@@ -239,7 +242,8 @@
                 <form action="{{ route('user_register') }}" method="POST" class="scrol">
                     @csrf
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" value="{{old('full_name')}}" name="full_name" placeholder="{{ __('auth.name') }}">
+                        <input class="custom_inputs" type="text" value="{{old('full_name')}}" name="full_name"
+                               placeholder="{{ __('auth.name') }}">
                         @if ($errors->has('full_name'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
                                 <strong>{{ $errors->first('full_name') }}</strong>
@@ -247,7 +251,8 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="email" value="{{old('email')}}" name="email" placeholder="{{ __('auth.email') }}">
+                        <input class="custom_inputs" type="email" value="{{old('email')}}" name="email"
+                               placeholder="{{ __('auth.email') }}">
                         @if ($errors->has('email'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
                                 <strong>{{ $errors->first('email') }}</strong>
@@ -264,7 +269,8 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" value="{{old('ic_number')}}" name="ic_number" placeholder="{{ __('auth.icn') }}">
+                        <input class="custom_inputs" type="text" value="{{old('ic_number')}}" name="ic_number"
+                               placeholder="{{ __('auth.icn') }}">
                         @if ($errors->has('ic_number'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
                                 <strong>{{ $errors->first('ic_number') }}</strong>
@@ -309,7 +315,6 @@
 <script src="{{asset('assets/js/jquery.js')}}"></script>
 <script src="{{asset('assets/js/bootstrap.bundle.js')}}"></script>
 <script src="{{asset('assets/js/main.js')}}"></script>
-
 
 
 @if (Session::get('error'))
