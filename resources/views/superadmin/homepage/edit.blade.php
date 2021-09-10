@@ -161,7 +161,7 @@
                                         @endif
                                         <img src="{{$partner->main_logo}}" />
                                     </div>
-
+                                    @if($partner->is_promotion != 0)
                                     <div class="form-group mb-3">
                                         <label>Promosi Page Logo</label>
                                         <div class="input-group input-group-alternative">
@@ -174,6 +174,7 @@
                                         @endif
                                         <img src="{{$partner->promosi_logo}}" />
                                     </div>
+                                    @endif
 
                                     <div class="form-group mb-3">
                                         <label>Details Page Logo</label>
