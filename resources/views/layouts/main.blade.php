@@ -9,7 +9,38 @@
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap-icons.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 
-    <title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>
+    <!--<title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>-->
+    <?php 
+    $array = explode('/', $_SERVER['REQUEST_URI']);
+    $page_path = end($array);
+    // echo $page_path;
+    // die();
+    $pages = array(
+        '' => '0',
+        'msd-live' => '1',
+        'program' => '2',
+        'pertandingan' => '3',
+        'khidmat' => '4',
+        'promotion' => '5',
+        'rakan-korporat' => '6',
+        'faq' => '7',
+        'jom-kira'  => '8',
+        'live-trivia' => '9',
+        'draw-118' => '10',
+        'cabutan-bertuah' => '11',
+    );
+    $current_page = $pages[$page_path];
+    
+    ?>
+    
+    @if(Config::get('app.locale') == 'en')
+        <title>Minggu Saham Digital 2021 - {{$headerMenu[$current_page]['label_en']}}</title>
+    @elseif (Config::get('app.locale') == 'bm')
+        <title>Minggu Saham Digital 2021 - {{$headerMenu[$current_page]['label_bm']}}</title>
+    @endif
+    
+    
+    
     @if (Session::has('showlogin'))
         <script>
             // alert('Show Login Form');
@@ -19,9 +50,13 @@
 
 </head>
 <body class="{{ $class ?? '' }}">
+    
+    
+    
 <header>
     <nav class="desktop_nav container-fluid">
         <ul>
+            
             @foreach($headerMenu as $menu)
                 @if( $menu['child'] )
                     <li class="nav-item dropdown">

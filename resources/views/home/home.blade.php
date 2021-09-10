@@ -1,5 +1,10 @@
 @extends('layouts.main' , ['class' => 'home'])
 
+@if(Config::get('app.locale') == 'en')
+    @section('title',$headerMenu[0]['label_en'])
+@elseif (Config::get('app.locale') == 'bm')
+    @section('title',$headerMenu[0]['label_bm'])
+@endif
 @push('style')
     <style>
         .desktop_nav {
