@@ -63,7 +63,9 @@
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                             class="fas fa-ellipsis-v"></i></a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a onclick="return confirm('Are you sure you want to delete?')" class="dropdown-item" href="{{route('stars.homepage.slide.delete',$slider->id)}}">Delete</a>
+                                        <a onclick="return confirm('Are you sure you want to delete?')"
+                                           class="dropdown-item"
+                                           href="{{route('stars.homepage.slide.delete',$slider->id)}}">Delete</a>
                                     </div>
                                 </div>
                             </td>
@@ -110,7 +112,8 @@
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                             class="fas fa-ellipsis-v"></i></a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a onclick="return confirm('Are you sure you want to delete?')" class="dropdown-item" href="{{route('stars.promotion.delete',$slider->id)}}">Delete</a>
+                                        <a onclick="return confirm('Are you sure you want to delete?')"
+                                           class="dropdown-item" href="{{route('stars.promotion.delete',$slider->id)}}">Delete</a>
                                     </div>
                                 </div>
                             </td>
@@ -164,7 +167,9 @@
                                         <i class="fas fa-ellipsis-v"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a onclick="return confirm('Are you sure you want to delete?')" class="dropdown-item" href="{{route('stars.homepage.link.delete',$link->id)}}">Delete</a>
+                                        <a onclick="return confirm('Are you sure you want to delete?')"
+                                           class="dropdown-item"
+                                           href="{{route('stars.homepage.link.delete',$link->id)}}">Delete</a>
                                     </div>
                                 </div>
                             </td>
@@ -197,7 +202,8 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="slider_link" placeholder="Slider Link" type="text" required>
+                                        <input class="form-control" name="slider_link" placeholder="Slider Link"
+                                               type="text" required>
                                     </div>
                                 </div>
                                 <div class="text-right">
@@ -211,37 +217,39 @@
         </div>
     </div>
 
-
-    <div class="modal fade" id="modal-promotion-image" tabindex="-1" role="dialog" aria-labelledby="modal-form"
-         aria-hidden="true">
-        <div class="modal-dialog modal- modal-dialog-centered modal-md" role="document">
-            <div class="modal-content">
-                <div class="modal-body p-0">
-                    <div class="card bg-secondary shadow border-0">
-                        <div class="card-header bg-transparent">
-                            <div class="text-muted text-center mt-2 mb-2">Add New Promotion Image</div>
-                        </div>
-                        <div class="card-body px-lg-4 py-lg-4">
-                            <form method="post" action="{{route('stars.promotion.store')}}" enctype="multipart/form-data">
-                                @csrf
-                                <input type="hidden" name="partner" value="{{$partner->id}}">
-                                <div class="form-group mb-3">
-                                    <label>Select Image</label>
-                                    <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="slider" type="file" required>
+    @if($partner->is_promotion)
+        <div class="modal fade" id="modal-promotion-image" tabindex="-1" role="dialog" aria-labelledby="modal-form"
+             aria-hidden="true">
+            <div class="modal-dialog modal- modal-dialog-centered modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-body p-0">
+                        <div class="card bg-secondary shadow border-0">
+                            <div class="card-header bg-transparent">
+                                <div class="text-muted text-center mt-2 mb-2">Add New Promotion Image</div>
+                            </div>
+                            <div class="card-body px-lg-4 py-lg-4">
+                                <form method="post" action="{{route('stars.promotion.store')}}"
+                                      enctype="multipart/form-data">
+                                    @csrf
+                                    <input type="hidden" name="partner" value="{{$partner->id}}">
+                                    <div class="form-group mb-3">
+                                        <label>Select Image</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control" name="slider" type="file" required>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="text-right">
-                                    <button type="submit" id="admin-store" class="btn btn-primary my-2">Create</button>
-                                </div>
-                            </form>
+                                    <div class="text-right">
+                                        <button type="submit" id="admin-store" class="btn btn-primary my-2">Create
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    @endif
 
     <div class="modal fade" id="modal-store-link" tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
@@ -271,7 +279,8 @@
 
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="title_bm" placeholder="Link Title (BM)" type="text"
+                                        <input class="form-control" name="title_bm" placeholder="Link Title (BM)"
+                                               type="text"
                                                required>
                                     </div>
                                 </div>

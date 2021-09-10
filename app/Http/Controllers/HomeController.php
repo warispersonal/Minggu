@@ -22,7 +22,7 @@ class HomeController extends Controller
     /* Home Page */
     public function index()
     {
-        $partners = Partner::all();
+        $partners = Partner::where('is_promotion',1)->get();
         return view("home.home", compact('partners'));
     }
 
@@ -36,7 +36,7 @@ class HomeController extends Controller
     /* Promotion Page*/
     public function promotion()
     {
-        $partners = Partner::all();
+        $partners = Partner::where('is_promotion',1)->get();
         $sliders = PartnerPromotion::all();
         return view("home.promotion", compact('partners', 'sliders'));
     }
