@@ -51,7 +51,8 @@ class HomeController extends Controller
 
     public function partner()
     {
-        return view('partner');
+        $partners = Partner::all();
+        return view('partner', compact('partners'));
     }
 
     public function msdLive()
