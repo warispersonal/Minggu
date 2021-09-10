@@ -3,17 +3,28 @@
 @push('style')
     <style>
         .main-bg {
-            background-color: {{$partner->bg_color ?? "blue"}}   !important;
+            background-color: {{$partner->bg_color ?? "blue"}}     !important;
+        }
+
+        .mode-fore-color {
+            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}     !important;
+        }
+
+        .mode-bg-color {
+            background-color: {{$partner->mode == 1 ? "#fff4f4" : "#4ac4e2"}}  !important;
         }
 
         .mobile-header {
             background-color: #FFC600;
         }
 
-
         .embera-embed-responsive-item {
             width: 420px;
             height: 345px;
+        }
+     
+        #may_bank_tabs .nav-link {
+            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}     !important;
         }
 
     </style>
@@ -26,8 +37,13 @@
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
                 <div class="d-lg-block d-none">
-                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
-                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+                    @if($partner->mode)
+                        <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">
+                        <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
+                    @else
+                        <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+                    @endif
                 </div>
             </div>
             <div class="container mt-5 pb-5 px-md-0">
@@ -36,11 +52,11 @@
 
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-maklumat-tab" data-bs-toggle="tab"
+                            <button class="nav-link active mode-fore-color" id="nav-maklumat-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-maklumat" type="button" role="tab" aria-controls="nav-maklumat"
                                     aria-selected="true">Maklumat
                             </button>
-                            <button class="nav-link" id="nav-program-tab" data-bs-toggle="tab"
+                            <button class="nav-link mode-fore-color" id="nav-program-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-program" type="button" role="tab" aria-controls="nav-program"
                                     aria-selected="false">Program
                             </button>
@@ -88,7 +104,7 @@
                                         <img src="{{$partner->store_logo}}" class="img-fluid" alt="">
                                     </div>
                                     <div class="my-4">
-                                        <p class="justify text-dark">
+                                        <p class="justify mode-fore-color">
                                             {{Config::get('app.locale') == 'en' ? $partner->description:$partner->description_bm }}
                                         </p>
                                     </div>
@@ -97,31 +113,57 @@
                                     <div class="ratio ratio-16x9">
                                         <?php
                                         print_r($partner->video_url);
-                                        ?>                                    </div>
+                                        ?>
+                                    </div>
                                     <div class="custom-links">
                                         @if($partner->fb != "")
-                                            <a target="_blank" href="{{$partner->fb}}">Fb</a>
+                                            @if($partner->mode)
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->fb}}"><i class="fab fa-2x fa-facebook"></i></a>
+                                            @else
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->fb}}"> <i class="fab fa-2x fa-facebook"></i></a>
+                                            @endif
                                         @endif
                                         @if($partner->insta != "")
-                                            <a target="_blank" href="{{$partner->insta}}">Insta</a>
+                                            @if($partner->mode)
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->insta}}"><i class="fab fa-2x fa-instagram"></i></a>
+                                            @else
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->insta}}"><i class="fab fa-2x fa-instagram"></i></a>
+                                            @endif
                                         @endif
                                         @if($partner->twitter != "")
-                                            <a target="_blank" href="{{$partner->twitter}}">Twitter</a>
+                                            @if($partner->mode)
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->twitter}}"><i class="fab fa-2x fa-twitter"></i></a>
+                                            @else
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->twitter}}"><i class="fab fa-2x fa-twitter"></i></a>
+                                            @endif
                                         @endif
                                         @if($partner->youtube != "")
-                                            <a target="_blank" href="{{$partner->youtube}}">Youtube</a>
+                                            @if($partner->mode)
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->youtube}}"><i class="fab fa-2x fa-youtube"></i></a>
+                                            @else
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->youtube}}"><i class="fab fa-2x fa-youtube"></i></a>
+                                            @endif
                                         @endif
                                         @if($partner->website != "")
-                                            <a target="_blank"
-                                               href="{{$partner->website}}">{{ __('general.website') }}</a>
+                                            @if($partner->mode)
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->website}}">{{ __('general.website') }}</a>
+                                            @else
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->website}}">{{ __('general.website') }}</a>
+                                            @endif
                                         @endif
                                         @if($partner->careers != "")
-                                            <a target="_blank"
-                                               href="{{$partner->careers}}">{{ __('general.careers') }}</a>
+                                            @if($partner->mode)
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->careers}}">{{ __('general.careers') }}</a>
+                                            @else
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->careers}}">{{ __('general.careers') }}</a>
+                                            @endif
                                         @endif
                                         @if($partner->contact_us != "")
-                                            <a target="_blank"
-                                               href="{{$partner->contact_us}}">{{ __('general.contact_us') }}</a>
+                                            @if($partner->mode)
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->contact_us}}">{{ __('general.contact_us') }}</a>
+                                            @else
+                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->contact_us}}">{{ __('general.contact_us') }}</a>
+                                            @endif
                                         @endif
                                     </div>
                                 </div>
@@ -133,15 +175,14 @@
 
                                 @foreach($partner->programs as $program)
                                     <div class="col-lg-6">
-                                        <div class="program_video-box ">
+                                        <div class="program_video-box  mode-bg-color">
                                             <div class="ratio ratio-16x9">
                                                 <?php print_r($program->video_url); ?>
-
                                             </div>
-                                            <h3 class="my-3">{{$program->title}}</h3>
-                                            <span><strong>{{$program->date}}</strong></span>
-                                            <p>{{$program->description}}</p>
-                                            <p>{{$program->main_program->title}}
+                                            <h3 class="my-3 mode-fore-color">{{$program->title}}</h3>
+                                            <span><strong class="mode-fore-color">{{$program->date}}</strong></span>
+                                            <p class="mode-fore-color">{{$program->description}}</p>
+                                            <p class="mode-fore-color">{{$program->main_program->title}}
                                                 <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
                                             </p>
                                         </div>

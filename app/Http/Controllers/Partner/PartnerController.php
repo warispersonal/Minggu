@@ -138,6 +138,7 @@ class PartnerController extends Controller
         $partner['website'] = $request->website ?? "";
         $partner['careers'] = $request->careers ?? "";
         $partner['contact_us'] = $request->contact_us ?? "";
+        $partner['mode'] = $request->mode;
         $partner->save();
         return redirect()->back()->with(['msg'=>'Partner updated successfully']);;
 

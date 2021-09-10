@@ -54,6 +54,13 @@
                                             </span>
                                         @endif
                                     </div>
+                                    <div class="form-group">
+                                        <label for="modeSelect">Select Mode</label>
+                                        <select name="mode" class="form-control" id="modeSelect">
+                                            <option {{$partner->mode == 0 ? 'selected' : ""}} value="0">Dark</option>
+                                            <option {{$partner->mode == 1 ? 'selected' : ""}} value="1">Light</option>
+                                        </select>
+                                    </div>
                                     <div class="form-group mb-3">
                                         <label for="theme-color">BG Color</label>
                                         <input type="color" class="form-control theme-edit" name="bg_color" id="theme-menu-bg" value="{{ $partner->bg_color }}">
