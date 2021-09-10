@@ -70,6 +70,7 @@ class HomePagePartnerController extends Controller
         $partner['website'] = $request->website ?? "";
         $partner['careers'] = $request->careers ?? "";
         $partner['contact_us'] = $request->contact_us ?? "";
+        $partner['mode'] = $request->mode;
         $partner->save();
         return redirect()->route('stars.homepage.index')->with(['msg' => 'Partner info updated successfully']);;
 

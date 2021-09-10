@@ -18,7 +18,7 @@
     /*background: url(../img/desktop-home-bg.png);*/
     background-size: cover;
     background-position: left top;
-    
+
 }
 .desktop_nav{
     background-color: #fff;
@@ -307,12 +307,12 @@
     border-radius: 10px;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.17);
 }
-.tab-content p{ 
+.tab-content p{
     color: white;
     font-size: 16px;
     margin-bottom: 10px;
 }
-.tab-content h1,.tab-content h2,.tab-content h3, .tab-content h4,.tab-content h5,.tab-content h6, .tab-content li{ 
+.tab-content h1,.tab-content h2,.tab-content h3, .tab-content h4,.tab-content h5,.tab-content h6, .tab-content li{
     color: white;
 }
 .match_links a{
@@ -399,7 +399,7 @@
 }
 #promotion_tabs_content::-webkit-scrollbar-thumb{
     width: 10px;
-    background-color: #212B80; 
+    background-color: #212B80;
 } */
 
 #tabss_popup_btn{
@@ -628,7 +628,7 @@
     font-size: 20px;
 }
 #tetapkan_section .form-check-label{
-    
+
     color: white;
 }
 #tetapkan_section .custom-input::placeholder{
@@ -764,8 +764,8 @@
     padding: 25px;
     border-radius: 10px;
     color: #0057B7;
-    
-    
+
+
 }
 #program-modal .owl-carousel{
     background-color: #F5841F;
@@ -947,7 +947,7 @@
     padding: 25px;
     border-radius: 10px;
     color: #0057B7;
-    
+
 }
 .khidmat_images img{
     width: 140px;
@@ -992,7 +992,7 @@
     transition:all .5s;
 }
 .info-btn:hover ~ .about-us-box{
-    left:5%;    
+    left:5%;
 }
 
 .partner-logo{
@@ -1050,7 +1050,7 @@
     width:140px;
 }
 @media(max-width:1367px){
-   
+
     .about-us-box{
         top:40%;
     }
@@ -1060,7 +1060,7 @@
     .header-imgs img:nth-child(2){
         width:100px;
     }
-    
+
 }
 @media(max-width:1280px){
     .home-links a{
@@ -1196,7 +1196,7 @@
         width: 45%;
         padding: 8px;
     }
-  
+
     #terkini-btn{
         position: static;
         width: 100%;
@@ -1287,11 +1287,11 @@
         font-size: 30px;
         color: #212B80;
     }
-    
+
     .jadual-mobile .owl-next span{
         font-size: 30px;
         color: #212B80;
-    
+
     }
     .jadual-mobile .owl-next{
         position: absolute;
@@ -1337,7 +1337,7 @@
         height:25px;
         line-height:25px;
     }
-    
+
 }
 @media(max-width:768px){
     #program-modal{
@@ -1346,8 +1346,8 @@
     #program_content img{
         width: 150px;
     }
-    
-    
+
+
     .my_modal{
         width: 70%;
         padding: 35px;
@@ -1507,14 +1507,14 @@
     }
 }
 @media(max-width:576px){
-   
+
     #program-modal{
         width: 90%;
     }
     #program-modal .program-modal-content{
         padding: 15px;
     }
-    
+
     .heading{
         font-size: 3rem;
     }
@@ -1555,7 +1555,7 @@
     .owl-nav span{
         line-height: 30px;
     }
-  
+
     .time{
         font-size: 12px;
     }
