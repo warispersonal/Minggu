@@ -13,6 +13,7 @@ use App\PartnerPromotion;
 use App\PartnerSlider;
 use App\User;
 use App\UserLottery;
+use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Validator;
 class HomeController extends Controller
 {
     /* Home Page */
-    public function index()
+    public function index(Request $request)
     {
         $partners = Partner::where('is_promotion',1)->get();
         return view("home.home", compact('partners'));

@@ -488,15 +488,11 @@
     /*background-color: blue;*/
     margin: auto 10% auto 10%;
   }
-  .main-logo-image{
-      widows: 45px !important;
-      height: 45px !important;
+  .main-details-image{
+      width: 150px !important;
+      height: 80px !important;
   }
 .partner-slider-images{
     width: 577px !important;
     height: 200px !important;
-}
-.show-image-table-form{
-    widows: 45px !important;
-    height: 45px !important;
 }

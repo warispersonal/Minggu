@@ -57,4 +57,6 @@ class Partner extends Model
         $embera = new Embera();
         return $embera->autoEmbed($this->video_link);
     }
+
+
 }

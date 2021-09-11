@@ -54,7 +54,7 @@
                     @foreach($sliders as $slider)
                         <tr class="odd">
                             <td>{{$slider->id}}</td>
-                            <td><img src="{{$slider->slider_image}}" class="promosi-image-details"/>
+                            <td><img src="{{$slider->slider_image}}" class="main-details-image"/>
                             </td>
                             <td>
                                 {{$slider->slider_link}}

@@ -21,7 +21,7 @@
                         <input class="form-control" name="name" value="{{$program->name}}" placeholder="Program Name (EN)"
                                type="text" required="">
                     </div>
-                </div> 
+                </div>
                 <div class="form-group mb-3">
                     <label>Program Name (BM)</label>
                     <div class="input-group input-group-alternative">
@@ -44,7 +44,7 @@
                     <div class="input-group input-group-alternative">
                         <input class="form-control" id="partner-email" name="thumbnail_image" type="file" >
                     </div>
-                    <img src="{{$program->program_image}}">
+                    <img class="main-details-image mt-2" src="{{$program->program_image}}">
 
                 </div>
                 <div class="form-group mb-3">

@@ -44,7 +44,7 @@
                     <div class="input-group input-group-alternative">
                         <input class="form-control" id="partner-email" name="thumbnail_image" type="file" >
                     </div>
-                    <img src="{{$program->program_image}}">
+                    <img class="main-details-image mt-2" src="{{$program->program_image}}">
 
                 </div>
                 <div class="form-group mb-3">

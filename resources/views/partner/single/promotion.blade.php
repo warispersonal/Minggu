@@ -53,7 +53,7 @@
                     @foreach($promotions as $promotion)
                         <tr class="odd">
                             <td>{{$promotion->id}}</td>
-                            <td><img src="{{$promotion->promotion_logo}}" class="promosi-image-details"/>
+                            <td><img src="{{$promotion->promotion_logo}}" class="main-details-image"/>
                             </td>
                             <td>
                                 <div class="dropdown">

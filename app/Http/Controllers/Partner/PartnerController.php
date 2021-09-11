@@ -20,7 +20,11 @@ class PartnerController extends Controller
 
     public function showPromotions()
     {
+
         $partner = Partner::find(Auth::guard('partner')->id());
+        if($partner->is_promotion != 1){
+            return redirect()->back();
+        }
         if($partner->is_promotion == 0){
             return redirect()->back();
         }

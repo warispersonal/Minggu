@@ -2,6 +2,7 @@
 
 namespace App\Http\Traits;
 
+use Embera\Embera;
 use Illuminate\Support\Carbon;
 
 trait Generic
@@ -39,6 +40,9 @@ trait Generic
         $newDate = Carbon::parse($newDate);
         return $newDate;
     }
+    public function getVideoIFrame($url){
+        $embera = new Embera();
+        return $embera->autoEmbed($url);
 
-
+    }
 }

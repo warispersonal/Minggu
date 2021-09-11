@@ -133,7 +133,7 @@ class MainProgramController extends Controller
             })
             ->addColumn('logo', function ($partner) {
 
-                return '<img src='.$partner->main_logo.' class="main-logo-image" alt="No Image" />' ;
+                return '<img src='.$partner->main_logo.' class="main-details-image" alt="No Image" />' ;
             })
             ->addColumn('action', function($data){
                 $dropdown = '<div class="dropdown">

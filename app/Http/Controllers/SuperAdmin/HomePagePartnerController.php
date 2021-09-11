@@ -60,7 +60,8 @@ class HomePagePartnerController extends Controller
         $partner['name_bm'] = $request->name_bm;
         $partner['description'] = $request->description;
         $partner['description_bm'] = $request->description_bm;
-        $partner['video_link'] = $request->video_link;
+        $video_link = $this->getVideoIFrame($request->video_link);
+        $partner['video_link'] = $video_link;
         $partner['slug'] = Str::slug($request->name, "-");
         $partner['bg_color'] = $request->bg_color;
         $partner['fb'] = $request->fb ?? "";

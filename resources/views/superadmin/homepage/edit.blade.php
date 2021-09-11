@@ -159,7 +159,7 @@
                                                 <strong>{{ $errors->first('home_logo') }}</strong>
                                             </span>
                                         @endif
-                                        <img src="{{$partner->main_logo}}" />
+                                        <img class="main-details-image mt-2" src="{{$partner->main_logo}}" />
                                     </div>
                                     @if($partner->is_promotion != 0)
                                     <div class="form-group mb-3">
@@ -172,7 +172,7 @@
                                                 <strong>{{ $errors->first('promosi_image') }}</strong>
                                             </span>
                                         @endif
-                                        <img src="{{$partner->promosi_logo}}" />
+                                        <img class="main-details-image mt-2" src="{{$partner->promosi_logo}}" />
                                     </div>
                                     @endif
 
@@ -186,7 +186,7 @@
                                                 <strong>{{ $errors->first('details_logo') }}</strong>
                                             </span>
                                         @endif
-                                        <img class="promosi-image-details" src="{{$partner->store_logo}}" />
+                                        <img class="main-details-image mt-2" src="{{$partner->store_logo}}" />
                                     </div>
 
                                     <div class="text-right">
