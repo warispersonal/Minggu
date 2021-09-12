@@ -41,7 +41,7 @@
                         <table class="table align-items-center table-flush w-100" id="adminTable">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col" class="sort" data-sort="name">ID</th>
+                                <th scope="col" class="sort" data-sort="name">#</th>
                                 <th scope="col" class="sort" data-sort="budget">Program Name</th>
                                 <th scope="col" class="sort" data-sort="status">Thumbnail</th>
                                 <th scope="col">Date Time</th>
@@ -53,7 +53,7 @@
                             @foreach($programs as $program)
 
                                 <tr class="odd">
-                                    <td class="sorting_1">{{$program->id}}</td>
+                                    <td class="sorting_1">{{$loop->index + 1}}</td>
                                     <td>{{$program->name}}</td>
                                     <td><img style="width: 50px;height: 50px;" src="{{$program->program_image}}" /></td>
                                     <td>{{$program->date . ' ' . $program->time }} </td>

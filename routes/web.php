@@ -188,7 +188,7 @@ Route::prefix('admin')->namespace('Auth\Admin')->group(function () {
 });
 
 Route::prefix('admin')->middleware('auth:admin')->namespace('Admin')->group(function () {
-    Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
+    Route::get('dashboard', [ProgramController::class, 'adminIndex'])->name('admin.dashboard');
     Route::get('programs', [ProgramController::class, 'adminIndex'])->name('admin.programs.index');
     Route::get('edit/{id}/program', [ProgramController::class, 'adminEdit'])->name('admin.programs.edit');
     Route::post('update/{id}/program', [ProgramController::class, 'adminUpdate'])->name('admin.programs.update');

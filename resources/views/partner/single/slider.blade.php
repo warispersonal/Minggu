@@ -44,7 +44,7 @@
                 <table class="table align-items-center table-flush w-100" id="adminTable">
                     <thead class="thead-light">
                     <tr>
-                        <th scope="col" class="sort" data-sort="name">ID</th>
+                        <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Image</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Link</th>
                         <th scope="col">Actions</th>
@@ -53,7 +53,7 @@
                     <tbody>
                     @foreach($sliders as $slider)
                         <tr class="odd">
-                            <td>{{$slider->id}}</td>
+                            <td>{{$loop->index +1 }}</td>
                             <td><img src="{{$slider->slider_image}}" class="main-details-image"/>
                             </td>
                             <td>

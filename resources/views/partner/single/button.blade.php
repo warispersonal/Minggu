@@ -47,7 +47,7 @@
                 <table class="table align-items-center table-flush w-100" id="adminTable">
                     <thead class="thead-light">
                     <tr>
-                        <th scope="col" class="sort" data-sort="name">ID</th>
+                        <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Text</th>
                         <th scope="col" class="sort" data-sort="budget">URL</th>
                         <th scope="col">Actions</th>
@@ -56,7 +56,7 @@
                     <tbody>
                     @foreach($links as $link)
                         <tr class="odd">
-                            <td>{{$link->id}}</td>
+                            <td>{{$loop->index +1 }}</td>
                             <td>{{$link->title}}</td>
                             <td>{{$link->link}}</td>
                             <td>
