@@ -26,7 +26,8 @@ class AddTitleBmToPartnerLinks extends Migration
     public function down()
     {
         Schema::table('partner_links', function (Blueprint $table) {
-            //
+            $table->dropColumn('title_bm');
+
         });
     }
 }

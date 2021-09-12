@@ -27,7 +27,9 @@ class AddModeAndIsPromotionToPartners extends Migration
     public function down()
     {
         Schema::table('partners', function (Blueprint $table) {
-            //
+            $table->dropColumn('mode'); // true => light false => dark
+            $table->dropColumn('is_promotion'); //true => light false => not patner
+
         });
     }
 }

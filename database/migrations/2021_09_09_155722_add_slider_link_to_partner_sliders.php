@@ -26,7 +26,7 @@ class AddSliderLinkToPartnerSliders extends Migration
     public function down()
     {
         Schema::table('partner_sliders', function (Blueprint $table) {
-            //
+            $table->dropColumn('slider_link');
         });
     }
 }

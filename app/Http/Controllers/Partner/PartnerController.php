@@ -132,6 +132,8 @@ class PartnerController extends Controller
             $promosi_image = $this->uploadMediaFile($request, 'promosi_image', FileConstant::PROMOSI_IMAGE);
             $partner['promosi_image'] = $promosi_image;
         }
+        $iframe = $this->getVideoIFrame($request->video_link);
+        $partner['iframe'] =$iframe;
         $partner['name'] = $request->name;
         $partner['name_bm'] = $request->name_bm;
         $partner['description'] = $request->description;

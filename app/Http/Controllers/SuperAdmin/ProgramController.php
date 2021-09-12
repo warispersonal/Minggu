@@ -58,7 +58,9 @@ class ProgramController extends Controller
             'description' => 'required',
             'main_program' => 'required',
         ]);
+        $iframe = $this->getVideoIFrame($request->video_link);
         $program = new Program();
+        $program->iframe =$iframe;
         $program->name = $request->name;
         $program->name_bm = $request->name_bm;
         $program->thumbnail_image = $thumbnail_image;
@@ -128,6 +130,8 @@ class ProgramController extends Controller
             $thumbnail_image = $this->uploadMediaFile($request, 'thumbnail_image', FileConstant::PROGRAM_THUMBNAIL);
             $program->thumbnail_image = $thumbnail_image;
         }
+        $iframe = $this->getVideoIFrame($request->video_link);
+        $program->iframe =$iframe;
         $program->name = $request->name;
         $program->name_bm = $request->name_bm;
         $program->date = $request->date;
@@ -143,6 +147,7 @@ class ProgramController extends Controller
 
     public function adminUpdate(Request $request, $id)
     {
+
         $request->validate([
             'date' => 'required',
             'time' => 'required',
@@ -155,6 +160,8 @@ class ProgramController extends Controller
             $thumbnail_image = $this->uploadMediaFile($request, 'thumbnail_image', FileConstant::PROGRAM_THUMBNAIL);
             $program->thumbnail_image = $thumbnail_image;
         }
+        $iframe = $this->getVideoIFrame($request->video_link);
+        $program->iframe =$iframe;
         $program->name = $request->name;
         $program->name_bm = $request->name_bm;
         $program->date = $request->date;

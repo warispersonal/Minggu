@@ -26,7 +26,8 @@ class AddIsTrueToUserLotteries extends Migration
     public function down()
     {
         Schema::table('user_lotteries', function (Blueprint $table) {
-            //
+            $table->dropColumn('isCorrect');
+
         });
     }
 }

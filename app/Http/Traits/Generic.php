@@ -4,6 +4,7 @@ namespace App\Http\Traits;
 
 use Embera\Embera;
 use Illuminate\Support\Carbon;
+use Mockery\Exception;
 
 trait Generic
 {
@@ -36,13 +37,19 @@ trait Generic
     public function changeDateFormat($originalDate)
     {
         $newDate = date($originalDate);
-        $newDate  = Carbon::createFromFormat('d/m/Y', $newDate)->format('d-m-Y');
+        $newDate = Carbon::createFromFormat('d/m/Y', $newDate)->format('d-m-Y');
         $newDate = Carbon::parse($newDate);
         return $newDate;
     }
-    public function getVideoIFrame($url){
+
+    public function getVideoIFrame($url)
+    {
         $embera = new Embera();
-        return $embera->autoEmbed($url);
+        try {
+            return $embera->autoEmbed($url) ?? "";
+        } catch (Exception $ex) {
+            return $url;
+        }
 
     }
 }

@@ -26,7 +26,8 @@ class AddIcNumberToUserLotteries extends Migration
     public function down()
     {
         Schema::table('user_lotteries', function (Blueprint $table) {
-            //
+            $table->dropColumn('ic_number');
+
         });
     }
 }

@@ -22,7 +22,7 @@ class ContentController extends Controller
         $data['themePageBG'] = Settings::where('key' , 'themePageBG')->get('value')[0]->value;
         $data['desktopImage'] = Settings::where('key' , 'desktop-image')->get('value')[0]->value;
         $data['mobileImage'] = Settings::where('key' , 'mobile-image')->get('value')[0]->value;
-        
+
         return view('superadmin.content.theme' , compact('data'));
     }
 
@@ -30,8 +30,8 @@ class ContentController extends Controller
 
         $key = $request->key;
         $value = $request->value;
-        
-        if($request->image == 1){            
+
+        if($request->image == 1){
             $input = $request->all();
             $validator = Validator::make($request->all(), [
                 $request->key => 'required|image|mimes:jpeg,png,jpg,gif|max:3072',
@@ -41,7 +41,7 @@ class ContentController extends Controller
                 $image = $request->file($request->key);
                 $new_name = rand() . '.' . $image->getClientOriginalExtension();
                 $image->move(public_path('uploads'), $new_name);
-                
+
                 $settings = Settings::where('key' , $key)->first();
                 if($settings != NULL){
                     Settings::where('key', $key)->update(['value' => $new_name]);
@@ -52,7 +52,7 @@ class ContentController extends Controller
                 return response()->json(['success'=> asset('uploads/' . $new_name) , 'type' => $key]);
             }else{
                 return response()->json(['error'=>$validator->errors()->all()]);
-            }   
+            }
         }else{
             $settings = Settings::where('key' , $key)->first();
             if($settings != NULL){
@@ -81,17 +81,6 @@ class ContentController extends Controller
                 Settings::where('key', 'msd-live-video')->update(['value' => $request->link]);
                 return redirect()->back()->with(['msg'=>'MSD Live Video Link Updated']);
             }
-            
-            //TO-DO
-            // $validator = Validator::make($request->all(), [
-            //     $request->link => 'required',
-            // ]);
-            // if($validator->passes())
-            // {
-            //     Settings::create(['key'=>'msd-live-video', 'value' => $request->link]);
-            //     return redirect()->back()->with(['msg'=>'MSD Live Video Link Saved']);
-            // }else{
-            //     return redirect()->back()->with(['msg'=>'Required MSD Live Video Link','type'=>'error']);
-            // }
+        
     }
 }

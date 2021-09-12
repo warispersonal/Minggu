@@ -32,7 +32,13 @@ class AddSocialLoginsToPartners extends Migration
     public function down()
     {
         Schema::table('partners', function (Blueprint $table) {
-            //
+            $table->dropColumn('fb');
+            $table->dropColumn('insta');
+            $table->dropColumn('twitter');
+            $table->dropColumn('youtube');
+            $table->dropColumn('website');
+            $table->dropColumn('careers');
+            $table->dropColumn('contact_us');
         });
     }
 }

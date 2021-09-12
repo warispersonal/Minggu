@@ -26,7 +26,8 @@ class AddBgColotToPartners extends Migration
     public function down()
     {
         Schema::table('partners', function (Blueprint $table) {
-            //
+            $table->dropColumn("bg_color");
+
         });
     }
 }

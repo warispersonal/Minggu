@@ -28,6 +28,8 @@ class AddLogoToMainPrograms extends Migration
     {
         Schema::table('main_programs', function (Blueprint $table) {
             $table->dropColumn('logo');
+            $table->dropColumn('storage_type');
+
         });
     }
 }
