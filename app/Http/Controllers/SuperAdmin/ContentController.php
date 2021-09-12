@@ -81,6 +81,6 @@ class ContentController extends Controller
                 Settings::where('key', 'msd-live-video')->update(['value' => $request->link]);
                 return redirect()->back()->with(['msg'=>'MSD Live Video Link Updated']);
             }
-        
+
     }
 }

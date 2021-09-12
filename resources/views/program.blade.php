@@ -1084,9 +1084,8 @@
     <span id="close-btn" class="bi bi-x"></span>
     <div id="program-modal">
         <div class="program-modal-content">
-            <div class="ratio ratio-16x9">
-              <iframe id="program_frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullscreen></iframe>
+            <div class="ratio ratio-16x9" id="program_frame">
+
             </div>
             <h2 class="my-3" id="program_title"></h2>
             @foreach($programs as $program)
@@ -1198,8 +1197,9 @@
 
         function changeModalView(program) {
             if (!$.isEmptyObject(program)) {
+                $('#program_frame').empty()
                 $("#program_title").text(program.name)
-                $('#program_frame').attr('src', program.video_link)
+                $('#program_frame').append(program.iframe)
                 $(".description-field").removeClass("active")
                 $(".date-button").removeClass("active")
                 $("#date-" + program.id).addClass('active')

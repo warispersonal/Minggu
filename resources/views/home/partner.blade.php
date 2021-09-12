@@ -111,9 +111,7 @@
                                 </div>
                                 <div class="col-lg-8 ps-md-4">
                                     <div class="ratio ratio-16x9">
-                                        <?php
-                                        print_r($partner->video_url);
-                                        ?>
+                                        {!! $partner->iframe ?? "" !!}
                                     </div>
                                     <div class="custom-links">
                                         @if($partner->fb != "")
@@ -177,7 +175,7 @@
                                     <div class="col-lg-6">
                                         <div class="program_video-box  mode-bg-color">
                                             <div class="ratio ratio-16x9">
-                                                <?php print_r($program->video_url); ?>
+                                                {!! $program->iframe ?? "" !!}
                                             </div>
                                             <h3 class="my-3 mode-fore-color">{{$program->title}}</h3>
                                             <span><strong class="mode-fore-color">{{$program->date}}</strong></span>
