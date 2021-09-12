@@ -124,7 +124,9 @@ class AdminsController extends Controller
                 </div>';
                 return $dropdown;
             })
+            ->addIndexColumn()
             ->rawColumns(['action'])
+            ->addIndexColumn()
             ->make(true);
     }
 

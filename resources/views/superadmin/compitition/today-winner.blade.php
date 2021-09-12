@@ -37,7 +37,7 @@
                             <table class="table align-items-center table-flush w-100" id="filterTable">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th scope="col" class="sort" data-sort="name">ID</th>
+                                    <th scope="col" class="sort" data-sort="name">#</th>
                                     <th scope="col" class="sort" data-sort="budget">Name</th>
                                     <th scope="col" class="sort" data-sort="status">Email</th>
                                     <th scope="col" class="sort" data-sort="status">IC Number</th>

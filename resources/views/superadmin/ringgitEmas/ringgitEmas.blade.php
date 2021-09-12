@@ -40,7 +40,7 @@
                         <table class="table align-items-center table-flush w-100" id="adminTable">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col" class="sort" data-sort="id">ID</th>
+                                <th scope="col" class="sort" data-sort="id">#</th>
                                 <th scope="col" class="sort" data-sort="name">Name</th>
                                 <th scope="col" class="sort" data-sort="email">Email</th>
                                 <th scope="col" class="sort" data-sort="ic">IC Number</th>
@@ -81,7 +81,7 @@
                 "serverSide": true,
                 "ajax": "{{ route('star.compitition.getRinggitEmasWinnerAJAX') }}",
                 "columns": [
-                    {"data": "id"},
+                    {"data": "DT_RowIndex"},
                     {"data": "name"},
                     {"data": "email"},
                     {"data": "ic"},

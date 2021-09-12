@@ -37,7 +37,7 @@
                         <table class="table align-items-center table-flush w-100" id="adminTable">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col" class="sort" data-sort="name">ID</th>
+                                <th scope="col" class="sort" data-sort="name">#</th>
                                 <th scope="col" class="sort" data-sort="budget">Name</th>
                                 <th scope="col" class="sort" data-sort="budget">Description</th>
                                 <th scope="col" class="sort" data-sort="status">Video Link</th>
@@ -47,7 +47,7 @@
                             <tbody>
                             @foreach($partners as $partner)
                                 <tr class="odd">
-                                    <td>{{$partner->id}}</td>
+                                    <td>{{$loop->index + 1 }}</td>
                                     <td>{{$partner->name}}</td>
                                     <td>{{ Str::limit($partner->description, 30) }}</td>
                                     <td>{{ Str::limit($partner->video_link, 30) }}</td>

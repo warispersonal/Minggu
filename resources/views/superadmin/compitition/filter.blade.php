@@ -54,7 +54,7 @@
                             <table class="table align-items-center table-flush w-100" id="filterTable">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col" class="sort" data-sort="name">ID</th>
+                                    <th scope="col" class="sort" data-sort="name">#</th>
                                     <th scope="col" class="sort" data-sort="budget">Full Name</th>
                                     <th scope="col" class="sort" data-sort="status">IC</th>
                                     <th scope="col">Actions</th>
@@ -86,7 +86,7 @@
                 "order": [],
                 "ajax": "{{ route('star.compitition.getfiltersAJAX') }}",
                 "columns":[
-                    { "data": "id" },
+                    {"data": "DT_RowIndex"},
                     { "data": "full_name" },
                     { "data": "ic_number" },
                     { "data": "action",'name':'action' },

@@ -41,6 +41,7 @@ class LuckyDrawController extends Controller
                 return $data->lottery->title ?? "";
             })
             ->rawColumns(['name', 'email', 'ic' , 'title'])
+            ->addIndexColumn()
             ->make(true);
     }
 

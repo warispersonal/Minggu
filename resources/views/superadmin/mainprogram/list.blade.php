@@ -39,7 +39,7 @@
                         <table class="table align-items-center table-flush w-100" id="adminTable">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col" class="sort" data-sort="name">ID</th>
+                                <th scope="col" class="sort" data-sort="name">#</th>
                                 <th scope="col" class="sort" data-sort="budget">Title</th>
                                 <th scope="col" class="sort" data-sort="status">Description</th>
                                 <th scope="col" class="sort" data-sort="status">Loog</th>
@@ -136,7 +136,7 @@
                 "order": [],
                 "ajax": "{{ route('star.getMainDetailAJAX') }}",
                 "columns":[
-                    { "data": "id" },
+                    {"data": "DT_RowIndex"},
                     { "data": "title" },
                     { "data": "description" },
                     { "data": "logo" },

@@ -44,7 +44,7 @@
                 <table class="table align-items-center table-flush w-100" id="adminTable">
                     <thead class="thead-light">
                     <tr>
-                        <th scope="col" class="sort" data-sort="name">ID</th>
+                        <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Image</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Link</th>
                         <th scope="col">Actions</th>
@@ -53,7 +53,7 @@
                     <tbody>
                     @foreach($partner->sliders as $slider)
                         <tr class="odd">
-                            <td>{{$slider->id}}</td>
+                            <td>{{$loop->index + 1}}</td>
                             <td><img src="{{$slider->slider_image}}" class="promosi-image-details main-details-image"/>
                             </td>
                             <td>{{$slider->slider_link}}</td>
@@ -97,7 +97,7 @@
                     <table class="table align-items-center table-flush w-100" id="adminTable">
                         <thead class="thead-light">
                         <tr>
-                            <th scope="col" class="sort" data-sort="name">ID</th>
+                            <th scope="col" class="sort" data-sort="name">#</th>
                             <th scope="col" class="sort" data-sort="budget">Promotion Image</th>
                             <th scope="col">Actions</th>
                         </tr>
@@ -105,7 +105,7 @@
                         <tbody>
                         @foreach($partner->promotions as $slider)
                             <tr class="odd">
-                                <td>{{$slider->id}}</td>
+                                <td>{{$loop->index +1 }}</td>
                                 <td><img src="{{$slider->promotion_logo}}"
                                          class="promosi-image-details main-details-image"/>
                                 </td>

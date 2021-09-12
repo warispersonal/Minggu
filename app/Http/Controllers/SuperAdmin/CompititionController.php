@@ -82,6 +82,7 @@ class CompititionController extends Controller
                 return $dropdown;
             })
             ->rawColumns(['action'])
+            ->addIndexColumn()
             ->make(true);
     }
 
@@ -126,6 +127,7 @@ class CompititionController extends Controller
                 return $data->user->ic_number ?? "";
             })
             ->rawColumns(['name', 'email', 'ic'])
+            ->addIndexColumn()
             ->make(true);
     }
 

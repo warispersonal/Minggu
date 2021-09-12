@@ -127,6 +127,7 @@ class SuperAdminController extends Controller
                 return $data->lottery->correct_value ?? "";
             })
             ->rawColumns(['id','name','email','ic_number','section_no','title','correct_value'])
+            ->addIndexColumn()
             ->make(true);
     }
 

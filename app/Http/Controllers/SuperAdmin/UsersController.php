@@ -45,6 +45,7 @@ class UsersController extends Controller
                 return $dropdown;
             })
             ->rawColumns(['action'])
+            ->addIndexColumn()
             ->make(true);
     }
 }

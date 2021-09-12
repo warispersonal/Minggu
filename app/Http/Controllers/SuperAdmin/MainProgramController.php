@@ -149,6 +149,7 @@ class MainProgramController extends Controller
                 return $dropdown;
             })
             ->rawColumns(['action','description','logo'])
+            ->addIndexColumn()
             ->make(true);
     }
 
