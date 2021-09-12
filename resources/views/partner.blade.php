@@ -20,7 +20,7 @@
                 </div>
                 <div class="text-center mt-5 me-md-5 pe-md-5 pe-3">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
-                    <a href="{{route('may.bank', $partners[4]->slug)}}}">
+                    <a href="{{route('may.bank', $partners[4]->slug)}}">
                         <img src="{{$partners[4]->main_logo}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
