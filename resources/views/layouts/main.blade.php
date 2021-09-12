@@ -12,11 +12,9 @@
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 <!--<title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>-->
-<?php
+    <?php
     $array = explode('/', $_SERVER['REQUEST_URI']);
     $page_path = end($array);
-    // echo $page_path;
-    // die();
     $pages = array(
         '' => '0',
         'msd-live' => '1',
@@ -26,7 +24,7 @@
         'promotion' => '5',
         'rakan-korporat' => '6',
         'faq' => '7',
-        'jom-kira'  => '8',
+        'jom-kira' => '8',
         'live-trivia' => '9',
         'draw-118' => '10',
         'cabutan-bertuah' => '11',
@@ -34,13 +32,23 @@
     ?>
     @if(array_key_exists($page_path, $pages))
         <?php $current_page = $pages[$page_path]; ?>
-        @if(Config::get('app.locale') == 'en')
-            <title>Minggu Saham Digital 2021 - {{$headerMenu[$current_page]['label_en']}}</title>
-        @elseif (Config::get('app.locale') == 'bm')
-            <title>Minggu Saham Digital 2021 - {{$headerMenu[$current_page]['label_bm']}}</title>
+        @if($current_page == 8)
+            <title>Minggu Saham Digital 2021 - {{ __('general.the_match_button_1') }}</title>
+        @elseif($current_page == 9)
+            <title>Minggu Saham Digital 2021 - {{ __('general.the_match_button_2') }}</title>
+        @elseif($current_page == 10)
+            <title>Minggu Saham Digital 2021 - {{ __('general.the_match_button_3') }}</title>
+        @elseif($current_page == 11)
+            <title>Minggu Saham Digital 2021 - {{ __('general.the_match_button_4') }}</title>
+        @else
+            @if(Config::get('app.locale') == 'en')
+                <title>Minggu Saham Digital 2021 - {{$headerMenu[$current_page]['label_en']}}</title>
+            @elseif (Config::get('app.locale') == 'bm')
+                <title>Minggu Saham Digital 2021 - {{$headerMenu[$current_page]['label_bm']}}</title>
+            @endif
         @endif
     @else
-        <title>Minggu Saham Digital 2021 {{ucwords(str_replace('-', ' ', $page_path))}} </title>
+        <title>Minggu Saham Digital 2021</title>
     @endif
 
     @if (Session::has('showlogin'))
