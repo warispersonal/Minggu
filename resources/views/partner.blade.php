@@ -47,8 +47,8 @@
             <div class="d-flex pt-md-5 justify-content-center m-auto rakan-utama">
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
-                    <a href="{{route('may.bank',  $partners[4]->slug)}}">
-                        <img src="{{$partners[4]->main_logo}}" class="img-fluid partner-logo" alt="">
+                    <a href="{{route('may.bank',  $partners[9]->slug)}}">
+                        <img src="{{$partners[9]->main_logo}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
                 <div class="text-center mt-5">
