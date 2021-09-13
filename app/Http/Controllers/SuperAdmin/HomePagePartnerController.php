@@ -71,6 +71,7 @@ class HomePagePartnerController extends Controller
         $partner['youtube'] = $request->youtube ?? "";
         $partner['website'] = $request->website ?? "";
         $partner['careers'] = $request->careers ?? "";
+        $partner['linkedin'] = $request->linkedin ?? "";
         $partner['contact_us'] = $request->contact_us ?? "";
         $partner['mode'] = $request->mode;
         $partner->save();

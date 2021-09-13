@@ -129,6 +129,14 @@
                                     </div>
 
                                     <div class="form-group mb-3">
+                                        <label>Linkedin Link</label>
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control"  name="linkedin" placeholder="Linkedin Link" value="{{ $partner->linkedin }}" type="text" >
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group mb-3">
                                         <label>Website Link</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control"  name="website" placeholder="Website Link" value="{{ $partner->website }}" type="text" >
