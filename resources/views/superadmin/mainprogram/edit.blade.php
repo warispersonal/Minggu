@@ -75,7 +75,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label>Logo</label>
+                                        <label>Logo (150 × 96 px)</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="logo" type="file">
                                         </div>

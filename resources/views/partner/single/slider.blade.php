@@ -92,7 +92,7 @@
                             <form method="post" action="{{route('partner.slider.store')}}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group mb-3">
-                                    <label>Select Image</label>
+                                    <label>Select Image (577 × 200 px)</label>
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="slider" type="file" required>
                                     </div>

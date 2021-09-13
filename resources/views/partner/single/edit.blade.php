@@ -177,7 +177,7 @@
 
 
                                     <div class="form-group mb-3">
-                                        <label>Home Logo</label>
+                                        <label>Home Logo (162 × 106 px)</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="home_logo" type="file">
                                         </div>
@@ -191,7 +191,7 @@
 
                                     @if($partner->is_promotion != 0)
                                         <div class="form-group mb-3">
-                                            <label>Promosi Page Logo</label>
+                                            <label>Promosi Page Logo (104 × 86 px)</label>
                                             <div class="input-group input-group-alternative">
                                                 <input class="form-control" name="promosi_image" type="file">
                                             </div>
@@ -206,7 +206,7 @@
 
 
                                     <div class="form-group mb-3">
-                                        <label>Details Page Logo</label>
+                                        <label>Details Page Logo (403 × 110 px)</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="details_logo" type="file">
                                         </div>

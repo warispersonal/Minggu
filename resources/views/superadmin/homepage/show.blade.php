@@ -204,7 +204,7 @@
                                 @csrf
                                 <input type="hidden" name="partner" value="{{$partner->id}}">
                                 <div class="form-group mb-3">
-                                    <label>Select Image</label>
+                                    <label>Select Image (577 × 200 px)</label>
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="slider" type="file" required>
                                     </div>
@@ -242,7 +242,7 @@
                                     @csrf
                                     <input type="hidden" name="partner" value="{{$partner->id}}">
                                     <div class="form-group mb-3">
-                                        <label>Select Image</label>
+                                        <label>Select Image (526 × 234 px)</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="slider" type="file" required>
                                         </div>

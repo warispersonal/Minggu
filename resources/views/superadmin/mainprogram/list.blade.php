@@ -92,7 +92,7 @@
                                     </div>
 
                                     <div class="form-group mb-3">
-                                        <label>Logo</label>
+                                        <label>Logo (150 × 96 px)</label>
                                         <div class="input-group input-group-alternative">
                                             <input id="logo" name="logo" type="hidden">
                                             <input class="form-control"  onchange="encodeImageFileAsURL(this)"  type="file" required>

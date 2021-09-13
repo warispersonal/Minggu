@@ -90,13 +90,13 @@
                             <form method="post" action="{{route('partner.promotion.store')}}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group mb-3">
-                                    <label>Select Image</label>
+                                    <label>Select Image (526 × 234 px)</label>
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="slider" type="file" required>
                                     </div>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label>Promotion URL</label>
+                                    <label>Promotion URL </label>
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="url" type="text" required>
                                     </div>
