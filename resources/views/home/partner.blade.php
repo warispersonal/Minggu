@@ -3,15 +3,15 @@
 @push('style')
     <style>
         .main-bg {
-            background-color: {{$partner->bg_color ?? "blue"}}     !important;
+            background-color: {{$partner->bg_color ?? "blue"}}           !important;
         }
 
         .mode-fore-color {
-            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}     !important;
+            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}           !important;
         }
 
         .mode-bg-color {
-            background-color: {{$partner->mode == 1 ? "#fff4f4" : "#4ac4e2"}}  !important;
+            background-color: {{$partner->mode == 1 ? "#fff4f4" : "#4ac4e2"}}        !important;
         }
 
         .mobile-header {
@@ -24,7 +24,7 @@
         }
 
         #may_bank_tabs .nav-link {
-            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}     !important;
+            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}           !important;
         }
 
     </style>
@@ -101,7 +101,8 @@
                                         </button>
                                     </div>
                                     <div class="text-center mt-4 p-2">
-                                        <img src="{{$partner->store_logo}}" class="img-fluid" style="min-height:100px; object-fit:contain;" alt="">
+                                        <img src="{{$partner->store_logo}}" class="img-fluid"
+                                             style="min-height:100px; object-fit:contain;" alt="">
                                     </div>
                                     <div class="my-4">
                                         <p class="justify mode-fore-color">
@@ -113,86 +114,83 @@
                                     <div class="ratio ratio-16x9">
                                         {!! $partner->iframe ?? "" !!}
                                     </div>
-                                    <div class="custom-links">
-                                        @if($partner->fb != "")
-                                            @if($partner->mode)
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->fb}}"><i class="fab fa-2x fa-facebook"></i></a>
-                                            @else
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->fb}}"> <i class="fab fa-2x fa-facebook"></i></a>
-                                            @endif
-                                        @endif
-                                        @if($partner->insta != "")
-                                            @if($partner->mode)
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->insta}}"><i class="fab fa-2x fa-instagram"></i></a>
-                                            @else
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->insta}}"><i class="fab fa-2x fa-instagram"></i></a>
-                                            @endif
-                                        @endif
-                                        @if($partner->twitter != "")
-                                            @if($partner->mode)
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->twitter}}"><i class="fab fa-2x fa-twitter"></i></a>
-                                            @else
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->twitter}}"><i class="fab fa-2x fa-twitter"></i></a>
-                                            @endif
-                                        @endif
-                                        @if($partner->youtube != "")
-                                            @if($partner->mode)
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->youtube}}"><i class="fab fa-2x fa-youtube"></i></a>
-                                            @else
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->youtube}}"><i class="fab fa-2x fa-youtube"></i></a>
-                                            @endif
-                                        @endif
-                                        @if($partner->website != "")
-                                            @if($partner->mode)
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->website}}">{{ __('general.website') }}</a>
-                                            @else
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->website}}">{{ __('general.website') }}</a>
-                                            @endif
-                                        @endif
-                                        @if($partner->careers != "")
-                                            @if($partner->mode)
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->careers}}">{{ __('general.careers') }}</a>
-                                            @else
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->careers}}">{{ __('general.careers') }}</a>
-                                            @endif
-                                        @endif
-                                        @if($partner->contact_us != "")
-                                            @if($partner->mode)
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->contact_us}}">{{ __('general.contact_us') }}</a>
-                                            @else
-                                                <a target="_blank" class="mode-fore-color mode-bg-color" href="{{$partner->contact_us}}">{{ __('general.contact_us') }}</a>
-                                            @endif
-                                        @endif
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="custom-links">
+                                                @foreach($partner->links as $link)
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$link->link}}">{{Config::get('app.locale') == 'en' ? $link->title : $link->title_bm}}</a>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="custom-links">
+                                                @if($partner->fb != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->fb}}"> <i
+                                                            class="fab fa-2x fa-facebook"></i></a>
+                                                @endif
+                                                @if($partner->insta != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->insta}}"><i class="fab fa-2x fa-instagram"></i></a>
+                                                @endif
+                                                @if($partner->twitter != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->twitter}}"><i class="fab fa-2x fa-twitter"></i></a>
+                                                @endif
+                                                @if($partner->youtube != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->youtube}}"><i class="fab fa-2x fa-youtube"></i></a>
+                                                @endif
+                                                @if($partner->youtube != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->linkedin}}"><i
+                                                            class="fab  fa-2x fa-linkedin"></i></a>
+                                                @endif
+                                                @if($partner->website != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->website}}">{{ __('general.website') }}</a>
+                                                @endif
+                                                @if($partner->careers != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->careers}}">{{ __('general.careers') }}</a>
+                                                @endif
+                                                @if($partner->contact_us != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->contact_us}}">{{ __('general.contact_us') }}</a>
+                                                @endif
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        <div class="tab-pane fade " id="nav-program" role="tabpanel" aria-labelledby="nav-program-tab">
-                            <div class="row mt-4 gy-4">
-
-                                @foreach($partner->programs as $program)
-                                    <div class="col-lg-6">
-                                        <div class="program_video-box  mode-bg-color">
-                                            <div class="ratio ratio-16x9">
-                                                {!! $program->iframe ?? "" !!}
-                                            </div>
-                                            <h3 class="my-3 mode-fore-color">{{$program->title}}</h3>
-                                            <span><strong class="mode-fore-color">{{$program->date}}</strong></span>
-                                            <p class="mode-fore-color">{{$program->description}}</p>
-                                            <p class="mode-fore-color">{{$program->main_program->title}}
-                                                <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
-                                            </p>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                            <a href="{{route('user.msdLive')}}" id="terkini-btn">Tonton Episod MSD Terkini &gt;</a>
-                        </div>
-
                     </div>
+                    <div class="tab-pane fade " id="nav-program" role="tabpanel" aria-labelledby="nav-program-tab">
+                        <div class="row mt-4 gy-4">
+
+                            @foreach($partner->programs as $program)
+                                <div class="col-lg-6">
+                                    <div class="program_video-box  mode-bg-color">
+                                        <div class="ratio ratio-16x9">
+                                            {!! $program->iframe ?? "" !!}
+                                        </div>
+                                        <h3 class="my-3 mode-fore-color">{{$program->title}}</h3>
+                                        <span><strong class="mode-fore-color">{{$program->date}}</strong></span>
+                                        <p class="mode-fore-color">{{$program->description}}</p>
+                                        <p class="mode-fore-color">{{$program->main_program->title}}
+                                            <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <a href="{{route('user.msdLive')}}" id="terkini-btn">Tonton Episod MSD Terkini &gt;</a>
+                    </div>
+
                 </div>
             </div>
+        </div>
         </div>
     </main>
 @endsection

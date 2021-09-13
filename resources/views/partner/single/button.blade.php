@@ -56,7 +56,7 @@
                     <tbody>
                     @foreach($links as $link)
                         <tr class="odd">
-                            <td>{{$loop->index +1 }}</td>
+                            <td>{{$loop->index + 1 }}</td>
                             <td>{{$link->title}}</td>
                             <td>{{$link->link}}</td>
                             <td>
