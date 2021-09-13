@@ -24,6 +24,9 @@
             /*position:static;*/
             color: #0057B7;
         }
+        .main-img{
+            margin-top:37px;
+        }
         
     </style>
 @endpush

@@ -46,9 +46,9 @@
                     @endif
                 </div>
             </div>
-            <div class="container mt-5 pb-5 px-md-0">
+            <div class="container-fluid mt-5 pb-5 px-md-5 ">
 
-                <div id="may_bank_tabs">
+                <div id="may_bank_tabs" class="px-md-5">
 
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -100,8 +100,8 @@
                                             <span class="visually-hidden">Next</span>
                                         </button>
                                     </div>
-                                    <div class="text-center mt-4 p-4">
-                                        <img src="{{$partner->store_logo}}" class="img-fluid" alt="">
+                                    <div class="text-center mt-4 p-2">
+                                        <img src="{{$partner->store_logo}}" class="img-fluid" style="min-height:100px; object-fit:contain;" alt="">
                                     </div>
                                     <div class="my-4">
                                         <p class="justify mode-fore-color">
