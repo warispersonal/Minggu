@@ -46,6 +46,7 @@
                     <tr>
                         <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Promotion Image</th>
+                        <th scope="col" class="sort" data-sort="budget">URL</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -54,7 +55,7 @@
                         <tr class="odd">
                             <td>{{$loop->index +1 }}</td>
                             <td><img src="{{$promotion->promotion_logo}}" class="main-details-image"/>
-                            </td>
+                            <td>{{$promotion->url}}</td>
                             <td>
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
@@ -92,6 +93,12 @@
                                     <label>Select Image</label>
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="slider" type="file" required>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Promotion URL</label>
+                                    <div class="input-group input-group-alternative">
+                                        <input class="form-control" name="url" type="text" required>
                                     </div>
                                 </div>
                                 <div class="text-right">

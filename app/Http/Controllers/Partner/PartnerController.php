@@ -89,6 +89,7 @@ class PartnerController extends Controller
         $slider = new PartnerPromotion();
         $slider->partner_id =Auth::guard('partner')->id();
         $slider->promotion_image = $sliderImage;
+        $slider->url = $request->url;
         $slider->save();
         return redirect()->back()->with(['msg'=>'Promotion added successfully']);;
     }

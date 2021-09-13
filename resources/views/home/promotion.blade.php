@@ -56,7 +56,9 @@
                                  role="tabpanel"
                                  aria-labelledby="pills-tab-all">
                                 @foreach($sliders as $slider)
-                                    <img src="{{$slider->promotion_logo}}" class="img-fluid" alt="">
+                                    <a target="_blank" href="{{$slider->url}}">
+                                        <img src="{{$slider->promotion_logo}}" class="img-fluid" alt="">
+                                    </a>
                                 @endforeach
                             </div>
 
@@ -67,7 +69,9 @@
                                      role="tabpanel"
                                      aria-labelledby="pills-tab-{{$partner->id}}">
                                     @foreach($partner->promotions as $slider)
-                                        <img src="{{$slider->promotion_logo}}" class="img-fluid" alt="">
+                                        <a target="_blank" href="{{$slider->url}}">
+                                            <img src="{{$slider->promotion_logo}}" class="img-fluid" alt="">
+                                        </a>
                                     @endforeach
                                 </div>
                             @endforeach

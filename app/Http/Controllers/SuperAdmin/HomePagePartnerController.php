@@ -127,6 +127,7 @@ class HomePagePartnerController extends Controller
         $slider = new PartnerPromotion();
         $slider->partner_id = $request->partner;
         $slider->promotion_image = $sliderImage;
+        $slider->url = $request->url;
         $slider->save();
         return redirect()->back()->with(['msg' => 'Promotion added successfully']);;
     }
