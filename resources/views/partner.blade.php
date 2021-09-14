@@ -202,7 +202,6 @@
                         <img src="{{$partners[28]->main_logo}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
-
                 <div class="text-center mt-4">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[29]->slug)}}">
@@ -216,11 +215,11 @@
                     </a>
                 </div>
             </div>
-            <footer class="partner-footer">
-
-            </footer>
         </div>
     </main>
+
+
+
 
 @endsection
 

@@ -47,9 +47,7 @@
                 </div>
             </div>
             <div class="container-fluid mt-5 pb-5 px-md-5 ">
-
                 <div id="may_bank_tabs" class="px-md-5">
-
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link active mode-fore-color" id="nav-maklumat-tab" data-bs-toggle="tab"
@@ -63,8 +61,7 @@
                         </div>
                     </nav>
                     <div class="tab-content " id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="nav-maklumat" role="tabpanel"
-                             aria-labelledby="nav-maklumat-tab">
+                        <div class="tab-pane fade show active" id="nav-maklumat" role="tabpanel" aria-labelledby="nav-maklumat-tab">
                             <div class="row mt-4">
                                 <div class="col-lg-4 pe-md-4">
                                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -165,32 +162,33 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade " id="nav-program" role="tabpanel" aria-labelledby="nav-program-tab">
-                        <div class="row mt-4 gy-4">
 
-                            @foreach($partner->programs as $program)
-                                <div class="col-lg-6">
-                                    <div class="program_video-box  mode-bg-color">
-                                        <div class="ratio ratio-16x9">
-                                            {!! $program->iframe ?? "" !!}
+                        <div class="tab-pane fade " id="nav-program" role="tabpanel" aria-labelledby="nav-program-tab">
+                            <div class="row mt-4 gy-4">
+
+                                @foreach($partner->programs as $program)
+                                    <div class="col-lg-6">
+                                        <div class="program_video-box  mode-bg-color">
+                                            <div class="ratio ratio-16x9">
+                                                {!! $program->iframe ?? "" !!}
+                                            </div>
+                                            <h3 class="my-3 mode-fore-color">{{$program->title}}</h3>
+                                            <span><strong class="mode-fore-color">{{$program->date}}</strong></span>
+                                            <p class="mode-fore-color">{{$program->description}}</p>
+                                            <p class="mode-fore-color">{{$program->main_program->title}}
+                                                <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
+                                            </p>
                                         </div>
-                                        <h3 class="my-3 mode-fore-color">{{$program->title}}</h3>
-                                        <span><strong class="mode-fore-color">{{$program->date}}</strong></span>
-                                        <p class="mode-fore-color">{{$program->description}}</p>
-                                        <p class="mode-fore-color">{{$program->main_program->title}}
-                                            <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
-                                        </p>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
+                            <a href="{{route('user.msdLive')}}" id="terkini-btn">Tonton Episod MSD Terkini &gt;</a>
                         </div>
-                        <a href="{{route('user.msdLive')}}" id="terkini-btn">Tonton Episod MSD Terkini &gt;</a>
-                    </div>
 
+
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
 @endsection
