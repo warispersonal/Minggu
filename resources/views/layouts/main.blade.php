@@ -204,7 +204,7 @@
     <div id="login_modal" class="my_modal">
         <div class="d-flex justify-content-between">
             <h1 class="modal_heading">{{ __('auth.login') }}</h1>
-            <i class="bi bi-x close_btn"></i>
+            <i class="bi bi-x close_btn" id="login_close_button"></i>
         </div>
         <div class="row">
             <div class="col-8">

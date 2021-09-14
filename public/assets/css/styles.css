@@ -496,3 +496,6 @@
     width: 577px !important;
     height: 200px !important;
 }
+.hidden{
+    display: none !important;
+}

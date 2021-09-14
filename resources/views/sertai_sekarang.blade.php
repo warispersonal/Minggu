@@ -524,6 +524,7 @@
         setTimeout(() => {
             loginModal1.style.bottom = "50%"
         }, 300);
+        $("#login_close_button").hide()
         @endguest
         @if(session()->has('from_section'))
             @if(session()->get('from_section') == 2)
