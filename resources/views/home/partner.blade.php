@@ -3,15 +3,15 @@
 @push('style')
     <style>
         .main-bg {
-            background-color: {{$partner->bg_color ?? "blue"}}           !important;
+            background-color: {{$partner->bg_color ?? "blue"}}            !important;
         }
 
         .mode-fore-color {
-            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}           !important;
+            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}            !important;
         }
 
         .mode-bg-color {
-            background-color: {{$partner->mode == 1 ? "#fff4f4" : "#4ac4e2"}}        !important;
+            background-color: {{$partner->mode == 1 ? "#fff4f4" : "#4ac4e2"}}         !important;
         }
 
 
@@ -25,7 +25,7 @@
         }
 
         #may_bank_tabs .nav-link {
-            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}           !important;
+            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}            !important;
         }
 
     </style>
@@ -55,14 +55,18 @@
                                     data-bs-target="#nav-maklumat" type="button" role="tab" aria-controls="nav-maklumat"
                                     aria-selected="true">Maklumat
                             </button>
-                            <button class="nav-link mode-fore-color" id="nav-program-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-program" type="button" role="tab" aria-controls="nav-program"
-                                    aria-selected="false">Program
-                            </button>
+                            @if($partner->is_promotion == 1)
+                                <button class="nav-link mode-fore-color" id="nav-program-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-program" type="button" role="tab"
+                                        aria-controls="nav-program"
+                                        aria-selected="false">Program
+                                </button>
+                            @endif
                         </div>
                     </nav>
                     <div class="tab-content " id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="nav-maklumat" role="tabpanel" aria-labelledby="nav-maklumat-tab">
+                        <div class="tab-pane fade show active" id="nav-maklumat" role="tabpanel"
+                             aria-labelledby="nav-maklumat-tab">
                             <div class="row mt-4">
                                 <div class="col-lg-4 pe-md-4">
                                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -164,7 +168,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="tab-pane fade " id="nav-program" role="tabpanel" aria-labelledby="nav-program-tab">
                             <div class="row mt-4 gy-4">
 
@@ -183,11 +186,10 @@
                                         </div>
                                     </div>
                                 @endforeach
-                            </div>c
+                            </div>
+                            c
                             <a href="{{route('user.msdLive')}}" id="terkini-btn">Tonton Episod MSD Terkini &gt;</a>
                         </div>
-
-
                     </div>
                 </div>
             </div>
