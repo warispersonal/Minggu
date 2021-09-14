@@ -518,22 +518,29 @@
 
     </script>
     <script>
+        @guest('user')
+        const loginModal1 = document.querySelector("#login_modal")
+        loginModal1.style.bottom = "55%"
+        setTimeout(() => {
+            loginModal1.style.bottom = "50%"
+        }, 300);
+        @endguest
         @if(session()->has('from_section'))
-        @if(session()->get('from_section') == 2)
-        $("#nav-home").removeClass("active")
-        $("#nav-profile").addClass("active")
-        $("#nav-home").removeClass("show")
-        $("#nav-profile").addClass("show")
-        @endif
+            @if(session()->get('from_section') == 2)
+                $("#nav-home").removeClass("active")
+                $("#nav-profile").addClass("active")
+                $("#nav-home").removeClass("show")
+                $("#nav-profile").addClass("show")
+            @endif
         @endif
 
         @if(session()->has('from_section'))
-        @if(session()->get('from_section') == 3)
-        $("#nav-home").removeClass("active")
-        $("#nav-contact").addClass("active")
-        $("#nav-home").removeClass("show")
-        $("#nav-contact").addClass("show")
-        @endif
+            @if(session()->get('from_section') == 3)
+                $("#nav-home").removeClass("active")
+                $("#nav-contact").addClass("active")
+                $("#nav-home").removeClass("show")
+                $("#nav-contact").addClass("show")
+            @endif
         @endif
     </script>
 @endpush
