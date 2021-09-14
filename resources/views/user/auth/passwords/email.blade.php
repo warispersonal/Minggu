@@ -1,11 +1,23 @@
 @extends('layouts.app', ['class' => 'bg-default'])
 
 @section('content')
-    @include('layouts.headers.guest')
+
+    @if(count($errors) > 0 )
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <ul class="p-0 m-0" style="list-style: none;">
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <div class="container mt--8 pb-5">
         <div class="row justify-content-center">
-            <div class="col-lg-5 col-md-7">
+            <div class="col-lg-5 col-md-7" style="margin-top: 15% !important;">
                 <div class="card bg-secondary shadow border-0">
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
