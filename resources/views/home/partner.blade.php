@@ -125,24 +125,24 @@
                                                 @if($partner->fb != "")
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
                                                        href="{{$partner->fb}}"> <i
-                                                            class="fab fa-2x fa-facebook"></i></a>
+                                                            class="fab  fa-facebook"></i></a>
                                                 @endif
                                                 @if($partner->insta != "")
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
-                                                       href="{{$partner->insta}}"><i class="fab fa-2x fa-instagram"></i></a>
+                                                       href="{{$partner->insta}}"><i class="fab  fa-instagram"></i></a>
                                                 @endif
                                                 @if($partner->twitter != "")
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
-                                                       href="{{$partner->twitter}}"><i class="fab fa-2x fa-twitter"></i></a>
+                                                       href="{{$partner->twitter}}"><i class="fab  fa-twitter"></i></a>
                                                 @endif
                                                 @if($partner->youtube != "")
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
-                                                       href="{{$partner->youtube}}"><i class="fab fa-2x fa-youtube"></i></a>
+                                                       href="{{$partner->youtube}}"><i class="fab  fa-youtube"></i></a>
                                                 @endif
                                                 @if($partner->youtube != "")
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
                                                        href="{{$partner->linkedin}}"><i
-                                                            class="fab  fa-2x fa-linkedin"></i></a>
+                                                            class="fab  fa-linkedin"></i></a>
                                                 @endif
                                                 @if($partner->website != "")
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
@@ -175,13 +175,13 @@
                                             <h3 class="my-3 mode-fore-color">{{$program->title}}</h3>
                                             <span><strong class="mode-fore-color">{{$program->date}}</strong></span>
                                             <p class="mode-fore-color">{{$program->description}}</p>
-                                            <p class="mode-fore-color">{{$program->main_program->title}}
+                                            <p class="mode-fore-color">{{$program->main_program->title ?? ""}}
                                                 <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
                                             </p>
                                         </div>
                                     </div>
                                 @endforeach
-                            </div>
+                            </div>c
                             <a href="{{route('user.msdLive')}}" id="terkini-btn">Tonton Episod MSD Terkini &gt;</a>
                         </div>
 

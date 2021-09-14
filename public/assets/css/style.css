@@ -244,7 +244,7 @@
 .main-bg{
     background-color: #0057B7;
     min-height: 100vh;
-    padding:50px;
+    padding-top:50px;
 }
 .social_address p{
     color: white;
