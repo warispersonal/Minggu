@@ -70,6 +70,7 @@ class ProgramController extends Controller
         $program->description_bm = $request->description_bm;
         $program->video_link = $request->video_link;
         $program->main_program_id = $request->main_program;
+        $program->watch_again = $request->watch_again;
         $program->partner_id = $request->partner_id;
         $program->save();
         return redirect()->route('programs.index')->with(['msg'=>'Program added successfully']);
@@ -141,6 +142,7 @@ class ProgramController extends Controller
         $program->video_link = $request->video_link;
         $program->main_program_id = $request->main_program;
         $program->partner_id = $request->partner_id;
+        $program->watch_again = $request->watch_again;
         $program->save();
         return redirect()->route('programs.index')->with(['msg'=>'Program update successfully']);
     }
@@ -171,6 +173,7 @@ class ProgramController extends Controller
         $program->video_link = $request->video_link;
         $program->main_program_id = $request->main_program;
         $program->partner_id = $request->partner_id;
+        $program->watch_again = $request->watch_again;
         $program->save();
         return redirect()->route('admin.programs.index');
     }
