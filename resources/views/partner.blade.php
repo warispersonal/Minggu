@@ -219,8 +219,6 @@
     </main>
 
 
-
-
 @endsection
 
 @push('js')

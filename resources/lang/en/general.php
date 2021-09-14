@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'pertandingan_title' => 'The Match',
+    'pertandingan_title' => 'Competition',
 
-    'the_match_button_1' => 'Come on ... Calculate Money',
+    'the_match_button_1' => 'Come Calculate Money',
     'the_match_button_2' => 'Live Trivia',
     'the_match_button_3' => 'Draw 118',
     'the_match_button_4' => 'Lucky Draw',
