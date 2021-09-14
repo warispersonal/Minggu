@@ -13,7 +13,7 @@
         .mode-bg-color {
             background-color: {{$partner->mode == 1 ? "#fff4f4" : "#4ac4e2"}}        !important;
         }
-        
+
 
         .mobile-header {
             background-color: #FFC600;

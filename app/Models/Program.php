@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Constant\FileConstant;
 use App\Partner;
+use Carbon\Carbon;
 use Embera\Embera;
 use Illuminate\Database\Eloquent\Model;
 
@@ -40,5 +41,14 @@ class Program extends Model
     {
         $embera = new Embera();
         return $embera->autoEmbed($this->video_link);
+    }
+    public function getDateFormatAttribute()
+    {
+       return Carbon::parse($this->date)->format('d-m-Y');
+    }
+
+    public function getTimeFormatAttribute()
+    {
+        return Carbon::parse($this->time)->format('H:i');
     }
 }

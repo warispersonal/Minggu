@@ -1098,8 +1098,8 @@
                                         id="date-{{$date->id}}-tab" data-bs-toggle="pill"
                                         data-bs-target="#date-{{$date->id}}" type="button" role="tab"
                                         aria-controls="date-{{$date->id}}" aria-selected="true">
-                                    <p class="mb-0">{{$date->date}} </p>
-                                    <p class="mb-0 small">{{$date->time}} </p>
+                                    <p class="mb-0">{{$date->date_format}} </p>
+                                    <p class="mb-0 small">{{$date->time_format}} </p>
                                 </button>
                             </li>
                         </div>
