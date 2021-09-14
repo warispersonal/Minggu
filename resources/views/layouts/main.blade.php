@@ -77,10 +77,10 @@
                             @foreach( $menu['child'] as $child )
                                 <li>
                                     @if(Config::get('app.locale') == 'en')
-                                        <a class="dropdown-item" href="{{ $child['link'] }}"
+                                        <a target="_blank" class="dropdown-item" href="{{ $child['link'] }}"
                                            style="color: blue !important;" title="">{{ $child['label_en'] }}</a>
                                     @elseif (Config::get('app.locale') == 'bm')
-                                        <a class="dropdown-item" href="{{ $child['link'] }}"
+                                        <a target="_blank" class="dropdown-item" href="{{ $child['link'] }}"
                                            style="color: blue !important;" title="">{{ $child['label_bm'] }}</a>
                                     @endif
                                 </li>
@@ -168,11 +168,11 @@
                             <ul>
                                 @foreach( $menu['child'] as $child )
                                     @if(Config::get('app.locale') == 'en')
-                                        <li class=""><i class="bi bi-chevron-right"></i> <a href="{{ $child['link'] }}"
+                                        <li class=""><i class="bi bi-chevron-right"></i> <a target="_blank" href="{{ $child['link'] }}"
                                                                                             title="">{{ $child['label_en'] }}</a>
                                         </li>
                                     @elseif (Config::get('app.locale') == 'bm')
-                                        <li class=""><i class="bi bi-chevron-right"></i> <a href="{{ $child['link'] }}"
+                                        <li class=""><i class="bi bi-chevron-right"></i> <a target="_blank" href="{{ $child['link'] }}"
                                                                                             title="">{{ $child['label_bm'] }}</a>
                                         </li>
                                     @endif
