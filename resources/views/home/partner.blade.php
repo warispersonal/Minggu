@@ -112,16 +112,28 @@
                                         {!! $partner->iframe ?? "" !!}
                                     </div>
                                     <div class="row">
-                                        <div class="col-6">
-                                            <div class="custom-links">
+                                        <div class="col-7">
+                                            <div class="custom-links ">
                                                 @foreach($partner->links as $link)
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
                                                        href="{{$link->link}}">{{Config::get('app.locale') == 'en' ? $link->title : $link->title_bm}}</a>
                                                 @endforeach
+                                                @if($partner->website != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->website}}">{{ __('general.website') }}</a>
+                                                @endif
+                                                @if($partner->careers != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->careers}}">{{ __('general.careers') }}</a>
+                                                @endif
+                                                @if($partner->contact_us != "")
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                       href="{{$partner->contact_us}}">{{ __('general.contact_us') }}</a>
+                                                @endif
                                             </div>
                                         </div>
-                                        <div class="col-6">
-                                            <div class="custom-links">
+                                        <div class="col-5">
+                                            <div class="custom-links d-flex justify-content-end align-items-end">
                                                 @if($partner->fb != "")
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
                                                        href="{{$partner->fb}}"> <i
@@ -129,7 +141,7 @@
                                                 @endif
                                                 @if($partner->insta != "")
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
-                                                       href="{{$partner->insta}}"><i class="fab  fa-instagram"></i></a>
+                                                       href="{{$partner->insta}}"><i class="fab fa-instagram"></i></a>
                                                 @endif
                                                 @if($partner->twitter != "")
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
@@ -144,18 +156,7 @@
                                                        href="{{$partner->linkedin}}"><i
                                                             class="fab  fa-linkedin"></i></a>
                                                 @endif
-                                                @if($partner->website != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
-                                                       href="{{$partner->website}}">{{ __('general.website') }}</a>
-                                                @endif
-                                                @if($partner->careers != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
-                                                       href="{{$partner->careers}}">{{ __('general.careers') }}</a>
-                                                @endif
-                                                @if($partner->contact_us != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
-                                                       href="{{$partner->contact_us}}">{{ __('general.contact_us') }}</a>
-                                                @endif
+                                                
                                             </div>
                                         </div>
                                     </div>
