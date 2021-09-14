@@ -1111,10 +1111,17 @@
                     <div class="tab-pane fade show description-field" id="date-{{$program->id}}" role="tabpanel"
                          aria-labelledby="date-{{$program->id}}-tab">
                         <p>
-                            {{$program->description}} <a
-                                href="{{route('may.bank', $program->partner->slug ?? '')}}"><img id="store_logo_image"
-                                                                                                 src="{{$program->partner->main_logo ?? ''}}"/></a>
+                            {{$program->description}}
+                            @if($program->watch_again != "")
+                                <a target="_blank" href="{{$program->watch_again}}"><b>{{ __('general.watch_again') }}</b></a>
+                            @endif
                         </p>
+                        <div>
+                            {{ __('general.brought_to_you') }}
+                            <a href="{{route('may.bank', $program->partner->slug ?? '')}}">
+                                <img id="store_logo_image" src="{{$program->program_image ?? ''}}"/>
+                            </a>
+                        </div>
                     </div>
                 @endforeach
             </div>

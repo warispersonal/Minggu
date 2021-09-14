@@ -120,4 +120,7 @@ return [
     'website' => 'Website',
     'careers' => 'Careers',
     'contact_us' => 'Contact Us',
+
+    'brought_to_you' => 'Specially Brought By',
+    'watch_again' => 'WATCH AGAIN',
 ];

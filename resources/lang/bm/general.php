@@ -112,4 +112,8 @@ return [
     'website' => 'Laman web',
     'careers' => 'Kerjaya',
     'contact_us' => 'Hubungi Kami',
+
+
+    'brought_to_you' => 'Dibawakan Khas Oleh',
+    'watch_again' => 'TONTON ULANGAN',
 ];
