@@ -37,7 +37,7 @@ class HomeController extends Controller
     /* Promotion Page*/
     public function promotion()
     {
-        $partners = Partner::where('is_promotion',1)->get();
+        $partners = Partner::where('is_promotion',1)->orderBy("order")->get();
         $sliders = PartnerPromotion::all();
         return view("home.promotion", compact('partners', 'sliders'));
     }
