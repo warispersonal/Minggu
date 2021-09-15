@@ -19,7 +19,7 @@
                     <div class="col-lg-5 pt-4 pe-lg-5">
                         <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
                         <p class="text-white mt-4 text-center">{{ __('general.jom_kira') }}</p>
-                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                        <div class="mt-4 d-md-flex d-none justify-content-between align-items-center">
                             <a href="{{route('pertandingan')}}" class="tonton-btn mt-0"> <i class="bi bi-chevron-left"></i>
                                 {{ __('general.back_button_age') }}
                             </a>
@@ -28,27 +28,49 @@
                     </div>
                     <div class="col-lg-7">
                         <div class="cars-row">
-                            <div class="d-flex align-items-end p-md-3 p-2">
+                            <div class="d-flex align-items-end justify-content-end px-md-3 pt-md-3 px-2 pt-2 ms-5 pb-0">
                                 <div>
-                                    <img src="{{asset('assets/img/car1.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('assets/img/toyota-yaris.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>FORD Ranger</h4>
-                                        <p>2.0L XLT Plus 4WD (10AT)</p>
+                                        <h4>Toyota Yaris </h4>
+                                        <p>1.5g (AT)</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="{{asset('assets/img/car3.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('assets/img/yamaha.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>PERODUA Aruz</h4>
-                                        <p>1.5 AV (AT)</p>
+                                        <h4>Yamaha YZF-R25</h4>
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="{{asset('assets/img/car2.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('assets/img/3xhonda-dash.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>TOYOTA Vios</h4>
-                                        <p>1.5 G (AT)</p>
+                                        <p>3X </p> 
+                                        <h4 >Honda Dash 125</h4>
                                     </div>
+                                </div>
+                                <div class="info_iconn info_iconn_1">
+                                    <span class="bi bi-info"></span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-end px-md-3 pb-md-3 px-2 pb-2 pt-0">
+                                <div>
+                                    <img src="{{asset('assets/img/hyudai.png')}}" class="img-fluid" alt="">
+                                    <div class="car-details">
+                                        <h4>Hyudai Kona</h4>
+                                        <p>2.0 Standard</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="{{asset('assets/img/perodua-car.png')}}" class="img-fluid" alt="">
+                                    <div class="car-details">
+                                        <h4>Perodua Ativa</h4>
+                                        <p>1.0 Turbo AV</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>E-Baucar Bernilai</h2>
+                                    <h1>RM4,500</h1>
                                 </div>
                                 <div class="info_iconn info_iconn_1">
                                     <span class="bi bi-info"></span>
@@ -59,30 +81,37 @@
                             <a href="" class="ringgit-btn">{{ __('general.ringgit_emas') }}</a>
                             <div class="d-flex align-items-end p-md-3 p-2">
                                 <div>
-                                    <img src="{{asset('assets/img/bike.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('assets/img/honda-dash.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>HONDA Dash 125 S</h4>
+                                        <h5>HONDA Dash 125 </h5>
 
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="{{asset('assets/img/bike.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('assets/img/honda-dash.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>HONDA Dash 125 S</h4>
+                                        <h5>HONDA Dash 125 </h5>
 
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="{{asset('assets/img/bike.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('assets/img/honda-dash.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>HONDA Dash 125 S</h4>
+                                        <h5>HONDA Dash 125 </h5>
 
                                     </div>
                                 </div>
                                 <div>
-                                    <img src="{{asset('assets/img/bike.png')}}" class="img-fluid" alt="">
+                                    <img src="{{asset('assets/img/honda-dash.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <h4>HONDA Dash 125 S</h4>
+                                        <h5>HONDA Dash 125 </h5>
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="{{asset('assets/img/honda-dash.png')}}" class="img-fluid" alt="">
+                                    <div class="car-details">
+                                        <h5>HONDA Dash 125 </h5>
 
                                     </div>
                                 </div>
@@ -93,6 +122,14 @@
 
                         </div>
                     </div>
+                </div>
+                <div class="py-4 d-flex d-md-none justify-content-between align-items-center flex-column">
+                    <a href="{{route('sertai.sekarang')}}" class="sertai-btn d-inline-block">{{ __('general.join_now') }}</a>
+                    
+                    <a href="{{route('pertandingan')}}" class="tonton-btn mt-3"> <i class="bi bi-chevron-left"></i>
+                        {{ __('general.back_button_age') }}
+                    </a>
+                   
                 </div>
             </div>
         </div>
