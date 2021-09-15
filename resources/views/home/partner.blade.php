@@ -156,7 +156,7 @@
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
                                                        href="{{$partner->youtube}}"><i class="fab  fa-youtube"></i></a>
                                                 @endif
-                                                @if($partner->youtube != "")
+                                                @if($partner->linkedin != "")
                                                     <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
                                                        href="{{$partner->linkedin}}"><i
                                                             class="fab  fa-linkedin"></i></a>
