@@ -138,4 +138,11 @@ return [
     'sertai_sekarang_6' => 'Nov',
     'sertai_sekarang_7' => 'Jumlah Simpanan',
     'sertai_sekarang_8' => 'Hantar',
+
+
+    'login_success_message' => 'You have registered successfully',
+    'register_success_message' => 'You have successfully logged in',
+
+
+
 ];

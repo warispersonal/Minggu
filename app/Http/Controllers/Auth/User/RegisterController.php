@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -62,12 +63,11 @@ class RegisterController extends Controller
                 'password' => Hash::make($request['password']),
             ]);
 
-            $credentials = $user->only('email', 'password');
-            Auth::guard('user')->attempt($credentials);
-            return redirect()->back()->withErrors($validator)->with('msg', 'Register successfully');
+            $message = trans('general.register_success_message');
+            return redirect()->back()->withErrors($validator)->with('msg',$message);
 
         } else {
-            return redirect()->back()->withErrors($validator)->withInput(['name', 'email', 'phone', 'ic_number'])->with('from', 'register');
+            return redirect()->back()->withErrors($validator)->withInput($request->input())->with('from', 'register');
         }
     }
 }

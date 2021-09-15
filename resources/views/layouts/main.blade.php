@@ -212,7 +212,7 @@
                     @csrf
                     <div class="mb-3">
                         <input class="custom_inputs" type="email" name="email" placeholder="{{ __('auth.email') }}"
-                               value="{{ old('email') }}">
+                               value="{{  old('email')  }}">
                         @if ($errors->has('email'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
                                 <strong>{{ $errors->first('email') }}</strong>
@@ -221,7 +221,7 @@
                     </div>
                     <div class="mb-md-5 mb-3">
                         <input class="custom_inputs" type="password" name="password"
-                               placeholder="{{ __('auth.password') }}" value="{{ old('password') }}">
+                               placeholder="{{ __('auth.password') }}" value="{{  old('password')  }}">
                         @if ($errors->has('password'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -250,7 +250,7 @@
                 <form action="{{ route('user_register') }}" method="POST" class="scrol">
                     @csrf
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" value="{{old('full_name')}}" name="full_name"
+                        <input class="custom_inputs" type="text" value="{{ old('full_name') }}" name="full_name"
                                placeholder="{{ __('auth.name') }}">
                         @if ($errors->has('full_name'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -259,7 +259,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="email" value="{{old('email')}}" name="email"
+                        <input class="custom_inputs" type="email" value="{{ old('email') }}" name="email"
                                placeholder="{{ __('auth.email') }}">
                         @if ($errors->has('email'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -268,7 +268,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" value="{{old('phone')}}" name="phone"
+                        <input class="custom_inputs" type="text" value="{{ old('phone') }}" name="phone"
                                placeholder="{{ __('auth.phoneNumber') }}">
                         @if ($errors->has('phone'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -277,7 +277,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" value="{{old('ic_number')}}" name="ic_number"
+                        <input class="custom_inputs" type="text" value="{{ old('ic_number') }}" name="ic_number"
                                placeholder="{{ __('auth.icn') }}">
                         @if ($errors->has('ic_number'))
                             <span class="invalid-feedback" style="display: block;" role="alert">

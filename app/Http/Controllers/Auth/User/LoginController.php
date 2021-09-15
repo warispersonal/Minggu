@@ -49,7 +49,8 @@ class LoginController extends Controller
         if ($validator->passes()) {
             $credentials = $request->only('email', 'password');
             if (Auth::guard('user')->attempt($credentials)) {
-                return redirect()->back()->with('msg','User login successfully');
+                $message = trans('general.login_success_message');
+                return redirect()->back()->with('msg',$message);
             }
             else{
                 return redirect()->back()
@@ -59,6 +60,7 @@ class LoginController extends Controller
         else{
             return redirect()->back()
                 ->withErrors($validator)
+                ->withInput($request->input())
                 ->with('from','login');
         }
     }
