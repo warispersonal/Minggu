@@ -1205,7 +1205,11 @@
         function changeModalView(program) {
             if (!$.isEmptyObject(program)) {
                 $('#program_frame').empty()
+                @if(Config::get('app.locale') == 'en' )
                 $("#program_title").text(program.name)
+                @else
+                $("#program_title").text(program.name_bm)
+                @endif
                 $('#program_frame').append(program.iframe)
                 $(".description-field").removeClass("active")
                 $(".date-button").removeClass("active")
