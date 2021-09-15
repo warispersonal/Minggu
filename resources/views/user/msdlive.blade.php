@@ -27,15 +27,15 @@
                             <h4 class="my-4">{{ __('general.social_heading') }}</h4>
                             <p>
                                 <img src="{{asset('assets/img/facbook.png')}}" class="img-fluid " alt=""> &nbsp;
-                                / MingguSahamDigital
+                                <a href="https://www.facebook.com/minggusahamdigital">/ MingguSahamDigital </a>
                             </p>
                             <p>
                                 <img src="{{asset('assets/img/insta.png')}}" alt=""> &nbsp;
-                                @MingguSahamDigital
+                                <a href="https://www.instagram.com/minggusahamdigital/"> @MingguSahamDigital </a>
                             </p>
                             <p>
                                 <img src="{{asset('assets/img/youtube.png')}}" alt=""> &nbsp;
-                                Minggu Saham Digital
+                                <a href="https://www.youtube.com/channel/UCoNCjruylHYpwBYkIvRwClA"> Minggu Saham Digital </a> 
                             </p>
                         </div>
                     </div>
@@ -54,15 +54,15 @@
                             <p>
                                 <img src="{{asset('assets/img/facbook.png')}}" class="img-fluid " alt=""> Facebook
                                 &nbsp;
-                                / MingguSahamDigital
+                                <a href="https://www.facebook.com/minggusahamdigital">/ MingguSahamDigital </a>
                             </p>
                             <p>
                                 <img src="{{asset('assets/img/insta.png')}}" alt=""> Instagram &nbsp;
-                                @MingguSahamDigital
+                                <a href="https://www.instagram.com/minggusahamdigital/"> @MingguSahamDigital </a>
                             </p>
                             <p>
                                 <img src="{{asset('assets/img/youtube.png')}}" alt=""> Youtube &nbsp;
-                                Minggu Saham Digital
+                                <a href="https://www.youtube.com/channel/UCoNCjruylHYpwBYkIvRwClA"> Minggu Saham Digital </a> 
                             </p>
                         </div>
                     </div>

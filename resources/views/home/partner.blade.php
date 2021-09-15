@@ -14,6 +14,9 @@
             background-color: {{$partner->mode == 1 ? "#fff4f4" : "#4ac4e2"}}         !important;
         }
 
+        .mode-buttons-color {
+            background-color: {{$partner->mode == 1 ? "#ffffff" : "#4b4b4b"}}         !important;
+        }
 
         .mobile-header {
             background-color: #FFC600;
@@ -120,15 +123,15 @@
                                         <div class="col-7">
                                             <div class="custom-links ">
                                                 @foreach($partner->links as $link)
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                    <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
                                                        href="{{$link->link}}">{{Config::get('app.locale') == 'en' ? $link->title : $link->title_bm}}</a>
                                                 @endforeach
                                                 @if($partner->website != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                    <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
                                                        href="{{$partner->website}}">{{ __('general.website') }}</a>
                                                 @endif
                                                 @if($partner->careers != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                    <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
                                                        href="{{$partner->careers}}">{{ __('general.careers') }}</a>
                                                 @endif
                                                 @if($partner->contact_us != "")
@@ -140,24 +143,24 @@
                                         <div class="col-5">
                                             <div class="custom-links d-flex justify-content-end align-items-end">
                                                 @if($partner->fb != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                    <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
                                                        href="{{$partner->fb}}"> <i
                                                             class="fab  fa-facebook"></i></a>
                                                 @endif
                                                 @if($partner->insta != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                    <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
                                                        href="{{$partner->insta}}"><i class="fab fa-instagram"></i></a>
                                                 @endif
                                                 @if($partner->twitter != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                    <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
                                                        href="{{$partner->twitter}}"><i class="fab  fa-twitter"></i></a>
                                                 @endif
                                                 @if($partner->youtube != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                    <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
                                                        href="{{$partner->youtube}}"><i class="fab  fa-youtube"></i></a>
                                                 @endif
-                                                @if($partner->youtube != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                @if($partner->linkedin != "")
+                                                    <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
                                                        href="{{$partner->linkedin}}"><i
                                                             class="fab  fa-linkedin"></i></a>
                                                 @endif

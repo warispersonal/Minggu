@@ -24,7 +24,7 @@ return [
     'phoneNumber' => 'Phone Number',
     'icn' => 'Identification card number',
     'terms&condition' => 'Terms & Conditions', 
-    'registerStatement' => '*By submitting this registration form, participants hereby agree to authorizes PNB, and PNB reserves the right to collect and process participants\' personal data, if any, for advertising, publicity or research purposes, in accordance with legal requirements relevant, without any cost or compensation.',
+    'registerStatement' => '*By submitting this registration form, participants hereby agree to authorize PNB and PNB reserves the right to collect and process participants\' personal data, if any, for advertising, publicity or research purposes, in accordance with legal requirements relevant, without any cost or compensation.',
     'terms' => 'I agree to receive email promotions',
     'send' => 'Send',
     'forgotPassword' => 'Forgot password',

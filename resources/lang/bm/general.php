@@ -30,7 +30,7 @@ return [
 
     //pertandingan
     'pertandingan' => 'Hadiah-hadiah Bernilai Lebih Daripada <span class="oyen">RM500,000</span> Untuk Dimenangi',
-    'jom_kira' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam molestiae deserunt atque dolore optio eos assumenda rerum voluptates commodi impedit dicta officia dignissimos dolorum exercitationem voluptatibus, asperiores quas similique vel!',
+    'jom_kira' => 'Rebut peluang untuk memenangi hadiah-hadiah menarik sepanjang Minggu Saham Digital! Sertai kami dalam pelbagai pertandingan menarik yang telah disediakan di laman web, platform-platform media sosial kami dan Minggu Saham Digital LIVE dari 20 Okotober hingga 23 November 2021.',
     'join_now' => 'Sertai Sekarang!',
 
     'the_match_button_1' => 'Jom... Kira Duit',
@@ -40,15 +40,15 @@ return [
 
     'car1_main_title' => 'Jom... Kira Duit',
     'car1_text' => 'Cara Penyertaan',
-    'car1_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste porro recusandae optio.',
+    'car1_description' => 'Bilang duit syiling bersama kami dan rebut peluang untuk memenangi sebuah Hyundai Kona 2.0, Toyota Yaris 1.5G(AT), Perodua Ativa 1.0 Turbo AV, Yamaha YZF-R2F dan Honda Dash 125! Cari, kumpul dan hantar jumlah Saham Coins yang terdapat di semua laman di laman web kami dan pastikan anda menonton rancangan Minggu Saham Digital LIVE untuk leboh banyak duit syiling yang akan muncul. Tumpukan perhatian kepada jumlah yang terdapat pada duit syling tersebut untuk menjadi pemenang bertuah kami! Tak sabar untuk mula melayari laman web kami dan mencari Saham Coins? Daftar sekarang!',
 
     'car2_main_title' => 'Jom... Kira Duit',
     'car2_text' => 'Cara Penyertaan',
     'car2_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste porro recusandae optio.',
 
-    'car3_main_title' => 'Jom... Kira Duit',
+    'car3_main_title' => 'Ringgit Emas',
     'car3_text' => 'Cara Penyertaan',
-    'car3_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque accusantium earum, pariatur, ullam corporis id facilis alias aliquam aspernatur in necessitatibus impedit quisquam, itaque nihil unde. Iste porro recusandae optio.',
+    'car3_description' => 'Supaya anda terus bersemangat untuk melayari setiap laman kami, salah satu daripada Saham Coins yag terdapat pada hantaran Media Social kami dan Rakan Korporat kami merupakan Ringgit Emas! Apa itu Ringgit Emas? Ia kelihatan seperti Saham Coins yang biasa tetapi mempunyai rahsia tersembunyi yang hanya diperoleh oleh peserta pertama yang menghantarnya! Terdapat hanya 5 (Lima) Saham Coins yang merupakan Ringgit Emas! Bagaimana untuk anda mengetahui bahawa ia adalah Ringgit Emas? Itulah dia rahsianya. Mulakan eksplorasi anda dan hantar semua Saham Coins yang anda temui secepat mungkin kerana anda mungkin menjadi salah seorang pemenang bertuah untuk memenangi Honda DASH 125S.',
 
     'ringgit_emas'=> 'Ringgit Emas',
     'evouchers'=> 'E-Baucar Lazada Bernilai Lebih Daripada',
@@ -79,7 +79,7 @@ return [
 
     'cabutanbertuah_mainheading' => 'Cabutan Bertuah',
     'cabutanbertuah_title' => 'Cara Penyertaan',
-    'cabutanbertuah_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
+    'cabutanbertuah_description' => 'Sudah berdaftar? Anda pasti teringin kerana setiap hari, kami akan mencabut 500 nama pemenang yang berpeluang memenangi E-Baucar Lazada bernilai RM100,000 dalam cabutan bertuah harian kami! Anda cuma perlu ke laman web pendaftaran kami, daftar dan tunggu pengumuman pemenang harian! Sungguh mudah! Jadi, ajak rakan-rakan dan ahli keluarga anda kerana pasti semua orang pasti berpeluang untuk memenangi baucar!',
     'cabutanbertuah_worth' => 'E-Baucar Lazada Bernilai Lebih Daripada',
     'cabutanbertuah_text' => ' Kembali ke Pertandingan',
 
@@ -92,7 +92,7 @@ return [
 
     'livetrivia_mainheading' => 'Live Trivia',
     'livetrivia_title' => 'Cara Penyertaan',
-    'livetrivia_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
+    'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami di dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital LIVE di Facebook. Anda cuma perlu menonton, bersedia dengan papan kekunci anda dan tajamkan minda anda, untuk menjadi salah seorang pemenang untuk memenangi E-Baucar Lazada! Pastikan anda catat jadual siaran dengan melayari Program & Jadual, pasangkan peringatan dan bersedia untuk menang!',
     'livetrivia_worth' => 'E-Baucar Lazada Bernilai Lebih Daripada',
     'livetrivia_text' => 'Kembali ke Pertandingan',
 

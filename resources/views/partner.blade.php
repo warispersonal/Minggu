@@ -8,8 +8,11 @@
 
     <main>
         <div class="main-bg position-relative">
-            <div class="container-fluid px-md-5 pt-4 position-absolute top-0">
-                <h1 class="text-white mb-0 d-lg-block d-none">PNB &nbsp; ASNB</h1>
+            <div class="container-fluid px-md-5 pt-4">
+                <div class="d-lg-block d-none">
+                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+                </div>
             </div>
             <div class="d-flex pt-5 justify-content-center m-auto ">
                 <div class="text-center">
@@ -215,9 +218,11 @@
                     </a>
                 </div>
             </div>
+            <footer class="partner-footer">
+        
+            </footer>
         </div>
     </main>
-
 
 @endsection
 

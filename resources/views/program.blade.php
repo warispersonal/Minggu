@@ -1116,10 +1116,10 @@
                                 <a target="_blank" href="{{$program->watch_again}}"><b>{{ __('general.watch_again') }}</b></a>
                             @endif
                         </p>
-                        <div>
+                        <div class="d-flex align-items-center">
                             {{ __('general.brought_to_you') }}
-                            <a href="{{route('may.bank', $program->partner->slug ?? '')}}">
-                                <img id="store_logo_image" src="{{$program->program_image ?? ''}}"/>
+                            <a href="{{route('may.bank', $program->partner->slug ?? '')}}" class="d-inline-block">
+                                <img id="store_logo_image" src="{{$program->program_image ?? ''}}" class="img-fluid"/>
                             </a>
                         </div>
                     </div>

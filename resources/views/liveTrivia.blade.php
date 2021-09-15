@@ -13,7 +13,10 @@
     <main>
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
-                <h1 class="text-white mb-0 d-lg-block d-none">PNB &nbsp; ASNB</h1>
+                <div class="d-lg-block d-none">
+                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+                </div>
             </div>
             <div class="container mt-5">
                 <h1 class="heading mb-5">
@@ -29,18 +32,13 @@
                         </p>
                     </div>
                     <div class="col-lg-7 d-flex align-items-center">
-                        <div class="cars-row h-100 my-0">
-                            <div class="d-flex align-items-center justify-content-around p-md-3 p-2">
-                                <div>
-                                    <img src="{{asset('assets/img/raiz-logo.png')}}" class="img-fluid" alt="">
-                                </div>
-                                <div>
-                                    <div class="car-details">
-                                        <h5>
-                                            {{ __('general.livetrivia_worth') }}
-                                        </h5>
-                                        <h1>RM180,000</h1>
-                                    </div>
+                        <div class="cars-row my-0">
+                            <div class=" p-md-5 p-2"> 
+                                <div class="car-details justify-content-around">
+                                    <h5 class="mx-auto">
+                                        {{ __('general.cabutanbertuah_worth') }}
+                                    </h5>
+                                    <h1>RM20,000</h1>
                                 </div>
                             </div>
                         </div>
@@ -54,6 +52,7 @@
             </div>
         </div>
     </main>
+    <footer></footer>
 @endsection
 
 
