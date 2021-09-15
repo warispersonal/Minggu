@@ -28,7 +28,11 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header border-0">
-                        <h3 class="mb-0">Upload Compitition Filters</h3>
+                        <h3 class="mb-0">
+                            Upload Competition Filters <b class="text-danger">Don't replace column name</b>
+                            <a href="{{asset('samplefile.csv')}}" class="btn btn-primary" download> Download Sample File</a>
+
+                        </h3>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('star.compitition.uploadFilter') }}" id="filterForm" enctype="multipart/form-data" method="POST">
@@ -41,7 +45,7 @@
                                     <input type="file" class="custom-file-input" name="csv_file" id="chooseFilters" aria-describedby="uploadFilters" required>
                                     <label class="custom-file-label" id="fileName" for="chooseFile">Choose file</label>
                                 </div>
-                                <input type="submit" value="Upload File" class="btn btn-info" />
+                                <input type="submit" value="Upload File" class="btn btn-primary" />
                             </div>
                         </form>
 

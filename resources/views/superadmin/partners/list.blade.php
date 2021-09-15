@@ -19,7 +19,7 @@
                     </nav>
                 </div>
                 <div class="col-lg-6 col-5 text-right">
-                    <button class="btn btn-sm btn-neutral" data-toggle="modal" data-target="#modal-store-partner">Add New Partner</button>
+                    <button class="btn btn-sm btn-neutral hidden" data-toggle="modal" data-target="#modal-store-partner">Add New Partner</button>
                 </div>
                 </div>
             </div>
