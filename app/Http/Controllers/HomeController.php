@@ -99,7 +99,7 @@ class HomeController extends Controller
         $section1 = Lottery::where('section', 1)->get();
         $section2 = Lottery::where('section', 2)->get();
         $section3 = Lottery::where('section', 3)->get();
-        if($id == 0){
+        if($id != 0){
             foreach ($section1 as $section) {
                 $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
                 if(count($user_lottery) == 0){
