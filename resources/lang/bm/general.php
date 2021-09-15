@@ -119,4 +119,15 @@ return [
 
     'rakan_acara_1' => 'RAKAN',
     'rakan_acara_2' => 'ACARA',
+
+    'sertai_sekarang_1' => 'Pra-MSD',
+    'sertai_sekarang_2' => 'Rakan Korporat',
+    'sertai_sekarang_3' => 'MSD Live',
+    'sertai_sekarang_4' => 'Pra-MSD',
+    'sertai_sekarang_5' => 'Okt',
+    'sertai_sekarang_6' => 'Nov',
+    'sertai_sekarang_7' => 'Jumlah Simpanan',
+    'sertai_sekarang_8' => 'Hantar',
+
+
 ];

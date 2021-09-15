@@ -35,16 +35,15 @@
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link active ps-0" id="nav-home-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                    aria-selected="true">Pra-MSD
+                                    aria-selected="true">{{ __('general.sertai_sekarang_1') }}
                             </button>
                             <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                                    aria-selected="false">Rakan
-                                Korporat
+                                    aria-selected="false">{{ __('general.sertai_sekarang_2') }}
                             </button>
                             <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
-                                    aria-selected="false">MSD Live
+                                    aria-selected="false">{{ __('general.sertai_sekarang_3') }}
                             </button>
                         </div>
                     </nav>
@@ -58,8 +57,8 @@
                                             <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="order-3 order-lg-2 ">
-                                            <h1 class="text-white text-center mt-5">Pra-MSD</h1>
-                                            <h4 class="text-white text-center mb-3">22 Okt - 16 Nov 2021</h4>
+                                            <h1 class="text-white text-center mt-5">{{ __('general.sertai_sekarang_4') }}</h1>
+                                            <h4 class="text-white text-center mb-3">22 {{ __('general.sertai_sekarang_5') }} - 16 {{ __('general.sertai_sekarang_6') }} 2021</h4>
                                             <p class="text-white text-center">{{ __('general.jom-kira-doit') }}</p>
                                         </div>
                                     </div>
@@ -85,7 +84,7 @@
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col-6">
-                                                <h3 class="text-white text-end">Jumlah Simpanan</h3>
+                                                <h3 class="text-white text-end">{{ __('general.sertai_sekarang_7') }}</h3>
                                             </div>
                                             <div class="col-6">
                                                 <div class="d-flex justify-content-end flex-md-nowrap flex-wrap">
@@ -94,7 +93,7 @@
                                                            class="rm-imputs-2" readonly>
                                                 </div>
                                                 <div class="text-end my-3 ms-auto ">
-                                                    <input type="submit" value="Hantar">
+                                                    <input type="submit" value="{{ __('general.sertai_sekarang_8') }}">
                                                 </div>
                                             </div>
                                         </div>

@@ -128,4 +128,14 @@ return [
 
     'brought_to_you' => 'Specially Brought By',
     'watch_again' => 'WATCH AGAIN',
+
+
+    'sertai_sekarang_1' => 'Pra-MSD',
+    'sertai_sekarang_2' => 'Corporate Partner',
+    'sertai_sekarang_3' => 'MSD Direct',
+    'sertai_sekarang_4' => 'Pra-MSD',
+    'sertai_sekarang_5' => 'Oct',
+    'sertai_sekarang_6' => 'Nov',
+    'sertai_sekarang_7' => 'Jumlah Simpanan',
+    'sertai_sekarang_8' => 'Hantar',
 ];
