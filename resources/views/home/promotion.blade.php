@@ -19,19 +19,6 @@
                         <h1 class="heading">{{ __('general.promosi_title') }} </h1>
                         <div class="mt-5 tabss">
                             <ul class="nav nav-pills mb-3" id="promotion_tabs" role="tablist">
-
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active"
-                                            id="pills-tab-all"
-                                            data-bs-toggle="pill"
-                                            data-bs-target="#pills-all"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="pills-all"
-                                            aria-selected="true">
-                                        <img src="{{asset(\App\Constant\FileConstant::PARTNER_LOGO.'/all.png')}}" alt="">
-                                    </button>
-                                </li>
                                 @foreach($partners as $partner)
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link"
@@ -45,6 +32,18 @@
                                         </button>
                                     </li>
                                 @endforeach
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active"
+                                                id="pills-tab-all"
+                                                data-bs-toggle="pill"
+                                                data-bs-target="#pills-all"
+                                                type="button"
+                                                role="tab"
+                                                aria-controls="pills-all"
+                                                aria-selected="true">
+                                            <img src="{{asset(\App\Constant\FileConstant::PARTNER_LOGO.'/all.png')}}" alt="">
+                                        </button>
+                                    </li>
                             </ul>
                         </div>
                     </div>

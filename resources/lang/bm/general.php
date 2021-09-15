@@ -109,7 +109,7 @@ return [
     'partner_acara' => 'ACARA',
     'partner_ejen' => 'EJEN',
 
-    'website' => 'Laman web',
+    'website' => 'Laman Web',
     'careers' => 'Kerjaya',
     'contact_us' => 'Hubungi Kami',
 

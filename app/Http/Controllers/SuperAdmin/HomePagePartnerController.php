@@ -74,6 +74,7 @@ class HomePagePartnerController extends Controller
         $partner['linkedin'] = $request->linkedin ?? "";
         $partner['contact_us'] = $request->contact_us ?? "";
         $partner['mode'] = $request->mode;
+        $partner['is_shown_program_tab'] = $request->is_shown_program_tab;
         $partner->save();
         return redirect()->route('stars.homepage.index')->with(['msg' => 'Partner info updated successfully']);;
 

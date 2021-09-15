@@ -55,7 +55,7 @@
                                     data-bs-target="#nav-maklumat" type="button" role="tab" aria-controls="nav-maklumat"
                                     aria-selected="true">Maklumat
                             </button>
-                            @if($partner->is_promotion == 1)
+                            @if($partner->is_shown_program_tab == 1)
                                 <button class="nav-link mode-fore-color" id="nav-program-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-program" type="button" role="tab"
                                         aria-controls="nav-program"

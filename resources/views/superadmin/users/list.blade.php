@@ -39,7 +39,6 @@
                                 <th scope="col" class="sort" data-sort="name">#</th>
                                 <th scope="col" class="sort" data-sort="budget">Name</th>
                                 <th scope="col" class="sort" data-sort="status">Email</th>
-                                <th scope="col">Password</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -76,7 +75,6 @@
                     {"data": "DT_RowIndex"},
                     { "data": "name" },
                     { "data": "email" },
-                    { "data": "raw_password" },
                     { "data": "action",'name':'action' },
                 ],
                 "language": {

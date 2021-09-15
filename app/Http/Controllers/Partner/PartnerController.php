@@ -151,8 +151,9 @@ class PartnerController extends Controller
         $partner['contact_us'] = $request->contact_us ?? "";
         $partner['linkedin'] = $request->linkedin ?? "";
         $partner['mode'] = $request->mode;
+        $partner['is_shown_program_tab'] = $request->is_shown_program_tab;
         $partner->save();
-        return redirect()->back()->with(['msg'=>'Partner updated successfully']);;
+        return redirect()->back()->with(['msg'=>'Partner updated successfully']);
 
     }
 }

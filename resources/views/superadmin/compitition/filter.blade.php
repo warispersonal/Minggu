@@ -8,23 +8,17 @@
     <div class="header bg-gradient-primary pb-6 pt-4 pt-md-6">
         <div class="container-fluid">
             <div class="header-body">
-                <form method="post" action="{{route('star.compitition.generate.daily.winner.list')}}">
-                    @csrf
-                    <div class="row align-items-center py-4">
-                        <div class="col-lg-9 col-7">
-                            <h6 class="h2 text-white d-inline-block mb-0">No of Daily Winner</h6>
-                            <div class="form-group mb-3">
-                                <div class="input-group input-group-alternative">
-                                    <input class="form-control" id="admin-name" name="daily_winner"
-                                           placeholder="No of Daily Winner" type="number" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-5 text-right">
-                            <button class="btn btn-sm btn-neutral" type="submit">Get Winner</button>
-                        </div>
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-6 col-7">
+                        <h6 class="h2 text-white d-inline-block mb-0">Filters</h6>
+                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                <li class="breadcrumb-item"><a href="{{ route('star.dashboard') }}"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#">Filters Settings</a></li>
+                            </ol>
+                        </nav>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -34,7 +28,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header border-0">
-                        <h3 class="mb-0">Upload Competition Filters</h3>
+                        <h3 class="mb-0">Upload Compitition Filters</h3>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('star.compitition.uploadFilter') }}" id="filterForm" enctype="multipart/form-data" method="POST">
@@ -47,19 +41,20 @@
                                     <input type="file" class="custom-file-input" name="csv_file" id="chooseFilters" aria-describedby="uploadFilters" required>
                                     <label class="custom-file-label" id="fileName" for="chooseFile">Choose file</label>
                                 </div>
+                                <input type="submit" value="Upload File" class="btn btn-info" />
                             </div>
                         </form>
 
                         <div class="table-responsive">
                             <table class="table align-items-center table-flush w-100" id="filterTable">
-                            <thead class="thead-light">
+                                <thead class="thead-light">
                                 <tr>
-                                    <th scope="col" class="sort" data-sort="name">#</th>
+                                    <th scope="col" class="sort" data-sort="name">ID</th>
                                     <th scope="col" class="sort" data-sort="budget">Full Name</th>
                                     <th scope="col" class="sort" data-sort="status">IC</th>
                                     <th scope="col">Actions</th>
                                 </tr>
-                            </thead>
+                                </thead>
                                 <tbody>
 
                                 </tbody>
@@ -83,23 +78,23 @@
             $('#filterTable').DataTable({
                 "processing": true,
                 "serverSide": true,
-                "order": [],
                 "ajax": "{{ route('star.compitition.getfiltersAJAX') }}",
                 "columns":[
-                    {"data": "DT_RowIndex"},
+                    { "data": "id" },
                     { "data": "full_name" },
                     { "data": "ic_number" },
                     { "data": "action",'name':'action' },
                 ],
                 "language": {
                     "paginate": {
-                    "previous": "<i class='fa fa-angle-left'></i>",
-                    "next": "<i class='fa fa-angle-right'></i>"
+                        "previous": "<i class='fa fa-angle-left'></i>",
+                        "next": "<i class='fa fa-angle-right'></i>"
                     }
                 }
             });
         });
         $('#chooseFilters').on('change',function(){
+            debugger
             var fileName = $('#chooseFilters')[0].files[0].name;
             var fileExt = fileName.split('.').pop();
             if(fileExt == 'csv'){
@@ -116,6 +111,5 @@
                 });
             }
         });
-
     </script>
 @endpush

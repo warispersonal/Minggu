@@ -66,6 +66,13 @@
                                             <option {{$partner->mode == 1 ? 'selected' : ""}} value="1">Light</option>
                                         </select>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="is_shown_program_tab">Is Showing Program Tab</label>
+                                        <select name="is_shown_program_tab" class="form-control" id="is_shown_program_tab">
+                                            <option {{$partner->is_shown_program_tab == 0 ? 'selected' : ""}} value="0">No</option>
+                                            <option {{$partner->is_shown_program_tab == 1 ? 'selected' : ""}} value="1">Yes</option>
+                                        </select>
+                                    </div>
                                     <div class="form-group mb-3">
                                         <label for="theme-color">BG Color</label>
                                         <input type="color" class="form-control theme-edit" name="bg_color"
