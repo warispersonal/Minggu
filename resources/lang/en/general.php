@@ -115,7 +115,12 @@ return [
     'partner_premier' => 'PREMIER',
     'partner_utama' => 'UTAMA',
     'partner_acara' => 'ACARA',
-    'partner_ejen' => 'EJEN',
+    'partner_ejen' => 'Participating Agents',
+
+    'rakan_acara_1' => 'Event',
+    'rakan_acara_2' => 'Partner',
+
+
 
     'website' => 'Website',
     'careers' => 'Careers',

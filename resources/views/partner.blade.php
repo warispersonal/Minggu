@@ -131,7 +131,7 @@
                     <a href="{{route('may.bank', $partners[18]->slug)}}">
                         <img src="{{$partners[18]->main_logo}}" class="img-fluid partner-logo" alt="">
                     </a>
-                    <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_acara') }}</span> </p>
+                    <p class="text-white text-uppercase mb-0"> {{ __('general.rakan_acara_1') }} <span class="fw-bold">{{ __('general.rakan_acara_2') }}</span> </p>
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
@@ -219,7 +219,7 @@
                 </div>
             </div>
             <footer class="partner-footer">
-        
+
             </footer>
         </div>
     </main>

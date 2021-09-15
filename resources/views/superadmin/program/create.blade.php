@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="form-group mb-3">
-                    <label>Thumbnail Image (150 × 96 px)</label>
+                    <label>Partner Logo  (150 × 96px)</label>
                     <div class="input-group input-group-alternative">
                         <input class="form-control" id="partner-email" name="thumbnail_image" type="file" required="">
                     </div>

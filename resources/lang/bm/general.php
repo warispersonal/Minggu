@@ -116,4 +116,7 @@ return [
 
     'brought_to_you' => 'Dibawakan Khas Oleh',
     'watch_again' => 'TONTON ULANGAN',
+
+    'rakan_acara_1' => 'RAKAN',
+    'rakan_acara_2' => 'ACARA',
 ];
