@@ -58,7 +58,7 @@ class UserController extends Controller
                             'isCorrect' => 0,
                             'created_at' => now(),
                             'updated_at' => now(),
-                            'ic_number' => $ic_number
+                            'ic_number' => $ic_number ?? ""
                         ];
                         $userLottery[] = $array;
                     } else {
@@ -71,7 +71,7 @@ class UserController extends Controller
                                 'isCorrect' => 1,
                                 'created_at' => now(),
                                 'updated_at' => now(),
-                                'ic_number' => $ic_number
+                                'ic_number' => $ic_number ?? ""
                             ];
                             $userLottery[] = $array;
                         }

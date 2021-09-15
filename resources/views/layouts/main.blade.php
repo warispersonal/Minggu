@@ -231,7 +231,7 @@
                     <div class="mb-md-5 mb-3">
                         <input class="submit-btn" type="submit" value="{{ __('auth.send') }}">
                     </div>
-                    <!--<a class="forget" href="{{ route('password.request') }}">{{ __('auth.forgotPassword') }}?</a>-->
+                    <a class="forget" href="{{ route('password.request') }}">{{ __('auth.forgotPassword') }}?</a>
                 </form>
             </div>
             <div class="col-4">
