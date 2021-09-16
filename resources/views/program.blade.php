@@ -2,6 +2,9 @@
 
 @push('style')
     <style>
+        .handler{
+            cursor:pointer ;
+        }
         .main-bg {
             background-color: #0057B7 !important;
         }
@@ -94,8 +97,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white"
-                                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                        <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span> <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
                                                 </div>
@@ -111,7 +113,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
@@ -129,7 +131,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
@@ -147,7 +149,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
@@ -165,7 +167,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
@@ -182,7 +184,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
@@ -199,9 +201,8 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        {{$item->name}} <small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
-
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -1226,6 +1227,28 @@
                 return false;
             }
 
+        }
+
+
+        function changeModalViewSecond(program, image, date,time) {
+            console.log(program)
+            console.log(image)
+            console.log(date)
+            console.log(time)
+            if (!$.isEmptyObject(program)) {
+                $('#program_frame_second').text(program.iframe)
+                @if(Config::get('app.locale') == 'en' )
+                $("#program_title_second").text(program.name)
+                $("#program_description_second").text(program.description)
+                @else
+                $("#program_title_second").text(program.name_bm)
+                $("#program_description_second").text(program.description_bm)
+                @endif
+                $('#program_second_logo').attr('src',image)
+                $('#program_second_date').text(date)
+                $('#program_second_time').text(time)
+
+            }
         }
     </script>
 
