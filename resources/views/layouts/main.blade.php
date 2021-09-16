@@ -328,12 +328,14 @@
 @if (Session::get('error'))
     {{ Session::first() }}
 @endif
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 @if(session()->has('msg'))
     <script>
-        alert("{{session()->get('msg')}}")
+        swal("", "{{session()->get('msg')}}", "success");
     </script>
 @endif
+
 @if(session()->has('from'))
     @if(session()->get('from') == "login")
         <script>

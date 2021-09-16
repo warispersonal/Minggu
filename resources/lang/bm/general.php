@@ -129,6 +129,6 @@ return [
     'sertai_sekarang_7' => 'Jumlah Simpanan',
     'sertai_sekarang_8' => 'Hantar',
 
-    'register_success_message' => 'Anda berjaya log masuk',
-    'login_success_message' => 'Anda telah berjaya mendaftar',
+    'register_success_message' => 'Anda telah berjaya mendaftar',
+    'login_success_message' => 'Anda berjaya log masuk',
 ];

@@ -1228,4 +1228,5 @@
 
         }
     </script>
+
 @endpush
