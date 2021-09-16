@@ -47,9 +47,6 @@ class RegisterController extends Controller
 
     public function user_register(\Illuminate\Http\Request $request)
     {
-        $user = User::find(222);
-        Mail::to($user->email)->send(new SendRegisterEmail($user));
-return "Mail Send";
         $validator = Validator::make($request->all(), [
             'full_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
