@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Auth\User;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SendRegisterEmail;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -45,6 +47,9 @@ class RegisterController extends Controller
 
     public function user_register(\Illuminate\Http\Request $request)
     {
+        $user = User::find(222);
+        Mail::to($user->email)->send(new SendRegisterEmail($user));
+return "Mail Send";
         $validator = Validator::make($request->all(), [
             'full_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -64,6 +69,7 @@ class RegisterController extends Controller
             ]);
 
             $message = trans('general.register_success_message');
+            Mail::to($user->email)->send(new SendRegisterEmail($user));
             return redirect()->back()->withErrors($validator)->with('msg',$message);
 
         } else {
