@@ -35,7 +35,7 @@
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link active ps-0" id="nav-home-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                    aria-selected="true">{{ __('general.sertai_sekarang_1') }}
+                                    aria-selected="true">{{ __('general.sertai_sekarang_7') }}
                             </button>
                             <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
@@ -143,14 +143,14 @@
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col-6">
-                                                <h3 class="text-white">Jumlah Simpanan</h3>
+                                                <h3 class="text-white">{{ __('general.sertai_sekarang_7') }}</h3>
                                             </div>
                                             <div class="col-6">
                                                 <div class="d-flex justify-content-end flex-md-nowrap flex-wrap mb-3">
                                                     <h2 class="text-white mb-0">RM</h2>
                                                     <input type="text" id="final_result_2" class="rm-imputs-2" readonly>
                                                     <div class="text-end mt-3 ms-3 mt-md-0">
-                                                        <input type="submit" value="Hantar">
+                                                        <input type="submit" value="{{ __('general.sertai_sekarang_8') }}<">
                                                     </div>
                                                 </div>
                                             </div>
@@ -181,45 +181,44 @@
                                             <div id="owlCarousel" class="nav flex-column nav-pills me-5 mb-3 mb-lg-0"
                                                  id="v-pills-tab" role="tablist"
                                                  aria-orientation="vertical">
-                                                <button class="nav-link active" id="v-pills-rabu-tab"
+                                                <button onclick="stepDateFields(1)" class="nav-link active" id="v-pills-rabu-tab"
                                                         data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-rabu" type="button" role="tab"
                                                         aria-controls="v-pills-rabu" aria-selected="true">{{ __('general.wednesday') }}, 17 Nov
                                                     2021
                                                 </button>
-                                                <button class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill"
+                                                <button onclick="stepDateFields(2)"  class="nav-link" id="v-pills-khamis-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-khamis" type="button" role="tab"
                                                         aria-controls="v-pills-khamis" aria-selected="false">{{ __('general.thursday') }}, 18
                                                     nov 2021
                                                 </button>
-                                                <button class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill"
+                                                <button onclick="stepDateFields(3)"  class="nav-link" id="v-pills-jumaat-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-jumaat" type="button" role="tab"
                                                         aria-controls="v-pills-jumaat" aria-selected="false">{{ __('general.friday') }}, 19
                                                     Nov 2021
                                                 </button>
-                                                <button class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill"
+                                                <button onclick="stepDateFields(4)"  class="nav-link" id="v-pills-sabtu-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-sabtu" type="button" role="tab"
                                                         aria-controls="v-pills-sabtu" aria-selected="false">{{ __('general.saturday') }}, 20
                                                     Nov 2021
                                                 </button>
-                                                <button class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill"
+                                                <button  onclick="stepDateFields(5)"  class="nav-link" id="v-pills-ahad-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-ahad" type="button" role="tab"
                                                         aria-controls="v-pills-ahad" aria-selected="false">{{ __('general.sunday') }}, 21 Nov
                                                     2021
                                                 </button>
-                                                <button class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill"
+                                                <button  onclick="stepDateFields(6)"  class="nav-link" id="v-pills-isinin-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-isinin" type="button" role="tab"
                                                         aria-controls="v-pills-isinin" aria-selected="false">{{ __('general.monday') }}, 22
                                                     Nov 2021
                                                 </button>
-                                                <button class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill"
+                                                <button  onclick="stepDateFields(7)"  class="nav-link" id="v-pills-selasa-tab" data-bs-toggle="pill"
                                                         data-bs-target="#v-pills-selasa" type="button" role="tab"
                                                         aria-controls="v-pills-selasa" aria-selected="false">{{ __('general.tuesday') }}, 23
                                                     Nov 2021
                                                 </button>
                                             </div>
                                             <div class="tab-content" id="msd-live-section">
-
                                                 <div class="tab-pane fade show active" id="v-pills-rabu" role="tabpanel"
                                                      aria-labelledby="v-pills-rabu-tab">
                                                     <div class="row">
@@ -234,7 +233,7 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step1-date-fields only-decimal-integer-number"
                                                                             type="text"
                                                                             value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}">
@@ -243,6 +242,23 @@
                                                                 </div>
                                                             @endif
                                                         @endforeach
+                                                    </div>
+
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <h4 class="text-white">{{ __('general.sertai_sekarang_7') }}</h4>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div
+                                                                class="d-flex justify-content-end flex-md-nowrap flex-wrap">
+                                                                <h4 class="text-white mb-0">RM</h4>
+                                                                <input type="text" id="final1_result_3" class="rm-imputs-2"
+                                                                       readonly>
+                                                            </div>
+                                                            <div class="text-end ms-auto my-3">
+                                                                <input type="submit" value="{{ __('general.sertai_sekarang_8') }}">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade" id="v-pills-khamis" role="tabpanel"
@@ -259,7 +275,7 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step2-date-fields only-decimal-integer-number"
                                                                             type="text"
                                                                             value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}">
@@ -268,6 +284,22 @@
                                                                 </div>
                                                             @endif
                                                         @endforeach
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <h4 class="text-white">{{ __('general.sertai_sekarang_7') }}</h4>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div
+                                                                class="d-flex justify-content-end flex-md-nowrap flex-wrap">
+                                                                <h4 class="text-white mb-0">RM</h4>
+                                                                <input type="text" id="final2_result_3" class="rm-imputs-2"
+                                                                       readonly>
+                                                            </div>
+                                                            <div class="text-end ms-auto my-3">
+                                                                <input type="submit" value="{{ __('general.sertai_sekarang_8') }}">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade" id="v-pills-jumaat" role="tabpanel"
@@ -284,7 +316,7 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step3-date-fields only-decimal-integer-number"
                                                                             type="text"
                                                                             value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
 
@@ -295,6 +327,23 @@
                                                             @endif
                                                         @endforeach
                                                     </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <h4 class="text-white">{{ __('general.sertai_sekarang_7') }}</h4>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div
+                                                                class="d-flex justify-content-end flex-md-nowrap flex-wrap">
+                                                                <h4 class="text-white mb-0">RM</h4>
+                                                                <input type="text" id="final3_result_3" class="rm-imputs-2"
+                                                                       readonly>
+                                                            </div>
+                                                            <div class="text-end ms-auto my-3">
+                                                                <input type="submit" value="{{ __('general.sertai_sekarang_8') }}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                                 <div class="tab-pane fade" id="v-pills-sabtu" role="tabpanel"
                                                      aria-labelledby="v-pills-sabtu-tab">
@@ -310,7 +359,7 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step4-date-fields only-decimal-integer-number"
                                                                             type="text"
                                                                             value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
 
@@ -320,6 +369,22 @@
                                                                 </div>
                                                             @endif
                                                         @endforeach
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <h4 class="text-white">{{ __('general.sertai_sekarang_7') }}</h4>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div
+                                                                class="d-flex justify-content-end flex-md-nowrap flex-wrap">
+                                                                <h4 class="text-white mb-0">RM</h4>
+                                                                <input type="text" id="final4_result_3" class="rm-imputs-2"
+                                                                       readonly>
+                                                            </div>
+                                                            <div class="text-end ms-auto my-3">
+                                                                <input type="submit" value="{{ __('general.sertai_sekarang_8') }}">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade" id="v-pills-ahad" role="tabpanel"
@@ -336,7 +401,7 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step5-date-fields only-decimal-integer-number"
                                                                             type="text"
                                                                             value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
 
@@ -346,6 +411,22 @@
                                                                 </div>
                                                             @endif
                                                         @endforeach
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <h4 class="text-white">{{ __('general.sertai_sekarang_7') }}</h4>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div
+                                                                class="d-flex justify-content-end flex-md-nowrap flex-wrap">
+                                                                <h4 class="text-white mb-0">RM</h4>
+                                                                <input type="text" id="final5_result_3" class="rm-imputs-2"
+                                                                       readonly>
+                                                            </div>
+                                                            <div class="text-end ms-auto my-3">
+                                                                <input type="submit" value="{{ __('general.sertai_sekarang_8') }}">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade" id="v-pills-isinin" role="tabpanel"
@@ -362,7 +443,7 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
+                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step6-date-fields only-decimal-integer-number"
                                                                             type="text"
                                                                             value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
 
@@ -373,6 +454,23 @@
                                                             @endif
                                                         @endforeach
                                                     </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <h4 class="text-white">{{ __('general.sertai_sekarang_7') }}</h4>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div
+                                                                class="d-flex justify-content-end flex-md-nowrap flex-wrap">
+                                                                <h4 class="text-white mb-0">RM</h4>
+                                                                <input type="text" id="final6_result_3" class="rm-imputs-2"
+                                                                       readonly>
+                                                            </div>
+                                                            <div class="text-end ms-auto my-3">
+                                                                <input type="submit" value="{{ __('general.sertai_sekarang_8') }}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                                 <div class="tab-pane fade" id="v-pills-selasa" role="tabpanel"
                                                      aria-labelledby="v-pills-selasa-tab">
@@ -387,32 +485,29 @@
                                                                 <div class="col-5">
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
-                                                                        <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields only-decimal-integer-number"
-                                                                            type="text"
-                                                                            name="step_3_{{$item->id}}">
+                                                                        <input {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step7-date-fields only-decimal-integer-number" type="text" name="step_3_{{$item->id}}">
                                                                     </div>
                                                                 </div>
                                                             @endif
                                                         @endforeach
                                                     </div>
-                                                </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <h4 class="text-white">{{ __('general.sertai_sekarang_7') }}</h4>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div
+                                                                class="d-flex justify-content-end flex-md-nowrap flex-wrap">
+                                                                <h4 class="text-white mb-0">RM</h4>
+                                                                <input type="text" id="final7_result_3" class="rm-imputs-2"
+                                                                       readonly>
+                                                            </div>
+                                                            <div class="text-end ms-auto my-3">
+                                                                <input type="submit" value="{{ __('general.sertai_sekarang_8') }}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-                                                <div class="row mt-3">
-                                                    <div class="col-6">
-                                                        <h4 class="text-white">Jumlah Simpanan</h4>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <div
-                                                            class="d-flex justify-content-end flex-md-nowrap flex-wrap">
-                                                            <h4 class="text-white mb-0">RM</h4>
-                                                            <input type="text" id="final_result_3" class="rm-imputs-2"
-                                                                   readonly>
-                                                        </div>
-                                                        <div class="text-end ms-auto my-3">
-                                                            <input type="submit" value="Hantar">
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -474,12 +569,36 @@
             $(".step2-fields").on('input', function () {
                 calculateSum2();
             });
-            $(".step3-fields").on('input', function () {
-                calculateSum3();
+            $(".step1-date-fields").on('input', function () {
+                stepDateFields(1);
+            });
+            $(".step2-date-fields").on('input', function () {
+                stepDateFields(2);
+            });
+            $(".step3-date-fields").on('input', function () {
+                stepDateFields(3);
+            });
+            $(".step4-date-fields").on('input', function () {
+                stepDateFields(4);
+            });
+            $(".step5-date-fields").on('input', function () {
+                stepDateFields(5);
+            });
+            $(".step6-date-fields").on('input', function () {
+                stepDateFields(6);
+            });
+            $(".step7-date-fields").on('input', function () {
+                stepDateFields(7);
             });
             calculateSum1()
             calculateSum2()
-            calculateSum3()
+            stepDateFields(1)
+            stepDateFields(2)
+            stepDateFields(3)
+            stepDateFields(4)
+            stepDateFields(5)
+            stepDateFields(6)
+            stepDateFields(7)
         });
 
         function calculateSum1() {
@@ -504,15 +623,15 @@
             $("#final_result_2").val(calculated_total_sum);
         }
 
-        function calculateSum3() {
+        function stepDateFields(no) {
             var calculated_total_sum = 0;
-            $(".step3-fields").each(function () {
+            $(".step"+no+"-date-fields").each(function () {
                 var get_textbox_value = $(this).val();
                 if (get_textbox_value != "") {
                     calculated_total_sum += parseFloat(get_textbox_value);
                 }
             });
-            $("#final_result_3").val(calculated_total_sum);
+            $("#final"+no+"_result_3").val(calculated_total_sum);
         }
 
     </script>
