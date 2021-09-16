@@ -90,7 +90,7 @@
                                         <div class="row">
                                             @foreach($first_september as $item)
                                                 <div class="col-3">
-                                                    <span class="time">{{$item->time}}</span>
+                                                    <span class="time">{{$item->time_format}}</span>
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
@@ -107,7 +107,7 @@
                                         <div class="row">
                                             @foreach($second_september as $item)
                                                 <div class="col-3">
-                                                    <span class="time">{{$item->time}}</span>
+                                                    <span class="time">{{$item->time_format}}</span>
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
@@ -125,7 +125,7 @@
                                         <div class="row">
                                             @foreach($third_september as $item)
                                                 <div class="col-3">
-                                                    <span class="time">{{$item->time}}</span>
+                                                    <span class="time">{{$item->time_format}}</span>
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
@@ -143,7 +143,7 @@
                                         <div class="row">
                                             @foreach($fourth_september as $item)
                                                 <div class="col-3">
-                                                    <span class="time">{{$item->time}}</span>
+                                                    <span class="time">{{$item->time_format}}</span>
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
@@ -161,7 +161,7 @@
                                         <div class="row">
                                             @foreach($five_september as $item)
                                                 <div class="col-3">
-                                                    <span class="time">{{$item->time}}</span>
+                                                    <span class="time">{{$item->time_format}}</span>
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
@@ -178,7 +178,7 @@
                                         <div class="row">
                                             @foreach($six_september as $item)
                                                 <div class="col-3">
-                                                    <span class="time">{{$item->time}}</span>
+                                                    <span class="time">{{$item->time_format}}</span>
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
@@ -195,7 +195,7 @@
                                         <div class="row">
                                             @foreach($seven_september as $item)
                                                 <div class="col-3">
-                                                    <span class="time">{{$item->time}}</span>
+                                                    <span class="time">{{$item->time_format}}</span>
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
@@ -1111,7 +1111,12 @@
                     <div class="tab-pane fade show description-field" id="date-{{$program->id}}" role="tabpanel"
                          aria-labelledby="date-{{$program->id}}-tab">
                         <p>
+                            @if(Config::get('app.locale') == 'en' )
                             {{$program->description}}
+                            @else
+                                {{$program->description_bm}}
+                            @endif
+
                             @if($program->watch_again != "")
                                 <a target="_blank" href="{{$program->watch_again}}"><b>{{ __('general.watch_again') }}</b></a>
                             @endif

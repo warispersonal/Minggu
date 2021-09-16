@@ -65,13 +65,13 @@ class HomeController extends Controller
     public function program()
     {
         $programs = Program::all();
-        $first_september = Program::where('date', '2021-11-17')->get();
-        $second_september = Program::where('date', '2021-11-18')->get();
-        $third_september = Program::where('date', '2021-11-19')->get();
-        $fourth_september = Program::where('date', '2021-11-20')->get();
-        $five_september = Program::where('date', '2021-11-21')->get();
-        $six_september = Program::where('date', '2021-11-22')->get();
-        $seven_september = Program::where('date', '2021-11-23')->get();
+        $first_september = Program::where('date', '2021-11-17')->orderBy('time','asc')->get();
+        $second_september = Program::where('date', '2021-11-18')->orderBy('time','asc')->get();
+        $third_september = Program::where('date', '2021-11-19')->orderBy('time','asc')->get();
+        $fourth_september = Program::where('date', '2021-11-20')->orderBy('time','asc')->get();
+        $five_september = Program::where('date', '2021-11-21')->orderBy('time','asc')->get();
+        $six_september = Program::where('date', '2021-11-22')->orderBy('time','asc')->get();
+        $seven_september = Program::where('date', '2021-11-23')->orderBy('time','asc')->get();
         $main_programs = MainProgram::all();
         return view("program", compact('main_programs', 'programs', 'first_september', 'second_september', 'third_september', 'fourth_september', 'five_september', 'six_september', 'seven_september'));
     }

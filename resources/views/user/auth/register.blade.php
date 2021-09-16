@@ -86,6 +86,11 @@
                                             <span class="text-muted">{{ __('I agree with the') }} <a href="#!">{{ __('Privacy Policy') }}</a></span>
                                         </label>
                                     </div>
+                                    @if ($errors->has('terms'))
+                                        <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('terms') }}</strong>
+                                    </span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="text-center">

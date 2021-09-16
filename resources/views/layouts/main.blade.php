@@ -296,7 +296,7 @@
                     </div>
                     <div class="mb-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="terms" value="terms"
+                            <input class="form-check-input" type="checkbox" name="terms"
                                    id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
                                 {{ __('auth.terms') }}

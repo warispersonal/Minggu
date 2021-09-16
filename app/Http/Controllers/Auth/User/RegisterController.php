@@ -53,22 +53,20 @@ class RegisterController extends Controller
             'phone' => ['required', 'string', 'max:255'],
             'ic_number' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string'],
-            'terms' => ['required'],
+//            'terms' => ['required'],
         ]);
         if ($validator->passes()) {
             $user = User::create([
-                'name' => $request['full_name'],
-                'email' => $request['email'],
-                'phone' => $request['phone'],
-                'ic_number' => $request['ic_number'],
-                'raw_password' => $request['password'],
-                'password' => Hash::make($request['password']),
+                'name' => $request['full_name'] ?? "",
+                'email' => $request['email'] ?? "",
+                'phone' => $request['phone'] ?? "",
+                'ic_number' => $request['ic_number'] ?? "",
+                'raw_password' => $request['password'] ?? "",
+                'password' => Hash::make($request['password']) ?? "",
             ]);
-
             $message = trans('general.register_success_message');
 //            Mail::to($user->email)->send(new SendRegisterEmail($user));
             return redirect()->back()->withErrors($validator)->with('msg',$message);
-
         } else {
             return redirect()->back()->withErrors($validator)->withInput($request->input())->with('from', 'register');
         }
