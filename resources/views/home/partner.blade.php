@@ -135,7 +135,7 @@
                                                        href="{{$partner->careers}}">{{ __('general.careers') }}</a>
                                                 @endif
                                                 @if($partner->contact_us != "")
-                                                    <a target="_blank" class="mode-fore-color mode-bg-color mt-2"
+                                                    <a target="_blank" class="mode-fore-color mode-bg-color mode-buttons-color mt-2"
                                                        href="{{$partner->contact_us}}">{{ __('general.contact_us') }}</a>
                                                 @endif
                                             </div>
