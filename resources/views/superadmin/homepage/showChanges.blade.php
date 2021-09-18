@@ -1,0 +1,501 @@
+@extends('layouts.app')
+
+@push('style')
+    <link rel="stylesheet" href="{{ asset('argon') }}/vendor/data-table/datatables.min.css">
+@endpush
+
+@section('content')
+    <div class="header bg-gradient-primary pb-6 pt-4 pt-md-6">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-6 col-7">
+                        <h6 class="h2 text-white d-inline-block mb-0">Partner Changes</h6>
+                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                <li class="breadcrumb-item"><a href="{{ route('star.dashboard') }}"><i
+                                            class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#">Manage Partner Changes</a></li>
+                            </ol>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt--7">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header border-0">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header border-0">
+                                        <h3 class="mb-0">Original Partner</h3>
+                                    </div>
+                                    <div class="container">
+                                        <div class="form-group mb-3">
+                                            <label>Name (EN)</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="name"
+                                                       placeholder="Name (EN)" value="{{ $original->name }}"
+                                                       type="text" required="">
+                                            </div>
+                                            @if ($errors->has('name'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('name') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Name (BM)</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="name_bm"
+                                                       placeholder="Name (BM)"
+                                                       value="{{ $original->name_bm }}" type="text"
+                                                       required="">
+                                            </div>
+                                            @if ($errors->has('name_bm'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('name_bm') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="modeSelect">Select Mode</label>
+                                            <select name="mode" class="form-control" id="modeSelect">
+                                                <option
+                                                    {{$original->mode == 0 ? 'selected' : ""}} value="0">
+                                                    Dark
+                                                </option>
+                                                <option
+                                                    {{$original->mode == 1 ? 'selected' : ""}} value="1">
+                                                    Light
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="is_shown_program_tab">Is Showing Program Tab</label>
+                                            <select name="is_shown_program_tab" class="form-control"
+                                                    id="is_shown_program_tab">
+                                                <option
+                                                    {{$original->is_shown_program_tab == 0 ? 'selected' : ""}} value="0">
+                                                    No
+                                                </option>
+                                                <option
+                                                    {{$original->is_shown_program_tab == 1 ? 'selected' : ""}} value="1">
+                                                    Yes
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="theme-color">BG Color</label>
+                                            <input type="color" class="form-control theme-edit"
+                                                   name="bg_color" id="theme-menu-bg"
+                                                   value="{{ $original->bg_color }}">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Description (EN)</label>
+                                            <div class="input-group input-group-alternative">
+                                                            <textarea class="form-control" rows="5" name="description"
+                                                                      placeholder="Description (EN)"
+                                                                      type="text">{{ $original->description }}</textarea>
+                                            </div>
+                                            @if ($errors->has('description'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Description (BM)</label>
+                                            <div class="input-group input-group-alternative">
+                                                            <textarea class="form-control" rows="5"
+                                                                      name="description_bm"
+                                                                      placeholder="Description (BM)"
+                                                                      type="text">{{ $original->description_bm }}</textarea>
+                                            </div>
+                                            @if ($errors->has('description_bm'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('description_bm') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Video Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="video_link"
+                                                       placeholder="Video Link"
+                                                       value="{{ $original->video_link }}" type="text"
+                                                       required="">
+                                            </div>
+                                            @if ($errors->has('video_link'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('video_link') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Facebook Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="fb"
+                                                       placeholder="Facebook Link"
+                                                       value="{{ $original->fb }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Instagram Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="insta"
+                                                       placeholder="Instagram Link"
+                                                       value="{{ $original->insta }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Twitter Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="twitter"
+                                                       placeholder="Twitter Link"
+                                                       value="{{ $original->twitter }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Youtube Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="youtube"
+                                                       placeholder="Youtube Link"
+                                                       value="{{ $original->youtube }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Linkedin Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="linkedin"
+                                                       placeholder="Linkedin Link"
+                                                       value="{{ $original->linkedin }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Website Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="website"
+                                                       placeholder="Website Link"
+                                                       value="{{ $original->website }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Careers Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="careers"
+                                                       placeholder="Careers Link"
+                                                       value="{{ $original->careers }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Contact Us Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="contact_us"
+                                                       placeholder="Contact Us Link"
+                                                       value="{{ $original->contact_us }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Home Logo (162 × 106 px)</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="home_logo" type="file">
+                                            </div>
+                                            @if ($errors->has('home_logo'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('home_logo') }}</strong>
+                                            </span>
+                                            @endif
+                                            <img class="main-details-image mt-2"
+                                                 src="{{$original->main_logo}}"/>
+                                        </div>
+                                        @if($original->is_promotion != 0)
+                                            <div class="form-group mb-3">
+                                                <label>Promosi Page Logo (104 × 86 px)</label>
+                                                <div class="input-group input-group-alternative">
+                                                    <input class="form-control" name="promosi_image"
+                                                           type="file">
+                                                </div>
+                                                @if ($errors->has('promosi_image'))
+                                                    <span class="invalid-feedback" style="display: block;"
+                                                          role="alert">
+                                                <strong>{{ $errors->first('promosi_image') }}</strong>
+                                            </span>
+                                                @endif
+                                                <img class="main-details-image mt-2"
+                                                     src="{{$original->promosi_logo}}"/>
+                                            </div>
+                                        @endif
+                                        <div class="form-group mb-3">
+                                            <label>Details Page Logo (403 × 110 px)</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="details_logo" type="file">
+                                            </div>
+                                            @if ($errors->has('details_logo'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('details_logo') }}</strong>
+                                            </span>
+                                            @endif
+                                            <img class="main-details-image mt-2"
+                                                 src="{{$original->store_logo}}"/>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" id="admin-store" class="btn btn-primary mb-3">
+                                                Approve
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header border-0">
+                                        <h3 class="mb-0">Waiting for Approve Partner</h3>
+                                    </div>
+                                    <div class="container">
+                                        <div class="form-group mb-3">
+                                            <label>Name (EN)</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="name"
+                                                       placeholder="Name (EN)" value="{{ $original->name }}"
+                                                       type="text" required="">
+                                            </div>
+                                            @if ($errors->has('name'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('name') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Name (BM)</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="name_bm"
+                                                       placeholder="Name (BM)"
+                                                       value="{{ $original->name_bm }}" type="text"
+                                                       required="">
+                                            </div>
+                                            @if ($errors->has('name_bm'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('name_bm') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="modeSelect">Select Mode</label>
+                                            <select name="mode" class="form-control" id="modeSelect">
+                                                <option
+                                                    {{$original->mode == 0 ? 'selected' : ""}} value="0">
+                                                    Dark
+                                                </option>
+                                                <option
+                                                    {{$original->mode == 1 ? 'selected' : ""}} value="1">
+                                                    Light
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="is_shown_program_tab">Is Showing Program Tab</label>
+                                            <select name="is_shown_program_tab" class="form-control"
+                                                    id="is_shown_program_tab">
+                                                <option
+                                                    {{$original->is_shown_program_tab == 0 ? 'selected' : ""}} value="0">
+                                                    No
+                                                </option>
+                                                <option
+                                                    {{$original->is_shown_program_tab == 1 ? 'selected' : ""}} value="1">
+                                                    Yes
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="theme-color">BG Color</label>
+                                            <input type="color" class="form-control theme-edit"
+                                                   name="bg_color" id="theme-menu-bg"
+                                                   value="{{ $original->bg_color }}">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Description (EN)</label>
+                                            <div class="input-group input-group-alternative">
+                                                            <textarea class="form-control" rows="5" name="description"
+                                                                      placeholder="Description (EN)"
+                                                                      type="text">{{ $original->description }}</textarea>
+                                            </div>
+                                            @if ($errors->has('description'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Description (BM)</label>
+                                            <div class="input-group input-group-alternative">
+                                                            <textarea class="form-control" rows="5"
+                                                                      name="description_bm"
+                                                                      placeholder="Description (BM)"
+                                                                      type="text">{{ $original->description_bm }}</textarea>
+                                            </div>
+                                            @if ($errors->has('description_bm'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('description_bm') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Video Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="video_link"
+                                                       placeholder="Video Link"
+                                                       value="{{ $original->video_link }}" type="text"
+                                                       required="">
+                                            </div>
+                                            @if ($errors->has('video_link'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('video_link') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Facebook Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="fb"
+                                                       placeholder="Facebook Link"
+                                                       value="{{ $original->fb }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Instagram Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="insta"
+                                                       placeholder="Instagram Link"
+                                                       value="{{ $original->insta }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Twitter Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="twitter"
+                                                       placeholder="Twitter Link"
+                                                       value="{{ $original->twitter }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Youtube Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="youtube"
+                                                       placeholder="Youtube Link"
+                                                       value="{{ $original->youtube }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Linkedin Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="linkedin"
+                                                       placeholder="Linkedin Link"
+                                                       value="{{ $original->linkedin }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Website Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="website"
+                                                       placeholder="Website Link"
+                                                       value="{{ $original->website }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Careers Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="careers"
+                                                       placeholder="Careers Link"
+                                                       value="{{ $original->careers }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Contact Us Link</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="contact_us"
+                                                       placeholder="Contact Us Link"
+                                                       value="{{ $original->contact_us }}" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Home Logo (162 × 106 px)</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="home_logo" type="file">
+                                            </div>
+                                            @if ($errors->has('home_logo'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('home_logo') }}</strong>
+                                            </span>
+                                            @endif
+                                            <img class="main-details-image mt-2"
+                                                 src="{{$original->main_logo}}"/>
+                                        </div>
+                                        @if($original->is_promotion != 0)
+                                            <div class="form-group mb-3">
+                                                <label>Promosi Page Logo (104 × 86 px)</label>
+                                                <div class="input-group input-group-alternative">
+                                                    <input class="form-control" name="promosi_image"
+                                                           type="file">
+                                                </div>
+                                                @if ($errors->has('promosi_image'))
+                                                    <span class="invalid-feedback" style="display: block;"
+                                                          role="alert">
+                                                <strong>{{ $errors->first('promosi_image') }}</strong>
+                                            </span>
+                                                @endif
+                                                <img class="main-details-image mt-2"
+                                                     src="{{$original->promosi_logo}}"/>
+                                            </div>
+                                        @endif
+                                        <div class="form-group mb-3">
+                                            <label>Details Page Logo (403 × 110 px)</label>
+                                            <div class="input-group input-group-alternative">
+                                                <input class="form-control" name="details_logo" type="file">
+                                            </div>
+                                            @if ($errors->has('details_logo'))
+                                                <span class="invalid-feedback" style="display: block;"
+                                                      role="alert">
+                                                <strong>{{ $errors->first('details_logo') }}</strong>
+                                            </span>
+                                            @endif
+                                            <img class="main-details-image mt-2"
+                                                 src="{{$original->store_logo}}"/>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" id="admin-store" class="btn btn-primary mb-3">
+                                                Approve
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@push('js')
+
+@endpush

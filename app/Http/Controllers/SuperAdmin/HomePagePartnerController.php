@@ -13,10 +13,19 @@ use Illuminate\Support\Str;
 
 class HomePagePartnerController extends Controller
 {
-    public function index()
+    public function index($id = 1)
     {
-        $partners = Partner::all();
-        return view('superadmin.homepage.index', compact('partners'));
+        $status = null;
+        if($id == 1){
+            $partners = Partner::whereNull('status')->get();
+            $status = 'all';
+        }
+        else{
+            $status = 'delete';
+            $partners = Partner::whereNotNull('status')->get();
+        }
+
+        return view('superadmin.homepage.index', compact('partners', 'status'));
     }
 
     public function edit($id)
@@ -29,6 +38,13 @@ class HomePagePartnerController extends Controller
     {
         $partner = Partner::find($id);
         return view('superadmin.homepage.show', compact('partner'));
+    }
+
+    public function showChanges($id)
+    {
+        $original = Partner::find($id);
+        $changes = Partner::where('parent_id',$id)->get()->first();
+        return view('superadmin.homepage.showChanges', compact('original','changes'));
     }
 
     public function update(Request $request, $id)

@@ -31,6 +31,7 @@ Route::get('/logout', [HomeController::class, 'logout'])->name('user.logout');
 
 Route::get('/mailsend', [\App\Http\Controllers\Auth\User\RegisterController::class, 'send_mail'])->name("send_mail");
 
+Route::redirect('/home','');
 Route::prefix('/')->group(function () {
     Route::get('/info/{id}', [HomeController::class, 'may_bank'])->name('may.bank');
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
@@ -92,7 +93,7 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
     });
 
     Route::prefix('home-page-partner')->group(function () {
-        Route::get('/', [HomePagePartnerController::class, 'index'])->name('stars.homepage.index');
+        Route::get('/{id?}', [HomePagePartnerController::class, 'index'])->name('stars.homepage.index');
         Route::get('/show/{id}', [HomePagePartnerController::class, 'show'])->name('stars.homepage.show');
         Route::get('/edit/{id}', [HomePagePartnerController::class, 'edit'])->name('stars.homepage.edit');
         Route::post('/edit/{id}', [HomePagePartnerController::class, 'update'])->name('stars.homepage.edit');
@@ -103,6 +104,8 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::post('/slider/create', [HomePagePartnerController::class, 'slider_store'])->name('stars.slide.store');
         Route::post('/promotion/create', [HomePagePartnerController::class, 'promotion_store'])->name('stars.promotion.store');
         Route::post('/link/create', [HomePagePartnerController::class, 'link_store'])->name('stars.link.store');
+        Route::get('/view-changes/{id}', [HomePagePartnerController::class, 'showChanges'])->name('stars.homepage.showChanges');
+
 
     });
 
