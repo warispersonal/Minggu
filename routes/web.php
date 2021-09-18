@@ -219,7 +219,7 @@ Route::prefix('partner')->namespace('Auth\Partner')->group(function () {
 });
 
 Route::prefix('partner')->middleware('auth:partner')->namespace('Partner')->group(function () {
-    Route::get('dashboard', [PartnerController::class, 'editUniqueInfo'])->name('partner.dashboard');
+    Route::get('dashboard', [PartnerController::class, 'dashboard'])->name('partner.dashboard');
 
     Route::get('/promotion', [PartnerController::class, 'showPromotions'])->name('partner.show.promotion');
     Route::post('/promotion/create', [PartnerController::class, 'promotion_store'])->name('partner.promotion.store');

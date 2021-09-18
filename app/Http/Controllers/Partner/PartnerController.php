@@ -14,7 +14,8 @@ use Illuminate\Support\Str;
 
 class PartnerController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('partner/dashboard');
     }
 
@@ -22,19 +23,19 @@ class PartnerController extends Controller
     {
 
         $partner = Partner::find(Auth::guard('partner')->id());
-        if($partner->is_promotion != 1){
+        if ($partner->is_promotion != 1) {
             return redirect()->back();
         }
-        if($partner->is_promotion == 0){
+        if ($partner->is_promotion == 0) {
             return redirect()->back();
         }
-        $promotions = PartnerPromotion::where('partner_id' , Auth::guard('partner')->id())->get();
+        $promotions = PartnerPromotion::where('partner_id', Auth::guard('partner')->id())->get();
         return view('partner.single.promotion', compact('promotions'));
     }
 
     public function showButtons()
     {
-        $links = PartnerLink::where('partner_id' , Auth::guard('partner')->id())->get();
+        $links = PartnerLink::where('partner_id', Auth::guard('partner')->id())->get();
         return view('partner.single.button', compact('links'));
     }
 
@@ -47,7 +48,7 @@ class PartnerController extends Controller
         $linkItem->link = $request->link;
         $linkItem->status = "add";
         $linkItem->save();
-        return redirect()->back()->with(['msg'=>'Link added successfully']);;
+        return redirect()->back()->with(['msg' => 'Link added successfully']);;
     }
 
     public function button_delete($id)
@@ -55,12 +56,12 @@ class PartnerController extends Controller
         $link = PartnerLink::find($id);
         $link->status = 'delete';
         $link->save();
-        return redirect()->back()->with(['msg'=>'Link deleted successfully']);;
+        return redirect()->back()->with(['msg' => 'Link deleted successfully']);;
     }
 
     public function showSliders()
     {
-        $sliders = PartnerSlider::where('partner_id' , Auth::guard('partner')->id())->get();
+        $sliders = PartnerSlider::where('partner_id', Auth::guard('partner')->id())->get();
         return view('partner.single.slider', compact('sliders'));
     }
 
@@ -73,7 +74,7 @@ class PartnerController extends Controller
         $slider->slider_link = $request->slider_link;
         $slider->status = "add";
         $slider->save();
-        return redirect()->back()->with(['msg'=>'Slider added successfully  & waiting for approve']);;
+        return redirect()->back()->with(['msg' => 'Slider added successfully  & waiting for approve']);;
 
     }
 
@@ -82,19 +83,19 @@ class PartnerController extends Controller
         $link = PartnerSlider::find($id);
         $link->status = 'delete';
         $link->save();
-        return redirect()->back()->with(['msg'=>'Slider submitted for delete & waiting for approve']);;
+        return redirect()->back()->with(['msg' => 'Slider submitted for delete & waiting for approve']);;
     }
 
     public function promotion_store(Request $request)
     {
         $sliderImage = $this->uploadMediaFile($request, 'slider', FileConstant::PARTNER_PROMOTION);
         $slider = new PartnerPromotion();
-        $slider->partner_id =Auth::guard('partner')->id();
+        $slider->partner_id = Auth::guard('partner')->id();
         $slider->promotion_image = $sliderImage;
         $slider->url = $request->url;
         $slider->status = "add";
         $slider->save();
-        return redirect()->back()->with(['msg'=>'Promotion added successfully & waiting for approve']);;
+        return redirect()->back()->with(['msg' => 'Promotion added successfully & waiting for approve']);;
     }
 
     public function promotion_delete($id)
@@ -102,14 +103,54 @@ class PartnerController extends Controller
         $link = PartnerPromotion::find($id);
         $link->status = 'delete';
         $link->save();
-        return redirect()->back()->with(['msg'=>'Promotion delete successfully & waiting for approve']);;
+        return redirect()->back()->with(['msg' => 'Promotion delete successfully & waiting for approve']);;
     }
 
 
     public function editUniqueInfo()
     {
-        $partner = Partner::where("user_id",Auth::guard('partner')->id())->get()->first();
+        $partner = Partner::where("user_id", Auth::guard('partner')->id())->get()->first();
+        $update_partner = Partner::where("parent_id", Auth::guard('partner')->id())->get()->first();
+        if (!$update_partner) {
+            $update_partner = new Partner();
+            $update_partner->home_logo = $partner->home_logo;
+            $update_partner->promosi_image = $partner->promosi_image;
+            $update_partner->details_logo = $partner->details_logo;
+            $update_partner->iframe = $partner->iframe;
+            $update_partner->name = $partner->name;
+            $update_partner->name_bm = $partner->name_bm;
+            $update_partner->description = $partner->description;
+            $update_partner->description_bm = $partner->description_bm;
+            $update_partner->bg_color = $partner->bg_color;
+            $update_partner->video_link = $partner->video_link;
+            $update_partner->slug = $partner->slug;
+            $update_partner->fb = $partner->fb;
+            $update_partner->insta = $partner->insta;
+            $update_partner->twitter = $partner->twitter;
+            $update_partner->youtube = $partner->youtube;
+            $update_partner->website = $partner->website;
+            $update_partner->careers = $partner->careers;
+            $update_partner->contact_us = $partner->contact_us;
+            $update_partner->linkedin = $partner->linkedin;
+            $update_partner->mode = $partner->mode;
+            $update_partner->is_shown_program_tab = $partner->is_shown_program_tab;
+            $update_partner->status = 'edit';
+            $update_partner->parent_id = Auth::guard('partner')->id();
+            $update_partner->user_id = Auth::guard('partner')->id();
+            $update_partner->save();
+            $partner = $update_partner;
+        }
+        else{
+            $partner = $update_partner;
+        }
         return view('partner.single.edit', compact('partner'));
+    }
+
+
+    public function dashboard()
+    {
+        $partner = Partner::where("user_id", Auth::guard('partner')->id())->get()->first();
+        return view('partner.single.dashboard', compact('partner'));
     }
 
     public function updateUniqueInfo(Request $request)
@@ -126,7 +167,7 @@ class PartnerController extends Controller
         ]);
         $partner1 = Partner::find(Auth::guard('partner')->id());
         $partner_appprove = Partner::where("parent_id", $partner1->id)->get()->first();
-        if($partner_appprove){
+        if ($partner_appprove) {
             $partner = $partner_appprove;
 
             if ($request->home_logo) {
@@ -142,7 +183,7 @@ class PartnerController extends Controller
                 $partner['promosi_image'] = $promosi_image;
             }
             $iframe = $this->getVideoIFrame($request->video_link);
-            $partner['iframe'] =$iframe;
+            $partner['iframe'] = $iframe;
             $partner['name'] = $request->name;
             $partner['name_bm'] = $request->name_bm;
             $partner['description'] = $request->description;
@@ -161,33 +202,28 @@ class PartnerController extends Controller
             $partner['mode'] = $request->mode;
             $partner['is_shown_program_tab'] = $request->is_shown_program_tab ?? 0;
             $partner->save();
-        }
-        else
-        {
+        } else {
             $partner = new Partner();
             if ($request->home_logo) {
                 $home_logo = $this->uploadMediaFile($request, 'home_logo', FileConstant::PARTNER_LOGO);
                 $partner['home_logo'] = $home_logo;
-            }
-            else{
+            } else {
                 $partner['home_logo'] = $partner1['home_logo'];
             }
             if ($request->details_logo) {
                 $details_logo = $this->uploadMediaFile($request, 'details_logo', FileConstant::DETAIL_LOGO);
                 $partner['details_logo'] = $details_logo;
-            }
-            else{
+            } else {
                 $partner['details_logo'] = $partner1['details_logo'];
             }
             if ($request->promosi_image) {
                 $promosi_image = $this->uploadMediaFile($request, 'promosi_image', FileConstant::PROMOSI_IMAGE);
                 $partner['promosi_image'] = $promosi_image;
-            }
-            else{
+            } else {
                 $partner['promosi_image'] = $partner1['promosi_image'];
             }
             $iframe = $this->getVideoIFrame($request->video_link);
-            $partner['iframe'] =$iframe;
+            $partner['iframe'] = $iframe;
             $partner['name'] = $request->name;
             $partner['name_bm'] = $request->name_bm;
             $partner['description'] = $request->description;
@@ -211,7 +247,7 @@ class PartnerController extends Controller
             $partner['user_id'] = Auth::guard('partner')->id();
             $partner->save();
         }
-        return redirect()->back()->with(['msg'=>'Partner updated successfully & waiting for approve']);
+        return redirect()->back()->with(['msg' => 'Partner updated successfully & waiting for approve']);
 
     }
 }

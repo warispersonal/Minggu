@@ -238,6 +238,11 @@
                 @auth('partner')
                     <h6 class="container navbar-heading text-muted">Edit Partner Page</h6>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{route('partner.dashboard')}}">
+                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Partner Info') }}
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{route('partner.unique.info')}}">
                             <i class="ni ni-ui-04 text-primary"></i> {{ __('Update Partner Info') }}
                         </a>
