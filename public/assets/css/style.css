@@ -800,8 +800,6 @@
     padding: 25px;
     border-radius: 10px;
     color: #0057B7;
-
-
 }
 #program-modal .owl-carousel{
     background-color: #F5841F;
@@ -851,6 +849,42 @@
     z-index: 8;
     top: 150%;
     transition: all .3s;
+}
+
+#jadual-modal{
+    position: fixed;
+    top: 150%;
+    max-height: 90vh;
+    overflow-y: scroll;
+    overflow-x: visible;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    transition: all .3s;
+    z-index: 9;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+#jadual-modal::-webkit-scrollbar{
+    width: 0px;
+}
+#jadual-modal::-webkit-scrollbar-thumb{
+    width: 0px;
+    background-color: red;
+}
+#jadual-modal .jadual-modal-content{
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    color: #0057B7;
+}
+#jadual-modal .jadual-time{ 
+    margin-top:15px;
+    background-color: #F5841F;
+    padding: 10px 0px;
+    border-radius: 10px;
+    text-align:center;
+    color:white;
 }
 .home-links{
     /*height: calc(100vh - 70px);*/
@@ -1299,6 +1333,9 @@
     #program-modal{
         width: 75%;
     }
+    #jadual-modal{
+        width: 75%;
+    }
     .jadual-mobile{
         background-color: white !important;
         color: #D0DBFF !important;
@@ -1395,8 +1432,11 @@
     #program_content img{
         width: 150px;
     }
-
-
+    
+    #jadual-modal{
+        width: 85%;
+    }
+    
     .my_modal{
         width: 70%;
         padding: 35px;
@@ -1576,6 +1616,13 @@
     #program-modal .program-modal-content{
         padding: 15px;
     }
+    
+    #jadual-modal{
+        width: 90%;
+    }
+    #jadual-modal .program-modal-content{
+        padding: 15px;
+    }
 
     .heading{
         font-size: 3rem;
@@ -1689,6 +1736,9 @@
         font-size: 14px;
     }
     #program-modal .owl-carousel .nav-link{
+        font-size: 10px;
+    }
+    #jadual-modal .owl-carousel .nav-link{
         font-size: 10px;
     }
     #close-btn{

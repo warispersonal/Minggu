@@ -24,7 +24,7 @@
                     <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
                 </div>
             </div>
-            <div class="container mt-5">
+            <div class="container mt-5 pb-5">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="d-flex flex-column justify-content-between h-100">
@@ -201,7 +201,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white"
+                                                         <span class="handler" onclick="jadual_modal_open()" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
                                                     </p>
                                                 </div>
@@ -1133,6 +1133,32 @@
             </div>
         </div>
     </div>
+    
+     <div id="jadual-modal">
+        <div class="jadual-modal-content">
+            <div class="ratio ratio-16x9" id="jadual_frame">
+                <iframe src="https://player.vimeo.com/video/469418763?h=2f2418f475&amp;app_id=122963" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Minggu Saham Digital - Teaser"></iframe>
+            </div>
+            <div class="jadual-time">
+                <p class="mb-0">{{$date->date_format}} </p>
+                <p class="mb-0 small">{{$date->time_format}} </p>
+            </div>
+            <h2 class="my-3" id="jadual_title">Lorem ipsum</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                optio, eaque rerum! Provident similique accusantium nemo autem.
+            </p>
+            <div class="d-flex align-items-center">
+                Dibawakan Khas Oleh
+                <a href="#" class="d-inline-block">
+                    <img id="store_logo_image" src="https://www.msd2021demo.com/images/program_thumbnail/1631854620.ASNB150x96.png" class="img-fluid">
+                </a>
+            </div>
+        </div>
+    </div>
+    
 @endsection
 
 
@@ -1155,14 +1181,7 @@
         });
     </script>
     
-    <!--<div id="jadual-modal">-->
-    <!--    <div class="program-modal-content">-->
-    <!--        <div class="ratio ratio-16x9" id="program_frame">-->
-    <!--        </div>-->
-    <!--        <h2 class="my-3" id="program_title"></h2>-->
-           
-    <!--    </div>-->
-    <!--</div>-->
+   
 
     <script>
         const program = document.querySelector("#program")
@@ -1173,6 +1192,7 @@
         const programImg1 = document.querySelector(".img1")
         const programModalContent = document.querySelector(".program-modal-content")
         const programCloseBtn = document.querySelector("#close-btn")
+        const jadualModal = document.querySelector("#jadual-modal")
 
 
         program.addEventListener("click", () => {
@@ -1190,14 +1210,25 @@
 
         programCloseBtn.addEventListener("click", () => {
             programModal.style.top = "155%"
+            jadualModal.style.top = "155%"
             overlay.style.display = "none"
             programCloseBtn.style.top = "155%"
         })
 
         overlay.addEventListener("click", () => {
             programModal.style.top = "150%"
+            jadualModal.style.top = "150%"
             programCloseBtn.style.top = "155%"
         })
+        
+        function jadual_modal_open(){
+            jadualModal.style.top = "45%"
+            overlay.style.display = "block"
+            setTimeout(() => {
+                jadualModal.style.top = "50%"
+            }, 300);
+            programCloseBtn.style.top = "8%"
+        }
 
         function openModal(program) {
             if (changeModalView(program)) {
