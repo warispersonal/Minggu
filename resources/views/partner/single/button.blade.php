@@ -50,6 +50,7 @@
                         <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Text</th>
                         <th scope="col" class="sort" data-sort="budget">URL</th>
+                        <th scope="col" class="sort" data-sort="budget">Status</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -58,7 +59,14 @@
                         <tr class="odd">
                             <td>{{$loop->index + 1 }}</td>
                             <td>{{$link->title}}</td>
-                            <td>{{$link->link}}</td>
+                            <td>{{ \Illuminate\Support\Str::limit($link->link, 40, $end='...') }}</td>
+                            <td>
+                                @if($link->status == "delete")
+                                    Waiting for approve to delete
+                                @else
+                                    Approve
+                                @endif
+                            </td>
                             <td>
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#"

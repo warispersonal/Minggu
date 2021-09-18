@@ -47,6 +47,7 @@
                         <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Promotion Image</th>
                         <th scope="col" class="sort" data-sort="budget">URL</th>
+                        <th scope="col" class="sort" data-sort="budget">Status</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -55,7 +56,14 @@
                         <tr class="odd">
                             <td>{{$loop->index +1 }}</td>
                             <td><img src="{{$promotion->promotion_logo}}" class="main-details-image"/>
-                            <td>{{$promotion->url}}</td>
+                            <td>{{ \Illuminate\Support\Str::limit($promotion->url, 40, $end='...') }}</td>
+                            <td>
+                                @if($promotion->status == "delete")
+                                    Waiting for approve to delete
+                                @else
+                                    Approve
+                                @endif
+                            </td>
                             <td>
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"

@@ -47,6 +47,7 @@
                         <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Image</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Link</th>
+                        <th scope="col" class="sort" data-sort="budget">Status</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -56,9 +57,15 @@
                             <td>{{$loop->index +1 }}</td>
                             <td><img src="{{$slider->slider_image}}" class="main-details-image"/>
                             </td>
+                            <td>{{ \Illuminate\Support\Str::limit($slider->slider_link, 40, $end='...') }}</td>
                             <td>
-                                {{$slider->slider_link}}
+                                @if($slider->status == "delete")
+                                    Waiting for approve to delete
+                                @else
+                                    Approve
+                                @endif
                             </td>
+
                             <td>
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"

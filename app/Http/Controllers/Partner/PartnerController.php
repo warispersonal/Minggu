@@ -28,13 +28,13 @@ class PartnerController extends Controller
         if($partner->is_promotion == 0){
             return redirect()->back();
         }
-        $promotions = PartnerPromotion::where('partner_id' , Auth::guard('partner')->id())->whereNull('parent_id')->whereNull('status')->get();
+        $promotions = PartnerPromotion::where('partner_id' , Auth::guard('partner')->id())->get();
         return view('partner.single.promotion', compact('promotions'));
     }
 
     public function showButtons()
     {
-        $links = PartnerLink::where('partner_id' , Auth::guard('partner')->id())->whereNull('parent_id')->whereNull('status')->get();
+        $links = PartnerLink::where('partner_id' , Auth::guard('partner')->id())->get();
         return view('partner.single.button', compact('links'));
     }
 
@@ -53,13 +53,14 @@ class PartnerController extends Controller
     public function button_delete($id)
     {
         $link = PartnerLink::find($id);
-        $link->delete();
+        $link->status = 'delete';
+        $link->save();
         return redirect()->back()->with(['msg'=>'Link deleted successfully']);;
     }
 
     public function showSliders()
     {
-        $sliders = PartnerSlider::where('partner_id' , Auth::guard('partner')->id())->whereNull('parent_id')->whereNull('status')->get();
+        $sliders = PartnerSlider::where('partner_id' , Auth::guard('partner')->id())->get();
         return view('partner.single.slider', compact('sliders'));
     }
 
@@ -72,18 +73,17 @@ class PartnerController extends Controller
         $slider->slider_link = $request->slider_link;
         $slider->status = "add";
         $slider->save();
-        return redirect()->back()->with(['msg'=>'Slider added successfully']);;
+        return redirect()->back()->with(['msg'=>'Slider added successfully  & waiting for approve']);;
 
     }
 
     public function slider_delete($id)
     {
         $link = PartnerSlider::find($id);
-        $link->delete();
-        return redirect()->back()->with(['msg'=>'Slider deleted successfully']);;
+        $link->status = 'delete';
+        $link->save();
+        return redirect()->back()->with(['msg'=>'Slider submitted for delete & waiting for approve']);;
     }
-
-
 
     public function promotion_store(Request $request)
     {
@@ -100,8 +100,9 @@ class PartnerController extends Controller
     public function promotion_delete($id)
     {
         $link = PartnerPromotion::find($id);
-        $link->delete();
-        return redirect()->back()->with(['msg'=>'Promotion delete successfully']);;
+        $link->status = 'delete';
+        $link->save();
+        return redirect()->back()->with(['msg'=>'Promotion delete successfully & waiting for approve']);;
     }
 
 
