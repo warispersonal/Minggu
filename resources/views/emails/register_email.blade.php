@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -49,6 +49,7 @@
             color: black;
             text-decoration: none;
             margin: 0px 10px;
+            padding: 10px;
         }
         @media (max-width:768px){
             .icons a{
@@ -56,6 +57,10 @@
                 height: 50px;
                 font-size: 25px;
                 margin: 0px 5px;
+                padding: 5px;
+            }
+            a > img{
+                padding:0px !important;
             }
         }
     </style>
@@ -68,12 +73,12 @@
     <p>Ini pesana daripada Minguu Sham Digital. <br> Tahniah, anda adalah pemenang Peradua Cabutan Bertuah
         Kamil!<br></p>
     <p>Anda akan menerima <strong>e-baucar Lazada bernilai RM50. </strong> <br> Sila tunggu e-mel daripada kami untuk kod lazada anda.</p>
-    <div class="icons">
-        <a href=""><i class="fab fa-facebook-f"></i></a>
-        <a href=""><i class="fab fa-instagram"></i></a>
-        <a href=""><i class="fas fa-link"></i></a>
-        <a href=""><i class="fab fa-youtube"></i></a>
-        <a href=""><i class="fab fa-whatsapp"></i></a>
+    <div class="icons" style="width: max-content; margin: auto;">
+        <a href="#"><img src="{{asset('socialicon/fb.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
+        <a href="#"><img src="{{asset('socialicon/insta.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
+        <a href="#"><img src="{{asset('socialicon/link.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
+        <a href="#"><img src="{{asset('socialicon/youtube.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
+        <a href="#"><img src="{{asset('socialicon/whatsapp.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
     </div>
 </div>
 </body>

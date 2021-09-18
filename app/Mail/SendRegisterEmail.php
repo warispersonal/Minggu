@@ -30,6 +30,9 @@ class SendRegisterEmail extends Mailable
     public function build()
     {
         $user = $this->user;
-        return $this->view('emails.register_email',compact('user'));
+       /* echo "<pre>";
+        print_r($user);
+        die();*/
+        return $this->subject('Minggu Saham Digital 2021: Pendaftaran Anda Berjaya!')->view('emails.register_email',compact('user'));
     }
 }

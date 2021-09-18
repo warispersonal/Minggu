@@ -65,10 +65,34 @@ class RegisterController extends Controller
                 'password' => Hash::make($request['password']) ?? "",
             ]);
             $message = trans('general.register_success_message');
-//            Mail::to($user->email)->send(new SendRegisterEmail($user));
+            Mail::to($user->email)->send(new SendRegisterEmail($user));
             return redirect()->back()->withErrors($validator)->with('msg',$message);
         } else {
             return redirect()->back()->withErrors($validator)->withInput($request->input())->with('from', 'register');
         }
+    }
+    public function send_mail()
+    {
+            $user = (object) array(
+                'name' => 'John Doe',
+                'email' => 'techeasy4144@gmail.com',
+                'phone' => '123456789',
+                'ic_number' => '12345',
+                'raw_password' => '12345',
+                'password' => Hash::make('12345'),
+            );
+          
+            Mail::to($user->email)->send(new SendRegisterEmail($user));
+          echo "heree";
+          die();
+        $data = array('name'=>"John Doe");
+        // Mail::to("techeasy4144@gmail.com")->send(new SendRegisterEmail($data));
+        Mail::send(['text'=>'mail'], $data, function($message) {
+         $message->to('techeasy4144@gmail.com', 'Tutorials Point')->subject
+            ('Laravel Basic Testing Mail');
+         $message->from('techeasy4144@gmail.com','John Doe');
+      });
+      echo "Basic Email Sent. Check your inbox.";
+      die();
     }
 }

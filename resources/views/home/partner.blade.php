@@ -15,7 +15,8 @@
         }
 
         .mode-buttons-color {
-            background-color: {{$partner->mode == 1 ? "#ffffff" : "#4b4b4b"}}         !important;
+            background-color: {{$partner->mode == 1 ? "#4b4b4b" : "#ffffff"}}         !important;
+            color: {{$partner->mode == 1 ? "#fff" : "#000"}}         !important;
         }
 
         .mobile-header {
@@ -56,13 +57,13 @@
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link active mode-fore-color" id="nav-maklumat-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-maklumat" type="button" role="tab" aria-controls="nav-maklumat"
-                                    aria-selected="true">Maklumat
+                                    aria-selected="true">{{ __('general.information_tab') }}
                             </button>
                             @if($partner->is_shown_program_tab == 1)
                                 <button class="nav-link mode-fore-color" id="nav-program-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-program" type="button" role="tab"
                                         aria-controls="nav-program"
-                                        aria-selected="false">Program
+                                        aria-selected="false">{{ __('general.program_tab') }}
                                 </button>
                             @endif
                         </div>
@@ -181,9 +182,10 @@
                                                 {!! $program->iframe ?? "" !!}
                                             </div>
                                             <h3 class="my-3 mode-fore-color">{{$program->title}}</h3>
-                                            <span><strong class="mode-fore-color">{{$program->date}}</strong></span>
+                                            <span><strong class="mode-fore-color">{{date('d-m-Y',strtotime($program->date))}}</strong></span>
                                             <p class="mode-fore-color">{{$program->description}}</p>
-                                            <p class="mode-fore-color">{{$program->main_program->title ?? ""}}
+                                            <!--<p class="mode-fore-color">{{$program->main_program->title ?? ""}}-->
+                                            <p class="mode-fore-color">{{ __('general.brought_to_you') }} &nbsp&nbsp
                                                 <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
                                             </p>
                                         </div>
@@ -191,7 +193,7 @@
                                 @endforeach
                             </div>
                             c
-                            <a href="{{route('user.msdLive')}}" id="terkini-btn">Tonton Episod MSD Terkini &gt;</a>
+                            <a href="{{route('user.msdLive')}}" id="terkini-btn">{{ __('general.terkini-btn') }}&gt;</a>
                         </div>
                     </div>
                 </div>

@@ -23,7 +23,7 @@
                 <h3 class="text-white mb-0 d-lg-block d-none">
                     @guest('user')
                         <div class="alert alert-danger text-center" role="alert">
-                            Please Login to Continue Otherwise Your Data Will Lost
+                            Please Login to Access this Page
                         </div>
                     @endguest
                 </h3>
@@ -35,7 +35,7 @@
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link active ps-0" id="nav-home-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                    aria-selected="true">{{ __('general.sertai_sekarang_7') }}
+                                    aria-selected="true">{{ __('general.sertai_sekarang_1') }}
                             </button>
                             <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
@@ -112,7 +112,7 @@
                                         <div class="order-3 order-lg-2 ">
                                             <h1 class="text-white text-center mt-5">Rakan Korporat</h1>
                                             <h4 class="text-white text-center mb-3">22 Okt - 23 Nov 2021</h4>
-                                            <p class="text-white text-center">{{ __('general.jom-kira-doit') }}</p>
+                                            <p class="text-white text-center">{{ __('general.jom-kira-doit2') }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -170,7 +170,7 @@
                                         <div class="order-3 order-lg-2 ">
                                             <h1 class="text-white text-center mt-5">MSD Live</h1>
                                             <h4 class="text-white text-center mb-3">17 - 23 November 2021</h4>
-                                            <p class="text-white text-center">{{ __('general.jom-kira-doit') }}</p>
+                                            <p class="text-white text-center">{{ __('general.jom-kira-doit3') }}</p>
                                         </div>
                                     </div>
                                 </div>

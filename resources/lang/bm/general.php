@@ -54,7 +54,9 @@ return [
     'evouchers'=> 'E-Baucar Lazada Bernilai Lebih Daripada',
 
     'jom-kira-doit'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
-
+    'jom-kira-doit2'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
+    'jom-kira-doit3'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
+    
     'khidmat0' => 'Khidmat Nasihat  1-1',
     'khidmat1' => 'Apa itu Khidmat Nasihat 1-1?',
     'khidmat2' => 'Anda boleh mendapatkan khidmat nasihat dan rundingan peribadi selama 30 minit dengan penasihat-penasihat dari ASNB, AmBank, Bank Islam, CIMB & RHB. Tetapkan awal sesi anda!',
@@ -131,4 +133,9 @@ return [
 
     'register_success_message' => 'Anda telah berjaya mendaftar',
     'login_success_message' => 'Anda berjaya log masuk',
+    
+    // Partner details 
+    'program_tab' => 'Programme',
+    'information_tab' => 'Maklumat',
+    'terkini-btn' => 'Tonton Episod MSD Terkini ',
 ];

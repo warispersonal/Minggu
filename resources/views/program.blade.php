@@ -97,7 +97,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span> <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                        <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
                                                 </div>
@@ -113,7 +113,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
@@ -131,7 +131,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
@@ -149,7 +149,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
@@ -167,7 +167,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
@@ -184,7 +184,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
 
                                                     </p>
@@ -201,7 +201,7 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{$item->name}}</span><small><a class="text-white"
+                                                         <span class="handler" onclick="changeModalViewSecond('{{$item}}', '{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white"
                                                                                   href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
                                                     </p>
                                                 </div>
@@ -1154,7 +1154,15 @@
 
         });
     </script>
-
+    
+    <!--<div id="jadual-modal">-->
+    <!--    <div class="program-modal-content">-->
+    <!--        <div class="ratio ratio-16x9" id="program_frame">-->
+    <!--        </div>-->
+    <!--        <h2 class="my-3" id="program_title"></h2>-->
+           
+    <!--    </div>-->
+    <!--</div>-->
 
     <script>
         const program = document.querySelector("#program")

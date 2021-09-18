@@ -61,8 +61,10 @@ return [
     'ringgit_emas' => 'Ringgit Emas',
 
     'evouchers' => 'Lazada E-Vouchers Are Worth More Than',
-    'jom-kira-doit' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
-
+    'jom-kira-doit' => 'Watch our social media pages for hidden coins. Simply follow our instagram and facebook and watch for our daily posts from 22 Oct to 16 Nov to find the hidden coins. Every correct coin value is one entry to our grand lucky draw.',
+    'jom-kira-doit2' => 'Head over to our corporate partner pages and find the hidden coins. Every correct coin value is one entry to our grand lucky draw.',
+    'jom-kira-doit3' => 'Every show has a hidden coin! Watch our 7 days of MSD live and look carefully as we will be dropping hidden coin values for every show. Every correct coin value is one entry to our grand lucky draw.',
+    
     'khidmat0' => '1-on-1 Advisors',
     'khidmat1' => 'What is 1-on-1 Advisors?',
     'khidmat2' => 'You can get 30 minutes of personal advice and consultation with advisors from ASNB, AmBank, Bank Islam, CIMB & RHB. Set the beginning of your session!',
@@ -94,7 +96,7 @@ return [
 
     'draw_mainheading' => 'Draw 118',
     'draw_title' => 'How to Participate',
-    'draw_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
+    'draw_description' => 'Make sure you follow us on Instagram to watch for more details on this competition.',
     'draw_worth' => 'Lazada E-Vouchers Are Worth More Than',
     'draw_text' => 'Return to Competitions',
 
@@ -126,7 +128,7 @@ return [
     'careers' => 'Careers',
     'contact_us' => 'Contact Us',
 
-    'brought_to_you' => 'Specially Brought By',
+    'brought_to_you' => 'Brought to you by',
     'watch_again' => 'WATCH AGAIN',
 
 
@@ -143,6 +145,9 @@ return [
     'login_success_message' => 'You have successfully logged in',
     'register_success_message' => 'You have registered successfully',
 
-
+    // Partner details 
+    'program_tab' => 'Program',
+    'information_tab' => 'Information',
+    'terkini-btn' => 'Watch the Latest MSD Episodes ',
 
 ];
