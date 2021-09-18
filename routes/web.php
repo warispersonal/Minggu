@@ -71,6 +71,8 @@ Route::prefix('star')->namespace('Auth\SuperAdmin')->group(function () {
 });
 
 Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->group(function () {
+    Route::get('approve-partner/{id}/{status}', [HomePagePartnerController::class, 'approvePartner'])->name('partner.approvePartner');
+
     Route::get('dashboard', 'SuperAdminController@index')->name('star.dashboard');
 
     Route::prefix('admin')->group(function () {
@@ -220,7 +222,6 @@ Route::prefix('partner')->namespace('Auth\Partner')->group(function () {
 
 Route::prefix('partner')->middleware('auth:partner')->namespace('Partner')->group(function () {
     Route::get('dashboard', [PartnerController::class, 'dashboard'])->name('partner.dashboard');
-
     Route::get('/promotion', [PartnerController::class, 'showPromotions'])->name('partner.show.promotion');
     Route::post('/promotion/create', [PartnerController::class, 'promotion_store'])->name('partner.promotion.store');
     Route::get('/promotion/delete/{id}', [PartnerController::class, 'promotion_delete'])->name('partner.promotion.delete');

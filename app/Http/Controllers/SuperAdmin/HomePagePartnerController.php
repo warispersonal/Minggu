@@ -4,11 +4,14 @@ namespace App\Http\Controllers\SuperAdmin;
 
 use App\Constant\FileConstant;
 use App\Http\Controllers\Controller;
+use App\Models\Program;
 use App\Partner;
 use App\PartnerLink;
+use App\PartnerProgram;
 use App\PartnerPromotion;
 use App\PartnerSlider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class HomePagePartnerController extends Controller
@@ -42,8 +45,8 @@ class HomePagePartnerController extends Controller
 
     public function showChanges($id)
     {
-        $original = Partner::find($id);
-        $changes = Partner::where('parent_id',$id)->get()->first();
+        $changes = Partner::find($id);
+        $original = Partner::find($changes->parent_id);
         return view('superadmin.homepage.showChanges', compact('original','changes'));
     }
 
@@ -197,5 +200,45 @@ class HomePagePartnerController extends Controller
         }
         return redirect()->back()->with(['msg' => 'Action performed successfully']);;
 
+    }
+
+    public function approvePartner($id , $status){
+        $updated = Partner::find($id);
+        echo "<pre>";
+        print_r($updated->id);
+        die();
+        $original = Partner::find($updated->parent_id);
+        if($status == "approve"){
+
+            $promotions = PartnerPromotion::where('partner_id',$original->id)->get();
+            $sliders = PartnerSlider::where('partner_id',$original->id)->get();
+            $programs = Program::where('partner_id',$original->id)->get();
+
+            foreach ($promotions as $promotion){
+                $promotion->partner_id = $updated->id;
+                $promotion->save();
+            }
+            foreach ($programs as $program){
+                $program->partner_id = $updated->id;
+                $program->save();
+            }
+            foreach ($sliders as $slider){
+                $slider->partner_id = $slider->id;
+                $slider->save();
+            }
+
+
+            $updated->status = null;
+            $updated->parent_id = null;
+            $updated->save();
+
+
+
+            $original->delete();
+        }
+        else{
+            $updated->delete();
+        }
+        return redirect()->route('stars.homepage.index')->with(['msg' => 'Action performed successfully']);
     }
 }

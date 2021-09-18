@@ -22,7 +22,7 @@ class PartnerController extends Controller
     public function showPromotions()
     {
 
-        $partner = Partner::find(Auth::guard('partner')->id());
+        $partner = Partner::where('user_id',Auth::guard('partner')->id())->first();
         if ($partner->is_promotion != 1) {
             return redirect()->back();
         }
@@ -110,37 +110,8 @@ class PartnerController extends Controller
     public function editUniqueInfo()
     {
         $partner = Partner::where("user_id", Auth::guard('partner')->id())->get()->first();
-        $update_partner = Partner::where("parent_id", Auth::guard('partner')->id())->get()->first();
-        if (!$update_partner) {
-            $update_partner = new Partner();
-            $update_partner->home_logo = $partner->home_logo;
-            $update_partner->promosi_image = $partner->promosi_image;
-            $update_partner->details_logo = $partner->details_logo;
-            $update_partner->iframe = $partner->iframe;
-            $update_partner->name = $partner->name;
-            $update_partner->name_bm = $partner->name_bm;
-            $update_partner->description = $partner->description;
-            $update_partner->description_bm = $partner->description_bm;
-            $update_partner->bg_color = $partner->bg_color;
-            $update_partner->video_link = $partner->video_link;
-            $update_partner->slug = $partner->slug;
-            $update_partner->fb = $partner->fb;
-            $update_partner->insta = $partner->insta;
-            $update_partner->twitter = $partner->twitter;
-            $update_partner->youtube = $partner->youtube;
-            $update_partner->website = $partner->website;
-            $update_partner->careers = $partner->careers;
-            $update_partner->contact_us = $partner->contact_us;
-            $update_partner->linkedin = $partner->linkedin;
-            $update_partner->mode = $partner->mode;
-            $update_partner->is_shown_program_tab = $partner->is_shown_program_tab;
-            $update_partner->status = 'edit';
-            $update_partner->parent_id = Auth::guard('partner')->id();
-            $update_partner->user_id = Auth::guard('partner')->id();
-            $update_partner->save();
-            $partner = $update_partner;
-        }
-        else{
+        $update_partner = Partner::where("parent_id", Auth::guard('partner')->id())->get()->last();
+        if ($update_partner ) {
             $partner = $update_partner;
         }
         return view('partner.single.edit', compact('partner'));
@@ -165,89 +136,97 @@ class PartnerController extends Controller
             'details_logo' => 'mimes:jpg,bmp,png',
             'promosi_image' => 'mimes:jpg,bmp,png',
         ]);
-        $partner1 = Partner::find(Auth::guard('partner')->id());
-        $partner_appprove = Partner::where("parent_id", $partner1->id)->get()->first();
-        if ($partner_appprove) {
-            $partner = $partner_appprove;
-
+        $partner = Partner::where("user_id", Auth::guard('partner')->id())->get()->first();
+        $update_partner = Partner::where("parent_id", Auth::guard('partner')->id())->get()->last();
+        if ($update_partner && $update_partner != $partner) {
             if ($request->home_logo) {
                 $home_logo = $this->uploadMediaFile($request, 'home_logo', FileConstant::PARTNER_LOGO);
-                $partner['home_logo'] = $home_logo;
+                $update_partner['home_logo'] = $home_logo;
             }
             if ($request->details_logo) {
                 $details_logo = $this->uploadMediaFile($request, 'details_logo', FileConstant::DETAIL_LOGO);
-                $partner['details_logo'] = $details_logo;
+                $update_partner['details_logo'] = $details_logo;
             }
             if ($request->promosi_image) {
                 $promosi_image = $this->uploadMediaFile($request, 'promosi_image', FileConstant::PROMOSI_IMAGE);
-                $partner['promosi_image'] = $promosi_image;
+                $update_partner['promosi_image'] = $promosi_image;
             }
             $iframe = $this->getVideoIFrame($request->video_link);
-            $partner['iframe'] = $iframe;
-            $partner['name'] = $request->name;
-            $partner['name_bm'] = $request->name_bm;
-            $partner['description'] = $request->description;
-            $partner['description_bm'] = $request->description_bm;
-            $partner['bg_color'] = $request->bg_color;
-            $partner['video_link'] = $request->video_link;
-            $partner['slug'] = Str::slug($request->name, "-");
-            $partner['fb'] = $request->fb ?? "";
-            $partner['insta'] = $request->insta ?? "";
-            $partner['twitter'] = $request->twitter ?? "";
-            $partner['youtube'] = $request->youtube ?? "";
-            $partner['website'] = $request->website ?? "";
-            $partner['careers'] = $request->careers ?? "";
-            $partner['contact_us'] = $request->contact_us ?? "";
-            $partner['linkedin'] = $request->linkedin ?? "";
-            $partner['mode'] = $request->mode;
-            $partner['is_shown_program_tab'] = $request->is_shown_program_tab ?? 0;
-            $partner->save();
-        } else {
-            $partner = new Partner();
-            if ($request->home_logo) {
-                $home_logo = $this->uploadMediaFile($request, 'home_logo', FileConstant::PARTNER_LOGO);
-                $partner['home_logo'] = $home_logo;
-            } else {
-                $partner['home_logo'] = $partner1['home_logo'];
-            }
-            if ($request->details_logo) {
-                $details_logo = $this->uploadMediaFile($request, 'details_logo', FileConstant::DETAIL_LOGO);
-                $partner['details_logo'] = $details_logo;
-            } else {
-                $partner['details_logo'] = $partner1['details_logo'];
-            }
-            if ($request->promosi_image) {
-                $promosi_image = $this->uploadMediaFile($request, 'promosi_image', FileConstant::PROMOSI_IMAGE);
-                $partner['promosi_image'] = $promosi_image;
-            } else {
-                $partner['promosi_image'] = $partner1['promosi_image'];
-            }
-            $iframe = $this->getVideoIFrame($request->video_link);
-            $partner['iframe'] = $iframe;
-            $partner['name'] = $request->name;
-            $partner['name_bm'] = $request->name_bm;
-            $partner['description'] = $request->description;
-            $partner['description_bm'] = $request->description_bm;
-            $partner['bg_color'] = $request->bg_color;
-            $partner['video_link'] = $request->video_link;
-            $partner['slug'] = Str::slug($request->name, "-");
-            $partner['fb'] = $request->fb ?? "";
-            $partner['insta'] = $request->insta ?? "";
-            $partner['twitter'] = $request->twitter ?? "";
-            $partner['youtube'] = $request->youtube ?? "";
-            $partner['website'] = $request->website ?? "";
-            $partner['careers'] = $request->careers ?? "";
-            $partner['contact_us'] = $request->contact_us ?? "";
-            $partner['linkedin'] = $request->linkedin ?? "";
-            $partner['mode'] = $request->mode;
-            $partner['is_shown_program_tab'] = $request->is_shown_program_tab ?? 0;
-            $partner['parent_id'] = $partner1->id;
-            $partner['status'] = 'edit';
-            $partner['id'] = null;
-            $partner['user_id'] = Auth::guard('partner')->id();
-            $partner->save();
+            $update_partner['iframe'] = $iframe;
+            $update_partner['name'] = $request->name;
+            $update_partner['name_bm'] = $request->name_bm;
+            $update_partner['description'] = $request->description;
+            $update_partner['description_bm'] = $request->description_bm;
+            $update_partner['bg_color'] = $request->bg_color;
+            $update_partner['video_link'] = $request->video_link;
+            $update_partner['slug'] = Str::slug($request->name, "-");
+            $update_partner['fb'] = $request->fb ?? "";
+            $update_partner['insta'] = $request->insta ?? "";
+            $update_partner['twitter'] = $request->twitter ?? "";
+            $update_partner['youtube'] = $request->youtube ?? "";
+            $update_partner['website'] = $request->website ?? "";
+            $update_partner['careers'] = $request->careers ?? "";
+            $update_partner['contact_us'] = $request->contact_us ?? "";
+            $update_partner['linkedin'] = $request->linkedin ?? "";
+            $update_partner['mode'] = $request->mode;
+            $update_partner['parent_id'] = $partner->id;
+            $update_partner['order'] = $partner->order;
+            $update_partner['is_shown_program_tab'] = $partner->is_shown_program_tab;
+            $update_partner['is_promotion'] = $partner->is_promotion;
+            $update_partner['status'] = 'edit';
+            $update_partner['user_id'] = $partner->user_id;
+            $update_partner->save();
         }
-        return redirect()->back()->with(['msg' => 'Partner updated successfully & waiting for approve']);
-
+        else{
+            $update_partner = new Partner();
+            if ($request->home_logo) {
+                $home_logo = $this->uploadMediaFile($request, 'home_logo', FileConstant::PARTNER_LOGO);
+                $update_partner['home_logo'] = $home_logo;
+            }
+            else{
+                $update_partner['home_logo'] = $partner->home_logo;
+            }
+            if ($request->details_logo) {
+                $details_logo = $this->uploadMediaFile($request, 'details_logo', FileConstant::DETAIL_LOGO);
+                $update_partner['details_logo'] = $details_logo;
+            }
+            else{
+                $update_partner['details_logo'] = $partner->details_logo;
+            }
+            if ($request->promosi_image) {
+                $promosi_image = $this->uploadMediaFile($request, 'promosi_image', FileConstant::PROMOSI_IMAGE);
+                $update_partner['promosi_image'] = $promosi_image;
+            }
+            else{
+                $update_partner['promosi_image'] = $partner->promosi_image;
+            }
+            $iframe = $this->getVideoIFrame($request->video_link);
+            $update_partner['iframe'] = $iframe;
+            $update_partner['name'] = $request->name;
+            $update_partner['name_bm'] = $request->name_bm;
+            $update_partner['description'] = $request->description;
+            $update_partner['description_bm'] = $request->description_bm;
+            $update_partner['bg_color'] = $request->bg_color;
+            $update_partner['video_link'] = $request->video_link;
+            $update_partner['slug'] = Str::slug($request->name, "-");
+            $update_partner['fb'] = $request->fb ?? "";
+            $update_partner['insta'] = $request->insta ?? "";
+            $update_partner['twitter'] = $request->twitter ?? "";
+            $update_partner['youtube'] = $request->youtube ?? "";
+            $update_partner['website'] = $request->website ?? "";
+            $update_partner['careers'] = $request->careers ?? "";
+            $update_partner['contact_us'] = $request->contact_us ?? "";
+            $update_partner['linkedin'] = $request->linkedin ?? "";
+            $update_partner['mode'] = $request->mode;
+            $update_partner['parent_id'] = $partner->id;
+            $update_partner['order'] = $partner->order;
+            $update_partner['is_shown_program_tab'] = $partner->is_shown_program_tab;
+            $update_partner['is_promotion'] = $partner->is_promotion;
+            $update_partner['status'] = 'edit';
+            $update_partner['user_id'] = Auth::guard('partner')->id();
+            $update_partner->save();
+        }
+        return redirect()->route('partner.dashboard')->with(['msg' => 'Partner updated successfully & waiting for approve']);
     }
+
 }
