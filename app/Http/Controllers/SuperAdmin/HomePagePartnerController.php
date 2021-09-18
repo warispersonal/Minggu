@@ -160,4 +160,42 @@ class HomePagePartnerController extends Controller
         return redirect()->back()->with(['msg' => 'Link added successfully']);;
 
     }
+    public function sliderApprove($id,$status){
+        $slider = PartnerSlider::find($id);
+        if($status == 4 || $status == 1){
+            $slider->delete();
+        }
+        if($status == 3 || $status == 2){
+            $slider->status = null;
+            $slider->save();
+        }
+        return redirect()->back()->with(['msg' => 'Action performed successfully']);;
+
+    }
+
+    public function promotionApprove($id,$status){
+        $slider = PartnerPromotion::find($id);
+        if($status == 4 || $status == 1){
+            $slider->delete();
+        }
+        if($status == 3 || $status == 2){
+            $slider->status = null;
+            $slider->save();
+        }
+        return redirect()->back()->with(['msg' => 'Action performed successfully']);;
+
+    }
+
+    public function linkApprove($id,$status){
+        $slider = PartnerLink::find($id);
+        if($status == 4 || $status == 1){
+            $slider->delete();
+        }
+        if($status == 3 || $status == 2){
+            $slider->status = null;
+            $slider->save();
+        }
+        return redirect()->back()->with(['msg' => 'Action performed successfully']);;
+
+    }
 }

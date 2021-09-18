@@ -106,6 +106,9 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::post('/link/create', [HomePagePartnerController::class, 'link_store'])->name('stars.link.store');
         Route::get('/view-changes/{id}', [HomePagePartnerController::class, 'showChanges'])->name('stars.homepage.showChanges');
 
+        Route::get('/slider-approve/{id}/{status}', [HomePagePartnerController::class, 'sliderApprove'])->name('stars.homepage.sliderApprove');
+        Route::get('/promotion-approve/{id}/{status}', [HomePagePartnerController::class, 'promotionApprove'])->name('stars.homepage.promotionApprove');
+        Route::get('/link-approve/{id}/{status}', [HomePagePartnerController::class, 'linkApprove'])->name('stars.homepage.linkApprove');
 
     });
 

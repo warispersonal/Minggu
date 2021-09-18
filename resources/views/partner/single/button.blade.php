@@ -62,7 +62,7 @@
                             <td>{{ \Illuminate\Support\Str::limit($link->link, 40, $end='...') }}</td>
                             <td>
                                 @if($link->status == "delete")
-                                    Waiting for approve to delete
+                                    Waiting for approve from Admin
                                 @else
                                     Approve
                                 @endif

@@ -181,9 +181,21 @@
                                             <div class="ratio ratio-16x9">
                                                 {!! $program->iframe ?? "" !!}
                                             </div>
-                                            <h3 class="my-3 mode-fore-color">{{$program->title}}</h3>
+                                            <h3 class="my-3 mode-fore-color">
+                                                @if(Config::get('app.locale') == 'en' )
+                                                {{$program->name}}
+                                                @else
+                                                    {{$program->name_bm}}
+                                                @endif
+                                            </h3>
                                             <span><strong class="mode-fore-color">{{date('d-m-Y',strtotime($program->date))}}</strong></span>
-                                            <p class="mode-fore-color">{{$program->description}}</p>
+                                            <p class="mode-fore-color">
+                                                @if(Config::get('app.locale') == 'en' )
+                                                    {{$program->description}}
+                                                @else
+                                                    {{$program->description_bm}}
+                                                @endif
+                                            </p>
                                             <!--<p class="mode-fore-color">{{$program->main_program->title ?? ""}}-->
                                             <p class="mode-fore-color">{{ __('general.brought_to_you') }} &nbsp&nbsp
                                                 <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">

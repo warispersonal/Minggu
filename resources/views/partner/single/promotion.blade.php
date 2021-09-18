@@ -59,7 +59,7 @@
                             <td>{{ \Illuminate\Support\Str::limit($promotion->url, 40, $end='...') }}</td>
                             <td>
                                 @if($promotion->status == "delete")
-                                    Waiting for approve to delete
+                                    Waiting for approve from Admin
                                 @else
                                     Approve
                                 @endif

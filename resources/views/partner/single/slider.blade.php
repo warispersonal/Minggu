@@ -60,7 +60,7 @@
                             <td>{{ \Illuminate\Support\Str::limit($slider->slider_link, 40, $end='...') }}</td>
                             <td>
                                 @if($slider->status == "delete")
-                                    Waiting for approve to delete
+                                    Waiting for approve from Admin
                                 @else
                                     Approve
                                 @endif

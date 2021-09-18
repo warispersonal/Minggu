@@ -47,6 +47,7 @@
                         <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Image</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Link</th>
+                        <th scope="col" class="sort" data-sort="budget">Status</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -56,7 +57,31 @@
                             <td>{{$loop->index + 1}}</td>
                             <td><img src="{{$slider->slider_image}}" class="promosi-image-details main-details-image"/>
                             </td>
-                            <td>{{$slider->slider_link}}</td>
+                            <td>{{ \Illuminate\Support\Str::limit($slider->slider_link, 40, $end='...') }}</td>
+                            <td>
+                                @if($slider->status == "delete")
+                                    <a onclick="return confirm('Are you sure you want approve to delete?')"
+                                       href="{{route('stars.homepage.sliderApprove',['id'=>$slider->id,'status'=>1])}}"
+                                       class="btn btn-sm btn-neutral">
+                                        Approve for Delete
+                                    </a>
+                                    <a onclick="return confirm('Are you sure you want not approve to delete?')"
+                                       href="{{route('stars.homepage.sliderApprove',['id'=>$slider->id,'status'=>2])}}"
+                                       class="btn btn-sm btn-neutral">
+                                        Not Approve not Delete
+                                    </a>
+                                @endif
+                                @if($slider->status == "add")
+                                    <a onclick="return confirm('Are you sure you want approve to add?')"
+                                       href="{{route('stars.homepage.sliderApprove',['id'=>$slider->id,'status'=>3])}}" class="btn btn-sm btn-neutral">
+                                        Approve for Add
+                                    </a>
+                                    <a  onclick="return confirm('Are you sure you want not approve to add?')"
+                                        href="{{route('stars.homepage.sliderApprove',['id'=>$slider->id,'status'=>4])}}" class="btn btn-sm btn-neutral">
+                                        Not Approve for Add
+                                    </a>
+                                @endif
+                            </td>
                             <td>
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
@@ -100,6 +125,7 @@
                             <th scope="col" class="sort" data-sort="name">#</th>
                             <th scope="col" class="sort" data-sort="budget">Promotion Image</th>
                             <th scope="col" class="sort" data-sort="budget">URL</th>
+                            <th scope="col" class="sort" data-sort="budget">Status</th>
                             <th scope="col">Actions</th>
                         </tr>
                         </thead>
@@ -107,9 +133,34 @@
                         @foreach($partner->promotions as $slider)
                             <tr class="odd">
                                 <td>{{$loop->index +1 }}</td>
-                                <td><img src="{{$slider->promotion_logo}}" class="promosi-image-details main-details-image"/>
+                                <td><img src="{{$slider->promotion_logo}}"
+                                         class="promosi-image-details main-details-image"/>
                                 </td>
-                                <td>{{$slider->url}}</td>
+                                <td>{{ \Illuminate\Support\Str::limit($slider->url, 40, $end='...') }}</td>
+                                <td>
+                                    @if($slider->status == "delete")
+                                        <a onclick="return confirm('Are you sure you want approve to delete?')"
+                                           href="{{route('stars.homepage.promotionApprove',['id'=>$slider->id,'status'=>1])}}"
+                                           class="btn btn-sm btn-neutral">
+                                            Approve for Delete
+                                        </a>
+                                        <a onclick="return confirm('Are you sure you want not approve to delete?')"
+                                           href="{{route('stars.homepage.promotionApprove',['id'=>$slider->id,'status'=>2])}}"
+                                           class="btn btn-sm btn-neutral">
+                                            Not Approve not Delete
+                                        </a>
+                                    @endif
+                                    @if($slider->status == "add")
+                                        <a onclick="return confirm('Are you sure you want approve to add?')"
+                                           href="{{route('stars.homepage.promotionApprove',['id'=>$slider->id,'status'=>3])}}" class="btn btn-sm btn-neutral">
+                                            Approve for Add
+                                        </a>
+                                        <a  onclick="return confirm('Are you sure you want not approve to add?')"
+                                            href="{{route('stars.homepage.promotionApprove',['id'=>$slider->id,'status'=>4])}}" class="btn btn-sm btn-neutral">
+                                            Not Approve for Add
+                                        </a>
+                                    @endif
+                                </td>
                                 <td>
                                     <div class="dropdown">
                                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
@@ -156,6 +207,7 @@
                         <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Text</th>
                         <th scope="col" class="sort" data-sort="budget">URL</th>
+                        <th scope="col" class="sort" data-sort="budget">Status</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
@@ -164,7 +216,31 @@
                         <tr class="odd">
                             <td>{{$loop->index + 1}}</td>
                             <td>{{$link->title}}</td>
-                            <td>{{$link->link}}</td>
+                            <td>{{ \Illuminate\Support\Str::limit($link->link, 40, $end='...') }}</td>
+                            <td>
+                                @if($link->status == "delete")
+                                    <a onclick="return confirm('Are you sure you want approve to delete?')"
+                                       href="{{route('stars.homepage.linkApprove',['id'=>$link->id,'status'=>1])}}"
+                                       class="btn btn-sm btn-neutral">
+                                        Approve for Delete
+                                    </a>
+                                    <a onclick="return confirm('Are you sure you want not approve to delete?')"
+                                       href="{{route('stars.homepage.linkApprove',['id'=>$link->id,'status'=>2])}}"
+                                       class="btn btn-sm btn-neutral">
+                                        Not Approve not Delete
+                                    </a>
+                                @endif
+                                @if($link->status == "add")
+                                    <a onclick="return confirm('Are you sure you want approve to add?')"
+                                       href="{{route('stars.homepage.linkApprove',['id'=>$link->id,'status'=>3])}}" class="btn btn-sm btn-neutral">
+                                        Approve for Add
+                                    </a>
+                                    <a  onclick="return confirm('Are you sure you want not approve to add?')"
+                                        href="{{route('stars.homepage.linkApprove',['id'=>$link->id,'status'=>4])}}" class="btn btn-sm btn-neutral">
+                                        Not Approve for Add
+                                    </a>
+                                @endif
+                            </td>
                             <td>
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#"
@@ -174,7 +250,9 @@
                                         <i class="fas fa-ellipsis-v"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a onclick="return confirm('Are you sure you want to delete?')" class="dropdown-item" href="{{route('stars.homepage.link.delete',$link->id)}}">Delete</a>
+                                        <a onclick="return confirm('Are you sure you want to delete?')"
+                                           class="dropdown-item"
+                                           href="{{route('stars.homepage.link.delete',$link->id)}}">Delete</a>
                                     </div>
                                 </div>
                             </td>
@@ -294,7 +372,8 @@
 
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="title_bm" placeholder="Link Title (BM)" type="text"
+                                        <input class="form-control" name="title_bm" placeholder="Link Title (BM)"
+                                               type="text"
                                                required>
                                     </div>
                                 </div>
