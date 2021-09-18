@@ -51,12 +51,12 @@ return [
     'car3_description' => 'Supaya anda terus bersemangat untuk melayari setiap laman kami, salah satu daripada Saham Coins yag terdapat pada hantaran Media Social kami dan Rakan Korporat kami merupakan Ringgit Emas! Apa itu Ringgit Emas? Ia kelihatan seperti Saham Coins yang biasa tetapi mempunyai rahsia tersembunyi yang hanya diperoleh oleh peserta pertama yang menghantarnya! Terdapat hanya 5 (Lima) Saham Coins yang merupakan Ringgit Emas! Bagaimana untuk anda mengetahui bahawa ia adalah Ringgit Emas? Itulah dia rahsianya. Mulakan eksplorasi anda dan hantar semua Saham Coins yang anda temui secepat mungkin kerana anda mungkin menjadi salah seorang pemenang bertuah untuk memenangi Honda DASH 125S.',
 
     'ringgit_emas'=> 'Ringgit Emas',
-    'evouchers'=> 'E-Baucar Lazada Bernilai Lebih Daripada',
+    'evouchers'=> 'Value E-Vouchers',
 
     'jom-kira-doit'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
     'jom-kira-doit2'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
     'jom-kira-doit3'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
-    
+
     'khidmat0' => 'Khidmat Nasihat  1-1',
     'khidmat1' => 'Apa itu Khidmat Nasihat 1-1?',
     'khidmat2' => 'Anda boleh mendapatkan khidmat nasihat dan rundingan peribadi selama 30 minit dengan penasihat-penasihat dari ASNB, AmBank, Bank Islam, CIMB & RHB. Tetapkan awal sesi anda!',
@@ -82,20 +82,20 @@ return [
     'cabutanbertuah_mainheading' => 'Cabutan Bertuah',
     'cabutanbertuah_title' => 'Cara Penyertaan',
     'cabutanbertuah_description' => 'Sudah berdaftar? Anda pasti teringin kerana setiap hari, kami akan mencabut 500 nama pemenang yang berpeluang memenangi E-Baucar Lazada bernilai RM100,000 dalam cabutan bertuah harian kami! Anda cuma perlu ke laman web pendaftaran kami, daftar dan tunggu pengumuman pemenang harian! Sungguh mudah! Jadi, ajak rakan-rakan dan ahli keluarga anda kerana pasti semua orang pasti berpeluang untuk memenangi baucar!',
-    'cabutanbertuah_worth' => 'E-Baucar Lazada Bernilai Lebih Daripada',
+    'cabutanbertuah_worth' => 'Value E-Vouchers',
     'cabutanbertuah_text' => ' Kembali ke Pertandingan',
 
     'draw_mainheading' => 'Draw 118',
     'draw_title' => 'Cara Penyertaan',
     'draw_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
-    'draw_worth' => 'E-Baucar Lazada Bernilai Lebih Daripada',
+    'draw_worth' => 'Value E-Vouchers',
     'draw_text' => 'Kembali ke Pertandingan',
 
 
     'livetrivia_mainheading' => 'Live Trivia',
     'livetrivia_title' => 'Cara Penyertaan',
     'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami di dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital LIVE di Facebook. Anda cuma perlu menonton, bersedia dengan papan kekunci anda dan tajamkan minda anda, untuk menjadi salah seorang pemenang untuk memenangi E-Baucar Lazada! Pastikan anda catat jadual siaran dengan melayari Program & Jadual, pasangkan peringatan dan bersedia untuk menang!',
-    'livetrivia_worth' => 'E-Baucar Lazada Bernilai Lebih Daripada',
+    'livetrivia_worth' => 'Value E-Vouchers',
     'livetrivia_text' => 'Kembali ke Pertandingan',
 
     'qa_1' => 'Soalan',
@@ -133,8 +133,8 @@ return [
 
     'register_success_message' => 'Anda telah berjaya mendaftar',
     'login_success_message' => 'Anda berjaya log masuk',
-    
-    // Partner details 
+
+    // Partner details
     'program_tab' => 'Programme',
     'information_tab' => 'Maklumat',
     'terkini-btn' => 'Tonton Episod MSD Terkini ',

@@ -60,11 +60,11 @@ return [
 
     'ringgit_emas' => 'Ringgit Emas',
 
-    'evouchers' => 'Lazada E-Vouchers Are Worth More Than',
+    'evouchers' => 'E-Baucar Bernilai',
     'jom-kira-doit' => 'Watch our social media pages for hidden coins. Simply follow our instagram and facebook and watch for our daily posts from 22 Oct to 16 Nov to find the hidden coins. Every correct coin value is one entry to our grand lucky draw.',
     'jom-kira-doit2' => 'Head over to our corporate partner pages and find the hidden coins. Every correct coin value is one entry to our grand lucky draw.',
     'jom-kira-doit3' => 'Every show has a hidden coin! Watch our 7 days of MSD live and look carefully as we will be dropping hidden coin values for every show. Every correct coin value is one entry to our grand lucky draw.',
-    
+
     'khidmat0' => '1-on-1 Advisors',
     'khidmat1' => 'What is 1-on-1 Advisors?',
     'khidmat2' => 'You can get 30 minutes of personal advice and consultation with advisors from ASNB, AmBank, Bank Islam, CIMB & RHB. Set the beginning of your session!',
@@ -90,20 +90,20 @@ return [
     'cabutanbertuah_mainheading' => 'Daily Lucky draw',
     'cabutanbertuah_title' => 'How to Participate',
     'cabutanbertuah_description' => 'Have you registered yet? You definitely want to because every day we will be drawing 500 winners to win themselves a Lazada E-Vouchers worth more than RM100,000 in our daily lucky draws! All you need to do is head over to our registration page, sign up, and wait for the daily winners to be announced! It is as simple as that! So get your friends and family because everyone will get a chance to win themselves a voucher!',
-    'cabutanbertuah_worth' => 'Lazada E-Vouchers Are Worth More Than',
+    'cabutanbertuah_worth' => 'E-Baucar Bernilai',
     'cabutanbertuah_text' => 'Return to Competitions',
 
 
     'draw_mainheading' => 'Draw 118',
     'draw_title' => 'How to Participate',
     'draw_description' => 'Make sure you follow us on Instagram to watch for more details on this competition.',
-    'draw_worth' => 'Lazada E-Vouchers Are Worth More Than',
+    'draw_worth' => 'E-Baucar Bernilai',
     'draw_text' => 'Return to Competitions',
 
     'livetrivia_mainheading' => 'Live Trivia',
     'livetrivia_title' => 'How to Participate',
     'livetrivia_description' => 'Our daily Live Trivia sessions are back this year! Hosted during Minggu Saham Digital week between 17 November to 23 November 2021 LIVE on MSD Facebook Page. All you have to do is start tuning in, get your keyboards ready and your thinking caps on and become one of the winners to grab yourself some Lazada E-Vouchers worth up to RM 1,100 per session! Head over to the "Programme & Schedule" page in this site to find out the date and times of the Live Trivia, set your reminders and get ready to win!!',
-    'livetrivia_worth' => 'Lazada E-Vouchers Are Worth More Than',
+    'livetrivia_worth' => 'E-Baucar Bernilai',
     'livetrivia_text' => 'Return to Competitions',
 
     'qa_1' => 'Frequently',
@@ -145,7 +145,7 @@ return [
     'login_success_message' => 'You have successfully logged in',
     'register_success_message' => 'You have registered successfully',
 
-    // Partner details 
+    // Partner details
     'program_tab' => 'Program',
     'information_tab' => 'Information',
     'terkini-btn' => 'Watch the Latest MSD Episodes ',
