@@ -2,9 +2,10 @@
 
 @push('style')
     <style>
-        .handler{
-            cursor:pointer ;
+        .handler {
+            cursor: pointer;
         }
+
         .main-bg {
             background-color: #0057B7 !important;
         }
@@ -98,11 +99,13 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        <span class="handler" onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
+                                                        <span class="handler"
+                                                              onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
                                                             {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
                                                         </span>
                                                         <small>
-                                                            <a class="text-white" href="{{route("may.bank",$item->partner->slug)}}">
+                                                            <a class="text-white"
+                                                               href="{{route("may.bank",$item->partner->slug)}}">
                                                                 {{$item->partner->name ?? ""}}
                                                             </a>
                                                         </small>
@@ -120,7 +123,10 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        <span class="handler" onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                        <span class="handler"
+                                                              onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                        <small><a class="text-white"
+                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -136,7 +142,10 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        <span class="handler" onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                        <span class="handler"
+                                                              onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                        <small><a class="text-white"
+                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -152,7 +161,10 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        <span class="handler" onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                        <span class="handler"
+                                                              onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                        <small><a class="text-white"
+                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -168,7 +180,10 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        <span class="handler" onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                        <span class="handler"
+                                                              onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                        <small><a class="text-white"
+                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -183,7 +198,10 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        <span class="handler" onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                        <span class="handler"
+                                                              onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                        <small><a class="text-white"
+                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -198,7 +216,10 @@
                                                 </div>
                                                 <div class="col-9">
                                                     <p>
-                                                        <span class="handler" onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span> <small><a class="text-white" href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                        <span class="handler"
+                                                              onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                        <small><a class="text-white"
+                                                                  href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
                                                     </p>
                                                 </div>
                                             @endforeach
@@ -220,7 +241,8 @@
                                                     <button class="nav-link active" id="pills-home-tab"
                                                             data-bs-toggle="pill" data-bs-target="#pills-home"
                                                             type="button" role="tab" aria-controls="pills-home"
-                                                            aria-selected="true">Rabu, 1 Sep 2021
+                                                            aria-selected="true">{{ __('general.wednesday') }}, 17 Nov
+                                                        2021
                                                     </button>
                                                 </li>
                                             </div>
@@ -231,7 +253,7 @@
                                                     <button class="nav-link" id="pills-profile-tab"
                                                             data-bs-toggle="pill" data-bs-target="#pills-profile"
                                                             type="button" role="tab" aria-controls="pills-profile"
-                                                            aria-selected="false">Khamis, 2 Sep
+                                                            aria-selected="false">{{ __('general.thursday') }}, 18 Nov
                                                         2021
                                                     </button>
                                                 </li>
@@ -243,7 +265,7 @@
                                                     <button class="nav-link" id="pills-contact-tab"
                                                             data-bs-toggle="pill" data-bs-target="#pills-contact"
                                                             type="button" role="tab" aria-controls="pills-contact"
-                                                            aria-selected="false">Jumaat, 3 Sep
+                                                            aria-selected="false">{{ __('general.friday') }}, 19 Nov
                                                         2021
                                                     </button>
                                                 </li>
@@ -255,7 +277,7 @@
                                                     <button class="nav-link" id="pills-contact2-tab"
                                                             data-bs-toggle="pill" data-bs-target="#pills-contact2"
                                                             type="button" role="tab" aria-controls="pills-contact2"
-                                                            aria-selected="false">Sabtu, 4 Sep
+                                                            aria-selected="false">{{ __('general.saturday') }}, 20 Nov
                                                         2021
                                                     </button>
                                                 </li>
@@ -267,7 +289,7 @@
                                                     <button class="nav-link" id="pills-contact3-tab"
                                                             data-bs-toggle="pill" data-bs-target="#pills-contact3"
                                                             type="button" role="tab" aria-controls="pills-contact3"
-                                                            aria-selected="false">Ahad, 5 Sep
+                                                            aria-selected="false">{{ __('general.sunday') }}, 21 Nov
                                                         2021
                                                     </button>
                                                 </li>
@@ -279,7 +301,7 @@
                                                     <button class="nav-link" id="pills-contact4-tab"
                                                             data-bs-toggle="pill" data-bs-target="#pills-contact4"
                                                             type="button" role="tab" aria-controls="pills-contact4"
-                                                            aria-selected="false">Isinin, 6 Sep
+                                                            aria-selected="false">{{ __('general.monday') }}, 22 Nov
                                                         2021
                                                     </button>
                                                 </li>
@@ -291,7 +313,7 @@
                                                     <button class="nav-link" id="pills-contact5-tab"
                                                             data-bs-toggle="pill" data-bs-target="#pills-contact5"
                                                             type="button" role="tab" aria-controls="pills-contact5"
-                                                            aria-selected="false">Selasa, 7 Sep
+                                                            aria-selected="false">{{ __('general.tuesday') }}, 23 Nov
                                                         2021
                                                     </button>
                                                 </li>
@@ -311,764 +333,133 @@
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                      aria-labelledby="pills-home-tab">
                                     <div class="row">
-                                        <div class="col-3">
-                                            <span class="time">12.30 tghr</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Sembang-Sembang ASNB <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB SALES <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASB-Iclif MBA MasterClass <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">4.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Attana <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Pedestrian Question <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">8.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB Casual Talkshow <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lepak Je! <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.30 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
+                                        @foreach($first_september as $item)
+                                            <div class="col-3">
+                                                <span class="time">{{$item->time_format}}</span>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>
+                                                        <span class="handler"
+                                                              onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
+                                                            {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
+                                                        </span>
+                                                    <small>
+                                                        <a class="text-white"
+                                                           href="{{route("may.bank",$item->partner->slug)}}">
+                                                            {{$item->partner->name ?? ""}}
+                                                        </a>
+                                                    </small>
+                                                </p>
+                                            </div>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                                      aria-labelledby="pills-profile-tab">
                                     <div class="row">
-                                        <div class="col-3">
-                                            <span class="time">12.30 tghr</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Sembang-Sembang ASNB <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB SALES <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASB-Iclif MBA MasterClass <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">4.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Attana <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Pedestrian Question <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">8.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB Casual Talkshow <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lepak Je! <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.30 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
+                                        @foreach($second_september as $item)
+                                            <div class="col-3">
+                                                <span class="time">{{$item->time_format}}</span>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>
+                                                    <span class="handler"
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                    <small><a class="text-white"
+                                                              href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                </p>
+                                            </div>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                                      aria-labelledby="pills-contact-tab">
                                     <div class="row">
-                                        <div class="col-3">
-                                            <span class="time">12.30 tghr</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Sembang-Sembang ASNB <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB SALES <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASB-Iclif MBA MasterClass <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">4.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Attana <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Pedestrian Question <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">8.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB Casual Talkshow <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lepak Je! <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.30 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
+                                        @foreach($third_september as $item)
+                                            <div class="col-3">
+                                                <span class="time">{{$item->time_format}}</span>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>
+                                                    <span class="handler"
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                    <small><a class="text-white"
+                                                              href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                </p>
+                                            </div>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="pills-contact2" role="tabpanel"
                                      aria-labelledby="pills-contact2-tab">
                                     <div class="row">
-                                        <div class="col-3">
-                                            <span class="time">12.30 tghr</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Sembang-Sembang ASNB <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB SALES <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASB-Iclif MBA MasterClass <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">4.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Attana <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Pedestrian Question <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">8.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB Casual Talkshow <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lepak Je! <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.30 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
+                                        @foreach($fourth_september as $item)
+                                            <div class="col-3">
+                                                <span class="time">{{$item->time_format}}</span>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>
+                                                    <span class="handler"
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                    <small><a class="text-white"
+                                                              href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                </p>
+                                            </div>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="pills-contact3" role="tabpanel"
                                      aria-labelledby="pills-contact3-tab">
                                     <div class="row">
-                                        <div class="col-3">
-                                            <span class="time">12.30 tghr</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Sembang-Sembang ASNB <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB SALES <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASB-Iclif MBA MasterClass <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">4.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Attana <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Pedestrian Question <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">8.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB Casual Talkshow <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lepak Je! <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.30 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
+                                        @foreach($five_september as $item)
+                                            <div class="col-3">
+                                                <span class="time">{{$item->time_format}}</span>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>
+                                                    <span class="handler"
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                    <small><a class="text-white"
+                                                              href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                </p>
+                                            </div>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="pills-contact4" role="tabpanel"
                                      aria-labelledby="pills-contact4-tab">
                                     <div class="row">
-                                        <div class="col-3">
-                                            <span class="time">12.30 tghr</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Sembang-Sembang ASNB <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB SALES <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASB-Iclif MBA MasterClass <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">4.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Attana <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Pedestrian Question <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">8.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB Casual Talkshow <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lepak Je! <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.30 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
+                                        @foreach($six_september as $item)
+                                            <div class="col-3">
+                                                <span class="time">{{$item->time_format}}</span>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>
+                                                    <span class="handler"
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                    <small><a class="text-white"
+                                                              href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                </p>
+                                            </div>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="pills-contact5" role="tabpanel"
                                      aria-labelledby="pills-contact5-tab">
                                     <div class="row">
-                                        <div class="col-3">
-                                            <span class="time">12.30 tghr</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Sembang-Sembang ASNB <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB SALES <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">2.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASB-Iclif MBA MasterClass <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">3.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">4.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Attana <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">5.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.00 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Pedestrian Question <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">6.30 ptg</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Rakan Korporat Kami <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">8.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                ASNB Casual Talkshow <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.00 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lepak Je! <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
-                                        <div class="col-3">
-                                            <span class="time">9.30 mlm</span>
-                                        </div>
-                                        <div class="col-9">
-                                            <p>
-                                                Lets Get Quizzical <br> <small>Dibawakan khas oleh PNB</small>
-                                            </p>
-                                        </div>
+                                        @foreach($seven_september as $item)
+                                            <div class="col-3">
+                                                <span class="time">{{$item->time_format}}</span>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>
+                                                    <span class="handler"
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
+                                                    <small><a class="text-white"
+                                                              href="{{route("may.bank",$item->partner->slug)}}">{{$item->partner->name ?? ""}}</a></small>
+                                                </p>
+                                            </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -1109,13 +500,14 @@
                          aria-labelledby="date-{{$program->id}}-tab">
                         <p>
                             @if(Config::get('app.locale') == 'en' )
-                            {{$program->description}}
+                                {{$program->description}}
                             @else
                                 {{$program->description_bm}}
                             @endif
 
                             @if($program->watch_again != "")
-                                <a target="_blank" href="{{$program->watch_again}}"><b>{{ __('general.watch_again') }}</b></a>
+                                <a target="_blank"
+                                   href="{{$program->watch_again}}"><b>{{ __('general.watch_again') }}</b></a>
                             @endif
                         </p>
                         <div class="d-flex align-items-center">
@@ -1130,20 +522,22 @@
         </div>
     </div>
 
-     <div id="jadual-modal">
+    <div id="jadual-modal">
         <div class="jadual-modal-content">
             <div class="ratio ratio-16x9" id="jadual_frame_second">
             </div>
             <div class="jadual-time">
                 <p class="mb-0" id="program_second_date"></p>
-                <p class="mb-0 small" id="program_second_time"> </p>
+                <p class="mb-0 small" id="program_second_time"></p>
             </div>
             <h2 class="my-3" id="jadual_title_second"></h2>
             <p id="program_description_second"></p>
             <div class="d-flex align-items-center">
                 {{ __('general.brought_to_you') }}
                 <a id="second_program_href" class="d-inline-block">
-                    <img id="store_logo_image" src="https://www.msd2021demo.com/images/program_thumbnail/1631854620.ASNB150x96.png" class="img-fluid">
+                    <img id="store_logo_image"
+                         src="https://www.msd2021demo.com/images/program_thumbnail/1631854620.ASNB150x96.png"
+                         class="img-fluid">
                 </a>
             </div>
         </div>
@@ -1211,7 +605,7 @@
             programCloseBtn.style.top = "155%"
         })
 
-        function jadual_modal_open(){
+        function jadual_modal_open() {
             jadualModal.style.top = "45%"
             overlay.style.display = "block"
             setTimeout(() => {
@@ -1259,7 +653,7 @@
         }
 
 
-        function changeModalViewSecond(image, date,time, iframe,title_en,title_bm, description_en, description_bm, slug) {
+        function changeModalViewSecond(image, date, time, iframe, title_en, title_bm, description_en, description_bm, slug) {
             $('#jadual_frame_second').empty()
             $('#jadual_frame_second').append(iframe)
             @if(Config::get('app.locale') == 'en' )
@@ -1269,11 +663,11 @@
             $("#jadual_title_second").text(title_bm)
             $("#program_description_second").text(description_bm)
             @endif
-            $('#program_second_logo').attr('src',image)
+            $('#program_second_logo').attr('src', image)
             $('#program_second_date').text(date)
             $('#program_second_time').text(time)
 
-            $("#second_program_href").attr("href", "/info/"+slug);
+            $("#second_program_href").attr("href", "/info/" + slug);
 
             jadual_modal_open();
         }
