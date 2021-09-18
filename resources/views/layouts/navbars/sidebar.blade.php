@@ -239,17 +239,17 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('partner.show.promotion')}}">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Upload Promotions') }}
+                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Promotions') }}
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('partner.show.button')}}">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Add Buttons') }}
+                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Buttons') }}
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('partner.show.slider')}}">
-                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Add Slider') }}
+                            <i class="ni ni-ui-04 text-primary"></i> {{ __('Sliders') }}
                         </a>
                     </li>
                 @endauth
