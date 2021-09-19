@@ -204,7 +204,6 @@
                                     </div>
                                 @endforeach
                             </div>
-                            c
                             <a href="{{route('user.msdLive')}}" id="terkini-btn">{{ __('general.terkini-btn') }}&gt;</a>
                         </div>
                     </div>
