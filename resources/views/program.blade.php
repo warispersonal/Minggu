@@ -548,29 +548,25 @@
 
 @push('js')
     <script src="{{asset('assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js')}}"></script>
-
     <script>
-        function setItemToCarousel(id,total){
+        function setItemToCarousel(id, total) {
             let item = 3;
-            if(total == 1 ){
+            if (total == 1) {
                 item = 1;
             }
-            if(total == 2 ){
+            if (total == 2) {
                 item = 2;
             }
-            $("#date-owl-program-"+id).owlCarousel({
-                loop: true,
-                nav: true,
+            $("#date-owl-program-" + id).owlCarousel({
                 items: item,
-                dots: false
             });
         }
+
         $(document).ready(function () {
 
             $(".owl-carousel").owlCarousel({
                 loop: true,
                 nav: true,
-                items: 3,
                 dots: false
             });
             $(".nav-link").click(function () {
@@ -579,6 +575,11 @@
             });
 
         });
+    </script>
+    <script>
+        @foreach($programs as $program)
+            setItemToCarousel("{{$program->id}}", "{{count($program->related_dates)}}")
+        @endforeach
     </script>
 
 
