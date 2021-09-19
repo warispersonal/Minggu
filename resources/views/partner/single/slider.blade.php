@@ -59,24 +59,26 @@
                             </td>
                             <td>{{ \Illuminate\Support\Str::limit($slider->slider_link, 40, $end='...') }}</td>
                             <td>
-                                @if($slider->status == "delete")
-                                    Waiting for approve from Admin
+                                @if(!empty($slider->status))
+                                    Waiting for approve from Admin to {{$slider->status}}
                                 @else
                                     Approve
                                 @endif
                             </td>
 
                             <td>
-                                <div class="dropdown">
-                                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                            class="fas fa-ellipsis-v"></i></a>
-                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a class="dropdown-item"
-                                           onclick="return confirm('Are you sure you want to delete?')"
-                                           href="{{route('partner.slider.delete',$slider->id)}}">Delete</a>
+                                @if(empty($slider->status))
+                                    <div class="dropdown">
+                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                                class="fas fa-ellipsis-v"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item"
+                                               onclick="return confirm('Are you sure you want to delete?')"
+                                               href="{{route('partner.slider.delete',$slider->id)}}">Delete</a>
+                                        </div>
                                     </div>
-                                </div>
+                                @endif
                             </td>
                         </tr>
                     @endforeach
@@ -96,7 +98,8 @@
                             <div class="text-muted text-center mt-2 mb-2">Add New Slider</div>
                         </div>
                         <div class="card-body px-lg-4 py-lg-4">
-                            <form method="post" action="{{route('partner.slider.store')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{route('partner.slider.store')}}"
+                                  enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <label>Select Image (577 × 200 px)</label>
@@ -106,7 +109,8 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="slider_link" placeholder="Slider Link" type="text" required>
+                                        <input class="form-control" name="slider_link" placeholder="Slider Link"
+                                               type="text" required>
                                     </div>
                                 </div>
                                 <div class="text-right">

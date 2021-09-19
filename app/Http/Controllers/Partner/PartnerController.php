@@ -14,6 +14,7 @@ use Illuminate\Support\Str;
 
 class PartnerController extends Controller
 {
+
     public function index()
     {
         return view('partner/dashboard');
@@ -21,21 +22,20 @@ class PartnerController extends Controller
 
     public function showPromotions()
     {
-
-        $partner = Partner::where('user_id',Auth::guard('partner')->id())->first();
-        if ($partner->is_promotion != 1) {
+        $userId = Auth::guard('partner')->id();
+        $existingPartner = Partner::where('user_id', $userId)->get()->first();
+        if ($existingPartner->is_promotion != 1) {
             return redirect()->back();
         }
-        if ($partner->is_promotion == 0) {
-            return redirect()->back();
-        }
-        $promotions = PartnerPromotion::where('partner_id', Auth::guard('partner')->id())->get();
+        $promotions = PartnerPromotion::where('partner_id', $existingPartner->id)->get();
         return view('partner.single.promotion', compact('promotions'));
     }
 
     public function showButtons()
     {
-        $links = PartnerLink::where('partner_id', Auth::guard('partner')->id())->get();
+        $userId = Auth::guard('partner')->id();
+        $existingPartner = Partner::where('user_id', $userId)->get()->first();
+        $links = PartnerLink::where('partner_id', $existingPartner->id)->get();
         return view('partner.single.button', compact('links'));
     }
 
@@ -61,7 +61,9 @@ class PartnerController extends Controller
 
     public function showSliders()
     {
-        $sliders = PartnerSlider::where('partner_id', Auth::guard('partner')->id())->get();
+        $userId = Auth::guard('partner')->id();
+        $existingPartner = Partner::where('user_id', $userId)->get()->first();
+        $sliders = PartnerSlider::where('partner_id', $existingPartner->id)->get();
         return view('partner.single.slider', compact('sliders'));
     }
 
@@ -111,7 +113,7 @@ class PartnerController extends Controller
     {
         $partner = Partner::where("user_id", Auth::guard('partner')->id())->get()->first();
         $update_partner = Partner::where("parent_id", Auth::guard('partner')->id())->get()->last();
-        if ($update_partner ) {
+        if ($update_partner) {
             $partner = $update_partner;
         }
         return view('partner.single.edit', compact('partner'));
@@ -176,28 +178,24 @@ class PartnerController extends Controller
             $update_partner['status'] = 'edit';
             $update_partner['user_id'] = $partner->user_id;
             $update_partner->save();
-        }
-        else{
+        } else {
             $update_partner = new Partner();
             if ($request->home_logo) {
                 $home_logo = $this->uploadMediaFile($request, 'home_logo', FileConstant::PARTNER_LOGO);
                 $update_partner['home_logo'] = $home_logo;
-            }
-            else{
+            } else {
                 $update_partner['home_logo'] = $partner->home_logo;
             }
             if ($request->details_logo) {
                 $details_logo = $this->uploadMediaFile($request, 'details_logo', FileConstant::DETAIL_LOGO);
                 $update_partner['details_logo'] = $details_logo;
-            }
-            else{
+            } else {
                 $update_partner['details_logo'] = $partner->details_logo;
             }
             if ($request->promosi_image) {
                 $promosi_image = $this->uploadMediaFile($request, 'promosi_image', FileConstant::PROMOSI_IMAGE);
                 $update_partner['promosi_image'] = $promosi_image;
-            }
-            else{
+            } else {
                 $update_partner['promosi_image'] = $partner->promosi_image;
             }
             $iframe = $this->getVideoIFrame($request->video_link);

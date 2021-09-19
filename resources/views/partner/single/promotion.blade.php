@@ -58,13 +58,14 @@
                             <td><img src="{{$promotion->promotion_logo}}" class="main-details-image"/>
                             <td>{{ \Illuminate\Support\Str::limit($promotion->url, 40, $end='...') }}</td>
                             <td>
-                                @if($promotion->status == "delete")
-                                    Waiting for approve from Admin
+                                @if(!empty($promotion->status))
+                                    Waiting for approve from Admin to {{$promotion->status}}
                                 @else
                                     Approve
                                 @endif
                             </td>
                             <td>
+                                @if(empty($promotion->status))
                                 <div class="dropdown">
                                     <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
@@ -75,6 +76,7 @@
                                            href="{{route('partner.promotion.delete',$promotion->id)}}">Delete</a>
                                     </div>
                                 </div>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

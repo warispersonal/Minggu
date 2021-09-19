@@ -61,26 +61,28 @@
                             <td>{{$link->title}}</td>
                             <td>{{ \Illuminate\Support\Str::limit($link->link, 40, $end='...') }}</td>
                             <td>
-                                @if($link->status == "delete")
-                                    Waiting for approve from Admin
+                                @if(!empty($link->status))
+                                    Waiting for approve from Admin to {{$link->status}}
                                 @else
                                     Approve
                                 @endif
                             </td>
                             <td>
-                                <div class="dropdown">
-                                    <a class="btn btn-sm btn-icon-only text-light" href="#"
-                                       role="button"
-                                       data-toggle="dropdown" aria-haspopup="true"
-                                       aria-expanded="false">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a class="dropdown-item"
-                                           onclick="return confirm('Are you sure you want to delete?')"
-                                           href="{{route('partner.button.delete',$link->id)}}">Delete</a>
+                                @if(empty($link->status))
+                                    <div class="dropdown">
+                                        <a class="btn btn-sm btn-icon-only text-light" href="#"
+                                           role="button"
+                                           data-toggle="dropdown" aria-haspopup="true"
+                                           aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item"
+                                               onclick="return confirm('Are you sure you want to delete?')"
+                                               href="{{route('partner.button.delete',$link->id)}}">Delete</a>
+                                        </div>
                                     </div>
-                                </div>
+                                @endif
                             </td>
                         </tr>
                     @endforeach
@@ -117,7 +119,8 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="title_bm" placeholder="Link Title (BM)" type="text"
+                                        <input class="form-control" name="title_bm" placeholder="Link Title (BM)"
+                                               type="text"
                                                required>
                                     </div>
                                 </div>
