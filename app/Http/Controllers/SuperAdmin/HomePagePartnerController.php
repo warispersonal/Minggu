@@ -204,36 +204,41 @@ class HomePagePartnerController extends Controller
 
     public function approvePartner($id , $status){
         $updated = Partner::find($id);
-        echo "<pre>";
-        print_r($updated->id);
-        die();
         $original = Partner::find($updated->parent_id);
         if($status == "approve"){
 
             $promotions = PartnerPromotion::where('partner_id',$original->id)->get();
             $sliders = PartnerSlider::where('partner_id',$original->id)->get();
             $programs = Program::where('partner_id',$original->id)->get();
+            $links = PartnerLink::where('partner_id',$original->id)->get();
 
             foreach ($promotions as $promotion){
-                $promotion->partner_id = $updated->id;
-                $promotion->save();
-            }
-            foreach ($programs as $program){
-                $program->partner_id = $updated->id;
-                $program->save();
-            }
-            foreach ($sliders as $slider){
-                $slider->partner_id = $slider->id;
-                $slider->save();
+                $pro = PartnerPromotion::find($promotion->id);
+                $pro->partner_id = $updated->id;
+                $pro->save();
             }
 
+            foreach ($programs as $program){
+                $pro = Program::find($program->id);
+                $pro->partner_id = $updated->id;
+                $pro->save();
+            }
+
+            foreach ($sliders as $slider){
+                $sli = PartnerSlider::find($slider->id);
+                $sli->partner_id = $updated->id;
+                $sli->save();
+            }
+
+            foreach ($links as $link){
+                $link = PartnerLink::find($link->id);
+                $link->partner_id = $updated->id;
+                $link->save();
+            }
 
             $updated->status = null;
             $updated->parent_id = null;
             $updated->save();
-
-
-
             $original->delete();
         }
         else{
