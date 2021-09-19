@@ -206,40 +206,36 @@ class HomePagePartnerController extends Controller
         $updated = Partner::find($id);
         $original = Partner::find($updated->parent_id);
         if($status == "approve"){
-
-            $promotions = PartnerPromotion::where('partner_id',$original->id)->get();
-            $sliders = PartnerSlider::where('partner_id',$original->id)->get();
-            $programs = Program::where('partner_id',$original->id)->get();
-            $links = PartnerLink::where('partner_id',$original->id)->get();
-
-            foreach ($promotions as $promotion){
-                $pro = PartnerPromotion::find($promotion->id);
-                $pro->partner_id = $updated->id;
-                $pro->save();
-            }
-
-            foreach ($programs as $program){
-                $pro = Program::find($program->id);
-                $pro->partner_id = $updated->id;
-                $pro->save();
-            }
-
-            foreach ($sliders as $slider){
-                $sli = PartnerSlider::find($slider->id);
-                $sli->partner_id = $updated->id;
-                $sli->save();
-            }
-
-            foreach ($links as $link){
-                $link = PartnerLink::find($link->id);
-                $link->partner_id = $updated->id;
-                $link->save();
-            }
-
-            $updated->status = null;
-            $updated->parent_id = null;
-            $updated->save();
-            $original->delete();
+            $original->home_logo = $updated->home_logo;
+            $original->promosi_image = $updated->promosi_image;
+            $original->details_logo = $updated->details_logo;
+            $original->description = $updated->description;
+            $original->description_bm = $updated->description_bm;
+            $original->bg_color = $updated->bg_color;
+            $original->video_link = $updated->video_link;
+            $original->slug = $updated->slug;
+            $original->fb = $updated->fb;
+            $original->insta = $updated->insta;
+            $original->twitter = $updated->twitter;
+            $original->youtube = $updated->youtube;
+            $original->website = $updated->website;
+            $original->careers = $updated->careers;
+            $original->contact_us = $updated->contact_us;
+            $original->linkedin = $updated->linkedin;
+            $original->mode = $updated->mode;
+            $original->parent_id = $updated->parent_id;
+            $original->status = $updated->status;
+            $original->iframe = $updated->iframe;
+            $original->name = $updated->name;
+            $original->name_bm = $updated->name_bm;
+            $original->user_id = $updated->user_id;
+            $original->is_promotion = $updated->is_promotion;
+            $original->is_shown_program_tab = $updated->is_shown_program_tab;
+            $original->order = $updated->order;
+            $original->status = null;
+            $original->parent_id = null;
+            $original->save();
+            $updated->delete();
         }
         else{
             $updated->delete();

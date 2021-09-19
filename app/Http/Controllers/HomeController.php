@@ -30,7 +30,7 @@ class HomeController extends Controller
     /* Partner Page*/
     public function may_bank($slug)
     {
-        $partner = Partner::where('slug', $slug)->get()->first();
+        $partner = Partner::where('slug', $slug)->orWhere('id',$slug)->get()->first();
         return view('home.partner', compact('partner'));
     }
 
