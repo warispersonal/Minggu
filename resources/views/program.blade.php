@@ -559,6 +559,9 @@
             }
             $("#date-owl-program-" + id).owlCarousel({
                 items: item,
+                loop: true,
+                nav: true,
+                dots: false
             });
         }
 
