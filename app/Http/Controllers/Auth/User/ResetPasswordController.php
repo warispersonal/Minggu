@@ -28,16 +28,6 @@ class ResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
-    protected function resetPassword($user, $password)
-    {
-        $user->forceFill([
-            'password' => bcrypt($password),
-            'remember_token' => Str::random(60),
-        ])->save();
-        $credentials = $user->only('email');
-        if (Auth::guard('user')->attempt($credentials)) {
-            $this->guard()->login($user);
-        }
-    }
+    protected $redirectTo = '/logoutAfterForgotPassword';
+    
 }

@@ -72,9 +72,9 @@ class LoginController extends Controller
         return redirect()->back();
     }
 
-    public function logoutAfterForgotPassword(){
+   public function logoutAfterForgotPassword(){
         Session::flush();
         Auth::guard('user')->logout();
-        return redirect()->route('/');
+        return redirect()->route('home.index');
     }
 }
