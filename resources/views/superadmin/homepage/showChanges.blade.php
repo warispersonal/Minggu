@@ -32,7 +32,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header border-0">
-                                        <h3 class="mb-0">Approve Partner Details</h3>
+                                        <h3 class="mb-0">Items Recently Changed</h3>
                                     </div>
                                     <div class="container">
                                         <div class="form-group mb-3">
@@ -154,7 +154,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header border-0">
-                                        <h3 class="mb-0">Not Approve Changes</h3>
+                                        <h3 class="mb-0">Pending Approval</h3>
                                     </div>
                                     <div class="container">
                                         <div class="form-group mb-3">

@@ -17,7 +17,7 @@ return [
     'social_heading' => 'Boleh juga ditonton menerusi:',
 
     // Program Page Text
-    'msd_btn_text' => 'Tonton semua episod lalu',
+    'msd_btn_text' => 'Tonton MSD Live',
     'program' => 'Program',
     'schedule' => 'Jadual',
     'wednesday' => 'Rabu',

@@ -28,7 +28,7 @@ return [
     'social_heading' => 'Can also be watched through:',
 
     // Program Page Text
-    'msd_btn_text' => 'Watch all past episodes',
+    'msd_btn_text' => 'Watch MSD Live',
     'program' => 'Program',
     'schedule' => 'Schedule',
     'wednesday' => 'Wednesday',
@@ -110,7 +110,7 @@ return [
     'qa_2' => 'Asked Questions',
 
 
-    'promosi_title' => 'Promotion',
+    'promosi_title' => 'Promotions',
     'back_button_age' => 'Return to Competitions',
 
     'partner_rakan' => 'RAKAN',

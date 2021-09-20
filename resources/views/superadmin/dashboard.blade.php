@@ -143,7 +143,7 @@
                                     @endforeach
                                 @else
                                         <tr>
-                                            <td>No Prgrams Found</td>
+                                            <td>No Programs Found</td>
                                         </tr>
                                 @endif
                             </tbody>
@@ -193,7 +193,7 @@
                                     @endforeach
                                 @else
                                         <tr>
-                                            <td>No Registration Found</td>
+                                            <td>No Registrations Found</td>
                                         </tr>
                                 @endif
                             </tbody>
