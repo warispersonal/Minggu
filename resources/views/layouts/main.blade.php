@@ -332,7 +332,11 @@
 
 @if(session()->has('msg'))
     <script>
+        @if(session()->get('msg') == "Invalid credentials")
+        swal("", "{{session()->get('msg')}}", "error");
+        @else
         swal("", "{{session()->get('msg')}}", "success");
+        @endif
     </script>
 @endif
 

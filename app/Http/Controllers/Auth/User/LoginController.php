@@ -54,7 +54,7 @@ class LoginController extends Controller
             }
             else{
                 return redirect()->back()
-                    ->with('msg','Invalid credentials')->with('from','login');
+                    ->with('msg','Invalid credentials')->with('from','login')->withInput(['email']);
             }
         }
         else{
