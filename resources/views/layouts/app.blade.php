@@ -27,6 +27,8 @@
         <!-- Styles CSS -->
         <link type="text/css" href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
         <link type="text/css" href="{{ asset('assets') }}/css/styles.css" rel="stylesheet">
+
+        @include('component.google-analaytics')
     </head>
     <body class="{{ $class ?? '' }}">
         <!-- Logout Form For Super Admin -->

@@ -57,6 +57,7 @@
         </script>
     @endif
     @stack('style')
+@include('component.google-analaytics')
 
 </head>
 <body class="{{ $class ?? '' }}">

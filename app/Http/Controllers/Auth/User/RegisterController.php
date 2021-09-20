@@ -64,7 +64,11 @@ class RegisterController extends Controller
                 'raw_password' => $request['password'] ?? "",
                 'password' => Hash::make($request['password']) ?? "",
             ]);
+            $credentials = $request->only('email', 'password');
             $message = trans('general.register_success_message');
+            if (Auth::guard('user')->attempt($credentials)) {
+                $message = trans('general.register_success_message');
+            }
             Mail::to($user->email)->send(new SendRegisterEmail($user));
             return redirect()->back()->withErrors($validator)->with('msg',$message);
         } else {
@@ -81,7 +85,7 @@ class RegisterController extends Controller
                 'raw_password' => '12345',
                 'password' => Hash::make('12345'),
             );
-          
+
             Mail::to($user->email)->send(new SendRegisterEmail($user));
           echo "heree";
           die();
