@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth\User;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class ResetPasswordController extends Controller
 {
@@ -26,5 +28,16 @@ class ResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/logoutAfterForgotPassword';
+    protected $redirectTo = RouteServiceProvider::HOME;
+    protected function resetPassword($user, $password)
+    {
+        $user->forceFill([
+            'password' => bcrypt($password),
+            'remember_token' => Str::random(60),
+        ])->save();
+        $credentials = $user->only('email');
+        if (Auth::guard('user')->attempt($credentials)) {
+            $this->guard()->login($user);
+        }
+    }
 }
