@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
@@ -69,5 +70,11 @@ class LoginController extends Controller
     {
         Auth::guard("admin")->logout();
         return redirect()->back();
+    }
+
+    public function logoutAfterForgotPassword(){
+        Session::flush();
+        Auth::guard('user')->logout();
+        return redirect()->route('/');
     }
 }

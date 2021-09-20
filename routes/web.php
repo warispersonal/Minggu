@@ -31,7 +31,7 @@ Route::get('/logout', [HomeController::class, 'logout'])->name('user.logout');
 
 Route::get('/mailsend', [\App\Http\Controllers\Auth\User\RegisterController::class, 'send_mail'])->name("send_mail");
 
-Route::redirect('/home','/');
+Route::get('/logoutAfterForgotPassword',[LoginController::class,'logoutAfterForgotPassword'])->name('logoutAfterForgotPassword');
 Route::prefix('/')->group(function () {
     Route::get('/info/{id}', [HomeController::class, 'may_bank'])->name('may.bank');
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
