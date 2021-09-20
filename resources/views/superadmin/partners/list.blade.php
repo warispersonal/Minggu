@@ -142,6 +142,10 @@
                 "serverSide": true,
                 "pageLength": 25,
                 "order": [],
+                "columnDefs":
+                    [
+                        {"searchable": false, "targets": 0}
+                    ],
                 "ajax": "{{ route('star.getpartnersAJAX') }}",
                 "columns":[
                     {"data": "DT_RowIndex"},

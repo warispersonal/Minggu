@@ -196,6 +196,10 @@
                 "processing": true,
                 "serverSide": true,
                 "pageLength": 25,
+                "columnDefs":
+                    [
+                        {"searchable": false, "targets": 0}
+                    ],
                 "order": [],
                 "ajax": "{{ route('star.getadminsAJAX') }}",
                 "columns": [

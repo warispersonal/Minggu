@@ -115,6 +115,10 @@
            $datatable =  $('#adminTable').DataTable({
                 dom: 'Bfrtip',
                "pageLength": 25,
+               "columnDefs":
+                   [
+                       {"searchable": false, "targets": 0}
+                   ],
                buttons: [
                     'copy', 'csv', 'excel', 'pdf'
                 ],

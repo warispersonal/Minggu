@@ -41,4 +41,8 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Roles', 'role_id');
     }
+
+    public function lotteries(){
+        return $this->hasMany(UserLottery::class);
+    }
 }

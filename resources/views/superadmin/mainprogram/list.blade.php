@@ -132,6 +132,10 @@
             $('#adminTable').DataTable({
                 "processing": true,
                 "pageLength": 25,
+                "columnDefs":
+                    [
+                        {"searchable": false, "targets": 0}
+                    ],
                 "serverSide": true,
                 "order": [],
                 "ajax": "{{ route('star.getMainDetailAJAX') }}",

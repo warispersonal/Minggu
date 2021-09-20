@@ -126,7 +126,7 @@ class SuperAdminController extends Controller
             ->addColumn('correct_value', function ($data) {
                 return $data->lottery->correct_value ?? "";
             })
-            ->rawColumns(['id','name','email','ic_number','section_no','title','correct_value'])
+            ->rawColumns(['name','email','ic_number','section_no','title','correct_value'])
             ->addIndexColumn()
             ->make(true);
     }

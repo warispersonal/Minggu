@@ -13,7 +13,8 @@
                         <h6 class="h2 text-white d-inline-block mb-0">View Submission</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                <li class="breadcrumb-item"><a href="{{ route('star.dashboard') }}"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('star.dashboard') }}"><i
+                                            class="fas fa-home"></i></a></li>
                                 <li class="breadcrumb-item"><a href="#">View Submission</a></li>
                             </ol>
                         </nav>
@@ -38,7 +39,7 @@
                         <table class="table align-items-center table-flush w-100" id="adminTable">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col" class="sort" data-sort="name">#</th>
+                                <th scope="col">#</th>
                                 <th scope="col" class="sort" data-sort="budget">Name</th>
                                 <th scope="col" class="sort" data-sort="status">Email</th>
                                 <th scope="col">IC Number</th>
@@ -69,25 +70,24 @@
     <script src="{{ asset('argon') }}/vendor/data-table/datatables.min.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            // Show Admins DataTable
+        $(document).ready(function () {
             $('#adminTable').DataTable({
-                dom: 'Bfrtip',
-                buttons: [
-                    'copy', 'csv', 'excel', 'pdf'
-                ],
                 "processing": true,
                 "serverSide": true,
                 "pageLength": 25,
                 "order": [],
+                "columnDefs":
+                    [
+                        {"searchable": false, "targets": 0}
+                    ],
                 "ajax": "{{ route('star.viewSubmissionAJAX') }}",
-                "columns":[
+                "columns": [
                     {"data": "DT_RowIndex"},
-                    { "data": "name" },
-                    { "data": "email" },
-                    { "data": "ic_number" },
-                    { "data": "title" },
-                    { "data": "correct_value" },
+                    {"data": "name"},
+                    {"data": "email"},
+                    {"data": "ic_number"},
+                    {"data": "title"},
+                    {"data": "correct_value"},
                 ],
                 "language": {
                     "paginate": {
