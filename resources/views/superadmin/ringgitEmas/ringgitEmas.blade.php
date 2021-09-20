@@ -71,18 +71,50 @@
         $(document).ready(function () {
             // Show Admins DataTable
             $datatable = $('#adminTable').DataTable({
+                "processing": true,
+                "serverSide": true,
                 dom: 'Bfrtip',
                 "pageLength": 25,
                 "columnDefs":
                     [
                         {"searchable": false, "targets": 0}
                     ],
-                buttons: [
-                    'copy', 'csv', 'excel', 'pdf'
-                ],
                 "order": [],
-                "processing": true,
-                "serverSide": true,
+                lengthMenu: [
+                    [ 10, 25, 50, -1 ],
+                    [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+                ],
+                buttons: [
+                    {
+                        extend: 'csv',
+                        className: 'btn btn-sm btn-neutral',
+                        exportOptions: {
+                            columns: 'th:not(:last-child)'
+                        }
+                    },
+                    {
+                        extend: 'excel',
+                        className: 'btn btn-sm btn-neutral',
+                        exportOptions: {
+                            columns: 'th:not(:last-child)'
+                        }
+                    },
+                    {
+                        extend: 'pdf',
+                        className: 'btn btn-sm btn-neutral',
+                        exportOptions: {
+                            columns: 'th:not(:last-child)'
+                        }
+                    },
+                    {
+                        extend: 'copy',
+                        className: 'btn btn-sm btn-neutral',
+                        exportOptions: {
+                            columns: 'th:not(:last-child)'
+                        }
+                    },
+                    'pageLength'
+                ],
                 "ajax": "{{ route('star.compitition.getRinggitEmasWinnerAJAX') }}",
                 "columns": [
                     {"data": "DT_RowIndex"},

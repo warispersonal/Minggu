@@ -113,18 +113,50 @@
         document.getElementById('date_field').valueAsDate = new Date();
         $(document).ready(function () {
            $datatable =  $('#adminTable').DataTable({
-                dom: 'Bfrtip',
+               "processing": true,
+               "serverSide": true,
+               dom: 'Bfrtip',
                "pageLength": 25,
                "columnDefs":
                    [
                        {"searchable": false, "targets": 0}
                    ],
+               "order": [],
+               lengthMenu: [
+                   [ 10, 25, 50, -1 ],
+                   [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+               ],
                buttons: [
-                    'copy', 'csv', 'excel', 'pdf'
-                ],
-                "order": [],
-                "processing": true,
-                "serverSide": true,
+                   {
+                       extend: 'csv',
+                       className: 'btn btn-sm btn-neutral',
+                       exportOptions: {
+                           columns: 'th:not(:last-child)'
+                       }
+                   },
+                   {
+                       extend: 'excel',
+                       className: 'btn btn-sm btn-neutral',
+                       exportOptions: {
+                           columns: 'th:not(:last-child)'
+                       }
+                   },
+                   {
+                       extend: 'pdf',
+                       className: 'btn btn-sm btn-neutral',
+                       exportOptions: {
+                           columns: 'th:not(:last-child)'
+                       }
+                   },
+                   {
+                       extend: 'copy',
+                       className: 'btn btn-sm btn-neutral',
+                       exportOptions: {
+                           columns: 'th:not(:last-child)'
+                       }
+                   },
+                   'pageLength'
+               ],
                 "ajax": "{{ route('star.getDailyWinnerAJAX') }}",
                 "columns": [
                     {"data": "DT_RowIndex"},

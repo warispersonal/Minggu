@@ -67,12 +67,19 @@
         $(document).ready(function () {
             // Show Admins DataTable
             let datatable = $('#adminTable').DataTable({
+                "processing": true,
+                "serverSide": true,
                 dom: 'Bfrtip',
                 "pageLength": 25,
                 "columnDefs":
                     [
                         {"searchable": false, "targets": 0}
                     ],
+                "order": [],
+                lengthMenu: [
+                    [ 10, 25, 50, -1 ],
+                    [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+                ],
                 buttons: [
                     {
                         extend: 'csv',
@@ -101,11 +108,9 @@
                         exportOptions: {
                             columns: 'th:not(:last-child)'
                         }
-                    }
+                    },
+                    'pageLength'
                 ],
-                "processing": true,
-                "order": [],
-                "serverSide": true,
                 "ajax": "{{ route('star.getusersAJAX') }}",
                 "columns": [
                     {"data": "DT_RowIndex"},

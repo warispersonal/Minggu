@@ -32,7 +32,7 @@
                 <div class="card">
                     <!-- Card header -->
                     <div class="card-header border-0">
-                        <h3 class="mb-0">Partners</h3>
+                        <h3 class="mb-0">View Submission</h3>
                     </div>
                     <!-- Light table -->
                     <div class="table-responsive">
@@ -74,12 +74,49 @@
             $('#adminTable').DataTable({
                 "processing": true,
                 "serverSide": true,
+                dom: 'Bfrtip',
                 "pageLength": 25,
-                "order": [],
                 "columnDefs":
                     [
                         {"searchable": false, "targets": 0}
                     ],
+                "order": [],
+                lengthMenu: [
+                    [ 10, 25, 50, -1 ],
+                    [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+                ],
+                buttons: [
+                    {
+                        extend: 'csv',
+                        className: 'btn btn-sm btn-neutral',
+                        exportOptions: {
+                            columns: 'th:not(:last-child)'
+                        }
+                    },
+                    {
+                        extend: 'excel',
+                        className: 'btn btn-sm btn-neutral',
+                        exportOptions: {
+                            columns: 'th:not(:last-child)'
+                        }
+                    },
+                    {
+                        extend: 'pdf',
+                        className: 'btn btn-sm btn-neutral',
+                        exportOptions: {
+                            columns: 'th:not(:last-child)'
+                        }
+                    },
+                    {
+                        extend: 'copy',
+                        className: 'btn btn-sm btn-neutral',
+                        exportOptions: {
+                            columns: 'th:not(:last-child)'
+                        }
+                    },
+                    'pageLength'
+                ],
+                "filter":false,
                 "ajax": "{{ route('star.viewSubmissionAJAX') }}",
                 "columns": [
                     {"data": "DT_RowIndex"},
