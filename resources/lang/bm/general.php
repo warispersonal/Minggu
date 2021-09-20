@@ -133,6 +133,7 @@ return [
 
     'register_success_message' => 'Anda telah berjaya mendaftar',
     'login_success_message' => 'Anda berjaya log masuk',
+    'forgot_password' => 'Tukar kata laluan, Sila log masuk sekali lagi',
 
     // Partner details
     'program_tab' => 'Programme',

@@ -149,5 +149,6 @@ return [
     'program_tab' => 'Program',
     'information_tab' => 'Information',
     'terkini-btn' => 'Watch the Latest MSD Episodes ',
+    'forgot_password' => 'Password change, Please login again',
 
 ];
