@@ -140,7 +140,7 @@ class HomeController extends Controller
     public function logout()
     {
         auth()->guard('user')->logout();
-        return redirect()->back();
+        return redirect()->back()->with('action','logout');
     }
 
     public function liveTrivia(){

@@ -333,27 +333,6 @@
 @endif
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-@if(session()->has('action'))
-    @if(session()->has('action') == 'regitser')
-        @if(session()->has('user'))
-            <?php $user = session()->get('user'); ?>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'event': 'registration',
-                    'user_name': "{{$user->name ?? ''}}",
-                    'user_email': "{{$user->email ?? ''}}",
-                    'user_phone': "{{$user->phone ?? ''}}",
-                    'eventCallback' : function() {
-                        console.log('Registration Event Tags Triggered and Fired');
-                    }
-                });
-
-            </script>
-        @endif
-    @endif
-
-@endif
 @if(session()->has('msg'))
     <script>
         @if(session()->get('msg') == "Invalid credentials")
@@ -365,6 +344,7 @@
 @endif
 
 @if(session()->has('from'))
+
     @if(session()->get('from') == "login")
         <script>
             overlay.style.display = "block"

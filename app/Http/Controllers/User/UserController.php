@@ -80,7 +80,7 @@ class UserController extends Controller
             }
         }
         UserLottery::insert($userLottery);
-        return redirect()->back();
+        return redirect()->back()->with('action','submission');
 
     }
 

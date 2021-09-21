@@ -51,7 +51,7 @@ class LoginController extends Controller
             $credentials = $request->only('email', 'password');
             if (Auth::guard('user')->attempt($credentials)) {
                 $message = trans('general.login_success_message');
-                return redirect()->back()->with('msg',$message);
+                return redirect()->back()->with('msg',$message)->with('action','login');
             }
             else{
                 return redirect()->back()

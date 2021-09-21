@@ -246,6 +246,6 @@ Route::get('/lang/{locale}', function ($locale) {
     }
     session(['applang' => $locale]);
     // After Setting Local Redirect Back to Home Page
-    return redirect()->back();
+    return redirect()->back()->with('action','language')->with('language_code',$locale);
 
 })->name('localization');
