@@ -57,7 +57,7 @@
         </script>
     @endif
     @stack('style')
-@include('component.google-analaytics')
+    @include('component.google-analaytics')
 
 </head>
 <body class="{{ $class ?? '' }}">
@@ -169,11 +169,13 @@
                             <ul>
                                 @foreach( $menu['child'] as $child )
                                     @if(Config::get('app.locale') == 'en')
-                                        <li class=""><i class="bi bi-chevron-right"></i> <a target="_blank" href="{{ $child['link'] }}"
+                                        <li class=""><i class="bi bi-chevron-right"></i> <a target="_blank"
+                                                                                            href="{{ $child['link'] }}"
                                                                                             title="">{{ $child['label_en'] }}</a>
                                         </li>
                                     @elseif (Config::get('app.locale') == 'bm')
-                                        <li class=""><i class="bi bi-chevron-right"></i> <a target="_blank" href="{{ $child['link'] }}"
+                                        <li class=""><i class="bi bi-chevron-right"></i> <a target="_blank"
+                                                                                            href="{{ $child['link'] }}"
                                                                                             title="">{{ $child['label_bm'] }}</a>
                                         </li>
                                     @endif
@@ -331,6 +333,27 @@
 @endif
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+@if(session()->has('action'))
+    @if(session()->has('action') == 'regitser')
+        @if(session()->has('user'))
+            <?php $user = session()->get('user'); ?>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'registration',
+                    'user_name': "{{$user->name ?? ''}}",
+                    'user_email': "{{$user->email ?? ''}}",
+                    'user_phone': "{{$user->phone ?? ''}}",
+                    'eventCallback' : function() {
+                        console.log('Registration Event Tags Triggered and Fired');
+                    }
+                });
+
+            </script>
+        @endif
+    @endif
+
+@endif
 @if(session()->has('msg'))
     <script>
         @if(session()->get('msg') == "Invalid credentials")
