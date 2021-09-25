@@ -252,6 +252,7 @@
                                         <i class="fas fa-ellipsis-v"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a class="dropdown-item" href="{{route('stars.link.edit',$link->id)}}">Edit</a>
                                         <a onclick="return confirm('Are you sure you want to delete?')"
                                            class="dropdown-item"
                                            href="{{route('stars.homepage.link.delete',$link->id)}}">Delete</a>

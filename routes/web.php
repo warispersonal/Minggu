@@ -104,11 +104,13 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::get('/slider/{id}/edit', [HomePagePartnerController::class, 'slider_edit'])->name('stars.homepage.slide.edit');
         Route::get('/link/delete/{id}', [HomePagePartnerController::class, 'link_delete'])->name('stars.homepage.link.delete');
         Route::get('/promotion/{id}/edit', [HomePagePartnerController::class, 'promotion_edit'])->name('stars.promotion.edit');
+        Route::get('/link/{id}/edit', [HomePagePartnerController::class, 'link_edit'])->name('stars.link.edit');
         Route::get('/promotion/delete/{id}', [HomePagePartnerController::class, 'promotion_delete'])->name('stars.promotion.delete');
         Route::post('/slider/create', [HomePagePartnerController::class, 'slider_store'])->name('stars.slide.store');
         Route::post('/slider/{id}/update', [HomePagePartnerController::class, 'slider_update'])->name('stars.slide.update');
         Route::post('/promotion/create', [HomePagePartnerController::class, 'promotion_store'])->name('stars.promotion.store');
         Route::post('/promotion/{id}/update', [HomePagePartnerController::class, 'promotion_update'])->name('stars.promotion.update');
+        Route::post('/link/{id}/update', [HomePagePartnerController::class, 'link_update'])->name('stars.link.update');
         Route::post('/link/create', [HomePagePartnerController::class, 'link_store'])->name('stars.link.store');
         Route::get('/view-changes/{id}', [HomePagePartnerController::class, 'showChanges'])->name('stars.homepage.showChanges');
 

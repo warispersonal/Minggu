@@ -134,6 +134,11 @@ class HomePagePartnerController extends Controller
         $slider = PartnerPromotion::find($id);
         return  view('superadmin.homepage.promotion.edit',compact('slider'));
     }
+    public function link_edit($id)
+    {
+        $link = PartnerLink::find($id);
+        return  view('superadmin.homepage.links.edit',compact('link'));
+    }
 
 
     public function slider_store(Request $request)
@@ -193,6 +198,16 @@ class HomePagePartnerController extends Controller
         $linkItem->link = $request->link;
         $linkItem->save();
         return redirect()->back()->with(['msg' => 'Link added successfully']);;
+
+    }
+    public function link_update(Request $request, $id)
+    {
+        $linkItem = PartnerLink::find($id);
+        $linkItem->title = $request->title;
+        $linkItem->title_bm = $request->title_bm;
+        $linkItem->link = $request->link;
+        $linkItem->save();
+        return redirect()->route('stars.homepage.show', $linkItem->partner_id)->with(['msg' => 'Link updated successfully']);;
 
     }
     public function sliderApprove($id,$status){
