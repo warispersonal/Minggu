@@ -71,6 +71,7 @@
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                             class="fas fa-ellipsis-v"></i></a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a class="dropdown-item" href="{{route('stars.promotion.edit',$promotion->id)}}">Edit</a>
                                         <a class="dropdown-item"
                                            onclick="return confirm('Are you sure you want to delete?')"
                                            href="{{route('partner.promotion.delete',$promotion->id)}}">Delete</a>
@@ -108,7 +109,7 @@
                                 <div class="form-group mb-3">
                                     <label>Promotion URL </label>
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="url" type="text" required>
+                                        <input class="form-control" name="url" type="url" required>
                                     </div>
                                 </div>
                                 <div class="text-right">

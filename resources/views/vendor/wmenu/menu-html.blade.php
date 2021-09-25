@@ -41,21 +41,21 @@ $currentUrl = url()->current();
 														<div class="inside">
 															<div class="customlinkdiv" id="customlinkdiv">
 																<div id="menu-item-url-wrap">
-																	<label class="howto d-block mb-0" for="custom-menu-item-url"> 
+																	<label class="howto d-block mb-0" for="custom-menu-item-url">
 																		<span>URL</span>
 																	</label>
-																	<input id="custom-menu-item-url" name="url" type="text" class="w-100" placeholder="url">
+																	<input id="custom-menu-item-url" name="url" type="url" class="w-100" placeholder="url">
 																</div>
 
 																<div id="menu-item-name-wrap" class="mt-2">
-																	<label class="howto mb-0 d-block" for="custom-menu-item-name"> 
+																	<label class="howto mb-0 d-block" for="custom-menu-item-name">
 																		<span>Label (EN)</span>
 																	</label>
 																	<input id="custom-menu-item-nameen" name="labelen" type="text" class="regular-text w-100 input-with-default-title" title="Label Menu (EN)">
 																</div>
 
 																<div id="menu-item-name-wrap" class="mt-2">
-																	<label class="howto mb-0 d-block" for="custom-menu-item-name"> 
+																	<label class="howto mb-0 d-block" for="custom-menu-item-name">
 																		<span>Label (BM)</span>
 																	</label>
 																	<input id="custom-menu-item-namebm" name="labelbm" type="text" class="regular-text w-100 input-with-default-title" title="Label Menu (BM)">

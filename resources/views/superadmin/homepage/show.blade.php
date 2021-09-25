@@ -88,6 +88,7 @@
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                             class="fas fa-ellipsis-v"></i></a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a class="dropdown-item" href="{{route('stars.homepage.slide.edit',$slider->id)}}">Edit</a>
                                         <a onclick="return confirm('Are you sure you want to delete?')"
                                            class="dropdown-item"
                                            href="{{route('stars.homepage.slide.delete',$slider->id)}}">Delete</a>
@@ -112,7 +113,7 @@
                         </div>
                         <div class="col-6 text-right">
                             <a data-toggle="modal" data-target="#modal-promotion-image" class="btn btn-sm btn-neutral">
-                                Add New Promotion
+                                Add New Prmotion
                             </a>
                         </div>
                     </div>
@@ -167,6 +168,7 @@
                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                                 class="fas fa-ellipsis-v"></i></a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="{{route('stars.promotion.edit',$slider->id)}}">Edit</a>
                                             <a onclick="return confirm('Are you sure you want to delete?')"
                                                class="dropdown-item"
                                                href="{{route('stars.promotion.delete',$slider->id)}}">Delete</a>
@@ -250,6 +252,7 @@
                                         <i class="fas fa-ellipsis-v"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a class="dropdown-item" href="{{route('stars.link.edit',$link->id)}}">Edit</a>
                                         <a onclick="return confirm('Are you sure you want to delete?')"
                                            class="dropdown-item"
                                            href="{{route('stars.homepage.link.delete',$link->id)}}">Delete</a>
@@ -290,7 +293,7 @@
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="slider_link" placeholder="Slider Link"
-                                               type="text" required>
+                                               type="url" required>
                                     </div>
                                 </div>
                                 <div class="text-right">
@@ -328,7 +331,7 @@
                                     <div class="form-group mb-3">
                                         <label>Promotion URL</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control" name="url" type="text" required>
+                                            <input class="form-control" name="url" type="url" required>
                                         </div>
                                     </div>
                                     <div class="text-right">
@@ -365,7 +368,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="link" placeholder="Link URL" type="text"
+                                        <input class="form-control" name="link" placeholder="Link URL" type="url"
                                                required>
                                     </div>
                                 </div>
@@ -393,5 +396,4 @@
 @endsection
 
 @push('js')
-
 @endpush

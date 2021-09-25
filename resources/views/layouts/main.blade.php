@@ -108,7 +108,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        {{Auth::guard('user')->user()->name}}
+                        <i  style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a href="{{route('user.logout')}}" style="color: blue !important;"
@@ -116,11 +116,8 @@
                     </ul>
                 </li>
             @endauth
-            <li class="lang-btns">
-                <a class="active" href="{{ route('localization' , 'bm') }}"> <small >BM</small> </a> 
-                | 
-                <a href="{{ route('localization' , 'en') }}"><small> EN </small></a>
-            </li>
+            <li><a href="{{ route('localization' , 'bm') }}"><small>BM</small></a> | <a
+                    href="{{ route('localization' , 'en') }}"><small> EN </small></a></li>
         </ul>
     </nav><!-- /. Desktop Navbar -->
 
@@ -130,11 +127,11 @@
                 <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
                 <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
             </div>
-            
+
         </div>
         <div>
             <small>
-                <a href="{{ route('localization' , 'bm') }}">BM</a> | 
+                <a href="{{ route('localization' , 'bm') }}">BM</a> |
                 <a href="{{ route('localization' , 'en') }}">EN</a>
             </small>
             <img id="hamburger_btn" class="ms-3" src="{{asset('assets/img/menu-white.svg')}}" alt="">

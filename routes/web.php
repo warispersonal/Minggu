@@ -101,10 +101,16 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::post('/edit/{id}', [HomePagePartnerController::class, 'update'])->name('stars.homepage.edit');
         Route::get('/delete/{id}', [HomePagePartnerController::class, 'destroy'])->name('stars.homepage.delete');
         Route::get('/slider/delete/{id}', [HomePagePartnerController::class, 'slider_delete'])->name('stars.homepage.slide.delete');
+        Route::get('/slider/{id}/edit', [HomePagePartnerController::class, 'slider_edit'])->name('stars.homepage.slide.edit');
         Route::get('/link/delete/{id}', [HomePagePartnerController::class, 'link_delete'])->name('stars.homepage.link.delete');
+        Route::get('/promotion/{id}/edit', [HomePagePartnerController::class, 'promotion_edit'])->name('stars.promotion.edit');
+        Route::get('/link/{id}/edit', [HomePagePartnerController::class, 'link_edit'])->name('stars.link.edit');
         Route::get('/promotion/delete/{id}', [HomePagePartnerController::class, 'promotion_delete'])->name('stars.promotion.delete');
         Route::post('/slider/create', [HomePagePartnerController::class, 'slider_store'])->name('stars.slide.store');
+        Route::post('/slider/{id}/update', [HomePagePartnerController::class, 'slider_update'])->name('stars.slide.update');
         Route::post('/promotion/create', [HomePagePartnerController::class, 'promotion_store'])->name('stars.promotion.store');
+        Route::post('/promotion/{id}/update', [HomePagePartnerController::class, 'promotion_update'])->name('stars.promotion.update');
+        Route::post('/link/{id}/update', [HomePagePartnerController::class, 'link_update'])->name('stars.link.update');
         Route::post('/link/create', [HomePagePartnerController::class, 'link_store'])->name('stars.link.store');
         Route::get('/view-changes/{id}', [HomePagePartnerController::class, 'showChanges'])->name('stars.homepage.showChanges');
 
@@ -222,19 +228,29 @@ Route::prefix('partner')->namespace('Auth\Partner')->group(function () {
 
 Route::prefix('partner')->middleware('auth:partner')->namespace('Partner')->group(function () {
     Route::get('dashboard', [PartnerController::class, 'dashboard'])->name('partner.dashboard');
+
     Route::get('/promotion', [PartnerController::class, 'showPromotions'])->name('partner.show.promotion');
     Route::post('/promotion/create', [PartnerController::class, 'promotion_store'])->name('partner.promotion.store');
     Route::get('/promotion/delete/{id}', [PartnerController::class, 'promotion_delete'])->name('partner.promotion.delete');
+    Route::get('/promotion/{id}/edit', [PartnerController::class, 'promotion_edit'])->name('stars.promotion.edit');
+    Route::post('/promotion/{id}/update', [PartnerController::class, 'promotion_update'])->name('stars.promotion.update');
+
+
     Route::get('/info', [PartnerController::class, 'editUniqueInfo'])->name('partner.unique.info');
     Route::post('/info', [PartnerController::class, 'updateUniqueInfo'])->name('partner.unique.info');
 
     Route::get('/button', [PartnerController::class, 'showButtons'])->name('partner.show.button');
     Route::post('/button/create', [PartnerController::class, 'button_store'])->name('partner.button.store');
     Route::get('/button/delete/{id}', [PartnerController::class, 'button_delete'])->name('partner.button.delete');
+    Route::get('/button/{id}/edit', [PartnerController::class, 'link_edit'])->name('partner.link.edit');
+    Route::post('/button/{id}/update', [PartnerController::class, 'link_update'])->name('partner.link.update');
+
 
     Route::get('/slider', [PartnerController::class, 'showSliders'])->name('partner.show.slider');
     Route::post('/slider/create', [PartnerController::class, 'slider_store'])->name('partner.slider.store');
     Route::get('/slider/delete/{id}', [PartnerController::class, 'slider_delete'])->name('partner.slider.delete');
+    Route::get('/slider/{id}/edit', [PartnerController::class, 'slider_edit'])->name('partner.slide.edit');
+    Route::post('/slider/{id}/update', [PartnerController::class, 'slider_update'])->name('partner.slide.update');
 
 
 });
