@@ -129,6 +129,12 @@ class HomePagePartnerController extends Controller
         return redirect()->back()->with(['msg' => 'Promotion deleted successfully']);;
     }
 
+    public function promotion_edit($id)
+    {
+        $slider = PartnerPromotion::find($id);
+        return  view('superadmin.homepage.promotion.edit',compact('slider'));
+    }
+
 
     public function slider_store(Request $request)
     {
@@ -141,6 +147,19 @@ class HomePagePartnerController extends Controller
         return redirect()->back()->with(['msg' => 'Slider added successfully']);;
     }
 
+
+    public function slider_update(Request $request, $id)
+    {
+        $slider = PartnerSlider::find($id);
+        if($request->has('slider')){
+            $sliderImage = $this->uploadMediaFile($request, 'slider', FileConstant::PARTNER_SLIDER);
+            $slider->slider = $sliderImage;
+        }
+        $slider->slider_link = $request->slider_link;
+        $slider->save();
+        return redirect()->route('stars.homepage.show', $slider->partner_id)->with(['msg' => 'Slider updated successfully']);;
+    }
+
     public function promotion_store(Request $request)
     {
         $sliderImage = $this->uploadMediaFile($request, 'slider', FileConstant::PARTNER_PROMOTION);
@@ -150,6 +169,19 @@ class HomePagePartnerController extends Controller
         $slider->url = $request->url;
         $slider->save();
         return redirect()->back()->with(['msg' => 'Promotion added successfully']);;
+    }
+
+
+    public function promotion_update(Request $request, $id)
+    {
+        $slider = PartnerPromotion::find($id);
+        if($request->has('slider')){
+            $sliderImage = $this->uploadMediaFile($request, 'slider', FileConstant::PARTNER_PROMOTION);
+            $slider->promotion_image = $sliderImage;
+        }
+        $slider->url = $request->url;
+        $slider->save();
+        return redirect()->route('stars.homepage.show', $slider->partner_id)->with(['msg' => 'Promotion updated successfully']);;
     }
 
     public function link_store(Request $request)
@@ -241,5 +273,9 @@ class HomePagePartnerController extends Controller
             $updated->delete();
         }
         return redirect()->route('stars.homepage.index')->with(['msg' => 'Action performed successfully']);
+    }
+    public function slider_edit($id){
+        $slider = PartnerSlider::find($id);
+        return view('superadmin.homepage.slider.edit',compact('slider'));
     }
 }

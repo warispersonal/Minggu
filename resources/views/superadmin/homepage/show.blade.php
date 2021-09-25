@@ -88,6 +88,7 @@
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                             class="fas fa-ellipsis-v"></i></a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a class="dropdown-item" href="{{route('stars.homepage.slide.edit',$slider->id)}}">Edit</a>
                                         <a onclick="return confirm('Are you sure you want to delete?')"
                                            class="dropdown-item"
                                            href="{{route('stars.homepage.slide.delete',$slider->id)}}">Delete</a>
@@ -112,7 +113,7 @@
                         </div>
                         <div class="col-6 text-right">
                             <a data-toggle="modal" data-target="#modal-promotion-image" class="btn btn-sm btn-neutral">
-                                Add New Promotion
+                                Add New Prmotion
                             </a>
                         </div>
                     </div>
@@ -167,6 +168,7 @@
                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                                 class="fas fa-ellipsis-v"></i></a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="{{route('stars.promotion.edit',$slider->id)}}">Edit</a>
                                             <a onclick="return confirm('Are you sure you want to delete?')"
                                                class="dropdown-item"
                                                href="{{route('stars.promotion.delete',$slider->id)}}">Delete</a>
