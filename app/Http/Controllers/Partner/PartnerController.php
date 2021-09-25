@@ -227,4 +227,54 @@ class PartnerController extends Controller
         return redirect()->route('partner.dashboard')->with(['msg' => 'Partner updated successfully & waiting for approve']);
     }
 
+    public function promotion_edit($id)
+    {
+        $partner = PartnerPromotion::find($id);
+        return  view('partner.single.promotion.edit',compact('partner'));
+    }
+
+    public function promotion_update(Request $request, $id)
+    {
+        $partner = PartnerPromotion::find($id);
+        if($request->has('slider')){
+            $sliderImage = $this->uploadMediaFile($request, 'slider', FileConstant::PARTNER_PROMOTION);
+            $partner->promotion_image = $sliderImage;
+        }
+        $partner->url = $request->url;
+        $partner->save();
+        return redirect()->route('partner.show.promotion')->with(['msg' => 'Promotion updated successfully']);
+    }
+
+    public function slider_edit($id){
+        $slider = PartnerSlider::find($id);
+        return view('partner.single.slider.edit',compact('slider'));
+    }
+
+    public function slider_update(Request $request, $id)
+    {
+        $slider = PartnerSlider::find($id);
+        if($request->has('slider')){
+            $sliderImage = $this->uploadMediaFile($request, 'slider', FileConstant::PARTNER_SLIDER);
+            $slider->slider = $sliderImage;
+        }
+        $slider->slider_link = $request->slider_link;
+        $slider->save();
+        return redirect()->route('partner.show.slider')->with(['msg' => 'Slider updated successfully']);;
+    }
+
+    public function link_edit($id)
+    {
+        $link = PartnerLink::find($id);
+        return  view('partner.single.links.edit',compact('link'));
+    }
+
+    public function link_update(Request $request, $id)
+    {
+        $linkItem = PartnerLink::find($id);
+        $linkItem->title = $request->title;
+        $linkItem->title_bm = $request->title_bm;
+        $linkItem->link = $request->link;
+        $linkItem->save();
+        return redirect()->route('partner.show.slider')->with(['msg' => 'Link updated successfully']);;
+    }
 }

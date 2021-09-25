@@ -44,7 +44,7 @@
                                     <div class="form-group mb-3">
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" value="{{$slider->slider_link}}" name="slider_link" placeholder="Slider Link"
-                                                   type="text" required>
+                                                   type="url" required>
                                         </div>
                                     </div>
                                     <div class="text-right">

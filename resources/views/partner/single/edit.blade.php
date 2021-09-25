@@ -114,7 +114,7 @@
                                         <label>Facebook Link</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="fb" placeholder="Facebook Link"
-                                                   value="{{ $partner->fb }}" type="text">
+                                                   value="{{ $partner->fb }}" type="url">
                                         </div>
                                     </div>
 
@@ -122,7 +122,7 @@
                                         <label>Instagram Link</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="insta" placeholder="Instagram Link"
-                                                   value="{{ $partner->insta }}" type="text">
+                                                   value="{{ $partner->insta }}" type="url">
                                         </div>
                                     </div>
 
@@ -130,7 +130,7 @@
                                         <label>Twitter Link</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="twitter" placeholder="Twitter Link"
-                                                   value="{{ $partner->twitter }}" type="text">
+                                                   value="{{ $partner->twitter }}" type="url">
                                         </div>
                                     </div>
 
@@ -139,14 +139,14 @@
                                         <label>Youtube Link</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="youtube" placeholder="Youtube Link"
-                                                   value="{{ $partner->youtube }}" type="text">
+                                                   value="{{ $partner->youtube }}" type="url">
                                         </div>
                                     </div>
 
                                     <div class="form-group mb-3">
                                         <label>Linkedin Link</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control"  name="linkedin" placeholder="Linkedin Link" value="{{ $partner->linkedin }}" type="text" >
+                                            <input class="form-control"  name="linkedin" placeholder="Linkedin Link" value="{{ $partner->linkedin }}" type="url" >
                                         </div>
                                     </div>
 
@@ -155,7 +155,7 @@
                                         <label>Website Link</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="website" placeholder="Website Link"
-                                                   value="{{ $partner->website }}" type="text">
+                                                   value="{{ $partner->website }}" type="url">
                                         </div>
                                     </div>
 
@@ -163,7 +163,7 @@
                                         <label>Careers Link</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="careers" placeholder="Careers Link"
-                                                   value="{{ $partner->careers }}" type="text">
+                                                   value="{{ $partner->careers }}" type="url">
                                         </div>
                                     </div>
 
@@ -171,7 +171,7 @@
                                         <label>Contact Us Link</label>
                                         <div class="input-group input-group-alternative">
                                             <input class="form-control" name="contact_us" placeholder="Contact Us Link"
-                                                   value="{{ $partner->contact_us }}" type="text">
+                                                   value="{{ $partner->contact_us }}" type="url">
                                         </div>
                                     </div>
 

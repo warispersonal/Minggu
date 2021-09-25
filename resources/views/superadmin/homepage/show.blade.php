@@ -293,7 +293,7 @@
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="slider_link" placeholder="Slider Link"
-                                               type="text" required>
+                                               type="url" required>
                                     </div>
                                 </div>
                                 <div class="text-right">
@@ -331,7 +331,7 @@
                                     <div class="form-group mb-3">
                                         <label>Promotion URL</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control" name="url" type="text" required>
+                                            <input class="form-control" name="url" type="url" required>
                                         </div>
                                     </div>
                                     <div class="text-right">
@@ -368,7 +368,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="link" placeholder="Link URL" type="text"
+                                        <input class="form-control" name="link" placeholder="Link URL" type="url"
                                                required>
                                     </div>
                                 </div>
@@ -396,5 +396,4 @@
 @endsection
 
 @push('js')
-
 @endpush

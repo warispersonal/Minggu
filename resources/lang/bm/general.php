@@ -136,7 +136,7 @@ return [
     'forgot_password' => 'Tukar kata laluan, Sila log masuk sekali lagi',
 
     // Partner details
-    'program_tab' => 'Programme',
+    'program_tab' => 'Atur Cara',
     'information_tab' => 'Maklumat',
     'terkini-btn' => 'Tonton Episod MSD Terkini ',
 ];

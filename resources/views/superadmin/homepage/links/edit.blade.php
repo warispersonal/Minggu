@@ -40,7 +40,7 @@
                                     </div>
                                     <div class="form-group mb-3">
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control" name="link" value="{{$link->link}}" placeholder="Link URL" type="text"
+                                            <input class="form-control" name="link" value="{{$link->link}}" placeholder="Link URL" type="url"
                                                    required>
                                         </div>
                                     </div>

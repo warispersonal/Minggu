@@ -34,6 +34,7 @@
                     <div class="card-body">
 
                         <div class="table-responsive">
+                            @if(count($users) != 0)
                             <table class="table align-items-center table-flush w-100" id="filterTable">
                                 <thead class="thead-light">
                                 <tr>
@@ -54,6 +55,11 @@
                                 @endforeach
                                 </tbody>
                             </table>
+                            @else
+                                <div class="alert alert-warning" role="alert">
+                                    No new users found
+                                </div>
+                            @endif
                         </div>
 
                     </div>

@@ -66,11 +66,10 @@
 <header>
     <nav class="desktop_nav container-fluid">
         <ul>
-
             @foreach($headerMenu as $menu)
                 @if( $menu['child'] )
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink{{$loop->index}}"
+                    <li class="nav-item dropdown" >
+                        <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink{{$loop->index}}"
                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Config::get('app.locale') == 'en' ? $menu['label_en'] : $menu['label_bm'] }}
                         </a>
@@ -108,7 +107,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        {{Auth::guard('user')->user()->name}}
+                        <i  style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a href="{{route('user.logout')}}" style="color: blue !important;"
@@ -116,8 +115,11 @@
                     </ul>
                 </li>
             @endauth
-            <li><a href="{{ route('localization' , 'bm') }}"><small>BM</small></a> | <a
-                    href="{{ route('localization' , 'en') }}"><small> EN </small></a></li>
+            <li>
+                <a href="{{ route('localization' , 'bm') }}" class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"><small>BM</small></a>
+                |
+                <a href="{{ route('localization' , 'en') }}" class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"><small> EN </small></a>
+            </li>
         </ul>
     </nav><!-- /. Desktop Navbar -->
 
@@ -127,8 +129,10 @@
                 <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
                 <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
             </div>
-            <small><a href="{{ route('localization' , 'bm') }}">BM</a> | <a
-                    href="{{ route('localization' , 'en') }}">EN</a> </small>
+            <small>
+                <a class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}" href="{{ route('localization' , 'bm') }}">BM</a>
+                |
+                <a class="{{Config::get('app.locale') == 'en' ? "active" : ""}}" href="{{ route('localization' , 'en') }}">EN</a> </small>
         </div>
 
         <img id="hamburger_btn" src="{{asset('assets/img/menu-white.svg')}}" alt="">
@@ -150,7 +154,7 @@
                 <li><a id="mobile_login" class="pop-btns">{{ __('auth.login') }}</a></li>
             @endguest
             @if(\Illuminate\Support\Facades\Auth::guard('user')->check())
-                <li> {{Auth::guard('user')->user()->name}} </li>
+                <li> <i  style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}    </li>
                 <li><a href="{{route('user.logout')}}" style="color: blue !important;"
                        class="dropdown-item">{{ __('auth.logout') }}</a></li>
             @endif
@@ -271,7 +275,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" value="{{ old('phone') }}" name="phone"
+                        <input class="custom_inputs" type="text" value="{{ old('phone') }}" pattern="[0-9]+"name="phone"
                                placeholder="{{ __('auth.phoneNumber') }}">
                         @if ($errors->has('phone'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -290,6 +294,7 @@
                     </div>
                     <div class="mb-4">
                         <input class="custom_inputs" type="password" name="password"
+                               min="6" max="8"
                                placeholder="{{ __('auth.password') }}">
                         @if ($errors->has('password'))
                             <span class="invalid-feedback" style="display: block;" role="alert">

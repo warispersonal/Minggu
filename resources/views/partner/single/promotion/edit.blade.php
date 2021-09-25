@@ -30,7 +30,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-8">
-                                <form method="post" action="{{route('stars.promotion.update',$slider->id)}}"
+                                <form method="post" action="{{route('stars.promotion.update',$partner->id)}}"
                                       enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group mb-3">
@@ -39,14 +39,14 @@
                                             <input class="form-control" name="slider" type="file" >
                                         </div>
                                         <div class="mt-2">
-                                            <img src="{{$slider->promotion_logo}}"
+                                            <img src="{{$partner->promotion_logo}}"
                                                  class="promosi-image-details main-details-image"/>
                                         </div>
                                     </div>
                                     <div class="form-group mb-3">
                                         <label>Promotion URL</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control" name="url" value="{{$slider->url}}" type="url" required>
+                                            <input class="form-control" name="url" value="{{$partner->url}}" type="url" required>
                                         </div>
                                     </div>
                                     <div class="text-right">

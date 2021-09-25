@@ -73,6 +73,8 @@
                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                                 class="fas fa-ellipsis-v"></i></a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="{{route('partner.slide.edit',$slider->id)}}">Edit</a>
+
                                             <a class="dropdown-item"
                                                onclick="return confirm('Are you sure you want to delete?')"
                                                href="{{route('partner.slider.delete',$slider->id)}}">Delete</a>
@@ -110,7 +112,7 @@
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
                                         <input class="form-control" name="slider_link" placeholder="Slider Link"
-                                               type="text" required>
+                                               type="url" required>
                                     </div>
                                 </div>
                                 <div class="text-right">

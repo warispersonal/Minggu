@@ -52,7 +52,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone' => ['required', 'string', 'max:255'],
             'ic_number' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'string'],
+            'password' => ['required', 'string', 'min:6', 'max:8'],
 //            'terms' => ['required'],
         ]);
         if ($validator->passes()) {
@@ -72,7 +72,7 @@ class RegisterController extends Controller
             Mail::to($user->email)->send(new SendRegisterEmail($user));
             return redirect()->back()->withErrors($validator)->with('msg',$message)->with('user',$user)->with('action','regitser');
         } else {
-            return redirect()->back()->withErrors($validator)->withInput($request->input())->with('from', 'register');
+            return redirect()->back()->withInput()->withErrors($validator)->with('from', 'register');
         }
     }
     public function send_mail()

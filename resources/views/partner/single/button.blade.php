@@ -77,6 +77,7 @@
                                             <i class="fas fa-ellipsis-v"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="{{route('partner.link.edit',$link->id)}}">Edit</a>
                                             <a class="dropdown-item"
                                                onclick="return confirm('Are you sure you want to delete?')"
                                                href="{{route('partner.button.delete',$link->id)}}">Delete</a>
@@ -113,7 +114,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="link" placeholder="Link URL" type="text"
+                                        <input class="form-control" name="link" placeholder="Link URL" type="url"
                                                required>
                                     </div>
                                 </div>
