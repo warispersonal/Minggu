@@ -116,8 +116,11 @@
                     </ul>
                 </li>
             @endauth
-            <li><a href="{{ route('localization' , 'bm') }}"><small>BM</small></a> | <a
-                    href="{{ route('localization' , 'en') }}"><small> EN </small></a></li>
+            <li class="lang-btns">
+                <a href="{{ route('localization' , 'bm') }}" class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"><small>BM</small></a>
+                |
+                <a href="{{ route('localization' , 'en') }}" class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"><small> EN </small></a>
+            </li>
         </ul>
     </nav><!-- /. Desktop Navbar -->
 
@@ -131,8 +134,8 @@
         </div>
         <div>
             <small>
-                <a href="{{ route('localization' , 'bm') }}">BM</a> |
-                <a href="{{ route('localization' , 'en') }}">EN</a>
+                <a class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"  href="{{ route('localization' , 'bm') }}">BM</a> |
+                <a class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"  href="{{ route('localization' , 'en') }}">EN</a>
             </small>
             <img id="hamburger_btn" class="ms-3" src="{{asset('assets/img/menu-white.svg')}}" alt="">
         </div>
@@ -155,7 +158,7 @@
                 <li><a id="mobile_login" class="pop-btns">{{ __('auth.login') }}</a></li>
             @endguest
             @if(\Illuminate\Support\Facades\Auth::guard('user')->check())
-                <li> {{Auth::guard('user')->user()->name}} </li>
+                <li> <i  style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}    </li>
                 <li><a href="{{route('user.logout')}}" style="color: blue !important;"
                        class="dropdown-item">{{ __('auth.logout') }}</a></li>
             @endif
@@ -276,7 +279,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" value="{{ old('phone') }}" name="phone"
+                        <input class="custom_inputs" type="text" value="{{ old('phone') }}" pattern="[0-9]+"name="phone"
                                placeholder="{{ __('auth.phoneNumber') }}">
                         @if ($errors->has('phone'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -295,6 +298,7 @@
                     </div>
                     <div class="mb-4">
                         <input class="custom_inputs" type="password" name="password"
+                               min="6" max="8"
                                placeholder="{{ __('auth.password') }}">
                         @if ($errors->has('password'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
