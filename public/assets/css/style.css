@@ -51,12 +51,18 @@
     display: flex;
     align-items: center;
 }
+.dropdown-menu li{
+    margin:0px;
+    width:100%;
+}
 .mobile_nav{
     display: none;
     position: fixed;
+    top:0px;
     right: -250px;
+    width:250px;
     background: white;
-    padding: 45px;
+    padding: 35px;
     padding-top: 15px;
     height: 100vh;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.17);
@@ -104,6 +110,11 @@
     font-size: 20px;
 }
 .close_btn{
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 45px;
+}
+.close_btns{
     font-size: 20px;
     cursor: pointer;
     margin-right: 45px;
@@ -272,8 +283,14 @@
     box-shadow: 2px 3px 7px #0000002b;
     background-color: #F5841F;
     border: 2px solid #F5841F;
+    transition:all 0.3s ;
 }
 .tabs h1.active_tab{
+    border: 2px solid #808AE2;
+    background-color: rgba(128, 138, 226, 0.3);
+    color: white;
+}
+.tabs h1:hover{
     border: 2px solid #808AE2;
     background-color: rgba(128, 138, 226, 0.3);
     color: white;
@@ -291,6 +308,9 @@
 }
 #jadual_content{
     display: none;
+}
+.jadual-mobile .owl-nav{
+    margin-top:0px !important;
 }
 #jadual_tabs_content small{
     font-size: 14px;
@@ -332,6 +352,14 @@
     text-decoration: none;
     display: inline-block;
     margin-top:10px;
+    border: 2px solid #F5841F;
+    transition:all .3s;
+    
+}
+.match_links a:hover{
+    border: 2px solid #808AE2;
+    background-color: rgba(128, 138, 226, 0.3);
+    color: white; 
 }
 .theme-btn{
     color: white !important;
@@ -362,6 +390,7 @@
 .oyen{
     color: #F5841F !important;
     font-size: 4.5rem;
+    font-weight:600;
 }
 .car-details{
     color: white;
@@ -430,6 +459,7 @@
     background: none;
     color: white;
     display: none;
+    padding-left:10px;
 }
 .tabss{
     position: relative;
@@ -445,6 +475,13 @@
     font-weight: bold;
     margin-right: 15px;
     text-decoration: none;
+    border: 2px solid #F5841F;
+    transition:all .3s;
+}
+.sertai-btn:hover{
+         border: 2px solid #808AE2;
+    background-color: rgba(128, 138, 226, 0.3);
+    color: white; 
 }
 .ringgit-btn{
     border: none;
@@ -507,14 +544,16 @@
 #jom_kira_tabs #nav-tab .nav-link.active{
     border-bottom: 2px solid white;
     font-weight:bold;
-    padding: 0px;
-    margin-right:10px;
 }
 #jom_kira_tabs #nav-tab .nav-link{
     color: white;
     background: transparent;
     border: none;
     font-size: 18px;
+    padding:0px;
+    margin:.5rem 1rem;
+    margin-bottom:0px;
+    padding-bottom:.5rem;
 }
 #jom_kira_tabs #owlCarousel .nav-link{
     width: 220px;
@@ -575,6 +614,13 @@
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.17);
     text-decoration: none;
     display:inline-block;
+     border: 2px solid #808AE2;
+     transition:all .3s;
+}
+.tonton-btn:hover{
+    border: 2px solid #808AE2;
+    background-color: rgba(128, 138, 226, 0.3);
+    color: white; 
 }
 .rm-form label{
     color: #808AE2;
@@ -1119,6 +1165,25 @@
 .header-imgs img:nth-child(2){
     width:140px;
 }
+.swal-button{
+    background-color:#0057B7 !important;
+}
+.watch-again{
+    text-decoration:none;
+    transition:all .3s;
+}
+.watch-again:hover{
+    color:#F5841F;
+}
+.lang-btns a{
+    transition:all .3s;
+}
+.lang-btns a:hover{
+    color:#F5841F;
+}
+.lang-btns a.active{
+    color:#F5841F;
+}
 @media(max-width:1367px){
 
     .about-us-box{
@@ -1249,13 +1314,11 @@
         border-radius: 5px;
     }
     #promotion_tabs .nav-link{
-        padding: 5px 10px;
         border-radius: 5px;
         /* margin-left: 10px; */
         margin-bottom: 10px;
     }
     #promotion_tabs .nav-link.active{
-        padding: 5px 10px;
         border-radius: 5px;
         margin-left: 10px;
         margin-bottom: 10px;
@@ -1341,9 +1404,8 @@
         color: #D0DBFF !important;
         text-align: center;
         border-radius: 10px ;
-        padding: 10px 0px;
+        padding: 10px 16px;
         font-size: 12px;
-        font-weight: bold;
         width: 70%;
         display: block !important;
     }
@@ -1353,7 +1415,7 @@
     .jadual-mobile .owl-prev{
         position: absolute;
         top: 40% !important;
-        left: 5px;
+        left: -5px;
         transform: translateY(-55%);
     }
     .jadual-mobile .owl-prev span{
@@ -1369,7 +1431,7 @@
     .jadual-mobile .owl-next{
         position: absolute;
         top: 40% !important;
-        right: 5px;
+        right: -5px;
         transform: translateY(-55%);
     }
     .jadual-mobile .owl-item.center{
@@ -1461,7 +1523,7 @@
         color: #F5841F;
     }
     #hamburger_btn{
-        display: block;
+        display: inline;
     }
     .jom_kira-btns{
         width: 45%;
@@ -1753,7 +1815,7 @@
         font-size: 20px;
     }
     .cars-row{
-        width: 95%;
+        width: 98%;
         margin: auto;
         margin-bottom: 15px;
     }
@@ -1794,6 +1856,10 @@
         width:max-content;
         margin:0px auto;
         font-weight:bold;
+    }
+    #jom_kira_tabs #nav-tab .nav-link{
+        margin:.5rem .5rem;
+        margin-bottom:0px;
     }
 }
 

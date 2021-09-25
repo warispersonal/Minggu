@@ -42,7 +42,7 @@
                 </div>
             </div>
             <!--<img src="{{asset('assets/img/mobile-home-bg.png')}}" class="d-lg-none w-100 position-absolute top-0">-->
-            <div class="home-links position-relative mt-5 mt-md-0" >
+            <div class="home-links position-relative mt-5  mt-md-0" >
                 <img src="{{asset('assets/img/desktop-home-bg.png')}}" class="d-none d-md-block ">
                 <img src="{{asset('assets/img/mobile-home-bg.png')}}" class=" d-md-none ">
                 @foreach($partners as $partner)

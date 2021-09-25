@@ -106,7 +106,7 @@
                                             <span class="visually-hidden">Next</span>
                                         </button>
                                     </div>
-                                    <div class="text-center mt-4 p-2">
+                                    <div class="text-center mt-4 ">
                                         <img src="{{$partner->store_logo}}" class="img-fluid"
                                              style="min-height:100px; object-fit:contain;" alt="">
                                     </div>

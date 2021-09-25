@@ -64,13 +64,13 @@
 
 
 <header>
-    <nav class="desktop_nav container-fluid">
+    <nav class="desktop_nav container-fluid ">
         <ul>
 
             @foreach($headerMenu as $menu)
                 @if( $menu['child'] )
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink{{$loop->index}}"
+                        <a class="py-1 dropdown-toggle" href="#" id="navbarDropdownMenuLink{{$loop->index}}"
                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Config::get('app.locale') == 'en' ? $menu['label_en'] : $menu['label_bm'] }}
                         </a>
@@ -116,8 +116,11 @@
                     </ul>
                 </li>
             @endauth
-            <li><a href="{{ route('localization' , 'bm') }}"><small>BM</small></a> | <a
-                    href="{{ route('localization' , 'en') }}"><small> EN </small></a></li>
+            <li class="lang-btns">
+                <a class="active" href="{{ route('localization' , 'bm') }}"> <small >BM</small> </a> 
+                | 
+                <a href="{{ route('localization' , 'en') }}"><small> EN </small></a>
+            </li>
         </ul>
     </nav><!-- /. Desktop Navbar -->
 
@@ -127,11 +130,16 @@
                 <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
                 <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
             </div>
-            <small><a href="{{ route('localization' , 'bm') }}">BM</a> | <a
-                    href="{{ route('localization' , 'en') }}">EN</a> </small>
+            
+        </div>
+        <div>
+            <small>
+                <a href="{{ route('localization' , 'bm') }}">BM</a> | 
+                <a href="{{ route('localization' , 'en') }}">EN</a>
+            </small>
+            <img id="hamburger_btn" class="ms-3" src="{{asset('assets/img/menu-white.svg')}}" alt="">
         </div>
 
-        <img id="hamburger_btn" src="{{asset('assets/img/menu-white.svg')}}" alt="">
 
     <!--<?php if($_SERVER['REQUEST_URI'] == "/" || $_SERVER['REQUEST_URI'] == "/index.php"){ ?>-->
     <!--<img id="hamburger_btn" src="{{asset('assets/img/menu.svg')}}" alt="">-->
@@ -204,7 +212,7 @@
 @guest
     <div class="overlay"></div>
 
-    <div id="login_modal" class="my_modal">
+    <div id="login_modal" class="my_modal pb-4">
         <div class="d-flex justify-content-between">
             <h1 class="modal_heading">{{ __('auth.login') }}</h1>
             <i class="bi bi-x close_btn" id="login_close_button"></i>
@@ -231,7 +239,7 @@
                                     </span>
                         @endif
                     </div>
-                    <div class="mb-md-5 mb-3">
+                    <div class="mb-md-4 mb-3">
                         <input class="submit-btn" type="submit" value="{{ __('auth.send') }}">
                     </div>
                     <a class="forget" href="{{ route('password.request') }}">{{ __('auth.forgotPassword') }}?</a>

@@ -58,7 +58,7 @@ overlay.addEventListener("click", () => {
     loginModal.style.bottom = "-100%"
     registerModal.style.bottom = "-100%"
     mobileNav.style.right = "-250px"
-    overlay.style.zIndex = "1"
+    overlay.style.zIndex = "8"
 })
 
 hamburgerBtn.addEventListener("click", () => {

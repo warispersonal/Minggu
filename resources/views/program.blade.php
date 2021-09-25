@@ -228,7 +228,7 @@
                                 </div>
                             </div>
 
-                            <ul class="owl-carousel d-lg-none nav nav-pills mb-3 jadual-mobile owl-loaded owl-drag"
+                            <ul class="owl-carousel owl-theme d-lg-none nav nav-pills mb-3 jadual-mobile "
                                 id="pills-tab" role="tablist" style="">
 
 
@@ -469,9 +469,12 @@
             </div>
         </div>
     </main>
-    <span id="close-btn" class="bi bi-x"></span>
+    <!--<span id="close-btn" class="bi bi-x"></span>-->
     <div id="program-modal">
         <div class="program-modal-content">
+            <div class="text-end">
+                <i class="bi bi-x close_btns mb-3 me-0 d-inline-block"></i>
+            </div>
             <div class="ratio ratio-16x9" id="program_frame">
 
             </div>
@@ -506,8 +509,7 @@
                             @endif
 
                             @if($program->watch_again != "")
-                                <a target="_blank"
-                                   href="{{$program->watch_again}}"><b>{{ __('general.watch_again') }}</b></a>
+                                <a target="_blank" class="watch-again" href="{{$program->watch_again}}"><b>{{ __('general.watch_again') }}</b></a>
                             @endif
                         </p>
                         <div class="d-flex align-items-center">
@@ -524,6 +526,9 @@
 
     <div id="jadual-modal">
         <div class="jadual-modal-content">
+            <div class="text-end">
+                <i class="bi bi-x close_btns mb-3 me-0 d-inline-block"></i>
+            </div>
             <div class="ratio ratio-16x9" id="jadual_frame_second">
             </div>
             <div class="jadual-time">
@@ -570,7 +575,9 @@
             $(".owl-carousel").owlCarousel({
                 loop: true,
                 nav: true,
-                dots: false
+                dots: false,
+                items:3,
+                margin:5,
             });
             $(".nav-link").click(function () {
                 $('.nav-link').removeClass('active');
@@ -595,7 +602,7 @@
         const programModal = document.querySelector("#program-modal")
         const programImg1 = document.querySelector(".img1")
         const programModalContent = document.querySelector(".program-modal-content")
-        const programCloseBtn = document.querySelector("#close-btn")
+        const closeBtns = document.querySelectorAll(".close_btns")
         const jadualModal = document.querySelector("#jadual-modal")
 
 
@@ -612,17 +619,12 @@
             jadual.classList.add("active_tab")
         })
 
-        programCloseBtn.addEventListener("click", () => {
-            programModal.style.top = "155%"
-            jadualModal.style.top = "155%"
-            overlay.style.display = "none"
-            programCloseBtn.style.top = "155%"
-        })
+        
 
         overlay.addEventListener("click", () => {
             programModal.style.top = "150%"
             jadualModal.style.top = "150%"
-            programCloseBtn.style.top = "155%"
+            // programCloseBtn.style.top = "155%"
         })
 
         function jadual_modal_open() {
@@ -631,8 +633,15 @@
             setTimeout(() => {
                 jadualModal.style.top = "50%"
             }, 300);
-            programCloseBtn.style.top = "8%"
+            // programCloseBtn.style.top = "8%"
         }
+        closeBtns.forEach( close => {
+            close.addEventListener("click",()=>{
+            programModal.style.top = "155%"
+            jadualModal.style.top = "155%"
+            overlay.style.display = "none"
+            })
+        })
 
         function openModal(program) {
             if (changeModalView(program)) {
@@ -643,7 +652,7 @@
                 setTimeout(() => {
                     programModal.style.top = "50%"
                 }, 300);
-                programCloseBtn.style.top = "8%"
+                // programCloseBtn.style.top = "8%"
             }
         }
 
@@ -691,6 +700,7 @@
 
             jadual_modal_open();
         }
+        
     </script>
 
 @endpush

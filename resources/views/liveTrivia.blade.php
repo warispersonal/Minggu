@@ -44,7 +44,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-5 pt-5">
+                <div class=" pt-5">
                     <a href="{{route('pertandingan')}}" class="tonton-btn"> <i class="bi bi-chevron-left"></i>
                         {{ __('general.back_button_age') }}
                     </a>

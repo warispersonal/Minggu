@@ -33,7 +33,7 @@
                 <div id="jom_kira_tabs">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active ps-0" id="nav-home-tab" data-bs-toggle="tab"
+                            <button class="nav-link active ms-0" id="nav-home-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
                                     aria-selected="true">{{ __('general.sertai_sekarang_1') }}
                             </button>
