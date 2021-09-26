@@ -1,6 +1,7 @@
 @extends('layouts.app', ['class' => 'bg-default'])
 
 @section('content')
+    @include('layouts.headers.guest')
 
     @if(count($errors) > 0 )
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
