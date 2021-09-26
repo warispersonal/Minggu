@@ -53,7 +53,6 @@ class RegisterController extends Controller
             'phone' => ['required', 'string', 'max:255'],
             'ic_number' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:6', 'max:8'],
-//            'terms' => ['required'],
         ]);
         if ($validator->passes()) {
             $user = User::create([
@@ -64,6 +63,7 @@ class RegisterController extends Controller
                 'raw_password' => $request['password'] ?? "",
                 'password' => Hash::make($request['password']) ?? "",
             ]);
+
             $credentials = $request->only('email', 'password');
             $message = trans('general.register_success_message');
             if (Auth::guard('user')->attempt($credentials)) {

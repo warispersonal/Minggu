@@ -279,7 +279,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs" type="text" value="{{ old('phone') }}" pattern="[0-9]+"name="phone"
+                        <input class="custom_inputs only-decimal-integer-number" type="text" value="{{ old('phone') }}"  name="phone"
                                placeholder="{{ __('auth.phoneNumber') }}">
                         @if ($errors->has('phone'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -374,6 +374,19 @@
     @endif
 @endif
 @stack('js')
+<script>
+    $(function () {
+        $('.only-decimal-integer-number').on('input', function (e) {
+            if (/^(\d+(\d{0,2})?)?$/.test($(this).val())) {
+                // Input is OK. Remember this value
+                $(this).data('prevValue', $(this).val());
+            } else {
+                // Input is not OK. Restore previous value
+                $(this).val($(this).data('prevValue') || '');
+            }
+        }).trigger('input'); // Initialise the `prevValue` data properties
+    });
+</script>
 
 
 </body>
