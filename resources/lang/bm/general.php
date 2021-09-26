@@ -139,4 +139,8 @@ return [
     'program_tab' => 'Atur Cara',
     'information_tab' => 'Maklumat',
     'terkini-btn' => 'Tonton Episod MSD Terkini ',
+
+    'reset_password' => 'Menetapkan semula kata laluan',
+    'reset_password_button' => 'Hantar Pautan Tetapkan Semula Kata Laluan',
+    'reset_password_email' => 'E-mel',
 ];
