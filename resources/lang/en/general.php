@@ -25,12 +25,12 @@ return [
     'registerStatement' => '*By submitting this registration form, participants hereby agree to authorizes PNB, and PNB reserves the right to collect and process participants\' personal data, if any, for advertising, publicity or research purposes, in accordance with legal requirements relevant, without any cost or compensation.',
 
     // MSD - live Text
-    'social_heading' => 'Can also be watched through:',
+    'social_heading' => 'Can also be watched live through:',
 
     // Program Page Text
     'msd_btn_text' => 'Watch MSD Live',
-    'program' => 'Program',
-    'schedule' => 'Schedule',
+    'program' => 'Programmes',
+    'schedule' => 'Schedules',
     'wednesday' => 'Wednesday',
     'thursday' => 'Thursday',
     'friday' => 'Friday',
@@ -91,27 +91,27 @@ return [
     'cabutanbertuah_title' => 'How to Participate',
     'cabutanbertuah_description' => 'Have you registered yet? You definitely want to because every day we will be drawing 500 winners to win themselves a Lazada E-Vouchers worth more than RM100,000 in our daily lucky draws! All you need to do is head over to our registration page, sign up, and wait for the daily winners to be announced! It is as simple as that! So get your friends and family because everyone will get a chance to win themselves a voucher!',
     'cabutanbertuah_worth' => 'E-Baucar Bernilai',
-    'cabutanbertuah_text' => 'Return to Competitions',
+    'cabutanbertuah_text' => 'Return to Contests',
 
 
     'draw_mainheading' => 'Draw 118',
     'draw_title' => 'How to Participate',
     'draw_description' => 'Make sure you follow us on Instagram to watch for more details on this competition.',
     'draw_worth' => 'E-Baucar Bernilai',
-    'draw_text' => 'Return to Competitions',
+    'draw_text' => 'Return to Contests',
 
     'livetrivia_mainheading' => 'Live Trivia',
     'livetrivia_title' => 'How to Participate',
     'livetrivia_description' => 'Our daily Live Trivia sessions are back this year! Hosted during Minggu Saham Digital week between 17 November to 23 November 2021 LIVE on MSD Facebook Page. All you have to do is start tuning in, get your keyboards ready and your thinking caps on and become one of the winners to grab yourself some Lazada E-Vouchers worth up to RM 1,100 per session! Head over to the "Programme & Schedule" page in this site to find out the date and times of the Live Trivia, set your reminders and get ready to win!!',
     'livetrivia_worth' => 'E-Baucar Bernilai',
-    'livetrivia_text' => 'Return to Competitions',
+    'livetrivia_text' => 'Return to Contests',
 
     'qa_1' => 'Frequently',
     'qa_2' => 'Asked Questions',
 
 
     'promosi_title' => 'Promotions',
-    'back_button_age' => 'Return to Competitions',
+    'back_button_age' => 'Return to Contests',
 
     'partner_rakan' => 'RAKAN',
     'partner_premier' => 'PREMIER',
@@ -155,4 +155,9 @@ return [
     'reset_password' => 'Reset password',
     'reset_password_button' => 'Send Password Reset Link',
     'reset_password_email' => 'Email',
+    'invalid_cred' => 'Invalid credentials',
+
+    'competition_message' => 'Competition submitted successfully',
+
+    'all' =>'All',
 ];

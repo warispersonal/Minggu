@@ -21,11 +21,11 @@
                     <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
                 </div>
                 <h3 class="text-white mb-0 d-lg-block d-none">
-                    @guest('user')
-                        <div class="alert alert-danger text-center" role="alert">
-                            Please Login to Access this Page
-                        </div>
-                    @endguest
+{{--                    @guest('user')--}}
+{{--                        <div class="alert alert-danger text-center hidden" role="alert">--}}
+{{--                            Please Login to Access this Page--}}
+{{--                        </div>--}}
+{{--                    @endguest--}}
                 </h3>
             </div>
 

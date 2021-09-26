@@ -32,10 +32,10 @@
                     </div>
                     <div class="col-lg-7 d-flex align-items-center">
                         <div class="cars-row my-0">
-                            <div class=" p-md-5 p-2"> 
+                            <div class=" p-md-5 p-2">
                                 <div class="car-details justify-content-around">
                                     <h5 class="mx-auto">
-                                        {{ __('general.cabutanbertuah_worth') }}
+                                        {{ __('general.draw_worth') }}
                                     </h5>
                                     <h1>RM20,000</h1>
                                 </div>

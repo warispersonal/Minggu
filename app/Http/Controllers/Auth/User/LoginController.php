@@ -54,8 +54,10 @@ class LoginController extends Controller
                 return redirect()->back()->with('msg',$message)->with('action','login');
             }
             else{
+                $message = trans('general.invalid_cred');
+
                 return redirect()->back()
-                    ->with('msg','Invalid credentials')->with('from','login')->withInput(['email']);
+                    ->with('msg',$message)->with('from','login')->withInput(['email']);
             }
         }
         else{

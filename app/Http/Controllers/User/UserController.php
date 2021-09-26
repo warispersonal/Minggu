@@ -80,7 +80,8 @@ class UserController extends Controller
             }
         }
         UserLottery::insert($userLottery);
-        return redirect()->back()->with('action','submission');
+        $message = trans('general.competition_message');
+        return redirect()->back()->with('action','submission')->with('msg', $message);
 
     }
 
