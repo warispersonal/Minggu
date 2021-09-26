@@ -344,7 +344,7 @@
 
 @if(session()->has('msg'))
     <script>
-        @if(session()->get('msg') == "Invalid credentials")
+        @if(session()->get('msg') == "Invalid credentials" || session()->get('msg') == "Kelayakan tidak sah")
         swal("", "{{session()->get('msg')}}", "error");
         @else
         swal("", "{{session()->get('msg')}}", "success");
@@ -372,6 +372,7 @@
             }, 300);
         </script>
     @endif
+
 @endif
 @stack('js')
 <script>

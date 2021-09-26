@@ -18,7 +18,7 @@ return [
 
     // Program Page Text
     'msd_btn_text' => 'Tonton MSD Live',
-    'program' => 'Program',
+    'program' => 'Atur Cara',
     'schedule' => 'Jadual',
     'wednesday' => 'Rabu',
     'thursday' => 'Khamis',
@@ -29,8 +29,8 @@ return [
     'tuesday' => 'Selasa',
 
     //pertandingan
-    'pertandingan' => 'Hadiah-hadiah Bernilai Lebih Daripada <span class="oyen">RM500,000</span> Untuk Dimenangi',
-    'jom_kira' => 'Rebut peluang untuk memenangi hadiah-hadiah menarik sepanjang Minggu Saham Digital! Sertai kami dalam pelbagai pertandingan menarik yang telah disediakan di laman web, platform-platform media sosial kami dan Minggu Saham Digital LIVE dari 20 Okotober hingga 23 November 2021.',
+    'pertandingan' => 'Hadiah-hadiah Bernilai Lebih daripada <span class="oyen">RM500,000</span> untuk Dimenangi',
+    'jom_kira' => 'Join us for a variety of fun and rewarding contests through our website and social media platforms when the Minggu Saham Digital goes <i>live</i> from 17 to 23 November 2021.Grab your friends and family to participate now because winning is only half of the fun!',
     'join_now' => 'Sertai Sekarang!',
 
     'the_match_button_1' => 'Jom... Kira Duit',
@@ -82,25 +82,25 @@ return [
     'cabutanbertuah_mainheading' => 'Cabutan Bertuah',
     'cabutanbertuah_title' => 'Cara Penyertaan',
     'cabutanbertuah_description' => 'Sudah berdaftar? Anda pasti teringin kerana setiap hari, kami akan mencabut 500 nama pemenang yang berpeluang memenangi E-Baucar Lazada bernilai RM100,000 dalam cabutan bertuah harian kami! Anda cuma perlu ke laman web pendaftaran kami, daftar dan tunggu pengumuman pemenang harian! Sungguh mudah! Jadi, ajak rakan-rakan dan ahli keluarga anda kerana pasti semua orang pasti berpeluang untuk memenangi baucar!',
-    'cabutanbertuah_worth' => 'Value E-Vouchers',
+    'cabutanbertuah_worth' => 'e-Baucar bernilai',
     'cabutanbertuah_text' => ' Kembali ke Pertandingan',
 
     'draw_mainheading' => 'Draw 118',
     'draw_title' => 'Cara Penyertaan',
     'draw_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
-    'draw_worth' => 'Value E-Vouchers',
+    'draw_worth' => 'e-Voucher worth',
     'draw_text' => 'Kembali ke Pertandingan',
 
 
     'livetrivia_mainheading' => 'Live Trivia',
     'livetrivia_title' => 'Cara Penyertaan',
-    'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami di dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital LIVE di Facebook. Anda cuma perlu menonton, bersedia dengan papan kekunci anda dan tajamkan minda anda, untuk menjadi salah seorang pemenang untuk memenangi E-Baucar Lazada! Pastikan anda catat jadual siaran dengan melayari Program & Jadual, pasangkan peringatan dan bersedia untuk menang!',
-    'livetrivia_worth' => 'Value E-Vouchers',
+    'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital LIVE di Facebook. Anda cuma perlu menonton, bersedia dengan papan kekunci anda dan tajamkan minda anda, untuk menjadi salah seorang pemenang untuk bagi E-Baucar Lazada! Pastikan anda catat jadual siaran dengan melayari Program & Jadual, pasangkan peringatan dan bersedia untuk menang!',
+    'livetrivia_worth' => 'e-Baucar bernilai',
     'livetrivia_text' => 'Kembali ke Pertandingan',
 
     'qa_1' => 'Soalan',
     'qa_2' => 'Lazim',
-    'pertandingan_title' => 'Pertandingan',
+    'pertandingan_title' => 'Peraduan',
 
     'promosi_title' => 'Promosi',
     'back_button_age' => 'Kembali ke Pertandingan',
@@ -143,4 +143,8 @@ return [
     'reset_password' => 'Menetapkan semula kata laluan',
     'reset_password_button' => 'Hantar Pautan Tetapkan Semula Kata Laluan',
     'reset_password_email' => 'E-mel',
+    'invalid_cred' => 'Kelayakan tidak sah',
+
+    'competition_message' => 'Pertandingan berjaya dihantar',
+    'all' =>'Semua',
 ];

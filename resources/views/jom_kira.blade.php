@@ -18,7 +18,7 @@
                 <div class="row px-md-5 gy-4">
                     <div class="col-lg-5 pt-4 pe-lg-5">
                         <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
-                        <p class="text-white mt-4 text-center">{{ __('general.jom_kira') }}</p>
+                        <p class="text-white mt-4 text-center">{!! __('general.jom_kira') !!}</p>
                         <div class="mt-4 d-md-flex d-none justify-content-between align-items-center flex-wrap">
                             <a href="{{route('pertandingan')}}" class="tonton-btn mt-3 mx-auto"> <i class="bi bi-chevron-left"></i>
                                 {{ __('general.back_button_age') }}
@@ -45,7 +45,7 @@
                                 <div>
                                     <img src="{{asset('assets/img/3xhonda-dash.png')}}" class="img-fluid" alt="">
                                     <div class="car-details">
-                                        <p>3X </p> 
+                                        <p>3X </p>
                                         <h4 >Honda Dash 125</h4>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h2>E-Baucar Bernilai</h2>
+                                    <h2>e-Baucar Bernilai</h2>
                                     <h1>RM4,500</h1>
                                 </div>
                                 <div class="info_iconn info_iconn_1">
@@ -125,11 +125,11 @@
                 </div>
                 <div class="py-4 d-flex d-md-none justify-content-between align-items-center flex-column">
                     <a href="{{route('sertai.sekarang')}}" class="sertai-btn d-inline-block">{{ __('general.join_now') }}</a>
-                    
+
                     <a href="{{route('pertandingan')}}" class="tonton-btn mt-3"> <i class="bi bi-chevron-left"></i>
                         {{ __('general.back_button_age') }}
                     </a>
-                   
+
                 </div>
             </div>
         </div>
