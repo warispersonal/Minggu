@@ -151,4 +151,8 @@ return [
     'terkini-btn' => 'Watch the Latest MSD Episodes ',
     'forgot_password' => 'Password change, Please login again',
 
+
+    'reset_password' => 'Reset password',
+    'reset_password_button' => 'Send Password Reset Link',
+    'reset_password_email' => 'Email',
 ];
