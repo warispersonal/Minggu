@@ -346,6 +346,8 @@
     <script>
         @if(session()->get('msg') == "Invalid credentials" || session()->get('msg') == "Kelayakan tidak sah")
         swal("", "{{session()->get('msg')}}", "error");
+        @elseif (session()->get('msg') == "You have registered successfully" || session()->get('msg') == 'Anda telah berjaya mendaftar')
+        swal("", "{{session()->get('msg')}}", "success");
         @else
         swal("", "{{session()->get('msg')}}", "success");
         @endif
