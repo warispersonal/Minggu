@@ -64,7 +64,7 @@ class RegisterController extends Controller
                 'password' => Hash::make($request['password']) ?? "",
             ]);
 
-            $credentials = $request->only('email', 'password');
+            $credentials = $request->only('email', 'password', 'role_id');
             $message = trans('general.register_success_message');
             if (Auth::guard('user')->attempt($credentials)) {
                 $message = trans('general.register_success_message');
