@@ -76,9 +76,8 @@ class LoginController extends Controller
 
    public function logoutAfterForgotPassword(){
         Session::flush();
-       $message = trans('general.forgot_password');
-
+        $message = trans('general.forgot_password');
         Auth::guard('user')->logout();
-        return redirect()->route('home.index') ->with('msg',$message);
+        return redirect()->route('home.index')->with('msg',$message);
     }
 }
