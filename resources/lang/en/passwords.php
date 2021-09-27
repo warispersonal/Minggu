@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Config;
+
 return [
 
     /*
@@ -13,10 +15,10 @@ return [
     |
     */
 
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have emailed your password reset link!',
-    'throttled' => 'Please wait before retrying.',
-    'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that email address.",
+    'reset' => Config::get('app.locale') == 'en' ?  'Your password has been reset!': "Kata laluan anda telah ditetapkan semula!",
+    'sent' =>  Config::get('app.locale') == 'en' ? 'We have emailed your password reset link!' : 'Kami telah menghantar e-mel pautan tetapan semula kata laluan anda!',
+    'throttled' => Config::get('app.locale') == 'en' ?   'Sila tunggu sebelum mencuba semula.':"",
+    'token' => Config::get('app.locale') == 'en' ?  'Token tetapan semula kata laluan ini tidak sah.':"",
+    'user' => Config::get('app.locale') == 'en' ?  "Kami tidak dapat mencari pengguna dengan alamat e-mel itu.":"",
 
 ];
