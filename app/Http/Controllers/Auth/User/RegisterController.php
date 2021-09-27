@@ -54,6 +54,9 @@ class RegisterController extends Controller
             'ic_number' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:6', 'max:8'],
         ]);
+
+        $request['role_id'] = 4;
+
         if ($validator->passes()) {
             $user = User::create([
                 'name' => $request['full_name'] ?? "",
