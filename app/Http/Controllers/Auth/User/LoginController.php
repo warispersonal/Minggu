@@ -48,7 +48,7 @@ class LoginController extends Controller
             'password' => ['required', 'string'],
         ]);
         if ($validator->passes()) {
-            $credentials = $request->only('email', 'password');
+            $credentials = $request->only('email', 'password','role_id');
             if (Auth::guard('user')->attempt($credentials)) {
                 $message = trans('general.login_success_message');
                 return redirect()->back()->with('msg',$message)->with('action','login');
