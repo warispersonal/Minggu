@@ -47,6 +47,8 @@ class LoginController extends Controller
             'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string'],
         ]);
+
+        $request['role_id'] = 4;
         if ($validator->passes()) {
             $credentials = $request->only('email', 'password', 'role_id');
             if (Auth::guard('user')->attempt($credentials)) {
