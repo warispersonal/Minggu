@@ -331,7 +331,7 @@
             </div>
         </div>
     </div>
-    
+
     <!--select bank modal-->
     <div id="bank_modal" class="my_modal">
         <div class="d-flex justify-content-between">
@@ -366,7 +366,7 @@ Win fancy prizes!</h3>
                             <option> Branch 3</option>
                         </select>
                     </div>
-                    
+
                 </form>
             </div>
             <div class="col-3 pe-0">
@@ -374,11 +374,15 @@ Win fancy prizes!</h3>
             </div>
         </div>
     </div>
-    
+
     <!--confirm modal-->
     <div id="confirm_modal" class="my_modal">
         <div class="d-flex justify-content-between">
-            <h1 class="modal_heading text-center mx-auto">You have registered successfully!</h1>
+            <h1 class="modal_heading text-center mx-auto">
+               @if (session()->get('msg') == "You have registered successfully" || session()->get('msg') == 'Anda telah berjaya mendaftar')
+                {{session()->get('msg')}}
+                @endif
+            </h1>
             <i class="bi bi-x close_btn  me-0"></i>
         </div>
         <ol class="mt-4">
@@ -387,7 +391,7 @@ Win fancy prizes!</h3>
             <li>I am an ASNB unit holder and have registered as a user of the myASNB portal </li>
         </ol>
     </div>
-    
+
 @endguest
 
 <script src="{{asset('assets/js/jquery.js')}}"></script>
@@ -405,7 +409,12 @@ Win fancy prizes!</h3>
         @if(session()->get('msg') == "Invalid credentials" || session()->get('msg') == "Kelayakan tidak sah")
         swal("", "{{session()->get('msg')}}", "error");
         @elseif (session()->get('msg') == "You have registered successfully" || session()->get('msg') == 'Anda telah berjaya mendaftar')
-        swal("", "{{session()->get('msg')}}", "success");
+            overlay.style.display = "block"
+            confirmModal.style.bottom = "55%"
+            setTimeout(() => {
+                confirmModal.style.bottom = "50%"
+
+            }, 300);
         @else
         swal("", "{{session()->get('msg')}}", "success");
         @endif

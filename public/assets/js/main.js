@@ -85,7 +85,3 @@ closeBtn2.forEach(closeBtn => {
     })
 
 });
-
-
-
-
