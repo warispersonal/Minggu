@@ -58,22 +58,28 @@ class RegisterController extends Controller
         $request['role_id'] = 4;
 
         if ($validator->passes()) {
-            $user = User::create([
-                'name' => $request['full_name'] ?? "",
-                'email' => $request['email'] ?? "",
-                'phone' => $request['phone'] ?? "",
-                'ic_number' => $request['ic_number'] ?? "",
-                'raw_password' => $request['password'] ?? "",
-                'password' => Hash::make($request['password']) ?? "",
-            ]);
-
-            $credentials = $request->only('email', 'password', 'role_id');
-            $message = trans('general.register_success_message');
-            if (Auth::guard('user')->attempt($credentials)) {
-                $message = trans('general.register_success_message');
+            $userInfo = User::where('role_id',4)->where('email',$request->email)->get()->first();
+            if($userInfo){
+                return redirect()->back()->withInput()->with('email','Email already register')->with('from', 'register');
             }
-            Mail::to($user->email)->send(new SendRegisterEmail($user));
-            return redirect()->back()->withErrors($validator)->with('msg',$message)->with('user',$user)->with('action','regitser');
+            else{
+                $user = User::create([
+                    'name' => $request['full_name'] ?? "",
+                    'email' => $request['email'] ?? "",
+                    'phone' => $request['phone'] ?? "",
+                    'ic_number' => $request['ic_number'] ?? "",
+                    'raw_password' => $request['password'] ?? "",
+                    'password' => Hash::make($request['password']) ?? "",
+                ]);
+
+                $credentials = $request->only('email', 'password', 'role_id');
+                $message = trans('general.register_success_message');
+                if (Auth::guard('user')->attempt($credentials)) {
+                    $message = trans('general.register_success_message');
+                }
+                Mail::to($user->email)->send(new SendRegisterEmail($user));
+                return redirect()->back()->withErrors($validator)->with('msg',$message)->with('user',$user)->with('action','regitser');
+            }
         } else {
             return redirect()->back()->withInput()->withErrors($validator)->with('from', 'register');
         }

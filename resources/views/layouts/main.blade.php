@@ -278,6 +278,11 @@
                                 <strong>{{ $errors->first('email') }}</strong>
                             </span>
                         @endif
+                        @if (session()->has('email'))
+                            <span class="invalid-feedback" style="display: block;" role="alert">
+                                <strong>{{ session()->get('email') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <input class="custom_inputs only-decimal-integer-number" type="text" value="{{ old('phone') }}"  name="phone"
