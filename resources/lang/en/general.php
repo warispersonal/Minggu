@@ -160,4 +160,5 @@ return [
     'competition_message' => 'Competition submitted successfully',
 
     'all' =>'All',
+    'email_already_exists' =>'Email already registered',
 ];

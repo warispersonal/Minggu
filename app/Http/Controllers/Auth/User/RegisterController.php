@@ -60,7 +60,9 @@ class RegisterController extends Controller
         if ($validator->passes()) {
             $userInfo = User::where('role_id',4)->where('email',$request->email)->get()->first();
             if($userInfo){
-                return redirect()->back()->withInput()->with('email','Email already register')->with('from', 'register');
+                $message = trans('general.email_already_exists');
+
+                return redirect()->back()->withInput()->with('email',$message)->with('from', 'register');
             }
             else{
                 $user = User::create([

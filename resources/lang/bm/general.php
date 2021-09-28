@@ -147,4 +147,6 @@ return [
 
     'competition_message' => 'Pertandingan berjaya dihantar',
     'all' =>'Semua',
+    'email_already_exists' =>'E-mel sudah didaftarkan',
+
 ];

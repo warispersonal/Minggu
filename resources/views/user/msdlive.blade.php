@@ -27,15 +27,15 @@
                             <h4 class="my-4">{{ __('general.social_heading') }}</h4>
                             <p>
                                 <img src="{{asset('assets/img/facbook.png')}}" class="img-fluid " alt=""> &nbsp;
-                                <a href="https://www.facebook.com/minggusahamdigital"> @MingguSahamDigital </a>
+                                <a target="_blank" href="https://www.facebook.com/minggusahamdigital"> @MingguSahamDigital </a>
                             </p>
                             <p>
                                 <img src="{{asset('assets/img/insta.png')}}" alt=""> &nbsp;
-                                <a href="https://www.instagram.com/minggusahamdigital/"> @MingguSahamDigital </a>
+                                <a target="_blank" href="https://www.instagram.com/minggusahamdigital/"> @MingguSahamDigital </a>
                             </p>
                             <p>
                                 <img src="{{asset('assets/img/youtube.png')}}" alt=""> &nbsp;
-                                <a href="https://www.youtube.com/channel/UCoNCjruylHYpwBYkIvRwClA"> Minggu Saham Digital </a> 
+                                <a target="_blank" href="https://www.youtube.com/channel/UCoNCjruylHYpwBYkIvRwClA"> Minggu Saham Digital </a>
                             </p>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                             </p>
                             <p>
                                 <img src="{{asset('assets/img/youtube.png')}}" alt=""> Youtube &nbsp;
-                                <a href="https://www.youtube.com/channel/UCoNCjruylHYpwBYkIvRwClA"> Minggu Saham Digital </a> 
+                                <a href="https://www.youtube.com/channel/UCoNCjruylHYpwBYkIvRwClA"> Minggu Saham Digital </a>
                             </p>
                         </div>
                     </div>
