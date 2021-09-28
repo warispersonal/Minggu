@@ -3,18 +3,7 @@
 @section('content')
     @include('layouts.headers.guest')
 
-    @if(count($errors) > 0 )
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <ul class="p-0 m-0" style="list-style: none;">
-                @foreach($errors->all() as $error)
-                    <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+
 
     <div class="container mt--8 pb-5">
         <div class="row justify-content-center">
@@ -24,7 +13,18 @@
                         <div class="text-center text-muted mb-4">
                             <small> {{ __('general.reset_password') }}</small>
                         </div>
-
+                        @if(count($errors) > 0 )
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <ul class="p-0 m-0" style="list-style: none;">
+                                    @foreach($errors->all() as $error)
+                                        <li>{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
