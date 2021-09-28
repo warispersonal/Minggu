@@ -27,7 +27,7 @@
                             <h4 class="my-4">{{ __('general.social_heading') }}</h4>
                             <p>
                                 <img src="{{asset('assets/img/facbook.png')}}" class="img-fluid " alt=""> &nbsp;
-                                <a href="https://www.facebook.com/minggusahamdigital">/ MingguSahamDigital </a>
+                                <a href="https://www.facebook.com/minggusahamdigital"> @MingguSahamDigital </a>
                             </p>
                             <p>
                                 <img src="{{asset('assets/img/insta.png')}}" alt=""> &nbsp;
@@ -54,7 +54,7 @@
                             <p>
                                 <img src="{{asset('assets/img/facbook.png')}}" class="img-fluid " alt=""> Facebook
                                 &nbsp;
-                                <a href="https://www.facebook.com/minggusahamdigital">/ MingguSahamDigital </a>
+                                <a href="https://www.facebook.com/minggusahamdigital"> @MingguSahamDigital </a>
                             </p>
                             <p>
                                 <img src="{{asset('assets/img/insta.png')}}" alt=""> Instagram &nbsp;

@@ -1184,6 +1184,24 @@
 .lang-btns a.active{
     color:#F5841F;
 }
+.baloons-container{
+    display:flex;
+    justify-content:center;
+    margin:0px auto;
+}
+.baloons-container>div.text-center{
+    width:180px;
+}
+#confirm_modal{
+      padding: 40px;
+  }
+ #confirm_modal ol{
+    list-style: upper-alpha !important;
+ }
+ #confirm_modal ol li{
+     font-size: 1.2rem;
+     margin-bottom: 10px;
+ }
 @media(max-width:1367px){
 
     .about-us-box{

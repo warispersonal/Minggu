@@ -37,7 +37,7 @@
         <div class="main-img position-relative">
             <div class="container-fluid px-md-5 pt-lg-4 header-imgs">
                 <div class="d-lg-block d-none">
-                    <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-4">
                     <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
                 </div>
             </div>

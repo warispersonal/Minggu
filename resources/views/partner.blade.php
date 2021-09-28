@@ -10,23 +10,25 @@
         <div class="main-bg position-relative">
             <div class="container-fluid px-md-5 pt-4">
                 <div class="d-lg-block d-none">
-                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
+                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-4">
                     <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
                 </div>
             </div>
-            <div class="d-flex pt-5 justify-content-center m-auto ">
+            <div class="pt-md-5 baloons-container">
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank', $partners[5]->slug)}}">
-                        <img src="{{$partners[5]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{$partners[5]->main_logo}}" class="img-fluid partner-logo " alt="">
                     </a>
                 </div>
-                <div class="text-center mt-5 me-md-5 pe-md-5 pe-3">
+                <div class="text-center">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank', $partners[4]->slug)}}">
                         <img src="{{$partners[4]->main_logo}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
+            </div>
+            <div class=" pt-md-5 rakan-utama baloons-container">
                 <div class="text-center ">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank', $partners[3]->slug)}}">
@@ -47,7 +49,7 @@
                     </a>
                 </div>
             </div>
-            <div class="d-flex pt-md-5 justify-content-center m-auto rakan-utama">
+            <div class=" pt-md-5 rakan-utama baloons-container">
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[9]->slug)}}">
@@ -80,7 +82,7 @@
                     </a>
                 </div>
             </div>
-            <div class="d-flex pt-md-5 justify-content-center m-auto rakan">
+            <div class=" pt-md-5 rakan baloons-container">
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[0]->slug)}}">
@@ -113,7 +115,7 @@
                     </a>
                 </div>
             </div>
-            <div class="d-flex pt-md-5 justify-content-center m-auto rakan-acara">
+            <div class=" pt-md-5 rakan-acara baloons-container">
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[16]->slug)}}">
@@ -146,7 +148,7 @@
                     </a>
                 </div>
             </div>
-            <div class="d-flex pt-md-5 justify-content-center m-auto ejen">
+            <div class=" pt-md-5 ejen baloons-container">
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[21]->slug)}}">
@@ -179,7 +181,7 @@
                     </a>
                 </div>
             </div>
-            <div class="d-flex justify-content-center m-auto">
+            <div class=" baloons-container">
                 <div class="text-center mt-4">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank', $partners[25]->slug)}}">
