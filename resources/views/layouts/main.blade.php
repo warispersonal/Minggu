@@ -336,50 +336,6 @@
             </div>
         </div>
     </div>
-
-    <!--select bank modal-->
-    <div id="bank_modal" class="my_modal">
-        <div class="d-flex justify-content-between">
-            <h3 class="modal_heading">Get a chance to
-Win fancy prizes!</h3>
-            <i class="bi bi-x close_btn"></i>
-        </div>
-        <div class="row mt-5">
-            <div class="col-9">
-                <form action="" class="scrol">
-                    <div class="mb-3">
-                        <select class="custom_inputs">
-                            <option hidden selected> Select Bank</option>
-                            <option> Bank 1</option>
-                            <option> Bank 2</option>
-                            <option> Bank 3</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <select class="custom_inputs">
-                            <option hidden selected> Select State</option>
-                            <option> State 1</option>
-                            <option> State 2</option>
-                            <option> State 3</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <select class="custom_inputs">
-                            <option hidden selected> Select Branch</option>
-                            <option> Branch 1</option>
-                            <option> Branch 2</option>
-                            <option> Branch 3</option>
-                        </select>
-                    </div>
-
-                </form>
-            </div>
-            <div class="col-3 pe-0">
-                <img src="{{ asset('assets/front/img/drone1_1.png') }}" class="drone1" alt="">
-            </div>
-        </div>
-    </div>
-
     <!--confirm modal-->
     <div id="confirm_modal" class="my_modal">
         <div class="d-flex justify-content-between">

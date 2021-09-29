@@ -161,4 +161,6 @@ return [
 
     'all' =>'All',
     'email_already_exists' =>'Email already registered',
+
+    'fancy_message' => 'Ref added successfully'
 ];

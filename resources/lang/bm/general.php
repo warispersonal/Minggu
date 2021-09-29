@@ -149,4 +149,6 @@ return [
     'all' =>'Semua',
     'email_already_exists' =>'E-mel sudah didaftarkan',
 
+    'fancy_message' => 'Ref added successfully'
+
 ];

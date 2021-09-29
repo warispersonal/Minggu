@@ -34,7 +34,7 @@ Route::get('/mailsend', [\App\Http\Controllers\Auth\User\RegisterController::cla
 Route::get('/logoutAfterForgotPassword',[LoginController::class,'logoutAfterForgotPassword'])->name('logoutAfterForgotPassword');
 Route::prefix('/')->group(function () {
     Route::get('/info/{id}', [HomeController::class, 'may_bank'])->name('may.bank');
-    Route::get('/', [HomeController::class, 'index'])->name('home.index');
+    Route::get('/{id?}', [HomeController::class, 'index'])->name('home.index');
     Route::get('/msd-live', [HomeController::class, 'msdLive'])->name('user.msdLive');
     Route::get('/program', [HomeController::class, 'program'])->name('program');
     Route::get('/pertandingan', [HomeController::class, 'pertandingan'])->name('pertandingan');
@@ -265,3 +265,8 @@ Route::get('/lang/{locale}', function ($locale) {
     return redirect()->back()->with('action','language')->with('language_code',$locale);
 
 })->name('localization');
+
+
+Route::get('load-state/{id}',[HomeController::class, 'loadState']);
+Route::get('load-branch/{id}',[HomeController::class, 'loadBranch']);
+Route::post('store-fancy-prize',[HomeController::class, 'fancyPrize'])->name('fancyPrize');

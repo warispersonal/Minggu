@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Bank;
+use App\Branch;
+use App\FancyPrize;
 use App\FAQ;
 use App\Jadual;
 use App\Lottery;
@@ -11,6 +14,7 @@ use App\Models\Settings;
 use App\Partner;
 use App\PartnerPromotion;
 use App\PartnerSlider;
+use App\State;
 use App\User;
 use App\UserLottery;
 use Facade\FlareClient\Http\Response;
@@ -21,10 +25,11 @@ use Illuminate\Support\Facades\Validator;
 class HomeController extends Controller
 {
     /* Home Page */
-    public function index(Request $request)
+    public function index(Request $request, $url='')
     {
+        $banks = Bank::all();
         $partners = Partner::where('is_promotion',1)->whereNull('parent_id')->whereNull('status')->get();
-        return view("home.home", compact('partners'));
+        return view("home.home", compact('partners','url','banks'));
     }
 
     /* Partner Page*/
@@ -151,5 +156,21 @@ class HomeController extends Controller
     }
     public function draw(){
         return view('draw');
+    }
+
+    public function loadState($bank_id){
+        $data = State::where('bank_id',$bank_id)->get();
+        return response()->json(['data' => $data]);
+    }
+
+    public function loadBranch($state_id){
+        $data = Branch::where('state_id',$state_id)->get();
+        return response()->json(['data' => $data]);
+    }
+
+    public function fancyPrize(Request $request){
+        FancyPrize::create($request->except('token'));
+        $message = trans('general.fancy_message');
+        return redirect()->route('home.index')->with('msg',$message);
     }
 }
