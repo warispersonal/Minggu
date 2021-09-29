@@ -70,15 +70,15 @@
 <div class="mail-contanier">
     <img src="{{asset('email/header.jpg')}}" class="img-fluid" alt="">
     <h1>Hi, <span class="name">{{$user->name}}</span></h1>
-    <p>Ini pesana daripada Minguu Sham Digital. <br> Tahniah, anda adalah pemenang Peradua Cabutan Bertuah
-        Kamil!<br></p>
-    <p>Anda akan menerima <strong>e-baucar Lazada bernilai RM50. </strong> <br> Sila tunggu e-mel daripada kami untuk kod lazada anda.</p>
+    <p>Ini pesana daripada Minggu Sham Digital. <br> Tahniah! Anda telah berjaya mendaftar untuk Minggu Saham Digital 2021.<br></p>
+    <p>Sila lawati laman web dan media sosial kami untuk mengetahui lebih lanjut tentang peraduan-peraduan dan program-program langsung kami tahun ini.</p>
+    <p>Jumpa anda di sana!</p>
     <div class="icons" style="width: max-content; margin: auto;">
-        <a href="#"><img src="{{asset('socialicon/fb.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
-        <a href="#"><img src="{{asset('socialicon/insta.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
-        <a href="#"><img src="{{asset('socialicon/link.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
-        <a href="#"><img src="{{asset('socialicon/youtube.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
-        <a href="#"><img src="{{asset('socialicon/whatsapp.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
+        <a href="https://www.facebook.com/minggusahamdigital"><img src="{{asset('socialicon/fb.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
+        <a href="https://www.instagram.com/minggusahamdigital/"><img src="{{asset('socialicon/insta.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
+        <a href="https://www.minggusahamdigital.com.my"><img src="{{asset('socialicon/link.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
+        <a href="https://www.youtube.com/channel/UCoNCjruylHYpwBYkIvRwClA"><img src="{{asset('socialicon/youtube.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
+        <a href="https://www.tiktok.com/@minggusahamdigital"><img src="{{asset('socialicon/tiktok.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
     </div>
 </div>
 </body>
