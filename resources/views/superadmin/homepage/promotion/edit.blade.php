@@ -30,7 +30,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-8">
-                                <form method="post" action="{{route('stars.promotion.update',$slider->id)}}"
+                                <form method="post" action="{{route('admin.stars.promotion.update',$slider->id)}}"
                                       enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group mb-3">

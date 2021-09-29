@@ -146,7 +146,7 @@
                 "order": [],
                 "columnDefs":
                     [
-                        {"searchable": false, "targets": 0}
+                        {"searchable": false, "targets": 0, "orderable": false},
                     ],
                 "ajax": "{{ route('star.getpartnersAJAX') }}",
                 "columns":[

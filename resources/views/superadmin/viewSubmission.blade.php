@@ -39,12 +39,12 @@
                         <table class="table align-items-center table-flush w-100" id="adminTable">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col">#</th>
+                                <th aria-sort="false">#</th>
                                 <th scope="col" class="sort" data-sort="budget">Name</th>
                                 <th scope="col" class="sort" data-sort="status">Email</th>
                                 <th scope="col">IC Number</th>
                                 <th scope="col">Lottery Title</th>
-                                <th scope="col">Correct Value</th>
+                                <th scope="col">Submitted Value</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -78,7 +78,7 @@
                 "pageLength": 25,
                 "columnDefs":
                     [
-                        {"searchable": false, "targets": 0}
+                        {"searchable": false, "targets": 0, "orderable": false},
                     ],
                 "order": [],
                 lengthMenu: [
@@ -116,15 +116,14 @@
                     },
                     'pageLength'
                 ],
-                "filter":false,
                 "ajax": "{{ route('star.viewSubmissionAJAX') }}",
                 "columns": [
                     {"data": "DT_RowIndex"},
                     {"data": "name"},
                     {"data": "email"},
                     {"data": "ic_number"},
-                    {"data": "title"},
-                    {"data": "correct_value"},
+                    {"data": "lottery_title"},
+                    {"data": "code"},
                 ],
                 "language": {
                     "paginate": {

@@ -48,7 +48,7 @@ class PartnerController extends Controller
         $linkItem->link = $request->link;
         $linkItem->status = "add";
         $linkItem->save();
-        return redirect()->back()->with(['msg' => 'Link added successfully']);;
+        return redirect()->back()->with(['msg' => 'Link added & waiting for approve']);;
     }
 
     public function button_delete($id)
@@ -56,7 +56,7 @@ class PartnerController extends Controller
         $link = PartnerLink::find($id);
         $link->status = 'delete';
         $link->save();
-        return redirect()->back()->with(['msg' => 'Link deleted successfully']);;
+        return redirect()->back()->with(['msg' => 'Link deleted & waiting for approve']);;
     }
 
     public function showSliders()

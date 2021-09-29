@@ -200,7 +200,7 @@
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 "columnDefs":
                     [
-                        {"searchable": false, "targets": 0}
+                        {"searchable": false, "targets": 0, "orderable": false},
                     ],
                 "order": [],
                 "ajax": "{{ route('star.getadminsAJAX') }}",

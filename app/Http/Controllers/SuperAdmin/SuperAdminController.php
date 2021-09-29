@@ -108,25 +108,6 @@ class SuperAdminController extends Controller
 
         $userLottery = UserLottery::select('*');
         return Datatables::of($userLottery)
-            ->addColumn('name', function ($data) {
-                return $data->user->name ?? "";
-            })
-            ->addColumn('email', function ($data) {
-                return $data->user->email ?? "";
-            })
-            ->addColumn('ic_number', function ($data) {
-                return $data->user->ic_number ?? "";
-            })
-            ->addColumn('title', function ($data) {
-                return $data->lottery->title ?? "";
-            })
-            ->addColumn('section_no', function ($data) {
-                return $data->lottery->section ?? "";
-            })
-            ->addColumn('correct_value', function ($data) {
-                return $data->lottery->correct_value ?? "";
-            })
-            ->rawColumns(['name','email','ic_number','section_no','title','correct_value'])
             ->addIndexColumn()
             ->make(true);
     }

@@ -207,7 +207,7 @@ class HomePagePartnerController extends Controller
         $linkItem->title_bm = $request->title_bm;
         $linkItem->link = $request->link;
         $linkItem->save();
-        return redirect()->route('stars.homepage.show', $linkItem->partner_id)->with(['msg' => 'Link updated successfully']);;
+        return redirect()->route('stars.homepage.show', $linkItem->partner_id)->with(['msg' => 'Link updated & waiting for approve']);;
 
     }
     public function sliderApprove($id,$status){
