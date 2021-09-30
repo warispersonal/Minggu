@@ -41,7 +41,12 @@
                                                 role="tab"
                                                 aria-controls="pills-all"
                                                 aria-selected="true">
+                                            @if(Config::get('app.locale') == 'en')
                                             <img src="{{asset(\App\Constant\FileConstant::PARTNER_LOGO.'/all.png')}}" alt="">
+                                            @endif
+                                            @if(Config::get('app.locale') == 'bm')
+                                            <img src="{{asset(\App\Constant\FileConstant::PROMOSI_IMAGE.'/semua.png')}}" alt="">
+                                                @endif
                                         </button>
                                     </li>
                             </ul>
