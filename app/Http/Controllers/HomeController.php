@@ -25,8 +25,18 @@ use Illuminate\Support\Facades\Validator;
 class HomeController extends Controller
 {
     /* Home Page */
-    public function index(Request $request, $url='')
+    public function index(Request $request)
     {
+        $url='';
+        $banks = Bank::all();
+        $partners = Partner::where('is_promotion',1)->whereNull('parent_id')->whereNull('status')->get();
+        return view("home.home", compact('partners','url','banks'));
+    }
+
+
+    public function qr(Request $request)
+    {
+        $url='qr';
         $banks = Bank::all();
         $partners = Partner::where('is_promotion',1)->whereNull('parent_id')->whereNull('status')->get();
         return view("home.home", compact('partners','url','banks'));

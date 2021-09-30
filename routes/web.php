@@ -34,7 +34,8 @@ Route::get('/mailsend', [\App\Http\Controllers\Auth\User\RegisterController::cla
 Route::get('/logoutAfterForgotPassword',[LoginController::class,'logoutAfterForgotPassword'])->name('logoutAfterForgotPassword');
 Route::prefix('/')->group(function () {
     Route::get('/info/{id}', [HomeController::class, 'may_bank'])->name('may.bank');
-    Route::get('/{id?}', [HomeController::class, 'index'])->name('home.index');
+    Route::get('/', [HomeController::class, 'index'])->name('home.index');
+    Route::get('/qr', [HomeController::class, 'qr']);
     Route::get('/msd-live', [HomeController::class, 'msdLive'])->name('user.msdLive');
     Route::get('/program', [HomeController::class, 'program'])->name('program');
     Route::get('/pertandingan', [HomeController::class, 'pertandingan'])->name('pertandingan');
