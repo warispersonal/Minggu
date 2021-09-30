@@ -145,12 +145,12 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('stars.homepage.index') }}">
-                                        <i class="ni ni-palette text-primary"></i> {{ __('Approve Partners') }}
+                                        <i class="ni ni-palette text-primary"></i> {{ __('Approved Partner Changes') }}
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('stars.homepage.index',2) }}">
-                                        <i class="ni ni-palette text-primary"></i> {{ __('Not Approve Partners') }}
+                                        <i class="ni ni-palette text-primary"></i> {{ __('Pending Partner Changes') }}
                                     </a>
                                 </li>
                                 <li class="nav-item">

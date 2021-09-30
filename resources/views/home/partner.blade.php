@@ -39,7 +39,7 @@
 @section('content')
 
     <main>
-        <div class="main-bg">
+        <div class="main-bg" style="background-color: {{$partner->bg_color ?? "blue"}} !important;">
             <!--<div class="container-fluid px-md-5 pt-4">-->
             <!--    <div class="d-lg-block d-none">-->
             <!--        @if($partner->mode)-->

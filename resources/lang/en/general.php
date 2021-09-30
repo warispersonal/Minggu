@@ -156,7 +156,7 @@ return [
     'reset_password_email' => 'Email',
     'invalid_cred' => 'Invalid credentials',
 
-    'competition_message' => 'Competition submitted successfully',
+    'competition_message' => 'Submitted Successfully',
 
     'all' => 'All',
     'email_already_exists' => 'Email already registered',

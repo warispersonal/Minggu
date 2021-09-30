@@ -60,6 +60,11 @@
     @stack('style')
     @include('component.google-analaytics')
 
+    <style>
+        .main-bg{
+            background-color: {{pageBackgroundColor()  ?? "blue"}} !important;
+        }
+    </style>
 </head>
 <body class="{{ $class ?? '' }}">
 
@@ -74,7 +79,7 @@
                 <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">
                 <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
             <?php } ?>
-                
+
             </div>
         <ul>
 
@@ -350,9 +355,7 @@
     <div id="confirm_modal" class="my_modal">
         <div class="d-flex justify-content-between">
             <h1 class="modal_heading text-center mx-auto ">
-               @if (session()->get('msg') == "You have registered successfully!" || session()->get('msg') == 'Anda telah berjaya mendaftar!')
                 {{session()->get('msg')}}
-                @endif
             </h1>
             <i class="bi bi-x close_btn  me-0"></i>
         </div>

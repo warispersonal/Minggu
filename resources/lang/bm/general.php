@@ -145,7 +145,7 @@ return [
     'reset_password_email' => 'E-mel',
     'invalid_cred' => 'Kelayakan tidak sah',
 
-    'competition_message' => 'Pertandingan berjaya dihantar',
+    'competition_message' => 'Dihantar dengan jayanya',
     'all' =>'Semua',
     'email_already_exists' =>'E-mel sudah didaftarkan',
 

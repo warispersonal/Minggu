@@ -62,7 +62,7 @@
                             <td>{{ \Illuminate\Support\Str::limit($link->link, 40, $end='...') }}</td>
                             <td>
                                 @if(!empty($link->status))
-                                    Waiting for approve from Admin to {{$link->status}}
+                                    Waiting for approval from admin
                                 @else
                                     Approve
                                 @endif

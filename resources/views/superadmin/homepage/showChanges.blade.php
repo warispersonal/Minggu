@@ -32,7 +32,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header border-0">
-                                        <h3 class="mb-0">Items Recently Changed</h3>
+                                        <h3 class="mb-0">Existing Content</h3>
                                     </div>
                                     <div class="container">
                                         <div class="form-group mb-3">

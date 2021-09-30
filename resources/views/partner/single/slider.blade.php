@@ -60,7 +60,7 @@
                             <td>{{ \Illuminate\Support\Str::limit($slider->slider_link, 40, $end='...') }}</td>
                             <td>
                                 @if(!empty($slider->status))
-                                    Waiting for approve from Admin to {{$slider->status}}
+                                    Waiting for approval from admin
                                 @else
                                     Approve
                                 @endif

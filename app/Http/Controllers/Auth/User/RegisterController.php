@@ -89,7 +89,7 @@ class RegisterController extends Controller
                 if (Auth::guard('user')->attempt($credentials)) {
                     $message = trans('general.register_success_message');
                 }
-                Mail::to($user->email)->send(new SendRegisterEmail($user));
+//                Mail::to($user->email)->send(new SendRegisterEmail($user));
                 return redirect()->back()->withErrors($validator)->with('msg',$message)->with('user',$user)->with('action','regitser');
             }
         } else {

@@ -10,6 +10,7 @@ use App\Models\Settings;
 
 class ContentController extends Controller
 {
+
     public function menu(){
         return view('superadmin.content.menu');
     }
@@ -34,7 +35,7 @@ class ContentController extends Controller
         if($request->image == 1){
             $input = $request->all();
             $validator = Validator::make($request->all(), [
-                $request->key => 'required|image|mimes:jpeg,png,jpg,gif|max:3072',
+                $request->key => 'required|image|mimes:jpeg,png,jpg,gif|max:5151515151',
             ]);
             if($validator->passes())
             {

@@ -48,7 +48,7 @@ class PartnerController extends Controller
         $linkItem->link = $request->link;
         $linkItem->status = "add";
         $linkItem->save();
-        return redirect()->back()->with(['msg' => 'Link added & waiting for approve']);;
+        return redirect()->back()->with(['msg' => 'Changes may take effect after admin approval']);
     }
 
     public function button_delete($id)
@@ -56,7 +56,7 @@ class PartnerController extends Controller
         $link = PartnerLink::find($id);
         $link->status = 'delete';
         $link->save();
-        return redirect()->back()->with(['msg' => 'Link deleted & waiting for approve']);;
+        return redirect()->back()->with(['msg' => 'Changes may take effect after admin approval']);
     }
 
     public function showSliders()
@@ -76,7 +76,7 @@ class PartnerController extends Controller
         $slider->slider_link = $request->slider_link;
         $slider->status = "add";
         $slider->save();
-        return redirect()->back()->with(['msg' => 'Slider added successfully  & waiting for approve']);;
+        return redirect()->back()->with(['msg' => 'Changes may take effect after admin approval']);
 
     }
 
@@ -85,7 +85,7 @@ class PartnerController extends Controller
         $link = PartnerSlider::find($id);
         $link->status = 'delete';
         $link->save();
-        return redirect()->back()->with(['msg' => 'Slider submitted for delete & waiting for approve']);;
+        return redirect()->back()->with(['msg' => 'Changes may take effect after admin approval']);
     }
 
     public function promotion_store(Request $request)
@@ -97,7 +97,7 @@ class PartnerController extends Controller
         $slider->url = $request->url;
         $slider->status = "add";
         $slider->save();
-        return redirect()->back()->with(['msg' => 'Promotion added successfully & waiting for approve']);;
+        return redirect()->back()->with(['msg' => 'Changes may take effect after admin approval']);
     }
 
     public function promotion_delete($id)
@@ -105,7 +105,7 @@ class PartnerController extends Controller
         $link = PartnerPromotion::find($id);
         $link->status = 'delete';
         $link->save();
-        return redirect()->back()->with(['msg' => 'Promotion delete successfully & waiting for approve']);;
+        return redirect()->back()->with(['msg' => 'Changes may take effect after admin approval']);
     }
 
 
@@ -224,7 +224,7 @@ class PartnerController extends Controller
             $update_partner['user_id'] = Auth::guard('partner')->id();
             $update_partner->save();
         }
-        return redirect()->route('partner.dashboard')->with(['msg' => 'Partner updated successfully & waiting for approve']);
+        return redirect()->route('partner.dashboard')->with(['msg' => 'Changes may take effect after admin approval']);
     }
 
     public function promotion_edit($id)
@@ -259,7 +259,7 @@ class PartnerController extends Controller
         }
         $slider->slider_link = $request->slider_link;
         $slider->save();
-        return redirect()->route('partner.show.slider')->with(['msg' => 'Slider updated successfully']);;
+        return redirect()->route('partner.show.slider')->with(['msg' => 'Slider updated successfully']);
     }
 
     public function link_edit($id)
@@ -275,6 +275,6 @@ class PartnerController extends Controller
         $linkItem->title_bm = $request->title_bm;
         $linkItem->link = $request->link;
         $linkItem->save();
-        return redirect()->route('partner.show.slider')->with(['msg' => 'Link updated successfully']);;
+        return redirect()->route('partner.show.slider')->with(['msg' => 'Link updated successfully']);
     }
 }
