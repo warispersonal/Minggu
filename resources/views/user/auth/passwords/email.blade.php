@@ -52,6 +52,7 @@
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4"> {{ __('general.reset_password_button') }}</button>
+                                <p class="my-4"> {{ __('general.reset_password_description') }}</p>
                             </div>
                         </form>
                     </div>

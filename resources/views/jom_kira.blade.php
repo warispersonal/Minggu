@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h2>e-Baucar Bernilai</h2>
+                                    <h2>{{__('general.livetrivia_worth')}}</h2>
                                     <h1>RM4,500</h1>
                                 </div>
                                 <div class="info_iconn info_iconn_1">

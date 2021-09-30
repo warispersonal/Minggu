@@ -47,13 +47,23 @@ class RegisterController extends Controller
 
     public function user_register(\Illuminate\Http\Request $request)
     {
+        $messages = array(
+            'full_name.required' => trans('general.full_name_required') ,
+            'email.required' => trans('general.email_required') ,
+            'phone.required' => trans('general.phone_required') ,
+            'ic_number.required' => trans('general.ic_number_required') ,
+            'password.required' => trans('general.password_required') ,
+            'password.min' => trans('general.password_min_length') ,
+            'password.max' => trans('general.password_max_length') ,
+        );
+
         $validator = Validator::make($request->all(), [
             'full_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
             'phone' => ['required', 'string', 'max:255'],
             'ic_number' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:6', 'max:8'],
-        ]);
+        ],$messages);
 
         $request['role_id'] = 4;
 

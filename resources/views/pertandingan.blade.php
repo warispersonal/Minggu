@@ -27,7 +27,6 @@
                         <div class="match_links ">
                             <a href="{{route('jom.kira')}}">{{ __('general.the_match_button_1') }}</a>
                             <a href="{{route('liveTrivia')}}">{{ __('general.the_match_button_2') }}</a>
-                            <a href="{{route('draw')}}">{{ __('general.the_match_button_3') }}</a>
                             <a href="{{route('cabutanBertuah')}}">{{ __('general.the_match_button_4') }}</a>
                         </div>
                     </div>

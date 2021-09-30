@@ -51,7 +51,7 @@ return [
     'car3_description' => 'Supaya anda terus bersemangat untuk melayari setiap laman kami, salah satu daripada Saham Coins yag terdapat pada hantaran Media Social kami dan Rakan Korporat kami merupakan Ringgit Emas! Apa itu Ringgit Emas? Ia kelihatan seperti Saham Coins yang biasa tetapi mempunyai rahsia tersembunyi yang hanya diperoleh oleh peserta pertama yang menghantarnya! Terdapat hanya 5 (Lima) Saham Coins yang merupakan Ringgit Emas! Bagaimana untuk anda mengetahui bahawa ia adalah Ringgit Emas? Itulah dia rahsianya. Mulakan eksplorasi anda dan hantar semua Saham Coins yang anda temui secepat mungkin kerana anda mungkin menjadi salah seorang pemenang bertuah untuk memenangi Honda DASH 125S.',
 
     'ringgit_emas'=> 'Ringgit Emas',
-    'evouchers'=> 'Value E-Vouchers',
+    'evouchers'=> 'e-Baucar Bernilai',
 
     'jom-kira-doit'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
     'jom-kira-doit2'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
@@ -88,13 +88,13 @@ return [
     'draw_mainheading' => 'Draw 118',
     'draw_title' => 'Cara Penyertaan',
     'draw_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
-    'draw_worth' => 'e-Voucher worth',
+    'draw_worth' => 'e-Baucar Bernilai',
     'draw_text' => 'Kembali ke Pertandingan',
 
 
     'livetrivia_mainheading' => 'Live Trivia',
     'livetrivia_title' => 'Cara Penyertaan',
-    'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital LIVE di Facebook. Anda cuma perlu menonton, bersedia dengan papan kekunci anda dan tajamkan minda anda, untuk menjadi salah seorang pemenang untuk bagi E-Baucar Lazada! Pastikan anda catat jadual siaran dengan melayari Program & Jadual, pasangkan peringatan dan bersedia untuk menang!',
+    'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital LIVE di Facebook. Anda cuma perlu menonton, bersedia dengan papan kekunci anda dan tajamkan minda anda, untuk menjadi salah seorang pemenang  bagi E-Baucar Lazada! Pastikan anda catat jadual siaran dengan melayari Program & Jadual, pasangkan peringatan dan bersedia untuk menang!',
     'livetrivia_worth' => 'e-Baucar bernilai',
     'livetrivia_text' => 'Kembali ke Pertandingan',
 
@@ -140,8 +140,8 @@ return [
     'information_tab' => 'Maklumat',
     'terkini-btn' => 'Tonton Episod MSD Terkini ',
 
-    'reset_password' => 'Menetapkan semula kata laluan',
-    'reset_password_button' => 'Hantar Pautan Tetapkan Semula Kata Laluan',
+    'reset_password' => 'Tetapkan Semula Kata Laluan',
+    'reset_password_button' => 'Hantar',
     'reset_password_email' => 'E-mel',
     'invalid_cred' => 'Kelayakan tidak sah',
 
@@ -149,6 +149,16 @@ return [
     'all' =>'Semua',
     'email_already_exists' =>'E-mel sudah didaftarkan',
 
-    'fancy_message' => 'Ref added successfully'
+    'fancy_message' => 'Ref added successfully',
+    'sponsor_name_text' => 'Dibawakan khas oleh',
 
+    "full_name_required" => 'Nama penuh perlu diisikan',
+    "email_required" => 'Emel perlu diisikan',
+    "phone_required" => 'Nombor telefon bimbit perlu diisikan',
+    "ic_number_required" => 'Nombor kad pengenalan perlu diisikan',
+    "password_required" => 'Kata laluan perlu diisikan',
+    "password_min_length" => 'Kata laluan mestilah sekurang-kurangnya 6 karakter',
+    "password_max_length" => 'Kata laluan tidak melebihi 8 aksara',
+
+    "reset_password_description" => 'Sila klik pautan yang akan dihantarkan ke e-mel anda untuk menetapkan semula kata laluan',
 ];
