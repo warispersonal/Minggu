@@ -15,8 +15,8 @@
             <!--        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
             <!--    </div>-->
             <!--</div>-->
-            <div class="container mt-5">
-                <div class="row gy-3">
+            <div class="container-fluid px-md-5 mt-5">
+                <div class="row px-md-5 gy-3">
                     <div class="col-lg-4 pe-lg-5">
                         <div class="d-flex w-100">
                             <h2 class="heading2">{{ __('general.khidmat0') }}</h2>
