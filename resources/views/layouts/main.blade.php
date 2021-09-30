@@ -349,17 +349,17 @@
     <!--confirm modal-->
     <div id="confirm_modal" class="my_modal">
         <div class="d-flex justify-content-between">
-            <h1 class="modal_heading text-center mx-auto">
-               @if (session()->get('msg') == "You have registered successfully" || session()->get('msg') == 'Anda telah berjaya mendaftar')
+            <h1 class="modal_heading text-center mx-auto ">
+               @if (session()->get('msg') == "You have registered successfully!" || session()->get('msg') == 'Anda telah berjaya mendaftar!')
                 {{session()->get('msg')}}
                 @endif
             </h1>
             <i class="bi bi-x close_btn  me-0"></i>
         </div>
         <ol class="mt-4">
-            <li>I am not an ASNB unit holder and would like to <a href="https://www.asnb.com.my/asnbv2_3services_EN.php#account">register now!</a>  </li>
-            <li>I am an ASNB unit holder but have not registered as a user of the myASNB portal.   <a href="https://www.asnb.com.my/asnbv2_3services_EN.php#account">I want to sign up right away!</a>  </li>
-            <li>I am an ASNB unit holder and have registered as a user of the myASNB portal </li>
+            <li>I am not an ASNB unit holder and would like to <a class="fw-bold text-uppercase" href="https://www.asnb.com.my/asnbv2_3services_EN.php#account">register now!</a>  </li>
+            <li>I am an ASNB unit holder but have not registered as a user of the myASNB portal. I want to <a class="fw-bold text-uppercase " href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> sign up </a> right away!  </li>
+            <li>I am an ASNB unit holder and have registered as a user of the myASNB portal. <span class="close_btn"> Close </span> </li>
         </ol>
     </div>
 

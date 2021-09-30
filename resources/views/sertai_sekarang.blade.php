@@ -29,8 +29,8 @@
                 </h3>
             </div>
 
-            <div class="container mt-5">
-                <div id="jom_kira_tabs">
+            <div class="container-fluid px-md-5 mt-5">
+                <div id="jom_kira_tabs" class="px-md-5">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <button class="nav-link active ms-0" id="nav-home-tab" data-bs-toggle="tab"

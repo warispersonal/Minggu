@@ -14,8 +14,8 @@
             <!--        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
             <!--    </div>-->
             <!--</div>-->
-            <div class="container mt-5">
-                <div class="row">
+            <div class="container-fluid px-md-5 mt-5">
+                <div class="row px-md-5">
                     <div class="col-lg-4">
                         <h1 class="faq-heading mt-3">{{ __('general.qa_1') }} <br class="d-none d-lg-block">{{ __('general.qa_2') }}</h1>
                     </div>

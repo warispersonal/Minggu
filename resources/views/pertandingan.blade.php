@@ -18,8 +18,8 @@
             <!--        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
             <!--    </div>-->
             <!--</div>-->
-            <div class="container mt-5 pb-5">
-                <div class="row gy-4">
+            <div class="container-fluid px-md-5 mt-5 pb-5">
+                <div class="row px-md-5 gy-4">
                     <div class="col-lg-5">
                         <h1 class="heading">{{__('general.pertandingan_title')}}</h1>
                     </div>

@@ -26,8 +26,8 @@
             <!--        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
             <!--    </div>-->
             <!--</div>-->
-            <div class="container mt-5 pb-5">
-                <div class="row">
+            <div class="container-fluid px-md-5 mt-5 pb-5">
+                <div class="row px-md-5">
                     <div class="col-lg-4">
                         <div class="d-flex flex-column justify-content-between h-100">
                             <div class="tabs">

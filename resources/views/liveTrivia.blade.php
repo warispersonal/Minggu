@@ -18,11 +18,11 @@
             <!--        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
             <!--    </div>-->
             <!--</div>-->
-            <div class="container mt-5">
-                <h1 class="heading mb-5">
+            <div class="container-fluid px-md-5 mt-5">
+                <h1 class="heading mb-5 px-md-5">
                     {{ __('general.livetrivia_mainheading') }}
                 </h1>
-                <div class="row gy-4">
+                <div class="row px-md-5 gy-4">
                     <div class="col-lg-5 text-white">
                         <h3>
                             {{ __('general.livetrivia_title') }}
@@ -35,16 +35,16 @@
                         <div class="cars-row my-0">
                             <div class=" p-md-5 p-2">
                                 <div class="car-details justify-content-around">
-                                    <h5 class="mx-auto">
+                                    <h3 class="mx-auto mb-0">
                                         {{ __('general.livetrivia_worth') }}
-                                    </h5>
+                                    </h3>
                                     <h1>RM20,000</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class=" pt-5">
+                <div class=" pt-5 ps-md-5">
                     <a href="{{route('pertandingan')}}" class="tonton-btn"> <i class="bi bi-chevron-left"></i>
                         {{ __('general.back_button_age') }}
                     </a>
