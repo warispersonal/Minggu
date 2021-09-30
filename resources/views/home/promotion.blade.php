@@ -7,16 +7,16 @@
 @section('content')
     <main>
         <div class="main-bg">
-            <div class="container-fluid px-md-5 pt-4">
-                <div class="d-lg-block d-none">
-                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
-                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
-                </div>
-            </div>
+            <!--<div class="container-fluid px-md-5 pt-4">-->
+            <!--    <div class="d-lg-block d-none">-->
+            <!--        <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">-->
+            <!--        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
+            <!--    </div>-->
+            <!--</div>-->
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1 class="heading ps-2">{{ __('general.promosi_title') }} </h1>
+                        <h1 class="heading ">{{ __('general.promosi_title') }} </h1>
                         <div class="mt-5 tabss">
                             <ul class="nav nav-pills mb-3" id="promotion_tabs" role="tablist">
                                 @foreach($partners as $partner)

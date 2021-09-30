@@ -8,12 +8,12 @@
 
     <main>
         <div class="main-bg position-relative">
-            <div class="container-fluid px-md-5 pt-4">
-                <div class="d-lg-block d-none">
-                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-4">
-                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
-                </div>
-            </div>
+            <!--<div class="container-fluid px-md-5 pt-4">-->
+            <!--    <div class="d-lg-block d-none">-->
+            <!--        <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-4">-->
+            <!--        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
+            <!--    </div>-->
+            <!--</div>-->
             <div class="pt-md-5 baloons-container">
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>

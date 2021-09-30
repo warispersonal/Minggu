@@ -40,17 +40,17 @@
 
     <main>
         <div class="main-bg">
-            <div class="container-fluid px-md-5 pt-4">
-                <div class="d-lg-block d-none">
-                    @if($partner->mode)
-                        <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">
-                        <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
-                    @else
-                        <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
-                        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
-                    @endif
-                </div>
-            </div>
+            <!--<div class="container-fluid px-md-5 pt-4">-->
+            <!--    <div class="d-lg-block d-none">-->
+            <!--        @if($partner->mode)-->
+            <!--            <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">-->
+            <!--            <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">-->
+            <!--        @else-->
+            <!--            <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">-->
+            <!--            <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
+            <!--        @endif-->
+            <!--    </div>-->
+            <!--</div>-->
             <div class="container-fluid mt-5 pb-5 px-md-5 ">
                 <div id="may_bank_tabs" class="px-md-5">
                     <nav>
@@ -72,7 +72,7 @@
                         <div class="tab-pane fade show active" id="nav-maklumat" role="tabpanel"
                              aria-labelledby="nav-maklumat-tab">
                             <div class="row mt-4">
-                                <div class="col-lg-4 pe-md-4">
+                                <div class="col-lg-6 pe-md-4">
                                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-indicators">
                                             @foreach($partner->sliders as $slider)
@@ -116,7 +116,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-8 ps-md-4">
+                                <div class="col-lg-6 ps-md-4">
                                     <div class="ratio ratio-16x9">
                                         {!! $partner->iframe ?? "" !!}
                                     </div>

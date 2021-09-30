@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'pertandingan_title' => 'Competition',
+    'pertandingan_title' => 'Contests',
 
     'the_match_button_1' => 'Jom Kira Duit',
     'the_match_button_2' => 'Live Trivia',

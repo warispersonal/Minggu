@@ -8,12 +8,12 @@
 
     <main>
         <div class="main-bg position-relative">
-            <div class="container-fluid px-md-5 pt-4">
-                <div class="d-lg-block d-none">
-                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
-                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
-                </div>
-            </div>
+            <!--<div class="container-fluid px-md-5 pt-4">-->
+            <!--    <div class="d-lg-block d-none">-->
+            <!--        <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">-->
+            <!--        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
+            <!--    </div>-->
+            <!--</div>-->
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-lg-4">
@@ -30,7 +30,7 @@
                                     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-profile" type="button" role="tab"
                                             aria-controls="nav-profile"
-                                            aria-selected="false">Pertandingan
+                                            aria-selected="false">Peraduan
                                     </button>
 
                                 </div>

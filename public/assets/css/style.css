@@ -305,6 +305,10 @@
     width: 150px;
     margin: 5px;
     cursor: pointer;
+    transition:all .3s;
+}
+#program_content img:hover{
+    transform:scale(1.15);
 }
 #jadual_content{
     display: none;
@@ -430,6 +434,10 @@
 }
 .tabss .nav-link img{
     width:100%;
+    transition:all .3s;
+}
+.tabss .nav-link img:hover{
+    transform: scale(1.15);
 }
 .tabss .nav-item{
     width: 19%;
@@ -444,7 +452,7 @@
 } */
 #promotion_tabs_content img{
     margin-bottom: 10px;
-    padding: 10px;
+    padding:10px 3px ;
 }
 /* #promotion_tabs_content::-webkit-scrollbar{
     width: 10px;
@@ -459,7 +467,7 @@
     background: none;
     color: white;
     display: none;
-    padding-left:10px;
+    padding-left:3px;
 }
 .tabss{
     position: relative;
@@ -939,10 +947,39 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    
+    
 }
 .home-links a{
     position: absolute;
     transform: scale(.7);
+    perspective: 1000px;
+    
+}
+.hover-effect{
+    position: relative;
+    overflow:hidden;
+    transition:all .3s;
+    
+}
+.hover-effect:hover{
+    transform: scale(1.15);
+    transform-style: preserve-3d;
+    
+}
+.hover-effect:hover::before {
+	-webkit-animation: shine 1.2s ;
+	animation: shine 1.2s ;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
 }
 .link-1{
     top: 50%;
@@ -1114,6 +1151,10 @@
 .partner-logo{
     transform: scale(.8);
     transform-origin: top;
+    transition: all .3s;
+}
+.partner-logo:hover{
+    transform: scale(1);
 }
 .baloon{
     transform: scale(.8);
@@ -1154,17 +1195,18 @@
     margin-top: -200px;
 }
 .header-imgs{
-    position:absolute;
-    top:0px;
-    left:0px;
+    display:flex;
     z-index:7;
 }
-.header-imgs img:nth-child(1){
-    width:100px;
+.header-imgs img{
+    height:18px;   
 }
-.header-imgs img:nth-child(2){
-    width:140px;
-}
+/*.header-imgs img:nth-child(1){*/
+/*    width:80px;*/
+/*}*/
+/*.header-imgs img:nth-child(2){*/
+/*    width:100px;*/
+/*}*/
 .swal-button{
     background-color:#0057B7 !important;
 }
@@ -1202,17 +1244,18 @@
      font-size: 1.2rem;
      margin-bottom: 10px;
  }
+ 
 @media(max-width:1367px){
 
     .about-us-box{
         top:40%;
     }
-    .header-imgs img:nth-child(1){
-        width:70px;
-    }
-    .header-imgs img:nth-child(2){
-        width:100px;
-    }
+    /*.header-imgs img:nth-child(1){*/
+    /*    width:70px;*/
+    /*}*/
+    /*.header-imgs img:nth-child(2){*/
+    /*    width:100px;*/
+    /*}*/
 
 }
 @media(max-width:1280px){
@@ -1668,12 +1711,12 @@
         top: 9%;
         right: 30%;
     }
-    .header-imgs img:nth-child(1){
-        width:50px;
-    }
-    .header-imgs img:nth-child(2){
-        width:70px;
-    }
+    /*.header-imgs img:nth-child(1){*/
+    /*    width:50px;*/
+    /*}*/
+    /*.header-imgs img:nth-child(2){*/
+    /*    width:70px;*/
+    /*}*/
     .cars-row h2{
         font-size:1rem;
         color:white;
@@ -1880,4 +1923,69 @@
         margin-bottom:0px;
     }
 }
-
+/*@media screen and (min-width: 1280px) and (min-height:720px) {*/
+/*     .desktop-bg{*/
+/*        height: calc( 100vh - 40px) !important;*/
+/*        object-position: top;*/
+/*     }*/
+/*     .link-1{*/
+/*    top: 60%;*/
+/*    left: 2%;*/
+/*}*/
+/*.link-2{*/
+/*    top: 46%;*/
+/*    left: 20%;*/
+/*}*/
+/*.link-3{*/
+/*    bottom: 5%;*/
+/*    left: 18%;*/
+/*}*/
+/*.link-4{*/
+/*    top: 57%;*/
+/*    left: 33%;*/
+/*}*/
+/*.link-5{*/
+/*    top: 8%;*/
+/*    left: 46%;*/
+/*}*/
+/*.link-6{*/
+/*    top: 40%;*/
+/*    left: 38%;*/
+/*}*/
+/*.link-7{*/
+/*    bottom: 20%;*/
+/*    left: 57%;*/
+/*}*/
+/*.link-8{*/
+/*    top: 0%;*/
+/*    left: 60%;*/
+/*}*/
+/*.link-9{*/
+/*    top: 43%;*/
+/*    left: 58%;*/
+/*}*/
+/*.link-10{*/
+/*    top: 6%;*/
+/*    right: 14%;*/
+/*}*/
+/*.link-11{*/
+/*    top: 45%;*/
+/*    right: 15%;*/
+/*}*/
+/*.link-12{*/
+/*    top: 2%;*/
+/*    right: 5%;*/
+/*}*/
+/*.link-13{*/
+/*    top: 63%;*/
+/*    right: 8%;*/
+/*}*/
+/*.link-14{*/
+/*    bottom: 8%;*/
+/*    right: 13%;*/
+/*}*/
+/*.link-15{*/
+/*    top: 45%;*/
+/*    right: 5%;*/
+/*}*/
+/* }*/

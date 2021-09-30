@@ -16,10 +16,10 @@
     <main>
         <div class="main-bg">
             <div class="container-fluid px-md-5 pt-4">
-                <div class="d-lg-block d-none">
-                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
-                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
-                </div>
+                <!--<div class="d-lg-block d-none">-->
+                <!--    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">-->
+                <!--    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
+                <!--</div>-->
                 <h3 class="text-white mb-0 d-lg-block d-none">
 {{--                    @guest('user')--}}
 {{--                        <div class="alert alert-danger text-center hidden" role="alert">--}}

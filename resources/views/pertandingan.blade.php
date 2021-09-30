@@ -12,12 +12,12 @@
 
     <main>
         <div class="main-bg">
-            <div class="container-fluid px-md-5 pt-4">
-                <div class="d-lg-block d-none">
-                    <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
-                    <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
-                </div>
-            </div>
+            <!--<div class="container-fluid px-md-5 pt-4">-->
+            <!--    <div class="d-lg-block d-none">-->
+            <!--        <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">-->
+            <!--        <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">-->
+            <!--    </div>-->
+            <!--</div>-->
             <div class="container mt-5 pb-5">
                 <div class="row gy-4">
                     <div class="col-lg-5">
@@ -33,7 +33,7 @@
                     </div>
                     <div class="col-lg-7 order-3 px-0 px-lg-3">
                         <div class="ratio ratio-16x9">
-                            <iframe src="https://player.vimeo.com/video/469418763"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <iframe src="https://player.vimeo.com/video/619028559"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="col-lg-5  order-2 order-lg-4">

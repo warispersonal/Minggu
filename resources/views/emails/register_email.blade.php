@@ -70,7 +70,7 @@
 <div class="mail-contanier">
     <img src="{{asset('email/header.jpg')}}" class="img-fluid" alt="">
     <h1>Hi, <span class="name">{{$user->name}}</span></h1>
-    <p>Ini pesana daripada Minggu Sham Digital. <br> Tahniah! Anda telah berjaya mendaftar untuk Minggu Saham Digital 2021.<br></p>
+    <p>Ini pesana daripada Minggu Saham Digital. <br> Tahniah! Anda telah berjaya mendaftar untuk Minggu Saham Digital 2021.<br></p>
     <p>Sila lawati laman web dan media sosial kami untuk mengetahui lebih lanjut tentang peraduan-peraduan dan program-program langsung kami tahun ini.</p>
     <p>Jumpa anda di sana!</p>
     <div class="icons" style="width: max-content; margin: auto;">

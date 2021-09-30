@@ -35,19 +35,21 @@
 
     <main>
         <div class="main-img position-relative">
-            <div class="container-fluid px-md-5 pt-lg-4 header-imgs">
-                <div class="d-lg-block d-none">
-                    <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-4">
-                    <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
-                </div>
-            </div>
+            <!--<div class="container-fluid px-md-5 pt-lg-4 header-imgs">-->
+            <!--    <div class="d-lg-block d-none">-->
+            <!--        <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-3">-->
+            <!--        <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">-->
+            <!--    </div>-->
+            <!--</div>-->
             <!--<img src="{{asset('assets/img/mobile-home-bg.png')}}" class="d-lg-none w-100 position-absolute top-0">-->
             <div class="home-links position-relative mt-5  mt-md-0" >
-                <img src="{{asset('assets/img/desktop-home-bg.png')}}" class="d-none d-md-block ">
+                <img src="{{asset('assets/img/desktop-home-bg.png')}}" class="d-none d-md-block desktop-bg">
                 <img src="{{asset('assets/img/mobile-home-bg.png')}}" class=" d-md-none ">
                 @foreach($partners as $partner)
                     <a href="{{route('may.bank', $partner->slug)}}" class="link-{{$partner->id}}">
-                        <img src="{{$partner->main_logo}}" alt="">
+                        <div class="hover-effect">
+                            <img src="{{$partner->main_logo}}" alt="">
+                        </div>
                     </a>
                 @endforeach
             </div>
