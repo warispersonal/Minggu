@@ -34,7 +34,7 @@
                                     <h3 class="mx-auto mb-0">
                                         {{ __('general.cabutanbertuah_worth') }}
                                     </h3>
-                                    <h1>RM100,000</h1>
+                                    <h1 class="fw-bolder" >RM100,000</h1>
                                 </div>
                             </div>
                         </div>

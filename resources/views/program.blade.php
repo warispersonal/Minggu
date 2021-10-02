@@ -19,7 +19,16 @@
 
     <main>
         <div class="main-bg">
+            <div class="container-fluid px-md-5 mt-5 pb-5">
+                <div class="row px-md-5 gy-4">
+                    <div class="col-lg-12">
+                        <h1 class="heading">{{__('general.program_title')}}</h1>
+                    </div>
+                    
 
+                </div>
+
+            </div>
             <!--<div class="container-fluid px-md-5 pt-4">-->
             <!--    <div class="d-lg-block d-none">-->
             <!--        <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">-->
@@ -510,10 +519,10 @@
                                 {{$program->description_bm}}
                             @endif
 
-                            @if($program->watch_again != "")
-                                <a target="_blank" class="watch-again" href="{{$program->watch_again}}"><b>{{ __('general.watch_again') }}</b></a>
-                            @endif
                         </p>
+                            @if($program->watch_again != "")
+                                <a target="_blank" class="watch-again d-block" href="{{$program->watch_again}}"><b> <i class="fas fa-play"></i>  {{ __('general.watch_again') }}</b></a>
+                            @endif
                         <div class="d-flex align-items-center">
                             {{ __('general.brought_to_you') }}
                             <a href="{{route('may.bank', $program->partner->slug ?? '')}}" class="d-inline-block">

@@ -51,6 +51,8 @@
             <!--        @endif-->
             <!--    </div>-->
             <!--</div>-->
+            
+ 
             <div class="container-fluid mt-5 pb-5 px-md-5 ">
                 <div id="may_bank_tabs" class="px-md-5">
                     <nav>
@@ -73,6 +75,46 @@
                              aria-labelledby="nav-maklumat-tab">
                             <div class="row mt-4">
                                 <div class="col-lg-6 pe-md-4">
+                                    @if($partner->id == 20)
+                                        <div class="text-center mb-4 ">
+                                        <img src="{{$partner->store_logo}}" class="img-fluid w-100"
+                                             style="min-height:100px; object-fit:contain;" alt="">
+                                    </div>
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            @foreach($partner->sliders as $slider)
+                                                <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                        data-bs-slide-to="{{$loop->index}}"
+                                                        class="{{$loop->index == 0 ? "active" : ""}} aria-label="
+                                                        Slide{{$loop->index}}"
+                                                aria-current="{{$loop->index == 0 ? true : ""}}"></button>
+                                            @endforeach
+
+                                        </div>
+                                        <div class="carousel-inner">
+                                            @foreach($partner->sliders as $slider)
+                                                <div class="carousel-item {{$loop->index == 0 ? "active" : ""}}">
+                                                    <a href="{{$slider->slider_link}}" target="_blank">
+                                                        <img src="{{$slider->slider_image}}"
+                                                             class="d-block w-100 partner-slider-images"
+                                                             alt="...">
+                                                    </a>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    @else
+                                        
                                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-indicators">
                                             @foreach($partner->sliders as $slider)
@@ -107,9 +149,11 @@
                                         </button>
                                     </div>
                                     <div class="text-center mt-4 ">
-                                        <img src="{{$partner->store_logo}}" class="img-fluid"
+                                        <img src="{{$partner->store_logo}}" class="img-fluid w-100"
                                              style="min-height:100px; object-fit:contain;" alt="">
                                     </div>
+                                    @endif
+                                    
                                     <div class="my-4">
                                         <p class="justify mode-fore-color">
                                             {{Config::get('app.locale') == 'en' ? $partner->description:$partner->description_bm }}

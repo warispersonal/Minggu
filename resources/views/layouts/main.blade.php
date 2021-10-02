@@ -360,9 +360,9 @@
             <i class="bi bi-x close_btn  me-0"></i>
         </div>
         <ol class="mt-4">
-            <li>I am not an ASNB unit holder and would like to <a class="fw-bold text-uppercase" href="https://www.asnb.com.my/asnbv2_3services_EN.php#account">register now!</a>  </li>
-            <li>I am an ASNB unit holder but have not registered as a user of the myASNB portal. I want to <a class="fw-bold text-uppercase " href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> sign up </a> right away!  </li>
-            <li>I am an ASNB unit holder and have registered as a user of the myASNB portal. <span class="close_btn"> Close </span> </li>
+            <li>{{ __('general.list_a') }} <a class="fw-bold text-uppercase" href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_a_register') }} </a>  </li>
+            <li>{{ __('general.list_b') }} <a class="fw-bold text-uppercase " href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_b_signup') }} </a> {{ __('general.list_b_second') }}  </li>
+            <li>{{ __('general.list_c') }} <span class="close_btn"> {{ __('general.list_a_close') }} </span> </li>
         </ol>
     </div>
 
