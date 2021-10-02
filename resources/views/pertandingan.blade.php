@@ -35,7 +35,7 @@
                             <iframe src="https://player.vimeo.com/video/619028559"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="col-lg-5  order-2 order-lg-4">
+                    <div class="col-lg-5  order-2 order-lg-4 d-flex justify-content-center align-items-center">
                         <div class="side-text">
                             <h1>{!! __('general.pertandingan') !!}</h1>
                         </div>

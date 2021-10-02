@@ -63,11 +63,12 @@
                     </a>
                 </div>
                 <div class="text-center ">
+                    <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_utama') }}</span></p>
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[2]->slug)}}">
                         <img src="{{$partners[2]->main_logo}}" class="img-fluid partner-logo" alt="">
                     </a>
-                    <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_utama') }}</span></p>
+                    <!--<p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_utama') }}</span></p>-->
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
@@ -96,11 +97,12 @@
                     </a>
                 </div>
                 <div class="text-center ">
+                    <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }}</p>
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[11]->slug)}}">
                         <img src="{{$partners[11]->main_logo}}" class="img-fluid partner-logo" alt="">
                     </a>
-                    <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }}</p>
+                    <!--<p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }}</p>-->
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
@@ -129,11 +131,12 @@
                     </a>
                 </div>
                 <div class="text-center ">
+                    <p class="text-white text-uppercase mb-0"> {{ __('general.rakan_acara_1') }} <span class="fw-bold">{{ __('general.rakan_acara_2') }}</span> </p>
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank', $partners[18]->slug)}}">
                         <img src="{{$partners[18]->main_logo}}" class="img-fluid partner-logo" alt="">
                     </a>
-                    <p class="text-white text-uppercase mb-0"> {{ __('general.rakan_acara_1') }} <span class="fw-bold">{{ __('general.rakan_acara_2') }}</span> </p>
+                    <!--<p class="text-white text-uppercase mb-0"> {{ __('general.rakan_acara_1') }} <span class="fw-bold">{{ __('general.rakan_acara_2') }}</span> </p>-->
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
@@ -162,11 +165,12 @@
                     </a>
                 </div>
                 <div class="text-center ">
+                    <p class="text-white text-uppercase mb-0">{{ __('general.partner_ejen') }}</p>
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon " alt=""> <br>
                     <a href="{{route('may.bank', $partners[3]->slug)}}">
                         <img src="{{$partners[3]->main_logo}}" class="img-fluid partner-logo " alt="">
                     </a>
-                    <p class="text-white text-uppercase mb-0">{{ __('general.partner_ejen') }}</p>
+                    <!--<p class="text-white text-uppercase mb-0">{{ __('general.partner_ejen') }}</p>-->
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>

@@ -29,8 +29,8 @@ return [
     'tuesday' => 'Selasa',
 
     //pertandingan
-    'pertandingan' => 'Hadiah-hadiah Bernilai Lebih daripada <span class="oyen">RM500,000</span> untuk Dimenangi',
-    'jom_kira' => 'Join us for a variety of fun and rewarding contests through our website and social media platforms when the Minggu Saham Digital goes <i>live</i> from 17 to 23 November 2021.Grab your friends and family to participate now because winning is only half of the fun!',
+    'pertandingan' => 'Hadiah-hadiah Bernilai Lebih daripada <span class="oyen">RM500,000</span> <br>untuk Dimenangi',
+    'jom_kira' => 'Rebut peluang untuk memenangi hadiah-hadiah menarik sepanjang Minggu Saham Digital! Sertai kami dalam pelbagai pertandingan menarik yang telah disediakan di laman web, platform-platfom sosial kami dan Minggu Saham Digital <i>live</i> dari 17 hingga 23 November 2021.',
     'join_now' => 'Sertai Sekarang!',
 
     'the_match_button_1' => 'Jom... Kira Duit',
@@ -53,9 +53,9 @@ return [
     'ringgit_emas'=> 'Ringgit Emas',
     'evouchers'=> 'e-Baucar Bernilai',
 
-    'jom-kira-doit'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
-    'jom-kira-doit2'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
-    'jom-kira-doit3'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
+    'jom-kira-doit'=> '1Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
+    'jom-kira-doit2'=> '2Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
+    'jom-kira-doit3'=> '3Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim culpa cum sint, unde aut cupiditate dicta possimus illum necessitatibus fuga voluptatum? Quia similique eum unde commodi, aliquam adipisci magnam excepturi!',
 
     'khidmat0' => 'Khidmat Nasihat  1-1',
     'khidmat1' => 'Apa itu Khidmat Nasihat 1-1?',
@@ -81,7 +81,7 @@ return [
 
     'cabutanbertuah_mainheading' => 'Cabutan Bertuah',
     'cabutanbertuah_title' => 'Cara Penyertaan',
-    'cabutanbertuah_description' => 'Sudah berdaftar? Anda pasti teringin kerana setiap hari, kami akan mencabut 500 nama pemenang yang berpeluang memenangi E-Baucar Lazada bernilai RM100,000 dalam cabutan bertuah harian kami! Anda cuma perlu ke laman web pendaftaran kami, daftar dan tunggu pengumuman pemenang harian! Sungguh mudah! Jadi, ajak rakan-rakan dan ahli keluarga anda kerana pasti semua orang pasti berpeluang untuk memenangi baucar!',
+    'cabutanbertuah_description' => 'Sudah berdaftar? Anda pasti teringin kerana setiap hari, kami akan mencabut 400 nama pemenang yang berpeluang memenangi e-Baucar Lazada bernilai RM120,000 dalam cabutan bertuah harian kami! Anda cuma perlu ke laman web pendaftaran kami, daftar dan tunggu pengumuman pemenang harian! Sungguh mudah! Jadi, ajak rakan-rakan dan ahli keluarga anda kerana pasti semua orang pasti berpeluang untuk memenangi baucar!',
     'cabutanbertuah_worth' => 'e-Baucar bernilai',
     'cabutanbertuah_text' => ' Kembali ke Pertandingan',
 
@@ -94,14 +94,14 @@ return [
 
     'livetrivia_mainheading' => 'Live Trivia',
     'livetrivia_title' => 'Cara Penyertaan',
-    'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital LIVE di Facebook. Anda cuma perlu menonton, bersedia dengan papan kekunci anda dan tajamkan minda anda, untuk menjadi salah seorang pemenang  bagi E-Baucar Lazada! Pastikan anda catat jadual siaran dengan melayari Program & Jadual, pasangkan peringatan dan bersedia untuk menang!',
+    'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital LIVE di Facebook. Anda cuma perlu menonton, bersedia dengan papan kekunci anda dan tajamkan minda anda, untuk menjadi salah seorang pemenang bagi e-Baucar Lazada! Pastikan anda catat jadual siaran dengan melayari Program & Jadual, pasangkan peringatan dan bersedia untuk menang!',
     'livetrivia_worth' => 'e-Baucar bernilai',
     'livetrivia_text' => 'Kembali ke Pertandingan',
 
     'qa_1' => 'Soalan',
     'qa_2' => 'Lazim',
     'pertandingan_title' => 'Peraduan',
-
+    'program_title' => 'Atur Cara & Jadual',
     'promosi_title' => 'Promosi',
     'back_button_age' => 'Kembali ke Pertandingan',
 
@@ -161,4 +161,14 @@ return [
     "password_max_length" => 'Kata laluan tidak melebihi 8 aksara',
 
     "reset_password_description" => 'Sila klik pautan yang akan dihantarkan ke e-mel anda untuk menetapkan semula kata laluan',
+    
+    // success popup
+    
+    "list_a" => "Saya bukan pemegang unit ASNB dan ingin",
+    "list_b" => "Saya merupakan pemegang unit ASNB tetapi belum mendaftar sebagai pengguna portal myASNB. Saya mahu",
+    "list_c" => "Saya merupakan pemegang unit ASNB dan sudah berdaftar sebagai pengguna portal myASNB",
+    "list_a_register" => "daftar sekarang!",
+    "list_b_signup" => "Saya mahu",
+    "list_c_close" => "tutup",
+    "list_b_second" => "daftar segera!",
 ];

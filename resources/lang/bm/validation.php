@@ -13,15 +13,15 @@ return [
     |
     */
 
-    'accepted' => 'The :attribute mesti diterima.',
-    'active_url' => 'The :attribute bukan URL yang sah.',
-    'after' => 'The :attribute mesti tarikh selepas :date.',
-    'after_or_equal' => 'The :attribute mesti tarikh selepas atau sama dengan :date.',
-    'alpha' => 'The :attribute hanya boleh mengandungi huruf.',
-    'alpha_dash' => 'The :attribute hanya boleh mengandungi huruf, angka, tanda hubung dan garis bawah.',
-    'alpha_num' => 'The :attribute hanya boleh mengandungi huruf dan angka.',
-    'array' => 'The :attribute mestilah array.',
-    'before' => 'The :attribute mesti tarikh sebelum ini :date.',
+    'accepted' => ':attribute mesti diterima.',
+    'active_url' => ':attribute bukan URL yang sah.',
+    'after' => ':attribute mesti tarikh selepas :date.',
+    'after_or_equal' => ':attribute mesti tarikh selepas atau sama dengan :date.',
+    'alpha' => ':attribute hanya boleh mengandungi huruf.',
+    'alpha_dash' => ':attribute hanya boleh mengandungi huruf, angka, tanda hubung dan garis bawah.',
+    'alpha_num' => ':attribute hanya boleh mengandungi huruf dan angka.',
+    'array' => ':attribute mestilah array.',
+    'before' => ':attribute mesti tarikh sebelum ini :date.',
     'before_or_equal' => 'The :attribute must be a date before or equal to :date.',
     'between' => [
         'numeric' => 'The :attribute must be between :min and :max.',
@@ -96,7 +96,7 @@ return [
     'password' => 'The password is incorrect.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute bidang diperlukan.',
+    'required' => ':attribute perlu diisikan',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -111,12 +111,12 @@ return [
         'array' => 'The :attribute must contain :size items.',
     ],
     'starts_with' => 'The :attribute must start with one of the following: :values.',
-    'string' => 'The :attribute mesti tali.',
+    'string' => ':attribute mesti tali.',
     'timezone' => 'The :attribute must be a valid zone.',
-    'unique' => 'The :attribute sudah mendaftar.',
-    'uploaded' => 'The :attribute failed to upload.',
-    'url' => 'The :attribute format is invalid.',
-    'uuid' => 'The :attribute must be a valid UUID.',
+    'unique' => ':attribute sudah mendaftar.',
+    'uploaded' => ':attribute failed to upload.',
+    'url' => ':attribute format is invalid.',
+    'uuid' => ':attribute must be a valid UUID.',
 
     /*
     |--------------------------------------------------------------------------

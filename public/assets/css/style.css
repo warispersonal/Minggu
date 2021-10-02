@@ -395,8 +395,8 @@
 }
 .oyen{
     color: #F5841F !important;
-    font-size: 4.5rem;
-    font-weight:600;
+    font-size: 5.5rem;
+    font-weight:bold;
 }
 .car-details{
     color: white;
@@ -1224,7 +1224,10 @@
     transition:all .3s;
 }
 .lang-btns a:hover{
-    color:#F5841F;
+    color:#F5841F !important;
+}
+.lang-btns a.active{
+    color: #F5841F !important;
 }
 .lang-btns a.active{
     color:#F5841F;
@@ -1681,7 +1684,7 @@
         transform-origin: top left;
     }
     .link-3{
-        bottom: 40%;
+        bottom: 38%;
         left: inherit;
         right: 5%;
         transform-origin: right;

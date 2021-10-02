@@ -14,7 +14,7 @@ return [
     */
 
     'pertandingan_title' => 'Contests',
-
+    'program_title' => 'Programmes & Schedules',
     'the_match_button_1' => 'Jom Kira Duit',
     'the_match_button_2' => 'Live Trivia',
     'the_match_button_3' => 'Draw 118',
@@ -40,13 +40,13 @@ return [
     'tuesday' => 'Tuesday',
 
     //pertandingan
-    'pertandingan' => 'Prizes Worth More Than <span class="oyen">RM500,000</span> To Be Won',
-    'jom_kira' => 'Stand a chance to win awesome prizes during Minggu Saham Digital! Join us in the different competitions we have in stored on our website, social media platforms and Minggu Saham Digital LIVE from 20 October to November 23rd 2021. Grab your friends and family, and start participating now because winning is only half the fun!',
+    'pertandingan' => 'Prizes Worth More Than <span class="oyen"><b>RM500,000</b></span> <br>To Be Won',
+    'jom_kira' => 'Join us for a variety of fun and rewarding contests through our website and social media platforms when the Minggu Saham Digital goes <i>live</i> from 17 to 23 November 2021. Grab your friends and family to participate now because winning is only half of the fun!',
     'join_now' => 'Join Now!',
 
     'car1_main_title' => 'Jom... Kira Duit',
     'car1_text' => 'How to Participate',
-    'car1_description' => 'Count the coins with us to stand a change to win yourself a Hyundai Kona 2.0, Toyota Yaris 1.5G(AT), Perodua Ativa 1.0 Turbo AV, Yamaha YZF-R2F or Honda Dash 125! Find, collect and submit Saham Coins hidden across all our Partner pages (Head to "Corporate Partners") on our website and be sure to tune in to the Minggu Saham Digital LIVE event for more coins that will be dropping in, pay close attention to what value is written on the coin so you can be one of the lucky winners! Register Now to participate!',
+    'car1_description' => 'Count the coins with us to stand a chance to win yourself a Hyundai Kona 2.0, Toyota Yaris 1.5G(AT), Perodua Ativa 1.0 Turbo AV, Yamaha YZF-R2F or Honda Dash 125! Find, collect and submit Saham Coins hidden across all our Partner pages (Head to "Corporate Partners") on our website and be sure to tune in to the Minggu Saham Digital LIVE event for more coins that will be dropping in, pay close attention to what value is written on the coin so you can be one of the lucky winners! Register Now to participate!',
 
 
     'car2_main_title' => 'Jom... Kira Duit 2',
@@ -87,23 +87,23 @@ return [
     'khidmat19' => 'Time',
     'khidmat20' => 'Send',
 
-    'cabutanbertuah_mainheading' => 'Daily Lucky draw',
+    'cabutanbertuah_mainheading' => 'Daily Lucky Draw',
     'cabutanbertuah_title' => 'How to Participate',
-    'cabutanbertuah_description' => 'Have you registered yet? You definitely want to because every day we will be drawing 500 winners to win themselves a Lazada E-Vouchers worth more than RM100,000 in our daily lucky draws! All you need to do is head over to our registration page, sign up, and wait for the daily winners to be announced! It is as simple as that! So get your friends and family because everyone will get a chance to win themselves a voucher!',
-    'cabutanbertuah_worth' => 'e-Voucher worth',
+    'cabutanbertuah_description' => 'Have you registered yet? You definitely should not miss our daily lucky draws because every day we will be drawing 400 winners to win Lazada e-Vouchers worth RM120,000! All you need to do is head over to our registration page, sign up, and wait for the daily winners to be announced! It is as simple as that! Spread the word to your friends and family because everyone will get a chance to win a voucher!',
+    'cabutanbertuah_worth' => 'e-Vouchers worth',
     'cabutanbertuah_text' => 'Return to Contests',
 
 
     'draw_mainheading' => 'Draw 118',
     'draw_title' => 'How to Participate',
     'draw_description' => 'Make sure you follow us on Instagram to watch for more details on this competition.',
-    'draw_worth' => 'e-Voucher worth',
+    'draw_worth' => 'e-Vouchers worth',
     'draw_text' => 'Return to Contests',
 
     'livetrivia_mainheading' => 'Live Trivia',
     'livetrivia_title' => 'How to Participate',
-    'livetrivia_description' => 'Our daily Live Trivia sessions are back this year! Hosted during Minggu Saham Digital week between 17 November to 23 November 2021 LIVE on MSD Facebook Page. All you have to do is start tuning in, get your keyboards ready and your thinking caps on and become one of the winners to grab yourself some Lazada E-Vouchers worth up to RM 1,100 per session! Head over to the "Programme & Schedule" page in this site to find out the date and times of the Live Trivia, set your reminders and get ready to win!!',
-    'livetrivia_worth' => 'e-Voucher worth',
+    'livetrivia_description' => 'Our daily Live Trivia sessions are back this year from 17 to 23 November 2021 during the livestream of Minggu Saham Digital (MSD) week on MSD Facebook page. All you have to do is stay tuned, get your keyboard ready, put your thinking cap on and become one of the winners to grab yourself some Lazada e-Vouchers worth up to RM 1,100 per session! Head over to the "Programmes & Schedules" page in this site to find out the dates and times of the Live Trivia sessions, set your reminders and get ready to win!',
+    'livetrivia_worth' => 'e-Vouchers worth',
     'livetrivia_text' => 'Return to Contests',
 
     'qa_1' => 'Frequently',
@@ -167,12 +167,22 @@ return [
 
     "full_name_required" => 'Full name is required',
     "email_required" => 'Email is required',
-    "phone_required" => 'Mobile phone number must be entered',
-    "ic_number_required" => 'Identity card number must be filled',
-    "password_required" => 'Password must be entered',
+    "phone_required" => 'Mobile phone number is required',
+    "ic_number_required" => 'Identity card number is required',
+    "password_required" => 'Password is required',
     "password_min_length" => 'Password must be at least 6 characters',
-    "password_max_length" => 'Password does not exceed 8 characters',
+    "password_max_length" => 'Password must not exceed 8 characters',
 
     "reset_password_description" => 'Please click the link that will be sent to your email to reset the password',
+    
+    // success popup
+    
+    "list_a" => "I am not an ASNB unit holder and would like to",
+    "list_b" => "I am an ASNB unit holder but have not registered as a user of the myASNB portal. I want to",
+    "list_c" => "I am an ASNB unit holder and have registered as a user of the myASNB portal.",
+    "list_a_register" => "register now!",
+    "list_b_signup" => "sign up",
+    "list_c_close" => "close",
+    "list_b_second" => "right away!",
 
 ];
