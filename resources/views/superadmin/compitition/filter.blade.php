@@ -140,7 +140,6 @@
             });
         });
         $('#chooseFilters').on('change',function(){
-            debugger
             var fileName = $('#chooseFilters')[0].files[0].name;
             var fileExt = fileName.split('.').pop();
             if(fileExt == 'csv'){

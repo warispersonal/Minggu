@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="facebook-domain-verification" content="n8y1zuw9o7cyetgowao76gk2oga5o6" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>MSD Admin</title>

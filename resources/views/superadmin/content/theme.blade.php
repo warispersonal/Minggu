@@ -150,7 +150,6 @@
         var _key = $(this).attr('name');
         var _value = $(this).val();
         var _target = $('.' + _key);
-        debugger;
         $('#' + _key + '-form').submit();
        });
 
@@ -178,7 +177,7 @@
                 cache: false,
                 processData: false,
                 success:function(response)
-                {   
+                {
                     if(response.success){
 
                         $('.' + response.type).attr('src' , response.success);
