@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\SuperAdmin;
 
+use App\FancyPrize;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -45,6 +46,18 @@ class UsersController extends Controller
                 return $dropdown;
             })
             ->rawColumns(['action'])
+            ->addIndexColumn()
+            ->make(true);
+    }
+
+    public function ref_submission(){
+        return view('superadmin.ref_submission.list');
+    }
+
+    // Get Ref for DataTable AJAX
+    public function getRefSubmission(Request $request){
+        $partners = FancyPrize::select('*')->orderBy('created_at','desc');
+        return Datatables::of($partners)
             ->addIndexColumn()
             ->make(true);
     }

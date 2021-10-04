@@ -140,6 +140,9 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
 
     Route::prefix('user')->group(function () {
         Route::get('/', 'UsersController@index')->name('star.users');
+        Route::get('/ref-submission', 'UsersController@ref_submission')->name('star.ref_submission');
+        Route::get('getRefSubmission', 'UsersController@getRefSubmission')->name('star.getRefSubmissionAJAX');
+
         Route::get('getUsers', 'UsersController@getUsers')->name('star.getusersAJAX');
         Route::get('delete/{id}', 'UsersController@destroy')->name('star.destroyUser');
         Route::get('get-Daily-Winner-ajax', 'CompititionController@getDailyWinnerAJAX')->name('star.getDailyWinnerAJAX');

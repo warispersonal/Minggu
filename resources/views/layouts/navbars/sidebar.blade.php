@@ -126,6 +126,12 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link {{ Route::is('star.ref_submission') ? 'active' : '' }}"
+                           href="{{ route('star.ref_submission') }}">
+                            <i class="ni ni-spaceship text-primary"></i> {{ __('Ref Submission') }}
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link collapsed" href="#page-content" data-toggle="collapse" role="button"
                            aria-expanded="false" aria-controls="navbar-examples">
                             <i class="fab fa-laravel text-primary"></i>

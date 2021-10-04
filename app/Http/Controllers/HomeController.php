@@ -179,7 +179,20 @@ class HomeController extends Controller
     }
 
     public function fancyPrize(Request $request){
-        FancyPrize::create($request->except('token'));
+        $bank_name = $request->bank_name;
+        $state_name = $request->state_name;
+        $branch_name = $request->branch_name;
+
+        $bank = Bank::find($request->bank_name);
+        $state = State::find($request->state_name);
+        $branch = Branch::find($request->branch_name);
+
+        $fancy = new FancyPrize();
+        $fancy->bank_name = $bank->name;
+        $fancy->state_name = $state->name;
+        $fancy->branch_name = $branch->name;
+        $fancy->save();
+
         $message = trans('general.fancy_message');
         return redirect()->route('home.index')->with('msg',$message);
     }
