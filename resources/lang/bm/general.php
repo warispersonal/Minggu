@@ -170,5 +170,6 @@ return [
     "list_a_register" => "daftar sekarang!",
     "list_b_signup" => "Saya mahu",
     "list_c_close" => "tutup",
+    "list_a_close" => "tutup",
     "list_b_second" => "daftar segera!",
 ];

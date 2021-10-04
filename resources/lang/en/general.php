@@ -183,6 +183,7 @@ return [
     "list_a_register" => "register now!",
     "list_b_signup" => "sign up",
     "list_c_close" => "close",
+    "list_a_close" => "close",
     "list_b_second" => "right away!",
 
 ];

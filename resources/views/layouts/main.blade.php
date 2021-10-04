@@ -65,6 +65,11 @@
         .main-bg{
             background-color: {{pageBackgroundColor()  ?? "blue"}} !important;
         }
+        #confirm_modal .close_btn{
+            color: #0057b7;
+            font-weight: 700;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body class="{{ $class ?? '' }}">
@@ -363,7 +368,7 @@
         <ol class="mt-4">
             <li>{{ __('general.list_a') }} <a class="fw-bold text-uppercase" href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_a_register') }} </a>  </li>
             <li>{{ __('general.list_b') }} <a class="fw-bold text-uppercase " href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_b_signup') }} </a> {{ __('general.list_b_second') }}  </li>
-            <li>{{ __('general.list_c') }} <span class="close_btn"> {{ __('general.list_a_close') }} </span> </li>
+            <li>{{ __('general.list_c') }} <span class="close_btn text-uppercase"> {{ __('general.list_a_close') }} </span> </li>
         </ol>
     </div>
 
