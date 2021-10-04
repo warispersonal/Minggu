@@ -13,6 +13,7 @@
             <div class="text-muted text-center mt-2 mb-2">Update Program Info</div>
         </div>
         <div class="card-body px-lg-4 py-lg-4">
+            @include('component.errors')
             <form method="post" action="{{route('admin.programs.update', $program->id)}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group mb-3">

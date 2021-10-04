@@ -30,6 +30,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-8">
+                                @include('component.errors')
                                 <form method="post" action="{{route('partner.slide.update',$slider->id)}}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group mb-3">

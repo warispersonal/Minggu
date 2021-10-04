@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Partner;
 
 use App\Constant\FileConstant;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PartnerPromotionRequest;
 use App\Partner;
 use App\PartnerLink;
 use App\PartnerPromotion;
@@ -137,6 +138,7 @@ class PartnerController extends Controller
             'home_logo' => 'mimes:jpg,bmp,png',
             'details_logo' => 'mimes:jpg,bmp,png',
             'promosi_image' => 'mimes:jpg,bmp,png',
+
         ]);
         $partner = Partner::where("user_id", Auth::guard('partner')->id())->get()->first();
         $update_partner = Partner::where("parent_id", Auth::guard('partner')->id())->get()->last();
@@ -233,8 +235,9 @@ class PartnerController extends Controller
         return  view('partner.single.promotion.edit',compact('partner'));
     }
 
-    public function promotion_update(Request $request, $id)
+    public function promotion_update(PartnerPromotionRequest $request, $id)
     {
+
         $partner = PartnerPromotion::find($id);
         if($request->has('slider')){
             $sliderImage = $this->uploadMediaFile($request, 'slider', FileConstant::PARTNER_PROMOTION);
@@ -250,7 +253,7 @@ class PartnerController extends Controller
         return view('partner.single.slider.edit',compact('slider'));
     }
 
-    public function slider_update(Request $request, $id)
+    public function slider_update(PartnerPromotionRequest $request, $id)
     {
         $slider = PartnerSlider::find($id);
         if($request->has('slider')){

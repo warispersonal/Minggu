@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="facebook-domain-verification" content="n8y1zuw9o7cyetgowao76gk2oga5o6" />
+    <meta name="facebook-domain-verification" content="n8y1zuw9o7cyetgowao76gk2oga5o6"/>
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap-icons.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="icon" type="image/x-icon" href="{{asset('assets/img/favicon.ico')}}" />
+    <link rel="icon" type="image/x-icon" href="{{asset('assets/img/favicon.ico')}}"/>
 
 <!--<title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>-->
     <?php
@@ -62,10 +62,11 @@
     @include('component.google-analaytics')
 
     <style>
-        .main-bg{
-            background-color: {{pageBackgroundColor()  ?? "blue"}} !important;
+        .main-bg {
+            background-color: {{pageBackgroundColor()  ?? "blue"}}  !important;
         }
-        #confirm_modal .close_btn{
+
+        #confirm_modal .close_btn {
             color: #0057b7;
             font-weight: 700;
             text-decoration: underline;
@@ -79,14 +80,14 @@
     <nav class="desktop_nav py-2 container-fluid ">
         <div class=" header-imgs me-2">
             <?php if($_SERVER['REQUEST_URI'] == "/" || $_SERVER['REQUEST_URI'] == "/index.php"){ ?>
-                <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-3">
-                <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+            <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-3">
+            <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
             <?php } else{ ?>
-                <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">
-                <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
+            <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">
+            <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
             <?php } ?>
 
-            </div>
+        </div>
         <ul>
 
             @foreach($headerMenu as $menu)
@@ -130,7 +131,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i  style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}
+                        <i style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a href="{{route('user.logout')}}" style="color: blue !important;"
@@ -139,9 +140,11 @@
                 </li>
             @endauth
             <li class="lang-btns">
-                <a href="{{ route('localization' , 'bm') }}" class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"><small>BM</small></a>
+                <a href="{{ route('localization' , 'bm') }}"
+                   class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"><small>BM</small></a>
                 |
-                <a href="{{ route('localization' , 'en') }}" class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"><small> EN </small></a>
+                <a href="{{ route('localization' , 'en') }}"
+                   class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"><small> EN </small></a>
             </li>
         </ul>
     </nav><!-- /. Desktop Navbar -->
@@ -156,8 +159,10 @@
         </div>
         <div>
             <small>
-                <a class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"  href="{{ route('localization' , 'bm') }}">BM</a> |
-                <a class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"  href="{{ route('localization' , 'en') }}">EN</a>
+                <a class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"
+                   href="{{ route('localization' , 'bm') }}">BM</a> |
+                <a class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"
+                   href="{{ route('localization' , 'en') }}">EN</a>
             </small>
             <img id="hamburger_btn" class="ms-3" src="{{asset('assets/img/menu-white.svg')}}" alt="">
         </div>
@@ -180,7 +185,7 @@
                 <li><a id="mobile_login" class="pop-btns">{{ __('auth.login') }}</a></li>
             @endguest
             @if(\Illuminate\Support\Facades\Auth::guard('user')->check())
-                <li> <i  style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}    </li>
+                <li><i style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}    </li>
                 <li><a href="{{route('user.logout')}}" style="color: blue !important;"
                        class="dropdown-item">{{ __('auth.logout') }}</a></li>
             @endif
@@ -306,7 +311,8 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <input class="custom_inputs only-decimal-integer-number" type="text" value="{{ old('phone') }}"  name="phone"
+                        <input class="custom_inputs only-decimal-integer-number" type="text" value="{{ old('phone') }}"
+                               name="phone"
                                placeholder="{{ __('auth.phoneNumber') }}">
                         @if ($errors->has('phone'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -366,9 +372,14 @@
             <i class="bi bi-x close_btn  me-0"></i>
         </div>
         <ol class="mt-4">
-            <li>{{ __('general.list_a') }} <a class="fw-bold text-uppercase" href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_a_register') }} </a>  </li>
-            <li>{{ __('general.list_b') }} <a class="fw-bold text-uppercase " href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_b_signup') }} </a> {{ __('general.list_b_second') }}  </li>
-            <li>{{ __('general.list_c') }} <span class="close_btn text-uppercase"> {{ __('general.list_a_close') }} </span> </li>
+            <li>{{ __('general.list_a') }} <a class="fw-bold text-uppercase"
+                                              href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_a_register') }} </a>
+            </li>
+            <li>{{ __('general.list_b') }} <a class="fw-bold text-uppercase "
+                                              href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_b_signup') }} </a> {{ __('general.list_b_second') }}
+            </li>
+            <li>{{ __('general.list_c') }} <span
+                    class="close_btn text-uppercase"> {{ __('general.list_a_close') }} </span></li>
         </ol>
     </div>
 
@@ -383,18 +394,31 @@
     {{ Session::first() }}
 @endif
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+<script>
+    function validateUploadImage(input) {
+        var validExtensions = ['jpg', 'png', 'jpeg', 'gif']; //array of valid extensions
+        var fileName = input.files[0].name;
+        var fileNameExt = fileName.substr(fileName.lastIndexOf('.') + 1);
+        if ($.inArray(fileNameExt, validExtensions) == -1) {
+            input.type = ''
+            input.type = 'file'
+            $(input).attr('src',"");
+            swal("", "Only these file types are accepted : " + validExtensions.join(', '), "error");
+            return false;
+        }
+    }
+</script>
 @if(session()->has('msg'))
     <script>
         @if(session()->get('msg') == "Invalid credentials" || session()->get('msg') == "Kelayakan tidak sah")
         swal("", "{{session()->get('msg')}}", "error");
         @elseif (session()->get('msg') == "You have registered successfully" || session()->get('msg') == 'Anda telah berjaya mendaftar')
             overlay.style.display = "block"
-            confirmModal.style.bottom = "55%"
-            setTimeout(() => {
-                confirmModal.style.bottom = "50%"
+        confirmModal.style.bottom = "55%"
+        setTimeout(() => {
+            confirmModal.style.bottom = "50%"
 
-            }, 300);
+        }, 300);
         @else
         swal("", "{{session()->get('msg')}}", "success");
         @endif
@@ -436,6 +460,7 @@
             }
         }).trigger('input'); // Initialise the `prevValue` data properties
     });
+
 </script>
 
 

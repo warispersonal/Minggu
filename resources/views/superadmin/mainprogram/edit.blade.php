@@ -24,13 +24,15 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <!-- Card header -->
+
+                <!-- Card header -->
                     <div class="card-header border-0">
                         <h3 class="mb-0">Edit Program ( {{ $program->title }} )</h3>
                     </div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-8">
+                                @include('component.errors')
                                 <form role="form" id="store-admin" method="POST"
                                       action="{{ route('star.updateMainDetail' , $program->id) }}"  enctype="multipart/form-data">
                                     @csrf
@@ -77,7 +79,7 @@
                                     <div class="form-group mb-3">
                                         <label>Logo (150 × 96 px)</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control" name="logo" type="file">
+                                            <input class="form-control"   onchange="validateUploadImage(this)"  name="logo" type="file">
                                         </div>
                                     </div>
                                     <div class="text-right">

@@ -168,7 +168,7 @@
                                     <div class="form-group mb-3">
                                         <label>Home Logo (162 × 106 px)</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control"  name="home_logo" type="file">
+                                            <input class="form-control"  onchange="validateUploadImage(this)"   name="home_logo" type="file">
                                         </div>
                                         @if ($errors->has('home_logo'))
                                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -181,7 +181,7 @@
                                     <div class="form-group mb-3">
                                         <label>Promosi Page Logo (104 × 86 px)</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control"  name="promosi_image" type="file">
+                                            <input class="form-control"  name="promosi_image"  onchange="validateUploadImage(this)"  type="file">
                                         </div>
                                         @if ($errors->has('promosi_image'))
                                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -195,7 +195,7 @@
                                     <div class="form-group mb-3">
                                         <label>Details Page Logo (403 × 110 px)</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control"  name="details_logo" type="file">
+                                            <input class="form-control"  name="details_logo"  onchange="validateUploadImage(this)"  type="file">
                                         </div>
                                         @if ($errors->has('details_logo'))
                                             <span class="invalid-feedback" style="display: block;" role="alert">

@@ -106,7 +106,7 @@
                                 <div class="form-group mb-3">
                                     <label>Select Image (577 × 200 px)</label>
                                     <div class="input-group input-group-alternative">
-                                        <input class="form-control" name="slider" type="file" required>
+                                        <input class="form-control" name="slider" type="file"  onchange="validateUploadImage(this)" required>
                                     </div>
                                 </div>
                                 <div class="form-group mb-3">

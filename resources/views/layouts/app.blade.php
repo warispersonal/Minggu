@@ -63,7 +63,21 @@
 <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
 <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="{{ asset('assets') }}/vendor/jquery-toast/toast.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <script>
+    function validateUploadImage(input) {
+        var validExtensions = ['jpg', 'png', 'jpeg', 'gif']; //array of valid extensions
+        var fileName = input.files[0].name;
+        var fileNameExt = fileName.substr(fileName.lastIndexOf('.') + 1);
+        if ($.inArray(fileNameExt, validExtensions) == -1) {
+            input.type = ''
+            input.type = 'file'
+            $(input).attr('src',"");
+            swal("", "Only these file types are accepted : " + validExtensions.join(', '), "error");
+            return false;
+        }
+    }
     function clearFormInputField() {
         $('#store-admin input[type="text"]').val('');
         $('#store-admin input[type="email"]').val('');
@@ -96,6 +110,7 @@
             textColor: 'white',
             icon: type
         });
+
     </script>
 @endif
 </body>

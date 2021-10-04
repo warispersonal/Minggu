@@ -51,13 +51,14 @@ class ProgramController extends Controller
      */
     public function store(Request $request)
     {
-        $thumbnail_image = $this->uploadMediaFile($request, 'thumbnail_image', FileConstant::PROGRAM_THUMBNAIL);
         $request->validate([
             'date' => 'required',
             'time' => 'required',
             'description' => 'required',
             'main_program' => 'required',
+            'thumbnail_image' => 'mimes:png,jpeg,gif',
         ]);
+        $thumbnail_image = $this->uploadMediaFile($request, 'thumbnail_image', FileConstant::PROGRAM_THUMBNAIL);
         $iframe = $this->getVideoIFrame($request->video_link);
         $program = new Program();
         $program->iframe =$iframe;
@@ -125,6 +126,7 @@ class ProgramController extends Controller
             'description' => 'required',
             'description_bm' => 'required',
             'main_program' => 'required',
+            'thumbnail_image' => 'mimes:png,jpeg,gif',
         ]);
         $program = Program::find($id);
         if ($request->thumbnail_image) {
@@ -156,6 +158,7 @@ class ProgramController extends Controller
             'description' => 'required',
             'description_bm' => 'required',
             'main_program' => 'required',
+            'thumbnail_image' => 'mimes:png,jpeg,gif',
         ]);
         $program = Program::find($id);
         if ($request->thumbnail_image) {

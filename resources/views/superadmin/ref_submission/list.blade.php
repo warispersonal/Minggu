@@ -41,6 +41,7 @@
                                 <th scope="col" class="sort" data-sort="budget">Bank Name</th>
                                 <th scope="col" class="sort" data-sort="status">State Name</th>
                                 <th scope="col" class="sort" data-sort="status">Branch Name</th>
+                                <th style="display: none"></th>
                             </tr>
                             </thead>
                             <tbody>

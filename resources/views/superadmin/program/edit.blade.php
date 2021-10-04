@@ -13,6 +13,7 @@
             <div class="text-muted text-center mt-2 mb-2">Update Program Info</div>
         </div>
         <div class="card-body px-lg-4 py-lg-4">
+            @include('component.errors')
             <form method="post" action="{{route('programs.update', $program->id)}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group mb-3">
@@ -42,7 +43,7 @@
                 <div class="form-group mb-3">
                     <label>Partner Logo (150 × 96px)</label>
                     <div class="input-group input-group-alternative">
-                        <input class="form-control" id="partner-email" name="thumbnail_image" type="file" >
+                        <input class="form-control" id="partner-email" onchange="validateUploadImage(this)"  name="thumbnail_image" type="file" >
                     </div>
                     <img class="main-details-image mt-2" src="{{$program->program_image}}">
 

@@ -30,6 +30,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-8">
+                                @include('component.errors')
                                 <form method="post" action="{{route('stars.promotion.update',$partner->id)}}"
                                       enctype="multipart/form-data">
                                     @csrf
