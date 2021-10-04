@@ -36,7 +36,7 @@
                                     <div class="form-group mb-3">
                                         <label>Select Image (577 × 200 px)</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control" name="slider" type="file" >
+                                            <input class="form-control"  onchange="validateUploadImage(this)" name="slider" type="file" >
                                         </div>
                                         <div class="mt-2">
                                             <img src="{{$slider->slider_image}}" class="promosi-image-details main-details-image"/>

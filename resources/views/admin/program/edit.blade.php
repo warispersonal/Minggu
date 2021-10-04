@@ -43,7 +43,7 @@
                 <div class="form-group mb-3">
                     <label>Partner Logo  (150 × 96px)</label>
                     <div class="input-group input-group-alternative">
-                        <input class="form-control" id="partner-email" name="thumbnail_image" type="file" >
+                        <input class="form-control" id="partner-email" onchange="validateUploadImage(this)" name="thumbnail_image" type="file" >
                     </div>
                     <img class="main-details-image mt-2" src="{{$program->program_image}}">
 

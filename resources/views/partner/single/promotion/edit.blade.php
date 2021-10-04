@@ -37,7 +37,7 @@
                                     <div class="form-group mb-3">
                                         <label>Select Image (526 × 234 px)</label>
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control" name="slider" type="file" >
+                                            <input class="form-control" name="slider" onchange="validateUploadImage(this)" type="file" >
                                         </div>
                                         <div class="mt-2">
                                             <img src="{{$partner->promotion_logo}}"
