@@ -331,7 +331,7 @@
                     </div>
                     <div class="mb-4">
                         <input class="custom_inputs" type="password" name="password"
-                               min="6" max="8"
+                               min="6"
                                placeholder="{{ __('auth.password') }}">
                         @if ($errors->has('password'))
                             <span class="invalid-feedback" style="display: block;" role="alert">

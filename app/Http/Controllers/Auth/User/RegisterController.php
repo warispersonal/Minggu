@@ -62,7 +62,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255'],
             'phone' => ['required', 'string', 'max:255'],
             'ic_number' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'string', 'min:6', 'max:8'],
+            'password' => ['required', 'string', 'min:6'],
         ],$messages);
 
         $request['role_id'] = 4;
