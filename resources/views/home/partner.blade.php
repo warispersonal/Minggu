@@ -51,8 +51,8 @@
             <!--        @endif-->
             <!--    </div>-->
             <!--</div>-->
-            
- 
+
+
             <div class="container-fluid mt-5 pb-5 px-md-5 ">
                 <div id="may_bank_tabs" class="px-md-5">
                     <nav>
@@ -114,7 +114,7 @@
                                         </button>
                                     </div>
                                     @else
-                                        
+
                                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-indicators">
                                             @foreach($partner->sliders as $slider)
@@ -153,10 +153,10 @@
                                              style="min-height:100px; object-fit:contain;" alt="">
                                     </div>
                                     @endif
-                                    
+
                                     <div class="my-4">
                                         <p class="justify mode-fore-color">
-                                            {{Config::get('app.locale') == 'en' ? $partner->description:$partner->description_bm }}
+                                            {!! Config::get('app.locale') == 'en' ? $partner->description:$partner->description_bm !!}
                                         </p>
                                     </div>
                                 </div>
