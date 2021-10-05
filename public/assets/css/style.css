@@ -1662,7 +1662,7 @@
     .link-15{
         top: inherit;
         right: 27%;
-        bottom: 0%;
+        bottom: 3%;
         transform-origin: top;
     }
     .link-10{
@@ -1714,8 +1714,8 @@
     }
     .info-btn{
         left: inherit;
-        top: 9%;
-        right: 30%;
+        top: 10%;
+        right: 25%;
     }
     /*.header-imgs img:nth-child(1){*/
     /*    width:50px;*/
@@ -1910,6 +1910,9 @@
     }
     .home-links a{
         transform: scale(.5);
+    }
+    .home-links .link-2{
+        transform: scale(.57);
     }
     .cars-row h2{
         font-size:.8rem;

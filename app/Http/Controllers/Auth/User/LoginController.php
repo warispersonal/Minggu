@@ -43,11 +43,11 @@ class LoginController extends Controller
 
     public function user_login(\Illuminate\Http\Request $request)
     {
+        
          $messages = array(
             'email.required' => trans('general.email_required') ,
             'password.required' => trans('general.password_required') 
         );
-        
         $validator = Validator::make($request->all(), [
             'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string'],

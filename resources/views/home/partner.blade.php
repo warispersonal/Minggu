@@ -11,7 +11,7 @@
         }
 
         .mode-bg-color {
-            background-color: {{$partner->mode == 1 ? "#fff4f4" : "#4ac4e2"}}         !important;
+            background-color: {{$partner->mode == 1 ? "#ffffff" : "#4b4b4b"}}         !important;
         }
 
         .mode-buttons-color {

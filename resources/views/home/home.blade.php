@@ -66,7 +66,7 @@
     <!--select bank modal-->
     <div id="bank_modal" class="my_modal">
         <div class="d-flex justify-content-between">
-            <h3 class="modal_heading">Get a chance to Win fancy prizes!</h3>
+            <h3 class="modal_heading">Dari cawangan mana anda mengimbas kodnya?</h3>
             <i class="bi bi-x close_btn"></i>
         </div>
         <div class="row mt-5">
@@ -76,7 +76,7 @@
                     <div class="mb-3">
                         <select name="bank_name" class="custom_inputs" required id="bank_drop_down"
                                 onchange="loadState()">
-                            <option value="" selected> Select Bank</option>
+                            <option value="" selected>Sila Pilih Bank</option>
                             @foreach($banks as $bank)
                                 <option value="{{$bank->id}}">{{$bank->name}}</option>
                             @endforeach
@@ -85,12 +85,12 @@
                     <div class="mb-3">
                         <select name="state_name" id="state_drop_down" required onchange="loadBranch()"
                                 class="custom_inputs">
-                            <option value="" selected> Select State</option>
+                            <option value="" selected>Sila Pilih Negeri</option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <select name="branch_name" id="branch_drop_down" required class="custom_inputs">
-                            <option value="" selected> Select Branch</option>
+                            <option value="" selected>Sila Pilih Cawangan</option>
                         </select>
                     </div>
                     <div>

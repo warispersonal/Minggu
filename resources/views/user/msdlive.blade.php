@@ -14,7 +14,7 @@
                 <div class="row gy-3 px-md-5">
                     <div class="col-lg-4">
 
-                        <img src="{{asset('assets/img/msd-logo.png')}}" class="img-fluid w-75  d-block" alt="">
+                        <img src="{{asset('assets/img/msd-logo2.png')}}" class="img-fluid w-75  d-block" alt="">
                         <div class="social_address d-none d-lg-block">
                             <h4 class="my-4">{{ __('general.social_heading') }}</h4>
                             <p>
