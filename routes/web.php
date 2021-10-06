@@ -272,5 +272,7 @@ Route::get('/lang/{locale}', function ($locale) {
 
 
 Route::get('load-state/{id}',[HomeController::class, 'loadState']);
+Route::get('load-interest/{id}',[HomeController::class, 'loadInterest']);
 Route::get('load-branch/{id}',[HomeController::class, 'loadBranch']);
 Route::post('store-fancy-prize',[HomeController::class, 'fancyPrize'])->name('fancyPrize');
+Route::post('advisors',[HomeController::class, 'advisors'])->name('advisors');

@@ -81,7 +81,7 @@ return [
     'khidmat13' => 'Name',
     'khidmat14' => 'Email',
     'khidmat15' => 'Phone number',
-    'khidmat16' => 'Bank',
+    'khidmat16' => 'Select Bank',
     'khidmat17' => 'Agent',
     'khidmat18' => 'Topics of interest',
     'khidmat19' => 'Time',
@@ -162,6 +162,7 @@ return [
     'email_already_exists' => 'Email already registered',
 
     'fancy_message' => 'Ref added successfully',
+    'advisor_message' => 'Advisor added successfully',
 
     'sponsor_name_text' => 'Brought to you by',
 
@@ -174,9 +175,9 @@ return [
     "password_max_length" => 'Password must not exceed 8 characters',
 
     "reset_password_description" => 'Please click the link that will be sent to your email to reset the password',
-    
+
     // success popup
-    
+
     "list_a" => "I am not an ASNB unit holder and would like to",
     "list_b" => "I am an ASNB unit holder but have not registered as a user of the myASNB portal. I want to",
     "list_c" => "I am an ASNB unit holder and have registered as a user of the myASNB portal.",
@@ -185,5 +186,14 @@ return [
     "list_c_close" => "close",
     "list_a_close" => "close",
     "list_b_second" => "right away!",
+
+
+    "khidmat_name_required" => ' Name is required',
+    "khidmat_email_required" => 'Email is required',
+    "khidmat_phone_required" => 'Mobile phone number is required',
+    "khidmat_bank_required" => 'Bank is required',
+    "khidmat_topic_interest_required" => 'Topic interest is required',
+    "khidmat_date_required" => 'Date is required',
+    "khidmat_time_interest_required" => 'Time is required',
 
 ];

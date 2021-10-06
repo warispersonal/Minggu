@@ -6,6 +6,7 @@ use App\Bank;
 use App\Branch;
 use App\FancyPrize;
 use App\FAQ;
+use App\Http\Requests\ServiceAdvisorRequest;
 use App\Jadual;
 use App\Lottery;
 use App\Models\MainProgram;
@@ -14,7 +15,10 @@ use App\Models\Settings;
 use App\Partner;
 use App\PartnerPromotion;
 use App\PartnerSlider;
+use App\ServiceAdvisor;
+use App\ServiceAdvisorBank;
 use App\State;
+use App\TopicInterest;
 use App\User;
 use App\UserLottery;
 use Facade\FlareClient\Http\Response;
@@ -98,7 +102,8 @@ class HomeController extends Controller
 
     public function khidmat()
     {
-        return view("khidmat");
+        $banks = ServiceAdvisorBank::all();
+        return view("khidmat", compact('banks'));
     }
 
 
@@ -173,6 +178,11 @@ class HomeController extends Controller
         return response()->json(['data' => $data]);
     }
 
+    public function loadInterest($id){
+        $data = TopicInterest::where('service_advisor_bank_id',$id)->get();
+        return response()->json(['data' => $data]);
+    }
+
     public function loadBranch($state_id){
         $data = Branch::where('state_id',$state_id)->get();
         return response()->json(['data' => $data]);
@@ -195,5 +205,9 @@ class HomeController extends Controller
 
         $message = trans('general.fancy_message');
         return redirect()->route('home.index')->with('msg',$message);
+    }
+
+    public function advisors(ServiceAdvisorRequest  $request){
+   
     }
 }

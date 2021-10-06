@@ -134,7 +134,7 @@
                         for (var i = 0; i < len; i++) {
                             var id = response.data[i].id;
                             var name = response.data[i].name;
-                            var option = "<option value='" + id + "'>" + name + "</option>";
+                            var option = "<option value='" + name + "'>" + name + "</option>";
                             $("#state_drop_down").append(option);
                         }
                     }

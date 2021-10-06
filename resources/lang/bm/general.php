@@ -73,7 +73,7 @@ return [
     'khidmat13' => 'Nama',
     'khidmat14' => 'E-mel',
     'khidmat15' => 'Nombor Telefon',
-    'khidmat16' => 'Bank',
+    'khidmat16' => 'Select Bank',
     'khidmat17' => 'Ejen',
     'khidmat18' => 'Topik yang diminati',
     'khidmat19' => 'Masa',
@@ -161,9 +161,9 @@ return [
     "password_max_length" => 'Kata laluan tidak melebihi 8 aksara',
 
     "reset_password_description" => 'Sila klik pautan yang akan dihantarkan ke e-mel anda untuk menetapkan semula kata laluan',
-    
+
     // success popup
-    
+
     "list_a" => "Saya bukan pemegang unit ASNB dan ingin",
     "list_b" => "Saya merupakan pemegang unit ASNB tetapi belum mendaftar sebagai pengguna portal myASNB. Saya mahu",
     "list_c" => "Saya merupakan pemegang unit ASNB dan sudah berdaftar sebagai pengguna portal myASNB",
@@ -172,4 +172,15 @@ return [
     "list_c_close" => "tutup",
     "list_a_close" => "tutup",
     "list_b_second" => "daftar segera!",
+
+    "khidmat_name_required" => 'Nama diperlukan',
+    "khidmat_email_required" => 'E-mel diperlukan',
+    "khidmat_phone_required" => 'Nombor telefon bimbit diperlukan',
+    "khidmat_bank_required" => 'Bank diperlukan',
+    "khidmat_topic_interest_required" => 'Kepentingan topik diperlukan',
+    "khidmat_date_required" => 'Tarikh diperlukan',
+    "khidmat_time_interest_required" => 'Masa diperlukan',
+
+    'advisor_message' => 'Penasihat berjaya ditambahkan',
+
 ];
