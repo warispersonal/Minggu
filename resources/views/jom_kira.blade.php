@@ -139,7 +139,7 @@
         <div class="jomkira-modal-content">
             <div class="d-flex justify-content-between">
                 <h3>{{ __('general.car1_main_title') }}</h3>
-                <i class="bi bi-x close_btn"></i>
+                <i class="bi bi-x close_btn me-0"></i>
             </div>
             <h3 class="fw-bolder my-3">{{ __('general.car1_text') }}</h3>
             <p>{{ __('general.car1_description') }}</p>
@@ -153,7 +153,7 @@
         <div class="jomkira-modal-content">
             <div class="d-flex justify-content-between">
                 <h3>{{ __('general.car3_main_title') }}</h3>
-                <i class="bi bi-x close_btn"></i>
+                <i class="bi bi-x close_btn me-0"></i>
             </div>
             <h3 class="fw-bolder my-3">{{ __('general.car2_text') }}</h3>
             <p>{{ __('general.car2_description') }}</p>
@@ -166,7 +166,7 @@
         <div class="jomkira-modal-content">
             <div class="d-flex justify-content-between">
                 <h3>{{ __('general.car3_main_title') }}</h3>
-                <i class="bi bi-x close_btn"></i>
+                <i class="bi bi-x close_btn me-0"></i>
             </div>
             <h3 class="fw-bolder my-3">{{ __('general.car3_text') }}</h3>
             <p>{{ __('general.car3_description') }}</p>

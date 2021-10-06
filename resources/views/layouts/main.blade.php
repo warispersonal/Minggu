@@ -71,6 +71,16 @@
             font-weight: 700;
             text-decoration: underline;
         }
+        @media (max-width: 576px){
+            #confirm_modal .close_btn {
+                font-size: 12px;
+            }
+        }
+        @media (max-width: 768px){
+            #confirm_modal .close_btn {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body class="{{ $class ?? '' }}">
@@ -149,9 +159,9 @@
         </ul>
     </nav><!-- /. Desktop Navbar -->
 
-    <div class="mobile-header d-lg-none px-3 py-2">
+    <div class="mobile-header d-xxl-none px-3 py-2">
         <div>
-            <div class="d-md-none header-imgs">
+            <div class="d-xxl-none header-imgs">
                 <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
                 <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
             </div>

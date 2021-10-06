@@ -105,6 +105,7 @@
 }
 #hamburger_btn{
     width: 30px;
+    cursor:pointer;
 }
 #close_btn{
     font-size: 20px;
@@ -157,16 +158,18 @@
 }
 .scrol{
     overflow-y: scroll;
-    max-height: 70vh;
+    max-height: calc(90vh - 120px);
     scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
+    scrollbar-color: #0057B7 transparent;
+    padding-right: 15px;
 }
 .scrol::-webkit-scrollbar{
-    width: 0px;
+    width: 5px;
 }
 .scrol::-webkit-scrollbar-thumb{
-    width: 0px;
+    width: 5px;
     background-color: #0057B7;
+    border-radius:5px;
 }
 .overlay{
     position: fixed;
@@ -1251,7 +1254,7 @@
      margin-bottom: 10px;
  }
  
-@media(max-width:1367px){
+@media(max-width:1399px){
 
     .about-us-box{
         top:40%;
@@ -1262,7 +1265,15 @@
     /*.header-imgs img:nth-child(2){*/
     /*    width:100px;*/
     /*}*/
-
+    .desktop_nav{
+        display:none;
+    }
+    .mobile_nav{
+        display: block;
+    }
+    .mobile_nav .pop-btns{
+        color: #F5841F;
+    }
 }
 @media(max-width:1280px){
     .home-links a{
@@ -1531,9 +1542,7 @@
     .rm-form span{
         font-size: 18px;
     }
-    .mobile_nav{
-        display: block;
-    }
+    
     .info-btn{
         width:25px;
         height:25px;
@@ -1586,9 +1595,7 @@
     .submit-btn{
         font-size: 16px;
     }
-    .mobile_nav .pop-btns{
-        color: #F5841F;
-    }
+    
     #hamburger_btn{
         display: inline;
     }
