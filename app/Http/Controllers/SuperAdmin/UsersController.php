@@ -4,6 +4,7 @@ namespace App\Http\Controllers\SuperAdmin;
 
 use App\FancyPrize;
 use App\Http\Controllers\Controller;
+use App\ServiceAdvisor;
 use Illuminate\Http\Request;
 
 use App\User;
@@ -54,9 +55,20 @@ class UsersController extends Controller
         return view('superadmin.ref_submission.list');
     }
 
+    public function khidmat(){
+        return view('superadmin.khidmat.list');
+    }
+
     // Get Ref for DataTable AJAX
     public function getRefSubmission(Request $request){
         $partners = FancyPrize::select('*')->orderBy('created_at','desc');
+        return Datatables::of($partners)
+            ->addIndexColumn()
+            ->make(true);
+    }
+    // Get Ref for DataTable AJAX
+    public function getKhidmatAjax(Request $request){
+        $partners = ServiceAdvisor::select('*')->orderBy('created_at','desc');
         return Datatables::of($partners)
             ->addIndexColumn()
             ->make(true);
