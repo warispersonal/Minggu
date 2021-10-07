@@ -43,6 +43,9 @@
     color: #0057B7;
     text-decoration: none;
 }
+.desktop_nav li a:hover{
+    font-weight:bold;
+}
 
 .desktop_nav option{
     color: #000000;
@@ -557,9 +560,10 @@
 #jom_kira_tabs #nav-tab .nav-link.active{
     border-bottom: 2px solid white;
     font-weight:bold;
+    color:white;
 }
 #jom_kira_tabs #nav-tab .nav-link{
-    color: white;
+    color: #ffffffc9;
     background: transparent;
     border: none;
     font-size: 18px;
@@ -567,6 +571,10 @@
     margin:.5rem 1rem;
     margin-bottom:0px;
     padding-bottom:.5rem;
+    transition: all .3s
+}
+#jom_kira_tabs #nav-tab .nav-link:hover{
+    color:white;
 }
 #jom_kira_tabs #owlCarousel .nav-link{
     width: 220px;
@@ -575,6 +583,7 @@
     width: 100%;
 }
 #jom_kira_tabs .nav-link.active{
+    color:white;
     border-bottom: 1px solid white;
 }
 #may_bank_tabs  .nav-tabs{
