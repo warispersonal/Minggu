@@ -55,13 +55,14 @@ class RegisterController extends Controller
             'password.required' => trans('general.password_required') ,
             'password.min' => trans('general.password_min_length') ,
             'password.max' => trans('general.password_max_length') ,
+            'ic_number.unique' => trans('general.ic_number_unique') ,
         );
 
         $validator = Validator::make($request->all(), [
             'full_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
             'phone' => ['required', 'string', 'max:255'],
-            'ic_number' => ['required', 'string', 'max:255'],
+            'ic_number' => ['required', 'string', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6'],
         ],$messages);
 
@@ -79,7 +80,7 @@ class RegisterController extends Controller
                     'name' => $request['full_name'] ?? "",
                     'email' => $request['email'] ?? "",
                     'phone' => $request['phone'] ?? "",
-                    'ic_number' => $request['ic_number'] ?? "",
+                    'ic_number' => $request['ic_number'],
                     'raw_password' => $request['password'] ?? "",
                     'password' => Hash::make($request['password']) ?? "",
                 ]);

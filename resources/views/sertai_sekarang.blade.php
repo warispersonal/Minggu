@@ -73,10 +73,10 @@
                                                         <span>{{$item->title}}</span>
                                                         <label for="">RM</label>
                                                         <input
-                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step1-fields only-decimal-integer-number"
+                                                            class="rm-imputs step1-fields only-decimal-integer-number"
                                                             type="text"
-                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_1_'.$item->id)}}"
-                                                            name="step_1_{{$item->id}}">
+                                                            value="{{$item->correct_value}}"
+                                                            name="step_1_{{$item->id}}" />
                                                     </div>
                                                 </div>
 
@@ -131,10 +131,10 @@
                                                     <div class="mb-3 d-flex">
                                                         <label for="">RM</label>
                                                         <input
-                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step2-fields only-decimal-integer-number"
+                                                            class="rm-imputs step2-fields only-decimal-integer-number"
                                                             type="text"
-                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_2_'.$item->id)}}"
-                                                            name="step_2_{{$item->id}}">
+                                                            value="{{$item->correct_value}}"
+                                                            name="step_2_{{$item->id}}" />
                                                     </div>
 
                                                 </div>
@@ -233,10 +233,10 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step1-date-fields only-decimal-integer-number"
+                                                                            class="rm-imputs step3-fields step1-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
-                                                                            name="step_3_{{$item->id}}">
+                                                                            value="{{$item->correct_value}}"
+                                                                            name="step_3_{{$item->id}}" />
                                                                     </div>
 
                                                                 </div>
@@ -275,10 +275,10 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step2-date-fields only-decimal-integer-number"
+                                                                            class="rm-imputs step3-fields step2-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
-                                                                            name="step_3_{{$item->id}}">
+                                                                            value="{{$item->correct_value}}"
+                                                                            name="step_3_{{$item->id}}" />
                                                                     </div>
 
                                                                 </div>
@@ -316,10 +316,9 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step3-date-fields only-decimal-integer-number"
+                                                                            class="rm-imputs step3-fields step3-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
-
+                                                                            value="{{$item->correct_value}}"
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
 
@@ -359,10 +358,9 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step4-date-fields only-decimal-integer-number"
+                                                                            class="rm-imputs step3-fields step4-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
-
+                                                                            value="{{$item->correct_value}}"
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
 
@@ -401,11 +399,10 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step5-date-fields only-decimal-integer-number"
+                                                                            class="rm-imputs step3-fields step5-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
-
-                                                                            name="step_3_{{$item->id}}">
+                                                                            value="{{$item->correct_value}}"
+                                                                            name="step_3_{{$item->id}}" />
                                                                     </div>
 
                                                                 </div>
@@ -443,10 +440,9 @@
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
                                                                         <input
-                                                                            {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step6-date-fields only-decimal-integer-number"
+                                                                            class="rm-imputs step3-fields step6-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
-
+                                                                            value="{{$item->correct_value}}"
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
 
@@ -485,7 +481,7 @@
                                                                 <div class="col-5">
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
-                                                                        <input {{$item->status == 1 ? 'disabled': ""}} class="rm-imputs step3-fields step7-date-fields only-decimal-integer-number" type="text" name="step_3_{{$item->id}}">
+                                                                        <input class="rm-imputs step3-fields step7-date-fields only-decimal-integer-number" type="text" name="step_3_{{$item->id}}">
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -609,7 +605,7 @@
                     calculated_total_sum += parseFloat(get_textbox_value);
                 }
             });
-            $("#final_result").val(calculated_total_sum);
+            $("#final_result").val(calculated_total_sum.toFixed(2));
         }
 
         function calculateSum2() {
@@ -620,7 +616,7 @@
                     calculated_total_sum += parseFloat(get_textbox_value);
                 }
             });
-            $("#final_result_2").val(calculated_total_sum);
+            $("#final_result_2").val(calculated_total_sum.toFixed(2));
         }
 
         function stepDateFields(no) {
@@ -631,7 +627,7 @@
                     calculated_total_sum += parseFloat(get_textbox_value);
                 }
             });
-            $("#final"+no+"_result_3").val(calculated_total_sum);
+            $("#final"+no+"_result_3").val(calculated_total_sum.toFixed(2));
         }
 
     </script>

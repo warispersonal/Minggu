@@ -173,6 +173,7 @@ return [
     "password_required" => 'Password is required',
     "password_min_length" => 'Password must be at least 6 characters',
     "password_max_length" => 'Password must not exceed 8 characters',
+    "ic_number_unique" => 'IC number already exists',
 
     "reset_password_description" => 'Please click the link that will be sent to your email to reset the password',
 

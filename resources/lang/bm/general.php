@@ -159,6 +159,7 @@ return [
     "password_required" => 'Kata laluan perlu diisikan',
     "password_min_length" => 'Kata laluan mestilah sekurang-kurangnya 6 karakter',
     "password_max_length" => 'Kata laluan tidak melebihi 8 aksara',
+    "ic_number_unique" => 'Nombor IC sudah ada',
 
     "reset_password_description" => 'Sila klik pautan yang akan dihantarkan ke e-mel anda untuk menetapkan semula kata laluan',
 

@@ -52,13 +52,23 @@ class UserController extends Controller
             if ($request->has($inputfield)) {
                 $input = $_POST[$inputfield];
                 if (!empty($input)) {
+                    $userLotteries =  UserLottery::where('user_id', $id)->where('lottery_id',$i)->get()->first();
                     $count = Lottery::where('id', $id)->where('correct_value', $input)->count();
-                    if ($count == 0) {
+                    $isValueCorrect  = 0;
+                    if ($count != 0) {
+                        $isValueCorrect = 1;
+                    }
+                    if($userLotteries){
+                        $userLotteries->code = $input;
+                        $userLotteries->isCorrect = $isValueCorrect;
+                        $userLotteries->save();
+                    }
+                    else{
                         $array = [
                             'user_id' => $id,
                             'lottery_id' => $i,
                             'code' => $input,
-                            'isCorrect' => 0,
+                            'isCorrect' => $isValueCorrect,
                             'created_at' => now(),
                             'updated_at' => now(),
                             'ic_number' => $ic_number ?? "",
@@ -67,23 +77,6 @@ class UserController extends Controller
                             'lottery_title' => $lottery->title
                         ];
                         $userLottery[] = $array;
-                    } else {
-                        $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $i)->count();
-                        if ($user_lottery == 0) {
-                            $array = [
-                                'user_id' => $id,
-                                'lottery_id' => $i,
-                                'code' => $input,
-                                'isCorrect' => 1,
-                                'created_at' => now(),
-                                'updated_at' => now(),
-                                'ic_number' => $ic_number ?? "",
-                                'name' => $name,
-                                'email' => $email,
-                                'lottery_title' => $lottery->title
-                            ];
-                            $userLottery[] = $array;
-                        }
                     }
                 }
             }
