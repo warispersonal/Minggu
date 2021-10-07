@@ -99,7 +99,7 @@
                                 </div>
                                 <div class="col-md-6 px-md-5">
                                     <h5 class="mb-3">{{ __('general.khidmat12') }}</h5>
-                                    <div id="datepicker" data-date="12/03/2012"></div>
+                                    <div id="datepicker" data-date="12-03-2012"></div>
                                     <input type="hidden" name="date" id="my_hidden_input">
                                     <h5 class="mt-3">{{ __('general.khidmat19') }}</h5>
                                     <input id="flexRadioDefault1" type="radio" checked value="9.00 AM" name="time" class="hidden">
@@ -229,7 +229,7 @@
     </script>
     <script>
         $(document).ready(function (){
-            @if ($errors->any())
+            @if ($errors->any() )
                 showForm()
             @endif
         });

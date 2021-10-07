@@ -21,6 +21,7 @@ use App\State;
 use App\TopicInterest;
 use App\User;
 use App\UserLottery;
+use Carbon\Carbon;
 use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -208,6 +209,18 @@ class HomeController extends Controller
     }
 
     public function advisors(ServiceAdvisorRequest  $request){
-   
+        $serviceAdvisor = new ServiceAdvisor();
+        $bank = ServiceAdvisorBank::find($request->bank);
+        $interest = TopicInterest::find( $request->topic_interest);
+        $serviceAdvisor->name = $request->name;
+        $serviceAdvisor->email = $request->email;
+        $serviceAdvisor->phone_number = $request->phone_number;
+        $serviceAdvisor->bank = $bank->name;
+        $serviceAdvisor->topic_interest = $interest->name;
+        $serviceAdvisor->date = Carbon::parse($request->date);
+        $serviceAdvisor->time = Carbon::parse($request->time);
+        $serviceAdvisor->save();
+        $message = trans('general.advisor_message');
+        return redirect()->route('home.index')->with('msg',$message);
     }
 }
