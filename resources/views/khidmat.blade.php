@@ -55,23 +55,22 @@
                                 <div class="col-md-6">
                                     <h3 class="mb-3">{{ __('general.khidmat9') }}</h3>
                                     <div class="mb-3">
-                                        <input type="text" class="custom-input" name="name" id=""
+                                        <input type="text" class="custom-input" name="name" value="{{old('name')}}"
                                                placeholder="{{ __('general.khidmat13') }}">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="email" class="custom-input" name="email" id=""
+                                        <input type="email" class="custom-input" name="email" value="{{old('email')}}"
                                                placeholder="{{ __('general.khidmat14') }}">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" class="custom-input" name="phone_number" id=""
+                                        <input type="text" class="custom-input" name="phone_number" value="{{old('phone_number')}}"
                                                placeholder="{{ __('general.khidmat15') }}">
                                     </div>
                                     <div class="mb-3">
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1">{{ __('general.khidmat16') }}</label>
-                                            <select onchange="loadInterest()" name="bank" class="form-control"
-                                                    id="exampleFormControlSelect1">
-                                                <option>{{ __('general.khidmat16') }}</option>
+                                            <select onchange="loadInterest()" name="bank" class="form-control" id="exampleFormControlSelect1">
+                                                <option value=""> {{ __('general.khidmat16') }}</option>
                                                 @foreach($banks as $bank)
                                                     <option value="{{$bank->id}}">{{$bank->name}}</option>
                                                 @endforeach
@@ -81,9 +80,8 @@
                                     <div class="mb-5">
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect2">{{ __('general.khidmat18') }}</label>
-                                            <select name="topic_interest" class="form-control"
-                                                    id="exampleFormControlSelect2">
-                                                <option>{{ __('general.khidmat18') }}</option>
+                                            <select name="topic_interest" class="form-control" id="exampleFormControlSelect2">
+                                                <option value="0">{{ __('general.khidmat18') }}</option>
                                             </select>
                                         </div>
                                     </div>
@@ -99,10 +97,10 @@
                                 </div>
                                 <div class="col-md-6 px-md-5">
                                     <h5 class="mb-3">{{ __('general.khidmat12') }}</h5>
-                                    <div id="datepicker" data-date="12-03-2012"></div>
-                                    <input type="hidden" name="date" id="my_hidden_input">
+                                    <div id="datepicker" data-date="{{now()}}"></div>
+                                    <input type="hidden" name="date" value="{{now()}}" id="my_hidden_input">
                                     <h5 class="mt-3">{{ __('general.khidmat19') }}</h5>
-                                    <input id="flexRadioDefault1" type="radio" checked value="9.00 AM" name="time" class="hidden">
+                                    <input id="flexRadioDefault1" type="radio" checked value="{{old('time') ?? "9.00 AM"}}" name="time" class="hidden">
 
                                     <input id="flexRadioDefault2" type="radio" value="9.30 AM" name="time" class="hidden">
 
@@ -136,53 +134,53 @@
 
                                     <div class="d-flex">
                                         <div class="owl-carousel time-piker">
-                                            <div>
-                                                <label for="flexRadioDefault1">9.00 AM</label>
+                                            <div title="9.00 AM">
+                                                <label for="flexRadioDefault1"> 9.00 AM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault2">9.30 AM</label>
+                                            <div title="9.30 AM">
+                                                <label for="flexRadioDefault2"> 9.30 AM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault3">10.00 AM</label>
+                                            <div title="10.00 AM">
+                                                <label for="flexRadioDefault3"> 10.00 AM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault4">10.30 AM</label>
+                                            <div title="10.30 AM">
+                                                <label for="flexRadioDefault4"> 10.30 AM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault5">11.00 AM</label>
+                                            <div title="11.00 AM">
+                                                <label for="flexRadioDefault5"> 11.00 AM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault6">11.30 AM</label>
+                                            <div title="11.30 AM">
+                                                <label for="flexRadioDefault6"> 11.30 AM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault7">12.00 PM</label>
+                                            <div title="12.00 PM">
+                                                <label for="flexRadioDefault7"> 12.00 PM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault8">12.30 PM</label>
+                                            <div title="12.30 PM">
+                                                <label for="flexRadioDefault8"> 12.30 PM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault9">1.00 PM</label>
+                                            <div title="1.00 PM">
+                                                <label for="flexRadioDefault9"> 1.00 PM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault10">1.30 PM</label>
+                                            <div title="1.30 PM">
+                                                <label for="flexRadioDefault10"> 1.30 PM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault11">2.00 PM</label>
+                                            <div title="2.00 PM">
+                                                <label for="flexRadioDefault11"> 2.00 PM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault12">2.30 PM</label>
+                                            <div title="2.30 PM">
+                                                <label for="flexRadioDefault12"> 2.30 PM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault13">3.00 PM</label>
+                                            <div title="3.00 PM">
+                                                <label for="flexRadioDefault13"> 3.00 PM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault14">3.30 PM</label>
+                                            <div title="3.30 PM">
+                                                <label for="flexRadioDefault14"> 3.30 PM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault15">4.00 PM</label>
+                                            <div title="4.00 PM">
+                                                <label for="flexRadioDefault15"> 4.00 PM</label>
                                             </div>
-                                            <div>
-                                                <label for="flexRadioDefault16">4.30 PM</label>
+                                            <div title="4.30 PM">
+                                                <label for="flexRadioDefault16"> 4.30 PM</label>
                                             </div>
                                         </div>
                                         <input class="submit-btn ms-2" type="submit"
@@ -217,7 +215,7 @@
         });
 
         $(document).ready(function () {
-            $(".owl-carousel").owlCarousel({
+           let owl =  $(".owl-carousel").owlCarousel({
                 loop: true,
                 nav: true,
                 items: 3,
@@ -225,6 +223,11 @@
                 center: true,
             });
 
+            owl.on('changed.owl.carousel',function(property){
+                var current = property.item.index;
+                var src = $(property.target).find(".owl-item").eq(current).find("div").attr('title');
+                $("input[name=time]").val([src]);
+            });
         });
     </script>
     <script>

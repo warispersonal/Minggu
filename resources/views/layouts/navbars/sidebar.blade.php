@@ -131,6 +131,14 @@
                             <i class="ni ni-spaceship text-primary"></i> {{ __('Ref Submission') }}
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {{ Route::is('star.khidmat') ? 'active' : '' }}"
+                           href="{{ route('star.khidmat') }}">
+                            <i class="ni ni-spaceship text-primary"></i> {{ __('Khidmat') }}
+                        </a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link collapsed" href="#page-content" data-toggle="collapse" role="button"
                            aria-expanded="false" aria-controls="navbar-examples">
