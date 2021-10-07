@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SendRegisterEmail extends Mailable
+class BankAppoinmentEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,10 +16,11 @@ class SendRegisterEmail extends Mailable
      *
      * @return void
      */
-    public $user  = null;
-    public function __construct($user)
+
+    public $serviceAdvisor = null;
+    public function __construct($serviceAdvisor)
     {
-        $this->user = $user;
+        $this->serviceAdvisor = $serviceAdvisor;
     }
 
     /**
@@ -29,7 +30,7 @@ class SendRegisterEmail extends Mailable
      */
     public function build()
     {
-        $user = $this->user;
-        return $this->subject('Minggu Saham Digital 2021: Pendaftaran Anda Berjaya!')->view('emails.register_email',compact('user'));
+        $serviceAdvisor = $this->serviceAdvisor;
+        return $this->subject('Minggu Saham Digital 2021: Pelantikan!')->view('emails.bank_appoinment_email',compact('serviceAdvisor'));
     }
 }
