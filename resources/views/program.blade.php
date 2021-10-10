@@ -594,7 +594,6 @@
                 $('.nav-link').removeClass('active');
                 $(this).addClass('active');
             });
-
         });
     </script>
     <script>
@@ -616,18 +615,27 @@
         const closeBtns = document.querySelectorAll(".close_btns")
         const jadualModal = document.querySelector("#jadual-modal")
 
+        if (localStorage.hasOwnProperty('jadual') == true && localStorage.getItem('jadual') == "1") {
+            programContent.style.display = "none"
+            jadualContent.style.display = "block"
+            program.classList.remove("active_tab")
+            jadual.classList.add("active_tab")
+            localStorage.setItem("jadual","1")
+        }
 
         program.addEventListener("click", () => {
             programContent.style.display = "flex"
             jadualContent.style.display = "none"
             program.classList.add("active_tab")
             jadual.classList.remove("active_tab")
+            localStorage.setItem("jadual","0")            
         })
         jadual.addEventListener("click", () => {
             programContent.style.display = "none"
             jadualContent.style.display = "block"
             program.classList.remove("active_tab")
             jadual.classList.add("active_tab")
+            localStorage.setItem("jadual","1")
         })
 
 

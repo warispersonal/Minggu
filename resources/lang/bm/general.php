@@ -18,7 +18,7 @@ return [
 
     // Program Page Text
     'msd_btn_text' => 'Tonton MSD Live',
-    'program' => 'Atur Cara',
+    'program' => 'Program',
     'schedule' => 'Jadual',
     'wednesday' => 'Rabu',
     'thursday' => 'Khamis',
@@ -101,7 +101,7 @@ return [
     'qa_1' => 'Soalan',
     'qa_2' => 'Lazim',
     'pertandingan_title' => 'Peraduan',
-    'program_title' => 'Atur Cara & Jadual',
+    'program_title' => 'Program & Jadual',
     'promosi_title' => 'Promosi',
     'back_button_age' => 'Kembali ke Pertandingan',
 
@@ -131,12 +131,12 @@ return [
     'sertai_sekarang_7' => 'Jumlah Simpanan',
     'sertai_sekarang_8' => 'Hantar',
 
-    'register_success_message' => 'Anda telah berjaya mendaftar',
-    'login_success_message' => 'Anda berjaya log masuk',
+    'register_success_message' => 'Anda telah berjaya mendaftar!',
+    'login_success_message' => 'Anda berjaya log masuk!',
     'forgot_password' => 'Tukar kata laluan, Sila log masuk sekali lagi',
 
     // Partner details
-    'program_tab' => 'Atur Cara',
+    'program_tab' => 'Program',
     'information_tab' => 'Maklumat',
     'terkini-btn' => 'Tonton Episod MSD Terkini ',
 
@@ -166,13 +166,13 @@ return [
     // success popup
 
     "list_a" => "Saya bukan pemegang unit ASNB dan ingin",
-    "list_b" => "Saya merupakan pemegang unit ASNB tetapi belum mendaftar sebagai pengguna portal myASNB. Saya mahu",
-    "list_c" => "Saya merupakan pemegang unit ASNB dan sudah berdaftar sebagai pengguna portal myASNB",
+    "list_b" => "Saya merupakan pemegang unit ASNB tetapi belum mendaftar sebagai pengguna portal myASNB.",
+    "list_c" => "Saya merupakan pemegang unit ASNB dan sudah berdaftar sebagai pengguna portal myASNB.",
     "list_a_register" => "daftar sekarang!",
-    "list_b_signup" => "Saya mahu",
-    "list_c_close" => "tutup",
-    "list_a_close" => "tutup",
-    "list_b_second" => "daftar segera!",
+    "list_b_signup" => "Saya mahu daftar segara!",
+    "list_c_close" => "Kembali ke laman web.",
+    "list_a_close" => "Kembali ke laman web.",
+    "list_b_second" => "",
 
     "khidmat_name_required" => 'Nama diperlukan',
     "khidmat_email_required" => 'E-mel diperlukan',

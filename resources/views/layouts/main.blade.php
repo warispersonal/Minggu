@@ -99,7 +99,6 @@
 
         </div>
         <ul>
-
             @foreach($headerMenu as $menu)
                 @if( $menu['child'] )
                     <li class="nav-item dropdown">
@@ -141,10 +140,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}
+                        <i style="margin-right: 5px;" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a href="{{route('user.logout')}}" style="color: blue !important;"
+                        <li><a href="{{route('user.logout')}}" style="color: blue !important; "
                                class="dropdown-item">{{ __('auth.logout') }}</a></li>
                     </ul>
                 </li>
@@ -195,8 +194,8 @@
                 <li><a id="mobile_login" class="pop-btns">{{ __('auth.login') }}</a></li>
             @endguest
             @if(\Illuminate\Support\Facades\Auth::guard('user')->check())
-                <li><i style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}    </li>
-                <li><a href="{{route('user.logout')}}" style="color: blue !important;"
+                <li><i style="margin-right: 5px;  margin-left:-20px;" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}    </li>
+                <li><a href="{{route('user.logout')}}" style="color: blue !important; padding-left:0px"
                        class="dropdown-item">{{ __('auth.logout') }}</a></li>
             @endif
         </ul>
@@ -360,7 +359,7 @@
                     </div>
                     <div class="mb-4">
                         <p class="mb-2">{{ __('auth.registerStatement') }}</p>
-                        <a href="">{{ __('auth.terms&condition') }}</a>
+                        <a href="https://msd2021demo.com/terms/termadansyarat.pdf" target=_blank>{{ __('auth.terms&condition') }}</a>
                     </div>
                     <div class="mb-3">
                         <input class="submit-btn" type="submit" value="{{ __('auth.send') }}">
@@ -473,6 +472,14 @@
 
 </script>
 
+<script>
+    var page = location.href.match(/([^\/]*)\/*$/)[1];
+    var secondlast = location.href.split('/').slice(-2)[0];
+    if (localStorage.hasOwnProperty('jadual') == true && page != "program" && secondlast != "info")
+    {
+        localStorage.removeItem('jadual')
+    }
+</script>
 
 </body>
 </html>
