@@ -141,8 +141,8 @@ return [
     'sertai_sekarang_8' => 'Hantar',
 
 
-    'login_success_message' => 'You have successfully logged in',
-    'register_success_message' => 'You have registered successfully',
+    'login_success_message' => 'You have successfully logged in!',
+    'register_success_message' => 'You have registered successfully!',
 
     // Partner details
     'program_tab' => 'Program',
@@ -182,10 +182,10 @@ return [
     "list_b" => "I am an ASNB unit holder but have not registered as a user of the myASNB portal. I want to",
     "list_c" => "I am an ASNB unit holder and have registered as a user of the myASNB portal.",
     "list_a_register" => "register now!",
-    "list_b_signup" => "sign up",
+    "list_b_signup" => "I want to sign up right away!",
     "list_c_close" => "close",
-    "list_a_close" => "close",
-    "list_b_second" => "right away!",
+    "list_a_close" => "Return to website.",
+    "list_b_second" => "",
 
 
     "khidmat_name_required" => ' Name is required',

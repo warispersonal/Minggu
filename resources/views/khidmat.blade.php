@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="col-md-6 px-md-5">
                                     <h5 class="mb-3">{{ __('general.khidmat12') }}</h5>
-                                    <div id="datepicker" data-date="{{now()}}"></div>
+                                    <div id="datepicker" ></div>
                                     <input type="hidden" name="date" value="{{now()}}" id="my_hidden_input">
                                     <h5 class="mt-3">{{ __('general.khidmat19') }}</h5>
                                     <input id="flexRadioDefault1" type="radio" checked value="{{old('time') ?? "9.00 AM"}}" name="time" class="hidden">
@@ -202,12 +202,58 @@
 
 
 @push('js')
+   
     <script src="{{asset('assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
             integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script type="text/javascript">
+
+    // Returns an array of dates between the two dates
+        function getDates (startDate, endDate) {
+          const dates = []
+          let currentDate = startDate
+          const addDays = function (days) {
+            const date = new Date(this.valueOf())
+            date.setDate(date.getDate() + days)
+            return date
+          }
+          while (currentDate <= endDate) {
+            dates.push(currentDate)
+            currentDate = addDays.call(currentDate, 1)
+          }
+          return dates
+        }
+    
+        // Usage
+        var array = []
+        var month = 0;
+        const dates = getDates(new Date(2021, 10, 17), new Date(2021, 11, 31))
+        dates.forEach(function (date) {
+            var month = date.getMonth() + 1;
+          array.push(date.getDate()+"-"+month+"-"+date.getFullYear())
+        })
+      
+    
+        
+    
+        $('#datepicker').datepicker({
+    
+            beforeShowDay: function(date){
+                dmy = date.getDate() + "-" + (date.getMonth()+1) + "-" + date.getFullYear();
+                  if ($.inArray(dmy, array) != -1) {
+                    return true;
+                  } else {
+                    return false;
+                  }
+    
+            }
+    
+        });
+    
+    </script>
     <script>
-        $('#datepicker').datepicker();
+        // $('#datepicker').datepicker();
         $('#datepicker').on('changeDate', function () {
             $('#my_hidden_input').val(
                 $('#datepicker').datepicker('getFormattedDate')

@@ -483,7 +483,7 @@
 .sertai-btn{
     border: none;
     background-color: #F5841F;
-    color: white !important;
+    color: white;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.17);
     font-size: 18px;
     border-radius: 10px;
@@ -495,9 +495,14 @@
     transition:all .3s;
 }
 .sertai-btn:hover{
-         border: 2px solid #808AE2;
+    border: 2px solid #808AE2;
     background-color: rgba(128, 138, 226, 0.3);
     color: white; 
+}
+.jomkira-modal .sertai-btn:hover{
+    border: 2px solid #F5841F;
+    color:#F5841F;
+    background:transparent;
 }
 .ringgit-btn{
     border: none;
@@ -1046,10 +1051,11 @@
 .link-13{
     top: 53%;
     right: 8%;
+    display:none;
 }
 .link-14{
-    bottom: 18%;
-    right: 13%;
+    bottom: 30%;
+    right: 5%;
 }
 .link-15{
     top: 35%;
@@ -1407,8 +1413,6 @@
     }
     #promotion_tabs .nav-link.active{
         border-radius: 5px;
-        margin-left: 10px;
-        margin-bottom: 10px;
         background-color: #212B80;
         transform: scale(1);
     }
@@ -1677,8 +1681,8 @@
     }
     .link-15{
         top: inherit;
-        right: 27%;
-        bottom: 3%;
+        right: 5%;
+        bottom: 5%;
         transform-origin: top;
     }
     .link-10{
@@ -1718,7 +1722,7 @@
         bottom: 10%;
     }
     .link-11{
-        bottom: 28%;
+        bottom: 23%;
         left: 23%;
         right: inherit;
         top: inherit;
@@ -1942,6 +1946,9 @@
         width:max-content;
         margin:0px auto;
         font-weight:bold;
+    }
+    .cars-row h3{
+        font-size: 1rem;
     }
     #jom_kira_tabs #nav-tab .nav-link{
         margin:.5rem .5rem;

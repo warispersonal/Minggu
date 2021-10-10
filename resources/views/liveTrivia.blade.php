@@ -36,9 +36,9 @@
                             <div class=" p-md-5 p-2">
                                 <div class="car-details justify-content-around">
                                     <h3 class="mx-auto mb-0">
-                                        {{ __('general.livetrivia_worth') }}
+                                        {{ __('general.livetrivia_worth') }} 
                                     </h3>
-                                    <h1 class="fw-bolder">> RM20,000</h1>
+                                    <h1 class="fw-bolder"> RM20,000</h1>
                                 </div>
                             </div>
                         </div>

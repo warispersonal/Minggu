@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+    @include('layouts.headers.guest')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

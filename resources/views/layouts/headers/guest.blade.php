@@ -84,8 +84,17 @@
 
 <header>
     <nav class="desktop_nav py-2 container-fluid ">
-        <ul>
+        <div class=" header-imgs me-2">
+            <?php if($_SERVER['REQUEST_URI'] == "/" || $_SERVER['REQUEST_URI'] == "/index.php"){ ?>
+            <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-3">
+            <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
+            <?php } else{ ?>
+            <img src="{{asset('assets/img/header-pnb.png')}}" class="img-fluid me-2">
+            <img src="{{asset('assets/img/header-asnb.png')}}" class="img-fluid">
+            <?php } ?>
 
+        </div>
+        <ul>
             @foreach($headerMenu as $menu)
                 @if( $menu['child'] )
                     <li class="nav-item dropdown">
@@ -127,7 +136,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i  style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}
+                        <i style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a href="{{route('user.logout')}}" style="color: blue !important;"
@@ -136,16 +145,18 @@
                 </li>
             @endauth
             <li class="lang-btns">
-                <a href="{{ route('localization' , 'bm') }}" class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"><small>BM</small></a>
+                <a href="{{ route('localization' , 'bm') }}"
+                   class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"><small>BM</small></a>
                 |
-                <a href="{{ route('localization' , 'en') }}" class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"><small> EN </small></a>
+                <a href="{{ route('localization' , 'en') }}"
+                   class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"><small> EN </small></a>
             </li>
         </ul>
     </nav><!-- /. Desktop Navbar -->
 
-    <div class="mobile-header d-lg-none px-3 py-2">
+    <div class="mobile-header d-xxl-none px-3 py-2">
         <div>
-            <div class="d-md-none header-imgs">
+            <div class="d-xxl-none header-imgs">
                 <img src="{{asset('assets/img/header-pnb-white.png')}}" class="img-fluid me-2">
                 <img src="{{asset('assets/img/header-asnb-white.png')}}" class="img-fluid">
             </div>
@@ -153,8 +164,10 @@
         </div>
         <div>
             <small>
-                <a class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"  href="{{ route('localization' , 'bm') }}">BM</a> |
-                <a class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"  href="{{ route('localization' , 'en') }}">EN</a>
+                <a class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"
+                   href="{{ route('localization' , 'bm') }}">BM</a> |
+                <a class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"
+                   href="{{ route('localization' , 'en') }}">EN</a>
             </small>
             <img id="hamburger_btn" class="ms-3" src="{{asset('assets/img/menu-white.svg')}}" alt="">
         </div>
@@ -177,7 +190,7 @@
                 <li><a id="mobile_login" class="pop-btns">{{ __('auth.login') }}</a></li>
             @endguest
             @if(\Illuminate\Support\Facades\Auth::guard('user')->check())
-                <li> <i  style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}    </li>
+                <li><i style="margin-right: 5px" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}    </li>
                 <li><a href="{{route('user.logout')}}" style="color: blue !important;"
                        class="dropdown-item">{{ __('auth.logout') }}</a></li>
             @endif
