@@ -19576,6 +19576,7 @@ textarea[resize='horizontal']
     .navbar-vertical.navbar-expand-md .navbar-nav .nav-link
     {
         padding: .65rem 1.5rem;
+        font-weight:600;
     }
     .navbar-vertical.navbar-expand-md .navbar-nav .nav-link.active:before
     {

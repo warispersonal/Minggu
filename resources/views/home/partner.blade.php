@@ -75,7 +75,7 @@
                              aria-labelledby="nav-maklumat-tab">
                             <div class="row mt-4">
                                 <div class="col-lg-6 pe-md-4">
-                                    @if($partner->id == 20)
+                                    @if($partner->id == 20 || $partner->id == 10)
                                         <div class="text-center mb-4 ">
                                         <img src="{{$partner->store_logo}}" class="img-fluid w-100"
                                              style="min-height:100px; object-fit:contain;" alt="">
@@ -242,7 +242,13 @@
                                             </p>
                                             <!--<p class="mode-fore-color">{{$program->main_program->title ?? ""}}-->
                                             <p class="mode-fore-color">{{ __('general.brought_to_you') }} &nbsp&nbsp
-                                                <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
+                                                @if($partner->id == 5)
+                                                    <img class="offer-by w-25 pe-5" src="{{asset('assets/img/header-asnb-white.png')}}" alt=""> 
+                                                @elseif($partner->id == 6)
+                                                    <img class="offer-by w-25 pe-5" src="{{asset('assets/img/header-pnb-white.png')}}" alt="">
+                                                @else
+                                                    <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
+                                                @endif
                                             </p>
                                         </div>
                                     </div>

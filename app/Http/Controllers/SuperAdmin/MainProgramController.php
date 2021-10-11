@@ -40,7 +40,7 @@ class MainProgramController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required',
             'title_bm' => 'required',
-            'logo' => 'mimes:png,jpeg,gif',
+       
         ]);
         $imageName = '';
         $image_64 = $request->logo;
@@ -88,7 +88,6 @@ class MainProgramController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required',
             'title_bm' => 'required',
-            'logo' => 'mimes:png,jpeg,gif',
        ]);
         $mainProgram = MainProgram::find($id);
         if($validator->passes()){

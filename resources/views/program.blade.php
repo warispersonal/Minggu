@@ -44,7 +44,7 @@
                                 <h1 id="jadual">{{ __('general.schedule') }}</h1>
                             </div>
                             <a href="{{route('user.msdLive')}}"
-                               class="tonton-btn m-0 d-none d-lg-block">{{ __('general.msd_btn_text') }}</a>
+                               class="tonton-btn m-0 d-none d-lg-block">{{ __('general.msd_btn_text') }} <em>{{ __('general.live_text') }}</em></a>
 
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                                                         <span class="handler"
                                                               onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
                                                             {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
-                                                        </span>
+                                                        </span> <br>
                                                        (<small>
                                                             <span>{{ __('general.sponsor_name_text') }}</span>
                                                             <a class="text-white"
@@ -135,7 +135,7 @@
                                                     <p>
                                                         <span class="handler"
                                                               onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                    (<small> <span>{{ __('general.sponsor_name_text') }}</span> <a class="text-white"
+                                                   <br> (<small> <span>{{ __('general.sponsor_name_text') }}</span> <a class="text-white"
                                                                                                                       href="{{route("may.bank",$item->partner->slug??$item->partner->id)}}">{{$item->partner->name ?? ""}}</a></small>)
                                                     </p>
                                                 </div>
@@ -154,7 +154,7 @@
                                                     <p>
                                                         <span class="handler"
                                                               onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                        (<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
+                                                        <br> (<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
                                                                   href="{{route("may.bank",$item->partner->slug??$item->partner->id)}}">{{$item->partner->name ?? ""}}</a></small>)
                                                     </p>
                                                 </div>
@@ -173,7 +173,7 @@
                                                     <p>
                                                         <span class="handler"
                                                               onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                        (<small> <span>{{ __('general.sponsor_name_text') }}</span> <a class="text-white"
+                                                        <br>(<small> <span>{{ __('general.sponsor_name_text') }}</span> <a class="text-white"
                                                                   href="{{route("may.bank",$item->partner->slug??$item->partner->id)}}">{{$item->partner->name ?? ""}}</a></small>)
                                                     </p>
                                                 </div>
@@ -192,7 +192,7 @@
                                                     <p>
                                                         <span class="handler"
                                                               onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                        (<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
+                                                        <br>(<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
                                                                   href="{{route("may.bank",$item->partner->slug??$item->partner->id)}}">{{$item->partner->name ?? ""}}</a></small>)
                                                     </p>
                                                 </div>
@@ -210,7 +210,7 @@
                                                     <p>
                                                         <span class="handler"
                                                               onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                        (<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
+                                                        <br>(<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
                                                                   href="{{route("may.bank",$item->partner->slug??$item->partner->id)}}">{{$item->partner->name ?? ""}}</a></small>)
                                                     </p>
                                                 </div>
@@ -228,7 +228,7 @@
                                                     <p>
                                                         <span class="handler"
                                                               onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                        (<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
+                                                        <br>(<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
                                                                   href="{{route("may.bank",$item->partner->slug??$item->partner->id)}}">{{$item->partner->name ?? ""}}</a></small>)
                                                     </p>
                                                 </div>

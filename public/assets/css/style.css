@@ -307,6 +307,10 @@
     align-items: center;
     justify-content: center;
 }
+#program_content img:nth-child(1){
+    border:1px solid white;
+    border-radius: 10px;
+}
 #program_content img{
     width: 150px;
     margin: 5px;
@@ -387,6 +391,8 @@
     color: white;
     margin-bottom: 0px;
     font-weight:bold;
+    color:#F5841F;
+    text-shadow: -7px 5px 6px #212b80;
 }
 .heading2{
     font-size: 5rem;

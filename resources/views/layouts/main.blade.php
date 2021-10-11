@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="icon" type="image/x-icon" href="{{asset('assets/img/favicon.ico')}}"/>
+    
 
 <!--<title>{{ config('app.name', 'Mignuu Admin Panel') }}</title>-->
     <?php
@@ -420,16 +421,15 @@
 @if(session()->has('msg'))
     <script>
         @if(session()->get('msg') == "Invalid credentials" || session()->get('msg') == "Kelayakan tidak sah")
-        swal("", "{{session()->get('msg')}}", "error");
-        @elseif (session()->get('msg') == "You have registered successfully" || session()->get('msg') == 'Anda telah berjaya mendaftar')
+            swal("", "{{session()->get('msg')}}", "error");
+        @elseif (session()->get('msg') == "You have registered successfully!" || session()->get('msg') == 'Anda telah berjaya mendaftar!')
             overlay.style.display = "block"
-        confirmModal.style.bottom = "55%"
-        setTimeout(() => {
-            confirmModal.style.bottom = "50%"
-
-        }, 300);
+            confirmModal.style.bottom = "55%"
+            setTimeout(() => {
+                confirmModal.style.bottom = "50%"
+            }, 300);
         @else
-        swal("", "{{session()->get('msg')}}", "success");
+            swal("", "{{session()->get('msg')}}", "success");
         @endif
     </script>
 @endif

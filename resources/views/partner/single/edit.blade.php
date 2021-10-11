@@ -74,7 +74,7 @@
                                     <div class="form-group mb-3">
                                         <label>Description (EN)</label>
                                         <div class="input-group input-group-alternative">
-                                            <textarea class="form-control" rows="5" name="description"
+                                            <textarea class="form-control" rows="5" maxlength="600" name="description"
                                                       placeholder="Description (EN)"
                                                       type="text">{{ $partner->description }}</textarea>
                                         </div>
@@ -87,7 +87,7 @@
                                     <div class="form-group mb-3">
                                         <label>Description (BM)</label>
                                         <div class="input-group input-group-alternative">
-                                            <textarea class="form-control" rows="5" name="description_bm"
+                                            <textarea class="form-control" rows="5" maxlength="600" name="description_bm"
                                                       placeholder="Description (BM)"
                                                       type="text">{{ $partner->description_bm }}</textarea>
                                         </div>

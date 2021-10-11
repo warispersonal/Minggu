@@ -18,13 +18,13 @@
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank', $partners[5]->slug)}}">
-                        <img src="{{$partners[5]->main_logo}}" class="img-fluid partner-logo " alt="">
+                        <img src="{{asset('assets/img/partner-logos/Rakan-PNB.png')}}" class="img-fluid partner-logo " alt="">
                     </a>
                 </div>
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank', $partners[4]->slug)}}">
-                        <img src="{{$partners[4]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/Rakan ANSB 150X96.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
             </div>
@@ -32,20 +32,24 @@
                 <div class="text-center ">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank', $partners[3]->slug)}}">
-                        <img src="{{$partners[3]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/MAYBANK.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
                 <div class="text-center">
-                    <p class="text-white text-uppercase mb-0 mt-3"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_premier') }} </span></p>
+                    @if(Config::get('app.locale') == 'en')
+                        <p class="text-white text-uppercase mb-0 mt-3"> {{ __('general.partner_premier') }} <span class="fw-bold">{{ __('general.partner_rakan') }} </span></p>
+                    @else    
+                        <p class="text-white text-uppercase mb-0 mt-3"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_premier') }} </span></p>
+                    @endif
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank', $partners[6]->slug)}}">
-                        <img src="{{$partners[6]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/SIME-PLANT.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
                 <div class="text-center ">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[8]->slug)}}">
-                        <img src="{{$partners[8]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/UMW.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
             </div>
@@ -53,33 +57,37 @@
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[9]->slug)}}">
-                        <img src="{{$partners[9]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/Rakan MIDF.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[13]->slug)}}">
-                        <img src="{{$partners[13]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/PERODUA.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
                 <div class="text-center ">
-                    <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_utama') }}</span></p>
+                    @if(Config::get('app.locale') == 'en')
+                        <p class="text-white text-uppercase mb-0"> {{ __('general.partner_utama') }} <span class="fw-bold">{{ __('general.partner_rakan') }}</span></p>
+                    @else    
+                        <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_utama') }}</span></p>
+                    @endif
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[2]->slug)}}">
-                        <img src="{{$partners[2]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/SETIA.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                     <!--<p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_utama') }}</span></p>-->
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[1]->slug)}}">
-                        <img src="{{$partners[1]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/SIME-BERHAD.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
                 <div class="text-center ">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[10]->slug)}}">
-                        <img src="{{$partners[10]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/SIME-PROP.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
             </div>
@@ -87,33 +95,33 @@
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[0]->slug)}}">
-                        <img src="{{$partners[0]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/DUOPHARMA.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[7]->slug)}}">
-                        <img src="{{$partners[7]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/MNRB.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
                 <div class="text-center ">
                     <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }}</p>
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[11]->slug)}}">
-                        <img src="{{$partners[11]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/PROLINTAS.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                     <!--<p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }}</p>-->
                 </div>
                 <div class="text-center mt-5">
                     <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank', $partners[12]->slug)}}">
-                        <img src="{{$partners[12]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/SAPURA.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
                 <div class="text-center ">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[14]->slug)}}">
-                        <img src="{{$partners[14]->main_logo}}" class="img-fluid partner-logo" alt="">
+                        <img src="{{asset('assets/img/partner-logos/VELESTO.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                 </div>
             </div>
@@ -168,7 +176,7 @@
                     <p class="text-white text-uppercase mb-0">{{ __('general.partner_ejen') }}</p>
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon " alt=""> <br>
                     <a href="{{route('may.bank', $partners[3]->slug)}}">
-                        <img src="{{$partners[3]->main_logo}}" class="img-fluid partner-logo " alt="">
+                        <img src="{{asset('assets/img/partner-logos/MAYBANK.png')}}" class="img-fluid partner-logo " alt="">
                     </a>
                     <!--<p class="text-white text-uppercase mb-0">{{ __('general.partner_ejen') }}</p>-->
                 </div>

@@ -91,7 +91,7 @@ class RegisterController extends Controller
                     $message = trans('general.register_success_message');
                 }
                 Mail::to($user->email)->send(new SendRegisterEmail($user));
-                return redirect()->back()->withErrors($validator)->with('msg',$message)->with('user',$user)->with('action','regitser');
+                return redirect()->back()->withErrors($validator)->with('msg',$message)->with('user',$user)->with('action','register');
             }
         } else {
             return redirect()->back()->withInput()->withErrors($validator)->with('from', 'register');

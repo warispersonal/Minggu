@@ -28,7 +28,9 @@ return [
     'social_heading' => 'Can also be watched live through:',
 
     // Program Page Text
-    'msd_btn_text' => 'Watch MSD Live',
+    'msd_btn_text' => 'Watch MSD',
+    'live_text' => 'Live',
+    
     'program' => 'Programmes',
     'schedule' => 'Schedules',
     'wednesday' => 'Wednesday',
@@ -113,10 +115,10 @@ return [
     'promosi_title' => 'Promotions',
     'back_button_age' => 'Return to Contests',
 
-    'partner_rakan' => 'RAKAN',
+    'partner_rakan' => 'PARTNER',
     'partner_premier' => 'PREMIER',
-    'partner_utama' => 'UTAMA',
-    'partner_acara' => 'ACARA',
+    'partner_utama' => 'MAIN',
+    'partner_acara' => 'EVENT',
     'partner_ejen' => 'Participating Agents',
 
     'rakan_acara_1' => 'Event',
@@ -162,7 +164,7 @@ return [
     'email_already_exists' => 'Email already registered',
 
     'fancy_message' => 'Ref added successfully',
-    'advisor_message' => 'Advisor added successfully',
+    'advisor_message' => 'Your session has been booked successfully!',
 
     'sponsor_name_text' => 'Brought to you by',
 
