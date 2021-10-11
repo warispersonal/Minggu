@@ -6,6 +6,7 @@ use App\FancyPrize;
 use App\Http\Controllers\Controller;
 use App\ServiceAdvisor;
 use Illuminate\Http\Request;
+use App\ServiceAdvisorBank;
 
 use App\User;
 use DataTables;
@@ -72,5 +73,18 @@ class UsersController extends Controller
         return Datatables::of($partners)
             ->addIndexColumn()
             ->make(true);
+    }
+      public function service_advisor_banks(){
+        $banks = ServiceAdvisorBank::all();
+        return view('superadmin.banks.list',compact('banks'));
+    }
+    
+    public function service_advisor_banks_update(Request $request, $id){
+        $bank = ServiceAdvisorBank::find($id);
+        $bank->name= $request->name;
+        $bank->email= $request->email;
+        $bank->save();
+       return redirect()->back()->with('msg' , 'Detail updated successfully.');
+
     }
 }

@@ -131,6 +131,13 @@
                             <i class="ni ni-spaceship text-primary"></i> {{ __('Ref Submission') }}
                         </a>
                     </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link {{ Route::is('star.service_advisor_banks') ? 'active' : '' }}"
+                           href="{{ route('star.service_advisor_banks') }}">
+                            <i class="ni ni-spaceship text-primary"></i> {{ __('Service Advisor Bank') }}
+                        </a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link {{ Route::is('star.khidmat') ? 'active' : '' }}"
