@@ -216,7 +216,10 @@ return [
     "khidmat_topic_interest_required" => 'Topik perlu dipilih',
     "khidmat_date_required" => 'Tarikh perlu dipilih',
     "khidmat_time_interest_required" => 'Masa perlu dipilih',
+    "post_code_required" => 'Poskod perlu dipilih',
 
     'advisor_message' => 'Tempahan sesi anda telah berjaya!',
+    
+    'khidmatpostcode' => 'Poskod',
 
 ];

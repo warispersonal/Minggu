@@ -192,6 +192,7 @@ class HomeController extends Controller
     }
 
     public function advisors(ServiceAdvisorRequest  $request){
+       
         $serviceAdvisor = new ServiceAdvisor();
         $bank = ServiceAdvisorBank::find($request->bank);
         $interest = TopicInterest::find( $request->topic_interest);
@@ -200,12 +201,14 @@ class HomeController extends Controller
         $serviceAdvisor->phone_number = $request->phone_number;
         $serviceAdvisor->bank = $bank->name;
         $serviceAdvisor->topic_interest = $interest->name;
+        $serviceAdvisor->post_code = $request->post_code;
         $serviceAdvisor->date = Carbon::parse($request->date);
         $serviceAdvisor->time = Carbon::parse($request->time);
         $serviceAdvisor->save();
+       
         Mail::to($serviceAdvisor->email)->send(new UserAppoinmentEmail($serviceAdvisor));
         Mail::to($bank->email)->send(new BankAppoinmentEmail($serviceAdvisor));
         $message = trans('general.advisor_message');
-        return redirect()->route('home.index')->with('msg',$message);
+        return redirect()->back()->with('msg',$message);
     }
 }

@@ -80,6 +80,11 @@
                                         <input type="text" class="custom-input" name="phone_number" value="{{old('phone_number')}}"
                                                placeholder="{{ __('general.khidmat15') }}">
                                     </div>
+                                    
+                                    <div class="mb-3">
+                                        <input type="text" class="custom-input" name="post_code" value="{{old('post_code')}}"
+                                               placeholder="{{ __('general.khidmatpostcode') }}">
+                                    </div>
                                     <div class="mb-3">
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1">{{ __('general.khidmat16') }}</label>

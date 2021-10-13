@@ -41,6 +41,7 @@
                                 <th scope="col" class="sort" data-sort="budget">Name</th>
                                 <th scope="col" class="sort" data-sort="status">Email</th>
                                 <th scope="col" class="sort" data-sort="status">Phone Number</th>
+                                <th scope="col" class="sort" data-sort="status">Postcode</th>
                                 <th scope="col" class="sort" data-sort="status">Bank</th>
                                 <th scope="col" class="sort" data-sort="status">Interest</th>
                                 <th scope="col" class="sort" data-sort="status">Date</th>
@@ -122,6 +123,7 @@
                     {"data": "name"},
                     {"data": "email"},
                     {"data": "phone_number"},
+                    {"data": "post_code"},
                     {"data": "bank"},
                     {"data": "topic_interest"},
                     {"data": "date"},

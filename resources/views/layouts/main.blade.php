@@ -141,7 +141,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i style="margin-right: 5px;" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}
+                        <i style="margin-right: 5px;" class="fa fa-user"></i> {{\Illuminate\Support\Str::limit(Auth::guard('user')->user()->name,10, $end='')}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a href="{{route('user.logout')}}" style="color: blue !important; "
@@ -195,7 +195,7 @@
                 <li><a id="mobile_login" class="pop-btns">{{ __('auth.login') }}</a></li>
             @endguest
             @if(\Illuminate\Support\Facades\Auth::guard('user')->check())
-                <li><i style="margin-right: 5px;  margin-left:-20px;" class="fa fa-user"></i> {{Auth::guard('user')->user()->name}}    </li>
+                <li><i style="margin-right: 5px;  margin-left:-20px;" class="fa fa-user"></i> {{\Illuminate\Support\Str::limit(Auth::guard('user')->user()->name,10, $end='')}}   </li>
                 <li><a href="{{route('user.logout')}}" style="color: blue !important; padding-left:0px"
                        class="dropdown-item">{{ __('auth.logout') }}</a></li>
             @endif
@@ -417,7 +417,7 @@
 </script>
 @if(session()->has('msg'))
     <script>
-        @if(session()->get('msg') == "Invalid credentials" || session()->get('msg') == "Kelayakan tidak sah")
+        @if(session()->get('msg') == "Invalid credentials" || session()->get('msg') == "E-mel atau kata laluan tidak sah")
             swal("", "{{session()->get('msg')}}", "error");
         @elseif (session()->get('msg') == "You have registered successfully!" || session()->get('msg') == 'Anda telah berjaya mendaftar!')
             overlay.style.display = "block"

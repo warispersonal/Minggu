@@ -89,6 +89,7 @@ return [
     'khidmat13' => 'Name',
     'khidmat14' => 'Email',
     'khidmat15' => 'Phone number',
+    'khidmatpostcode' => 'Postcode',
     'khidmat16' => 'Select Bank',
     'khidmat17' => 'Agent',
     'khidmat18' => 'Topics of interest',
@@ -214,5 +215,5 @@ return [
     "khidmat_topic_interest_required" => 'Topic interest is required',
     "khidmat_date_required" => 'Date is required',
     "khidmat_time_interest_required" => 'Time is required',
-
+    "post_code_required" => 'Postcode perlu dipilih',
 ];
