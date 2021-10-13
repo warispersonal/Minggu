@@ -82,7 +82,7 @@
                                     </div>
                                     
                                     <div class="mb-3">
-                                        <input type="text" class="custom-input" name="post_code" value="{{old('post_code')}}"
+                                        <input type="text" maxlength="5" class="custom-input" name="post_code" value="{{old('post_code')}}"
                                                placeholder="{{ __('general.khidmatpostcode') }}">
                                     </div>
                                     <div class="mb-3">

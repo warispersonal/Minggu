@@ -31,7 +31,6 @@ class ServiceAdvisorRequest extends FormRequest
             'topic_interest'=> 'required',
             'date'=> 'required',
             'time'=> 'required',
-            'post_code'=> 'required',
         ];
     }
 
@@ -45,7 +44,6 @@ class ServiceAdvisorRequest extends FormRequest
             'topic_interest.required' => trans('general.khidmat_topic_interest_required'),
             'date.required' => trans('general.khidmat_date_required'),
             'time.required' => trans('general.khidmat_time_interest_required'),
-            'post_code.required' => trans('general.post_code_required'),
         ];
     }
 }
