@@ -58,8 +58,7 @@
             </div>
             <div class="info-btn"><i class="bi bi-info"></i></div>
             <div class="about-us-box">
-                Minggu Saham Digital adalah sebuah acara mesra keluarga yang dipenuhi dengan program pendidikan dan
-                literasi kewangan. MSD bersiaran langsung selama 7 hari melalui laman Facebook dan YouTube.
+                {{ __('general.home_info') }}
             </div>
         </div>
     </main>

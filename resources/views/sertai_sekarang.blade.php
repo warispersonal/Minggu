@@ -150,7 +150,7 @@
                                                     <h2 class="text-white mb-0">RM</h2>
                                                     <input type="text" id="final_result_2" class="rm-imputs-2" readonly>
                                                     <div class="text-end mt-3 ms-3 mt-md-0">
-                                                        <input type="submit" value="{{ __('general.sertai_sekarang_8') }}<">
+                                                        <input type="submit" value="{{ __('general.sertai_sekarang_8') }}">
                                                     </div>
                                                 </div>
                                             </div>

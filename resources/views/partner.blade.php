@@ -37,7 +37,7 @@
                 </div>
                 <div class="text-center">
                     @if(Config::get('app.locale') == 'en')
-                        <p class="text-white text-uppercase mb-0 mt-3"> {{ __('general.partner_premier') }} <span class="fw-bold">{{ __('general.partner_rakan') }} </span></p>
+                        <p class="text-white text-uppercase mb-0 mt-3"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_premier') }} </span></p>
                     @else    
                         <p class="text-white text-uppercase mb-0 mt-3"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_premier') }} </span></p>
                     @endif
@@ -68,7 +68,7 @@
                 </div>
                 <div class="text-center ">
                     @if(Config::get('app.locale') == 'en')
-                        <p class="text-white text-uppercase mb-0"> {{ __('general.partner_utama') }} <span class="fw-bold">{{ __('general.partner_rakan') }}</span></p>
+                        <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_utama') }}</span></p>
                     @else    
                         <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }} <span class="fw-bold">{{ __('general.partner_utama') }}</span></p>
                     @endif
@@ -91,7 +91,8 @@
                     </a>
                 </div>
             </div>
-            <div class=" pt-md-5 rakan baloons-container">
+                <p class="pt-md-5 text-white text-center text-uppercase mb-0"> {{ __('general.partner_rakan') }}</p>
+            <div class="  rakan baloons-container">
                 <div class="text-center">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[0]->slug)}}">
@@ -105,20 +106,20 @@
                     </a>
                 </div>
                 <div class="text-center ">
-                    <p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }}</p>
+                    
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[11]->slug)}}">
                         <img src="{{asset('assets/img/partner-logos/PROLINTAS.png')}}" class="img-fluid partner-logo" alt="">
                     </a>
                     <!--<p class="text-white text-uppercase mb-0"> {{ __('general.partner_rakan') }}</p>-->
                 </div>
+                <!--<div class="text-center mt-5">-->
+                <!--    <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>-->
+                <!--    <a href="{{route('may.bank', $partners[12]->slug)}}">-->
+                <!--        <img src="{{asset('assets/img/partner-logos/SAPURA.png')}}" class="img-fluid partner-logo" alt="">-->
+                <!--    </a>-->
+                <!--</div>-->
                 <div class="text-center mt-5">
-                    <img src="{{asset('assets/img/balloon2.png')}}" class="img-fluid baloon" alt=""> <br>
-                    <a href="{{route('may.bank', $partners[12]->slug)}}">
-                        <img src="{{asset('assets/img/partner-logos/SAPURA.png')}}" class="img-fluid partner-logo" alt="">
-                    </a>
-                </div>
-                <div class="text-center ">
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon" alt=""> <br>
                     <a href="{{route('may.bank',  $partners[14]->slug)}}">
                         <img src="{{asset('assets/img/partner-logos/VELESTO.png')}}" class="img-fluid partner-logo" alt="">
@@ -173,7 +174,7 @@
                     </a>
                 </div>
                 <div class="text-center ">
-                    <p class="text-white text-uppercase mb-0">{{ __('general.partner_ejen') }}</p>
+                    <p class="text-white text-uppercase mb-0">{{ __('general.partner_ejen') }} <span class="fw-bold">{{ __('general.partner_ejen2') }}</span> </p></p>
                     <img src="{{asset('assets/img/balloon.png')}}" class="img-fluid baloon " alt=""> <br>
                     <a href="{{route('may.bank', $partners[3]->slug)}}">
                         <img src="{{asset('assets/img/partner-logos/MAYBANK.png')}}" class="img-fluid partner-logo " alt="">

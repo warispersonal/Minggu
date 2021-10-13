@@ -13,13 +13,19 @@ return [
     |
     */
 
+    // MSD - Home Page
+    'home_info' => 'Minggu Saham Digital adalah sebuah acara mesra keluarga yang dipenuhi dengan program pendidikan dan literasi kewangan. MSD bersiaran langsung selama 7 hari melalui laman Facebook dan YouTube.',
+
+    // MSD - Promotions
+    'pilih_rakan' => 'Pilih Rakan Kongsi',
+    
     // MSD - live Text
     'social_heading' => 'Boleh juga ditonton menerusi:',
 
     // Program Page Text
     'msd_btn_text' => 'Tonton MSD',
     'live_text' => 'Live',
-    'program' => 'Atur Cara',
+    'program' => 'Program',
     'schedule' => 'Jadual',
     'wednesday' => 'Rabu',
     'thursday' => 'Khamis',
@@ -78,13 +84,13 @@ return [
 
     'khidmat0' => 'Khidmat Nasihat  1-1',
     'khidmat1' => 'Apa itu Khidmat Nasihat 1-1?',
-    'khidmat2' => 'Anda boleh mendapatkan khidmat nasihat dan rundingan peribadi selama 30 minit dengan penasihat-penasihat dari ASNB, AmBank, Bank Islam, CIMB & RHB. Tetapkan awal sesi anda!',
+    'khidmat2' => 'Anda boleh menetapkan temujanji dengan wakil dari mana-mana ejen ASNB yang mengambil bahagian. Bukan sahaja khidmat nasihat berkenaan faedah pembiayaan Amanah Saham Bumiputera (ASB) dan cara untuk memohon serta rundingan peribadi mengenai perancangan kewangan melalui unit amanah ASNB – anda juga boleh mendapatkan maklumat lanjut berkaitan topik-topik yang tersenarai.',
     'khidmat3' => 'Penasihat daripada Ejen Bank kami yang pakar sedia membantu anda mengenai perkara-perkara berikut:',
     'khidmat4' => 'Pembiayaan ASB',
     'khidmat5' => 'Penasihat akan berkongsi tentang faedah pembiayaan ASB dan cara memohonnya.',
     'khidmat6' => 'Unit Amanah ASNB',
     'khidmat7' => 'Khidmat nasihat peribadi mengenai perancangan kewangan melalui Unit Amanah ASNB.',
-    'khidmat8' => 'Tetapkan Temujanji Anda Sekarang',
+    'khidmat8' => 'Tetapkan Temujanji Anda Sekarang!',
     'khidmat9' => 'Tetapkan Temujanji 1-1 Anda',
     'khidmat10' => 'Saya bersetuju dengan terma dan syarat',
     'khidmat11' => 'Kembali',
@@ -97,6 +103,15 @@ return [
     'khidmat18' => 'Topik yang diminati',
     'khidmat19' => 'Masa',
     'khidmat20' => 'Hantar',
+    'khidmat21' => 'Sila klik ejen ASNB untuk melihat topik-topik yang ditawarkan:',
+    'khidmat22' => 'Langkah-langkah',
+    'khidmat23' => '*Kemudahan menetapkan temujanji Khidmat Nasihat 1-1 di laman web Minggu Saham Digital ini dibuka bermula 17 November 2021 sehingga 31 Disember 2021. Dalam memilih tarikh temujanji, sila beri satu (1) hari bekerja untuk ejen ASNB berkaitan menghubungi anda.',
+    'khidmat_list1_1' => 'Langkah 1:',
+    'khidmat_list1_2' => 'Isi semua maklumat yang diperlukan',
+    'khidmat_list2_1' => 'Langkah 2:',
+    'khidmat_list2_2' => 'Pilih ejen ASNB dan topik yang anda berminat untuk mendapat rundingan atau maklumat lebih lanjut ',
+    'khidmat_list3_1' => 'Langkah 3:',
+    'khidmat_list3_2' => 'Pilih tarikh dan waktu yang sesuai untuk anda dihubungi oleh wakil ejen*',
 
     'cabutanbertuah_mainheading' => 'Cabutan Bertuah',
     'cabutanbertuah_title' => 'Cara Penyertaan',
@@ -120,7 +135,7 @@ return [
     'qa_1' => 'Soalan',
     'qa_2' => 'Lazim',
     'pertandingan_title' => 'Peraduan',
-    'program_title' => 'Atur Cara & Jadual',
+    'program_title' => 'Program & Jadual',
     'promosi_title' => 'Promosi',
     'back_button_age' => 'Kembali ke Peraduan',
 
@@ -128,7 +143,8 @@ return [
     'partner_premier' => 'PREMIER',
     'partner_utama' => 'UTAMA',
     'partner_acara' => 'ACARA',
-    'partner_ejen' => 'EJEN',
+    'partner_ejen' => '',
+    'partner_ejen2' => 'EJEN',
 
     'website' => 'Laman Web',
     'careers' => 'Kerjaya',
@@ -155,7 +171,7 @@ return [
     'forgot_password' => 'Tukar kata laluan, Sila log masuk sekali lagi',
 
     // Partner details
-    'program_tab' => 'Atur Cara',
+    'program_tab' => 'Program',
     'information_tab' => 'Maklumat',
     'terkini-btn' => 'Tonton Episod MSD Terkini ',
 

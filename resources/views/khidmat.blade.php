@@ -21,7 +21,7 @@
                 <div class="row px-md-5 gy-3">
                     <div class="col-lg-4 pe-lg-5">
                         <div class="d-flex w-100">
-                            <h2 class="heading2">{{ __('general.khidmat0') }}</h2>
+                            <h2 class="heading">{{ __('general.khidmat0') }}</h2>
                             <img src="{{asset('assets/img/nasihat2.png')}}" class="img-fluid w-50 d-lg-none" alt="">
                         </div>
                         <img src="{{asset('assets/img/nasihat.png')}}" class="img-fluid mt-5 d-none d-lg-inline-block"
@@ -29,23 +29,37 @@
                     </div>
                     <div class="col-lg-8 text-white" id="khidmat_nasihat_section">
                         <h2>{{ __('general.khidmat1')}}</h2>
-                        <p>
+                        <p class="mb-4">
                             {{ __('general.khidmat2') }}
                         </p>
-                        <div class="khidmat_images mb-3">
-                            <img src="{{asset('assets/img/ambank.png')}}" class="img-fluid" alt="">
+                        <h2>{{ __('general.khidmat21')}}</h2>
+                        <div class="khidmat_images mb-4">
+                            <img src="{{asset('assets/img/climb-2.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('assets/img/rhb-2.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('assets/img/maybank-6.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('assets/img/affin-bank.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('assets/img/alliance-bank.png')}}" class="img-fluid" alt="">  <br class="d-none d-xxl-block">
                             <img src="{{asset('assets/img/bankislam.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('assets/img/climb.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('assets/img/rhb.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('assets/img/bank-muamalat.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('assets/img/bsn.png')}}" class="img-fluid" alt="">
+                            <img src="{{asset('assets/img/hong-leong.png')}}" class="img-fluid" alt="">
                         </div>
-                        <p>{{ __('general.khidmat3') }}</p>
-                        <h2>{{ __('general.khidmat4') }}</h2>
-                        <p>{{ __('general.khidmat5') }}</p>
-                        <h2>{{ __('general.khidmat6') }}</h2>
-                        <p>{{ __('general.khidmat7') }}</p>
-                        <button id="tetapkan_btn" onclick="showForm()"
-                                class="theme-btn mt-3">{{ __('general.khidmat8') }} >
-                        </button>
+                        <h2>{{ __('general.khidmat22')}}</h2>
+                        <div class="d-flex align-items-center flex-wrap">
+                            <b>{{ __('general.khidmat_list1_1')}} </b> &nbsp; <span> {{ __('general.khidmat_list1_2')}}</span> 
+                        </div>
+                        <div class="d-flex align-items-center flex-wrap">
+                            <b>{{ __('general.khidmat_list2_1')}} </b> &nbsp; <span> {{ __('general.khidmat_list2_2')}}</span> 
+                        </div>
+                        <div class="d-flex align-items-center flex-wrap mb-4">
+                            <b>{{ __('general.khidmat_list3_1')}} </b> &nbsp; <span> {{ __('general.khidmat_list3_2')}}</span>
+                        </div>
+                        
+                        <button id="tetapkan_btn" onclick="showForm()" class="theme-btn mt-3">{{ __('general.khidmat8') }}</button>
+                       <div class="my-4">
+                            <small style="color:#D0DBFF;">{{ __('general.khidmat23') }}</small>
+                       </div>
+                        
                     </div>
                     <div class="col-lg-8 text-white" id="tetapkan_section">
                         <form action="{{route('advisors')}}" method="post">

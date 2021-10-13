@@ -2,6 +2,10 @@
   font-family: "manrope";
   src: url("../fonts/Manrope-Regular.ttf");
 }
+@font-face {
+  font-family: "manropeBold";
+  src: url("../fonts/Manrope-Bold.ttf");
+}
 
 *{
     margin: 0px;
@@ -338,16 +342,22 @@
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     background-color: rgba(128, 138, 226, 0.3);
-    border: 1px solid #808AE2;
+    border: 2px solid #808AE2;
 }
 .nav-pills .nav-link{
     background-color: #F5841F;
+    border:2px solid #F5841F;
     margin-bottom: 30px;
     color: white;
     font-size: 20px;
     width: 250px;
     border-radius: 10px;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.17);
+}
+.nav-pills .nav-link:hover{
+    border:2px solid #808AE2;
+    background-color: rgba(128, 138, 226, 0.3);
+    color: white;
 }
 .tab-content p{
     color: white;
@@ -385,6 +395,7 @@
     display: inline-block;
     margin-bottom: 10px;
     border: none;
+    font-family:"manropeBold";
 }
 .heading{
     font-size: 5.5rem;
@@ -475,7 +486,12 @@
     width: 10px;
     background-color: #212B80;
 } */
-
+#promotion_tabs .nav-link{
+    border:none;
+}
+#promotion_tabs .nav-link.active{
+    border:2px solid #F5841F;
+}
 #tabss_popup_btn{
     border: none;
     background: none;
@@ -585,7 +601,7 @@
     transition: all .3s
 }
 #jom_kira_tabs #nav-tab .nav-link:hover{
-    color:white;
+    color:#F5841F;
 }
 #jom_kira_tabs #owlCarousel .nav-link{
     width: 220px;
@@ -1006,9 +1022,10 @@
 		left: 125%;
 	}
 }
+
 .link-1{
-    top: 50%;
-    left: 2%;
+    top: 51%;
+    left: 5%;
 }
 .link-2{
     top: 36%;
@@ -1019,40 +1036,40 @@
     left: 18%;
 }
 .link-4{
-    top: 47%;
-    left: 33%;
+    top: 50%;
+    left: 36%;
 }
 .link-5{
-    top: 8%;
-    left: 46%;
+    top: 13%;
+    left: 48%;
 }
 .link-6{
-    top: 30%;
-    left: 38%;
+    top: 34%;
+    left: 42%;
 }
 .link-7{
     bottom: 30%;
     left: 57%;
 }
 .link-8{
-    top: 0%;
-    left: 60%;
+    top: 1%;
+    left: 60.5%;
 }
 .link-9{
-    top: 33%;
-    left: 58%;
+    top: 35%;
+    left: 59%;
 }
 .link-10{
-    top: 6%;
+    top: 7%;
     right: 14%;
 }
 .link-11{
-    top: 35%;
-    right: 15%;
+    top: 38%;
+    right: 16%;
 }
 .link-12{
-    top: 2%;
-    right: 5%;
+    top: 3%;
+    right: 8%;
 }
 .link-13{
     top: 53%;
@@ -1061,7 +1078,7 @@
 }
 .link-14{
     bottom: 30%;
-    right: 5%;
+    right: 4%;
 }
 .link-15{
     top: 35%;
@@ -1274,7 +1291,20 @@
      font-size: 1.2rem;
      margin-bottom: 10px;
  }
- 
+ /*@media(min-width:2000px){*/
+ /*    .link-1{*/
+ /*       top: 51%;*/
+ /*       left: 5%;*/
+ /*    }*/
+ /*    .link-4{*/
+ /*       top: 50%;*/
+ /*       left: 37%;*/
+ /*    }*/
+ /*    .link-6{*/
+ /*       top: 35%;*/
+ /*       left: 43%;*/
+ /*    }*/
+ /*}*/
 @media(max-width:1399px){
 
     .about-us-box{

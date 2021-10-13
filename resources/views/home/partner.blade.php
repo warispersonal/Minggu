@@ -167,13 +167,32 @@
                                     <div class="row">
                                         <div class="col-7">
                                             <div class="custom-links ">
-                                                @foreach($partner->links as $link)
-                                                    <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
-                                                       href="{{$link->link}}">{{Config::get('app.locale') == 'en' ? $link->title : $link->title_bm}}</a>
-                                                @endforeach
-                                                @if($partner->website != "")
-                                                    <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
-                                                       href="{{$partner->website}}">{{ __('general.website') }}</a>
+                                               
+                                                @if($partner->id == 5)
+                                                    @if($partner->website != "")
+                                                        <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
+                                                               href="{{$partner->website}}"><i class="fas fa-globe"></i></a>
+                                                    @endif
+                                                    @foreach($partner->links as $link)
+                                                        <a target="_blank" class="mode
+                                                            -fore-color mode-buttons-color mt-2"
+                                                               href="{{$link->link}}"><img style="height:20px" src={{asset('assets/front/img/myASNB.png')}}></a>
+                                                    @endforeach
+                                                    
+                                                @else
+                                                    @foreach($partner->links as $link)
+                                                        
+                                                        <a target="_blank" class="mode
+                                                        -fore-color mode-buttons-color mt-2"
+                                                           href="{{$link->link}}">{{Config::get('app.locale') == 'en' ? $link->title : $link->title_bm}}</a>
+                                                        
+                                                    @endforeach
+                                                    @if($partner->website != "")
+                                                     
+                                                        <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"
+                                                           href="{{$partner->website}}">{{ __('general.website') }}</a>
+                                                         
+                                                    @endif
                                                 @endif
                                                 @if($partner->careers != "")
                                                     <a target="_blank" class="mode-fore-color mode-buttons-color mt-2"

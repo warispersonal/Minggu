@@ -53,16 +53,21 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <button id="tabss_popup_btn">Pilih Rakan Kongsi <i class="bi bi-chevron-down"></i></button>
+                        <button id="tabss_popup_btn">{{ __('general.pilih_rakan') }} <i class="bi bi-chevron-down"></i></button>
                         <div class="tab-content" id="promotion_tabs_content">
                             <div class="tab-pane fade show active"
                                  id="pills-all"
                                  role="tabpanel"
                                  aria-labelledby="pills-tab-all">
-                                @foreach($sliders as $slider)
-                                    <a target="_blank" href="{{$slider->url}}">
-                                        <img src="{{$slider->promotion_logo}}" class="img-fluid" alt="">
-                                    </a>
+                                
+                                
+                                @foreach($partners as $partner)
+                                    <?php $sliders = $partner->promotions; ?>
+                                    @foreach($sliders as $slider)
+                                        <a target="_blank" href="{{$slider->url}}">
+                                            <img src="{{$slider->promotion_logo}}" class="img-fluid" alt="">
+                                        </a>
+                                    @endforeach
                                 @endforeach
                             </div>
 

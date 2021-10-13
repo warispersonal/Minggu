@@ -35,7 +35,8 @@
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="videoLink">Minggu Saham Digital (EN)*</label>
-                                <textarea class="ckeditor form-control" name="minggu_saham_digital">{!! $faq['minggu_saham_digital'] !!}</textarea>
+                                <!--<textarea class="ckeditor form-control" name="minggu_saham_digital">{!! $faq['minggu_saham_digital'] !!}</textarea>-->
+                                <textarea class="form-control" name="minggu_saham_digital" rows="10">{!! $faq['minggu_saham_digital'] !!}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="videoLink">Minggu Saham Digital (BM) *</label>

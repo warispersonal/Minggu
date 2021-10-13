@@ -382,14 +382,11 @@
             <i class="bi bi-x close_btn  me-0"></i>
         </div>
         <ol class="mt-4">
-            <li>{{ __('general.list_a') }} <a class="fw-bold text-uppercase"
-                                              href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_a_register') }} </a>
+            <li>{{ __('general.list_a') }} <a class="fw-bold text-uppercase" target="_blank"  href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_a_register') }} </a> &nbsp; <img height="22px" src="{{ asset('assets/front/img/myASNB.png') }}"> 
             </li>
-            <li>{{ __('general.list_b') }} <a class="fw-bold text-uppercase "
-                                              href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_b_signup') }} </a> {{ __('general.list_b_second') }}
+            <li>{{ __('general.list_b') }} <a class="fw-bold text-uppercase " target="_blank"  href="https://www.asnb.com.my/asnbv2_3services_EN.php#account"> {{ __('general.list_b_signup') }} </a> {{ __('general.list_b_second') }} &nbsp; <img height="22px" src="{{ asset('assets/front/img/myASNB.png') }}">
             </li>
-            <li>{{ __('general.list_c') }} <span
-                    class="close_btn text-uppercase"> {{ __('general.list_a_close') }} </span></li>
+            <li>{{ __('general.list_c') }} <span  class="close_btn text-uppercase"> {{ __('general.list_a_close') }} </span></li>
         </ol>
     </div>
 

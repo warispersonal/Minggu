@@ -24,6 +24,12 @@ return [
     'terms&condition' => 'Terms & Conditions',
     'registerStatement' => '*By submitting this registration form, participants hereby agree to authorizes PNB, and PNB reserves the right to collect and process participants\' personal data, if any, for advertising, publicity or research purposes, in accordance with legal requirements relevant, without any cost or compensation.',
 
+    // MSD - Home Page
+    'home_info' => 'Minggu Saham Digital is a family-friendly event filled with educational and financial literacy programmes for all age groups. MSD is live streamed for 7 days via Facebook and YouTube.',
+    
+    // MSD - Promotions
+    'pilih_rakan' => 'Select a Partner',
+    
     // MSD - live Text
     'social_heading' => 'Can also be watched live through:',
 
@@ -69,13 +75,13 @@ return [
 
     'khidmat0' => '1-on-1 Advisors',
     'khidmat1' => 'What is 1-on-1 Advisors?',
-    'khidmat2' => 'You can get 30 minutes of personal advice and consultation with advisors from ASNB, AmBank, Bank Islam, CIMB & RHB. Set the beginning of your session!',
+    'khidmat2' => 'You can schedule an appointment with a representative from any of the participating ASNB agents. Not only advice on the benefits of Amanah Saham Bumiputera (ASB) financing and how to apply as well as personal consultation on financial planning through ASNB unit trusts-you can also get more information on the topics listed.',
     'khidmat3' => 'Advisors from our expert Bank Agents are available to assist you on the following matters:',
     'khidmat4' => 'ASB financing',
     'khidmat5' => 'Advisors will share about the benefits of ASB financing and how to apply for it',
     'khidmat6' => 'ASNB Unit Trusts',
     'khidmat7' => 'Personal advisory services on financial planning through ASNB Unit Trusts',
-    'khidmat8' => 'Set Your Appointment Now',
+    'khidmat8' => 'Set Your Appointment Now!',
     'khidmat9' => 'Set your appointment 1-1',
     'khidmat10' => 'I agree to the terms and conditions of service',
     'khidmat11' => 'Come back',
@@ -88,6 +94,15 @@ return [
     'khidmat18' => 'Topics of interest',
     'khidmat19' => 'Time',
     'khidmat20' => 'Send',
+    'khidmat21' => 'Please click ASNB agent to see the topics offered:',
+    'khidmat22' => 'The steps',
+    'khidmat23' => '*The facility to set up a 1-1 Advisory Service appointment on the Digital Stock Week website is open from 17 November 2021 until 31 December 2021. In selecting an appointment date, please allow one (1) working day for the relevant ASNB agent to contact you.',
+    'khidmat_list1_1' => 'Step 1:',
+    'khidmat_list1_2' => 'Fill in all the required information',
+    'khidmat_list2_1' => 'Step 2:',
+    'khidmat_list2_2' => 'Select an ASNB agent and the topic you are interested in for consultation or more information',
+    'khidmat_list3_1' => 'Step 3:',
+    'khidmat_list3_2' => 'Select the appropriate date and time for you to be contacted by the agent representative*',
 
     'cabutanbertuah_mainheading' => 'Daily Lucky Draw',
     'cabutanbertuah_title' => 'How to Participate',
@@ -115,14 +130,15 @@ return [
     'promosi_title' => 'Promotions',
     'back_button_age' => 'Return to Contests',
 
-    'partner_rakan' => 'PARTNER',
+    'partner_rakan' => 'RAKAN',
     'partner_premier' => 'PREMIER',
-    'partner_utama' => 'MAIN',
+    'partner_utama' => 'UTAMA',
     'partner_acara' => 'EVENT',
-    'partner_ejen' => 'Participating Agents',
+    'partner_ejen' => 'Participating',
+    'partner_ejen2' => 'Agents',
 
     'rakan_acara_1' => 'Event',
-    'rakan_acara_2' => 'Partner',
+    'rakan_acara_2' => 'Partners',
 
 
     'website' => 'Website',
