@@ -129,6 +129,8 @@ return [
     'khidmat_topic8_2' =>  'ASNB Unit Trust',
     'khidmat_topic9_1' =>  'ASB Financing',
     'khidmat_topic9_1' =>  'ASNB Unit Trust',    
+    
+    'pdf_jomKira' =>'Jom Kira',
 
     'cabutanbertuah_mainheading' => 'Daily Lucky Draw',
     'cabutanbertuah_title' => 'How to Participate',
@@ -136,6 +138,7 @@ return [
     'cabutanbertuah_worth' => 'e-Vouchers worth',
     'cabutanbertuah_text' => 'Return to Contests',
     'cabutanbertuah_prize' => 'Prizes To Win',
+    'pdf_cabutanbertuah' => 'Daily Lucky Draw',
 
 
     'draw_mainheading' => 'Draw 118',
@@ -150,6 +153,7 @@ return [
     'livetrivia_worth' => 'e-Vouchers worth',
     'livetrivia_text' => 'Return to Contests',
     'livetrivia_prize' => 'Prizes To Win',
+    'pdf_livetrivia' => 'Live Trivia',
 
     'qa_1' => 'Frequently',
     'qa_2' => 'Asked Questions',

@@ -140,7 +140,7 @@ return [
     'khidmat_topic9_1' =>  'Pembiayaan ASB',
     'khidmat_topic9_1' =>  'Unit Amanah ASNB',
     
-    
+    'pdf_jomKira' =>'Jom Kira',
 
     'cabutanbertuah_mainheading' => 'Cabutan Bertuah',
     'cabutanbertuah_title' => 'Cara Penyertaan',
@@ -148,6 +148,8 @@ return [
     'cabutanbertuah_worth' => 'E-Baucar Bernilai',
     'cabutanbertuah_text' => ' Kembali ke Peraduan',
     'cabutanbertuah_prize' => 'Hadiah Untuk Dimenangi',
+    'pdf_cabutanbertuah' => 'Cabutan Bertuah',
+    
     
 
     'draw_mainheading' => 'Draw 118',
@@ -155,6 +157,7 @@ return [
     'draw_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
     'draw_worth' => 'E-Baucar Bernilai',
     'draw_text' => 'Kembali ke Peraduan',
+    
     
 
 
@@ -164,6 +167,7 @@ return [
     'livetrivia_worth' => 'E-Baucar Bernilai',
     'livetrivia_text' => 'Kembali ke Peraduan',
     'livetrivia_prize' => 'Hadiah Untuk Dimenangi',
+    'pdf_livetrivia' => 'Live Trivia',
 
     'qa_1' => 'Soalan',
     'qa_2' => 'Lazim',

@@ -118,14 +118,14 @@ class HomeController extends Controller
         return view('jom_kira');
     }
 
-    public function sertai_sekarang()
+     public function sertai_sekarang()
     {
 
         $id = Auth::guard('user')->id() ?? 0;
         $section1 = Lottery::where('section', 1)->get();
         $section2 = Lottery::where('section', 2)->get();
         $section3 = Lottery::where('section', 3)->get();
-        if($id != 0){
+        if($id){
             foreach ($section1 as $section) {
                 $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
                 $section['correct_value'] = $user_lottery[0]['code'] ?? "";
@@ -139,6 +139,7 @@ class HomeController extends Controller
                 $section['correct_value'] = $user_lottery[0]['code'] ?? "";
             }
         }
+        
         return view('sertai_sekarang', compact('section1', 'section2', 'section3'));
     }
 
