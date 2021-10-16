@@ -34,15 +34,77 @@
                         </p>
                         <h2>{{ __('general.khidmat21')}}</h2>
                         <div class="khidmat_images mb-4">
-                            <img src="{{asset('assets/img/climb-2.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('assets/img/rhb-2.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('assets/img/maybank-6.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('assets/img/affin-bank.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('assets/img/alliance-bank.png')}}" class="img-fluid" alt="">  <br class="d-none d-xxl-block">
-                            <img src="{{asset('assets/img/bankislam.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('assets/img/bank-muamalat.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('assets/img/bsn.png')}}" class="img-fluid" alt="">
-                            <img src="{{asset('assets/img/hong-leong.png')}}" class="img-fluid" alt="">
+                            
+                            <button class="img_button">
+                                <img src="{{asset('assets/img/climb-2.png')}}" class="img-fluid" alt="">
+                                <div class="img_data">
+                                    {{ __('general.khidmat_topic1_1')}} <br>
+                                    {{ __('general.khidmat_topic1_2')}} 
+                                    
+                                </div>
+                            </button>
+                            <button class="img_button">
+                                <img src="{{asset('assets/img/rhb-2.png')}}" class="img-fluid" alt="">
+                                <div class="img_data">
+                                    {{ __('general.khidmat_topic2_1')}} <br>
+                                    {{ __('general.khidmat_topic2_2')}} <br>
+                                    {{ __('general.khidmat_topic2_3')}} 
+                                </div>
+                            </button>
+                            <button class="img_button">
+                                <img src="{{asset('assets/img/maybank-6.png')}}" class="img-fluid" alt="">
+                                <div class="img_data">
+                                    {{ __('general.khidmat_topic3_1')}} <br>
+                                    {{ __('general.khidmat_topic3_2')}} 
+                                </div>
+                            </button>
+                            <button class="img_button">
+                                <img src="{{asset('assets/img/affin-bank.png')}}" class="img-fluid" alt="">
+                                <div class="img_data">
+                                    {{ __('general.khidmat_topic4_1')}} <br>
+                                    {{ __('general.khidmat_topic4_2')}} <br>
+                                    {{ __('general.khidmat_topic4_3')}} <br>
+                                    {{ __('general.khidmat_topic4_4')}} 
+                                </div>
+                            </button>
+                            <button class="img_button">
+                                <img src="{{asset('assets/img/alliance-bank.png')}}" class="img-fluid" alt="">
+                                <div class="img_data">
+                                    {{ __('general.khidmat_topic5_1')}} <br>
+                                    {{ __('general.khidmat_topic5_2')}} 
+                                </div>
+                            </button> <br class="d-none d-xxl-block">
+                            <button class="img_button">
+                                <img src="{{asset('assets/img/bankislam.png')}}" class="img-fluid" alt="">
+                                <div class="img_data">
+                                    {{ __('general.khidmat_topic6_1')}} <br>
+                                    {{ __('general.khidmat_topic6_2')}} <br>
+                                    {{ __('general.khidmat_topic6_3')}} <br>
+                                    {{ __('general.khidmat_topic6_4')}} 
+                                </div>
+                            </button>
+                            <button class="img_button">
+                                <img src="{{asset('assets/img/bank-muamalat.png')}}" class="img-fluid" alt="">
+                                <div class="img_data">
+                                    {{ __('general.khidmat_topic7_1')}} <br>
+                                    {{ __('general.khidmat_topic7_2')}} 
+                                </div>
+                            </button>
+                            <button class="img_button">
+                                <img src="{{asset('assets/img/bsn.png')}}" class="img-fluid" alt="">
+                                <div class="img_data">
+                                    {{ __('general.khidmat_topic8_1')}} <br>
+                                    {{ __('general.khidmat_topic8_2')}}
+                                </div>
+                            </button>
+                            <button class="img_button">
+                                <img src="{{asset('assets/img/hong-leong.png')}}" class="img-fluid" alt="">
+                                <div class="img_data">
+                                    {{ __('general.khidmat_topic9_1')}} <br>
+                                    {{ __('general.khidmat_topic9_2')}} 
+                                </div>
+                            </button>
+                            <div class="img_overlay"></div>
                         </div>
                         <h2>{{ __('general.khidmat22')}}</h2>
                         <div class="d-flex align-items-center flex-wrap">
@@ -87,9 +149,8 @@
                                     </div>
                                     <div class="mb-3">
                                         <div class="form-group">
-                                            <label for="exampleFormControlSelect1">{{ __('general.khidmat16') }}</label>
-                                            <select onchange="loadInterest()" name="bank" class="form-control" id="exampleFormControlSelect1">
-                                                <option value=""> {{ __('general.khidmat16') }}</option>
+                                            <select onchange="loadInterest()" name="bank" class="custom-input" id="exampleFormControlSelect1">
+                                                <option value="" selected hidden> {{ __('general.khidmat16') }}</option>
                                                 @foreach($banks as $bank)
                                                     <option value="{{$bank->id}}">{{$bank->name}}</option>
                                                 @endforeach
@@ -98,8 +159,7 @@
                                     </div>
                                     <div class="mb-5">
                                         <div class="form-group">
-                                            <label for="exampleFormControlSelect2">{{ __('general.khidmat18') }}</label>
-                                            <select name="topic_interest" class="form-control" id="exampleFormControlSelect2">
+                                            <select name="topic_interest" class="custom-input" id="exampleFormControlSelect2">
                                                 <option value="0">{{ __('general.khidmat18') }}</option>
                                             </select>
                                         </div>
@@ -208,7 +268,7 @@
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <button id="back_btn" onclick="backButton()"><i
+                                <button id="back_btn" type="button" onclick="backButton()"><i
                                         class="bi bi-chevron-left"></i>{{ __('general.khidmat11') }}</button>
                             </div>
                         </form>

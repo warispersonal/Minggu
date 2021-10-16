@@ -11,5 +11,6 @@ class FileConstant
     const PROMOSI_IMAGE = 'images/promosi_image';
     const PARTNER_PROMOTION = 'images/partner_promotion';
     const MAIN_PROGRAM_LOGO = 'images/main_program_logo';
+    const PARTNER_COINS = 'images/coins';
 }
 

@@ -270,8 +270,10 @@
                                                 @endif
                                             </p>
                                         </div>
+                                        
                                     </div>
                                 @endforeach
+                              
                             </div>
                             <a href="{{route('user.msdLive')}}" id="terkini-btn">{{ __('general.terkini-btn') }}&gt;</a>
                         </div>
@@ -279,6 +281,11 @@
                 </div>
             </div>
         </div>
+          <div class="text-end">
+                                    @if($partner->coin != "" && $partner->coin != null)
+                                    <img src="{{$partner->coin_image ?? ""}}">
+                                    @endif
+                                </div>
     </main>
 @endsection
 

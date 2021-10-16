@@ -70,6 +70,7 @@
         var validExtensions = ['jpg', 'png', 'jpeg', 'gif']; //array of valid extensions
         var fileName = input.files[0].name;
         var fileNameExt = fileName.substr(fileName.lastIndexOf('.') + 1);
+        fileNameExt = fileNameExt.toLowerCase();
         if ($.inArray(fileNameExt, validExtensions) == -1) {
             input.type = ''
             input.type = 'file'

@@ -367,6 +367,9 @@
 .tab-content h1,.tab-content h2,.tab-content h3, .tab-content h4,.tab-content h5,.tab-content h6, .tab-content li{
     color: white;
 }
+.match_links {
+    width:100%;
+}
 .match_links a{
     color: white;
     background-color: #F5841F;
@@ -418,7 +421,7 @@
 }
 .oyen{
     color: #F5841F !important;
-    font-size: 5.5rem;
+    font-size: 5.3rem;
     font-weight:bold;
 }
 .car-details{
@@ -582,7 +585,24 @@
     margin:0px auto;
     font-weight:bold;
 }
-
+.coin-box{
+    background:url('../img/coin-ani.gif');
+    background-position:center;
+    background-size:cover;
+    text-align:center;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    color:white;
+}
+.coin-box h1{
+    color:#F5841F;
+    font-size:4rem;
+}
+.coin-box h2{
+    font-size:2.5rem;
+}
 
 #jom_kira_tabs #nav-tab .nav-link.active{
     border-bottom: 2px solid white;
@@ -744,7 +764,6 @@
 .program_video-box p{
     color: black;
     font-size: 16px;
-
 }
 #tetapkan_section{
     display: none;
@@ -758,6 +777,9 @@
     padding: 5px;
     outline: none;
     font-size: 20px;
+}
+#tetapkan_section .custom-input option{
+    color:black !important;
 }
 #tetapkan_section .form-check-label{
 
@@ -1245,12 +1267,6 @@
 .header-imgs img{
     height:18px;   
 }
-/*.header-imgs img:nth-child(1){*/
-/*    width:80px;*/
-/*}*/
-/*.header-imgs img:nth-child(2){*/
-/*    width:100px;*/
-/*}*/
 .swal-button{
     background-color:#0057B7 !important;
 }
@@ -1291,31 +1307,63 @@
      font-size: 1.2rem;
      margin-bottom: 10px;
  }
- /*@media(min-width:2000px){*/
- /*    .link-1{*/
- /*       top: 51%;*/
- /*       left: 5%;*/
- /*    }*/
- /*    .link-4{*/
- /*       top: 50%;*/
- /*       left: 37%;*/
- /*    }*/
- /*    .link-6{*/
- /*       top: 35%;*/
- /*       left: 43%;*/
- /*    }*/
- /*}*/
+.img_button{
+    position:relative;
+    background: transparent;
+    border:none;
+    padding:0px;
+}
+.img_data{
+    position:absolute;
+    top:105%;
+    left:50%;
+    transform:translateX(-50%);
+    padding:15px;
+    background: linear-gradient(90deg, #F0F5FF 17.31%, #FFFFFF 112.04%);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width:max-content;
+    visibility:hidden;
+    opacity:0;
+    cursor:default;
+    transition:all .5s;
+    text-align:center;
+    z-index:9;
+    color:#0057B7;
+    font-family: "manropeBold";
+ }
+ .img_overlay{
+     position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #0058b769;
+    z-index: 8;
+    visibility: hidden;
+    opacity:0;
+    transition: opacity .5s;
+ }
+ .img_button:focus{
+     z-index:9;
+ }
+ .img_button:focus .img_data{
+     visibility:visible;
+     opacity:1;
+ }
+ .img_button:focus ~ .img_overlay{
+     visibility: visible;
+     opacity:1;
+ }
+.family-img{
+    transform:translateY(-50%);
+}
+
 @media(max-width:1399px){
 
     .about-us-box{
         top:40%;
     }
-    /*.header-imgs img:nth-child(1){*/
-    /*    width:70px;*/
-    /*}*/
-    /*.header-imgs img:nth-child(2){*/
-    /*    width:100px;*/
-    /*}*/
     .desktop_nav{
         display:none;
     }
@@ -1993,70 +2041,14 @@
     #confirm_modal{
         padding:25px;
     }
+    .coin-box h1{
+        font-size:2.5rem;
+    }
+    .coin-box h2{
+        font-size:1.5rem;
+    }
+    .family-img{
+        transform:translateY(-70%);
+    }
 }
-/*@media screen and (min-width: 1280px) and (min-height:720px) {*/
-/*     .desktop-bg{*/
-/*        height: calc( 100vh - 40px) !important;*/
-/*        object-position: top;*/
-/*     }*/
-/*     .link-1{*/
-/*    top: 60%;*/
-/*    left: 2%;*/
-/*}*/
-/*.link-2{*/
-/*    top: 46%;*/
-/*    left: 20%;*/
-/*}*/
-/*.link-3{*/
-/*    bottom: 5%;*/
-/*    left: 18%;*/
-/*}*/
-/*.link-4{*/
-/*    top: 57%;*/
-/*    left: 33%;*/
-/*}*/
-/*.link-5{*/
-/*    top: 8%;*/
-/*    left: 46%;*/
-/*}*/
-/*.link-6{*/
-/*    top: 40%;*/
-/*    left: 38%;*/
-/*}*/
-/*.link-7{*/
-/*    bottom: 20%;*/
-/*    left: 57%;*/
-/*}*/
-/*.link-8{*/
-/*    top: 0%;*/
-/*    left: 60%;*/
-/*}*/
-/*.link-9{*/
-/*    top: 43%;*/
-/*    left: 58%;*/
-/*}*/
-/*.link-10{*/
-/*    top: 6%;*/
-/*    right: 14%;*/
-/*}*/
-/*.link-11{*/
-/*    top: 45%;*/
-/*    right: 15%;*/
-/*}*/
-/*.link-12{*/
-/*    top: 2%;*/
-/*    right: 5%;*/
-/*}*/
-/*.link-13{*/
-/*    top: 63%;*/
-/*    right: 8%;*/
-/*}*/
-/*.link-14{*/
-/*    bottom: 8%;*/
-/*    right: 13%;*/
-/*}*/
-/*.link-15{*/
-/*    top: 45%;*/
-/*    right: 5%;*/
-/*}*/
-/* }*/
+

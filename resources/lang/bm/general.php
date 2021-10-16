@@ -36,10 +36,12 @@ return [
     'tuesday' => 'Selasa',
 
     //pertandingan
-    'pertandingan' => 'Hadiah-hadiah Bernilai Lebih Daripada <span class="oyen">RM500,000</span> <br>Untuk Dimenangi',
+    'pertandingan' => 'Hadiah-hadiah Bernilai Lebih Daripada <div class="oyen"><b>RM500,000</b></div> Untuk Dimenangi',
     'jom_kira' => 'Adakah anda bijak kewangan? Peraduan besar Minggu Saham Digital tahun ini menguji fokus dan kemahiran matematik anda sambil belajar dan menikmati program-program yang menarik!<br>
 			Dari 22 Okt - 23 Nov, kami dan Rakan-rakan Korporat kami akan memaparkan beberapa #SyilingMSD di laman web dan media sosial kami. Jom... cari dan kira semuanya untuk menang!',
     'join_now' => 'Sertai Sekarang!',
+    'pertandingan_discription' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eg dolor sit a. Aenean massa. Com socis masa, natoque penatibus et mang dis parturient montes, nascetur mus ridiculus mus. Lorem ipsum dolor sit amet, consectetuer dolor sit adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean a commodo ligula eget dolor sit a.',
+
 
     'the_match_button_1' => 'Jom... Kira Duit',
     'the_match_button_2' => 'Live Trivia',
@@ -106,24 +108,54 @@ return [
     'khidmat21' => 'Sila klik ejen ASNB untuk melihat topik-topik yang ditawarkan:',
     'khidmat22' => 'Langkah-langkah',
     'khidmat23' => '*Kemudahan menetapkan temujanji Khidmat Nasihat 1-1 di laman web Minggu Saham Digital ini dibuka bermula 17 November 2021 sehingga 31 Disember 2021. Dalam memilih tarikh temujanji, sila beri satu (1) hari bekerja untuk ejen ASNB berkaitan menghubungi anda.',
+    
     'khidmat_list1_1' => 'Langkah 1:',
     'khidmat_list1_2' => 'Isi semua maklumat yang diperlukan',
     'khidmat_list2_1' => 'Langkah 2:',
     'khidmat_list2_2' => 'Pilih ejen ASNB dan topik yang anda berminat untuk mendapat rundingan atau maklumat lebih lanjut ',
     'khidmat_list3_1' => 'Langkah 3:',
     'khidmat_list3_2' => 'Pilih tarikh dan waktu yang sesuai untuk anda dihubungi oleh wakil ejen*',
+    
+    'khidmat_topic1_1' =>  'Pembiayaan ASB',
+    'khidmat_topic1_2' =>  'Unit Amanah ASNB',
+    'khidmat_topic2_1' =>  'Pembiayaan ASB',
+    'khidmat_topic2_2' =>  'Unit Amanah ASNB',
+    'khidmat_topic2_3' =>  'Pembiayaan Kenderaan',
+    'khidmat_topic3_1' =>  'Pembiayaan ASB',
+    'khidmat_topic3_2' =>  'Unit Amanah ASNB',
+    'khidmat_topic4_1' =>  'Pembiayaan ASB',
+    'khidmat_topic4_2' =>  'Unit Amanah ASNB (Harga Berubah)',
+    'khidmat_topic4_3' =>  'Kempen Jom Simpan ASB D’Affin',
+    'khidmat_topic4_4' =>  'Kempen Bonanza Gemilang',
+    'khidmat_topic5_1' =>  'Pembiayaan ASB',
+    'khidmat_topic5_2' =>  'Unit Amanah ASNB',
+    'khidmat_topic6_1' =>  'Pembiayaan ASB',
+    'khidmat_topic6_2' =>  'Unit Amanah ASNB',
+    'khidmat_topic6_3' =>  'Dana Makmur MyWakaf',
+    'khidmat_topic6_4' =>  'Dana BIMB ESG Sukuk',
+    'khidmat_topic7_1' =>  'Pembiayaan ASB',
+    'khidmat_topic7_2' =>  'Unit Amanah ASNB',
+    'khidmat_topic8_1' =>  'Pembiayaan ASB',
+    'khidmat_topic8_2' =>  'Unit Amanah ASNB',
+    'khidmat_topic9_1' =>  'Pembiayaan ASB',
+    'khidmat_topic9_1' =>  'Unit Amanah ASNB',
+    
+    
 
     'cabutanbertuah_mainheading' => 'Cabutan Bertuah',
     'cabutanbertuah_title' => 'Cara Penyertaan',
     'cabutanbertuah_description' => 'Sudah berdaftar? Anda pasti teringin kerana setiap hari, kami akan menarik 400 nama yang berpeluang memenangi jumlah E-Baucar bernilai RM120,000! Anda cuma perlu daftar dan tunggu pengumuman pemenang harian. Sungguh mudah! Jadi, ajaklah rakan-rakan dan ahli keluarga anda kerana semua orang pasti berpeluang untuk menang!',
     'cabutanbertuah_worth' => 'E-Baucar Bernilai',
     'cabutanbertuah_text' => ' Kembali ke Peraduan',
+    'cabutanbertuah_prize' => 'Hadiah Untuk Dimenangi',
+    
 
     'draw_mainheading' => 'Draw 118',
     'draw_title' => 'Cara Penyertaan',
     'draw_description' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quis, deleniti id voluptatem necessitatibus eos animi voluptatibus, amet itaque illo dolorum excepturi quam aperiam blanditiis? Ipsa, ut veritatis! Cum, aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. !',
     'draw_worth' => 'E-Baucar Bernilai',
     'draw_text' => 'Kembali ke Peraduan',
+    
 
 
     'livetrivia_mainheading' => 'Live Trivia',
@@ -131,6 +163,7 @@ return [
     'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital <i>LIVE</i>. Anda cuma perlu menonton, bersedia dan berfokus untuk menjadi salah seorang pemenang E-Baucar! Pastikan anda telah mencatat jadual siaran harian MSD dengan melayari laman Atur Cara & Jadual. Dan jangan lupa, daftar sekarang!',
     'livetrivia_worth' => 'E-Baucar Bernilai',
     'livetrivia_text' => 'Kembali ke Peraduan',
+    'livetrivia_prize' => 'Hadiah Untuk Dimenangi',
 
     'qa_1' => 'Soalan',
     'qa_2' => 'Lazim',

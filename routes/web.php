@@ -145,7 +145,7 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::get('/service-advisor-banks', 'UsersController@service_advisor_banks')->name('star.service_advisor_banks');
         Route::post('/service-advisor-banks/{id}', 'UsersController@service_advisor_banks_update')->name('star.service_advisor_banks_update');
         Route::get('getRefSubmission', 'UsersController@getRefSubmission')->name('star.getRefSubmissionAJAX');
-        Route::get('getRefSubmission', 'UsersController@getKhidmatAjax')->name('star.getKhidmatAJAX');
+        Route::get('khidmat-info', 'UsersController@getKhidmatAjax')->name('star.getKhidmatAJAX');
 
         Route::get('getUsers', 'UsersController@getUsers')->name('star.getusersAJAX');
         Route::get('delete/{id}', 'UsersController@destroy')->name('star.destroyUser');

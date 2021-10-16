@@ -58,5 +58,10 @@ class Partner extends Model
         return $embera->autoEmbed($this->video_link);
     }
 
+    public function getCoinImageAttribute()
+    {
+        return asset(FileConstant::PARTNER_COINS . '/' . $this->coin);
+    }
+
 
 }

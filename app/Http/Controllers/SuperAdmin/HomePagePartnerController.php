@@ -57,10 +57,7 @@ class HomePagePartnerController extends Controller
             'name_bm' => 'required',
             'description' => 'required',
             'description_bm' => 'required',
-            'video_link' => 'required',
-            'home_logo' => 'mimes:jpg,bmp,png',
-            'details_logo' => 'mimes:jpg,bmp,png',
-            'promosi_image' => 'mimes:jpg,bmp,png',
+            'video_link' => 'required'
         ]);
         $partner = Partner::find($id);
         if ($request->home_logo) {

@@ -35,9 +35,12 @@
                             <iframe src="https://player.vimeo.com/video/619028559"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="col-lg-5  order-2 order-lg-4 d-flex justify-content-center align-items-center">
+                    <div class="col-lg-5  order-2 order-lg-4 ">
                         <div class="side-text">
-                            <h1>{!! __('general.pertandingan') !!}</h1>
+                            <div class="coin-box p-md-5 p-2">
+                                <h2>{!! __('general.pertandingan') !!}</h2>
+                            </div>
+                            <p class="text-center text-white">{{ __('general.pertandingan_discription') }}</p>
                         </div>
                     </div>
 
