@@ -118,28 +118,48 @@ class HomeController extends Controller
         return view('jom_kira');
     }
 
-     public function sertai_sekarang()
+  public function sertai_sekarang()
     {
 
         $id = Auth::guard('user')->id() ?? 0;
         $section1 = Lottery::where('section', 1)->get();
         $section2 = Lottery::where('section', 2)->get();
         $section3 = Lottery::where('section', 3)->get();
-        if($id){
+        if($id != 0){
             foreach ($section1 as $section) {
                 $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
-                $section['correct_value'] = $user_lottery[0]['code'] ?? "";
+                if(count($user_lottery) == 0){
+                    $section['status'] = 0;
+                    $section['correct_value'] = '';
+                }
+                else{
+                    $section['status'] = 1;
+                    $section['correct_value'] = $user_lottery[0]['code'];
+                }
             }
             foreach ($section2 as $section) {
                 $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
-                $section['correct_value'] = $user_lottery[0]['code'] ?? "";
+                if(count($user_lottery) == 0){
+                    $section['status'] = 0;
+                    $section['correct_value'] = '';
+                }
+                else{
+                    $section['status'] = 1;
+                    $section['correct_value'] =$user_lottery[0]['code'];
+                }
             }
             foreach ($section3 as $section) {
                 $user_lottery = UserLottery::where('user_id', $id)->where('lottery_id', $section->id)->get();
-                $section['correct_value'] = $user_lottery[0]['code'] ?? "";
+                if(count($user_lottery) == 0){
+                    $section['status'] = 0;
+                    $section['correct_value'] = '';
+                }
+                else{
+                    $section['status'] = 1;
+                    $section['correct_value'] = $user_lottery[0]['code'];
+                }
             }
         }
-        
         return view('sertai_sekarang', compact('section1', 'section2', 'section3'));
     }
 
