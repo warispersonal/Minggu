@@ -4,8 +4,54 @@
     <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css')}}">
     <style>
+        body,html{
+            overflow-x:hidden;
+        }
         .main-bg {
             background-color: #0057B7 !important;
+            overflow:hidden;
+        }
+        .info_iconn_2{
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            background: linear-gradient(226.91deg, #A4B7FB 26.91%, #808AE2 86.1%);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            position:relative;
+        }
+        .info_iconn_2 span{
+            margin:0px;
+        }
+        
+        .social_iconss{
+            width:100%;
+        }
+        .social_iconss i{
+            margin-right:5px;
+        }
+        .info_iconn_2:hover .about-us-box{
+            right:0px;
+            transition:all .3s;
+        }
+        .sertai-info-box{
+            position:absolute;
+            top:0px;
+            height:200px;
+            background:black;
+            width:100vw;
+            visibility:hidden;
+            z-index:4;
+        }
+        .about-us-box{
+            position:absolute;
+            left:inherit;
+            right:-1000px;
+            width:250px;
+            transition:none;
+            z-index:5;
+            top:150%;
         }
     </style>
 
@@ -47,7 +93,7 @@
                             </button>
                         </div>
                     </nav>
-                    <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-content pb-5" id="nav-tabContent">
                         <div class="tab-pane fade show active pt-5" id="nav-home" role="tabpanel"
                              aria-labelledby="nav-home-tab">
                             <div class="row gy-4">
@@ -59,7 +105,7 @@
                                         <div class="order-3 order-lg-2 ">
                                             <h1 class="text-white text-center mt-5">{{ __('general.sertai_sekarang_4') }}</h1>
                                             <h4 class="text-white text-center mb-3">22 {{ __('general.sertai_sekarang_5') }} - 16 {{ __('general.sertai_sekarang_6') }} 2021</h4>
-                                            <p class="text-white text-center">{{ __('general.jom-kira-doit') }}</p>
+                                            <p class="text-white text-center">{!! __('general.jom-kira-doit') !!}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +121,7 @@
                                                         <input
                                                             class="rm-imputs step1-fields only-decimal-integer-number"
                                                             type="text"
-                                                            value="{{$item->correct_value}}"
+                                                             value="{{$item->status == 1 ? $item->correct_value : old('step_1_'.$item->id)}}"
                                                             name="step_1_{{$item->id}}" />
                                                     </div>
                                                 </div>
@@ -112,7 +158,7 @@
                                         <div class="order-3 order-lg-2 ">
                                             <h1 class="text-white text-center mt-5">Rakan Korporat</h1>
                                             <h4 class="text-white text-center mb-3">22 Okt - 23 Nov 2021</h4>
-                                            <p class="text-white text-center">{{ __('general.jom-kira-doit2') }}</p>
+                                            <p class="text-white text-center">{!! __('general.jom-kira-doit2') !!}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -128,13 +174,24 @@
                                                     </p>
                                                 </div>
                                                 <div class="col-6">
-                                                    <div class="mb-3 d-flex">
+                                                    <div class="mb-3 d-flex align-items-center">
                                                         <label for="">RM</label>
                                                         <input
                                                             class="rm-imputs step2-fields only-decimal-integer-number"
                                                             type="text"
-                                                            value="{{$item->correct_value}}"
+                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_2_'.$item->id)}}"
                                                             name="step_2_{{$item->id}}" />
+                                                        <div class="text-white ms-3 d-flex align-items-center social_iconss">
+                                                            <i class="fas fa-globe"></i>
+                                                            <i class="fab fa-instagram"></i>
+                                                            <i class="fab fa-facebook-square"></i>
+                                                            <div class="info_iconn_2">
+                                                                <span class="bi bi-info"></span>
+                                                                <div class="about-us-box">
+                                                                    Terdapat 3 Duit Syiling MSD tersembunyi di laman sosial berikut. Jom... cari dan kira semuanya dan simpan jumlah di sini!
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
 
                                                 </div>
@@ -170,7 +227,7 @@
                                         <div class="order-3 order-lg-2 ">
                                             <h1 class="text-white text-center mt-5">MSD Live</h1>
                                             <h4 class="text-white text-center mb-3">17 - 23 November 2021</h4>
-                                            <p class="text-white text-center">{{ __('general.jom-kira-doit3') }}</p>
+                                            <p class="text-white text-center">{!! __('general.jom-kira-doit3') !!}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +292,7 @@
                                                                         <input
                                                                             class="rm-imputs step3-fields step1-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->correct_value}}"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}" />
                                                                     </div>
 
@@ -277,7 +334,7 @@
                                                                         <input
                                                                             class="rm-imputs step3-fields step2-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->correct_value}}"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}" />
                                                                     </div>
 
@@ -318,7 +375,7 @@
                                                                         <input
                                                                             class="rm-imputs step3-fields step3-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->correct_value}}"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
 
@@ -360,7 +417,7 @@
                                                                         <input
                                                                             class="rm-imputs step3-fields step4-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->correct_value}}"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
 
@@ -401,7 +458,7 @@
                                                                         <input
                                                                             class="rm-imputs step3-fields step5-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->correct_value}}"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}" />
                                                                     </div>
 
@@ -442,7 +499,7 @@
                                                                         <input
                                                                             class="rm-imputs step3-fields step6-date-fields only-decimal-integer-number"
                                                                             type="text"
-                                                                            value="{{$item->correct_value}}"
+                                                                            value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
                                                                             name="step_3_{{$item->id}}">
                                                                     </div>
 
@@ -481,7 +538,9 @@
                                                                 <div class="col-5">
                                                                     <div class="mb-3 d-flex">
                                                                         <label for="">RM</label>
-                                                                        <input class="rm-imputs step3-fields step7-date-fields only-decimal-integer-number" type="text" name="step_3_{{$item->id}}">
+                                                                        <input 
+                                                                        value="{{$item->status == 1 ? $item->correct_value : old('step_3_'.$item->id)}}"
+                                                                        class="rm-imputs step3-fields step7-date-fields only-decimal-integer-number" type="text" name="step_3_{{$item->id}}">
                                                                     </div>
                                                                 </div>
                                                             @endif

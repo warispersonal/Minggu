@@ -19,6 +19,9 @@
                     <div class="col-lg-5 pt-4 pe-lg-5">
                         <img src="{{asset('assets/img/jom-kira.png')}}" class="img-fluid" alt="">
                         <p class="text-white mt-4 text-center">{!! __('general.jom_kira') !!}</p>
+                        <div class="text-center">
+                            <a href="https://msd2021demo.com/terms/termadansyarat.pdf" class="text-white">Jom Kira</a>
+                        </div>
                         <div class="mt-4 d-md-flex d-none justify-content-between align-items-center flex-wrap">
                             <a href="{{route('pertandingan')}}" class="tonton-btn mt-3 mx-auto"> <i class="bi bi-chevron-left"></i>
                                 {{ __('general.back_button_age') }}

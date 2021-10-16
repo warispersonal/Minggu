@@ -1358,6 +1358,9 @@
 .family-img{
     transform:translateY(-50%);
 }
+.coins img{
+    width:100px;
+}
 
 @media(max-width:1399px){
 

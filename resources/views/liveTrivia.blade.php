@@ -23,8 +23,9 @@
                             {{ __('general.livetrivia_title') }}
                         </h3>
                         <p class=" mt-3">
-                            {{ __('general.livetrivia_description') }}
+                            {!! __('general.livetrivia_description') !!}
                         </p>
+                        <a href="https://msd2021demo.com/terms/termadansyarat.pdf" class="text-white">{{ __('general.pdf_livetrivia') }}</a> <br>
                         <a href="{{route('pertandingan')}}" class="tonton-btn d-lg-inline-block d-none"> <i class="bi bi-chevron-left"></i>
                             {{ __('general.back_button_age') }}
                         </a>

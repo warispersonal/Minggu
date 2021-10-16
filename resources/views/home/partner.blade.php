@@ -232,6 +232,11 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="text-end mt-5 coins py-4">
+                                        @if($partner->coin != "" && $partner->coin != null)
+                                            <img src="{{$partner->coin_image ?? ""}}">
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -281,11 +286,7 @@
                 </div>
             </div>
         </div>
-          <div class="text-end">
-                                    @if($partner->coin != "" && $partner->coin != null)
-                                    <img src="{{$partner->coin_image ?? ""}}">
-                                    @endif
-                                </div>
+            
     </main>
 @endsection
 
