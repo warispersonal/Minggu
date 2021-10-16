@@ -290,4 +290,17 @@ class HomePagePartnerController extends Controller
         $slider = PartnerSlider::find($id);
         return view('superadmin.homepage.slider.edit',compact('slider'));
     }
+    
+    public function partner_promotion_reorder(Request $request)
+    {
+        
+        foreach($request->row as $row)
+        {
+            PartnerPromotion::find($row['id'])->update([
+                'order_no' => $row['order_no']
+            ]);
+        }
+
+        return response()->noContent();
+    }
 }

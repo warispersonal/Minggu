@@ -118,6 +118,8 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::get('/slider-approve/{id}/{status}', [HomePagePartnerController::class, 'sliderApprove'])->name('stars.homepage.sliderApprove');
         Route::get('/promotion-approve/{id}/{status}', [HomePagePartnerController::class, 'promotionApprove'])->name('stars.homepage.promotionApprove');
         Route::get('/link-approve/{id}/{status}', [HomePagePartnerController::class, 'linkApprove'])->name('stars.homepage.linkApprove');
+        
+        Route::post('/partner-promotion-reorder', [HomePagePartnerController::class, 'partner_promotion_reorder'])->name('star.homepage.promotion.reorder');
 
     });
 

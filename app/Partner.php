@@ -14,12 +14,12 @@ class Partner extends Model
 
     public function sliders()
     {
-        return $this->hasMany(PartnerSlider::class);
+        return $this->hasMany(PartnerSlider::class)->orderBy('order_no');
     }
 
     public function promotions()
     {
-        return $this->hasMany(PartnerPromotion::class);
+        return $this->hasMany(PartnerPromotion::class)->orderBy('order_no');
     }
 
     public function programs()
