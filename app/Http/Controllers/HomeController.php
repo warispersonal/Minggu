@@ -63,6 +63,7 @@ class HomeController extends Controller
     {
         $partners = Partner::where('is_promotion',1)->whereNull('parent_id')->whereNull('status')->orderBy("order")->get();
         $sliders = PartnerPromotion::whereNull('parent_id')->whereNull('status')->get();
+     
         return view("home.promotion", compact('partners', 'sliders'));
     }
 

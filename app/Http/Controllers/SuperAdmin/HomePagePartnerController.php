@@ -303,4 +303,18 @@ class HomePagePartnerController extends Controller
 
         return response()->noContent();
     }
+    
+    
+    public function partner_slider_reorder(Request $request)
+    {
+        
+        foreach($request->row as $row)
+        {
+            PartnerSlider::find($row['id'])->update([
+                'order_no' => $row['order_no']
+            ]);
+        }
+
+        return response()->noContent();
+    }
 }
