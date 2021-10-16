@@ -28,7 +28,7 @@ class PartnerController extends Controller
         if ($existingPartner->is_promotion != 1) {
             return redirect()->back();
         }
-        $promotions = PartnerPromotion::where('partner_id', $existingPartner->id)->get();
+        $promotions = PartnerPromotion::where('partner_id', $existingPartner->id)->orderBy('order_no')->get();
         return view('partner.single.promotion', compact('promotions'));
     }
 
@@ -64,7 +64,7 @@ class PartnerController extends Controller
     {
         $userId = Auth::guard('partner')->id();
         $existingPartner = Partner::where('user_id', $userId)->get()->first();
-        $sliders = PartnerSlider::where('partner_id', $existingPartner->id)->get();
+        $sliders = PartnerSlider::where('partner_id', $existingPartner->id)->orderBy('order_no')->get();
         return view('partner.single.slider', compact('sliders'));
     }
 
