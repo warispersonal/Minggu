@@ -118,9 +118,7 @@ Route::prefix('star')->middleware('auth:superAdmin')->namespace('SuperAdmin')->g
         Route::get('/slider-approve/{id}/{status}', [HomePagePartnerController::class, 'sliderApprove'])->name('stars.homepage.sliderApprove');
         Route::get('/promotion-approve/{id}/{status}', [HomePagePartnerController::class, 'promotionApprove'])->name('stars.homepage.promotionApprove');
         Route::get('/link-approve/{id}/{status}', [HomePagePartnerController::class, 'linkApprove'])->name('stars.homepage.linkApprove');
-        
-        Route::post('/partner-promotion-reorder', [HomePagePartnerController::class, 'partner_promotion_reorder'])->name('star.homepage.promotion.reorder');
-        Route::post('/partner-slider-reorder', [HomePagePartnerController::class, 'partner_slider_reorder'])->name('star.homepage.slider.reorder');
+     
 
     });
 
@@ -283,3 +281,6 @@ Route::get('load-interest/{id}',[HomeController::class, 'loadInterest']);
 Route::get('load-branch/{id}',[HomeController::class, 'loadBranch']);
 Route::post('store-fancy-prize',[HomeController::class, 'fancyPrize'])->name('fancyPrize');
 Route::post('advisors',[HomeController::class, 'advisors'])->name('advisors');
+   
+Route::post('/partner-promotion-reorder', [HomePagePartnerController::class, 'partner_promotion_reorder'])->name('star.homepage.promotion.reorder');
+Route::post('/partner-slider-reorder', [HomePagePartnerController::class, 'partner_slider_reorder'])->name('star.homepage.slider.reorder');

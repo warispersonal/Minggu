@@ -2,6 +2,9 @@
 
 @push('style')
     <link rel="stylesheet" href="{{ asset('argon') }}/vendor/data-table/datatables.min.css">
+     <style>
+        .move {cursor: move;}
+    </style>
 @endpush
 
 @section('content')
@@ -44,17 +47,16 @@
                 <table class="table align-items-center table-flush w-100" id="adminTable">
                     <thead class="thead-light">
                     <tr>
-                        <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Image</th>
                         <th scope="col" class="sort" data-sort="budget">Slider Link</th>
                         <th scope="col" class="sort" data-sort="budget">Status</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody  id="tableslider">
                     @foreach($sliders as $slider)
-                        <tr class="odd">
-                            <td>{{$loop->index +1 }}</td>
+                                 <tr class="odd slider_row move"   data-id="{{ $slider->id }}">
+                          
                             <td><img src="{{$slider->slider_image}}" class="main-details-image"/>
                             </td>
                             <td>{{ \Illuminate\Support\Str::limit($slider->slider_link, 40, $end='...') }}</td>
@@ -132,5 +134,45 @@
 
 @push('js')
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+   
+ <script type="text/javascript">
+      $(function () {
+
+        $( "#tableslider" ).sortable({
+          items: "tr",
+          cursor: 'move',
+          opacity: 0.6,
+          update: function() {
+              sendOrderToServer1();
+          }
+        });
+
+        function sendOrderToServer1() {
+          var row = [];
+          var token = $('meta[name="csrf-token"]').attr('content');
+          $('tr.slider_row').each(function(index,element) {
+            row.push({
+              id: $(this).attr('data-id'),
+              order_no: index+1
+            });
+          });
+
+          $.ajax({
+            type: "POST", 
+            dataType: "json", 
+            url: "{{ route('star.homepage.slider.reorder') }}",
+                data: {
+              row: row,
+              _token: token
+            },
+            success: function(response) {
+               
+            }
+          });
+        }
+      });
+    </script>
+    
 @endpush
 

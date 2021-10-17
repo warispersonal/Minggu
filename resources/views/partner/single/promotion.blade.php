@@ -2,6 +2,9 @@
 
 @push('style')
     <link rel="stylesheet" href="{{ asset('argon') }}/vendor/data-table/datatables.min.css">
+     <style>
+        .move {cursor: move;}
+    </style>
 @endpush
 
 @section('content')
@@ -44,17 +47,16 @@
                 <table class="table align-items-center table-flush w-100" id="adminTable">
                     <thead class="thead-light">
                     <tr>
-                        <th scope="col" class="sort" data-sort="name">#</th>
                         <th scope="col" class="sort" data-sort="budget">Promotion Image</th>
                         <th scope="col" class="sort" data-sort="budget">URL</th>
                         <th scope="col" class="sort" data-sort="budget">Status</th>
                         <th scope="col">Actions</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody  id="tablepromotion">
                     @foreach($promotions as $promotion)
-                        <tr class="odd">
-                            <td>{{$loop->index +1 }}</td>
+                      <tr class="odd promotion_row move"  data-id="{{ $promotion->id }}">
+                            
                             <td><img src="{{$promotion->promotion_logo}}" class="main-details-image"/>
                             <td>{{ \Illuminate\Support\Str::limit($promotion->url, 40, $end='...') }}</td>
                             <td>
@@ -130,5 +132,44 @@
 
 @push('js')
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    
+ <script type="text/javascript">
+      $(function () {
+
+        $( "#tablepromotion" ).sortable({
+          items: "tr",
+          cursor: 'move',
+          opacity: 0.6,
+          update: function() {
+              sendOrderToServer();
+          }
+        });
+
+        function sendOrderToServer() {
+          var row = [];
+          var token = $('meta[name="csrf-token"]').attr('content');
+          $('tr.promotion_row').each(function(index,element) {
+            row.push({
+              id: $(this).attr('data-id'),
+              order_no: index+1
+            });
+          });
+
+          $.ajax({
+            type: "POST", 
+            dataType: "json", 
+            url: "{{ route('star.homepage.promotion.reorder') }}",
+                data: {
+              row: row,
+              _token: token
+            },
+            success: function(response) {
+               
+            }
+          });
+        }
+      });
+    </script>
 @endpush
 

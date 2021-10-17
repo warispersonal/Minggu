@@ -55,7 +55,7 @@
                     </thead>
                     <tbody id="tableslider">
                     @foreach($partner->sliders as $slider)
-                        <tr class="odd slider_row"   data-id="{{ $slider->id }}">
+                        <tr class="odd slider_row move"   data-id="{{ $slider->id }}">
                             <td><img src="{{$slider->slider_image}}" class="promosi-image-details main-details-image"/>
                             </td>
                             <td>{{ \Illuminate\Support\Str::limit($slider->slider_link, 40, $end='...') }}</td>

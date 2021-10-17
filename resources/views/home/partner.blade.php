@@ -7,11 +7,14 @@
         }
 
         .mode-fore-color {
-            color: {{$partner->mode == 1 ? "#000000" : "#FFFFFF"}}            !important;
+            color: {{$partner->mode == 1 ? "#000" : "#fff"}}            !important;
+        }
+        .mode-fore-color-2 {
+            color: {{$partner->mode == 1 ? "#fff" : "#000"}}            !important;
         }
 
         .mode-bg-color {
-            background-color: {{$partner->mode == 1 ? "#ffffff" : "#4b4b4b"}}         !important;
+            background-color: {{$partner->mode == 1 ? "#383838 " : "#ffffff"}}         !important;
         }
 
         .mode-buttons-color {
@@ -249,15 +252,15 @@
                                             <div class="ratio ratio-16x9">
                                                 {!! $program->iframe ?? "" !!}
                                             </div>
-                                            <h3 class="my-3 mode-fore-color">
+                                            <h3 class="my-3 mode-fore-color-2">
                                                 @if(Config::get('app.locale') == 'en' )
                                                 {{$program->name}}
                                                 @else
                                                     {{$program->name_bm}}
                                                 @endif
                                             </h3>
-                                            <span><strong class="mode-fore-color">{{date('d-m-Y',strtotime($program->date))}}</strong></span>
-                                            <p class="mode-fore-color">
+                                            <span><strong class="mode-fore-color-2">{{date('d-m-Y',strtotime($program->date))}}</strong></span>
+                                            <p class="mode-fore-color-2">
                                                 @if(Config::get('app.locale') == 'en' )
                                                     {{$program->description}}
                                                 @else
@@ -265,11 +268,11 @@
                                                 @endif
                                             </p>
                                             <!--<p class="mode-fore-color">{{$program->main_program->title ?? ""}}-->
-                                            <p class="mode-fore-color">{{ __('general.brought_to_you') }} &nbsp&nbsp
+                                            <p class="mode-fore-color-2">{{ __('general.brought_to_you') }} &nbsp&nbsp
                                                 @if($partner->id == 5)
-                                                    <img class="offer-by w-25 pe-5" src="{{asset('assets/img/header-asnb-white.png')}}" alt=""> 
+                                                    <img class="offer-by w-25 pe-5" src="{{asset('assets/img/header-asnb.png')}}" alt=""> 
                                                 @elseif($partner->id == 6)
-                                                    <img class="offer-by w-25 pe-5" src="{{asset('assets/img/header-pnb-white.png')}}" alt="">
+                                                    <img class="offer-by w-25 pe-5" src="{{asset('assets/img/header-pnb.png')}}" alt="">
                                                 @else
                                                     <img class="offer-by w-25" src="{{$partner->store_logo}}" alt="">
                                                 @endif
