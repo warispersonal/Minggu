@@ -48,6 +48,9 @@ Route::prefix('/')->group(function () {
     Route::get('/live-trivia', [HomeController::class, 'liveTrivia'])->name('liveTrivia');
     Route::get('/cabutan-bertuah', [HomeController::class, 'cabutanBertuah'])->name('cabutanBertuah');
     Route::get('/draw-118', [HomeController::class, 'draw'])->name('draw');
+    Route::get('/kira_duit_pdf', [HomeController::class, 'kira_duit_pdf'])->name('kira_duit_pdf');
+    Route::get('/live_trivia_pdf', [HomeController::class, 'live_trivia_pdf'])->name('live_trivia_pdf');
+    Route::get('/lucky_draw_pdf', [HomeController::class, 'lucky_draw_pdf'])->name('lucky_draw_pdf');
 
 });
 

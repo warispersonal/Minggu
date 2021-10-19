@@ -74,8 +74,8 @@
     <h1>Phone Number: <span class="name">{{$serviceAdvisor->phone_number}}</span></h1>
     <h1>Bank: <span class="name">{{$serviceAdvisor->bank}}</span></h1>
     <h1>Topic Interest: <span class="name">{{$serviceAdvisor->topic_interest}}</span></h1>
-    <h1>Date: <span class="name">{{$serviceAdvisor->date}}</span></h1>
-    <h1>Time: <span class="name">{{$serviceAdvisor->time}}</span></h1>
+    <h1>Date: <span class="name">{{date('Y-m-d',strtotime($serviceAdvisor->date))}}</span></h1>
+    <h1>Time: <span class="name">{{date('H:i:s',strtotime($serviceAdvisor->time))}}</span></h1>
     <h1>Postcode: <span class="name">{{$serviceAdvisor->post_code}}</span></h1>
     <p>Ini pesana daripada Minggu Saham Digital. <br> Tahniah! Anda telah berjaya mendaftar untuk Minggu Saham Digital 2021.<br></p>
     <p>Sila lawati laman web dan media sosial kami untuk mengetahui lebih lanjut tentang peraduan-peraduan dan program-program langsung kami tahun ini.</p>

@@ -49,10 +49,11 @@ return [
 
     //pertandingan
     'pertandingan' => 'Prizes Worth More Than <div class="oyen"><b>RM500,000</b></div>To Be Won',
-    'jom_kira' => 'Join us for a variety of fun and rewarding contests through our website and social media platforms when the Minggu Saham Digital goes <i>live</i> from 17 to 23 November 2021. Grab your friends and family to participate now because winning is only half of the fun!',
+    'jom_kira' => 'Join us for a variety of fun and rewarding contests through our website and social media platforms when the Minggu Saham Digital goes <i>live</i> from 22 October to 23 November 2021. Grab your friends and family to participate now because winning is only half of the fun!',
     'join_now' => 'Join Now!',
-    'pertandingan_discription' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eg dolor sit a. Aenean massa. Com socis masa, natoque penatibus et mang dis parturient montes, nascetur mus ridiculus mus. Lorem ipsum dolor sit amet, consectetuer dolor sit adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean a commodo ligula eget dolor sit a.',
-    
+    'pertandingan_discription' => 'Join us this year for a variety of interactive contests as part of Mingggu Saham Digital 2021. Register, Watch and Win! That is all it takes! Click into each contests for more details.',
+    'pertandingan_terms' => 'Terms & Conditions',
+    'pertandingan_terms_link1' => 'https://msd2021demo.com/terms/termadansyarat.pdf',
 
     'car1_main_title' => 'Jom... Kira Duit',
     'car1_text' => 'How to Participate',
@@ -71,9 +72,30 @@ return [
     'ringgit_emas' => 'Ringgit Emas',
 
     'evouchers' => 'e-Voucher worth',
-    'jom-kira-doit' => 'Watch our social media pages for hidden coins. Simply follow our instagram and facebook and watch for our daily posts from 22 Oct to 16 Nov to find the hidden coins. Every correct coin value is one entry to our grand lucky draw.',
-    'jom-kira-doit2' => 'Head over to our corporate partner pages and find the hidden coins. Every correct coin value is one entry to our grand lucky draw.',
-    'jom-kira-doit3' => 'Every show has a hidden coin! Watch our 7 days of MSD live and look carefully as we will be dropping hidden coin values for every show. Every correct coin value is one entry to our grand lucky draw.',
+    'jom-kira-doit' => '<b>How to Participate</b> <br><br>
+			1. Follow Minggu Saham Digital on Instagram, Facebook & Tik Tok.<br>
+            2. Stay tuned for our daily social media posts from 22 Oct 2021 to 16 Nov 2021. One post from each day will display the hidden #SyilingMSD value.<br>
+            3. Enter the correct value for the day and click "Submit" to save it.<br>
+            4. You can update your values at any time before 3pm on 23 Nov 2021.<br>
+            5. Each <b>CORRECT</b> value submitted is an automatic submission for the Lucky Draw. <br>
+            6. The Lucky Draw will be livestreamed at 8.30pm on 23 Nov 2021 on our Facebook page.',
+            
+    'jom-kira-doit2' => '<b>How to Participate</b> <br><br>
+			1. Each of our Corporate Partners have a #SyilingMSD hidden on their respective Corporate Partner pages in this website and on their own social media platforms.<br>
+            2. Hover your cursor or click the ‘information icon’ for clues as to where #SyilingMSD might be hidden.<br>
+            3. Click the displayed social media icon to view our Corporate Partners page and find the hidden #SyilingMSD.<br>
+            4. Calculate and enter the <b>TOTAL</b> value of all #SyilingMSD for each Corporate Partner and click "Submit" to save it.<br>
+            5. You can update your values at any time before 3pm on 23 Nov 2021.<br>
+            6. Each correct value submitted is an automatic submission for the Lucky Draw.<br>
+            7. The Lucky Draw will be livestreamed at 8.30pm on 23 Nov 2021 on our Facebook page.',
+    'jom-kira-doit3' => '<b>How to Participate</b> <br><br>
+			1. Watch Minggu Saham Digital <i>Live</i> on our website here, on Facebook, or on Youtube from 17 Nov 2021 to 23 Nov 2021. <br>
+            2. Each live program on each day will display one #SyilingMSD. <br>
+            3. Replays of each show will be uploaded the following day in case you miss the program. <br>
+            4. Enter the correct #SyilingMSD value for each program on each day and click "Submit" to save it. <br>
+            5. You can update your values at any time before 3pm on 23 Nov 2021. <br>
+            6. Each correct value submitted is an automatic submission for the Lucky Draw. <br>
+            7. The Lucky Draw will be livestreamed at 8.30pm on 23 Nov 2021 on our Facebook page.',
 
     'khidmat0' => '1-on-1 Advisors',
     'khidmat1' => 'What is 1-on-1 Advisors?',
@@ -149,7 +171,7 @@ return [
 
     'livetrivia_mainheading' => 'Live Trivia',
     'livetrivia_title' => 'How to Participate',
-    'livetrivia_description' => 'Our daily Live Trivia sessions are back this year from 17 to 23 November 2021 during the livestream of Minggu Saham Digital (MSD) week on MSD Facebook page. All you have to do is stay tuned, get your keyboard ready, put your thinking cap on and become one of the winners to grab yourself some Lazada e-Vouchers worth up to RM 1,100 per session! Head over to the "Programmes & Schedules" page in this site to find out the dates and times of the Live Trivia sessions, set your reminders and get ready to win!',
+    'livetrivia_description' => 'Our daily Live Trivia sessions are back this year from 17 to 23 November 2021 during the livestream of Minggu Saham Digital (MSD) week on MSD Facebook page. All you have to do is stay tuned, get your keyboard ready, put your thinking cap on and become one of the winners to grab yourself some Lazada e-Vouchers worth up to RM 1,100 per session! Head over to the "Programmes" page in this site to find out the dates and times of the Live Trivia sessions, set your reminders and get ready to win!',
     'livetrivia_worth' => 'e-Vouchers worth',
     'livetrivia_text' => 'Return to Contests',
     'livetrivia_prize' => 'Prizes To Win',
@@ -188,7 +210,7 @@ return [
     'sertai_sekarang_5' => 'Oct',
     'sertai_sekarang_6' => 'Nov',
     'sertai_sekarang_7' => 'Total Saving',
-    'sertai_sekarang_8' => 'Hantar',
+    'sertai_sekarang_8' => 'Submit',
 
 
     'login_success_message' => 'You have successfully logged in!',
@@ -247,4 +269,8 @@ return [
     "khidmat_date_required" => 'Date is required',
     "khidmat_time_interest_required" => 'Time is required',
     "post_code_required" => 'Postcode perlu dipilih',
+    
+    'kira_duit_pdf' => 'https://msd2021demo.com/terms/MSD2021TERMASYARAT-JOMKIRADUIT-EN.pdf',
+    'live_trivia_pdf' => 'https://msd2021demo.com/terms/MSD2021TERMA&SYARAT-LIVETRIVIA-EN.pdf',
+    'lucky_draw_pdf' => 'https://msd2021demo.com/terms/MSD2021TERMA&SYARATPERADUAN-CABUTANBERTUAH-EN.pdf',
 ];

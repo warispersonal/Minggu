@@ -22,7 +22,7 @@
         }
         .question p{
             padding-right: 15px;
-            color:#F5841F;
+            color:#f29f05;
             margin-bottom:5px;
         }
         .fa-chevron-right{

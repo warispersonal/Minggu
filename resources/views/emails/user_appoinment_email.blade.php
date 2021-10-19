@@ -68,18 +68,17 @@
 
 <body>
 <div class="mail-contanier">
-    <img src="{{asset('email/header.jpg')}}" class="img-fluid" alt="">
+    <img src="{{asset('email/khidmatnasihatheader.jpg')}}" class="img-fluid" alt="">
+    <p>Terima kasih kerana mendaftar! Temujanji Khidmat Nasihat 1-1 anda berjaya ditetapkan dengan maklumat berikut:</p>
     <h1>Name: <span class="name">{{$serviceAdvisor->name}}</span></h1>
     <h1>Email: <span class="name">{{$serviceAdvisor->email}}</span></h1>
     <h1>Phone Number: <span class="name">{{$serviceAdvisor->phone_number}}</span></h1>
     <h1>Bank: <span class="name">{{$serviceAdvisor->bank}}</span></h1>
-    <h1>Topic Interest: <span class="name">{{$serviceAdvisor->topic_interest}}</span></h1>
-    <h1>Date: <span class="name">{{$serviceAdvisor->date}}</span></h1>
-    <h1>Time: <span class="name">{{$serviceAdvisor->time}}</span></h1>
+    <h1>Topic Interest: <span class="name"> {{$serviceAdvisor->topic_interest}}</span></h1>
+    <h1>Date: <span class="name">{{date('Y-m-d',strtotime($serviceAdvisor->date))}}</span></h1>
+    <h1>Time: <span class="name">{{date('H:i:s',strtotime($serviceAdvisor->time))}}</span></h1>
     <h1>Postcode: <span class="name">{{$serviceAdvisor->post_code}}</span></h1>
-    <p>Ini pesana daripada Minggu Saham Digital. <br> Tahniah! Anda telah berjaya mendaftar untuk Minggu Saham Digital 2021.<br></p>
-    <p>Sila lawati laman web dan media sosial kami untuk mengetahui lebih lanjut tentang peraduan-peraduan dan program-program langsung kami tahun ini.</p>
-    <p>Jumpa anda di sana!</p>
+    <p>Ejen bank akan menghubungi anda melalui nombor telefon yang diberikan untuk temujanji anda.</p>
     <div class="icons" style="width: max-content; margin: auto;">
         <a href="https://www.facebook.com/minggusahamdigital"><img src="{{asset('socialicon/fb.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>
         <a href="https://www.instagram.com/minggusahamdigital/"><img src="{{asset('socialicon/insta.png')}}" style="object-fit: contain; width: 100%; padding: 15px"></a>

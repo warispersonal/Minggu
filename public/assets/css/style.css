@@ -421,7 +421,7 @@
 }
 .oyen{
     color: #F5841F !important;
-    font-size: 5.3rem;
+    font-size: 5rem;
     font-weight:bold;
 }
 .car-details{
@@ -1420,11 +1420,29 @@
     }
     .owl-nav .owl-prev{
         top: 0px;
-        left: 10px;
+        left: 4px;
+    }
+    .side-tabs .owl-theme  .owl-nav{
+        margin:0px;
+    }
+    .side-tabs .owl-theme .owl-nav span{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    
+    .side-tabs .nav-pills .nav-link.active{
+        color:white;
+        transform: scale(1.1) !important;
+        font-family: "manropeBold";
     }
     .owl-nav .owl-next{
         top: 0px;
-        right: 10px;
+        right: 4px;
+    }
+    .owl-nav .owl-next span{
+        margin-right:0px;
+        margin-left:auto;
+            
     }
     .nav-pills .nav-link{
         width: max-content;
@@ -1445,18 +1463,10 @@
         color: #ffffffbf;
     }
     .side-tabs .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-        color: white;
-        background-color: transparent;
-        border: none;
-        transform: scale(1.2);
-        transform-origin: bottom;
-    }
-    .side-tabs .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
         color: white !important;
         background-color: transparent !important;
         border: none !important;
-        transform: scale(1.2);
-        transform-origin: bottom;
+        transform-origin: center;
     }
     .tabs h1{
         font-size: 1.3rem;
@@ -1895,7 +1905,7 @@
         font-size: 10px;
     }
     .side-tabs .nav-pills .nav-link{
-        font-size: 10px !important;
+        font-size: 9px !important;
     }
     .owl-nav span{
         line-height: 30px;

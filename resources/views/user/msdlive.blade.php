@@ -20,13 +20,13 @@
                                 <img src="{{asset('assets/img/facbook.png')}}" class="img-fluid " alt=""> &nbsp;
                                 <a target="_blank" href="https://www.facebook.com/minggusahamdigital"> @MingguSahamDigital </a>
                             </p>
-                            <p>
+                            <!--<p>
                                 <img src="{{asset('assets/img/insta.png')}}" alt=""> &nbsp;
                                 <a target="_blank" href="https://www.instagram.com/minggusahamdigital/"> @MingguSahamDigital </a>
-                            </p>
+                            </p>-->
                             <p>
                                 <img src="{{asset('assets/img/youtube.png')}}" alt=""> &nbsp;
-                                <a target="_blank" href="https://www.youtube.com/channel/UCoNCjruylHYpwBYkIvRwClA"> Minggu Saham Digital </a>
+                                <a target="_blank" href="https://www.youtube.com/MingguSahamDigital"> Minggu Saham Digital </a>
                             </p>
                         </div>
                     </div>
@@ -47,13 +47,13 @@
                                 &nbsp;
                                 <a href="https://www.facebook.com/minggusahamdigital"> @MingguSahamDigital </a>
                             </p>
-                            <p>
+                            <!--<p>
                                 <img src="{{asset('assets/img/insta.png')}}" alt=""> Instagram &nbsp;
                                 <a href="https://www.instagram.com/minggusahamdigital/"> @MingguSahamDigital </a>
-                            </p>
+                            </p>-->
                             <p>
                                 <img src="{{asset('assets/img/youtube.png')}}" alt=""> Youtube &nbsp;
-                                <a href="https://www.youtube.com/channel/UCoNCjruylHYpwBYkIvRwClA"> Minggu Saham Digital </a>
+                                <a href="https://www.youtube.com/MingguSahamDigital"> Minggu Saham Digital </a>
                             </p>
                         </div>
                     </div>

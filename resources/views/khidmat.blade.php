@@ -386,7 +386,11 @@
                     if (len > 0) {
                         for (var i = 0; i < len; i++) {
                             var id = response.data[i].id;
-                            var name = response.data[i].name;
+                            <?php if(Config::get('app.locale') == 'en'){?>
+                                var name = response.data[i].name;
+                            <?php } if(Config::get('app.locale') == 'bm') {?>
+                                var name = response.data[i].name_bm;
+                            <?php } ?>
                             var option = "<option value='" + id + "'>" + name + "</option>";
                             $("#exampleFormControlSelect2").append(option);
                         }
