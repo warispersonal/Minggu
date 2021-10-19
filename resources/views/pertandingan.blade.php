@@ -37,7 +37,7 @@
                     </div>
                     <div class="col-lg-5  order-2 order-lg-4 ">
                         <div class="side-text">
-                            <div class="coin-box p-md-5 p-2">
+                            <div class="coin-box p-md-4 p-2">
                                 <h2>{!! __('general.pertandingan') !!}</h2>
                             </div>
                             <p class="text-center text-white">{{ __('general.pertandingan_discription') }}</p>

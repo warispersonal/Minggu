@@ -22,7 +22,8 @@
                             {{ __('general.cabutanbertuah_description') }}
                         </p>
                         <div class="text-center">
-                            <a href="https://msd2021demo.com/terms/termadansyarat.pdf" class="text-white">{{ __('general.pdf_cabutanbertuah') }}</a>
+                            <a href="https://msd2021demo.com/terms/termadansyarat.pdf" target=_blank class="text-white">{!! __('general.pertandingan_terms') !!}</a>
+                            
                         </div>
                         <a href="{{route('pertandingan')}}" class="tonton-btn d-lg-inline-block d-none"> <i class="bi bi-chevron-left"></i>
                             {{ __('general.back_button_age') }}

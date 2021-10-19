@@ -168,7 +168,7 @@
 
         </div>
         <div>
-            <small>
+            <small class="lang-btns">
                 <a class="{{Config::get('app.locale') == 'bm' ? "active" : ""}}"
                    href="{{ route('localization' , 'bm') }}">BM</a> |
                 <a class="{{Config::get('app.locale') == 'en' ? "active" : ""}}"

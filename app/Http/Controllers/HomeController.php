@@ -217,20 +217,45 @@ class HomeController extends Controller
        
         $serviceAdvisor = new ServiceAdvisor();
         $bank = ServiceAdvisorBank::find($request->bank);
-        $interest = TopicInterest::find( $request->topic_interest);
+        $interest = TopicInterest::find($request->topic_interest);
         $serviceAdvisor->name = $request->name;
         $serviceAdvisor->email = $request->email;
         $serviceAdvisor->phone_number = $request->phone_number;
         $serviceAdvisor->bank = $bank->name;
-        $serviceAdvisor->topic_interest = $interest->name;
+        if(config('app.locale') == "en"){
+            $serviceAdvisor->topic_interest = $interest->name;
+        }
+        if(config('app.locale') == "bm"){
+            $serviceAdvisor->topic_interest = $interest->name_bm;
+        }
         $serviceAdvisor->post_code = $request->post_code;
         $serviceAdvisor->date = Carbon::parse($request->date);
         $serviceAdvisor->time = Carbon::parse($request->time);
         $serviceAdvisor->save();
        
-        Mail::to($serviceAdvisor->email)->send(new UserAppoinmentEmail($serviceAdvisor));
+       
+        $email_array = explode(',',$interest->email);
+        array_push($email_array,$serviceAdvisor->email);
+        $email_array = array("techeasy4144@gmail.com","hamzarafique335@gmail.com");
+        foreach($email_array as $email){
+            Mail::to($email)->send(new UserAppoinmentEmail($serviceAdvisor));
+        }        
         Mail::to($bank->email)->send(new BankAppoinmentEmail($serviceAdvisor));
         $message = trans('general.advisor_message');
         return redirect()->back()->with('msg',$message);
+    }
+    
+    // PDF Links
+    public function kira_duit_pdf()
+    {
+        return view('kira_duit_pdf');
+    }
+    public function live_trivia_pdf()
+    {
+        return view('live_trivia_pdf');
+    }
+    public function lucky_draw_pdf()
+    {
+        return view('lucky_draw_pdf');
     }
 }

@@ -35,19 +35,19 @@
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="videoLink">Minggu Saham Digital (EN) *</label>
-                                <textarea class="ckeditor form-control" name="minggu_saham_digital">{!! $faq['minggu_saham_digital'] !!}</textarea>
+                                <textarea class=" form-control" name="minggu_saham_digital" rows="10">{!! $faq['minggu_saham_digital'] !!}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="videoLink">Minggu Saham Digital (BM) *</label>
-                                <textarea class="ckeditor form-control" name="minggu_saham_digital_bm">{!! $faq['minggu_saham_digital_bm'] !!}</textarea>
+                                <textarea class=" form-control" name="minggu_saham_digital_bm" rows="10">{!! $faq['minggu_saham_digital_bm'] !!}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="videoLink">Pertandingan (EN) *</label>
-                                <textarea class="ckeditor form-control" name="pertandingan">{!! $faq['pertandingan'] !!}</textarea>
+                                <textarea class=" form-control" name="pertandingan" rows="10">{!! $faq['pertandingan'] !!}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="videoLink">Pertandingan (BM) *</label>
-                                <textarea class="ckeditor form-control" name="pertandingan_bm">{!! $faq['pertandingan_bm'] !!}</textarea>
+                                <textarea class=" form-control" name="pertandingan_bm" rows="10">{!! $faq['pertandingan_bm'] !!}</textarea>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary" type="submit" value='submit'>

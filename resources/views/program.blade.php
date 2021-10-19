@@ -369,17 +369,17 @@
                                             </div>
                                             <div class="col-9">
                                                 <p>
-                                                        <span class="handler"
-                                                              onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
-                                                            {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
-                                                        </span>
-                                                    (<small>
-                                                        <span>{{ __('general.sponsor_name_text') }}</span>
+                                                    <span class="handler"
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
+                                                        {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
+                                                    </span> <br>
+                                                    <small>
+                                                        (<span>{{ __('general.sponsor_name_text') }}</span>
                                                         <a class="text-white"
                                                            href="{{route("may.bank",$item->partner->slug ?? "")}}">
                                                             {{$item->partner->name ?? ""}}
-                                                        </a>
-                                                    </small>)
+                                                        </a>)
+                                                    </small>
                                                 </p>
                                             </div>
                                         @endforeach
@@ -395,9 +395,16 @@
                                             <div class="col-9">
                                                 <p>
                                                     <span class="handler"
-                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                    (<small> <span>{{ __('general.sponsor_name_text') }}</span> <a class="text-white"
-                                                              href="{{route("may.bank",$item->partner->slug ?? "")}}">{{$item->partner->name ?? ""}}</a></small>)
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
+                                                        {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
+                                                    </span> <br>
+                                                    <small>
+                                                        (<span>{{ __('general.sponsor_name_text') }}</span>
+                                                        <a class="text-white"
+                                                           href="{{route("may.bank",$item->partner->slug ?? "")}}">
+                                                            {{$item->partner->name ?? ""}}
+                                                        </a>)
+                                                    </small>
                                                 </p>
                                             </div>
                                         @endforeach
@@ -413,9 +420,16 @@
                                             <div class="col-9">
                                                 <p>
                                                     <span class="handler"
-                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                    (<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
-                                                              href="{{route("may.bank",$item->partner->slug ?? "")}}">{{$item->partner->name ?? ""}}</a></small>)
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
+                                                        {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
+                                                    </span> <br>
+                                                    <small>
+                                                        (<span>{{ __('general.sponsor_name_text') }}</span>
+                                                        <a class="text-white"
+                                                           href="{{route("may.bank",$item->partner->slug ?? "")}}">
+                                                            {{$item->partner->name ?? ""}}
+                                                        </a>)
+                                                    </small>
                                                 </p>
                                             </div>
                                         @endforeach
@@ -429,11 +443,18 @@
                                                 <span class="time">{{$item->time_format}}</span>
                                             </div>
                                             <div class="col-9">
-                                                <p>
+                                               <p>
                                                     <span class="handler"
-                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                    (<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
-                                                              href="{{route("may.bank",$item->partner->slug ?? "")}}">{{$item->partner->name ?? ""}}</a></small>)
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
+                                                        {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
+                                                    </span> <br>
+                                                    <small>
+                                                        (<span>{{ __('general.sponsor_name_text') }}</span>
+                                                        <a class="text-white"
+                                                           href="{{route("may.bank",$item->partner->slug ?? "")}}">
+                                                            {{$item->partner->name ?? ""}}
+                                                        </a>)
+                                                    </small>
                                                 </p>
                                             </div>
                                         @endforeach
@@ -449,9 +470,16 @@
                                             <div class="col-9">
                                                 <p>
                                                     <span class="handler"
-                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                    (<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
-                                                              href="{{route("may.bank",$item->partner->slug??$item->partner->id)}}">{{$item->partner->name ?? ""}}</a></small>)
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
+                                                        {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
+                                                    </span> <br>
+                                                    <small>
+                                                        (<span>{{ __('general.sponsor_name_text') }}</span>
+                                                        <a class="text-white"
+                                                           href="{{route("may.bank",$item->partner->slug ?? "")}}">
+                                                            {{$item->partner->name ?? ""}}
+                                                        </a>)
+                                                    </small>
                                                 </p>
                                             </div>
                                         @endforeach
@@ -467,9 +495,16 @@
                                             <div class="col-9">
                                                 <p>
                                                     <span class="handler"
-                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                   ( <small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
-                                                              href="{{route("may.bank",$item->partner->slug??$item->partner->id)}}">{{$item->partner->name ?? ""}}</a></small>)
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
+                                                        {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
+                                                    </span> <br>
+                                                    <small>
+                                                        (<span>{{ __('general.sponsor_name_text') }}</span>
+                                                        <a class="text-white"
+                                                           href="{{route("may.bank",$item->partner->slug ?? "")}}">
+                                                            {{$item->partner->name ?? ""}}
+                                                        </a>)
+                                                    </small>
                                                 </p>
                                             </div>
                                         @endforeach
@@ -485,9 +520,16 @@
                                             <div class="col-9">
                                                 <p>
                                                     <span class="handler"
-                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">{{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}</span>
-                                                    (<small> <span> {{ __('general.sponsor_name_text') }}</span> <a class="text-white"
-                                                              href="{{route("may.bank",$item->partner->slug??$item->partner->id)}}">{{$item->partner->name ?? ""}}</a></small>)
+                                                          onclick="changeModalViewSecond('{{$item->program_image}}',' {{$item->date_format}}', '{{$item->time_format}}', '{{$item->iframe}}', '{{$item->name}}', '{{$item->name_bm}}', '{{$item->description}}', '{{$item->description_bm}}', '{{$item->partner->slug??""}}')">
+                                                        {{ Config::get('app.locale') == 'en' ? $item->name : $item->name_bm }}
+                                                    </span> <br>
+                                                    <small>
+                                                        (<span>{{ __('general.sponsor_name_text') }}</span>
+                                                        <a class="text-white"
+                                                           href="{{route("may.bank",$item->partner->slug ?? "")}}">
+                                                            {{$item->partner->name ?? ""}}
+                                                        </a>)
+                                                    </small>
                                                 </p>
                                             </div>
                                         @endforeach

@@ -38,10 +38,11 @@ return [
     //pertandingan
     'pertandingan' => 'Hadiah-hadiah Bernilai Lebih Daripada <div class="oyen"><b>RM500,000</b></div> Untuk Dimenangi',
     'jom_kira' => 'Adakah anda bijak kewangan? Peraduan besar Minggu Saham Digital tahun ini menguji fokus dan kemahiran matematik anda sambil belajar dan menikmati program-program yang menarik!<br>
-			Dari 22 Okt - 23 Nov, kami dan Rakan-rakan Korporat kami akan memaparkan beberapa #SyilingMSD di laman web dan media sosial kami. Jom... cari dan kira semuanya untuk menang!',
+			Dari 22 Oktober - 23 November, kami dan Rakan-rakan Korporat kami akan memaparkan beberapa #SyilingMSD di laman web dan media sosial kami. Jom... cari dan kira semuanya untuk menang!',
     'join_now' => 'Sertai Sekarang!',
-    'pertandingan_discription' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eg dolor sit a. Aenean massa. Com socis masa, natoque penatibus et mang dis parturient montes, nascetur mus ridiculus mus. Lorem ipsum dolor sit amet, consectetuer dolor sit adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean a commodo ligula eget dolor sit a.',
-
+    'pertandingan_discription' => 'Sertailah kami tahun ini untuk pelbagai peraduan interaktif sebahagian daripada Mingggu Saham Digital 2021. Daftar, Tonton dan Menang! Itu sahaja yang diperlukan! Klik butang- butang peraduan kami untuk maklumat lebih lanjut.',
+    'pertandingan_terms' => 'Terma & Syarat',
+    'pertandingan_terms_link1' => 'https://msd2021demo.com/terms/termadansyarat.pdf',    
 
     'the_match_button_1' => 'Jom... Kira Duit',
     'the_match_button_2' => 'Live Trivia',
@@ -63,26 +64,29 @@ return [
     'ringgit_emas'=> 'Ringgit Emas',
     'evouchers'=> 'E-Baucar Bernilai',
 
-    'jom-kira-doit'=> '<b>Cara Penyertaan</b> <br>
+    'jom-kira-doit'=> '<b>Cara Penyertaan</b> <br> <br>
 			1. Ikuti Minggu Saham Digital di Instagram, Facebook & Tik Tok.<br>
 			2. Nantikan siaran harian kami dari 22 Okt 2021 hingga 16 Nov 2021. Satu siaran dari setiap hari akan memaparkan #SyilingMSD yang tersembunyi.<br>
 			3. Masukkan nilai yang betul untuk hari itu dan klik "Hantar" untuk menyimpannya.<br>
 			4. Anda boleh mengemas kini nilai-nilai anda pada bila-bila masa sebelum jam 3 petang pada 23 Nov 2021.<br>
-			5. Setiap nilai betul yang dihantar adalah penyerahan automatik untuk Cabutan Bertuah. Cabutan Bertuah akan dilangsungkan pada jam 8 malam pada 23 Nov 2021.',
-    'jom-kira-doit2'=> '<b>Cara Penyertaan</b> <br>
+			5. Setiap nilai betul yang dihantar adalah penyerahan automatik untuk Cabutan Bertuah. <br>
+			6. Cabutan Bertuah akan dilangsungkan pada jam 8.30 malam pada 23 Nov 2021.',
+    'jom-kira-doit2'=> '<b>Cara Penyertaan</b> <br> <br>
 			1. Setiap Rakan Korporat kami mempunyai #SyilingMSD tersembunyi di halaman Rakan Korporat masing-masing di sini dan di laman media sosial mereka sendiri.<br>
 			2. Arahkan kursor atau klik ikon maklumat (‘information icon’) untuk petunjuk di mana  #SyilingMSD mungkin tersembunyi.<br>
 			3. Klik ikon media sosial yang dipaparkan untuk melihat laman Rakan-rakan Korporat kami dan mencari #SyilingMSD yang tersembunyi.<br>
 			4. Kira dan masukkan JUMLAH nilai semua #SyilingMSD untuk setiap Rakan Korporat dan klik "Hantar" untuk menyimpannya. <br>
 			5. Anda boleh mengemas kini nilai-nilai anda pada bila-bila masa sebelum jam 3 petang pada 23 Nov 2021.<br>
-			6. Setiap nilai betul yang dihantar adalah penyerahan automatik untuk Cabutan Bertuah. Cabutan Bertuah akan dilangsungkan pada jam 8 malam pada 23 Nov 2021.',
-    'jom-kira-doit3'=> '<b>Cara Penyertaan</b> <br>
+			6. Setiap nilai betul yang dihantar adalah penyerahan automatik untuk Cabutan Bertuah. <br>
+			7. Cabutan Bertuah akan dilangsungkan pada jam 8.30 malam pada 23 Nov 2021.',
+    'jom-kira-doit3'=> '<b>Cara Penyertaan</b> <br> <br>
 			1. Tonton Minggu Saham Digital Live di laman web kami di sini, di Facebook, atau di Youtube dari 17 Nov 2021 hingga 23 Nov 2021.<br>
 			2. Setiap program langsung pada setiap hari akan memaparkan satu #SyilingMSD.<br>
 			3. Ulangan akan disiarkan pada hari berikutnya sekiranya anda terlepas program.<br>
 			4. Masukkan nilai #SyilingMSD yang betul untuk setiap program pada setiap hari dan klik "Hantar" untuk menyimpannya.<br>
 			5. Anda boleh mengemas kini nilai-nilai anda pada bila-bila masa sebelum jam 3 petang pada 23 Nov 2021.<br>
-			6. Setiap nilai betul yang dihantar adalah penyerahan automatik untuk Cabutan Bertuah. Cabutan Bertuah akan dilangsungkan pada jam 8 malam pada 23 Nov 2021.',
+			6. Setiap nilai betul yang dihantar adalah penyerahan automatik untuk Cabutan Bertuah. <br>
+			7. Cabutan Bertuah akan dilangsungkan pada jam 8.30 malam pada 23 Nov 2021.',
 
     'khidmat0' => 'Khidmat Nasihat  1-1',
     'khidmat1' => 'Apa itu Khidmat Nasihat 1-1?',
@@ -163,7 +167,7 @@ return [
 
     'livetrivia_mainheading' => 'Live Trivia',
     'livetrivia_title' => 'Cara Penyertaan',
-    'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital <i>LIVE</i>. Anda cuma perlu menonton, bersedia dan berfokus untuk menjadi salah seorang pemenang E-Baucar! Pastikan anda telah mencatat jadual siaran harian MSD dengan melayari laman Atur Cara & Jadual. Dan jangan lupa, daftar sekarang!',
+    'livetrivia_description' => 'Anda rasa anda mampu berdepan dengan cabaran kami dalam Live Trivia? Kami akan menyiarkan rancangan Live Trivia sepanjang Minggu Saham Digital <i>LIVE</i>. Anda cuma perlu menonton, bersedia dan berfokus untuk menjadi salah seorang pemenang E-Baucar! Pastikan anda telah mencatat jadual siaran harian MSD dengan melayari laman Program. Dan jangan lupa, daftar sekarang!',
     'livetrivia_worth' => 'E-Baucar Bernilai',
     'livetrivia_text' => 'Kembali ke Peraduan',
     'livetrivia_prize' => 'Hadiah Untuk Dimenangi',
@@ -258,5 +262,11 @@ return [
     'advisor_message' => 'Tempahan sesi anda telah berjaya!',
     
     'khidmatpostcode' => 'Poskod',
+    
+    //
+    
+    'kira_duit_pdf' => 'https://msd2021demo.com/terms/MSD2021TERMASYARAT-JOMKIRADUIT-BM.pdf',
+    'live_trivia_pdf' => 'https://msd2021demo.com/terms/MSD2021TERMA&SYARAT-LIVETRIVIA-BM.pdf',
+    'lucky_draw_pdf' => 'https://msd2021demo.com/terms/MSD2021TERMA&SYARATPERADUAN-CABUTANBERTUAH-BM.pdf',
 
 ];

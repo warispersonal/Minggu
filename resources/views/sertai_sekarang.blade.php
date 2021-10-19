@@ -106,6 +106,9 @@
                                             <h1 class="text-white text-center mt-5">{{ __('general.sertai_sekarang_4') }}</h1>
                                             <h4 class="text-white text-center mb-3">22 {{ __('general.sertai_sekarang_5') }} - 16 {{ __('general.sertai_sekarang_6') }} 2021</h4>
                                             <p class="text-white text-center">{!! __('general.jom-kira-doit') !!}</p>
+                                            <div class="text-center">
+                                            <a href="https://msd2021demo.com/terms/MSD2021TERMASYARAT-JOMKIRADUIT-BM.pdf" target=_blank class="text-white">{!! __('general.pertandingan_terms') !!}</a>
+                                            </div>                                            
                                         </div>
                                     </div>
                                 </div>
@@ -159,6 +162,9 @@
                                             <h1 class="text-white text-center mt-5">Rakan Korporat</h1>
                                             <h4 class="text-white text-center mb-3">22 Okt - 23 Nov 2021</h4>
                                             <p class="text-white text-center">{!! __('general.jom-kira-doit2') !!}</p>
+                                            <div class="text-center">
+                                            <a href="https://msd2021demo.com/terms/termadansyarat.pdf" target=_blank class="text-white">{!! __('general.pertandingan_terms') !!}</a>
+                                            </div>                                            
                                         </div>
                                     </div>
                                 </div>
@@ -228,6 +234,9 @@
                                             <h1 class="text-white text-center mt-5">MSD Live</h1>
                                             <h4 class="text-white text-center mb-3">17 - 23 November 2021</h4>
                                             <p class="text-white text-center">{!! __('general.jom-kira-doit3') !!}</p>
+                                            <div class="text-center">
+                                            <a href="/terms/MSD2021TERMASYARAT-JOMKIRADUIT-BM.pdf" target=_blank class="text-white">{!! __('general.pertandingan_terms') !!}</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +244,7 @@
                                     <form method="post" action="{{route('step3.form')}}" class="rm-form side-tabs">
                                         @csrf
                                         <div class="d-flex  align-items-start flex-column flex-lg-row ">
-                                            <div id="owlCarousel" class="nav flex-column nav-pills me-5 mb-3 mb-lg-0"
+                                            <div id="owlCarousel" class="nav flex-column nav-pills me-5 mb-3 mb-lg-0 owl-theme"
                                                  id="v-pills-tab" role="tablist"
                                                  aria-orientation="vertical">
                                                 <button onclick="stepDateFields(1)" class="nav-link active" id="v-pills-rabu-tab"
@@ -322,7 +331,7 @@
                                                      aria-labelledby="v-pills-khamis-tab">
                                                     <div class="row">
                                                         @foreach($section3 as $item)
-                                                            @if($item->button_text == "Khamis, 18 nov 2021")
+                                                            @if($item->button_text == "Khamis, 18 Nov 2021")
                                                                 <div class="col-7">
                                                                     <p>
                                                                         {{$item->title}}
@@ -587,17 +596,19 @@
         if (windowSize.matches) {
             document.getElementById("owlCarousel").classList.add("owl-carousel")
             $(".nav-link").click(function () {
-                $('.nav-link').removeClass('active');
-                $(this).addClass('active');
+                $('.rm-form  .nav-link').removeClass('active');
+                    $(this).addClass('active');
+                // setTimeout(function() { 
+                //     $(this).addClass('activvee');
+                // }, 10);
             });
 
         }
         $(document).ready(function () {
             $(".owl-carousel").owlCarousel({
-                loop: true,
                 nav: true,
                 items: 3,
-
+                margin:5,
             });
 
         });
